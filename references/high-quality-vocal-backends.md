@@ -4,6 +4,8 @@ Goal: improve Musai vocal quality beyond the current YingMusic proof-of-concept.
 
 Checked: 2026-06-27.
 
+For the broader EN/ZH/JP repo map, including Chinese-company models and Microsoft Muzic, see `references/en-zh-jp-music-model-repos.md`.
+
 ## Best Strict Localization Route
 
 For the highest-quality "same song, new language" output:
@@ -27,6 +29,9 @@ Strict localization needs MIDI/F0 plus phrase-level Chinese lyrics. Full-song ge
 - ACE-Step 1.5: best local full-song/new-song generator. Good for "inspired Chinese version", not exact original stems.
 - YuE: high-quality lyrics-to-song model, strong for full songs but heavy on 24 GB GPUs.
 - HeartMuLa: 2026 open-source full-song generator with released 3B checkpoints and HeartCodec; useful for Chinese full-song alternatives.
+- FunMusic / InspireMusic: Alibaba/Tongyi long-form music/song/audio generation stack; useful for Chinese-company model comparison.
+- Microsoft Muzic: symbolic music understanding/generation and lyric-melody constraint research; useful for planning and scoring, not final audio.
+- Tencent MuQ: music understanding and music-text embedding model; useful for scoring/search and English/Chinese text-music alignment.
 - DiffRhythm: fast full-song generation; useful for experiments, not strict stem-preserving localization.
 - SongGen: text-to-song research model with optional reference voice; useful for short tests.
 - MOSS-Music: music understanding model for lyrics ASR, chord/key/tempo reasoning, timestamped chord transcription, and structure analysis.
@@ -113,5 +118,9 @@ bash scripts/run_soulx_env.sh .conda/soulxsinger/bin/python -c "import soulxsing
 - YuE: https://github.com/multimodal-art-projection/YuE
 - HeartMuLa: https://github.com/HeartMuLa/heartlib
 - MOSS-Music: https://github.com/OpenMOSS/MOSS-Music
+- FunMusic / InspireMusic: https://github.com/FunAudioLLM/FunMusic
+- Microsoft Muzic: https://github.com/microsoft/muzic
+- MuQ: https://github.com/tencent-ailab/MuQ
+- MuCodec: https://github.com/tencent-ailab/MuCodec
 - Synthesizer V free trial: https://dreamtonics.com/download-free-trials/
 - ACE Studio download: https://acestudio.ai/download/

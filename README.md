@@ -98,6 +98,8 @@ The local machine has staged heavier research backends for better vocal quality 
 
 See [`references/high-quality-vocal-backends.md`](references/high-quality-vocal-backends.md) and [`references/local-quality-backend-install-status.md`](references/local-quality-backend-install-status.md).
 
+For the broader EN/ZH/JP model map, including Chinese-company repos and Microsoft Muzic, see [`references/en-zh-jp-music-model-repos.md`](references/en-zh-jp-music-model-repos.md).
+
 ## Architecture Direction
 
 Musai is not only translation plus TTS. The intended full pipeline is:

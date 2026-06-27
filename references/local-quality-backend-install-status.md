@@ -29,6 +29,25 @@ This file records the repo-local state for the high-quality Musai backends. Mode
 | HeartMuLa | `third_party/HeartMuLa/ckpt` | 21G |
 | MOSS-Music | `third_party/MOSS-Music/weights` | 34G |
 
+## Expanded Code-Only Repo Inventory
+
+Checked: 2026-06-28. These are shallow code clones under ignored `third_party/`; they do not include large model weights unless a repository itself vendors small assets.
+
+| Repo | Local path | Size |
+| --- | --- | --- |
+| Microsoft Muzic | `third_party/Muzic` | 354M |
+| Alibaba FunMusic / InspireMusic | `third_party/FunMusic` | 6.7M |
+| Tencent MuQ | `third_party/MuQ` | 1.9M |
+| Tencent MuCodec | `third_party/MuCodec` | 226M |
+| MERT | `third_party/MERT` | 544K |
+| OpenVPI DiffSinger | `third_party/OpenVPI-DiffSinger` | 5.7M |
+| NNSVS | `third_party/NNSVS` | 31M |
+| OpenUtau | `third_party/OpenUtau` | 95M |
+| AudioCraft | `third_party/AudioCraft` | 22M |
+| Stable Audio Tools | `third_party/stable-audio-tools` | 2.7M |
+| Magenta | `third_party/Magenta` | 45M |
+| YingMusic-Singer-Plus | `third_party/YingMusic-Singer-Plus` | 229M |
+
 ## Local Env Sizes
 
 | Path | Size |
