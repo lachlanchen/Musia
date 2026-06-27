@@ -1,0 +1,24 @@
+name: musai
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - ffmpeg
+  - pip
+  - pip:
+      - torch==2.3.0
+      - torchaudio==2.3.0
+      - demucs
+      - faster-whisper
+      - librosa
+      - soundfile
+      - numpy
+      - scipy
+      - tqdm
+      - requests
+      - openai
+      - pypinyin
+      - jieba
+      - phonemizer
+      - pedalboard
+      - pyloudnorm
