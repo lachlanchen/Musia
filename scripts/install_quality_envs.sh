@@ -58,6 +58,7 @@ case "${1:-all}" in
     create_env "$ENV_ROOT/soulxsinger" "3.10"
     pip_in_env "$ENV_ROOT/soulxsinger" install -U pip setuptools wheel
     pip_in_env "$ENV_ROOT/soulxsinger" install -r "$THIRD_PARTY/SoulX-Singer/requirements.txt"
+    pip_in_env "$ENV_ROOT/soulxsinger" install "lightning>=2.2,<3" fiddle cloudpickle
     add_python_path_entry "$ENV_ROOT/soulxsinger" "$THIRD_PARTY/SoulX-Singer" "musai-soulx-singer"
     ;;
 

@@ -2,6 +2,8 @@
 
 Date: 2026-06-27
 
+Update: a broader open-song matrix and first-verse Chinese localization experiment were run on 2026-06-28. See [`open-song-test-report-2026-06-28.md`](open-song-test-report-2026-06-28.md) for exact input songs, output paths, commands, and quality-gate results.
+
 Machine summary:
 
 - GPU visible: NVIDIA GeForce RTX 4090 D, 24 GB VRAM
@@ -125,4 +127,3 @@ Notes:
 - Chords and beats are estimated from `stems/instrumental.wav` when separation succeeds.
 - Lyrics are transcribed from `stems/vocals.wav` when separation succeeds.
 - The chord estimator is a lightweight baseline. It should be replaced by a stronger chord-recognition model for production.
-

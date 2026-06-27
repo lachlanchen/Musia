@@ -44,10 +44,14 @@ input song
 | [`scripts/bootstrap_musai.sh`](scripts/bootstrap_musai.sh) | Creates the conda environment and installs the local stack. |
 | [`scripts/download_open_songs.py`](scripts/download_open_songs.py) | Downloads free/open test songs. |
 | [`scripts/run_pipeline.py`](scripts/run_pipeline.py) | Runs separation, transcription, beats, chords, and report generation. |
+| [`scripts/test_open_songs_matrix.sh`](scripts/test_open_songs_matrix.sh) | Runs the EN/ZH/JA open-song analysis matrix. |
 | [`scripts/install_research_repos.sh`](scripts/install_research_repos.sh) | Shallow-clones optional research repositories into `third_party/`. |
 | [`scripts/download_quality_backends.sh`](scripts/download_quality_backends.sh) | Downloads high-quality research backends and model weights into ignored local folders. |
 | [`scripts/install_quality_envs.sh`](scripts/install_quality_envs.sh) | Creates isolated repo-local conda/uv environments for large singing and music models. |
 | [`scripts/run_soulx_env.sh`](scripts/run_soulx_env.sh) | Runs SoulX-Singer with the cloned repo on `PYTHONPATH`. |
+| [`scripts/run_soulx_svs.sh`](scripts/run_soulx_svs.sh) | Runs SoulX-Singer SVS inference with prompt and target metadata. |
+| [`scripts/soulx_rewrite_metadata.py`](scripts/soulx_rewrite_metadata.py) | Rewrites SoulX metadata with Mandarin target lyrics while preserving note/F0 timing. |
+| [`scripts/mix_vocal_with_instrumental.sh`](scripts/mix_vocal_with_instrumental.sh) | Mixes a generated vocal with an instrumental stem and loudness-normalizes it. |
 | [`scripts/run_moss_music_env.sh`](scripts/run_moss_music_env.sh) | Runs MOSS-Music with the required FFmpeg, TorchCodec, and CUDA library paths. |
 | [`scripts/musai_lyricfit_openai.py`](scripts/musai_lyricfit_openai.py) | Optional OpenAI-powered lyric adaptation helper. |
 | [`references/`](references/) | Architecture, deep research, and local setup notes. |
@@ -87,6 +91,14 @@ Recorded result:
 - Lyrics status: `ok`
 
 See [`references/local-setup-and-test-report.md`](references/local-setup-and-test-report.md).
+
+A broader open-song matrix and first-verse Chinese localization test were run on 2026-06-28:
+
+```bash
+MAX_DURATION=60 ASR_MODEL=small DEMUCS_DEVICE=cuda scripts/test_open_songs_matrix.sh
+```
+
+See [`references/open-song-test-report-2026-06-28.md`](references/open-song-test-report-2026-06-28.md) for exact input songs, output paths, SoulX/YingMusic attempts, and the current quality gate results.
 
 ## High-Quality Backends
 
