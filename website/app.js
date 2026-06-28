@@ -477,7 +477,7 @@ function renderCarousel(activeLine) {
             ${tracks.map((track) => {
               const line = lineForTrack(track, lines[index].id);
               return `
-                <section class="carousel-track" lang="${escapeHtml(track.language.code)}">
+                <section class="carousel-track" lang="${escapeHtml(track.language.code)}" data-track-code="${escapeHtml(track.language.code)}">
                   <label>${escapeHtml(languageName(track))}</label>
                   ${renderTrackLine(track, line)}
                 </section>
@@ -503,7 +503,7 @@ function renderFullLyrics(activeLine = null) {
         ${state.tracks.map((track) => {
           const trackLine = lineForTrack(track, line.id);
           return `
-            <section>
+            <section data-track-code="${escapeHtml(track.language.code)}">
               <label>${escapeHtml(track.language.nativeLabel || track.language.code)}</label>
               ${renderTrackLine(track, trackLine, { compact: true })}
             </section>
@@ -515,10 +515,12 @@ function renderFullLyrics(activeLine = null) {
 }
 
 function updateTokenHighlights(time) {
+  const activeCode = activePlayableAsset()?.languageCode || "";
   document.querySelectorAll("[data-token-start]").forEach((node) => {
     const start = Number(node.dataset.tokenStart);
     const end = Number(node.dataset.tokenEnd);
-    node.classList.toggle("active", time >= start && time < end);
+    const trackCode = node.closest("[data-track-code]")?.dataset.trackCode || "";
+    node.classList.toggle("active", Boolean(activeCode && trackCode === activeCode && time >= start && time < end));
   });
 }
 

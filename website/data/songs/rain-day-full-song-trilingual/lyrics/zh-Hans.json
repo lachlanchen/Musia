@@ -216,39 +216,92 @@
       "id": "line-004",
       "start": 23.41,
       "end": 32.35,
-      "text": "若今夜太重，就落在我掌心",
-      "singableText": "若今夜太重，就落在我掌心",
-      "role": "localized-lyric",
+      "text": "若今夜复刻；若今夜太重，就落在我掌心",
+      "singableText": "若今夜复刻；若今夜太重，就落在我掌心",
+      "role": "asr-adjusted-lyric",
       "tokens": [
         {
           "text": "若",
           "pinyin": "ruo4",
           "display": "ruo",
-          "tone": 4
+          "tone": 4,
+          "start": 23.41,
+          "end": 23.99
         },
         {
           "text": "今",
           "pinyin": "jin1",
           "display": "jin",
-          "tone": 1
+          "tone": 1,
+          "start": 23.99,
+          "end": 24.37
         },
         {
           "text": "夜",
           "pinyin": "ye4",
           "display": "ye",
-          "tone": 4
+          "tone": 4,
+          "start": 24.37,
+          "end": 24.91
+        },
+        {
+          "text": "复",
+          "pinyin": "fu4",
+          "display": "fu",
+          "tone": 4,
+          "start": 24.91,
+          "end": 25.45
+        },
+        {
+          "text": "刻",
+          "pinyin": "ke4",
+          "display": "ke",
+          "tone": 4,
+          "start": 25.45,
+          "end": 26.05
+        },
+        {
+          "text": "；"
+        },
+        {
+          "text": "若",
+          "pinyin": "ruo4",
+          "display": "ruo",
+          "tone": 4,
+          "start": 28.13,
+          "end": 28.63
+        },
+        {
+          "text": "今",
+          "pinyin": "jin1",
+          "display": "jin",
+          "tone": 1,
+          "start": 28.63,
+          "end": 28.89
+        },
+        {
+          "text": "夜",
+          "pinyin": "ye4",
+          "display": "ye",
+          "tone": 4,
+          "start": 28.89,
+          "end": 29.27
         },
         {
           "text": "太",
           "pinyin": "tai4",
           "display": "tai",
-          "tone": 4
+          "tone": 4,
+          "start": 29.27,
+          "end": 29.67
         },
         {
           "text": "重",
           "pinyin": "zhong4",
           "display": "zhong",
-          "tone": 4
+          "tone": 4,
+          "start": 29.67,
+          "end": 30.09
         },
         {
           "text": "，"
@@ -257,39 +310,52 @@
           "text": "就",
           "pinyin": "jiu4",
           "display": "jiu",
-          "tone": 4
+          "tone": 4,
+          "start": 30.09,
+          "end": 30.61
         },
         {
           "text": "落",
           "pinyin": "luo4",
           "display": "luo",
-          "tone": 4
+          "tone": 4,
+          "start": 30.61,
+          "end": 30.89
         },
         {
           "text": "在",
           "pinyin": "zai4",
           "display": "zai",
-          "tone": 4
+          "tone": 4,
+          "start": 30.89,
+          "end": 31.13
         },
         {
           "text": "我",
           "pinyin": "wo3",
           "display": "wo",
-          "tone": 3
+          "tone": 3,
+          "start": 31.13,
+          "end": 31.37
         },
         {
           "text": "掌",
           "pinyin": "zhang3",
           "display": "zhang",
-          "tone": 3
+          "tone": 3,
+          "start": 31.37,
+          "end": 31.75
         },
         {
           "text": "心",
           "pinyin": "xin1",
           "display": "xin",
-          "tone": 1
+          "tone": 1,
+          "start": 31.75,
+          "end": 32.35
         }
-      ]
+      ],
+      "asrText": "若今夜复刻 / 若今夜太重 / 就落在我掌心"
     },
     {
       "id": "line-005",
