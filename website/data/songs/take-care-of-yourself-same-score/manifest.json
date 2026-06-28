@@ -1,0 +1,549 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "take-care-of-yourself-same-score",
+  "kind": "localized-song",
+  "title": "Take Care of Yourself",
+  "localizedTitles": {
+    "en": "Take Care of Yourself",
+    "zh-Hans": "照顾好自己",
+    "yue-Hant": "照顧好自己"
+  },
+  "artist": "Musia",
+  "subtitle": "Same-score English, Mandarin, and Cantonese vocals from one Japanese melody guide",
+  "description": "A 58-second same-score localization experiment: English, Mandarin, and Cantonese SoulX vocals generated from one shared score/F0 plan and mixed with the same instrumental stem.",
+  "caption": "Take care of yourself; the light inside you keeps watch.",
+  "duration": 58.0,
+  "canonicalUrl": "https://fun.lazying.art/#take-care-of-yourself-same-score",
+  "share": {
+    "title": "Take Care of Yourself - Fun Lazying Art",
+    "description": "English, Mandarin, and Cantonese same-score localized song by Musia.",
+    "url": "https://fun.lazying.art/#take-care-of-yourself-same-score",
+    "image": "assets/covers/take-care-of-yourself-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Take Care of Yourself cover",
+      "role": "cover",
+      "src": "assets/covers/take-care-of-yourself-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/take-care-of-yourself-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "take-care-en",
+      "label": "English vocal",
+      "roleLabel": "Vocal",
+      "role": "same-score-localized-song",
+      "languageCode": "en",
+      "languageLabel": "English",
+      "lyricSetId": "en-vocal",
+      "sourceModel": "SoulX-Singer score-conditioned from Japanese guide F0/timing",
+      "qualityGate": "pass",
+      "src": "assets/audio/take-care-of-yourself-en.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": [
+      {
+        "id": "take-care-zh",
+        "label": "Mandarin vocal",
+        "roleLabel": "Vocal",
+        "role": "same-score-localized-song",
+        "languageCode": "zh-Hans",
+        "languageLabel": "中文",
+        "lyricSetId": "zh-vocal",
+        "sourceModel": "SoulX-Singer score-conditioned from Japanese guide F0/timing",
+        "qualityGate": "dry-pass-mix-review",
+        "src": "assets/audio/take-care-of-yourself-zh-Hans.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "id": "take-care-yue",
+        "label": "Cantonese vocal",
+        "roleLabel": "Vocal",
+        "role": "same-score-localized-song",
+        "languageCode": "yue-Hant",
+        "languageLabel": "廣東話",
+        "lyricSetId": "yue-vocal",
+        "sourceModel": "SoulX-Singer score-conditioned from Japanese guide F0/timing",
+        "qualityGate": "pass",
+        "src": "assets/audio/take-care-of-yourself-yue-Hant.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  "musical": {
+    "key": "E minor / detected C-centered guide",
+    "bpm": 80.75,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 3.553,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 3.553,
+        "end": 4.296,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 4.296,
+        "end": 6.478,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 6.478,
+        "end": 7.941,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 7.941,
+        "end": 9.404,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 9.404,
+        "end": 10.867,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 10.867,
+        "end": 11.587,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 11.587,
+        "end": 12.283,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 12.283,
+        "end": 13.723,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 13.723,
+        "end": 15.279,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 15.279,
+        "end": 16.718,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 16.718,
+        "end": 17.461,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 17.461,
+        "end": 18.204,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 18.204,
+        "end": 19.667,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 19.667,
+        "end": 21.107,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 21.107,
+        "end": 22.593,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 22.593,
+        "end": 25.519,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 25.519,
+        "end": 26.982,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 26.982,
+        "end": 27.701,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 27.701,
+        "end": 28.444,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 28.444,
+        "end": 29.164,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 29.164,
+        "end": 29.907,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 29.907,
+        "end": 30.627,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 30.627,
+        "end": 31.37,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 31.37,
+        "end": 32.833,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 32.833,
+        "end": 34.273,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 34.273,
+        "end": 35.759,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 35.759,
+        "end": 36.479,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 36.479,
+        "end": 37.198,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 37.198,
+        "end": 38.684,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 38.684,
+        "end": 40.147,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 40.147,
+        "end": 40.867,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 40.867,
+        "end": 41.61,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 41.61,
+        "end": 43.073,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 43.073,
+        "end": 44.536,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 44.536,
+        "end": 45.999,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 45.999,
+        "end": 48.948,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 48.948,
+        "end": 49.667,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 49.667,
+        "end": 50.387,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 50.387,
+        "end": 51.85,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 51.85,
+        "end": 58.0,
+        "name": "Em",
+        "degree": ""
+      }
+    ]
+  },
+  "lyricSets": [
+    {
+      "id": "en-vocal",
+      "label": "English vocal translations",
+      "languageCode": "en",
+      "tracks": [
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "active-timing",
+            "word-highlight"
+          ],
+          "path": "lyrics/en-vocal/en.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "translation",
+            "pinyin",
+            "rough-highlight"
+          ],
+          "path": "lyrics/en-vocal/zh-Hans.json"
+        },
+        {
+          "code": "yue-Hant",
+          "label": "Cantonese",
+          "nativeLabel": "廣東話",
+          "script": "Hant",
+          "features": [
+            "translation",
+            "jyutping",
+            "rough-highlight"
+          ],
+          "path": "lyrics/en-vocal/yue-Hant.json"
+        }
+      ]
+    },
+    {
+      "id": "zh-vocal",
+      "label": "Mandarin vocal translations",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "active-timing",
+            "pinyin",
+            "word-highlight"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation",
+            "rough-highlight"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "yue-Hant",
+          "label": "Cantonese",
+          "nativeLabel": "廣東話",
+          "script": "Hant",
+          "features": [
+            "translation",
+            "jyutping",
+            "rough-highlight"
+          ],
+          "path": "lyrics/zh-vocal/yue-Hant.json"
+        }
+      ]
+    },
+    {
+      "id": "yue-vocal",
+      "label": "Cantonese vocal translations",
+      "languageCode": "yue-Hant",
+      "tracks": [
+        {
+          "code": "yue-Hant",
+          "label": "Cantonese",
+          "nativeLabel": "廣東話",
+          "script": "Hant",
+          "features": [
+            "active-timing",
+            "jyutping",
+            "word-highlight"
+          ],
+          "path": "lyrics/yue-vocal/yue-Hant.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation",
+            "rough-highlight"
+          ],
+          "path": "lyrics/yue-vocal/en.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "translation",
+            "pinyin",
+            "rough-highlight"
+          ],
+          "path": "lyrics/yue-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 0.94,
+        "end": 6.78,
+        "sourceText": "きらめく森のむこう",
+        "words": []
+      },
+      {
+        "id": "l02",
+        "start": 6.78,
+        "end": 11.16,
+        "sourceText": "朝がいま目をさます",
+        "words": []
+      },
+      {
+        "id": "l03",
+        "start": 12.32,
+        "end": 17.3,
+        "sourceText": "こわれた空に虹がかかる",
+        "words": []
+      },
+      {
+        "id": "l04",
+        "start": 18.02,
+        "end": 23.52,
+        "sourceText": "小さな胸はふるえてる",
+        "words": []
+      },
+      {
+        "id": "l05",
+        "start": 23.52,
+        "end": 28.68,
+        "sourceText": "迷う夜でも手をはなさず",
+        "words": []
+      },
+      {
+        "id": "l06",
+        "start": 30.06,
+        "end": 34.28,
+        "sourceText": "君の声だけ信じて",
+        "words": []
+      },
+      {
+        "id": "l07",
+        "start": 35.76,
+        "end": 40.15,
+        "sourceText": "暗い道にも朝はくる",
+        "words": []
+      },
+      {
+        "id": "l08",
+        "start": 40.15,
+        "end": 45.99,
+        "sourceText": "胸のひかりが君を守る",
+        "words": []
+      },
+      {
+        "id": "l09",
+        "start": 45.99,
+        "end": 51.85,
+        "sourceText": "涙は地図になり",
+        "words": []
+      },
+      {
+        "id": "l10",
+        "start": 51.85,
+        "end": 56.5,
+        "sourceText": "風を信じて進めるよ",
+        "words": []
+      }
+    ]
+  },
+  "provenance": {
+    "sourceGuide": "data/creative_projects/take-care-of-yourself-20260628/selected/take-care-of-yourself-ja-romaji-guide.mp3",
+    "sourceAnalysis": "data/runs/take-care-of-yourself-20260628-20260628-185010-analysis",
+    "vocalBackend": "SoulX-Singer",
+    "method": "one shared score/F0 timing plan; EN/ZH/YUE target metadata; same instrumental mix",
+    "japaneseStatus": "deferred; this SoulX phone set has no Japanese phones, so Japanese target synthesis needs another backend/install path"
+  }
+}
