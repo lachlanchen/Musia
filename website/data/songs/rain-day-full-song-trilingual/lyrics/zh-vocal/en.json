@@ -1,0 +1,635 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "trackRole": "translation",
+  "vocalSetId": "zh-vocal",
+  "timingSource": "asr-corrected-render",
+  "timingNote": "Mandarin render includes an audible repeated tonight phrase, so it is preserved as separate lines.",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 11.09,
+      "end": 14.91,
+      "text": "Rain taps the window, waking the silent room",
+      "singableText": "Rain taps the window, waking the silent room",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Rain"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "taps"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "window"
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "waking"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "silent"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "room"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 15.65,
+      "end": 19.49,
+      "text": "I walk down a long street blooming with neon",
+      "singableText": "I walk down a long street blooming with neon",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "walk"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "down"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "a"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "long"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "street"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "blooming"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "with"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "neon"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 19.49,
+      "end": 22.43,
+      "text": "Every reflection sends a letter from you",
+      "singableText": "Every reflection sends a letter from you",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Every"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "reflection"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sends"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "a"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "letter"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 23.41,
+      "end": 26.05,
+      "text": "If tonight repeats itself",
+      "singableText": "If tonight repeats itself",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "If"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tonight"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "repeats"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "itself"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 28.13,
+      "end": 30.09,
+      "text": "If tonight is too heavy",
+      "singableText": "If tonight is too heavy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "If"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tonight"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "is"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "too"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "heavy"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 30.09,
+      "end": 32.35,
+      "text": "Let it fall into my palm",
+      "singableText": "Let it fall into my palm",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Let"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "it"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fall"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "into"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "my"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "palm"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 32.35,
+      "end": 38.53,
+      "text": "Stay with me inside the silver rain",
+      "singableText": "Stay with me inside the silver rain",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Stay"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "with"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "me"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "inside"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "silver"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rain"
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 41.09,
+      "end": 42.79,
+      "text": "Take the broken lights",
+      "singableText": "Take the broken lights",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Take"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "broken"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lights"
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 42.79,
+      "end": 45.17,
+      "text": "And turn them into flame",
+      "singableText": "And turn them into flame",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "And"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "turn"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "them"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "into"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flame"
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 47.96,
+      "end": 50.0,
+      "text": "The last train fades away",
+      "singableText": "The last train fades away",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "The"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "last"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "train"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fades"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "away"
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 50.0,
+      "end": 52.76,
+      "text": "The street corner opens wide",
+      "singableText": "The street corner opens wide",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "The"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "street"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "corner"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "opens"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wide"
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 53.86,
+      "end": 58.72,
+      "text": "I keep your heartbeat close to my chest",
+      "singableText": "I keep your heartbeat close to my chest",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "keep"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "your"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "heartbeat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "close"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "my"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chest"
+        }
+      ]
+    },
+    {
+      "id": "line-013",
+      "start": 60.14,
+      "end": 63.72,
+      "text": "Stay with me inside the silver rain",
+      "singableText": "Stay with me inside the silver rain",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Stay"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "with"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "me"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "inside"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "silver"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rain"
+        }
+      ]
+    },
+    {
+      "id": "line-014",
+      "start": 66.34,
+      "end": 70.16,
+      "text": "Every drop softly sings your name",
+      "singableText": "Every drop softly sings your name",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Every"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "drop"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "softly"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sings"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "your"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "name"
+        }
+      ]
+    }
+  ]
+}

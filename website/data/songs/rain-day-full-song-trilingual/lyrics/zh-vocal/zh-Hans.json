@@ -1,0 +1,752 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "trackRole": "active-vocal",
+  "vocalSetId": "zh-vocal",
+  "timingSource": "asr-corrected-render",
+  "timingNote": "Mandarin render includes an audible repeated tonight phrase, so it is preserved as separate lines.",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 11.09,
+      "end": 14.91,
+      "text": "雨敲窗，唤醒沉默房间",
+      "singableText": "雨敲窗，唤醒沉默房间",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "雨",
+          "pinyin": "yu3",
+          "display": "yu",
+          "tone": 3
+        },
+        {
+          "text": "敲",
+          "pinyin": "qiao1",
+          "display": "qiao",
+          "tone": 1
+        },
+        {
+          "text": "窗",
+          "pinyin": "chuang1",
+          "display": "chuang",
+          "tone": 1
+        },
+        {
+          "text": "，"
+        },
+        {
+          "text": "唤",
+          "pinyin": "huan4",
+          "display": "huan",
+          "tone": 4
+        },
+        {
+          "text": "醒",
+          "pinyin": "xing3",
+          "display": "xing",
+          "tone": 3
+        },
+        {
+          "text": "沉",
+          "pinyin": "chen2",
+          "display": "chen",
+          "tone": 2
+        },
+        {
+          "text": "默",
+          "pinyin": "mo4",
+          "display": "mo",
+          "tone": 4
+        },
+        {
+          "text": "房",
+          "pinyin": "fang2",
+          "display": "fang",
+          "tone": 2
+        },
+        {
+          "text": "间",
+          "pinyin": "jian1",
+          "display": "jian",
+          "tone": 1
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 15.65,
+      "end": 19.49,
+      "text": "我走过霓虹盛开的长街",
+      "singableText": "我走过霓虹盛开的长街",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "display": "wo",
+          "tone": 3
+        },
+        {
+          "text": "走",
+          "pinyin": "zou3",
+          "display": "zou",
+          "tone": 3
+        },
+        {
+          "text": "过",
+          "pinyin": "guo4",
+          "display": "guo",
+          "tone": 4
+        },
+        {
+          "text": "霓",
+          "pinyin": "ni2",
+          "display": "ni",
+          "tone": 2
+        },
+        {
+          "text": "虹",
+          "pinyin": "hong2",
+          "display": "hong",
+          "tone": 2
+        },
+        {
+          "text": "盛",
+          "pinyin": "sheng4",
+          "display": "sheng",
+          "tone": 4
+        },
+        {
+          "text": "开",
+          "pinyin": "kai1",
+          "display": "kai",
+          "tone": 1
+        },
+        {
+          "text": "的",
+          "pinyin": "de",
+          "display": "de"
+        },
+        {
+          "text": "长",
+          "pinyin": "chang2",
+          "display": "chang",
+          "tone": 2
+        },
+        {
+          "text": "街",
+          "pinyin": "jie1",
+          "display": "jie",
+          "tone": 1
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 19.49,
+      "end": 22.43,
+      "text": "每片倒影都向你来信",
+      "singableText": "每片倒影都向你来信",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "每",
+          "pinyin": "mei3",
+          "display": "mei",
+          "tone": 3
+        },
+        {
+          "text": "片",
+          "pinyin": "pian4",
+          "display": "pian",
+          "tone": 4
+        },
+        {
+          "text": "倒",
+          "pinyin": "dao4",
+          "display": "dao",
+          "tone": 4
+        },
+        {
+          "text": "影",
+          "pinyin": "ying3",
+          "display": "ying",
+          "tone": 3
+        },
+        {
+          "text": "都",
+          "pinyin": "dou1",
+          "display": "dou",
+          "tone": 1
+        },
+        {
+          "text": "向",
+          "pinyin": "xiang4",
+          "display": "xiang",
+          "tone": 4
+        },
+        {
+          "text": "你",
+          "pinyin": "ni3",
+          "display": "ni",
+          "tone": 3
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "display": "lai",
+          "tone": 2
+        },
+        {
+          "text": "信",
+          "pinyin": "xin4",
+          "display": "xin",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 23.41,
+      "end": 26.05,
+      "text": "若今夜复刻",
+      "singableText": "若今夜复刻",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "若",
+          "pinyin": "ruo4",
+          "display": "ruo",
+          "tone": 4
+        },
+        {
+          "text": "今",
+          "pinyin": "jin1",
+          "display": "jin",
+          "tone": 1
+        },
+        {
+          "text": "夜",
+          "pinyin": "ye4",
+          "display": "ye",
+          "tone": 4
+        },
+        {
+          "text": "复",
+          "pinyin": "fu4",
+          "display": "fu",
+          "tone": 4
+        },
+        {
+          "text": "刻",
+          "pinyin": "ke4",
+          "display": "ke",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 28.13,
+      "end": 30.09,
+      "text": "若今夜太重",
+      "singableText": "若今夜太重",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "若",
+          "pinyin": "ruo4",
+          "display": "ruo",
+          "tone": 4
+        },
+        {
+          "text": "今",
+          "pinyin": "jin1",
+          "display": "jin",
+          "tone": 1
+        },
+        {
+          "text": "夜",
+          "pinyin": "ye4",
+          "display": "ye",
+          "tone": 4
+        },
+        {
+          "text": "太",
+          "pinyin": "tai4",
+          "display": "tai",
+          "tone": 4
+        },
+        {
+          "text": "重",
+          "pinyin": "zhong4",
+          "display": "zhong",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 30.09,
+      "end": 32.35,
+      "text": "就落在我掌心",
+      "singableText": "就落在我掌心",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "就",
+          "pinyin": "jiu4",
+          "display": "jiu",
+          "tone": 4
+        },
+        {
+          "text": "落",
+          "pinyin": "luo4",
+          "display": "luo",
+          "tone": 4
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4",
+          "display": "zai",
+          "tone": 4
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "display": "wo",
+          "tone": 3
+        },
+        {
+          "text": "掌",
+          "pinyin": "zhang3",
+          "display": "zhang",
+          "tone": 3
+        },
+        {
+          "text": "心",
+          "pinyin": "xin1",
+          "display": "xin",
+          "tone": 1
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 32.35,
+      "end": 38.53,
+      "text": "陪我站在银色雨里面",
+      "singableText": "陪我站在银色雨里面",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "陪",
+          "pinyin": "pei2",
+          "display": "pei",
+          "tone": 2
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "display": "wo",
+          "tone": 3
+        },
+        {
+          "text": "站",
+          "pinyin": "zhan4",
+          "display": "zhan",
+          "tone": 4
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4",
+          "display": "zai",
+          "tone": 4
+        },
+        {
+          "text": "银",
+          "pinyin": "yin2",
+          "display": "yin",
+          "tone": 2
+        },
+        {
+          "text": "色",
+          "pinyin": "se4",
+          "display": "se",
+          "tone": 4
+        },
+        {
+          "text": "雨",
+          "pinyin": "yu3",
+          "display": "yu",
+          "tone": 3
+        },
+        {
+          "text": "里",
+          "pinyin": "li3",
+          "display": "li",
+          "tone": 3
+        },
+        {
+          "text": "面",
+          "pinyin": "mian4",
+          "display": "mian",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 41.09,
+      "end": 42.79,
+      "text": "把碎掉的灯",
+      "singableText": "把碎掉的灯",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "把",
+          "pinyin": "ba3",
+          "display": "ba",
+          "tone": 3
+        },
+        {
+          "text": "碎",
+          "pinyin": "sui4",
+          "display": "sui",
+          "tone": 4
+        },
+        {
+          "text": "掉",
+          "pinyin": "diao4",
+          "display": "diao",
+          "tone": 4
+        },
+        {
+          "text": "的",
+          "pinyin": "de",
+          "display": "de"
+        },
+        {
+          "text": "灯",
+          "pinyin": "deng1",
+          "display": "deng",
+          "tone": 1
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 42.79,
+      "end": 45.17,
+      "text": "点成火焰",
+      "singableText": "点成火焰",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "点",
+          "pinyin": "dian3",
+          "display": "dian",
+          "tone": 3
+        },
+        {
+          "text": "成",
+          "pinyin": "cheng2",
+          "display": "cheng",
+          "tone": 2
+        },
+        {
+          "text": "火",
+          "pinyin": "huo3",
+          "display": "huo",
+          "tone": 3
+        },
+        {
+          "text": "焰",
+          "pinyin": "yan4",
+          "display": "yan",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 47.96,
+      "end": 50.0,
+      "text": "末班车远去",
+      "singableText": "末班车远去",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "末",
+          "pinyin": "mo4",
+          "display": "mo",
+          "tone": 4
+        },
+        {
+          "text": "班",
+          "pinyin": "ban1",
+          "display": "ban",
+          "tone": 1
+        },
+        {
+          "text": "车",
+          "pinyin": "che1",
+          "display": "che",
+          "tone": 1
+        },
+        {
+          "text": "远",
+          "pinyin": "yuan3",
+          "display": "yuan",
+          "tone": 3
+        },
+        {
+          "text": "去",
+          "pinyin": "qu4",
+          "display": "qu",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 50.0,
+      "end": 52.76,
+      "text": "街口变宽",
+      "singableText": "街口变宽",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "街",
+          "pinyin": "jie1",
+          "display": "jie",
+          "tone": 1
+        },
+        {
+          "text": "口",
+          "pinyin": "kou3",
+          "display": "kou",
+          "tone": 3
+        },
+        {
+          "text": "变",
+          "pinyin": "bian4",
+          "display": "bian",
+          "tone": 4
+        },
+        {
+          "text": "宽",
+          "pinyin": "kuan1",
+          "display": "kuan",
+          "tone": 1
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 53.86,
+      "end": 58.72,
+      "text": "我把你的心跳放在胸前",
+      "singableText": "我把你的心跳放在胸前",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "display": "wo",
+          "tone": 3
+        },
+        {
+          "text": "把",
+          "pinyin": "ba3",
+          "display": "ba",
+          "tone": 3
+        },
+        {
+          "text": "你",
+          "pinyin": "ni3",
+          "display": "ni",
+          "tone": 3
+        },
+        {
+          "text": "的",
+          "pinyin": "de",
+          "display": "de"
+        },
+        {
+          "text": "心",
+          "pinyin": "xin1",
+          "display": "xin",
+          "tone": 1
+        },
+        {
+          "text": "跳",
+          "pinyin": "tiao4",
+          "display": "tiao",
+          "tone": 4
+        },
+        {
+          "text": "放",
+          "pinyin": "fang4",
+          "display": "fang",
+          "tone": 4
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4",
+          "display": "zai",
+          "tone": 4
+        },
+        {
+          "text": "胸",
+          "pinyin": "xiong1",
+          "display": "xiong",
+          "tone": 1
+        },
+        {
+          "text": "前",
+          "pinyin": "qian2",
+          "display": "qian",
+          "tone": 2
+        }
+      ]
+    },
+    {
+      "id": "line-013",
+      "start": 60.14,
+      "end": 63.72,
+      "text": "陪我站在银色雨里面",
+      "singableText": "陪我站在银色雨里面",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "陪",
+          "pinyin": "pei2",
+          "display": "pei",
+          "tone": 2
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "display": "wo",
+          "tone": 3
+        },
+        {
+          "text": "站",
+          "pinyin": "zhan4",
+          "display": "zhan",
+          "tone": 4
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4",
+          "display": "zai",
+          "tone": 4
+        },
+        {
+          "text": "银",
+          "pinyin": "yin2",
+          "display": "yin",
+          "tone": 2
+        },
+        {
+          "text": "色",
+          "pinyin": "se4",
+          "display": "se",
+          "tone": 4
+        },
+        {
+          "text": "雨",
+          "pinyin": "yu3",
+          "display": "yu",
+          "tone": 3
+        },
+        {
+          "text": "里",
+          "pinyin": "li3",
+          "display": "li",
+          "tone": 3
+        },
+        {
+          "text": "面",
+          "pinyin": "mian4",
+          "display": "mian",
+          "tone": 4
+        }
+      ]
+    },
+    {
+      "id": "line-014",
+      "start": 66.34,
+      "end": 70.16,
+      "text": "每滴雨都轻唱你的名",
+      "singableText": "每滴雨都轻唱你的名",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "每",
+          "pinyin": "mei3",
+          "display": "mei",
+          "tone": 3
+        },
+        {
+          "text": "滴",
+          "pinyin": "di1",
+          "display": "di",
+          "tone": 1
+        },
+        {
+          "text": "雨",
+          "pinyin": "yu3",
+          "display": "yu",
+          "tone": 3
+        },
+        {
+          "text": "都",
+          "pinyin": "dou1",
+          "display": "dou",
+          "tone": 1
+        },
+        {
+          "text": "轻",
+          "pinyin": "qing1",
+          "display": "qing",
+          "tone": 1
+        },
+        {
+          "text": "唱",
+          "pinyin": "chang4",
+          "display": "chang",
+          "tone": 4
+        },
+        {
+          "text": "你",
+          "pinyin": "ni3",
+          "display": "ni",
+          "tone": 3
+        },
+        {
+          "text": "的",
+          "pinyin": "de",
+          "display": "de"
+        },
+        {
+          "text": "名",
+          "pinyin": "ming2",
+          "display": "ming",
+          "tone": 2
+        }
+      ]
+    }
+  ]
+}

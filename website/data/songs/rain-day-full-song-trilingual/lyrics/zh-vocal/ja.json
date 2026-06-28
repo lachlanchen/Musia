@@ -1,0 +1,582 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "trackRole": "translation",
+  "vocalSetId": "zh-vocal",
+  "timingSource": "asr-corrected-render",
+  "timingNote": "Mandarin render includes an audible repeated tonight phrase, so it is preserved as separate lines.",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 11.09,
+      "end": 14.91,
+      "text": "雨が窓を叩き 静かな部屋を起こす",
+      "singableText": "雨が窓を叩き 静かな部屋を起こす",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "雨",
+          "reading": "あめ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "窓",
+          "reading": "まど"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "叩",
+          "reading": "たた"
+        },
+        {
+          "text": "き"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "静",
+          "reading": "しず"
+        },
+        {
+          "text": "か"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "部屋",
+          "reading": "へや"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "起",
+          "reading": "お"
+        },
+        {
+          "text": "こ"
+        },
+        {
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 15.65,
+      "end": 19.49,
+      "text": "ネオン咲く長い街を歩く",
+      "singableText": "ネオン咲く長い街を歩く",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "ネオン"
+        },
+        {
+          "text": "咲",
+          "reading": "さ"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "長",
+          "reading": "なが"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "街",
+          "reading": "まち"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "歩",
+          "reading": "ある"
+        },
+        {
+          "text": "く"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 19.49,
+      "end": 22.43,
+      "text": "映る光ぜんぶ 君からの手紙",
+      "singableText": "映る光ぜんぶ 君からの手紙",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "映",
+          "reading": "うつ"
+        },
+        {
+          "text": "る"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり"
+        },
+        {
+          "text": "ぜ"
+        },
+        {
+          "text": "ん"
+        },
+        {
+          "text": "ぶ"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "か"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "手紙",
+          "reading": "てがみ"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 23.41,
+      "end": 26.05,
+      "text": "今夜が繰り返すなら",
+      "singableText": "今夜が繰り返すなら",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "今夜",
+          "reading": "こんや"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "繰",
+          "reading": "く"
+        },
+        {
+          "text": "り"
+        },
+        {
+          "text": "返",
+          "reading": "かえ"
+        },
+        {
+          "text": "す"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "ら"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 28.13,
+      "end": 30.09,
+      "text": "今夜が重すぎるなら",
+      "singableText": "今夜が重すぎるなら",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "今夜",
+          "reading": "こんや"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "重",
+          "reading": "おも"
+        },
+        {
+          "text": "す"
+        },
+        {
+          "text": "ぎ"
+        },
+        {
+          "text": "る"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "ら"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 30.09,
+      "end": 32.35,
+      "text": "この手のひらに降らせて",
+      "singableText": "この手のひらに降らせて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "こ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "手",
+          "reading": "て"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "降",
+          "reading": "ふ"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": "せ"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 32.35,
+      "end": 38.53,
+      "text": "銀の雨の中 そばにいて",
+      "singableText": "銀の雨の中 そばにいて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "銀",
+          "reading": "ぎん"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "雨",
+          "reading": "あめ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "中",
+          "reading": "なか"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "そ"
+        },
+        {
+          "text": "ば"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 41.09,
+      "end": 42.79,
+      "text": "割れた光を",
+      "singableText": "割れた光を",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "割",
+          "reading": "わ"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "た"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり"
+        },
+        {
+          "text": "を"
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 42.79,
+      "end": 45.17,
+      "text": "火に変えて",
+      "singableText": "火に変えて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "火",
+          "reading": "ひ"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "変",
+          "reading": "か"
+        },
+        {
+          "text": "え"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 47.96,
+      "end": 50.0,
+      "text": "終電が遠く消えて",
+      "singableText": "終電が遠く消えて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "終電",
+          "reading": "しゅうでん"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "遠",
+          "reading": "とお"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "消",
+          "reading": "き"
+        },
+        {
+          "text": "え"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 50.0,
+      "end": 52.76,
+      "text": "街角が広がる",
+      "singableText": "街角が広がる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "街角",
+          "reading": "まちかど"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "広",
+          "reading": "ひろ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 53.86,
+      "end": 58.72,
+      "text": "君の鼓動を 胸にしまう",
+      "singableText": "君の鼓動を 胸にしまう",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "鼓動",
+          "reading": "こどう"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "胸",
+          "reading": "むね"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "し"
+        },
+        {
+          "text": "ま"
+        },
+        {
+          "text": "う"
+        }
+      ]
+    },
+    {
+      "id": "line-013",
+      "start": 60.14,
+      "end": 63.72,
+      "text": "銀の雨の中 そばにいて",
+      "singableText": "銀の雨の中 そばにいて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "銀",
+          "reading": "ぎん"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "雨",
+          "reading": "あめ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "中",
+          "reading": "なか"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "そ"
+        },
+        {
+          "text": "ば"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-014",
+      "start": 66.34,
+      "end": 70.16,
+      "text": "しずくが君の名を歌う",
+      "singableText": "しずくが君の名を歌う",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "し"
+        },
+        {
+          "text": "ず"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "名",
+          "reading": "な"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "歌",
+          "reading": "うた"
+        },
+        {
+          "text": "う"
+        }
+      ]
+    }
+  ]
+}

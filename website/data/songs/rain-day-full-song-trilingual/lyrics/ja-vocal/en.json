@@ -1,0 +1,482 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "trackRole": "translation",
+  "vocalSetId": "ja-vocal",
+  "timingSource": "asr-corrected-render",
+  "timingNote": "Japanese render is shorter than the prompt-planned lyric; final bridge/refrain lines are not displayed because they are not clearly sung.",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 1.17,
+      "end": 11.24,
+      "text": "Rain taps the glass and wakes the room",
+      "singableText": "Rain taps the glass and wakes the room",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Rain"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "taps"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "glass"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "and"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wakes"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "room"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 13.4,
+      "end": 19.34,
+      "text": "I walk alone through streets where neon blooms",
+      "singableText": "I walk alone through streets where neon blooms",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "walk"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "alone"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "through"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "streets"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "where"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "neon"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "blooms"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 22.1,
+      "end": 27.1,
+      "text": "Every reflected light is a letter from you",
+      "singableText": "Every reflected light is a letter from you",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Every"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "reflected"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "light"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "is"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "a"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "letter"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 28.1,
+      "end": 40.28,
+      "text": "If the night is heavy, let it fall into my hands",
+      "singableText": "If the night is heavy, let it fall into my hands",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "If"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "night"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "is"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "heavy"
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "let"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "it"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fall"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "into"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "my"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hands"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 40.28,
+      "end": 44.74,
+      "text": "Stay beside me in the silver rain",
+      "singableText": "Stay beside me in the silver rain",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Stay"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "beside"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "me"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "silver"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rain"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 44.74,
+      "end": 48.78,
+      "text": "Turn the broken light into flame",
+      "singableText": "Turn the broken light into flame",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Turn"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "broken"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "light"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "into"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flame"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 51.8,
+      "end": 55.95,
+      "text": "Even without the sun, the road is visible",
+      "singableText": "Even without the sun, the road is visible",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Even"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "without"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sun"
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "road"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "is"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "visible"
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 57.23,
+      "end": 63.33,
+      "text": "Your voice is the place I return to on rainy days",
+      "singableText": "Your voice is the place I return to on rainy days",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Your"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "voice"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "is"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "place"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "I"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "return"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rainy"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "days"
+        }
+      ]
+    }
+  ]
+}

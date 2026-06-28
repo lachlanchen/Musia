@@ -1,0 +1,391 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "trackRole": "active-vocal",
+  "vocalSetId": "en-vocal",
+  "timingSource": "asr-corrected-render",
+  "timingNote": "English render has partial ASR; early prompt-planned lines were not clearly sung, so this set follows the audible render.",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 0.0,
+      "end": 15.83,
+      "text": "Hmm, so close",
+      "singableText": "Hmm, so close",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Hmm"
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "so"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "close"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 25.33,
+      "end": 30.11,
+      "text": "Every small reflection carries news of you",
+      "singableText": "Every small reflection carries news of you",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Every"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "small"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "reflection"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "carries"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "news"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "of"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 36.29,
+      "end": 45.21,
+      "text": "If the night feels heavy, let it fall through my hands",
+      "singableText": "If the night feels heavy, let it fall through my hands",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "If"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "night"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "feels"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "heavy"
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "let"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "it"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fall"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "through"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "my"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hands"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 49.4,
+      "end": 53.16,
+      "text": "Stay with me under this silver rain",
+      "singableText": "Stay with me under this silver rain",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Stay"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "with"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "me"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "under"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "this"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "silver"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rain"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 53.16,
+      "end": 58.52,
+      "text": "Let every broken light become a flame",
+      "singableText": "Let every broken light become a flame",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Let"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "every"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "broken"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "light"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "become"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "a"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flame"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 59.52,
+      "end": 65.68,
+      "text": "We do not need the sun to find our way",
+      "singableText": "We do not need the sun to find our way",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "We"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "do"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "not"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "need"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "the"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sun"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "find"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "our"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "way"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 66.52,
+      "end": 70.32,
+      "text": "Your voice is home on a rainy day",
+      "singableText": "Your voice is home on a rainy day",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Your"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "voice"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "is"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "home"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "a"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rainy"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "day"
+        }
+      ]
+    }
+  ]
+}

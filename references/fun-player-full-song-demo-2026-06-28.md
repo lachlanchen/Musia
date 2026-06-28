@@ -6,19 +6,19 @@ This note records the `Rain Day Full Song` website demo added to Fun Lazying Art
 
 - Catalog item: `rain-day-full-song-trilingual`
 - Manifest: `website/data/songs/rain-day-full-song-trilingual/manifest.json`
-- English lyrics: `website/data/songs/rain-day-full-song-trilingual/lyrics/en.json`
-- Chinese lyrics: `website/data/songs/rain-day-full-song-trilingual/lyrics/zh-Hans.json`
-- Japanese lyrics: `website/data/songs/rain-day-full-song-trilingual/lyrics/ja.json`
+- English vocal lyric set: `website/data/songs/rain-day-full-song-trilingual/lyrics/en-vocal/`
+- Chinese vocal lyric set: `website/data/songs/rain-day-full-song-trilingual/lyrics/zh-vocal/`
+- Japanese vocal lyric set: `website/data/songs/rain-day-full-song-trilingual/lyrics/ja-vocal/`
 - English audio: `website/assets/audio/rain-day-full-song-en.mp3`
 - Chinese audio: `website/assets/audio/rain-day-full-song-zh.mp3`
 - Japanese audio: `website/assets/audio/rain-day-full-song-ja.mp3`
 - Cover: `website/assets/covers/rain-day-full-song-16x9.png`
 - README screenshot: `website/assets/images/musai-fun-player-full-song.png`
 
-The catalog default remains the short SoulX trilingual verse:
+The catalog currently hides the short SoulX verse and defaults to:
 
 ```text
-rain-day-bilingual-verse
+mars-red-sky-trilingual
 ```
 
 The full song is selectable through the media library and searchable by title, language, and tags.
@@ -41,7 +41,15 @@ The public lyric tracks were then retimed from the detected sung phrases:
 - Japanese full song: detected around `76.00` BPM.
 - Short SoulX Mandarin verse: detected around `112.35` BPM; the website keeps this as analysis provenance while preserving the original creative key/phrase concept.
 
-The full-song website manifest now uses per-language timing from each text track. This is important because the English, Chinese, and Japanese files are separate generated renders, not one strict same-stems localization pass.
+The full-song website manifest now uses per-vocal `lyricSets`. This is important because the English, Chinese, and Japanese files are separate generated renders, not one strict same-stems localization pass. Each vocal render owns a separate trilingual display:
+
+```text
+en-vocal: English-led timing with Chinese/Japanese translations
+zh-vocal: Mandarin-led timing with Japanese/English translations
+ja-vocal: Japanese-led timing with Chinese/English translations
+```
+
+This avoids the earlier bug where the Mandarin render's timeline was reused for English, leaving the first visible Mandarin/Japanese lines without English text.
 
 The displayed chord row is a simplified analysis-derived D minor progression from the cleanest full-song chord pass:
 
@@ -96,4 +104,4 @@ This fixes the earlier confusion where the right lyric carousel appeared to show
 
 ## Current Limitation
 
-The generated audio quality is good enough for a public demo, but the analysis shows that some generated vocals do not sing every prompt-planned line exactly. The website lyrics now favor the detected sung phrase timing and natural localized lyric text. A true production localization should regenerate or manually correct the vocal until ASR, human listening, lyric timing, and chord/melody checks all agree.
+The generated audio quality is good enough for a public demo, but the analysis shows that some generated vocals do not sing every prompt-planned line exactly. The website lyrics now favor each render's detected sung phrase timing and natural localized lyric text. A true production localization should regenerate or manually correct the vocal until ASR, human listening, lyric timing, and chord/melody checks all agree.

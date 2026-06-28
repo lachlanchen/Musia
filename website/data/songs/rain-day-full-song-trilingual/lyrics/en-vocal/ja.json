@@ -1,0 +1,371 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "trackRole": "translation",
+  "vocalSetId": "en-vocal",
+  "timingSource": "asr-corrected-render",
+  "timingNote": "English render has partial ASR; early prompt-planned lines were not clearly sung, so this set follows the audible render.",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 0.0,
+      "end": 15.83,
+      "text": "小さくハミング 君のそば",
+      "singableText": "小さくハミング 君のそば",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "reading": "ちい"
+        },
+        {
+          "text": "さ"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "ハ"
+        },
+        {
+          "text": "ミ"
+        },
+        {
+          "text": "ン"
+        },
+        {
+          "text": "グ"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "そ"
+        },
+        {
+          "text": "ば"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 25.33,
+      "end": 30.11,
+      "text": "小さな反射が 君の便りを運ぶ",
+      "singableText": "小さな反射が 君の便りを運ぶ",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "reading": "ちい"
+        },
+        {
+          "text": "さ"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "反射",
+          "reading": "はんしゃ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "便",
+          "reading": "たよ"
+        },
+        {
+          "text": "り"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "運",
+          "reading": "はこ"
+        },
+        {
+          "text": "ぶ"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 36.29,
+      "end": 45.21,
+      "text": "夜が重いなら この手に降らせて",
+      "singableText": "夜が重いなら この手に降らせて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "夜",
+          "reading": "よる"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "重",
+          "reading": "おも"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "こ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "手",
+          "reading": "て"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "降",
+          "reading": "ふ"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": "せ"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 49.4,
+      "end": 53.16,
+      "text": "銀の雨の中 そばにいて",
+      "singableText": "銀の雨の中 そばにいて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "銀",
+          "reading": "ぎん"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "雨",
+          "reading": "あめ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "中",
+          "reading": "なか"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "そ"
+        },
+        {
+          "text": "ば"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 53.16,
+      "end": 58.52,
+      "text": "割れた光を 火に変えて",
+      "singableText": "割れた光を 火に変えて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "割",
+          "reading": "わ"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "た"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "火",
+          "reading": "ひ"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "変",
+          "reading": "か"
+        },
+        {
+          "text": "え"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 59.52,
+      "end": 65.68,
+      "text": "太陽なしでも 道は見える",
+      "singableText": "太陽なしでも 道は見える",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "太陽",
+          "reading": "たいよう"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "し"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "も"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "道",
+          "reading": "みち"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "見",
+          "reading": "み"
+        },
+        {
+          "text": "え"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 66.52,
+      "end": 70.32,
+      "text": "君の声が 雨の日の帰る場所",
+      "singableText": "君の声が 雨の日の帰る場所",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "声",
+          "reading": "こえ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "雨",
+          "reading": "あめ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "日",
+          "reading": "ひ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "帰",
+          "reading": "かえ"
+        },
+        {
+          "text": "る"
+        },
+        {
+          "text": "場所",
+          "reading": "ばしょ"
+        }
+      ]
+    }
+  ]
+}
