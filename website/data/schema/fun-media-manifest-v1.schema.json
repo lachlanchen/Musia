@@ -3,7 +3,7 @@
   "$id": "https://fun.lazying.art/data/schema/fun-media-manifest-v1.schema.json",
   "title": "Fun Lazying Art Media Manifest v1",
   "type": "object",
-  "required": ["schema", "version", "id", "kind", "title", "duration", "assets", "textTracks", "timeline"],
+  "required": ["schema", "version", "id", "kind", "title", "duration", "assets", "timeline"],
   "properties": {
     "schema": {"const": "fun.lazying.media.manifest.v1"},
     "version": {"const": 1},
@@ -68,6 +68,33 @@
           "script": {"type": "string"},
           "features": {"type": "array", "items": {"type": "string"}},
           "path": {"type": "string"}
+        }
+      }
+    },
+    "lyricSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "languageCode", "tracks"],
+        "properties": {
+          "id": {"type": "string"},
+          "label": {"type": "string"},
+          "languageCode": {"type": "string"},
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["code", "label", "nativeLabel", "path"],
+              "properties": {
+                "code": {"type": "string"},
+                "label": {"type": "string"},
+                "nativeLabel": {"type": "string"},
+                "script": {"type": "string"},
+                "features": {"type": "array", "items": {"type": "string"}},
+                "path": {"type": "string"}
+              }
+            }
+          }
         }
       }
     },

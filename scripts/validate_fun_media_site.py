@@ -64,7 +64,12 @@ def validate_external_videos(manifest_path: Path, manifest: dict) -> None:
         require(has_locator, f"{manifest_path}: external video must include videoId, url, embedUrl, or src")
 
 
-def validate_text_track(manifest_path: Path, manifest: dict, track_info: dict, timeline_ids: set[str]) -> None:
+def validate_text_track(
+    manifest_path: Path,
+    manifest: dict,
+    track_info: dict,
+    timeline_ids: set[str] | None,
+) -> set[str]:
     track_path = manifest_path.parent / track_info["path"]
     require(track_path.exists(), f"{manifest_path}: missing text track {track_path}")
     track = load_json(track_path)
@@ -76,15 +81,31 @@ def validate_text_track(manifest_path: Path, manifest: dict, track_info: dict, t
     seen = set()
     for line in track.get("lines", []):
         line_id = line.get("id")
-        require(line_id in timeline_ids, f"{track_path}: unknown line id {line_id}")
+        if timeline_ids is not None:
+            require(line_id in timeline_ids, f"{track_path}: unknown line id {line_id}")
         require(line.get("end", 0) >= line.get("start", 0), f"{track_path}: bad timing for {line_id}")
         require(isinstance(line.get("text"), str) and line["text"], f"{track_path}: missing text for {line_id}")
         seen.add(line_id)
 
-    missing = timeline_ids - seen
+    missing = (timeline_ids or set()) - seen
     line_coverage = track_info.get("lineCoverage") or track.get("lineCoverage") or "complete"
     allow_partial = line_coverage in {"partial", "partial-asr", "asr-partial"}
     require(allow_partial or not missing, f"{track_path}: missing line ids {sorted(missing)}")
+    return seen
+
+
+def validate_lyric_set(manifest_path: Path, manifest: dict, lyric_set: dict) -> None:
+    require(lyric_set.get("id"), f"{manifest_path}: lyric set missing id")
+    require(lyric_set.get("languageCode"), f"{manifest_path}: lyric set {lyric_set.get('id')} missing languageCode")
+    tracks = lyric_set.get("tracks") or lyric_set.get("textTracks") or []
+    require(tracks, f"{manifest_path}: lyric set {lyric_set['id']} missing tracks")
+
+    reference_ids: set[str] | None = None
+    for track_info in tracks:
+        require(track_info.get("path"), f"{manifest_path}: lyric set {lyric_set['id']} track missing path")
+        seen = validate_text_track(manifest_path, manifest, track_info, reference_ids)
+        if reference_ids is None:
+            reference_ids = seen
 
 
 def validate_manifest(root: Path, item: dict) -> None:
@@ -117,6 +138,9 @@ def validate_manifest(root: Path, item: dict) -> None:
     for track_info in tracks:
         require(track_info.get("path"), f"{manifest_path}: text track missing path")
         validate_text_track(manifest_path, manifest, track_info, timeline_ids)
+
+    for lyric_set in manifest.get("lyricSets", []):
+        validate_lyric_set(manifest_path, manifest, lyric_set)
 
 
 def validate(root: Path) -> None:

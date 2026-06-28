@@ -1,0 +1,533 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "mars-red-sky-trilingual",
+  "songId": "mars-red-sky-trilingual",
+  "lyricSetId": "ja-vocal",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 8.75,
+      "end": 14.0,
+      "text": "赤い砂が足跡を消す",
+      "singableText": "赤い砂が足跡を消す",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい",
+          "start": 8.75,
+          "end": 9.625
+        },
+        {
+          "text": "砂",
+          "reading": "すな",
+          "start": 9.625,
+          "end": 10.5
+        },
+        {
+          "text": "が",
+          "start": 10.5,
+          "end": 11.375
+        },
+        {
+          "text": "足跡",
+          "reading": "あしあと",
+          "start": 11.375,
+          "end": 12.25
+        },
+        {
+          "text": "を",
+          "start": 12.25,
+          "end": 13.125
+        },
+        {
+          "text": "消す",
+          "reading": "けす",
+          "start": 13.125,
+          "end": 14.0
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 14.0,
+      "end": 20.29,
+      "text": "青い夕陽が風に沈む",
+      "singableText": "青い夕陽が風に沈む",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "青い",
+          "reading": "あおい",
+          "start": 14.0,
+          "end": 15.048
+        },
+        {
+          "text": "夕陽",
+          "reading": "ゆうひ",
+          "start": 15.048,
+          "end": 16.097
+        },
+        {
+          "text": "が",
+          "start": 16.097,
+          "end": 17.145
+        },
+        {
+          "text": "風",
+          "reading": "かぜ",
+          "start": 17.145,
+          "end": 18.193
+        },
+        {
+          "text": "に",
+          "start": 18.193,
+          "end": 19.242
+        },
+        {
+          "text": "沈む",
+          "reading": "しずむ",
+          "start": 19.242,
+          "end": 20.29
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 20.29,
+      "end": 23.23,
+      "text": "峡谷のそば 小さな火でも",
+      "singableText": "峡谷のそば 小さな火でも",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "峡谷",
+          "reading": "きょうこく",
+          "start": 20.29,
+          "end": 20.657
+        },
+        {
+          "text": "の",
+          "start": 20.657,
+          "end": 21.025
+        },
+        {
+          "text": "そ",
+          "start": 21.025,
+          "end": 21.392
+        },
+        {
+          "text": "ば",
+          "start": 21.392,
+          "end": 21.76
+        },
+        {
+          "text": "小さな",
+          "reading": "ちいさな",
+          "start": 21.76,
+          "end": 22.128
+        },
+        {
+          "text": "火",
+          "reading": "ひ",
+          "start": 22.128,
+          "end": 22.495
+        },
+        {
+          "text": "で",
+          "start": 22.495,
+          "end": 22.863
+        },
+        {
+          "text": "も",
+          "start": 22.863,
+          "end": 23.23
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 23.23,
+      "end": 27.5,
+      "text": "顔を上げて前へ進む",
+      "singableText": "顔を上げて前へ進む",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "顔",
+          "reading": "かお",
+          "start": 23.23,
+          "end": 23.942
+        },
+        {
+          "text": "を",
+          "start": 23.942,
+          "end": 24.653
+        },
+        {
+          "text": "上げて",
+          "reading": "あげて",
+          "start": 24.653,
+          "end": 25.365
+        },
+        {
+          "text": "前",
+          "reading": "まえ",
+          "start": 25.365,
+          "end": 26.077
+        },
+        {
+          "text": "へ",
+          "start": 26.077,
+          "end": 26.788
+        },
+        {
+          "text": "進む",
+          "reading": "すすむ",
+          "start": 26.788,
+          "end": 27.5
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 27.5,
+      "end": 31.5,
+      "text": "星は黙る 冷たく遠く",
+      "singableText": "星は黙る 冷たく遠く",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "reading": "ほし",
+          "start": 27.5,
+          "end": 28.3
+        },
+        {
+          "text": "は",
+          "start": 28.3,
+          "end": 29.1
+        },
+        {
+          "text": "黙る",
+          "reading": "だまる",
+          "start": 29.1,
+          "end": 29.9
+        },
+        {
+          "text": "冷たく",
+          "reading": "つめたく",
+          "start": 29.9,
+          "end": 30.7
+        },
+        {
+          "text": "遠く",
+          "reading": "とおく",
+          "start": 30.7,
+          "end": 31.5
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 31.5,
+      "end": 36.35,
+      "text": "答えなくても 空をくれる",
+      "singableText": "答えなくても 空をくれる",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "答えなくても",
+          "reading": "こたえなくても",
+          "start": 31.5,
+          "end": 32.308
+        },
+        {
+          "text": "空",
+          "reading": "そら",
+          "start": 32.308,
+          "end": 33.117
+        },
+        {
+          "text": "を",
+          "start": 33.117,
+          "end": 33.925
+        },
+        {
+          "text": "く",
+          "start": 33.925,
+          "end": 34.733
+        },
+        {
+          "text": "れ",
+          "start": 34.733,
+          "end": 35.542
+        },
+        {
+          "text": "る",
+          "start": 35.542,
+          "end": 36.35
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 41.31,
+      "end": 43.81,
+      "text": "赤い空の下で 小さな僕は",
+      "singableText": "赤い空の下で 小さな僕は",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい",
+          "start": 41.31,
+          "end": 41.623
+        },
+        {
+          "text": "空",
+          "reading": "そら",
+          "start": 41.623,
+          "end": 41.935
+        },
+        {
+          "text": "の",
+          "start": 41.935,
+          "end": 42.248
+        },
+        {
+          "text": "下",
+          "reading": "した",
+          "start": 42.248,
+          "end": 42.56
+        },
+        {
+          "text": "で",
+          "start": 42.56,
+          "end": 42.873
+        },
+        {
+          "text": "小さな",
+          "reading": "ちいさな",
+          "start": 42.873,
+          "end": 43.185
+        },
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 43.185,
+          "end": 43.498
+        },
+        {
+          "text": "は",
+          "start": 43.498,
+          "end": 43.81
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 44.47,
+      "end": 46.75,
+      "text": "胸の火を高く掲げる",
+      "singableText": "胸の火を高く掲げる",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "胸",
+          "reading": "むね",
+          "start": 44.47,
+          "end": 44.85
+        },
+        {
+          "text": "の",
+          "start": 44.85,
+          "end": 45.23
+        },
+        {
+          "text": "火",
+          "reading": "ひ",
+          "start": 45.23,
+          "end": 45.61
+        },
+        {
+          "text": "を",
+          "start": 45.61,
+          "end": 45.99
+        },
+        {
+          "text": "高く",
+          "reading": "たかく",
+          "start": 45.99,
+          "end": 46.37
+        },
+        {
+          "text": "掲げる",
+          "reading": "かかげる",
+          "start": 46.37,
+          "end": 46.75
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 55.71,
+      "end": 60.91,
+      "text": "星の砂が道になる",
+      "singableText": "星の砂が道になる",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "reading": "ほし",
+          "start": 55.71,
+          "end": 56.36
+        },
+        {
+          "text": "の",
+          "start": 56.36,
+          "end": 57.01
+        },
+        {
+          "text": "砂",
+          "reading": "すな",
+          "start": 57.01,
+          "end": 57.66
+        },
+        {
+          "text": "が",
+          "start": 57.66,
+          "end": 58.31
+        },
+        {
+          "text": "道",
+          "reading": "みち",
+          "start": 58.31,
+          "end": 58.96
+        },
+        {
+          "text": "に",
+          "start": 58.96,
+          "end": 59.61
+        },
+        {
+          "text": "な",
+          "start": 59.61,
+          "end": 60.26
+        },
+        {
+          "text": "る",
+          "start": 60.26,
+          "end": 60.91
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 61.0,
+      "end": 67.0,
+      "text": "赤い空の下で 明日が呼ぶ",
+      "singableText": "赤い空の下で 明日が呼ぶ",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい",
+          "start": 61.0,
+          "end": 61.75
+        },
+        {
+          "text": "空",
+          "reading": "そら",
+          "start": 61.75,
+          "end": 62.5
+        },
+        {
+          "text": "の",
+          "start": 62.5,
+          "end": 63.25
+        },
+        {
+          "text": "下",
+          "reading": "した",
+          "start": 63.25,
+          "end": 64.0
+        },
+        {
+          "text": "で",
+          "start": 64.0,
+          "end": 64.75
+        },
+        {
+          "text": "明日",
+          "reading": "あした",
+          "start": 64.75,
+          "end": 65.5
+        },
+        {
+          "text": "が",
+          "start": 65.5,
+          "end": 66.25
+        },
+        {
+          "text": "呼ぶ",
+          "reading": "よぶ",
+          "start": 66.25,
+          "end": 67.0
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 67.0,
+      "end": 77.29,
+      "text": "宇宙が広いほど 勇気は燃える",
+      "singableText": "宇宙が広いほど 勇気は燃える",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "宇宙",
+          "reading": "うちゅう",
+          "start": 67.0,
+          "end": 68.715
+        },
+        {
+          "text": "が",
+          "start": 68.715,
+          "end": 70.43
+        },
+        {
+          "text": "広いほど",
+          "reading": "ひろいほど",
+          "start": 70.43,
+          "end": 72.145
+        },
+        {
+          "text": "勇気",
+          "reading": "ゆうき",
+          "start": 72.145,
+          "end": 73.86
+        },
+        {
+          "text": "は",
+          "start": 73.86,
+          "end": 75.575
+        },
+        {
+          "text": "燃える",
+          "reading": "もえる",
+          "start": 75.575,
+          "end": 77.29
+        }
+      ]
+    }
+  ]
+}

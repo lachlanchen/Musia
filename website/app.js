@@ -2,6 +2,8 @@ const state = {
   catalog: null,
   manifest: null,
   manifestUrl: "",
+  defaultTracks: [],
+  lyricSets: [],
   tracks: [],
   trackByCode: new Map(),
   selectedLyricLangs: new Set(),
@@ -170,7 +172,11 @@ function lineStartForDisplay(line) {
 }
 
 function chords() {
-  return state.manifest?.musical?.chords || [];
+  return activeMusical()?.chords || [];
+}
+
+function activeMusical() {
+  return activePlayableAsset()?.musical || state.manifest?.musical || {};
 }
 
 function selectedLyricTracks() {
@@ -213,6 +219,12 @@ function updateMediaTitle() {
   const title = displayTitleForAsset();
   $("media-title").textContent = title;
   document.title = `${title} - Fun Lazying Art`;
+}
+
+function updateMusicalLabels() {
+  const musical = activeMusical();
+  $("key-label").textContent = musical.key || "No key";
+  $("bpm-label").textContent = musical.bpm ? `${Math.round(Number(musical.bpm))} BPM` : "No BPM";
 }
 
 function lineForTrack(track, lineId) {
@@ -302,6 +314,28 @@ function activePlayableAsset() {
   return playableAssets(state.manifest || {}).find((asset) => asset.id === state.activeAssetId) || null;
 }
 
+function activeLyricSetForAsset(asset = activePlayableAsset()) {
+  if (!state.lyricSets.length) return null;
+  return state.lyricSets.find((set) => set.id && set.id === asset?.lyricSetId)
+    || state.lyricSets.find((set) => set.languageCode && set.languageCode === asset?.languageCode)
+    || null;
+}
+
+function applyActiveLyricSet({ resetSelection = false } = {}) {
+  const set = activeLyricSetForAsset();
+  const tracks = set?.tracks?.length ? set.tracks : state.defaultTracks;
+  state.tracks = tracks;
+  state.trackByCode = new Map(state.tracks.map((track) => [track.language.code, track]));
+
+  const available = new Set(state.tracks.map((track) => track.language.code));
+  if (resetSelection || !state.selectedLyricLangs.size) {
+    state.selectedLyricLangs = new Set(available);
+    return;
+  }
+  state.selectedLyricLangs = new Set([...state.selectedLyricLangs].filter((code) => available.has(code)));
+  if (!state.selectedLyricLangs.size) state.selectedLyricLangs = new Set(available);
+}
+
 function setLibraryOpen(open) {
   state.libraryOpen = Boolean(open);
   $("library-panel").hidden = !state.libraryOpen;
@@ -362,9 +396,12 @@ function setMediaSource(asset, keepTime = false) {
     $("play").disabled = true;
     $("play").title = "Use the embedded player controls";
     $("play-symbol").textContent = "▶";
+    applyActiveLyricSet();
     renderAssetSwitcher();
+    renderLanguageButtons();
     renderVocalLanguageSelect();
     updateMediaTitle();
+    updateMusicalLabels();
     updateSync();
     return;
   }
@@ -379,9 +416,12 @@ function setMediaSource(asset, keepTime = false) {
   state.mediaElement.src = resolveSitePath(asset.src);
   if (keepTime) state.mediaElement.currentTime = Math.min(previousTime, (state.manifest.duration || previousTime) - 0.1);
   if (wasPlaying) state.mediaElement.play();
+  applyActiveLyricSet();
   renderAssetSwitcher();
+  renderLanguageButtons();
   renderVocalLanguageSelect();
   updateMediaTitle();
+  updateMusicalLabels();
   updateSync();
 }
 
@@ -457,9 +497,7 @@ function renderLanguageButtons() {
     $("language-tabs").innerHTML = `<span class="soft-note">No lyrics</span>`;
     return;
   }
-  const allSelected = state.tracks.every((track) => state.selectedLyricLangs.has(track.language.code));
   $("language-tabs").innerHTML = `
-    <button class="${allSelected ? "active" : ""}" type="button" data-lang-all="true" aria-pressed="${allSelected ? "true" : "false"}">All</button>
     ${state.tracks.map((track) => {
       const active = state.selectedLyricLangs.has(track.language.code);
       return `
@@ -469,13 +507,6 @@ function renderLanguageButtons() {
       `;
     }).join("")}
   `;
-  document.querySelectorAll("[data-lang-all]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.selectedLyricLangs = new Set(state.tracks.map((track) => track.language.code));
-      renderLanguageButtons();
-      updateSync();
-    });
-  });
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => {
       const code = button.dataset.lang;
@@ -553,7 +584,7 @@ function renderCarousel(activeLine) {
 }
 
 function renderFullLyrics(activeLine = null) {
-  const lines = manifestLines();
+  const lines = timingLines();
   if (!lines.length) {
     $("full-lyrics").innerHTML = "";
     return;
@@ -716,6 +747,16 @@ async function loadJson(url) {
   return response.json();
 }
 
+async function loadTextTracks(trackInfos = []) {
+  return Promise.all(trackInfos.map(async (trackInfo) => {
+    const url = resolveManifestPath(trackInfo.path);
+    const track = await loadJson(url);
+    track.__url = url;
+    track.__trackInfo = trackInfo;
+    return track;
+  }));
+}
+
 async function loadMediaItem(item, updateHash = false) {
   if (!item) throw new Error("No media item in catalog.");
   if (state.mediaElement) state.mediaElement.pause();
@@ -723,14 +764,14 @@ async function loadMediaItem(item, updateHash = false) {
   state.activeMediaId = item.id;
   state.manifestUrl = resolveSitePath(item.manifest);
   state.manifest = await loadJson(state.manifestUrl);
-  state.tracks = await Promise.all((state.manifest.textTracks || []).map(async (trackInfo) => {
-    const url = resolveManifestPath(trackInfo.path);
-    const track = await loadJson(url);
-    track.__url = url;
-    return track;
-  }));
-  state.trackByCode = new Map(state.tracks.map((track) => [track.language.code, track]));
-  state.selectedLyricLangs = new Set(state.tracks.map((track) => track.language.code));
+  state.defaultTracks = await loadTextTracks(state.manifest.textTracks || []);
+  state.lyricSets = await Promise.all((state.manifest.lyricSets || []).map(async (set) => ({
+    ...set,
+    tracks: await loadTextTracks(set.textTracks || set.tracks || [])
+  })));
+  state.tracks = [];
+  state.trackByCode = new Map();
+  state.selectedLyricLangs = new Set();
 
   const musical = state.manifest.musical || {};
   $("kind-label").textContent = labelKind(state.manifest.kind);
@@ -738,7 +779,7 @@ async function loadMediaItem(item, updateHash = false) {
   $("media-subtitle").textContent = "";
   $("media-caption").textContent = state.manifest.caption || labelKind(state.manifest.kind);
   $("key-label").textContent = musical.key || "No key";
-  $("bpm-label").textContent = musical.bpm ? `${musical.bpm} BPM` : "No BPM";
+  $("bpm-label").textContent = musical.bpm ? `${Math.round(Number(musical.bpm))} BPM` : "No BPM";
   updateShareMetadata(state.manifest);
   const cover = coverUrl(state.manifest);
   coverArt.src = cover ? resolveSitePath(cover) : "";
@@ -747,7 +788,6 @@ async function loadMediaItem(item, updateHash = false) {
   coverThumb.alt = coverArt.alt;
 
   renderLibrary();
-  renderLanguageButtons();
   const firstAsset = playableAssets(state.manifest)[0];
   if (!firstAsset) throw new Error("No playable media asset in manifest.");
   setMediaSource(firstAsset);

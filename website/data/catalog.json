@@ -6,29 +6,29 @@
     "url": "https://fun.lazying.art",
     "protocol": "fun.lazying.media.v1"
   },
-  "defaultMedia": "rain-day-full-song-trilingual",
+  "defaultMedia": "mars-red-sky-trilingual",
   "items": [
     {
-      "id": "rain-day-bilingual-verse",
+      "id": "mars-red-sky-trilingual",
       "kind": "song",
-      "title": "Rain Day Verse",
-      "artist": "Musai SoulX / ACE-Step",
-      "summary": "A short rain-day verse with separate Chinese, English, and Japanese playable renders plus per-language ASR-adjusted lyric timing.",
-      "manifest": "data/songs/rain-day-bilingual-verse/manifest.json",
-      "cover": "assets/covers/rain-day-trilingual-poster-16x9.png",
+      "title": "Small Under the Red Sky",
+      "artist": "Musai ACE-Step",
+      "summary": "An 82-second cinematic Mars desert song with separate English, Mandarin, and Japanese renders, per-vocal trilingual lyrics, pinyin, furigana, and chord timing.",
+      "manifest": "data/songs/mars-red-sky-trilingual/manifest.json",
+      "cover": "assets/covers/mars-red-sky-16x9.png",
       "languages": [
+        "en",
         "zh-Hans",
-        "ja",
-        "en"
+        "ja"
       ],
       "tags": [
         "music",
-        "lyrics",
-        "pinyin",
-        "furigana",
-        "SoulX",
+        "full-song",
+        "trilingual",
         "ACE-Step",
-        "ASR-timed"
+        "mars",
+        "pinyin",
+        "furigana"
       ]
     },
     {

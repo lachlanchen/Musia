@@ -1,0 +1,456 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "mars-red-sky-trilingual",
+  "songId": "mars-red-sky-trilingual",
+  "lyricSetId": "zh-vocal",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 23.67,
+      "end": 25.65,
+      "text": "赤い砂が足跡を包む",
+      "singableText": "赤い砂が足跡を包む",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい"
+        },
+        {
+          "text": "砂",
+          "reading": "すな"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "足跡",
+          "reading": "あしあと"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "包"
+        },
+        {
+          "text": "む"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 26.33,
+      "end": 28.99,
+      "text": "青い夕陽が風塵へ落ちる",
+      "singableText": "青い夕陽が風塵へ落ちる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "青い",
+          "reading": "あおい"
+        },
+        {
+          "text": "夕陽",
+          "reading": "ゆうひ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "風",
+          "reading": "かぜ"
+        },
+        {
+          "text": "塵",
+          "reading": "ちり"
+        },
+        {
+          "text": "へ"
+        },
+        {
+          "text": "落"
+        },
+        {
+          "text": "ち"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 29.81,
+      "end": 33.25,
+      "text": "峡谷のそば 私は小さな光",
+      "singableText": "峡谷のそば 私は小さな光",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "峡谷",
+          "reading": "きょうこく"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "そ"
+        },
+        {
+          "text": "ば"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "小さな",
+          "reading": "ちいさな"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 33.25,
+      "end": 35.35,
+      "text": "それでも顔を上げて進む",
+      "singableText": "それでも顔を上げて進む",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "そ"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "も"
+        },
+        {
+          "text": "顔",
+          "reading": "かお"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "上げて",
+          "reading": "あげて"
+        },
+        {
+          "text": "進む",
+          "reading": "すすむ"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 36.66,
+      "end": 41.6,
+      "text": "星は黙る 冷たく遠い",
+      "singableText": "星は黙る 冷たく遠い",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "星",
+          "reading": "ほし"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "黙る",
+          "reading": "だまる"
+        },
+        {
+          "text": "冷たく",
+          "reading": "つめたく"
+        },
+        {
+          "text": "遠い",
+          "reading": "とおい"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 41.6,
+      "end": 46.99,
+      "text": "答えずに 空だけをくれる",
+      "singableText": "答えずに 空だけをくれる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "答えずに",
+          "reading": "こたえずに"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "だ"
+        },
+        {
+          "text": "け"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 48.19,
+      "end": 53.39,
+      "text": "赤い空の下で 私は小さい",
+      "singableText": "赤い空の下で 私は小さい",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "下",
+          "reading": "した"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "小さい",
+          "reading": "ちいさい"
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 53.39,
+      "end": 56.59,
+      "text": "それでも胸の火を高くする",
+      "singableText": "それでも胸の火を高くする",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "そ"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "も"
+        },
+        {
+          "text": "胸",
+          "reading": "むね"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "火",
+          "reading": "ひ"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "高く",
+          "reading": "たかく"
+        },
+        {
+          "text": "す"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 57.01,
+      "end": 59.11,
+      "text": "夜がどれほど広くても",
+      "singableText": "夜がどれほど広くても",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "夜"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "ど"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "ほ"
+        },
+        {
+          "text": "ど"
+        },
+        {
+          "text": "広くても",
+          "reading": "ひろくても"
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 60.29,
+      "end": 65.37,
+      "text": "赤い空の下 明日が叫ぶ",
+      "singableText": "赤い空の下 明日が叫ぶ",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "下",
+          "reading": "した"
+        },
+        {
+          "text": "明日",
+          "reading": "あした"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "叫ぶ",
+          "reading": "さけぶ"
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 65.37,
+      "end": 68.61,
+      "text": "一歩ずつ 逃げずに行く",
+      "singableText": "一歩ずつ 逃げずに行く",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "一"
+        },
+        {
+          "text": "歩"
+        },
+        {
+          "text": "ず"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "逃"
+        },
+        {
+          "text": "げ"
+        },
+        {
+          "text": "ず"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "行"
+        },
+        {
+          "text": "く"
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 68.83,
+      "end": 74.29,
+      "text": "宇宙が広いほど 私は燃える",
+      "singableText": "宇宙が広いほど 私は燃える",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "宇宙",
+          "reading": "うちゅう"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "広いほど",
+          "reading": "ひろいほど"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "燃える",
+          "reading": "もえる"
+        }
+      ]
+    }
+  ]
+}

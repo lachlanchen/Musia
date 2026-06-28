@@ -1,0 +1,694 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "mars-red-sky-trilingual",
+  "songId": "mars-red-sky-trilingual",
+  "lyricSetId": "zh-vocal",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 23.67,
+      "end": 25.65,
+      "text": "红沙盖过脚印",
+      "singableText": "红沙盖过脚印",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "红",
+          "pinyin": "hong2",
+          "start": 23.67,
+          "end": 24.0
+        },
+        {
+          "text": "沙",
+          "pinyin": "sha1",
+          "start": 24.0,
+          "end": 24.33
+        },
+        {
+          "text": "盖",
+          "pinyin": "gai4",
+          "start": 24.33,
+          "end": 24.66
+        },
+        {
+          "text": "过",
+          "pinyin": "guo4",
+          "start": 24.66,
+          "end": 24.99
+        },
+        {
+          "text": "脚",
+          "pinyin": "jiao3",
+          "start": 24.99,
+          "end": 25.32
+        },
+        {
+          "text": "印",
+          "pinyin": "yin4",
+          "start": 25.32,
+          "end": 25.65
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 26.33,
+      "end": 28.99,
+      "text": "蓝日落进风尘",
+      "singableText": "蓝日落进风尘",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "蓝",
+          "pinyin": "lan2",
+          "start": 26.33,
+          "end": 26.773
+        },
+        {
+          "text": "日",
+          "pinyin": "ri4",
+          "start": 26.773,
+          "end": 27.217
+        },
+        {
+          "text": "落",
+          "pinyin": "luo4",
+          "start": 27.217,
+          "end": 27.66
+        },
+        {
+          "text": "进",
+          "pinyin": "jin4",
+          "start": 27.66,
+          "end": 28.103
+        },
+        {
+          "text": "风",
+          "pinyin": "feng1",
+          "start": 28.103,
+          "end": 28.547
+        },
+        {
+          "text": "尘",
+          "pinyin": "chen2",
+          "start": 28.547,
+          "end": 28.99
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 29.81,
+      "end": 33.25,
+      "text": "我在峡谷旁像一粒微光",
+      "singableText": "我在峡谷旁像一粒微光",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 29.81,
+          "end": 30.154
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4",
+          "start": 30.154,
+          "end": 30.498
+        },
+        {
+          "text": "峡",
+          "pinyin": "xia2",
+          "start": 30.498,
+          "end": 30.842
+        },
+        {
+          "text": "谷",
+          "pinyin": "gu3",
+          "start": 30.842,
+          "end": 31.186
+        },
+        {
+          "text": "旁",
+          "pinyin": "pang2",
+          "start": 31.186,
+          "end": 31.53
+        },
+        {
+          "text": "像",
+          "pinyin": "xiang4",
+          "start": 31.53,
+          "end": 31.874
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 31.874,
+          "end": 32.218
+        },
+        {
+          "text": "粒",
+          "pinyin": "li4",
+          "start": 32.218,
+          "end": 32.562
+        },
+        {
+          "text": "微",
+          "pinyin": "wei1",
+          "start": 32.562,
+          "end": 32.906
+        },
+        {
+          "text": "光",
+          "pinyin": "guang1",
+          "start": 32.906,
+          "end": 33.25
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 33.25,
+      "end": 35.35,
+      "text": "仍要抬头向前奔",
+      "singableText": "仍要抬头向前奔",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "仍",
+          "pinyin": "reng2",
+          "start": 33.25,
+          "end": 33.55
+        },
+        {
+          "text": "要",
+          "pinyin": "yao4",
+          "start": 33.55,
+          "end": 33.85
+        },
+        {
+          "text": "抬",
+          "pinyin": "tai2",
+          "start": 33.85,
+          "end": 34.15
+        },
+        {
+          "text": "头",
+          "pinyin": "tou2",
+          "start": 34.15,
+          "end": 34.45
+        },
+        {
+          "text": "向",
+          "pinyin": "xiang4",
+          "start": 34.45,
+          "end": 34.75
+        },
+        {
+          "text": "前",
+          "pinyin": "qian2",
+          "start": 34.75,
+          "end": 35.05
+        },
+        {
+          "text": "奔",
+          "pinyin": "ben1",
+          "start": 35.05,
+          "end": 35.35
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 36.66,
+      "end": 41.6,
+      "text": "群星无声 又冷又远",
+      "singableText": "群星无声 又冷又远",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "群",
+          "pinyin": "qun2",
+          "start": 36.66,
+          "end": 37.277
+        },
+        {
+          "text": "星",
+          "pinyin": "xing1",
+          "start": 37.277,
+          "end": 37.895
+        },
+        {
+          "text": "无",
+          "pinyin": "wu2",
+          "start": 37.895,
+          "end": 38.512
+        },
+        {
+          "text": "声",
+          "pinyin": "sheng1",
+          "start": 38.512,
+          "end": 39.13
+        },
+        {
+          "text": "又",
+          "pinyin": "you4",
+          "start": 39.13,
+          "end": 39.748
+        },
+        {
+          "text": "冷",
+          "pinyin": "leng3",
+          "start": 39.748,
+          "end": 40.365
+        },
+        {
+          "text": "又",
+          "pinyin": "you4",
+          "start": 40.365,
+          "end": 40.983
+        },
+        {
+          "text": "远",
+          "pinyin": "yuan3",
+          "start": 40.983,
+          "end": 41.6
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 41.6,
+      "end": 46.99,
+      "text": "不回答 却给我天",
+      "singableText": "不回答 却给我天",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 41.6,
+          "end": 42.37
+        },
+        {
+          "text": "回",
+          "pinyin": "hui2",
+          "start": 42.37,
+          "end": 43.14
+        },
+        {
+          "text": "答",
+          "pinyin": "da2",
+          "start": 43.14,
+          "end": 43.91
+        },
+        {
+          "text": "却",
+          "pinyin": "que4",
+          "start": 43.91,
+          "end": 44.68
+        },
+        {
+          "text": "给",
+          "pinyin": "gei3",
+          "start": 44.68,
+          "end": 45.45
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 45.45,
+          "end": 46.22
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 46.22,
+          "end": 46.99
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 48.19,
+      "end": 53.39,
+      "text": "红色天空下 我如此渺小",
+      "singableText": "红色天空下 我如此渺小",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "红",
+          "pinyin": "hong2",
+          "start": 48.19,
+          "end": 48.71
+        },
+        {
+          "text": "色",
+          "pinyin": "se4",
+          "start": 48.71,
+          "end": 49.23
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 49.23,
+          "end": 49.75
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1",
+          "start": 49.75,
+          "end": 50.27
+        },
+        {
+          "text": "下",
+          "pinyin": "xia4",
+          "start": 50.27,
+          "end": 50.79
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 50.79,
+          "end": 51.31
+        },
+        {
+          "text": "如",
+          "pinyin": "ru2",
+          "start": 51.31,
+          "end": 51.83
+        },
+        {
+          "text": "此",
+          "pinyin": "ci3",
+          "start": 51.83,
+          "end": 52.35
+        },
+        {
+          "text": "渺",
+          "pinyin": "miao3",
+          "start": 52.35,
+          "end": 52.87
+        },
+        {
+          "text": "小",
+          "pinyin": "xiao3",
+          "start": 52.87,
+          "end": 53.39
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 53.39,
+      "end": 56.59,
+      "text": "也把心火举得高",
+      "singableText": "也把心火举得高",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 53.39,
+          "end": 53.847
+        },
+        {
+          "text": "把",
+          "pinyin": "ba3",
+          "start": 53.847,
+          "end": 54.304
+        },
+        {
+          "text": "心",
+          "pinyin": "xin1",
+          "start": 54.304,
+          "end": 54.761
+        },
+        {
+          "text": "火",
+          "pinyin": "huo3",
+          "start": 54.761,
+          "end": 55.219
+        },
+        {
+          "text": "举",
+          "pinyin": "ju3",
+          "start": 55.219,
+          "end": 55.676
+        },
+        {
+          "text": "得",
+          "pinyin": "de2",
+          "start": 55.676,
+          "end": 56.133
+        },
+        {
+          "text": "高",
+          "pinyin": "gao1",
+          "start": 56.133,
+          "end": 56.59
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 57.01,
+      "end": 59.11,
+      "text": "黑夜再辽阔",
+      "singableText": "黑夜再辽阔",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "黑",
+          "pinyin": "hei1",
+          "start": 57.01,
+          "end": 57.43
+        },
+        {
+          "text": "夜",
+          "pinyin": "ye4",
+          "start": 57.43,
+          "end": 57.85
+        },
+        {
+          "text": "再",
+          "pinyin": "zai4",
+          "start": 57.85,
+          "end": 58.27
+        },
+        {
+          "text": "辽",
+          "pinyin": "liao2",
+          "start": 58.27,
+          "end": 58.69
+        },
+        {
+          "text": "阔",
+          "pinyin": "kuo4",
+          "start": 58.69,
+          "end": 59.11
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 60.29,
+      "end": 65.37,
+      "text": "红色天空下 听明天呼啸",
+      "singableText": "红色天空下 听明天呼啸",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "红",
+          "pinyin": "hong2",
+          "start": 60.29,
+          "end": 60.798
+        },
+        {
+          "text": "色",
+          "pinyin": "se4",
+          "start": 60.798,
+          "end": 61.306
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 61.306,
+          "end": 61.814
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1",
+          "start": 61.814,
+          "end": 62.322
+        },
+        {
+          "text": "下",
+          "pinyin": "xia4",
+          "start": 62.322,
+          "end": 62.83
+        },
+        {
+          "text": "听",
+          "pinyin": "ting1",
+          "start": 62.83,
+          "end": 63.338
+        },
+        {
+          "text": "明",
+          "pinyin": "ming2",
+          "start": 63.338,
+          "end": 63.846
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 63.846,
+          "end": 64.354
+        },
+        {
+          "text": "呼",
+          "pinyin": "hu1",
+          "start": 64.354,
+          "end": 64.862
+        },
+        {
+          "text": "啸",
+          "pinyin": "xiao4",
+          "start": 64.862,
+          "end": 65.37
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 65.37,
+      "end": 68.61,
+      "text": "一步一步不退逃",
+      "singableText": "一步一步不退逃",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 65.37,
+          "end": 65.833
+        },
+        {
+          "text": "步",
+          "pinyin": "bu4",
+          "start": 65.833,
+          "end": 66.296
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 66.296,
+          "end": 66.759
+        },
+        {
+          "text": "步",
+          "pinyin": "bu4",
+          "start": 66.759,
+          "end": 67.221
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 67.221,
+          "end": 67.684
+        },
+        {
+          "text": "退",
+          "pinyin": "tui4",
+          "start": 67.684,
+          "end": 68.147
+        },
+        {
+          "text": "逃",
+          "pinyin": "tao2",
+          "start": 68.147,
+          "end": 68.61
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 68.83,
+      "end": 74.29,
+      "text": "宇宙越广大 我越要燃烧",
+      "singableText": "宇宙越广大 我越要燃烧",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "宇",
+          "pinyin": "yu3",
+          "start": 68.83,
+          "end": 69.376
+        },
+        {
+          "text": "宙",
+          "pinyin": "zhou4",
+          "start": 69.376,
+          "end": 69.922
+        },
+        {
+          "text": "越",
+          "pinyin": "yue4",
+          "start": 69.922,
+          "end": 70.468
+        },
+        {
+          "text": "广",
+          "pinyin": "guang3",
+          "start": 70.468,
+          "end": 71.014
+        },
+        {
+          "text": "大",
+          "pinyin": "da4",
+          "start": 71.014,
+          "end": 71.56
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 71.56,
+          "end": 72.106
+        },
+        {
+          "text": "越",
+          "pinyin": "yue4",
+          "start": 72.106,
+          "end": 72.652
+        },
+        {
+          "text": "要",
+          "pinyin": "yao4",
+          "start": 72.652,
+          "end": 73.198
+        },
+        {
+          "text": "燃",
+          "pinyin": "ran2",
+          "start": 73.198,
+          "end": 73.744
+        },
+        {
+          "text": "烧",
+          "pinyin": "shao1",
+          "start": 73.744,
+          "end": 74.29
+        }
+      ]
+    }
+  ]
+}

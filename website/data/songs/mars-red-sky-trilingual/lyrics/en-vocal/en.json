@@ -1,0 +1,641 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "mars-red-sky-trilingual",
+  "songId": "mars-red-sky-trilingual",
+  "lyricSetId": "en-vocal",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 13.1,
+      "end": 16.06,
+      "text": "Red sand over my boots",
+      "singableText": "Red sand over my boots",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Red",
+          "start": 13.1,
+          "end": 13.692
+        },
+        {
+          "text": "sand",
+          "start": 13.692,
+          "end": 14.284
+        },
+        {
+          "text": "over",
+          "start": 14.284,
+          "end": 14.876
+        },
+        {
+          "text": "my",
+          "start": 14.876,
+          "end": 15.468
+        },
+        {
+          "text": "boots",
+          "start": 15.468,
+          "end": 16.06
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 16.06,
+      "end": 18.2,
+      "text": "A blue sun falls through dust",
+      "singableText": "A blue sun falls through dust",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 16.06,
+          "end": 16.417
+        },
+        {
+          "text": "blue",
+          "start": 16.417,
+          "end": 16.773
+        },
+        {
+          "text": "sun",
+          "start": 16.773,
+          "end": 17.13
+        },
+        {
+          "text": "falls",
+          "start": 17.13,
+          "end": 17.487
+        },
+        {
+          "text": "through",
+          "start": 17.487,
+          "end": 17.843
+        },
+        {
+          "text": "dust",
+          "start": 17.843,
+          "end": 18.2
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 18.2,
+      "end": 20.52,
+      "text": "I am a breath beside the canyon",
+      "singableText": "I am a breath beside the canyon",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 18.2,
+          "end": 18.531
+        },
+        {
+          "text": "am",
+          "start": 18.531,
+          "end": 18.863
+        },
+        {
+          "text": "a",
+          "start": 18.863,
+          "end": 19.194
+        },
+        {
+          "text": "breath",
+          "start": 19.194,
+          "end": 19.526
+        },
+        {
+          "text": "beside",
+          "start": 19.526,
+          "end": 19.857
+        },
+        {
+          "text": "the",
+          "start": 19.857,
+          "end": 20.189
+        },
+        {
+          "text": "canyon",
+          "start": 20.189,
+          "end": 20.52
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 20.52,
+      "end": 23.66,
+      "text": "But still I rise, still I trust",
+      "singableText": "But still I rise, still I trust",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "But",
+          "start": 20.52,
+          "end": 20.969
+        },
+        {
+          "text": "still",
+          "start": 20.969,
+          "end": 21.417
+        },
+        {
+          "text": "I",
+          "start": 21.417,
+          "end": 21.866
+        },
+        {
+          "text": "rise",
+          "start": 21.866,
+          "end": 22.314
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "still",
+          "start": 22.314,
+          "end": 22.763
+        },
+        {
+          "text": "I",
+          "start": 22.763,
+          "end": 23.211
+        },
+        {
+          "text": "trust",
+          "start": 23.211,
+          "end": 23.66
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 23.66,
+      "end": 29.32,
+      "text": "Stars are silent, wide and cold",
+      "singableText": "Stars are silent, wide and cold",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Stars",
+          "start": 23.66,
+          "end": 24.603
+        },
+        {
+          "text": "are",
+          "start": 24.603,
+          "end": 25.547
+        },
+        {
+          "text": "silent",
+          "start": 25.547,
+          "end": 26.49
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "wide",
+          "start": 26.49,
+          "end": 27.433
+        },
+        {
+          "text": "and",
+          "start": 27.433,
+          "end": 28.377
+        },
+        {
+          "text": "cold",
+          "start": 28.377,
+          "end": 29.32
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 29.9,
+      "end": 35.48,
+      "text": "They do not answer, they make room",
+      "singableText": "They do not answer, they make room",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "They",
+          "start": 29.9,
+          "end": 30.697
+        },
+        {
+          "text": "do",
+          "start": 30.697,
+          "end": 31.494
+        },
+        {
+          "text": "not",
+          "start": 31.494,
+          "end": 32.291
+        },
+        {
+          "text": "answer",
+          "start": 32.291,
+          "end": 33.089
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "they",
+          "start": 33.089,
+          "end": 33.886
+        },
+        {
+          "text": "make",
+          "start": 33.886,
+          "end": 34.683
+        },
+        {
+          "text": "room",
+          "start": 34.683,
+          "end": 35.48
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 36.1,
+      "end": 40.22,
+      "text": "Stars are silent, wide and cold",
+      "singableText": "Stars are silent, wide and cold",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Stars",
+          "start": 36.1,
+          "end": 36.787
+        },
+        {
+          "text": "are",
+          "start": 36.787,
+          "end": 37.473
+        },
+        {
+          "text": "silent",
+          "start": 37.473,
+          "end": 38.16
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "wide",
+          "start": 38.16,
+          "end": 38.847
+        },
+        {
+          "text": "and",
+          "start": 38.847,
+          "end": 39.533
+        },
+        {
+          "text": "cold",
+          "start": 39.533,
+          "end": 40.22
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 42.65,
+      "end": 47.97,
+      "text": "They do not answer, they make room",
+      "singableText": "They do not answer, they make room",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "They",
+          "start": 42.65,
+          "end": 43.41
+        },
+        {
+          "text": "do",
+          "start": 43.41,
+          "end": 44.17
+        },
+        {
+          "text": "not",
+          "start": 44.17,
+          "end": 44.93
+        },
+        {
+          "text": "answer",
+          "start": 44.93,
+          "end": 45.69
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "they",
+          "start": 45.69,
+          "end": 46.45
+        },
+        {
+          "text": "make",
+          "start": 46.45,
+          "end": 47.21
+        },
+        {
+          "text": "room",
+          "start": 47.21,
+          "end": 47.97
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 48.65,
+      "end": 51.55,
+      "text": "Small under the red sky",
+      "singableText": "Small under the red sky",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Small",
+          "start": 48.65,
+          "end": 49.23
+        },
+        {
+          "text": "under",
+          "start": 49.23,
+          "end": 49.81
+        },
+        {
+          "text": "the",
+          "start": 49.81,
+          "end": 50.39
+        },
+        {
+          "text": "red",
+          "start": 50.39,
+          "end": 50.97
+        },
+        {
+          "text": "sky",
+          "start": 50.97,
+          "end": 51.55
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 51.55,
+      "end": 54.81,
+      "text": "I lift my heart and move",
+      "singableText": "I lift my heart and move",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 51.55,
+          "end": 52.093
+        },
+        {
+          "text": "lift",
+          "start": 52.093,
+          "end": 52.637
+        },
+        {
+          "text": "my",
+          "start": 52.637,
+          "end": 53.18
+        },
+        {
+          "text": "heart",
+          "start": 53.18,
+          "end": 53.723
+        },
+        {
+          "text": "and",
+          "start": 53.723,
+          "end": 54.267
+        },
+        {
+          "text": "move",
+          "start": 54.267,
+          "end": 54.81
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 54.81,
+      "end": 60.63,
+      "text": "Even when the dark is endless, a spark becomes a road",
+      "singableText": "Even when the dark is endless, a spark becomes a road",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Even",
+          "start": 54.81,
+          "end": 55.339
+        },
+        {
+          "text": "when",
+          "start": 55.339,
+          "end": 55.868
+        },
+        {
+          "text": "the",
+          "start": 55.868,
+          "end": 56.397
+        },
+        {
+          "text": "dark",
+          "start": 56.397,
+          "end": 56.926
+        },
+        {
+          "text": "is",
+          "start": 56.926,
+          "end": 57.455
+        },
+        {
+          "text": "endless",
+          "start": 57.455,
+          "end": 57.985
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "a",
+          "start": 57.985,
+          "end": 58.514
+        },
+        {
+          "text": "spark",
+          "start": 58.514,
+          "end": 59.043
+        },
+        {
+          "text": "becomes",
+          "start": 59.043,
+          "end": 59.572
+        },
+        {
+          "text": "a",
+          "start": 59.572,
+          "end": 60.101
+        },
+        {
+          "text": "road",
+          "start": 60.101,
+          "end": 60.63
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 60.63,
+      "end": 63.81,
+      "text": "Small under the red sky",
+      "singableText": "Small under the red sky",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "Small",
+          "start": 60.63,
+          "end": 61.266
+        },
+        {
+          "text": "under",
+          "start": 61.266,
+          "end": 61.902
+        },
+        {
+          "text": "the",
+          "start": 61.902,
+          "end": 62.538
+        },
+        {
+          "text": "red",
+          "start": 62.538,
+          "end": 63.174
+        },
+        {
+          "text": "sky",
+          "start": 63.174,
+          "end": 63.81
+        }
+      ]
+    },
+    {
+      "id": "line-013",
+      "start": 63.81,
+      "end": 67.05,
+      "text": "I hear tomorrow call",
+      "singableText": "I hear tomorrow call",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 63.81,
+          "end": 64.62
+        },
+        {
+          "text": "hear",
+          "start": 64.62,
+          "end": 65.43
+        },
+        {
+          "text": "tomorrow",
+          "start": 65.43,
+          "end": 66.24
+        },
+        {
+          "text": "call",
+          "start": 66.24,
+          "end": 67.05
+        }
+      ]
+    },
+    {
+      "id": "line-014",
+      "start": 67.49,
+      "end": 72.73,
+      "text": "If the universe is wider, then my courage must be tall",
+      "singableText": "If the universe is wider, then my courage must be tall",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "If",
+          "start": 67.49,
+          "end": 67.966
+        },
+        {
+          "text": "the",
+          "start": 67.966,
+          "end": 68.443
+        },
+        {
+          "text": "universe",
+          "start": 68.443,
+          "end": 68.919
+        },
+        {
+          "text": "is",
+          "start": 68.919,
+          "end": 69.395
+        },
+        {
+          "text": "wider",
+          "start": 69.395,
+          "end": 69.872
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "then",
+          "start": 69.872,
+          "end": 70.348
+        },
+        {
+          "text": "my",
+          "start": 70.348,
+          "end": 70.825
+        },
+        {
+          "text": "courage",
+          "start": 70.825,
+          "end": 71.301
+        },
+        {
+          "text": "must",
+          "start": 71.301,
+          "end": 71.777
+        },
+        {
+          "text": "be",
+          "start": 71.777,
+          "end": 72.254
+        },
+        {
+          "text": "tall",
+          "start": 72.254,
+          "end": 72.73
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "mars-red-sky-trilingual",
+  "songId": "mars-red-sky-trilingual",
+  "lyricSetId": "en-vocal",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 13.1,
+      "end": 16.06,
+      "text": "赤い砂が靴を越える",
+      "singableText": "赤い砂が靴を越える",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい"
+        },
+        {
+          "text": "砂",
+          "reading": "すな"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "靴",
+          "reading": "くつ"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "越える",
+          "reading": "こえる"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 16.06,
+      "end": 18.2,
+      "text": "青い太陽が塵へ沈む",
+      "singableText": "青い太陽が塵へ沈む",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "青い",
+          "reading": "あおい"
+        },
+        {
+          "text": "太陽",
+          "reading": "たいよう"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "塵",
+          "reading": "ちり"
+        },
+        {
+          "text": "へ"
+        },
+        {
+          "text": "沈む",
+          "reading": "しずむ"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 18.2,
+      "end": 20.52,
+      "text": "峡谷のそば 僕は息ひとつ",
+      "singableText": "峡谷のそば 僕は息ひとつ",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "峡谷",
+          "reading": "きょうこく"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "そ"
+        },
+        {
+          "text": "ば"
+        },
+        {
+          "text": "僕",
+          "reading": "ぼく"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "息",
+          "reading": "いき"
+        },
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "つ"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 20.52,
+      "end": 23.66,
+      "text": "それでも立つ 信じて進む",
+      "singableText": "それでも立つ 信じて進む",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "そ"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "も"
+        },
+        {
+          "text": "立つ",
+          "reading": "たつ"
+        },
+        {
+          "text": "信じて",
+          "reading": "しんじて"
+        },
+        {
+          "text": "進む",
+          "reading": "すすむ"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 23.66,
+      "end": 29.32,
+      "text": "星は黙る 冷たく遠く",
+      "singableText": "星は黙る 冷たく遠く",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "星",
+          "reading": "ほし"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "黙る",
+          "reading": "だまる"
+        },
+        {
+          "text": "冷たく",
+          "reading": "つめたく"
+        },
+        {
+          "text": "遠く",
+          "reading": "とおく"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 29.9,
+      "end": 35.48,
+      "text": "答えなくても 場所をくれる",
+      "singableText": "答えなくても 場所をくれる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "答えなくても",
+          "reading": "こたえなくても"
+        },
+        {
+          "text": "場所",
+          "reading": "ばしょ"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 36.1,
+      "end": 40.22,
+      "text": "星は黙る 冷たく遠く",
+      "singableText": "星は黙る 冷たく遠く",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "星",
+          "reading": "ほし"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "黙る",
+          "reading": "だまる"
+        },
+        {
+          "text": "冷たく",
+          "reading": "つめたく"
+        },
+        {
+          "text": "遠く",
+          "reading": "とおく"
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 42.65,
+      "end": 47.97,
+      "text": "答えなくても 場所をくれる",
+      "singableText": "答えなくても 場所をくれる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "答えなくても",
+          "reading": "こたえなくても"
+        },
+        {
+          "text": "場所",
+          "reading": "ばしょ"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "れ"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 48.65,
+      "end": 51.55,
+      "text": "赤い空の下で",
+      "singableText": "赤い空の下で",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "下",
+          "reading": "した"
+        },
+        {
+          "text": "で"
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 51.55,
+      "end": 54.81,
+      "text": "胸を上げて歩き出す",
+      "singableText": "胸を上げて歩き出す",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "胸",
+          "reading": "むね"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "上げて",
+          "reading": "あげて"
+        },
+        {
+          "text": "歩き出す",
+          "reading": "あるきだす"
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 54.81,
+      "end": 60.63,
+      "text": "闇が果てなくても 火は道になる",
+      "singableText": "闇が果てなくても 火は道になる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "闇",
+          "reading": "やみ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "果てなくても",
+          "reading": "はてなくても"
+        },
+        {
+          "text": "火は",
+          "reading": "ひは"
+        },
+        {
+          "text": "道",
+          "reading": "みち"
+        },
+        {
+          "text": "に"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 60.63,
+      "end": 63.81,
+      "text": "赤い空の下で",
+      "singableText": "赤い空の下で",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "赤い",
+          "reading": "あかい"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "下",
+          "reading": "した"
+        },
+        {
+          "text": "で"
+        }
+      ]
+    },
+    {
+      "id": "line-013",
+      "start": 63.81,
+      "end": 67.05,
+      "text": "明日が僕を呼ぶ",
+      "singableText": "明日が僕を呼ぶ",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "明日",
+          "reading": "あした"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "僕",
+          "reading": "ぼく"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "呼ぶ",
+          "reading": "よぶ"
+        }
+      ]
+    },
+    {
+      "id": "line-014",
+      "start": 67.49,
+      "end": 72.73,
+      "text": "宇宙が広いほど 勇気は高くなる",
+      "singableText": "宇宙が広いほど 勇気は高くなる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "宇宙",
+          "reading": "うちゅう"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "広いほど",
+          "reading": "ひろいほど"
+        },
+        {
+          "text": "勇気",
+          "reading": "ゆうき"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "高く",
+          "reading": "たかく"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    }
+  ]
+}
