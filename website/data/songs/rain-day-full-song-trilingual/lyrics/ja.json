@@ -1,0 +1,26 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan"
+  },
+  "lines": [
+    {"id": "line-001", "start": 0.0, "end": 6.5, "text": "雨が窓を鳴らし 部屋を起こす", "singableText": "雨が窓を鳴らし 部屋を起こす", "role": "localized-lyric"},
+    {"id": "line-002", "start": 6.5, "end": 13.0, "text": "ネオン咲く街を ひとり歩く", "singableText": "ネオン咲く街を ひとり歩く", "role": "localized-lyric"},
+    {"id": "line-003", "start": 13.0, "end": 19.5, "text": "映る光ぜんぶ 君からの手紙", "singableText": "映る光ぜんぶ 君からの手紙", "role": "localized-lyric"},
+    {"id": "line-004", "start": 19.5, "end": 26.0, "text": "重い夜なら この手に降らせて", "singableText": "重い夜なら この手に降らせて", "role": "localized-lyric"},
+    {"id": "line-005", "start": 26.0, "end": 32.5, "text": "銀の雨の中 そばにいて", "singableText": "銀の雨の中 そばにいて", "role": "localized-lyric"},
+    {"id": "line-006", "start": 32.5, "end": 39.0, "text": "割れた光を 火に変えて", "singableText": "割れた光を 火に変えて", "role": "localized-lyric"},
+    {"id": "line-007", "start": 39.0, "end": 45.5, "text": "太陽なしでも 道は見える", "singableText": "太陽なしでも 道は見える", "role": "localized-lyric"},
+    {"id": "line-008", "start": 45.5, "end": 52.0, "text": "君の声が 雨の日の帰る場所", "singableText": "君の声が 雨の日の帰る場所", "role": "localized-lyric"},
+    {"id": "line-009", "start": 52.0, "end": 58.5, "text": "終電が遠く 街がほどける", "singableText": "終電が遠く 街がほどける", "role": "localized-lyric"},
+    {"id": "line-010", "start": 58.5, "end": 65.0, "text": "君の鼓動を 胸にしまう", "singableText": "君の鼓動を 胸にしまう", "role": "localized-lyric"},
+    {"id": "line-011", "start": 65.0, "end": 71.5, "text": "銀の雨の中 そばにいて", "singableText": "銀の雨の中 そばにいて", "role": "localized-lyric"},
+    {"id": "line-012", "start": 71.5, "end": 78.0, "text": "しずくが君の名を歌う", "singableText": "しずくが君の名を歌う", "role": "localized-lyric"}
+  ]
+}

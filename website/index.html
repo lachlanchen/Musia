@@ -39,29 +39,33 @@
     </header>
 
     <section class="library-strip" aria-label="Media library">
+      <label class="search-box">
+        <span>Search</span>
+        <input id="catalog-search" type="search" placeholder="Search songs, languages, tags" autocomplete="off">
+      </label>
       <div id="media-library" class="media-library"></div>
     </section>
 
     <section class="hero-grid">
       <article class="player-card" aria-label="Media player">
         <div class="title-row">
-          <img id="cover-thumb" class="cover-thumb" src="assets/covers/rain-day-trilingual-poster-16x9.png" alt="Rain Day Trilingual Verse cover">
+          <img id="cover-thumb" class="cover-thumb" src="" alt="">
           <div>
-            <span id="kind-label" class="eyebrow">Music</span>
-            <h1 id="media-title">Rain Day Trilingual Verse</h1>
-            <p id="media-subtitle">Three singable localized lyric tracks.</p>
+            <span id="kind-label" class="eyebrow">Media</span>
+            <h1 id="media-title">Loading</h1>
+            <p id="media-subtitle">Loading media data.</p>
           </div>
         </div>
 
         <div class="stage">
-          <img id="cover-art" class="cover-art" src="assets/covers/rain-day-trilingual-poster-16x9.png" alt="Rain Day Trilingual Verse cover" decoding="async">
+          <img id="cover-art" class="cover-art" src="" alt="" decoding="async">
           <canvas id="visualizer" width="900" height="420" aria-label="Audio visualizer"></canvas>
           <video id="video" playsinline preload="metadata" aria-label="Video player"></video>
           <iframe id="external-player" title="External video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe>
           <div class="stage-shade"></div>
           <div class="stage-copy">
-            <p id="media-caption">Same melody, localized lyrics</p>
-            <div id="stage-line" class="stage-line">窗边雨，轻轻落街口</div>
+            <p id="media-caption">Loading</p>
+            <div id="stage-line" class="stage-line">Loading lyrics</div>
           </div>
         </div>
 
@@ -80,10 +84,10 @@
         </div>
 
         <div class="meta-row">
-          <span id="key-label">D minor</span>
-          <span id="bpm-label">78 BPM</span>
-          <span id="now-chord">Dm9</span>
-          <span id="now-degree">i9</span>
+          <span id="key-label">Key</span>
+          <span id="bpm-label">BPM</span>
+          <span id="now-chord">--</span>
+          <span id="now-degree"></span>
         </div>
         <div id="asset-switcher" class="asset-switcher" aria-label="Playable versions"></div>
         <audio id="audio" preload="metadata"></audio>
@@ -93,15 +97,12 @@
         <div class="lyrics-head">
           <div>
             <span class="eyebrow">Current lyric</span>
-            <h2 id="current-lyric-label">中文</h2>
+            <h2 id="current-lyric-label">Lyrics</h2>
           </div>
           <div id="language-tabs" class="language-tabs" aria-label="Localization language"></div>
         </div>
         <div id="lyric-carousel" class="lyric-carousel">
-          <div class="carousel-line active">
-            <span>0:00</span>
-            <div class="ruby-line"><ruby>窗<rt>chuangˉ</rt></ruby><ruby>边<rt>bianˉ</rt></ruby><ruby>雨<rt>yuˇ</rt></ruby>，<ruby>轻<rt>qingˉ</rt></ruby><ruby>轻<rt>qingˉ</rt></ruby><ruby>落<rt>luoˋ</rt></ruby><ruby>街<rt>jieˉ</rt></ruby><ruby>口<rt>kouˇ</rt></ruby></div>
-          </div>
+          <div class="empty-state"><h2>Loading</h2><p>Media data is loading.</p></div>
         </div>
         <div id="chord-row" class="chord-row" aria-label="Chord timeline"></div>
       </article>

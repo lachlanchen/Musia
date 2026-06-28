@@ -1,0 +1,171 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "rain-day-full-song-trilingual",
+  "kind": "song",
+  "title": "Rain Day Full Song",
+  "artist": "Musai ACE-Step",
+  "subtitle": "Separate English, Mandarin, and Japanese full-song renders",
+  "description": "A 78-second complete rainy-day cinematic pop song generated as three separate language versions. The lyric tracks share one timeline for comparison, while the vocal/audio render is selected separately.",
+  "caption": "Complete trilingual full-song demo",
+  "duration": 78.0,
+  "canonicalUrl": "https://fun.lazying.art/#rain-day-full-song-trilingual",
+  "share": {
+    "title": "Rain Day Full Song - Fun Lazying Art",
+    "description": "A full-song Musai demo with English, Mandarin, and Japanese generated versions plus synced trilingual lyrics.",
+    "url": "https://fun.lazying.art/#rain-day-full-song-trilingual",
+    "image": "assets/covers/rain-day-full-song-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Rain Day Full Song cover",
+      "role": "cover",
+      "src": "assets/covers/rain-day-full-song-16x9.png",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/rain-day-full-song-16x9.png",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    "primaryAudio": {
+      "id": "full-zh",
+      "label": "Mandarin full song",
+      "roleLabel": "Vocal",
+      "role": "full-song-render",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
+      "sourceModel": "acestep-v15-xl-turbo",
+      "qualityGate": "pass",
+      "src": "assets/audio/rain-day-full-song-zh.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": [
+      {
+        "id": "full-en",
+        "label": "English full song",
+        "roleLabel": "Vocal",
+        "role": "full-song-render",
+        "languageCode": "en",
+        "languageLabel": "English",
+        "sourceModel": "acestep-v15-turbo",
+        "qualityGate": "pass",
+        "src": "assets/audio/rain-day-full-song-en.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "id": "full-ja",
+        "label": "Japanese full song",
+        "roleLabel": "Vocal",
+        "role": "full-song-render",
+        "languageCode": "ja",
+        "languageLabel": "日本語",
+        "sourceModel": "acestep-v15-xl-turbo",
+        "qualityGate": "pass",
+        "src": "assets/audio/rain-day-full-song-ja.mp3",
+        "mime": "audio/mpeg"
+      }
+    ],
+    "stems": {}
+  },
+  "provenance": {
+    "generator": "ACE-Step 1.5",
+    "run": "data/creative_projects/rain-day-full-trilingual-20260628",
+    "model": "acestep-v15-turbo and acestep-v15-xl-turbo",
+    "selectedRenders": {
+      "en": "data/creative_projects/rain-day-full-trilingual-20260628/ace_outputs/en/d8e99df2-c52f-6336-d874-a3c95cf2c302.wav",
+      "zh-Hans": "data/creative_projects/rain-day-full-trilingual-20260628/ace_outputs/zh_xl/8aeb1dc3-a205-3352-8455-1a23c255c2b8.wav",
+      "ja": "data/creative_projects/rain-day-full-trilingual-20260628/ace_outputs/ja_xl/ac655572-724f-3ab1-cfd1-192d8f6e36a4.wav"
+    },
+    "qa": {
+      "en": "pass",
+      "zh-Hans": "pass",
+      "ja": "pass"
+    },
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_01763bb4db1aabe8016a40c48306cc819182dd3a18c996ec0c.png",
+    "note": "These are separate full-song generated versions, not strict same-stems localization renders."
+  },
+  "musical": {
+    "key": "D minor",
+    "bpm": 78,
+    "timeSignature": "4/4",
+    "chords": [
+      {"start": 0.0, "end": 6.5, "name": "Dm9", "degree": "i9"},
+      {"start": 6.5, "end": 13.0, "name": "Bbmaj7", "degree": "VImaj7"},
+      {"start": 13.0, "end": 19.5, "name": "Fadd9", "degree": "IIIadd9"},
+      {"start": 19.5, "end": 26.0, "name": "C", "degree": "VII"},
+      {"start": 26.0, "end": 32.5, "name": "Dm9", "degree": "i9"},
+      {"start": 32.5, "end": 39.0, "name": "Bbmaj7", "degree": "VImaj7"},
+      {"start": 39.0, "end": 45.5, "name": "Fadd9", "degree": "IIIadd9"},
+      {"start": 45.5, "end": 52.0, "name": "Cadd9", "degree": "VIIadd9"},
+      {"start": 52.0, "end": 58.5, "name": "Gm7", "degree": "iv7"},
+      {"start": 58.5, "end": 65.0, "name": "A7sus4", "degree": "V7sus"},
+      {"start": 65.0, "end": 71.5, "name": "Bbmaj7", "degree": "VImaj7"},
+      {"start": 71.5, "end": 78.0, "name": "Cadd9", "degree": "VIIadd9"}
+    ]
+  },
+  "textTracks": [
+    {
+      "code": "zh-Hans",
+      "label": "Chinese",
+      "nativeLabel": "中文",
+      "script": "Hans",
+      "features": ["lyrics", "translation"],
+      "path": "lyrics/zh-Hans.json"
+    },
+    {
+      "code": "ja",
+      "label": "Japanese",
+      "nativeLabel": "日本語",
+      "script": "Jpan",
+      "features": ["lyrics", "translation"],
+      "path": "lyrics/ja.json"
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "nativeLabel": "English",
+      "script": "Latn",
+      "features": ["lyrics", "translation"],
+      "path": "lyrics/en.json"
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {"id": "line-001", "start": 0.0, "end": 6.5, "sourceText": "Rain taps the glass, waking the room"},
+      {"id": "line-002", "start": 6.5, "end": 13.0, "sourceText": "I walk through the city where the neon blooms"},
+      {"id": "line-003", "start": 13.0, "end": 19.5, "sourceText": "Every small reflection carries news of you"},
+      {"id": "line-004", "start": 19.5, "end": 26.0, "sourceText": "If the night feels heavy, let it fall through my hands"},
+      {"id": "line-005", "start": 26.0, "end": 32.5, "sourceText": "Stay with me under this silver rain"},
+      {"id": "line-006", "start": 32.5, "end": 39.0, "sourceText": "Let every broken light become a flame"},
+      {"id": "line-007", "start": 39.0, "end": 45.5, "sourceText": "We do not need the sun to find our way"},
+      {"id": "line-008", "start": 45.5, "end": 52.0, "sourceText": "Your voice is home on a rainy day"},
+      {"id": "line-009", "start": 52.0, "end": 58.5, "sourceText": "When the last train hums and the streets grow wide"},
+      {"id": "line-010", "start": 58.5, "end": 65.0, "sourceText": "I keep your heartbeat close to mine"},
+      {"id": "line-011", "start": 65.0, "end": 71.5, "sourceText": "Stay with me under this silver rain"},
+      {"id": "line-012", "start": 71.5, "end": 78.0, "sourceText": "Every drop is singing your name"}
+    ]
+  },
+  "chapters": [
+    {"id": "intro", "start": 0.0, "end": 6.5, "label": "Intro"},
+    {"id": "verse", "start": 6.5, "end": 19.5, "label": "Verse"},
+    {"id": "pre", "start": 19.5, "end": 26.0, "label": "Pre-Chorus"},
+    {"id": "chorus", "start": 26.0, "end": 52.0, "label": "Chorus"},
+    {"id": "bridge", "start": 52.0, "end": 65.0, "label": "Bridge"},
+    {"id": "final", "start": 65.0, "end": 78.0, "label": "Final Chorus"}
+  ],
+  "shots": [],
+  "artifacts": [
+    {"id": "manifest", "label": "media manifest JSON", "href": "data/songs/rain-day-full-song-trilingual/manifest.json"}
+  ],
+  "createCommand": "cd third_party/ACE-Step-1.5 && .venv/bin/python cli.py -c data/creative_projects/rain-day-full-trilingual-20260628/ace_<lang>.toml --backend vllm"
+}

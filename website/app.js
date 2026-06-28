@@ -4,8 +4,9 @@ const state = {
   manifestUrl: "",
   tracks: [],
   trackByCode: new Map(),
-  selectedLang: "zh-Hans",
+  selectedLyricLangs: new Set(),
   kindFilter: "all",
+  searchQuery: "",
   activeMediaId: "",
   activeAssetId: "",
   mediaElement: null,
@@ -115,8 +116,21 @@ function chords() {
   return state.manifest?.musical?.chords || [];
 }
 
-function selectedTrack() {
-  return state.trackByCode.get(state.selectedLang) || state.tracks[0] || null;
+function selectedLyricTracks() {
+  const selected = state.tracks.filter((track) => state.selectedLyricLangs.has(track.language.code));
+  return selected.length ? selected : state.tracks;
+}
+
+function languageName(trackOrCode) {
+  const track = typeof trackOrCode === "string" ? state.trackByCode.get(trackOrCode) : trackOrCode;
+  return track?.language?.nativeLabel || track?.language?.label || track?.language?.code || "";
+}
+
+function selectedLyricSummary() {
+  const tracks = selectedLyricTracks();
+  if (!tracks.length) return "Lyrics";
+  if (tracks.length === state.tracks.length) return "All languages";
+  return tracks.map(languageName).join(" · ");
 }
 
 function lineForTrack(track, lineId) {
@@ -175,21 +189,25 @@ function youtubeThumbnailUrl(asset) {
 function playableAssets(manifest) {
   const assets = manifest.assets || {};
   const result = [];
-  if (assets.primaryAudio?.src) result.push({ id: "primary", label: assets.primaryAudio.label || "Mix", type: "audio", src: assets.primaryAudio.src });
-  if (assets.primaryVideo?.src) result.push({ id: "video", label: assets.primaryVideo.label || "Video", type: "video", src: assets.primaryVideo.src });
+  if (assets.primaryAudio?.src) result.push({ ...assets.primaryAudio, id: assets.primaryAudio.id || "primary", label: assets.primaryAudio.label || "Mix", type: "audio", src: assets.primaryAudio.src });
+  if (assets.primaryVideo?.src) result.push({ ...assets.primaryVideo, id: assets.primaryVideo.id || "video", label: assets.primaryVideo.label || "Video", type: "video", src: assets.primaryVideo.src });
   if (assets.youtube) {
     const embedUrl = youtubeEmbedUrl(assets.youtube);
-    if (embedUrl) result.push({ id: assets.youtube.id || "youtube", label: assets.youtube.label || "YouTube", type: "external-video", embedUrl, url: youtubeWatchUrl(assets.youtube) });
+    if (embedUrl) result.push({ ...assets.youtube, id: assets.youtube.id || "youtube", label: assets.youtube.label || "YouTube", type: "external-video", embedUrl, url: youtubeWatchUrl(assets.youtube) });
   }
   for (const item of assets.externalVideos || []) {
     const provider = item.provider || (youtubeIdFromUrl(item.url || item.embedUrl || item.src) ? "youtube" : "external");
     const embedUrl = provider === "youtube" ? youtubeEmbedUrl(item) : (item.embedUrl || item.src || "");
-    if (embedUrl) result.push({ id: item.id || item.label || embedUrl, label: item.label || "External", type: "external-video", embedUrl, url: provider === "youtube" ? youtubeWatchUrl(item) : (item.url || embedUrl) });
+    if (embedUrl) result.push({ ...item, id: item.id || item.label || embedUrl, label: item.label || "External", type: "external-video", embedUrl, url: provider === "youtube" ? youtubeWatchUrl(item) : (item.url || embedUrl) });
   }
   for (const item of assets.alternateAudio || []) {
-    if (item.src) result.push({ id: item.id || item.label || item.src, label: item.label || item.id || "Audio", type: "audio", src: item.src });
+    if (item.src) result.push({ ...item, id: item.id || item.label || item.src, label: item.label || item.id || "Audio", type: "audio", src: item.src });
   }
   return result;
+}
+
+function activePlayableAsset() {
+  return playableAssets(state.manifest || {}).find((asset) => asset.id === state.activeAssetId) || null;
 }
 
 function coverUrl(manifest) {
@@ -256,12 +274,25 @@ function setMediaSource(asset, keepTime = false) {
 
 function renderLibrary() {
   const items = state.catalog.items || [];
-  $("media-library").innerHTML = items.map((item) => `
-    <button class="media-chip ${item.id === state.activeMediaId ? "active" : ""}" type="button" data-media-id="${escapeHtml(item.id)}" ${state.kindFilter !== "all" && item.kind !== state.kindFilter ? "hidden" : ""}>
+  const query = state.searchQuery.trim().toLowerCase();
+  const visibleItems = items.filter((item) => {
+    const kindMatch = state.kindFilter === "all" || item.kind === state.kindFilter;
+    const haystack = [
+      item.id,
+      item.title,
+      item.artist,
+      item.summary,
+      ...(item.languages || []),
+      ...(item.tags || [])
+    ].join(" ").toLowerCase();
+    return kindMatch && (!query || haystack.includes(query));
+  });
+  $("media-library").innerHTML = visibleItems.length ? visibleItems.map((item) => `
+    <button class="media-chip ${item.id === state.activeMediaId ? "active" : ""}" type="button" data-media-id="${escapeHtml(item.id)}">
       <span>${escapeHtml(labelKind(item.kind))}</span>
       <strong>${escapeHtml(item.title)}</strong>
     </button>
-  `).join("");
+  `).join("") : `<div class="empty-chip">No matching media</div>`;
   document.querySelectorAll("[data-media-id]").forEach((button) => {
     button.addEventListener("click", async () => {
       const item = state.catalog.items.find((entry) => entry.id === button.dataset.mediaId);
@@ -274,7 +305,10 @@ function renderLibrary() {
 function renderAssetSwitcher() {
   const assets = playableAssets(state.manifest);
   $("asset-switcher").innerHTML = assets.map((asset) => `
-    <button class="${asset.id === state.activeAssetId ? "active" : ""}" type="button" data-asset-id="${escapeHtml(asset.id)}">${escapeHtml(asset.label)}</button>
+    <button class="${asset.id === state.activeAssetId ? "active" : ""}" type="button" data-asset-id="${escapeHtml(asset.id)}">
+      <span>${escapeHtml(asset.roleLabel || asset.role || asset.type || "audio")}</span>
+      <strong>${escapeHtml(asset.languageLabel || asset.label)}</strong>
+    </button>
   `).join("");
   document.querySelectorAll("[data-asset-id]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -289,14 +323,31 @@ function renderLanguageButtons() {
     $("language-tabs").innerHTML = `<span class="soft-note">No lyrics</span>`;
     return;
   }
-  $("language-tabs").innerHTML = state.tracks.map((track) => `
-    <button class="${track.language.code === state.selectedLang ? "active" : ""}" type="button" data-lang="${escapeHtml(track.language.code)}">
+  const allSelected = state.tracks.every((track) => state.selectedLyricLangs.has(track.language.code));
+  $("language-tabs").innerHTML = `
+    <button class="${allSelected ? "active" : ""}" type="button" data-lang-all="true" aria-pressed="${allSelected ? "true" : "false"}">All</button>
+    ${state.tracks.map((track) => {
+      const active = state.selectedLyricLangs.has(track.language.code);
+      return `
+    <button class="${active ? "active" : ""}" type="button" data-lang="${escapeHtml(track.language.code)}" aria-pressed="${active ? "true" : "false"}">
       ${escapeHtml(track.language.nativeLabel || track.language.label || track.language.code)}
     </button>
-  `).join("");
+      `;
+    }).join("")}
+  `;
+  document.querySelectorAll("[data-lang-all]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.selectedLyricLangs = new Set(state.tracks.map((track) => track.language.code));
+      renderLanguageButtons();
+      updateSync();
+    });
+  });
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => {
-      state.selectedLang = button.dataset.lang;
+      const code = button.dataset.lang;
+      if (state.selectedLyricLangs.has(code)) state.selectedLyricLangs.delete(code);
+      else state.selectedLyricLangs.add(code);
+      if (state.selectedLyricLangs.size === 0) state.selectedLyricLangs.add(code);
       renderLanguageButtons();
       updateSync();
     });
@@ -322,9 +373,9 @@ function renderChords(activeChord = null) {
 }
 
 function renderCarousel(activeLine) {
-  const track = selectedTrack();
+  const tracks = selectedLyricTracks();
   const lines = manifestLines();
-  if (!track || !lines.length) {
+  if (!tracks.length || !lines.length) {
     $("lyric-carousel").innerHTML = `<div class="empty-state"><h2>${escapeHtml(state.manifest.title)}</h2><p>${escapeHtml(state.manifest.description || "No timed lyrics are attached yet.")}</p></div>`;
     return;
   }
@@ -332,12 +383,21 @@ function renderCarousel(activeLine) {
   const items = [activeIndex - 1, activeIndex, activeIndex + 1]
     .filter((index) => index >= 0 && index < lines.length)
     .map((index) => {
-      const line = lineForTrack(track, lines[index].id);
       const active = index === activeIndex;
       return `
         <div class="carousel-line ${active ? "active" : ""}">
           <span>${formatTime(lines[index].start)}</span>
-          ${renderTrackLine(track, line)}
+          <div class="carousel-translations">
+            ${tracks.map((track) => {
+              const line = lineForTrack(track, lines[index].id);
+              return `
+                <section class="carousel-track" lang="${escapeHtml(track.language.code)}">
+                  <label>${escapeHtml(languageName(track))}</label>
+                  ${renderTrackLine(track, line)}
+                </section>
+              `;
+            }).join("")}
+          </div>
         </div>
       `;
     }).join("");
@@ -383,7 +443,9 @@ function updateSync() {
   const duration = media?.duration || state.manifest.duration || 1;
   const activeLine = activeLineAt(time);
   const activeChord = activeChordAt(time);
-  const track = selectedTrack();
+  const activeAsset = activePlayableAsset();
+  const stageTrack = state.trackByCode.get(activeAsset?.languageCode) || selectedLyricTracks()[0] || state.tracks[0] || null;
+  const track = stageTrack;
   const trackLine = lineForTrack(track, activeLine?.id);
   const progress = Math.min(100, Math.max(0, (time / duration) * 100));
 
@@ -394,7 +456,7 @@ function updateSync() {
   $("now-chord").textContent = activeChord?.name || "--";
   $("now-degree").textContent = activeChord?.degree || "";
   $("stage-line").textContent = trackLine?.singableText || trackLine?.text || state.manifest.caption || "";
-  $("current-lyric-label").textContent = track?.language?.nativeLabel || "Lyrics";
+  $("current-lyric-label").textContent = selectedLyricSummary();
   renderCarousel(activeLine);
   renderFullLyrics(activeLine);
   renderChords(activeChord);
@@ -473,6 +535,10 @@ function bindEvents() {
       renderLibrary();
     });
   });
+  $("catalog-search").addEventListener("input", () => {
+    state.searchQuery = $("catalog-search").value;
+    renderLibrary();
+  });
 }
 
 async function loadJson(url) {
@@ -495,7 +561,7 @@ async function loadMediaItem(item, updateHash = false) {
     return track;
   }));
   state.trackByCode = new Map(state.tracks.map((track) => [track.language.code, track]));
-  state.selectedLang = state.trackByCode.has(state.selectedLang) ? state.selectedLang : (state.tracks[0]?.language.code || "en");
+  state.selectedLyricLangs = new Set(state.tracks.map((track) => track.language.code));
 
   const musical = state.manifest.musical || {};
   $("kind-label").textContent = labelKind(state.manifest.kind);

@@ -18,6 +18,17 @@
       "cover": "assets/covers/rain-day-trilingual-poster-16x9.png",
       "languages": ["zh-Hans", "ja", "en"],
       "tags": ["music", "lyrics", "pinyin", "furigana", "SoulX"]
+    },
+    {
+      "id": "rain-day-full-song-trilingual",
+      "kind": "song",
+      "title": "Rain Day Full Song",
+      "artist": "Musai ACE-Step",
+      "summary": "A 78-second complete rainy-day song with separate English, Japanese, and Mandarin full-song renders.",
+      "manifest": "data/songs/rain-day-full-song-trilingual/manifest.json",
+      "cover": "assets/covers/rain-day-full-song-16x9.png",
+      "languages": ["en", "zh-Hans", "ja"],
+      "tags": ["music", "full-song", "trilingual", "ACE-Step", "rain"]
     }
   ]
 }

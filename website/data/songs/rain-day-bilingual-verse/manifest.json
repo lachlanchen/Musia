@@ -39,7 +39,10 @@
     "primaryAudio": {
       "id": "mix",
       "label": "Chinese mix",
+      "roleLabel": "Mix",
       "role": "localized-vocal-mix",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
       "src": "assets/audio/rain-day-bilingual-verse.mp3",
       "mime": "audio/mpeg"
     },
@@ -47,13 +50,17 @@
       {
         "id": "vocal",
         "label": "Chinese vocal",
+        "roleLabel": "Vocal",
         "role": "localized-vocal",
+        "languageCode": "zh-Hans",
+        "languageLabel": "中文",
         "src": "assets/audio/rain-day-bilingual-verse-vocal.mp3",
         "mime": "audio/mpeg"
       },
       {
         "id": "melody-guide",
         "label": "Melody guide",
+        "roleLabel": "Guide",
         "role": "melody-guide",
         "src": "assets/audio/rain-day-trilingual-melody-guide.mp3",
         "mime": "audio/mpeg"

@@ -135,9 +135,14 @@ def now_stamp() -> str:
 def read_text_source(value: str | None) -> str:
     if not value:
         return ""
+    if "\n" in value or len(value) > 240:
+        return value.strip()
     path = Path(value).expanduser()
-    if path.exists() and path.is_file():
-        return path.read_text(encoding="utf-8").strip()
+    try:
+        if path.exists() and path.is_file():
+            return path.read_text(encoding="utf-8").strip()
+    except OSError:
+        return value.strip()
     return value.strip()
 
 

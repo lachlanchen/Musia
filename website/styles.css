@@ -134,6 +134,32 @@ h2 {
   margin-bottom: 16px;
 }
 
+.search-box {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 360px);
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.search-box input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.8);
+  color: var(--ink);
+  padding: 10px 14px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 4px rgba(45,143,131,.12);
+}
+
 .media-library {
   display: flex;
   gap: 10px;
@@ -149,6 +175,14 @@ h2 {
   padding: 12px 14px;
   text-align: left;
   box-shadow: 0 8px 24px rgba(42,38,28,.06);
+}
+
+.empty-chip {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.74);
+  color: var(--muted);
+  padding: 14px;
 }
 
 .media-chip span,
@@ -369,6 +403,25 @@ h2 {
   margin-top: 12px;
 }
 
+.asset-switcher button {
+  display: inline-grid;
+  gap: 1px;
+  text-align: left;
+}
+
+.asset-switcher button span {
+  color: inherit;
+  opacity: .62;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.asset-switcher button strong {
+  font-size: 13px;
+  line-height: 1.1;
+}
+
 .meta-row span {
   color: var(--muted);
   font-size: 13px;
@@ -391,7 +444,7 @@ h2 {
   min-height: 230px;
   display: grid;
   align-content: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 .carousel-line {
@@ -415,12 +468,35 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
+.carousel-translations {
+  display: grid;
+  gap: 9px;
+}
+
+.carousel-track {
+  display: grid;
+  gap: 3px;
+}
+
+.carousel-track label {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 850;
+}
+
 .plain-line,
 .token-line,
 .ruby-line {
   font-size: clamp(25px, 2.7vw, 38px);
   font-weight: 780;
   line-height: 1.18;
+}
+
+.carousel-track .plain-line,
+.carousel-track .token-line,
+.carousel-track .ruby-line {
+  font-size: clamp(19px, 2vw, 28px);
+  font-weight: 760;
 }
 
 .token-line {

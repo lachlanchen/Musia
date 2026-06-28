@@ -1,0 +1,26 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-full-song-trilingual",
+  "songId": "rain-day-full-song-trilingual",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans"
+  },
+  "lines": [
+    {"id": "line-001", "start": 0.0, "end": 6.5, "text": "雨敲窗，唤醒沉默房间", "singableText": "雨敲窗，唤醒沉默房间", "role": "localized-lyric"},
+    {"id": "line-002", "start": 6.5, "end": 13.0, "text": "我走过霓虹盛开的长街", "singableText": "我走过霓虹盛开的长街", "role": "localized-lyric"},
+    {"id": "line-003", "start": 13.0, "end": 19.5, "text": "每一片倒影都像你来信", "singableText": "每一片倒影都像你来信", "role": "localized-lyric"},
+    {"id": "line-004", "start": 19.5, "end": 26.0, "text": "若今夜太重，就落在我掌心", "singableText": "若今夜太重，就落在我掌心", "role": "localized-lyric"},
+    {"id": "line-005", "start": 26.0, "end": 32.5, "text": "陪我站在银色雨里面", "singableText": "陪我站在银色雨里面", "role": "localized-lyric"},
+    {"id": "line-006", "start": 32.5, "end": 39.0, "text": "把碎掉的灯点成火焰", "singableText": "把碎掉的灯点成火焰", "role": "localized-lyric"},
+    {"id": "line-007", "start": 39.0, "end": 45.5, "text": "没有太阳也能看见明天", "singableText": "没有太阳也能看见明天", "role": "localized-lyric"},
+    {"id": "line-008", "start": 45.5, "end": 52.0, "text": "你的声音是我雨天的家", "singableText": "你的声音是我雨天的家", "role": "localized-lyric"},
+    {"id": "line-009", "start": 52.0, "end": 58.5, "text": "末班车远去，街口变宽", "singableText": "末班车远去，街口变宽", "role": "localized-lyric"},
+    {"id": "line-010", "start": 58.5, "end": 65.0, "text": "我把你的心跳放在胸前", "singableText": "我把你的心跳放在胸前", "role": "localized-lyric"},
+    {"id": "line-011", "start": 65.0, "end": 71.5, "text": "陪我站在银色雨里面", "singableText": "陪我站在银色雨里面", "role": "localized-lyric"},
+    {"id": "line-012", "start": 71.5, "end": 78.0, "text": "每滴雨都轻唱你的名", "singableText": "每滴雨都轻唱你的名", "role": "localized-lyric"}
+  ]
+}
