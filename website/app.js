@@ -894,6 +894,7 @@ async function boot() {
   state.captureMode = params.get("capture") === "1" || params.get("record") === "1";
   state.skipIntroOnLoad = params.get("skipIntro") === "1" || params.get("skip") === "vocal";
   document.body.classList.toggle("capture-mode", state.captureMode);
+  document.body.classList.toggle("capture-full-lyrics", state.captureMode && params.get("fullLyrics") === "1");
   bindEvents();
   state.catalog = await loadJson("data/catalog.json");
   const requestedId = params.get("media") || params.get("id") || window.location.hash.replace(/^#/, "");

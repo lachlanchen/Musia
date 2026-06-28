@@ -797,6 +797,10 @@ body.capture-mode .full-lyrics-section {
   display: none;
 }
 
+body.capture-mode.capture-full-lyrics .full-lyrics-section {
+  display: block;
+}
+
 body.capture-mode .hero-grid {
   min-height: calc(100vh - 96px);
   grid-template-columns: minmax(0, 1.08fr) minmax(520px, .88fr);

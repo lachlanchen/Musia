@@ -87,11 +87,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--width", type=int, default=1920, help="Viewport width.")
     parser.add_argument("--height", type=int, default=1080, help="Viewport height.")
     parser.add_argument("--fps", type=int, default=24, help="Capture frames per second.")
+    parser.add_argument("--crf", type=int, default=14, help="H.264 CRF quality. Lower is higher quality; default 14.")
+    parser.add_argument("--preset", default="slow", help="H.264 preset. Default slow for cleaner text.")
+    parser.add_argument("--audio-bitrate", default="320k", help="AAC audio bitrate. Default 320k.")
     parser.add_argument("--duration", type=float, default=0.0, help="Capture duration in seconds. Defaults to media end.")
     parser.add_argument("--start", type=float, default=-1.0, help="Start time in seconds. Overrides --skip-intro.")
     parser.add_argument("--skip-intro", action="store_true", help="Start at the first timed lyric/vocal line.")
     parser.add_argument("--site-url", default="", help="Use an existing site URL instead of a temporary local server.")
     parser.add_argument("--keep-frames", action="store_true", help="Do not delete captured PNG frames.")
+    parser.add_argument("--full-page", action="store_true", help="Capture the full scrollable page instead of only the viewport.")
+    parser.add_argument("--include-full-lyrics", action="store_true", help="Keep the bottom full lyrics visible during capture.")
     parser.add_argument("--chrome-channel", default="chrome", help="Playwright Chromium channel, usually chrome or chromium.")
     return parser.parse_args()
 
@@ -144,6 +149,7 @@ def main() -> None:
 
     query = urlencode({
         "capture": "1",
+        "fullLyrics": "1" if args.include_full_lyrics else "0",
         "media": media_id,
         "skipIntro": "1" if args.skip_intro else "0",
     })
@@ -153,10 +159,11 @@ def main() -> None:
     with tempfile.TemporaryDirectory(prefix="musia-fun-capture-") as tmp:
         frame_dir = Path(tmp) / "frames"
         frame_dir.mkdir()
-        print(f"Capturing {frame_count} frames at {args.width}x{args.height}, {args.fps} fps")
-        print(f"URL: {url}")
-        print(f"Audio: {audio_path}")
-        print(f"Start: {start:.3f}s  Duration: {duration:.3f}s")
+        mode = "full page" if args.full_page else "viewport"
+        print(f"Capturing {frame_count} {mode} frames at {args.width}x{args.height}, {args.fps} fps", flush=True)
+        print(f"URL: {url}", flush=True)
+        print(f"Audio: {audio_path}", flush=True)
+        print(f"Start: {start:.3f}s  Duration: {duration:.3f}s", flush=True)
 
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(
@@ -184,10 +191,10 @@ def main() -> None:
             for index in range(frame_count):
                 timestamp = start + index / args.fps
                 page.evaluate("(time) => window.funPlayerSetTime(time)", timestamp)
-                page.wait_for_timeout(25)
-                page.screenshot(path=str(frame_dir / f"{index:06d}.png"), full_page=False)
+                page.wait_for_timeout(10)
+                page.screenshot(path=str(frame_dir / f"{index:06d}.png"), full_page=args.full_page)
                 if index and index % max(args.fps * 5, 1) == 0:
-                    print(f"  captured {index}/{frame_count}")
+                    print(f"  captured {index}/{frame_count}", flush=True)
             browser.close()
 
         run([
@@ -205,6 +212,12 @@ def main() -> None:
             f"{duration:.3f}",
             "-c:v",
             "libx264",
+            "-preset",
+            args.preset,
+            "-crf",
+            str(args.crf),
+            "-vf",
+            "scale=trunc(iw/2)*2:trunc(ih/2)*2",
             "-pix_fmt",
             "yuv420p",
             "-r",
@@ -212,7 +225,9 @@ def main() -> None:
             "-c:a",
             "aac",
             "-b:a",
-            "192k",
+            args.audio_bitrate,
+            "-movflags",
+            "+faststart",
             "-shortest",
             str(output),
         ])
