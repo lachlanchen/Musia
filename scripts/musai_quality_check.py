@@ -18,8 +18,18 @@ from musai.asr import transcribe_with_faster_whisper
 
 
 def normalize_tokens(text: str, language: str) -> list[str]:
-    if language.lower().startswith("zh"):
+    language = language.lower()
+    if language.startswith("zh"):
         return [char for char in text if "\u4e00" <= char <= "\u9fff"]
+    if language.startswith("ja"):
+        return [
+            char
+            for char in text
+            if "\u3040" <= char <= "\u309f"
+            or "\u30a0" <= char <= "\u30ff"
+            or "\u4e00" <= char <= "\u9fff"
+            or char == "ー"
+        ]
     return re.findall(r"[a-z0-9']+", text.lower())
 
 

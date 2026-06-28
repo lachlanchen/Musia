@@ -62,6 +62,7 @@ input song
 | [`scripts/mix_vocal_with_instrumental.sh`](scripts/mix_vocal_with_instrumental.sh) | Mixes a generated vocal with an instrumental stem and loudness-normalizes it. |
 | [`scripts/run_localization_performance_pipeline.sh`](scripts/run_localization_performance_pipeline.sh) | Dedicated EN/ZH localization performance demo using DeepSeek or OpenAI for lyric/check packages. |
 | [`scripts/musai_create.py`](scripts/musai_create.py) | Creative CLI for idea, lyrics, chords, notation, reference audio, and localization project planning. |
+| [`scripts/musai_song_workbench.py`](scripts/musai_song_workbench.py) | Reusable song generation, correction, review, and LALACHAN handoff workbench. |
 | [`scripts/musai_studio_web.py`](scripts/musai_studio_web.py) | Local Musai Studio web app. |
 | [`scripts/start_musai_studio_tmux.sh`](scripts/start_musai_studio_tmux.sh) | Starts Musai Studio in tmux. |
 | [`scripts/musai_quality_check.py`](scripts/musai_quality_check.py) | Checks generated audio duration, levels, ASR, and lyric overlap. |
@@ -123,6 +124,19 @@ https://fun.lazying.art
 ```
 
 The reusable data protocol is documented in [`references/musai-website-json-format.md`](references/musai-website-json-format.md).
+
+## Song Workbench
+
+For repeatable song generation and review:
+
+```bash
+musai song init --title "My Song" --vocal-language ja --lyrics-file lyrics.txt
+data/creative_projects/<song-id>/commands.sh generate
+data/creative_projects/<song-id>/commands.sh review
+musai song handoff --project-dir data/creative_projects/<song-id> --audio data/creative_projects/<song-id>/final/selected.mp3
+```
+
+See [`references/musai-song-workbench.md`](references/musai-song-workbench.md) and [`references/lalachan-song-first-video-workflow.md`](references/lalachan-song-first-video-workflow.md).
 
 ## npm CLI And Webapp
 

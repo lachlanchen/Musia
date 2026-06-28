@@ -41,6 +41,10 @@ Creative CLI:
   musai setup
   musai models
   musai plan --title "My Song" --idea "..." --provider deepseek
+  musai song init --title "Aya Chan" --vocal-language ja --lyrics-file lyrics.txt
+  musai song review --project-dir data/creative_projects/... --audio song.wav --run-analysis
+  musai song correct --project-dir data/creative_projects/... --issues "vocal too quiet"
+  musai song handoff --project-dir data/creative_projects/... --audio song.wav
   musai plan --title "Vocal" --generation-mode free_vocal --lyrics "..."
   musai plan --title "Controlled" --generation-mode controlled_song --control-level melody_sheet --melody "..."
   musai plan --title "Licensed CN Version" --generation-mode localization --control-level strict_localization --rights-confirmed --target-language zh-CN --reference-audio song.wav
@@ -238,6 +242,10 @@ function main() {
   }
   if (command === "download-open-song" || command === "download-open-songs") {
     runPython("scripts/download_open_songs.py", rest);
+    return;
+  }
+  if (command === "song" || command === "song-workbench") {
+    runPython("scripts/musai_song_workbench.py", rest);
     return;
   }
   if (PY_COMMANDS.has(command)) {
