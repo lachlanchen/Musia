@@ -16,6 +16,13 @@ Operational website, deployment, cover/poster, and publishing details are docume
 references/fun-lazying-art-website.md
 ```
 
+The publication-quality checklist for ASR-corrected lyrics, per-vocal lyric sets,
+pronunciation metadata, covers, and audits is documented in:
+
+```text
+references/fun-website-item-preparation.md
+```
+
 LALACHAN and YouTube publishing details are documented in:
 
 ```text

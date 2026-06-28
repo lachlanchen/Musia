@@ -58,6 +58,7 @@ Creative CLI:
   musia jobs --session-id <id>
   musia artifacts <session-id>
   musia fun-record --media-id one-sky-three-lights-mixed --skip-intro
+  musia fun-audit --media-id one-sky-three-lights-mixed
 
 Analysis pipeline:
   musia pipeline INPUT_AUDIO --run-name my-run --max-duration 60
@@ -262,6 +263,10 @@ function main() {
   }
   if (command === "fun-record" || command === "record-fun-player") {
     runSystemPython("scripts/record_fun_player.py", rest);
+    return;
+  }
+  if (command === "fun-audit" || command === "audit-fun-media-item") {
+    runSystemPython("scripts/audit_fun_media_item.py", rest);
     return;
   }
   if (command === "song" || command === "song-workbench") {

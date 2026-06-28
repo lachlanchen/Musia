@@ -238,6 +238,14 @@ Rules:
 
 ## Website Publishing Workflow
 
+For the detailed publication checklist, including two-source lyric correction,
+multilingual JSON, timing/highlight rules, pinyin/furigana/Jyutping, covers, and
+different vocal renders, use:
+
+```text
+references/fun-website-item-preparation.md
+```
+
 Prepare:
 
 ```text
@@ -260,6 +268,7 @@ Validate:
 
 ```bash
 npm run website:validate
+musia fun-audit --media-id <media-id>
 node --check website/app.js
 npm run check
 npm run smoke

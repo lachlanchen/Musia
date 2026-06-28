@@ -1,0 +1,6 @@
+interface:
+  display_name: "Musia Fun Website Item"
+  short_description: "Audit Fun media lyrics, timing, covers"
+  default_prompt: "Use $musia-fun-website-item to prepare and audit this Musia media item for fun.lazying.art."
+policy:
+  allow_implicit_invocation: true
