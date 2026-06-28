@@ -7,6 +7,7 @@
 *AI song localization: extract the human voice, stems, lyrics, beats, and chords from a song, then prepare the path toward singable multilingual re-singing.*
 
 [![Website](https://img.shields.io/badge/Website-lazying.art-0EA5E9?style=for-the-badge)](https://lazying.art)
+[![Fun Media](https://img.shields.io/badge/Fun-fun.lazying.art-14B8A6?style=for-the-badge)](https://fun.lazying.art)
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)](environment.yml)
 [![CUDA](https://img.shields.io/badge/CUDA-tested-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](references/local-setup-and-test-report.md)
 [![Sponsor](https://img.shields.io/badge/Sponsor-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
@@ -43,6 +44,7 @@ input song
 | [`musai/`](musai/) | Local Python analysis toolkit. |
 | [`package.json`](package.json) | npm package metadata for the `musai` CLI/webapp wrapper. |
 | [`bin/musai.js`](bin/musai.js) | npm executable that launches Musai Studio and Python workflows. |
+| [`website/`](website/) | Static Fun Lazying Art media website with a synced player, covers, lyrics/subtitles, pinyin, furigana, chords, and share metadata. |
 | [`SETUP_AND_TEST.md`](SETUP_AND_TEST.md) | Fresh-clone setup, smoke test, matrix test, and script map. |
 | [`scripts/setup_and_smoke_test.sh`](scripts/setup_and_smoke_test.sh) | One-command core setup plus open-song smoke test. |
 | [`scripts/bootstrap_musai.sh`](scripts/bootstrap_musai.sh) | Creates the conda environment and installs the local stack. |
@@ -61,6 +63,7 @@ input song
 | [`scripts/musai_studio_web.py`](scripts/musai_studio_web.py) | Local Musai Studio web app. |
 | [`scripts/start_musai_studio_tmux.sh`](scripts/start_musai_studio_tmux.sh) | Starts Musai Studio in tmux. |
 | [`scripts/musai_quality_check.py`](scripts/musai_quality_check.py) | Checks generated audio duration, levels, ASR, and lyric overlap. |
+| [`scripts/validate_fun_media_site.py`](scripts/validate_fun_media_site.py) | Validates the `fun.lazying.media.v1` website catalog, manifests, assets, and language tracks. |
 | [`scripts/run_moss_music_env.sh`](scripts/run_moss_music_env.sh) | Runs MOSS-Music with the required FFmpeg, TorchCodec, and CUDA library paths. |
 | [`scripts/musai_lyricfit_openai.py`](scripts/musai_lyricfit_openai.py) | Optional OpenAI-powered lyric adaptation helper. |
 | [`references/`](references/) | Architecture, deep research, and local setup notes. |
@@ -93,6 +96,29 @@ data/runs/<run-name>/
 Generated audio, downloaded songs, model weights, and third-party clones are ignored by git.
 
 For the full setup/test guide, see [`SETUP_AND_TEST.md`](SETUP_AND_TEST.md).
+
+## Fun Lazying Art Website
+
+The public media site lives in [`website/`](website/) and is intended for songs, localized songs, MVs, short films, covers, synced lyrics, subtitles, chords, stems, and shareable media pages.
+
+```bash
+npm run website:validate
+python3 -m http.server 8778 --directory website
+```
+
+Local URL:
+
+```text
+http://127.0.0.1:8778/
+```
+
+Public URL after GitHub Pages deploy:
+
+```text
+https://fun.lazying.art
+```
+
+The reusable data protocol is documented in [`references/musai-website-json-format.md`](references/musai-website-json-format.md).
 
 ## npm CLI And Webapp
 

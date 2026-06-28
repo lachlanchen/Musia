@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fun.lazying.art/data/schema/fun-media-catalog-v1.schema.json",
+  "title": "Fun Lazying Art Media Catalog v1",
+  "type": "object",
+  "required": ["schema", "version", "defaultMedia", "items"],
+  "properties": {
+    "schema": {"const": "fun.lazying.media.catalog.v1"},
+    "version": {"const": 1},
+    "site": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "url": {"type": "string"},
+        "protocol": {"type": "string"}
+      }
+    },
+    "defaultMedia": {"type": "string"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "title", "manifest"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"enum": ["song", "mv", "short-film", "video", "album", "playlist"]},
+          "title": {"type": "string"},
+          "artist": {"type": "string"},
+          "summary": {"type": "string"},
+          "manifest": {"type": "string"},
+          "cover": {"type": "string"},
+          "languages": {"type": "array", "items": {"type": "string"}},
+          "tags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

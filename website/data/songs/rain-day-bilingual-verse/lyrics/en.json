@@ -1,0 +1,77 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-bilingual-verse",
+  "songId": "rain-day-bilingual-verse",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 0.0,
+      "end": 4.6,
+      "text": "Outside the window, rain falls softly on the street.",
+      "role": "translation",
+      "tokens": [
+        {"text": "Outside", "start": 0.3, "end": 0.72},
+        {"text": "the", "start": 0.72, "end": 1.2},
+        {"text": "window,", "start": 1.2, "end": 1.62},
+        {"text": "rain", "start": 1.62, "end": 2.04},
+        {"text": "falls", "start": 2.04, "end": 2.52},
+        {"text": "softly", "start": 2.52, "end": 2.94},
+        {"text": "on", "start": 2.94, "end": 3.36},
+        {"text": "the street.", "start": 3.36, "end": 4.12}
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 4.6,
+      "end": 8.36,
+      "text": "City lights glow through the rainy window.",
+      "role": "translation",
+      "tokens": [
+        {"text": "City", "start": 4.9, "end": 5.32},
+        {"text": "lights", "start": 5.32, "end": 5.8},
+        {"text": "glow", "start": 5.8, "end": 6.22},
+        {"text": "through", "start": 6.22, "end": 6.64},
+        {"text": "the", "start": 6.64, "end": 7.12},
+        {"text": "rainy window.", "start": 7.12, "end": 7.88}
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 8.36,
+      "end": 12.12,
+      "text": "The heart whispers inside, warm and slow.",
+      "role": "translation",
+      "tokens": [
+        {"text": "The heart", "start": 8.66, "end": 9.08},
+        {"text": "whispers", "start": 9.08, "end": 9.56},
+        {"text": "inside,", "start": 9.56, "end": 9.98},
+        {"text": "warm", "start": 9.98, "end": 10.4},
+        {"text": "and", "start": 10.4, "end": 10.88},
+        {"text": "slow.", "start": 10.88, "end": 11.64}
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 12.12,
+      "end": 16.3,
+      "text": "We stay here together with the rainy glow.",
+      "role": "translation",
+      "tokens": [
+        {"text": "We", "start": 12.42, "end": 12.84},
+        {"text": "stay", "start": 12.84, "end": 13.32},
+        {"text": "here", "start": 13.32, "end": 13.74},
+        {"text": "together", "start": 13.74, "end": 14.16},
+        {"text": "with", "start": 14.16, "end": 14.64},
+        {"text": "the rainy", "start": 14.64, "end": 15.06},
+        {"text": "glow.", "start": 15.06, "end": 15.82}
+      ]
+    }
+  ]
+}

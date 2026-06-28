@@ -1,0 +1,23 @@
+{
+  "schema": "fun.lazying.media.catalog.v1",
+  "version": 1,
+  "site": {
+    "name": "Fun Lazying Art",
+    "url": "https://fun.lazying.art",
+    "protocol": "fun.lazying.media.v1"
+  },
+  "defaultMedia": "rain-day-bilingual-verse",
+  "items": [
+    {
+      "id": "rain-day-bilingual-verse",
+      "kind": "song",
+      "title": "Rain Day Bilingual Verse",
+      "artist": "Musai SoulX",
+      "summary": "A bilingual rainy-day vocal demo with synced Chinese, Japanese, and English text tracks.",
+      "manifest": "data/songs/rain-day-bilingual-verse/manifest.json",
+      "cover": "assets/covers/rain-day-bilingual-verse.png",
+      "languages": ["zh-Hans", "ja", "en"],
+      "tags": ["music", "lyrics", "pinyin", "furigana", "SoulX"]
+    }
+  ]
+}

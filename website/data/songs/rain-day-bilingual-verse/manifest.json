@@ -1,0 +1,176 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "rain-day-bilingual-verse",
+  "kind": "song",
+  "title": "Rain Day Bilingual Verse",
+  "artist": "Musai SoulX",
+  "subtitle": "Mandarin / English / Japanese learning player",
+  "description": "A compact SoulX-Singer bilingual verse demo for the Fun Lazying Art synced media player.",
+  "caption": "Rainy bilingual vocal demo",
+  "duration": 16.3,
+  "canonicalUrl": "https://fun.lazying.art/#rain-day-bilingual-verse",
+  "share": {
+    "title": "Rain Day Bilingual Verse - Fun Lazying Art",
+    "description": "A synced music-localization demo with Chinese pinyin, Japanese furigana, English translation, chords, vocal, and mix assets.",
+    "url": "https://fun.lazying.art/#rain-day-bilingual-verse",
+    "image": "assets/covers/rain-day-bilingual-verse.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Cover",
+      "role": "cover",
+      "src": "assets/covers/rain-day-bilingual-verse.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 1600
+    },
+    "poster": {
+      "id": "poster",
+      "label": "Poster",
+      "role": "poster",
+      "src": "assets/covers/rain-day-bilingual-verse.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 1600
+    },
+    "primaryAudio": {
+      "id": "mix",
+      "label": "Mix",
+      "role": "final-mix",
+      "src": "assets/audio/rain-day-bilingual-verse.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": [
+      {
+        "id": "vocal",
+        "label": "Vocal",
+        "role": "human-sound",
+        "src": "assets/audio/rain-day-bilingual-verse-vocal.mp3",
+        "mime": "audio/mpeg"
+      }
+    ],
+    "stems": {}
+  },
+  "provenance": {
+    "generator": "musai soulx-verse",
+    "run": "data/soulx_verses/rain-day-bilingual-verse",
+    "model": "SoulX-Singer",
+    "lyricRefinement": "DeepSeek",
+    "coverPrompt": "Rainy night window, soft city lights, waveform lines, premium clean music cover, teal, gold, rose, no people."
+  },
+  "musical": {
+    "key": "D minor",
+    "bpm": 78,
+    "timeSignature": "4/4",
+    "chords": [
+      {"start": 0.0, "end": 2.3, "name": "Dm9", "degree": "i9"},
+      {"start": 2.3, "end": 4.6, "name": "Bbmaj7", "degree": "VImaj7"},
+      {"start": 4.6, "end": 6.48, "name": "Fadd9", "degree": "IIIadd9"},
+      {"start": 6.48, "end": 8.36, "name": "C", "degree": "VII"},
+      {"start": 8.36, "end": 10.24, "name": "Gm7", "degree": "iv7"},
+      {"start": 10.24, "end": 12.12, "name": "Dm/A", "degree": "i/5"},
+      {"start": 12.12, "end": 14.21, "name": "Bbmaj7", "degree": "VImaj7"},
+      {"start": 14.21, "end": 16.3, "name": "Cadd9", "degree": "VIIadd9"}
+    ]
+  },
+  "textTracks": [
+    {
+      "code": "zh-Hans",
+      "label": "Chinese",
+      "nativeLabel": "中文",
+      "script": "Hans",
+      "features": ["lyrics", "translation", "pinyin", "tones"],
+      "path": "lyrics/zh-Hans.json"
+    },
+    {
+      "code": "ja",
+      "label": "Japanese",
+      "nativeLabel": "日本語",
+      "script": "Jpan",
+      "features": ["lyrics", "translation", "furigana"],
+      "path": "lyrics/ja.json"
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "nativeLabel": "English",
+      "script": "Latn",
+      "features": ["lyrics", "translation", "wordTiming"],
+      "path": "lyrics/en.json"
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "line-001",
+        "start": 0.0,
+        "end": 4.6,
+        "sourceText": "窗外rain falls softly on the street",
+        "words": [
+          {"start": 0.3, "end": 0.72, "text": "窗", "joiner": ""},
+          {"start": 0.72, "end": 1.2, "text": "外", "joiner": " "},
+          {"start": 1.2, "end": 1.62, "text": "rain"},
+          {"start": 1.62, "end": 2.04, "text": "falls"},
+          {"start": 2.04, "end": 2.52, "text": "softly"},
+          {"start": 2.52, "end": 2.94, "text": "on"},
+          {"start": 2.94, "end": 3.36, "text": "the"},
+          {"start": 3.36, "end": 4.12, "text": "street", "joiner": ""}
+        ]
+      },
+      {
+        "id": "line-002",
+        "start": 4.6,
+        "end": 8.36,
+        "sourceText": "city lights glow through the window",
+        "words": [
+          {"start": 4.9, "end": 5.32, "text": "city"},
+          {"start": 5.32, "end": 5.8, "text": "lights"},
+          {"start": 5.8, "end": 6.22, "text": "glow"},
+          {"start": 6.22, "end": 6.64, "text": "through"},
+          {"start": 6.64, "end": 7.12, "text": "the"},
+          {"start": 7.12, "end": 7.88, "text": "window", "joiner": ""}
+        ]
+      },
+      {
+        "id": "line-003",
+        "start": 8.36,
+        "end": 12.12,
+        "sourceText": "heart whispers warm and slow inside",
+        "words": [
+          {"start": 8.66, "end": 9.08, "text": "heart"},
+          {"start": 9.08, "end": 9.56, "text": "whispers"},
+          {"start": 9.56, "end": 9.98, "text": "warm"},
+          {"start": 9.98, "end": 10.4, "text": "and"},
+          {"start": 10.4, "end": 10.88, "text": "slow"},
+          {"start": 10.88, "end": 11.64, "text": "inside", "joiner": ""}
+        ]
+      },
+      {
+        "id": "line-004",
+        "start": 12.12,
+        "end": 16.3,
+        "sourceText": "we stay here with the rainy glow",
+        "words": [
+          {"start": 12.42, "end": 12.84, "text": "we"},
+          {"start": 12.84, "end": 13.32, "text": "stay"},
+          {"start": 13.32, "end": 13.74, "text": "here"},
+          {"start": 13.74, "end": 14.16, "text": "with"},
+          {"start": 14.16, "end": 14.64, "text": "the"},
+          {"start": 14.64, "end": 15.06, "text": "rainy"},
+          {"start": 15.06, "end": 15.82, "text": "glow", "joiner": ""}
+        ]
+      }
+    ]
+  },
+  "chapters": [],
+  "shots": [],
+  "artifacts": [
+    {"id": "cover-svg", "label": "editable cover SVG", "href": "assets/covers/rain-day-bilingual-verse.svg"},
+    {"id": "manifest", "label": "media manifest JSON", "href": "data/songs/rain-day-bilingual-verse/manifest.json"}
+  ],
+  "createCommand": "musai soulx-verse --title \"Rain Day\" --provider deepseek && musai website add-media"
+}

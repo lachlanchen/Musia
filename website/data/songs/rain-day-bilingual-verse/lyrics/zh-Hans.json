@@ -1,0 +1,103 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-bilingual-verse",
+  "songId": "rain-day-bilingual-verse",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 0.0,
+      "end": 4.6,
+      "text": "窗外的雨，轻轻落在街上。",
+      "singableText": "窗外雨，轻轻落街上",
+      "role": "localized-lyric",
+      "tokens": [
+        {"text": "窗", "pinyin": "chuang1", "display": "chuang", "tone": 1},
+        {"text": "外", "pinyin": "wai4", "display": "wai", "tone": 4},
+        {"text": "的", "pinyin": "de5", "display": "de", "tone": 5},
+        {"text": "雨", "pinyin": "yu3", "display": "yu", "tone": 3},
+        {"text": "，"},
+        {"text": "轻", "pinyin": "qing1", "display": "qing", "tone": 1},
+        {"text": "轻", "pinyin": "qing1", "display": "qing", "tone": 1},
+        {"text": "落", "pinyin": "luo4", "display": "luo", "tone": 4},
+        {"text": "在", "pinyin": "zai4", "display": "zai", "tone": 4},
+        {"text": "街", "pinyin": "jie1", "display": "jie", "tone": 1},
+        {"text": "上", "pinyin": "shang4", "display": "shang", "tone": 4},
+        {"text": "。"}
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 4.6,
+      "end": 8.36,
+      "text": "城市灯光，穿过雨窗发亮。",
+      "singableText": "城市灯光，穿过雨窗亮",
+      "role": "localized-lyric",
+      "tokens": [
+        {"text": "城", "pinyin": "cheng2", "display": "cheng", "tone": 2},
+        {"text": "市", "pinyin": "shi4", "display": "shi", "tone": 4},
+        {"text": "灯", "pinyin": "deng1", "display": "deng", "tone": 1},
+        {"text": "光", "pinyin": "guang1", "display": "guang", "tone": 1},
+        {"text": "，"},
+        {"text": "穿", "pinyin": "chuan1", "display": "chuan", "tone": 1},
+        {"text": "过", "pinyin": "guo4", "display": "guo", "tone": 4},
+        {"text": "雨", "pinyin": "yu3", "display": "yu", "tone": 3},
+        {"text": "窗", "pinyin": "chuang1", "display": "chuang", "tone": 1},
+        {"text": "发", "pinyin": "fa1", "display": "fa", "tone": 1},
+        {"text": "亮", "pinyin": "liang4", "display": "liang", "tone": 4},
+        {"text": "。"}
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 8.36,
+      "end": 12.12,
+      "text": "心里的低语，温柔又缓慢。",
+      "singableText": "心底低语，温柔又缓慢",
+      "role": "localized-lyric",
+      "tokens": [
+        {"text": "心", "pinyin": "xin1", "display": "xin", "tone": 1},
+        {"text": "里", "pinyin": "li3", "display": "li", "tone": 3},
+        {"text": "的", "pinyin": "de5", "display": "de", "tone": 5},
+        {"text": "低", "pinyin": "di1", "display": "di", "tone": 1},
+        {"text": "语", "pinyin": "yu3", "display": "yu", "tone": 3},
+        {"text": "，"},
+        {"text": "温", "pinyin": "wen1", "display": "wen", "tone": 1},
+        {"text": "柔", "pinyin": "rou2", "display": "rou", "tone": 2},
+        {"text": "又", "pinyin": "you4", "display": "you", "tone": 4},
+        {"text": "缓", "pinyin": "huan3", "display": "huan", "tone": 3},
+        {"text": "慢", "pinyin": "man4", "display": "man", "tone": 4},
+        {"text": "。"}
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 12.12,
+      "end": 16.3,
+      "text": "我们停在这里，陪着雨光。",
+      "singableText": "我们在这里，陪着雨光",
+      "role": "localized-lyric",
+      "tokens": [
+        {"text": "我", "pinyin": "wo3", "display": "wo", "tone": 3},
+        {"text": "们", "pinyin": "men5", "display": "men", "tone": 5},
+        {"text": "停", "pinyin": "ting2", "display": "ting", "tone": 2},
+        {"text": "在", "pinyin": "zai4", "display": "zai", "tone": 4},
+        {"text": "这", "pinyin": "zhe4", "display": "zhe", "tone": 4},
+        {"text": "里", "pinyin": "li3", "display": "li", "tone": 3},
+        {"text": "，"},
+        {"text": "陪", "pinyin": "pei2", "display": "pei", "tone": 2},
+        {"text": "着", "pinyin": "zhe5", "display": "zhe", "tone": 5},
+        {"text": "雨", "pinyin": "yu3", "display": "yu", "tone": 3},
+        {"text": "光", "pinyin": "guang1", "display": "guang", "tone": 1},
+        {"text": "。"}
+      ]
+    }
+  ]
+}

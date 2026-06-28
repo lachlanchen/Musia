@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fun.lazying.art/data/schema/fun-media-manifest-v1.schema.json",
+  "title": "Fun Lazying Art Media Manifest v1",
+  "type": "object",
+  "required": ["schema", "version", "id", "kind", "title", "duration", "assets", "textTracks", "timeline"],
+  "properties": {
+    "schema": {"const": "fun.lazying.media.manifest.v1"},
+    "version": {"const": 1},
+    "id": {"type": "string"},
+    "kind": {"enum": ["song", "mv", "short-film", "video"]},
+    "title": {"type": "string"},
+    "artist": {"type": "string"},
+    "subtitle": {"type": "string"},
+    "description": {"type": "string"},
+    "caption": {"type": "string"},
+    "duration": {"type": "number", "exclusiveMinimum": 0},
+    "canonicalUrl": {"type": "string"},
+    "share": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "url": {"type": "string"},
+        "image": {"type": "string"},
+        "siteName": {"type": "string"}
+      }
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "cover": {"$ref": "#/$defs/asset"},
+        "poster": {"$ref": "#/$defs/asset"},
+        "primaryAudio": {"$ref": "#/$defs/asset"},
+        "primaryVideo": {"$ref": "#/$defs/asset"},
+        "alternateAudio": {"type": "array", "items": {"$ref": "#/$defs/asset"}},
+        "stems": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/asset"}
+        },
+        "subtitles": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/asset"}
+        }
+      },
+      "additionalProperties": true
+    },
+    "musical": {
+      "type": "object",
+      "properties": {
+        "key": {"type": "string"},
+        "bpm": {"type": "number"},
+        "timeSignature": {"type": "string"},
+        "chords": {"type": "array", "items": {"$ref": "#/$defs/timedChord"}}
+      }
+    },
+    "textTracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "label", "nativeLabel", "path"],
+        "properties": {
+          "code": {"type": "string"},
+          "label": {"type": "string"},
+          "nativeLabel": {"type": "string"},
+          "script": {"type": "string"},
+          "features": {"type": "array", "items": {"type": "string"}},
+          "path": {"type": "string"}
+        }
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "required": ["unit", "lines"],
+      "properties": {
+        "unit": {"const": "seconds"},
+        "lines": {"type": "array", "items": {"$ref": "#/$defs/timedLine"}}
+      }
+    },
+    "chapters": {"type": "array"},
+    "shots": {"type": "array"},
+    "provenance": {"type": "object"},
+    "artifacts": {"type": "array", "items": {"$ref": "#/$defs/link"}}
+  },
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "required": ["src"],
+      "properties": {
+        "id": {"type": "string"},
+        "label": {"type": "string"},
+        "src": {"type": "string"},
+        "mime": {"type": "string"},
+        "role": {"type": "string"},
+        "width": {"type": "integer"},
+        "height": {"type": "integer"}
+      },
+      "additionalProperties": true
+    },
+    "timedChord": {
+      "type": "object",
+      "required": ["start", "end", "name"],
+      "properties": {
+        "start": {"type": "number"},
+        "end": {"type": "number"},
+        "name": {"type": "string"},
+        "degree": {"type": "string"}
+      }
+    },
+    "timedLine": {
+      "type": "object",
+      "required": ["id", "start", "end"],
+      "properties": {
+        "id": {"type": "string"},
+        "start": {"type": "number"},
+        "end": {"type": "number"},
+        "sourceText": {"type": "string"},
+        "words": {"type": "array"}
+      }
+    },
+    "link": {
+      "type": "object",
+      "required": ["href"],
+      "properties": {
+        "id": {"type": "string"},
+        "label": {"type": "string"},
+        "href": {"type": "string"}
+      }
+    }
+  }
+}

@@ -36,6 +36,10 @@ references/private-musai-control-needs-2026-06-28.md
 *.mid
 *.mp4
 *.mov
+
+# Small static website demo assets. Keep larger generated media ignored by default.
+!website/assets/audio/rain-day-bilingual-verse.mp3
+!website/assets/audio/rain-day-bilingual-verse-vocal.mp3
 .npmrc
 npm-debug.log*
 *.tgz

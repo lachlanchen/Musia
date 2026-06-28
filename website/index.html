@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fun Lazying Art media player for created music, MVs, short films, synced lyrics, subtitles, pinyin, furigana, chords, and stems.">
+  <meta property="og:site_name" content="Fun Lazying Art">
+  <meta property="og:type" content="music.song">
+  <meta property="og:title" content="Fun Lazying Art">
+  <meta property="og:description" content="Created music, MVs, short films, synced lyrics, subtitles, pinyin, furigana, chords, and stems.">
+  <meta property="og:image" content="https://fun.lazying.art/assets/covers/rain-day-bilingual-verse.png">
+  <meta property="og:url" content="https://fun.lazying.art">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fun Lazying Art">
+  <meta name="twitter:description" content="Created music, MVs, short films, synced lyrics, subtitles, pinyin, furigana, chords, and stems.">
+  <meta name="twitter:image" content="https://fun.lazying.art/assets/covers/rain-day-bilingual-verse.png">
+  <title>Fun Lazying Art</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="global-bar" aria-label="Site header">
+      <a class="brand" href="https://fun.lazying.art" aria-label="Fun Lazying Art home">
+        <span class="mark">F</span>
+        <span>
+          <strong>Fun Lazying Art</strong>
+          <small>media we create</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Media categories">
+        <button class="active" type="button" data-kind-filter="all">All</button>
+        <button type="button" data-kind-filter="song">Music</button>
+        <button type="button" data-kind-filter="mv">MV</button>
+        <button type="button" data-kind-filter="short-film">Short Film</button>
+      </nav>
+      <a class="repo-link" href="https://github.com/lachlanchen/Musai">GitHub</a>
+    </header>
+
+    <aside class="library-panel" aria-label="Media library">
+      <div class="section-heading">
+        <span class="eyebrow">Library</span>
+        <h2>Created Media</h2>
+      </div>
+      <div id="media-library" class="media-library"></div>
+    </aside>
+
+    <section class="player-panel" aria-label="Primary media player">
+      <div class="player-topline">
+        <div class="title-cluster">
+          <img id="cover-thumb" class="cover-thumb" src="assets/covers/rain-day-bilingual-verse.png" alt="Rain Day Bilingual Verse cover">
+          <div>
+            <span id="kind-label" class="eyebrow">Music</span>
+            <h1 id="media-title">Rain Day Bilingual Verse</h1>
+            <p id="media-subtitle">Mandarin / English / Japanese learning player</p>
+          </div>
+        </div>
+        <div class="status-line" aria-label="Media facts">
+          <span id="key-label">D minor</span>
+          <span id="bpm-label">78 BPM</span>
+          <span id="domain-label">fun.lazying.art</span>
+        </div>
+      </div>
+
+      <div class="stage">
+        <img id="cover-art" class="cover-art" src="assets/covers/rain-day-bilingual-verse.png" alt="Rain Day Bilingual Verse cover" decoding="async">
+        <canvas id="visualizer" width="900" height="420" aria-label="Audio visualizer"></canvas>
+        <video id="video" playsinline preload="metadata" aria-label="Video player"></video>
+        <div class="stage-shade"></div>
+        <div class="stage-copy">
+          <p id="media-caption">Rainy bilingual vocal demo</p>
+          <div id="stage-line" class="stage-line">窗外rain falls softly on the street</div>
+        </div>
+        <div class="now-card" aria-live="polite">
+          <span>Now</span>
+          <strong id="now-chord">Dm9</strong>
+          <small id="now-degree">i9</small>
+        </div>
+      </div>
+
+      <div class="transport">
+        <button id="play" class="play-button" type="button" aria-label="Play or pause">
+          <span id="play-symbol">▶</span>
+        </button>
+        <div class="time-readout">
+          <span id="current-time">0:00</span>
+          <div class="seek-wrap">
+            <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <span id="duration">0:00</span>
+        </div>
+        <div id="asset-switcher" class="asset-switcher" aria-label="Playable versions"></div>
+      </div>
+
+      <audio id="audio" preload="metadata"></audio>
+    </section>
+
+    <section class="sync-panel" aria-label="Synchronized lyrics and subtitles">
+      <div class="sync-toolbar">
+        <div>
+          <span class="eyebrow">Synced Text</span>
+          <h2>Lyrics / Subtitles</h2>
+          <p>One protocol for songs, MVs, and short films: canonical timing plus one JSON track per language.</p>
+        </div>
+        <div id="track-tabs" class="tabs" role="tablist" aria-label="Text language view"></div>
+      </div>
+
+      <div id="chord-strip" class="chord-strip" aria-label="Chord timeline"></div>
+      <div id="text-lines" class="lyrics-list">
+        <article class="lyric-line active" style="--line-progress:0%">
+          <div class="line-progress"></div>
+          <div class="source">窗外 rain falls softly on the street</div>
+          <div class="translations">
+            <div class="translation">
+              <span class="label">中文 / pinyin</span>
+              <p class="ruby-line"><ruby>窗<rt>chuangˉ</rt></ruby><ruby>外<rt>waiˋ</rt></ruby><ruby>雨<rt>yuˇ</rt></ruby><ruby>轻<rt>qingˉ</rt></ruby><ruby>轻<rt>qingˉ</rt></ruby><ruby>落<rt>luoˋ</rt></ruby><ruby>街<rt>jieˉ</rt></ruby><ruby>上<rt>shangˋ</rt></ruby></p>
+            </div>
+            <div class="translation">
+              <span class="label">日本語 / furigana</span>
+              <p class="ruby-line"><ruby>窓<rt>まど</rt></ruby>の<ruby>外<rt>そと</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>が<ruby>静<rt>しず</rt></ruby>かに<ruby>通<rt>とお</rt></ruby>りへ<ruby>落<rt>お</rt></ruby>ちる。</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="inspector" aria-label="Media details">
+      <section>
+        <span class="eyebrow">Focus</span>
+        <h2>Current Moment</h2>
+        <div id="active-line" class="focus-line">
+          <span class="muted">Press play to begin.</span>
+        </div>
+      </section>
+      <section>
+        <span class="eyebrow">Protocol</span>
+        <h2>Data Contract</h2>
+        <ul class="protocol-list">
+          <li><a href="data/catalog.json">catalog.json</a></li>
+          <li><a id="manifest-link" href="data/songs/rain-day-bilingual-verse/manifest.json">manifest.json</a></li>
+          <li><a href="data/schema/fun-media-manifest-v1.schema.json">manifest schema</a></li>
+          <li><a href="data/schema/fun-media-text-track-v1.schema.json">text track schema</a></li>
+        </ul>
+      </section>
+      <section>
+        <span class="eyebrow">Artifacts</span>
+        <h2>Files</h2>
+        <ul id="artifact-list" class="artifact-list"></ul>
+      </section>
+      <section>
+        <span class="eyebrow">Create</span>
+        <h2>Musai Command</h2>
+        <pre id="command-box">musai website build</pre>
+      </section>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

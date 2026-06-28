@@ -1,0 +1,95 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "rain-day-bilingual-verse",
+  "songId": "rain-day-bilingual-verse",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 0.0,
+      "end": 4.6,
+      "text": "窓の外、雨が静かに通りへ落ちる。",
+      "role": "translation",
+      "tokens": [
+        {"text": "窓", "reading": "まど"},
+        {"text": "の"},
+        {"text": "外", "reading": "そと"},
+        {"text": "、"},
+        {"text": "雨", "reading": "あめ"},
+        {"text": "が"},
+        {"text": "静", "reading": "しず"},
+        {"text": "かに"},
+        {"text": "通", "reading": "とお"},
+        {"text": "りへ"},
+        {"text": "落", "reading": "お"},
+        {"text": "ちる。"}
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 4.6,
+      "end": 8.36,
+      "text": "街の灯りが雨の窓を通して光る。",
+      "role": "translation",
+      "tokens": [
+        {"text": "街", "reading": "まち"},
+        {"text": "の"},
+        {"text": "灯", "reading": "あか"},
+        {"text": "りが"},
+        {"text": "雨", "reading": "あめ"},
+        {"text": "の"},
+        {"text": "窓", "reading": "まど"},
+        {"text": "を"},
+        {"text": "通", "reading": "とお"},
+        {"text": "して"},
+        {"text": "光", "reading": "ひか"},
+        {"text": "る。"}
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 8.36,
+      "end": 12.12,
+      "text": "心の中で、温かな囁きがゆっくり響く。",
+      "role": "translation",
+      "tokens": [
+        {"text": "心", "reading": "こころ"},
+        {"text": "の"},
+        {"text": "中", "reading": "なか"},
+        {"text": "で、"},
+        {"text": "温", "reading": "あたた"},
+        {"text": "かな"},
+        {"text": "囁", "reading": "ささや"},
+        {"text": "きがゆっくり"},
+        {"text": "響", "reading": "ひび"},
+        {"text": "く。"}
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 12.12,
+      "end": 16.3,
+      "text": "僕らはここにいて、雨の光に寄り添う。",
+      "role": "translation",
+      "tokens": [
+        {"text": "僕", "reading": "ぼく"},
+        {"text": "らはここにいて、"},
+        {"text": "雨", "reading": "あめ"},
+        {"text": "の"},
+        {"text": "光", "reading": "ひかり"},
+        {"text": "に"},
+        {"text": "寄", "reading": "よ"},
+        {"text": "り"},
+        {"text": "添", "reading": "そ"},
+        {"text": "う。"}
+      ]
+    }
+  ]
+}
