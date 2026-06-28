@@ -193,6 +193,10 @@ The script creates lyric packages and checks existing render artifacts. It does 
 | `scripts/mix_vocal_with_instrumental.sh` | Mix generated vocal with instrumental and normalize loudness. |
 | `scripts/run_localization_performance_pipeline.sh` | Dedicated EN/ZH localization performance demo using DeepSeek/OpenAI. |
 | `scripts/run_localization_performance_pipeline.py` | Python implementation for the dedicated localization performance demo. |
+| `scripts/musai_create.py` | Creative CLI for idea/lyrics/chords/notation/reference-audio song projects. |
+| `scripts/musai_studio_web.py` | Local Musai Studio web app. |
+| `scripts/start_musai_studio_tmux.sh` | Starts Musai Studio in tmux. |
+| `scripts/musai_quality_check.py` | Generated-audio QA: duration, levels, ASR, lyric overlap. |
 | `scripts/musai_lyricfit_openai.py` | Optional OpenAI lyric adaptation helper. |
 
 ## Current Quality Boundary

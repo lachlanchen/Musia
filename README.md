@@ -55,6 +55,10 @@ input song
 | [`scripts/soulx_rewrite_metadata.py`](scripts/soulx_rewrite_metadata.py) | Rewrites SoulX metadata with Mandarin target lyrics while preserving note/F0 timing. |
 | [`scripts/mix_vocal_with_instrumental.sh`](scripts/mix_vocal_with_instrumental.sh) | Mixes a generated vocal with an instrumental stem and loudness-normalizes it. |
 | [`scripts/run_localization_performance_pipeline.sh`](scripts/run_localization_performance_pipeline.sh) | Dedicated EN/ZH localization performance demo using DeepSeek or OpenAI for lyric/check packages. |
+| [`scripts/musai_create.py`](scripts/musai_create.py) | Creative CLI for idea, lyrics, chords, notation, reference audio, and localization project planning. |
+| [`scripts/musai_studio_web.py`](scripts/musai_studio_web.py) | Local Musai Studio web app. |
+| [`scripts/start_musai_studio_tmux.sh`](scripts/start_musai_studio_tmux.sh) | Starts Musai Studio in tmux. |
+| [`scripts/musai_quality_check.py`](scripts/musai_quality_check.py) | Checks generated audio duration, levels, ASR, and lyric overlap. |
 | [`scripts/run_moss_music_env.sh`](scripts/run_moss_music_env.sh) | Runs MOSS-Music with the required FFmpeg, TorchCodec, and CUDA library paths. |
 | [`scripts/musai_lyricfit_openai.py`](scripts/musai_lyricfit_openai.py) | Optional OpenAI-powered lyric adaptation helper. |
 | [`references/`](references/) | Architecture, deep research, and local setup notes. |
@@ -101,6 +105,25 @@ If your OpenAI account has access to GPT-5.5-compatible chat completions, the sa
 ```bash
 scripts/run_localization_performance_pipeline.sh --provider openai --model gpt-5.5
 ```
+
+Create original music projects from ideas, lyrics, chords, notation, or reference recordings:
+
+```bash
+PYTHONNOUSERSITE=1 conda run -n musai python scripts/musai_create.py plan \
+  --title "My Song" \
+  --idea "A hopeful acoustic song about..." \
+  --lyrics-file lyrics.txt \
+  --chords "C G Am F" \
+  --provider deepseek
+```
+
+Start the local web app:
+
+```bash
+scripts/start_musai_studio_tmux.sh
+```
+
+See [`references/musai-creative-studio.md`](references/musai-creative-studio.md).
 
 ## Local Validation
 
