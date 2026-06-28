@@ -177,6 +177,7 @@ See [`references/musai-creative-studio.md`](references/musai-creative-studio.md)
 
 For the new control-level model and the SoulX vocal-only workflow, see [`references/musai-control-and-soulx-workflow.md`](references/musai-control-and-soulx-workflow.md).
 For original short SoulX verse generation, see [`references/soulx-verse-tool.md`](references/soulx-verse-tool.md) and [`references/lalachan-musai-musical-short-film-handoff.md`](references/lalachan-musai-musical-short-film-handoff.md).
+For the full installed capability map and practical workflows, see [`references/musai-full-capability-guide.md`](references/musai-full-capability-guide.md).
 
 ## Local Validation
 
