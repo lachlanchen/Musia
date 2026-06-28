@@ -36,7 +36,7 @@ mkdir -p "$(dirname "$OUTPUT_WAV")"
 ffmpeg -hide_banner -y \
   -i "$INSTRUMENTAL" \
   -i "$VOCAL" \
-  -filter_complex "[0:a]volume=${INSTRUMENTAL_GAIN}[i];[1:a]aresample=44100,pan=stereo|c0=c0|c1=c0,volume=${VOCAL_GAIN}[v];[i][v]amix=inputs=2:duration=first:dropout_transition=0,alimiter=limit=0.95,loudnorm=I=${LOUDNESS_I}:LRA=${LOUDNESS_LRA}:TP=${LOUDNESS_TP},aresample=44100[out]" \
+  -filter_complex "[0:a]volume=${INSTRUMENTAL_GAIN}[i];[1:a]aresample=44100,pan=stereo|c0=c0|c1=c0,volume=${VOCAL_GAIN}[v];[i][v]amix=inputs=2:duration=first:dropout_transition=0,alimiter=limit=0.95,loudnorm=I=${LOUDNESS_I}:LRA=${LOUDNESS_LRA}:TP=${LOUDNESS_TP},aresample=44100,aformat=sample_fmts=s16:channel_layouts=stereo[out]" \
   -map "[out]" \
   "$OUTPUT_WAV"
 

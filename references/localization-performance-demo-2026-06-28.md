@@ -59,6 +59,30 @@ Let me pick you, soft and true
 Give this flower, dear, to you
 ```
 
+## Listening Showcase Added
+
+After the first performance script pass, three fresher SoulX renders were produced with the original Danny Boy first-verse instrumental and a cleaner bundled Mandarin prompt voice:
+
+```text
+data/runs/danny-boy-zh-localization/localization/zh-CN/soulx_simple30_clean_prompt_score_mix.mp3
+data/runs/danny-boy-zh-localization/localization/zh-CN/soulx_deepseek_clean_prompt_score_mix.mp3
+data/runs/danny-boy-zh-localization/localization/zh-CN/soulx_simple30_clean_prompt_melody_mix.mp3
+```
+
+The local listening page is:
+
+```text
+data/runs/musai-listening-showcase-20260628/index.html
+```
+
+The best current listening pick is:
+
+```text
+data/runs/danny-boy-zh-localization/localization/zh-CN/soulx_simple30_clean_prompt_score_mix.mp3
+```
+
+It is 29.31 seconds and uses the extracted first-verse instrumental. The vocal is clearly audible, but it still fails production intelligibility: faster-whisper recovered only partial Mandarin from the target phrase. This is an improvement over the near-inaudible earlier mix, but it is still an experiment.
+
 ## Artifacts Checked
 
 The English and Chinese/instrumental fixture runs include:
