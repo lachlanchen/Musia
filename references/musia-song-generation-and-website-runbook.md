@@ -44,6 +44,7 @@ Important distinction:
 - Musia derives the melody guide after generation/source upload by separating the vocal and extracting F0, approximate note timing, beats, and chords.
 - If the user already has jianpu, MIDI, sheet music, or a sung guide recording, that supplied melody is stronger than any extracted melody.
 - For strict target-language vocals, use the extracted/supplied melody with SoulX-Singer, YingMusic-Singer-Plus, or a professional vocal workflow. Three independent text-to-music renders can be beautiful, but they are reinterpretations, not guaranteed same-melody localizations.
+- Japanese target vocals require a backend with real Japanese singing support. Do not force Japanese through a phone set that only supports English, Mandarin, or Cantonese. The next proper path is to install and validate an OpenVPI-DiffSinger, NNSVS, OpenUtau, or equivalent Japanese-capable singing workflow, then feed it the same extracted MIDI/F0/phrase plan and export a dry vocal for the shared instrumental mix.
 
 ## Production Standard
 

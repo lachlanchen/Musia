@@ -159,3 +159,39 @@ Audio swaps:
 ## Notes
 
 This is the first successful same-score SoulX localization package for this song. It is better aligned than independent full-song generations because all three vocals follow one phrase/F0 plan. It is still not a final commercial master: Mandarin pronunciation and mix intelligibility should be improved with a stronger singing backend or a second SoulX correction pass.
+
+## Deferred Japanese Render
+
+Japanese should be tried again after installing a proper Japanese-capable singing backend. Do not force this through the current SoulX package, because the installed phone set has no Japanese phones and would either fail validation or require a new trained phone/tokenizer path.
+
+Target acceptance test:
+
+```text
+same 58-second phrase/F0 plan
+Japanese lyric track sings native Japanese or a validated romaji/phoneme representation
+dry Japanese vocal exports separately
+final Japanese mix uses the same instrumental stem as EN/ZH/YUE
+website adds a ja-vocal lyric set with ja/en/zh-Hans/yue-Hant tracks
+```
+
+Candidate install path:
+
+```text
+1. Try an OpenVPI-DiffSinger or NNSVS Japanese singing workflow first.
+2. Use pyopenjtalk/OpenJTalk-style Japanese G2P for phoneme validation.
+3. Fall back to OpenUtau only if it can export a dry vocal from the same MIDI/score plan.
+4. Do not publish a Japanese version until ASR/listening confirms the real sung line timing.
+```
+
+Relevant repo helpers already exist:
+
+```bash
+bash scripts/download_quality_backends.sh expanded-repos
+```
+
+Missing follow-up work:
+
+```text
+scripts/install_quality_envs.sh needs a validated japanese-svs target
+scripts/create_soulx_same_score_localizations.py should be generalized into a backend-neutral same-score package writer
+```
