@@ -1,0 +1,649 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "one-sky-three-lights-mixed",
+  "songId": "one-sky-three-lights-mixed",
+  "lyricSetId": "mixed-vocal",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 13.17,
+      "end": 18.93,
+      "text": "朝が来る前街の息を聞く",
+      "singableText": "朝が来る前街の息を聞く",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "朝",
+          "reading": "あさ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "来",
+          "reading": "く"
+        },
+        {
+          "text": "る"
+        },
+        {
+          "text": "前",
+          "reading": "まえ"
+        },
+        {
+          "text": "街",
+          "reading": "まち"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "息",
+          "reading": "いき"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "聞",
+          "reading": "き"
+        },
+        {
+          "text": "く"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 18.93,
+      "end": 23.99,
+      "text": "星の下で君と笑い空へ",
+      "singableText": "星の下で君と笑い空へ",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "reading": "ほし"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "下",
+          "reading": "した"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "笑",
+          "reading": "わら"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "へ"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 23.99,
+      "end": 26.93,
+      "text": "遠くの風が怖がらないでと言う",
+      "singableText": "遠くの風が怖がらないでと言う",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "遠",
+          "reading": "とお"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "風",
+          "reading": "かぜ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "怖",
+          "reading": "こわ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "言",
+          "reading": "い"
+        },
+        {
+          "text": "う"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 26.93,
+      "end": 29.47,
+      "text": "心の光は戻ってくる",
+      "singableText": "心の光は戻ってくる",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "心",
+          "reading": "こころ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "戻",
+          "reading": "もど"
+        },
+        {
+          "text": "っ"
+        },
+        {
+          "text": "て"
+        },
+        {
+          "text": "く"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 30.19,
+      "end": 32.69,
+      "text": "静かな海を越えて",
+      "singableText": "静かな海を越えて",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "静",
+          "reading": "しず"
+        },
+        {
+          "text": "か"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "海",
+          "reading": "うみ"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "越",
+          "reading": "こ"
+        },
+        {
+          "text": "え"
+        },
+        {
+          "text": "て"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 32.69,
+      "end": 34.93,
+      "text": "三つの声が帰る場所を見つける",
+      "singableText": "三つの声が帰る場所を見つける",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "三",
+          "reading": "みっ"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "声",
+          "reading": "こえ"
+        },
+        {
+          "text": "が"
+        },
+        {
+          "text": "帰",
+          "reading": "かえ"
+        },
+        {
+          "text": "る"
+        },
+        {
+          "text": "場",
+          "reading": "ば"
+        },
+        {
+          "text": "所",
+          "reading": "しょ"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "見",
+          "reading": "み"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "け"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 34.93,
+      "end": 36.81,
+      "text": "同じ空の下で歌う",
+      "singableText": "同じ空の下で歌う",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "同",
+          "reading": "おな"
+        },
+        {
+          "text": "じ"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "下",
+          "reading": "した"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "歌",
+          "reading": "うた"
+        },
+        {
+          "text": "う"
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 36.81,
+      "end": 39.89,
+      "text": "ひとつの空ひとつの空",
+      "singableText": "ひとつの空ひとつの空",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 39.89,
+      "end": 43.27,
+      "text": "光で夜を開こう",
+      "singableText": "光で夜を開こう",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "光",
+          "reading": "ひかり"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "夜",
+          "reading": "よる"
+        },
+        {
+          "text": "を"
+        },
+        {
+          "text": "開",
+          "reading": "ひら"
+        },
+        {
+          "text": "こ"
+        },
+        {
+          "text": "う"
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 43.27,
+      "end": 46.31,
+      "text": "僕らは昇る進んでゆく",
+      "singableText": "僕らは昇る進んでゆく",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "reading": "ぼく"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "昇",
+          "reading": "のぼ"
+        },
+        {
+          "text": "る"
+        },
+        {
+          "text": "進",
+          "reading": "すす"
+        },
+        {
+          "text": "ん"
+        },
+        {
+          "text": "で"
+        },
+        {
+          "text": "ゆ"
+        },
+        {
+          "text": "く"
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 46.31,
+      "end": 49.42,
+      "text": "君となら迷わない",
+      "singableText": "君となら迷わない",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "ら"
+        },
+        {
+          "text": "迷",
+          "reading": "まよ"
+        },
+        {
+          "text": "わ"
+        },
+        {
+          "text": "な"
+        },
+        {
+          "text": "い"
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 49.42,
+      "end": 51.24,
+      "text": "道は光っている",
+      "singableText": "道は光っている",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "道",
+          "reading": "みち"
+        },
+        {
+          "text": "は"
+        },
+        {
+          "text": "光",
+          "reading": "ひか"
+        },
+        {
+          "text": "っ"
+        },
+        {
+          "text": "て"
+        },
+        {
+          "text": "い"
+        },
+        {
+          "text": "る"
+        }
+      ]
+    },
+    {
+      "id": "line-013",
+      "start": 51.96,
+      "end": 54.48,
+      "text": "ひとつの空三つの光",
+      "singableText": "ひとつの空三つの光",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        },
+        {
+          "text": "三",
+          "reading": "みっ"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり"
+        }
+      ]
+    },
+    {
+      "id": "line-014",
+      "start": 54.48,
+      "end": 57.92,
+      "text": "ひとつの道ひとつの空",
+      "singableText": "ひとつの道ひとつの空",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "道",
+          "reading": "みち"
+        },
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "空",
+          "reading": "そら"
+        }
+      ]
+    },
+    {
+      "id": "line-015",
+      "start": 58.5,
+      "end": 60.94,
+      "text": "三つの光ひとつの夢",
+      "singableText": "三つの光ひとつの夢",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "三",
+          "reading": "みっ"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり"
+        },
+        {
+          "text": "ひ"
+        },
+        {
+          "text": "と"
+        },
+        {
+          "text": "つ"
+        },
+        {
+          "text": "の"
+        },
+        {
+          "text": "夢",
+          "reading": "ゆめ"
+        }
+      ]
+    }
+  ]
+}

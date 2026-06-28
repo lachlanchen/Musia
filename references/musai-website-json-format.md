@@ -152,6 +152,34 @@ The Fun player uses the currently playing asset language or `lyricSetId` to choo
 
 This allows one media item to present strict same-timeline localized songs or separate full-song generation renders with their own phrase timings.
 
+## Translation-Word Highlighting
+
+The player uses a simple line-first highlighting rule:
+
+```text
+active vocal asset -> active lyric set -> active timing track -> current line id
+```
+
+The active vocal language owns the clock. Every visible translation track with the same `line.id` may highlight rough corresponding tokens inside that same time range.
+
+This is intentionally not a word-perfect translation aligner. It works well when:
+
+- every track in the active `lyricSets[]` group has the same `line.id` sequence;
+- the active vocal track has reliable line start/end timing;
+- translation tracks have tokens, pinyin, or furigana so the player can distribute timing inside the current line;
+- mixed-language songs publish the actual sung or phonetic line as the active track, usually `mul`, then publish English/Chinese/Japanese translations beside it.
+
+For mixed-language songs, prefer this structure:
+
+```text
+lyrics/mixed-vocal/mul.json
+lyrics/mixed-vocal/en.json
+lyrics/mixed-vocal/zh-Hans.json
+lyrics/mixed-vocal/ja.json
+```
+
+`mul.json` should reflect what the audio actually sings. If the singing model performs Japanese as romaji or Mandarin as pinyin, store that phonetic sung line in `mul.json` and store native-script Japanese/Chinese in their translation tracks. Do not mark a native-script lyric as the sung source if the model did not actually sing it.
+
 ## Cover / Poster Rule
 
 Pure audio must have visual artwork. The default artwork aspect ratio is **16:9** so songs, MVs, short films, and YouTube embeds can share the same player frame. Square album-art assets may still be kept as secondary thumbnails, but the player hero and `share.image` should prefer a 16:9 poster.

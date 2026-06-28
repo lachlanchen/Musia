@@ -564,7 +564,7 @@ function renderCarousel(activeLine) {
     .map((index) => {
       const active = rawActiveIndex >= 0 && index === rawActiveIndex;
       return `
-        <div class="carousel-line ${active ? "active" : ""}">
+        <div class="carousel-line ${active ? "active" : ""}" data-line-id="${escapeHtml(lines[index].id)}">
           <span>${formatTime(lines[index].start)}</span>
           <div class="carousel-translations">
             ${tracks.map((track) => {
@@ -590,7 +590,7 @@ function renderFullLyrics(activeLine = null) {
     return;
   }
   $("full-lyrics").innerHTML = lines.map((line, index) => `
-    <article class="full-row ${line.id === activeLine?.id ? "active" : ""}">
+    <article class="full-row ${line.id === activeLine?.id ? "active" : ""}" data-line-id="${escapeHtml(line.id)}">
       <div class="line-index">${String(index + 1).padStart(2, "0")}<span>${formatTime(lineStartForDisplay(line))}</span></div>
       <div class="language-lines">
         ${state.tracks.map((track) => {
@@ -607,13 +607,13 @@ function renderFullLyrics(activeLine = null) {
   `).join("");
 }
 
-function updateTokenHighlights(time) {
-  const activeCode = activePlayableAsset()?.languageCode || "";
+function updateTokenHighlights(time, activeLine = activeLineAt(time)) {
+  const activeLineId = activeLine?.id || "";
   document.querySelectorAll("[data-token-start]").forEach((node) => {
     const start = Number(node.dataset.tokenStart);
     const end = Number(node.dataset.tokenEnd);
-    const trackCode = node.closest("[data-track-code]")?.dataset.trackCode || "";
-    node.classList.toggle("active", Boolean(activeCode && trackCode === activeCode && time >= start && time < end));
+    const lineId = node.closest("[data-line-id]")?.dataset.lineId || "";
+    node.classList.toggle("active", Boolean(activeLineId && lineId === activeLineId && time >= start && time < end));
   });
 }
 
@@ -640,7 +640,7 @@ function updateSync() {
   renderCarousel(activeLine);
   renderFullLyrics(activeLine);
   renderChords(activeChord);
-  updateTokenHighlights(time);
+  updateTokenHighlights(time, activeLine);
 }
 
 function initAudioGraph() {

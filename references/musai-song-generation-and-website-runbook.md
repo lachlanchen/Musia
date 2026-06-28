@@ -200,11 +200,14 @@ Each playable asset must point to its lyric set:
 Rules:
 
 - The active vocal language owns timing.
-- The active vocal language is the only language with current-word highlighting.
+- The active vocal language owns exact current-word highlighting.
+- Other selected translation tracks may rough-highlight corresponding tokens inside the same current `line.id`.
 - Other languages in that set are translations of the active vocal's actual sung lines.
 - If a vocal does not sing a planned line, do not show that planned line in that vocal set.
 - If a vocal repeats a line, show the repeated line if it is audible.
 - If ASR is garbled but the audio clearly matches the intended line, correct the text and keep the ASR-derived timing.
+- For mixed-language vocals, use one active sung/phonetic track such as `lyrics/mixed-vocal/mul.json`, then add `en`, `zh-Hans`, and `ja` translation tracks in the same lyric set.
+- If a local model fails to sing native CJK script reliably in a mixed render, use pinyin/romaji for the sung input and display native Chinese/Japanese in translation tracks with pinyin/furigana. Document the compromise instead of claiming native-script singing.
 
 ## Website Publishing Workflow
 

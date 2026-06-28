@@ -1,0 +1,666 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "one-sky-three-lights-mixed",
+  "songId": "one-sky-three-lights-mixed",
+  "lyricSetId": "mixed-vocal",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "line-001",
+      "start": 13.17,
+      "end": 18.93,
+      "text": "清晨未亮时我听见城市呼吸",
+      "singableText": "清晨未亮时我听见城市呼吸",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "清",
+          "pinyin": "qing1"
+        },
+        {
+          "text": "晨",
+          "pinyin": "chen2"
+        },
+        {
+          "text": "未",
+          "pinyin": "wei4"
+        },
+        {
+          "text": "亮",
+          "pinyin": "liang4"
+        },
+        {
+          "text": "时",
+          "pinyin": "shi2"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "听",
+          "pinyin": "ting1"
+        },
+        {
+          "text": "见",
+          "pinyin": "jian4"
+        },
+        {
+          "text": "城",
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "市",
+          "pinyin": "shi4"
+        },
+        {
+          "text": "呼",
+          "pinyin": "hu1"
+        },
+        {
+          "text": "吸",
+          "pinyin": "xi1"
+        }
+      ]
+    },
+    {
+      "id": "line-002",
+      "start": 18.93,
+      "end": 23.99,
+      "text": "星光之下我与你笑着奔向天空",
+      "singableText": "星光之下我与你笑着奔向天空",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "pinyin": "xing1"
+        },
+        {
+          "text": "光",
+          "pinyin": "guang1"
+        },
+        {
+          "text": "之",
+          "pinyin": "zhi1"
+        },
+        {
+          "text": "下",
+          "pinyin": "xia4"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "与",
+          "pinyin": "yu3"
+        },
+        {
+          "text": "你",
+          "pinyin": "ni3"
+        },
+        {
+          "text": "笑",
+          "pinyin": "xiao4"
+        },
+        {
+          "text": "着",
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "奔",
+          "pinyin": "ben1"
+        },
+        {
+          "text": "向",
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1"
+        }
+      ]
+    },
+    {
+      "id": "line-003",
+      "start": 23.99,
+      "end": 26.93,
+      "text": "远方的风说别怕",
+      "singableText": "远方的风说别怕",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "远",
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "方",
+          "pinyin": "fang1"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "风",
+          "pinyin": "feng1"
+        },
+        {
+          "text": "说",
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "别",
+          "pinyin": "bie2"
+        },
+        {
+          "text": "怕",
+          "pinyin": "pa4"
+        }
+      ]
+    },
+    {
+      "id": "line-004",
+      "start": 26.93,
+      "end": 29.47,
+      "text": "心里的光会回来",
+      "singableText": "心里的光会回来",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "心",
+          "pinyin": "xin1"
+        },
+        {
+          "text": "里",
+          "pinyin": "li3"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "光",
+          "pinyin": "guang1"
+        },
+        {
+          "text": "会",
+          "pinyin": "hui4"
+        },
+        {
+          "text": "回",
+          "pinyin": "hui2"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2"
+        }
+      ]
+    },
+    {
+      "id": "line-005",
+      "start": 30.19,
+      "end": 32.69,
+      "text": "越过安静的海",
+      "singableText": "越过安静的海",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "越",
+          "pinyin": "yue4"
+        },
+        {
+          "text": "过",
+          "pinyin": "guo4"
+        },
+        {
+          "text": "安",
+          "pinyin": "an1"
+        },
+        {
+          "text": "静",
+          "pinyin": "jing4"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "海",
+          "pinyin": "hai3"
+        }
+      ]
+    },
+    {
+      "id": "line-006",
+      "start": 32.69,
+      "end": 34.93,
+      "text": "三种声音找到归处",
+      "singableText": "三种声音找到归处",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "三",
+          "pinyin": "san1"
+        },
+        {
+          "text": "种",
+          "pinyin": "zhong3"
+        },
+        {
+          "text": "声",
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "音",
+          "pinyin": "yin1"
+        },
+        {
+          "text": "找",
+          "pinyin": "zhao3"
+        },
+        {
+          "text": "到",
+          "pinyin": "dao4"
+        },
+        {
+          "text": "归",
+          "pinyin": "gui1"
+        },
+        {
+          "text": "处",
+          "pinyin": "chu4"
+        }
+      ]
+    },
+    {
+      "id": "line-007",
+      "start": 34.93,
+      "end": 36.81,
+      "text": "我们在同一片天空下歌唱",
+      "singableText": "我们在同一片天空下歌唱",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "们",
+          "pinyin": "men5"
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "同",
+          "pinyin": "tong2"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "片",
+          "pinyin": "pian4"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1"
+        },
+        {
+          "text": "下",
+          "pinyin": "xia4"
+        },
+        {
+          "text": "歌",
+          "pinyin": "ge1"
+        },
+        {
+          "text": "唱",
+          "pinyin": "chang4"
+        }
+      ]
+    },
+    {
+      "id": "line-008",
+      "start": 36.81,
+      "end": 39.89,
+      "text": "同一片天空同一片天空",
+      "singableText": "同一片天空同一片天空",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "同",
+          "pinyin": "tong2"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "片",
+          "pinyin": "pian4"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1"
+        },
+        {
+          "text": "同",
+          "pinyin": "tong2"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "片",
+          "pinyin": "pian4"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1"
+        }
+      ]
+    },
+    {
+      "id": "line-009",
+      "start": 39.89,
+      "end": 43.27,
+      "text": "让光把黑夜打开",
+      "singableText": "让光把黑夜打开",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "让",
+          "pinyin": "rang4"
+        },
+        {
+          "text": "光",
+          "pinyin": "guang1"
+        },
+        {
+          "text": "把",
+          "pinyin": "ba3"
+        },
+        {
+          "text": "黑",
+          "pinyin": "hei1"
+        },
+        {
+          "text": "夜",
+          "pinyin": "ye4"
+        },
+        {
+          "text": "打",
+          "pinyin": "da3"
+        },
+        {
+          "text": "开",
+          "pinyin": "kai1"
+        }
+      ]
+    },
+    {
+      "id": "line-010",
+      "start": 43.27,
+      "end": 46.31,
+      "text": "我们升起我们前行",
+      "singableText": "我们升起我们前行",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "们",
+          "pinyin": "men5"
+        },
+        {
+          "text": "升",
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "起",
+          "pinyin": "qi3"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "们",
+          "pinyin": "men5"
+        },
+        {
+          "text": "前",
+          "pinyin": "qian2"
+        },
+        {
+          "text": "行",
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "line-011",
+      "start": 46.31,
+      "end": 49.42,
+      "text": "有你在我不再迷路",
+      "singableText": "有你在我不再迷路",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "有",
+          "pinyin": "you3"
+        },
+        {
+          "text": "你",
+          "pinyin": "ni3"
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4"
+        },
+        {
+          "text": "再",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "迷",
+          "pinyin": "mi2"
+        },
+        {
+          "text": "路",
+          "pinyin": "lu4"
+        }
+      ]
+    },
+    {
+      "id": "line-012",
+      "start": 49.42,
+      "end": 51.24,
+      "text": "道路正在发光",
+      "singableText": "道路正在发光",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "道",
+          "pinyin": "dao4"
+        },
+        {
+          "text": "路",
+          "pinyin": "lu4"
+        },
+        {
+          "text": "正",
+          "pinyin": "zheng4"
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "发",
+          "pinyin": "fa1"
+        },
+        {
+          "text": "光",
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "line-013",
+      "start": 51.96,
+      "end": 54.48,
+      "text": "一片天空三道光",
+      "singableText": "一片天空三道光",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "片",
+          "pinyin": "pian4"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1"
+        },
+        {
+          "text": "三",
+          "pinyin": "san1"
+        },
+        {
+          "text": "道",
+          "pinyin": "dao4"
+        },
+        {
+          "text": "光",
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "line-014",
+      "start": 54.48,
+      "end": 57.92,
+      "text": "一条路一片天空",
+      "singableText": "一条路一片天空",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "条",
+          "pinyin": "tiao2"
+        },
+        {
+          "text": "路",
+          "pinyin": "lu4"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "片",
+          "pinyin": "pian4"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "pinyin": "kong1"
+        }
+      ]
+    },
+    {
+      "id": "line-015",
+      "start": 58.5,
+      "end": 60.94,
+      "text": "三道光一个梦醒来",
+      "singableText": "三道光一个梦醒来",
+      "role": "localized-lyric",
+      "tokens": [
+        {
+          "text": "三",
+          "pinyin": "san1"
+        },
+        {
+          "text": "道",
+          "pinyin": "dao4"
+        },
+        {
+          "text": "光",
+          "pinyin": "guang1"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "个",
+          "pinyin": "ge4"
+        },
+        {
+          "text": "梦",
+          "pinyin": "meng4"
+        },
+        {
+          "text": "醒",
+          "pinyin": "xing3"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2"
+        }
+      ]
+    }
+  ]
+}

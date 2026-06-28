@@ -6,8 +6,32 @@
     "url": "https://fun.lazying.art",
     "protocol": "fun.lazying.media.v1"
   },
-  "defaultMedia": "mars-red-sky-trilingual",
+  "defaultMedia": "one-sky-three-lights-mixed",
   "items": [
+    {
+      "id": "one-sky-three-lights-mixed",
+      "kind": "song",
+      "title": "One Sky, Three Lights",
+      "artist": "Musai ACE-Step",
+      "summary": "A 64-second mixed English, Mandarin-pinyin, and Japanese-romaji song with trilingual native-script lyrics, pinyin, furigana, chord timing, and translation-word highlighting.",
+      "manifest": "data/songs/one-sky-three-lights-mixed/manifest.json",
+      "cover": "assets/covers/one-sky-three-lights-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "mixed-language",
+        "trilingual",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "translation-highlight"
+      ]
+    },
     {
       "id": "mars-red-sky-trilingual",
       "kind": "song",

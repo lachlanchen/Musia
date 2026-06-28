@@ -1,0 +1,505 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "one-sky-three-lights-mixed",
+  "kind": "song",
+  "title": "One Sky, Three Lights",
+  "localizedTitles": {
+    "mul": "One Sky, Three Lights",
+    "en": "One Sky, Three Lights",
+    "zh": "一片天空，三道光",
+    "zh-Hans": "一片天空，三道光",
+    "ja": "ひとつの空、三つの光"
+  },
+  "artist": "Musai ACE-Step",
+  "subtitle": "A mixed English, Mandarin-pinyin, and Japanese-romaji song with trilingual lyric display",
+  "description": "An original 64-second mixed-language song generated locally with ACE-Step. The sung track uses English plus phonetic Mandarin pinyin and Japanese romaji for reliable local generation; the Fun player displays native Chinese/Japanese lyrics with pinyin and furigana plus rough translation-word highlighting.",
+  "caption": "Three voices becoming one shared sky",
+  "duration": 64.032,
+  "canonicalUrl": "https://fun.lazying.art/#one-sky-three-lights-mixed",
+  "share": {
+    "title": "One Sky, Three Lights - Fun Lazying Art",
+    "description": "A mixed-language Musai song with synchronized trilingual lyrics and translation highlighting.",
+    "url": "https://fun.lazying.art/#one-sky-three-lights-mixed",
+    "image": "assets/covers/one-sky-three-lights-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "One Sky, Three Lights cover",
+      "role": "cover",
+      "src": "assets/covers/one-sky-three-lights-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/one-sky-three-lights-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "one-sky-mixed",
+      "label": "Mixed vocal",
+      "roleLabel": "Vocal",
+      "role": "mixed-language-render",
+      "languageCode": "mul",
+      "languageLabel": "Mixed",
+      "lyricSetId": "mixed-vocal",
+      "sourceModel": "acestep-v15-xl-turbo",
+      "qualityGate": "review-pass",
+      "src": "assets/audio/one-sky-three-lights-mixed.mp3",
+      "mime": "audio/mpeg",
+      "musical": {
+        "key": "D major",
+        "bpm": 86.13,
+        "timeSignature": "4/4",
+        "chords": [
+          {
+            "start": 0.0,
+            "end": 2.345,
+            "name": "D",
+            "degree": ""
+          },
+          {
+            "start": 2.345,
+            "end": 3.042,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 3.042,
+            "end": 4.412,
+            "name": "D",
+            "degree": ""
+          },
+          {
+            "start": 4.412,
+            "end": 5.805,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 5.805,
+            "end": 7.175,
+            "name": "F#m",
+            "degree": ""
+          },
+          {
+            "start": 7.175,
+            "end": 7.848,
+            "name": "Bm",
+            "degree": ""
+          },
+          {
+            "start": 7.848,
+            "end": 8.545,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 8.545,
+            "end": 10.612,
+            "name": "Em",
+            "degree": ""
+          },
+          {
+            "start": 10.612,
+            "end": 14.071,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 14.071,
+            "end": 15.418,
+            "name": "D",
+            "degree": ""
+          },
+          {
+            "start": 15.418,
+            "end": 16.091,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 16.091,
+            "end": 16.788,
+            "name": "D",
+            "degree": ""
+          },
+          {
+            "start": 16.788,
+            "end": 19.528,
+            "name": "F#m",
+            "degree": ""
+          },
+          {
+            "start": 19.528,
+            "end": 22.291,
+            "name": "G",
+            "degree": ""
+          },
+          {
+            "start": 22.291,
+            "end": 23.661,
+            "name": "Em",
+            "degree": ""
+          },
+          {
+            "start": 23.661,
+            "end": 25.031,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 25.031,
+            "end": 26.448,
+            "name": "D",
+            "degree": ""
+          },
+          {
+            "start": 26.448,
+            "end": 27.794,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 27.794,
+            "end": 29.211,
+            "name": "F#m",
+            "degree": ""
+          },
+          {
+            "start": 29.211,
+            "end": 30.581,
+            "name": "Bm",
+            "degree": ""
+          },
+          {
+            "start": 30.581,
+            "end": 33.367,
+            "name": "Em",
+            "degree": ""
+          },
+          {
+            "start": 33.367,
+            "end": 35.434,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 35.434,
+            "end": 38.87,
+            "name": "D",
+            "degree": ""
+          },
+          {
+            "start": 38.87,
+            "end": 41.61,
+            "name": "F#m",
+            "degree": ""
+          },
+          {
+            "start": 41.61,
+            "end": 42.284,
+            "name": "B",
+            "degree": ""
+          },
+          {
+            "start": 42.284,
+            "end": 44.373,
+            "name": "Bm",
+            "degree": ""
+          },
+          {
+            "start": 44.373,
+            "end": 47.113,
+            "name": "F#m",
+            "degree": ""
+          },
+          {
+            "start": 47.113,
+            "end": 49.853,
+            "name": "G",
+            "degree": ""
+          },
+          {
+            "start": 49.853,
+            "end": 50.527,
+            "name": "Am",
+            "degree": ""
+          },
+          {
+            "start": 50.527,
+            "end": 51.897,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 51.897,
+            "end": 52.593,
+            "name": "Am",
+            "degree": ""
+          },
+          {
+            "start": 52.593,
+            "end": 53.963,
+            "name": "Em",
+            "degree": ""
+          },
+          {
+            "start": 53.963,
+            "end": 54.637,
+            "name": "Am",
+            "degree": ""
+          },
+          {
+            "start": 54.637,
+            "end": 55.333,
+            "name": "A",
+            "degree": ""
+          },
+          {
+            "start": 55.333,
+            "end": 56.007,
+            "name": "Bm",
+            "degree": ""
+          },
+          {
+            "start": 56.007,
+            "end": 56.703,
+            "name": "C#m",
+            "degree": ""
+          },
+          {
+            "start": 56.703,
+            "end": 57.377,
+            "name": "Bm",
+            "degree": ""
+          },
+          {
+            "start": 57.377,
+            "end": 58.073,
+            "name": "Am",
+            "degree": ""
+          },
+          {
+            "start": 58.073,
+            "end": 59.466,
+            "name": "G",
+            "degree": ""
+          },
+          {
+            "start": 59.466,
+            "end": 64.0,
+            "name": "A",
+            "degree": ""
+          }
+        ]
+      }
+    },
+    "stems": {
+      "vocals": {
+        "label": "Local vocals stem",
+        "localPath": "data/runs/one-sky-three-lights-ace-phonetic-analysis/stems/vocals.wav"
+      },
+      "drums": {
+        "label": "Local drums stem",
+        "localPath": "data/runs/one-sky-three-lights-ace-phonetic-analysis/stems/drums.wav"
+      },
+      "bass": {
+        "label": "Local bass stem",
+        "localPath": "data/runs/one-sky-three-lights-ace-phonetic-analysis/stems/bass.wav"
+      },
+      "other": {
+        "label": "Local other stem",
+        "localPath": "data/runs/one-sky-three-lights-ace-phonetic-analysis/stems/other.wav"
+      },
+      "instrumental": {
+        "label": "Local instrumental stem",
+        "localPath": "data/runs/one-sky-three-lights-ace-phonetic-analysis/stems/instrumental.wav"
+      }
+    }
+  },
+  "lyricSets": [
+    {
+      "id": "mixed-vocal",
+      "label": "Mixed vocal lyric set",
+      "languageCode": "mul",
+      "tracks": [
+        {
+          "code": "mul",
+          "label": "Mixed",
+          "nativeLabel": "Mixed",
+          "script": "Latn",
+          "features": [
+            "lyrics",
+            "mixedLanguage",
+            "wordTiming",
+            "romaji",
+            "pinyin"
+          ],
+          "path": "lyrics/mixed-vocal/mul.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation",
+            "roughWordTiming"
+          ],
+          "path": "lyrics/mixed-vocal/en.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "translation",
+            "pinyin",
+            "roughWordTiming"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "translation",
+            "furigana",
+            "roughWordTiming"
+          ],
+          "path": "lyrics/mixed-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "line-001",
+        "start": 13.17,
+        "end": 18.93,
+        "sourceText": "In the hush before morning, I hear the city breathe"
+      },
+      {
+        "id": "line-002",
+        "start": 18.93,
+        "end": 23.99,
+        "sourceText": "Hoshi no shita de, kimi to warau, sora e"
+      },
+      {
+        "id": "line-003",
+        "start": 23.99,
+        "end": 26.93,
+        "sourceText": "Yuan fang de feng shuo bie pa"
+      },
+      {
+        "id": "line-004",
+        "start": 26.93,
+        "end": 29.47,
+        "sourceText": "Xin li de guang hui lai"
+      },
+      {
+        "id": "line-005",
+        "start": 30.19,
+        "end": 32.69,
+        "sourceText": "Across the quiet sea"
+      },
+      {
+        "id": "line-006",
+        "start": 32.69,
+        "end": 34.93,
+        "sourceText": "Three voices find a home"
+      },
+      {
+        "id": "line-007",
+        "start": 34.93,
+        "end": 36.81,
+        "sourceText": "We sing under one sky"
+      },
+      {
+        "id": "line-008",
+        "start": 36.81,
+        "end": 39.89,
+        "sourceText": "One sky, one sky"
+      },
+      {
+        "id": "line-009",
+        "start": 39.89,
+        "end": 43.27,
+        "sourceText": "Rang guang ba hei ye da kai"
+      },
+      {
+        "id": "line-010",
+        "start": 43.27,
+        "end": 46.31,
+        "sourceText": "We rise, we rise"
+      },
+      {
+        "id": "line-011",
+        "start": 46.31,
+        "end": 49.42,
+        "sourceText": "Kimi to nara mayowanai"
+      },
+      {
+        "id": "line-012",
+        "start": 49.42,
+        "end": 51.24,
+        "sourceText": "The road is shining"
+      },
+      {
+        "id": "line-013",
+        "start": 51.96,
+        "end": 54.48,
+        "sourceText": "One sky, three lights"
+      },
+      {
+        "id": "line-014",
+        "start": 54.48,
+        "end": 57.92,
+        "sourceText": "One road, one sky"
+      },
+      {
+        "id": "line-015",
+        "start": 58.5,
+        "end": 60.94,
+        "sourceText": "Three lights, one dream alive"
+      }
+    ]
+  },
+  "provenance": {
+    "generatedAt": "2026-06-28",
+    "audioModel": "ACE-Step 1.5 XL turbo",
+    "audioConfig": "data/creative_projects/one-sky-three-lights-mixed-20260628/ace_mixed_phonetic.toml",
+    "lyricsSource": "data/creative_projects/one-sky-three-lights-mixed-20260628/lyrics/mul_phonetic_songgen.txt",
+    "analysisRun": "data/runs/one-sky-three-lights-ace-phonetic-analysis",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_09b1d3ca27fa59c0016a40ee5115448191a3cf4d6354f5699f.png",
+    "coverPrompt": "16:9 premium album cover for One Sky, Three Lights; twilight city and calm sea; three elegant streams of light crossing into one sky; no text."
+  },
+  "artifacts": [
+    {
+      "id": "analysis-report",
+      "label": "Local analysis report",
+      "href": "#local-analysis-report",
+      "localPath": "data/runs/one-sky-three-lights-ace-phonetic-analysis/REPORT.md"
+    },
+    {
+      "id": "quality-report",
+      "label": "Quality check",
+      "href": "#local-quality-report",
+      "localPath": "data/creative_projects/one-sky-three-lights-mixed-20260628/reviews/ace_phonetic/QA.md"
+    }
+  ]
+}
