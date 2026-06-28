@@ -10,6 +10,12 @@ fun.lazying.media.v1
 
 It is designed so Musai, LALACHAN, AgInTiFlow, image-generation tools, and future video tools can all publish media into the same layout without rewriting the player.
 
+Operational website, deployment, cover/poster, and publishing details are documented in:
+
+```text
+references/fun-lazying-art-website.md
+```
+
 ## Layout
 
 ```text
