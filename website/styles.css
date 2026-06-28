@@ -610,6 +610,12 @@ rt {
   scrollbar-width: thin;
 }
 
+.chord-row::before,
+.chord-row::after {
+  content: "";
+  flex: 0 0 50%;
+}
+
 .chord-pill {
   flex: 0 0 auto;
   display: inline-flex;

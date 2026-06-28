@@ -196,9 +196,15 @@ function lineForTrack(track, lineId) {
 
 function activeLineAt(time) {
   const lines = timingLines();
-  return lines.find((line) => time >= line.start && time < line.end)
-    || [...lines].reverse().find((line) => time >= line.end)
-    || null;
+  const active = lines.find((line) => time >= line.start && time < line.end);
+  if (active) return active;
+
+  const previous = [...lines].reverse().find((line) => time >= line.end);
+  const next = lines.find((line) => time < line.start);
+  const hangoverSeconds = 1.25;
+  if (previous && time - previous.end <= hangoverSeconds) return previous;
+  if (previous && next && next.start - previous.end <= hangoverSeconds) return previous;
+  return null;
 }
 
 function activeChordAt(time) {
@@ -439,8 +445,10 @@ function renderLanguageButtons() {
 
 function renderChords(activeChord = null) {
   const list = chords();
-  $("chord-row").hidden = list.length === 0;
-  $("chord-row").innerHTML = list.map((chord, index) => `
+  const row = $("chord-row");
+  const activeIndex = list.indexOf(activeChord);
+  row.hidden = list.length === 0;
+  row.innerHTML = list.map((chord, index) => `
     <button class="chord-pill ${chord === activeChord ? "active" : ""}" type="button" data-chord-index="${index}">
       <strong>${escapeHtml(chord.name)}</strong><span>${escapeHtml(chord.degree || "")}</span>
     </button>
@@ -453,6 +461,15 @@ function renderChords(activeChord = null) {
       state.mediaElement.play();
     });
   });
+  if (activeIndex >= 0 && row.dataset.activeChordIndex !== String(activeIndex)) {
+    row.dataset.activeChordIndex = String(activeIndex);
+    requestAnimationFrame(() => {
+      const activeButton = row.querySelector(".chord-pill.active");
+      if (!activeButton) return;
+      const centeredLeft = activeButton.offsetLeft - (row.clientWidth / 2) + (activeButton.clientWidth / 2);
+      row.scrollTo({ left: Math.max(0, centeredLeft), behavior: "smooth" });
+    });
+  }
 }
 
 function renderCarousel(activeLine) {
