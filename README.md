@@ -104,7 +104,7 @@ For the full setup/test guide, see [`SETUP_AND_TEST.md`](SETUP_AND_TEST.md).
 
 The public media site lives in [`website/`](website/) and is intended for songs, localized songs, MVs, short films, covers, synced lyrics, subtitles, chords, stems, and shareable media pages.
 
-The default catalog item is `Small Under the Red Sky`, a Mars desert full-song demo with separate English, Mandarin, and Japanese renders. The catalog also includes `Rain Day Full Song`; both demos use per-vocal trilingual lyric sets when the generated renders do not sing identical lines.
+The default catalog item is `One Sky, Three Lights`, a mixed English, Mandarin-pinyin, and Japanese-romaji song with trilingual native-script lyrics, pinyin, furigana, chord timing, and translation-word highlighting. The catalog also includes `Small Under the Red Sky` and `Rain Day Full Song`; independent full-song renders use per-vocal trilingual lyric sets when the generated versions do not sing identical lines.
 
 ```bash
 npm run website:validate
