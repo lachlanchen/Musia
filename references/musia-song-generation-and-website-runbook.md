@@ -19,6 +19,32 @@ Prompt lyrics are an intention. A generated vocal is evidence. If the vocal does
 | Reference recording | Run Musia analysis, then write a new-song or localization brief | stems, chords, beats, lyric reference, new song candidate |
 | Strict same-song localization | Analyze source, adapt lyrics phrase by phrase, use singing synthesis or pro vocal workflow | same arrangement, new-language vocal |
 
+## Master-Language Alignment
+
+For trilingual original songs, do not start with three unrelated full-song generations if the goal is aligned melody.
+
+Use this route instead:
+
+```text
+master language lyric
+-> one master full-song render
+-> vocal separation and ASR timing
+-> beat/chord/melody/F0 extraction
+-> phrase map
+-> English/Japanese/Chinese lyric adaptation against that phrase map
+-> melody-conditioned vocal synthesis for each target language
+-> mix each target vocal back into the same arrangement
+```
+
+When the user asks for English, Japanese, and Chinese versions with the same melody, choose one master language first. Japanese is a good master when the desired sound is J-pop/anime/fantasy; English can be better for western pop; Mandarin can be better when tonal phrasing is the creative priority.
+
+Important distinction:
+
+- ACE-Step/YuE-style full-song models create the full arrangement and vocal together. They usually do not provide a clean independent melody or MIDI track as the primary output.
+- Musia derives the melody guide after generation/source upload by separating the vocal and extracting F0, approximate note timing, beats, and chords.
+- If the user already has jianpu, MIDI, sheet music, or a sung guide recording, that supplied melody is stronger than any extracted melody.
+- For strict target-language vocals, use the extracted/supplied melody with SoulX-Singer, YingMusic-Singer-Plus, or a professional vocal workflow. Three independent text-to-music renders can be beautiful, but they are reinterpretations, not guaranteed same-melody localizations.
+
 ## Production Standard
 
 A song is not accepted because a model produced a WAV. A usable song needs:
