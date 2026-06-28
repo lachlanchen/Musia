@@ -86,6 +86,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", default="", help="Output MP4 path.")
     parser.add_argument("--width", type=int, default=1920, help="Viewport width.")
     parser.add_argument("--height", type=int, default=1080, help="Viewport height.")
+    parser.add_argument(
+        "--device-scale-factor",
+        type=float,
+        default=1.0,
+        help="Render scale for high-DPI captures. Use 2 for a 2160x3840 video from a 1080x1920 layout.",
+    )
     parser.add_argument("--fps", type=int, default=24, help="Capture frames per second.")
     parser.add_argument("--crf", type=int, default=14, help="H.264 CRF quality. Lower is higher quality; default 14.")
     parser.add_argument("--preset", default="slow", help="H.264 preset. Default slow for cleaner text.")
@@ -104,6 +110,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if args.device_scale_factor <= 0:
+        fail("--device-scale-factor must be greater than 0.")
     if not WEBSITE.exists():
         fail(f"Missing website directory: {WEBSITE}")
     if shutil.which("ffmpeg") is None:
@@ -162,7 +170,13 @@ def main() -> None:
         frame_dir = Path(tmp) / "frames"
         frame_dir.mkdir()
         mode = "full page" if args.full_page else "viewport"
-        print(f"Capturing {frame_count} {mode} frames at {args.width}x{args.height}, {args.fps} fps", flush=True)
+        output_width = int(round(args.width * args.device_scale_factor))
+        output_height = int(round(args.height * args.device_scale_factor))
+        print(
+            f"Capturing {frame_count} {mode} frames at {args.width}x{args.height} CSS px "
+            f"({output_width}x{output_height} device px), {args.fps} fps",
+            flush=True,
+        )
         print(f"URL: {url}", flush=True)
         print(f"Audio: {audio_path}", flush=True)
         print(f"Start: {start:.3f}s  Duration: {duration:.3f}s", flush=True)
@@ -179,7 +193,7 @@ def main() -> None:
             )
             page = browser.new_page(
                 viewport={"width": args.width, "height": args.height},
-                device_scale_factor=1,
+                device_scale_factor=args.device_scale_factor,
             )
             page.goto(url, wait_until="networkidle")
             page.wait_for_selector("#audio", state="attached", timeout=15000)
@@ -194,7 +208,7 @@ def main() -> None:
                 timestamp = start + index / args.fps
                 page.evaluate("(time) => window.funPlayerSetTime(time)", timestamp)
                 page.wait_for_timeout(10)
-                page.screenshot(path=str(frame_dir / f"{index:06d}.png"), full_page=args.full_page)
+                page.screenshot(path=str(frame_dir / f"{index:06d}.png"), full_page=args.full_page, scale="device")
                 if index and index % max(args.fps * 5, 1) == 0:
                     print(f"  captured {index}/{frame_count}", flush=True)
             browser.close()

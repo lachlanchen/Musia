@@ -170,6 +170,21 @@ The recorder captures deterministic player frames with Playwright and muxes them
 data/video_captures/<media-id>-skip-intro.mp4
 ```
 
+For a sharper vertical upload, render the same 1080x1920 CSS layout at a higher device scale:
+
+```bash
+musia fun-record \
+  --media-id one-sky-three-lights-mixed \
+  --portrait \
+  --width 1080 \
+  --height 1920 \
+  --device-scale-factor 2 \
+  --crf 12 \
+  --audio-bitrate 320k
+```
+
+Expected output resolution is `2160x3840`. This keeps the player and lyric panel composition the same while making text/ruby/chord chips noticeably sharper on phones.
+
 LALACHAN and YouTube publishing guide:
 
 ```text

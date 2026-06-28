@@ -106,3 +106,22 @@ adaptation_zh-Hans_v3.txt
 ## Quality Note
 
 This is a generated song candidate, not a finished commercial master. It is useful for listening, melody reference, stem analysis, and future English/Chinese same-melody vocal synthesis. The current local full-song model still does not guarantee perfect lyric following in Japanese, so final publication should use the ASR/timing evidence or a stronger melody-conditioned vocal backend.
+
+## User Acceptance And Production Lesson
+
+After later listening, the ACE-reviewed **Take Care of Yourself** render was judged musically good: the lyric feeling, song melody, and overall song shape are worth preserving as a creative reference. Treat this as an important Musia lesson:
+
+- high-quality feeling, melody, and phrasing can matter more than strict same-score control;
+- do not over-optimize toward fewer words or more words;
+- use **留白** when the song wants breath, held vowels, rests, or emotional space;
+- still allow fuller lines when the melody naturally carries them;
+- revise lyric density by musical fit, not by a rigid word-count rule;
+- for Japanese/Chinese/English, check rhythm and rhyme/押韵, but keep the final decision musical.
+
+Practical rule for future generations:
+
+```text
+meaning + emotion + melody fit + breathing space > literal completeness
+```
+
+If a generated song already has a strong melody and emotional arc, document it, preserve it as a master/reference, and only attempt same-score localization when that route does not damage the vocal quality.

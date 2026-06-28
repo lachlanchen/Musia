@@ -218,6 +218,19 @@ Use the local recorder to produce MP4 files with the website video and the origi
 musia fun-record --media-id one-sky-three-lights-mixed --skip-intro
 ```
 
+High-DPI portrait recording:
+
+```bash
+musia fun-record \
+  --media-id one-sky-three-lights-mixed \
+  --portrait \
+  --width 1080 \
+  --height 1920 \
+  --device-scale-factor 2
+```
+
+This preserves the 1080x1920 portrait layout in CSS pixels and outputs roughly `2160x3840` physical pixels. Prefer this for mobile uploads when text looks blurry.
+
 The generated MP4 goes to:
 
 ```text

@@ -72,6 +72,17 @@ If the song is meant to be beautiful and moving, run at least one correction pas
 
 Use short image-heavy lines. Avoid dense clauses and abstract overload.
 
+Do not turn "short lines" into a rigid rule. The goal is not minimum words.
+The goal is a natural phrase density for the melody:
+
+```text
+some lines can breathe
+some lines can hold one strong image
+some lines can be fuller when the melody has room
+```
+
+Use **留白** deliberately: rests, held vowels, repeated hooks, and silent space can make the song more emotional. But do not delete useful words just to satisfy a constraint checker. Lyric density should be chosen by listening, rhythm, rhyme/押韵, stress or mora flow, and the emotional arc.
+
 Good generation lyrics:
 
 ```text
@@ -300,6 +311,21 @@ musia fun-record --media-id <media-id> --skip-intro
 ```
 
 This captures the Fun player in `capture=1` mode and replaces browser audio with the source media file directly. Use `--skip-intro` for a trimmed video that begins at the first timed vocal line.
+
+For sharp mobile/social exports, keep the layout at the target CSS viewport and raise the device pixel scale:
+
+```bash
+musia fun-record \
+  --media-id one-sky-three-lights-mixed \
+  --portrait \
+  --width 1080 \
+  --height 1920 \
+  --device-scale-factor 2 \
+  --crf 12 \
+  --audio-bitrate 320k
+```
+
+This renders the same portrait layout at `2160x3840` device pixels. It is better than enlarging the viewport, because enlarging the viewport changes the layout instead of improving text sharpness.
 
 Publish:
 
