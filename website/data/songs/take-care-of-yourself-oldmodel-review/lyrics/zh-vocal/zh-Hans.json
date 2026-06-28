@@ -1,0 +1,903 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "take-care-of-yourself-oldmodel-review",
+  "lineCoverage": "planned-rough",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans"
+  },
+  "notes": "Planned lyrics with rough timing for ACE-Step review candidates; ASR did not confirm final exact words.",
+  "lines": [
+    {
+      "id": "l01",
+      "start": 2.0,
+      "end": 7.5,
+      "text": "闪光森林的尽头",
+      "singableText": "闪光森林的尽头",
+      "tokens": [
+        {
+          "text": "闪",
+          "start": 2.0,
+          "end": 2.786,
+          "pinyin": "shan3"
+        },
+        {
+          "text": "光",
+          "start": 2.786,
+          "end": 3.571,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "森",
+          "start": 3.571,
+          "end": 4.357,
+          "pinyin": "sen1"
+        },
+        {
+          "text": "林",
+          "start": 4.357,
+          "end": 5.143,
+          "pinyin": "lin2"
+        },
+        {
+          "text": "的",
+          "start": 5.143,
+          "end": 5.929,
+          "pinyin": "de"
+        },
+        {
+          "text": "尽",
+          "start": 5.929,
+          "end": 6.714,
+          "pinyin": "jin4"
+        },
+        {
+          "text": "头",
+          "start": 6.714,
+          "end": 7.5,
+          "pinyin": "tou2"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 7.5,
+      "end": 12.0,
+      "text": "清晨睁开眼睛",
+      "singableText": "清晨睁开眼睛",
+      "tokens": [
+        {
+          "text": "清",
+          "start": 7.5,
+          "end": 8.25,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "晨",
+          "start": 8.25,
+          "end": 9.0,
+          "pinyin": "chen2"
+        },
+        {
+          "text": "睁",
+          "start": 9.0,
+          "end": 9.75,
+          "pinyin": "zheng1"
+        },
+        {
+          "text": "开",
+          "start": 9.75,
+          "end": 10.5,
+          "pinyin": "kai1"
+        },
+        {
+          "text": "眼",
+          "start": 10.5,
+          "end": 11.25,
+          "pinyin": "yan3"
+        },
+        {
+          "text": "睛",
+          "start": 11.25,
+          "end": 12.0,
+          "pinyin": "jing1"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 14.0,
+      "end": 19.5,
+      "text": "破碎天空 彩虹升起",
+      "singableText": "破碎天空 彩虹升起",
+      "tokens": [
+        {
+          "text": "破",
+          "start": 14.0,
+          "end": 14.688,
+          "pinyin": "po4"
+        },
+        {
+          "text": "碎",
+          "start": 14.688,
+          "end": 15.375,
+          "pinyin": "sui4"
+        },
+        {
+          "text": "天",
+          "start": 15.375,
+          "end": 16.062,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "start": 16.062,
+          "end": 16.75,
+          "pinyin": "kong1"
+        },
+        {
+          "text": "彩",
+          "start": 16.75,
+          "end": 17.438,
+          "pinyin": "cai3"
+        },
+        {
+          "text": "虹",
+          "start": 17.438,
+          "end": 18.125,
+          "pinyin": "hong2"
+        },
+        {
+          "text": "升",
+          "start": 18.125,
+          "end": 18.812,
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "起",
+          "start": 18.812,
+          "end": 19.5,
+          "pinyin": "qi3"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 19.5,
+      "end": 24.5,
+      "text": "小小的心 仍在颤抖",
+      "singableText": "小小的心 仍在颤抖",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 19.5,
+          "end": 20.125,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 20.125,
+          "end": 20.75,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "的",
+          "start": 20.75,
+          "end": 21.375,
+          "pinyin": "de"
+        },
+        {
+          "text": "心",
+          "start": 21.375,
+          "end": 22.0,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "仍",
+          "start": 22.0,
+          "end": 22.625,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "在",
+          "start": 22.625,
+          "end": 23.25,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "颤",
+          "start": 23.25,
+          "end": 23.875,
+          "pinyin": "chan4"
+        },
+        {
+          "text": "抖",
+          "start": 23.875,
+          "end": 24.5,
+          "pinyin": "dou3"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 25.5,
+      "end": 31.0,
+      "text": "迷失夜里 也别放手",
+      "singableText": "迷失夜里 也别放手",
+      "tokens": [
+        {
+          "text": "迷",
+          "start": 25.5,
+          "end": 26.188,
+          "pinyin": "mi2"
+        },
+        {
+          "text": "失",
+          "start": 26.188,
+          "end": 26.875,
+          "pinyin": "shi1"
+        },
+        {
+          "text": "夜",
+          "start": 26.875,
+          "end": 27.562,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "里",
+          "start": 27.562,
+          "end": 28.25,
+          "pinyin": "li3"
+        },
+        {
+          "text": "也",
+          "start": 28.25,
+          "end": 28.938,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "别",
+          "start": 28.938,
+          "end": 29.625,
+          "pinyin": "bie2"
+        },
+        {
+          "text": "放",
+          "start": 29.625,
+          "end": 30.312,
+          "pinyin": "fang4"
+        },
+        {
+          "text": "手",
+          "start": 30.312,
+          "end": 31.0,
+          "pinyin": "shou3"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 31.0,
+      "end": 36.0,
+      "text": "相信你自己的声音",
+      "singableText": "相信你自己的声音",
+      "tokens": [
+        {
+          "text": "相",
+          "start": 31.0,
+          "end": 31.625,
+          "pinyin": "xiang1"
+        },
+        {
+          "text": "信",
+          "start": 31.625,
+          "end": 32.25,
+          "pinyin": "xin4"
+        },
+        {
+          "text": "你",
+          "start": 32.25,
+          "end": 32.875,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "自",
+          "start": 32.875,
+          "end": 33.5,
+          "pinyin": "zi4"
+        },
+        {
+          "text": "己",
+          "start": 33.5,
+          "end": 34.125,
+          "pinyin": "ji3"
+        },
+        {
+          "text": "的",
+          "start": 34.125,
+          "end": 34.75,
+          "pinyin": "de"
+        },
+        {
+          "text": "声",
+          "start": 34.75,
+          "end": 35.375,
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "音",
+          "start": 35.375,
+          "end": 36.0,
+          "pinyin": "yin1"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 37.5,
+      "end": 41.0,
+      "text": "Take care of yourself",
+      "singableText": "Take care of yourself",
+      "tokens": [
+        {
+          "text": "T",
+          "start": 37.5,
+          "end": 37.694
+        },
+        {
+          "text": "a",
+          "start": 37.694,
+          "end": 37.889
+        },
+        {
+          "text": "k",
+          "start": 37.889,
+          "end": 38.083
+        },
+        {
+          "text": "e",
+          "start": 38.083,
+          "end": 38.278
+        },
+        {
+          "text": "c",
+          "start": 38.278,
+          "end": 38.472
+        },
+        {
+          "text": "a",
+          "start": 38.472,
+          "end": 38.667
+        },
+        {
+          "text": "r",
+          "start": 38.667,
+          "end": 38.861
+        },
+        {
+          "text": "e",
+          "start": 38.861,
+          "end": 39.056
+        },
+        {
+          "text": "o",
+          "start": 39.056,
+          "end": 39.25
+        },
+        {
+          "text": "f",
+          "start": 39.25,
+          "end": 39.444
+        },
+        {
+          "text": "y",
+          "start": 39.444,
+          "end": 39.639
+        },
+        {
+          "text": "o",
+          "start": 39.639,
+          "end": 39.833
+        },
+        {
+          "text": "u",
+          "start": 39.833,
+          "end": 40.028
+        },
+        {
+          "text": "r",
+          "start": 40.028,
+          "end": 40.222
+        },
+        {
+          "text": "s",
+          "start": 40.222,
+          "end": 40.417
+        },
+        {
+          "text": "e",
+          "start": 40.417,
+          "end": 40.611
+        },
+        {
+          "text": "l",
+          "start": 40.611,
+          "end": 40.806
+        },
+        {
+          "text": "f",
+          "start": 40.806,
+          "end": 41.0
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 41.0,
+      "end": 46.0,
+      "text": "再暗的路 也会有清晨",
+      "singableText": "再暗的路 也会有清晨",
+      "tokens": [
+        {
+          "text": "再",
+          "start": 41.0,
+          "end": 41.556,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "暗",
+          "start": 41.556,
+          "end": 42.111,
+          "pinyin": "an4"
+        },
+        {
+          "text": "的",
+          "start": 42.111,
+          "end": 42.667,
+          "pinyin": "de"
+        },
+        {
+          "text": "路",
+          "start": 42.667,
+          "end": 43.222,
+          "pinyin": "lu4"
+        },
+        {
+          "text": "也",
+          "start": 43.222,
+          "end": 43.778,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "会",
+          "start": 43.778,
+          "end": 44.333,
+          "pinyin": "hui4"
+        },
+        {
+          "text": "有",
+          "start": 44.333,
+          "end": 44.889,
+          "pinyin": "you3"
+        },
+        {
+          "text": "清",
+          "start": 44.889,
+          "end": 45.444,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "晨",
+          "start": 45.444,
+          "end": 46.0,
+          "pinyin": "chen2"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 47.0,
+      "end": 50.2,
+      "text": "Take care of yourself",
+      "singableText": "Take care of yourself",
+      "tokens": [
+        {
+          "text": "T",
+          "start": 47.0,
+          "end": 47.178
+        },
+        {
+          "text": "a",
+          "start": 47.178,
+          "end": 47.356
+        },
+        {
+          "text": "k",
+          "start": 47.356,
+          "end": 47.533
+        },
+        {
+          "text": "e",
+          "start": 47.533,
+          "end": 47.711
+        },
+        {
+          "text": "c",
+          "start": 47.711,
+          "end": 47.889
+        },
+        {
+          "text": "a",
+          "start": 47.889,
+          "end": 48.067
+        },
+        {
+          "text": "r",
+          "start": 48.067,
+          "end": 48.244
+        },
+        {
+          "text": "e",
+          "start": 48.244,
+          "end": 48.422
+        },
+        {
+          "text": "o",
+          "start": 48.422,
+          "end": 48.6
+        },
+        {
+          "text": "f",
+          "start": 48.6,
+          "end": 48.778
+        },
+        {
+          "text": "y",
+          "start": 48.778,
+          "end": 48.956
+        },
+        {
+          "text": "o",
+          "start": 48.956,
+          "end": 49.133
+        },
+        {
+          "text": "u",
+          "start": 49.133,
+          "end": 49.311
+        },
+        {
+          "text": "r",
+          "start": 49.311,
+          "end": 49.489
+        },
+        {
+          "text": "s",
+          "start": 49.489,
+          "end": 49.667
+        },
+        {
+          "text": "e",
+          "start": 49.667,
+          "end": 49.844
+        },
+        {
+          "text": "l",
+          "start": 49.844,
+          "end": 50.022
+        },
+        {
+          "text": "f",
+          "start": 50.022,
+          "end": 50.2
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 50.2,
+      "end": 56.0,
+      "text": "胸口的光 会守护你",
+      "singableText": "胸口的光 会守护你",
+      "tokens": [
+        {
+          "text": "胸",
+          "start": 50.2,
+          "end": 50.925,
+          "pinyin": "xiong1"
+        },
+        {
+          "text": "口",
+          "start": 50.925,
+          "end": 51.65,
+          "pinyin": "kou3"
+        },
+        {
+          "text": "的",
+          "start": 51.65,
+          "end": 52.375,
+          "pinyin": "de"
+        },
+        {
+          "text": "光",
+          "start": 52.375,
+          "end": 53.1,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "会",
+          "start": 53.1,
+          "end": 53.825,
+          "pinyin": "hui4"
+        },
+        {
+          "text": "守",
+          "start": 53.825,
+          "end": 54.55,
+          "pinyin": "shou3"
+        },
+        {
+          "text": "护",
+          "start": 54.55,
+          "end": 55.275,
+          "pinyin": "hu4"
+        },
+        {
+          "text": "你",
+          "start": 55.275,
+          "end": 56.0,
+          "pinyin": "ni3"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 58.0,
+      "end": 62.0,
+      "text": "眼泪会变成地图",
+      "singableText": "眼泪会变成地图",
+      "tokens": [
+        {
+          "text": "眼",
+          "start": 58.0,
+          "end": 58.571,
+          "pinyin": "yan3"
+        },
+        {
+          "text": "泪",
+          "start": 58.571,
+          "end": 59.143,
+          "pinyin": "lei4"
+        },
+        {
+          "text": "会",
+          "start": 59.143,
+          "end": 59.714,
+          "pinyin": "hui4"
+        },
+        {
+          "text": "变",
+          "start": 59.714,
+          "end": 60.286,
+          "pinyin": "bian4"
+        },
+        {
+          "text": "成",
+          "start": 60.286,
+          "end": 60.857,
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "地",
+          "start": 60.857,
+          "end": 61.429,
+          "pinyin": "di4"
+        },
+        {
+          "text": "图",
+          "start": 61.429,
+          "end": 62.0,
+          "pinyin": "tu2"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 62.0,
+      "end": 66.0,
+      "text": "一步就推开门",
+      "singableText": "一步就推开门",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 62.0,
+          "end": 62.667,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "步",
+          "start": 62.667,
+          "end": 63.333,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "就",
+          "start": 63.333,
+          "end": 64.0,
+          "pinyin": "jiu4"
+        },
+        {
+          "text": "推",
+          "start": 64.0,
+          "end": 64.667,
+          "pinyin": "tui1"
+        },
+        {
+          "text": "开",
+          "start": 64.667,
+          "end": 65.333,
+          "pinyin": "kai1"
+        },
+        {
+          "text": "门",
+          "start": 65.333,
+          "end": 66.0,
+          "pinyin": "men2"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 67.0,
+      "end": 70.0,
+      "text": "Take care of yourself",
+      "singableText": "Take care of yourself",
+      "tokens": [
+        {
+          "text": "T",
+          "start": 67.0,
+          "end": 67.167
+        },
+        {
+          "text": "a",
+          "start": 67.167,
+          "end": 67.333
+        },
+        {
+          "text": "k",
+          "start": 67.333,
+          "end": 67.5
+        },
+        {
+          "text": "e",
+          "start": 67.5,
+          "end": 67.667
+        },
+        {
+          "text": "c",
+          "start": 67.667,
+          "end": 67.833
+        },
+        {
+          "text": "a",
+          "start": 67.833,
+          "end": 68.0
+        },
+        {
+          "text": "r",
+          "start": 68.0,
+          "end": 68.167
+        },
+        {
+          "text": "e",
+          "start": 68.167,
+          "end": 68.333
+        },
+        {
+          "text": "o",
+          "start": 68.333,
+          "end": 68.5
+        },
+        {
+          "text": "f",
+          "start": 68.5,
+          "end": 68.667
+        },
+        {
+          "text": "y",
+          "start": 68.667,
+          "end": 68.833
+        },
+        {
+          "text": "o",
+          "start": 68.833,
+          "end": 69.0
+        },
+        {
+          "text": "u",
+          "start": 69.0,
+          "end": 69.167
+        },
+        {
+          "text": "r",
+          "start": 69.167,
+          "end": 69.333
+        },
+        {
+          "text": "s",
+          "start": 69.333,
+          "end": 69.5
+        },
+        {
+          "text": "e",
+          "start": 69.5,
+          "end": 69.667
+        },
+        {
+          "text": "l",
+          "start": 69.667,
+          "end": 69.833
+        },
+        {
+          "text": "f",
+          "start": 69.833,
+          "end": 70.0
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 70.0,
+      "end": 74.5,
+      "text": "相信风 继续向前",
+      "singableText": "相信风 继续向前",
+      "tokens": [
+        {
+          "text": "相",
+          "start": 70.0,
+          "end": 70.643,
+          "pinyin": "xiang1"
+        },
+        {
+          "text": "信",
+          "start": 70.643,
+          "end": 71.286,
+          "pinyin": "xin4"
+        },
+        {
+          "text": "风",
+          "start": 71.286,
+          "end": 71.929,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "继",
+          "start": 71.929,
+          "end": 72.571,
+          "pinyin": "ji4"
+        },
+        {
+          "text": "续",
+          "start": 72.571,
+          "end": 73.214,
+          "pinyin": "xu4"
+        },
+        {
+          "text": "向",
+          "start": 73.214,
+          "end": 73.857,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "前",
+          "start": 73.857,
+          "end": 74.5,
+          "pinyin": "qian2"
+        }
+      ]
+    }
+  ]
+}

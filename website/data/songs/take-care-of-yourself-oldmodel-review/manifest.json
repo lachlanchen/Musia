@@ -1,0 +1,412 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "take-care-of-yourself-oldmodel-review",
+  "kind": "song",
+  "title": "Take Care of Yourself - ACE Review",
+  "localizedTitles": {
+    "en": "Take Care of Yourself - ACE Review",
+    "zh-Hans": "照顾好自己 - ACE 试听版",
+    "ja": "Take Care of Yourself - ACEレビュー"
+  },
+  "artist": "Musia",
+  "subtitle": "ACE-Step 1.5 XL turbo review candidates in English, Japanese, and Mandarin",
+  "description": "A quality-first full-song regeneration pass for Take Care of Yourself. These ACE-Step review candidates avoid the weaker same-score SoulX route; lyric timing is planned and rough because ASR did not confirm exact words.",
+  "caption": "Quality first: leave space, keep hope, and do not cram the melody.",
+  "duration": 76.0,
+  "canonicalUrl": "https://fun.lazying.art/#take-care-of-yourself-oldmodel-review",
+  "share": {
+    "title": "Take Care of Yourself - ACE Review - Fun Lazying Art",
+    "description": "Musia ACE-Step review candidates with English, Japanese, and Mandarin vocals.",
+    "url": "https://fun.lazying.art/#take-care-of-yourself-oldmodel-review",
+    "image": "assets/covers/take-care-of-yourself-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Take Care of Yourself cover",
+      "role": "cover",
+      "src": "assets/covers/take-care-of-yourself-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/take-care-of-yourself-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "take-care-oldmodel-en",
+      "label": "English ACE review",
+      "roleLabel": "Vocal",
+      "role": "ace-step-review-candidate",
+      "languageCode": "en",
+      "languageLabel": "English",
+      "lyricSetId": "en-vocal",
+      "sourceModel": "ACE-Step 1.5 XL turbo",
+      "qualityGate": "review-asr-low",
+      "src": "assets/audio/take-care-of-yourself-oldmodel-en-review.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": [
+      {
+        "id": "take-care-oldmodel-ja",
+        "label": "Japanese ACE review",
+        "roleLabel": "Vocal",
+        "role": "ace-step-review-candidate",
+        "languageCode": "ja",
+        "languageLabel": "日本語",
+        "lyricSetId": "ja-vocal",
+        "sourceModel": "ACE-Step 1.5 XL turbo",
+        "qualityGate": "review-asr-low",
+        "src": "assets/audio/take-care-of-yourself-oldmodel-ja-review.mp3",
+        "mime": "audio/mpeg"
+      },
+      {
+        "id": "take-care-oldmodel-zh",
+        "label": "Mandarin ACE review",
+        "roleLabel": "Vocal",
+        "role": "ace-step-review-candidate",
+        "languageCode": "zh-Hans",
+        "languageLabel": "中文",
+        "lyricSetId": "zh-vocal",
+        "sourceModel": "ACE-Step 1.5 XL turbo",
+        "qualityGate": "review-asr-low",
+        "src": "assets/audio/take-care-of-yourself-oldmodel-zh-review.mp3",
+        "mime": "audio/mpeg"
+      }
+    ]
+  },
+  "musical": {
+    "key": "E minor",
+    "bpm": 84,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 5.846,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 5.846,
+        "end": 11.692,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 11.692,
+        "end": 17.538,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 17.538,
+        "end": 23.385,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 23.385,
+        "end": 29.231,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 29.231,
+        "end": 35.077,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 35.077,
+        "end": 40.923,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 40.923,
+        "end": 46.769,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 46.769,
+        "end": 52.615,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 52.615,
+        "end": 58.462,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 58.462,
+        "end": 64.308,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 64.308,
+        "end": 70.154,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 70.154,
+        "end": 76.0,
+        "name": "Em",
+        "degree": ""
+      }
+    ]
+  },
+  "lyricSets": [
+    {
+      "id": "en-vocal",
+      "label": "English ACE review lyric set",
+      "languageCode": "en",
+      "tracks": [
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "review-candidate"
+          ],
+          "path": "lyrics/en-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "furigana",
+            "review-candidate"
+          ],
+          "path": "lyrics/en-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "pinyin",
+            "review-candidate"
+          ],
+          "path": "lyrics/en-vocal/zh-Hans.json"
+        }
+      ]
+    },
+    {
+      "id": "ja-vocal",
+      "label": "Japanese ACE review lyric set",
+      "languageCode": "ja",
+      "tracks": [
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "review-candidate"
+          ],
+          "path": "lyrics/ja-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "furigana",
+            "review-candidate"
+          ],
+          "path": "lyrics/ja-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "pinyin",
+            "review-candidate"
+          ],
+          "path": "lyrics/ja-vocal/zh-Hans.json"
+        }
+      ]
+    },
+    {
+      "id": "zh-vocal",
+      "label": "Mandarin ACE review lyric set",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "review-candidate"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "furigana",
+            "review-candidate"
+          ],
+          "path": "lyrics/zh-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "planned-lyrics",
+            "rough-timing",
+            "pinyin",
+            "review-candidate"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 2.0,
+        "end": 7.5,
+        "sourceText": "Beyond the shining forest"
+      },
+      {
+        "id": "l02",
+        "start": 7.5,
+        "end": 12.0,
+        "sourceText": "morning opens its eyes"
+      },
+      {
+        "id": "l03",
+        "start": 14.0,
+        "end": 19.5,
+        "sourceText": "Across the broken sky, a rainbow rises"
+      },
+      {
+        "id": "l04",
+        "start": 19.5,
+        "end": 24.5,
+        "sourceText": "your little heart is trembling"
+      },
+      {
+        "id": "l05",
+        "start": 25.5,
+        "end": 31.0,
+        "sourceText": "even in the lost night, do not let go"
+      },
+      {
+        "id": "l06",
+        "start": 31.0,
+        "end": 36.0,
+        "sourceText": "trust the sound of your voice"
+      },
+      {
+        "id": "l07",
+        "start": 37.5,
+        "end": 41.0,
+        "sourceText": "Take care of yourself"
+      },
+      {
+        "id": "l08",
+        "start": 41.0,
+        "end": 46.0,
+        "sourceText": "even dark roads find the morning"
+      },
+      {
+        "id": "l09",
+        "start": 47.0,
+        "end": 50.2,
+        "sourceText": "Take care of yourself"
+      },
+      {
+        "id": "l10",
+        "start": 50.2,
+        "end": 56.0,
+        "sourceText": "the light in your chest will guard you"
+      },
+      {
+        "id": "l11",
+        "start": 58.0,
+        "end": 62.0,
+        "sourceText": "Tears will become a map"
+      },
+      {
+        "id": "l12",
+        "start": 62.0,
+        "end": 66.0,
+        "sourceText": "one step opens the gate"
+      },
+      {
+        "id": "l13",
+        "start": 67.0,
+        "end": 70.0,
+        "sourceText": "Take care of yourself"
+      },
+      {
+        "id": "l14",
+        "start": 70.0,
+        "end": 74.5,
+        "sourceText": "trust the wind and keep moving on"
+      }
+    ]
+  },
+  "provenance": {
+    "generatedAt": "2026-06-28",
+    "audioModel": "ACE-Step 1.5 XL turbo",
+    "qualityNote": "data/creative_projects/take-care-of-yourself-oldmodel-review-20260628/QUALITY_NOTE.md",
+    "qualityGate": "review-asr-low",
+    "decision": "Website review item, not final accepted publication."
+  },
+  "artifacts": [
+    {
+      "id": "quality-note",
+      "label": "Local quality note",
+      "href": "#quality-note",
+      "localPath": "data/creative_projects/take-care-of-yourself-oldmodel-review-20260628/QUALITY_NOTE.md"
+    }
+  ]
+}

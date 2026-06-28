@@ -1,0 +1,549 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "take-care-of-yourself-oldmodel-review",
+  "lineCoverage": "planned-rough",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan"
+  },
+  "notes": "Planned lyrics with rough timing for ACE-Step review candidates; ASR did not confirm final exact words.",
+  "lines": [
+    {
+      "id": "l01",
+      "start": 2.0,
+      "end": 7.5,
+      "text": "きらめく森のむこう",
+      "singableText": "きらめく森のむこう",
+      "tokens": [
+        {
+          "text": "きらめく",
+          "start": 2.0,
+          "end": 3.375,
+          "reading": "きらめく"
+        },
+        {
+          "text": "森",
+          "start": 3.375,
+          "end": 4.75,
+          "reading": "もり"
+        },
+        {
+          "text": "の",
+          "start": 4.75,
+          "end": 6.125,
+          "reading": "の"
+        },
+        {
+          "text": "むこう",
+          "start": 6.125,
+          "end": 7.5,
+          "reading": "むこう"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 7.5,
+      "end": 12.0,
+      "text": "朝がいま目をさます",
+      "singableText": "朝がいま目をさます",
+      "tokens": [
+        {
+          "text": "朝",
+          "start": 7.5,
+          "end": 8.25,
+          "reading": "あさ"
+        },
+        {
+          "text": "が",
+          "start": 8.25,
+          "end": 9.0,
+          "reading": "が"
+        },
+        {
+          "text": "いま",
+          "start": 9.0,
+          "end": 9.75,
+          "reading": "いま"
+        },
+        {
+          "text": "目",
+          "start": 9.75,
+          "end": 10.5,
+          "reading": "め"
+        },
+        {
+          "text": "を",
+          "start": 10.5,
+          "end": 11.25,
+          "reading": "を"
+        },
+        {
+          "text": "さます",
+          "start": 11.25,
+          "end": 12.0,
+          "reading": "さます"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 14.0,
+      "end": 19.5,
+      "text": "こわれた空に虹がかかる",
+      "singableText": "こわれた空に虹がかかる",
+      "tokens": [
+        {
+          "text": "こわれた",
+          "start": 14.0,
+          "end": 14.917,
+          "reading": "こわれた"
+        },
+        {
+          "text": "空",
+          "start": 14.917,
+          "end": 15.833,
+          "reading": "そら"
+        },
+        {
+          "text": "に",
+          "start": 15.833,
+          "end": 16.75,
+          "reading": "に"
+        },
+        {
+          "text": "虹",
+          "start": 16.75,
+          "end": 17.667,
+          "reading": "にじ"
+        },
+        {
+          "text": "が",
+          "start": 17.667,
+          "end": 18.583,
+          "reading": "が"
+        },
+        {
+          "text": "かかる",
+          "start": 18.583,
+          "end": 19.5,
+          "reading": "かかる"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 19.5,
+      "end": 24.5,
+      "text": "小さな胸はふるえてる",
+      "singableText": "小さな胸はふるえてる",
+      "tokens": [
+        {
+          "text": "小さな",
+          "start": 19.5,
+          "end": 20.75,
+          "reading": "ちいさな"
+        },
+        {
+          "text": "胸",
+          "start": 20.75,
+          "end": 22.0,
+          "reading": "むね"
+        },
+        {
+          "text": "は",
+          "start": 22.0,
+          "end": 23.25,
+          "reading": "は"
+        },
+        {
+          "text": "ふるえてる",
+          "start": 23.25,
+          "end": 24.5,
+          "reading": "ふるえてる"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 25.5,
+      "end": 31.0,
+      "text": "迷う夜でも手をはなさず",
+      "singableText": "迷う夜でも手をはなさず",
+      "tokens": [
+        {
+          "text": "迷う",
+          "start": 25.5,
+          "end": 26.417,
+          "reading": "まよう"
+        },
+        {
+          "text": "夜",
+          "start": 26.417,
+          "end": 27.333,
+          "reading": "よる"
+        },
+        {
+          "text": "でも",
+          "start": 27.333,
+          "end": 28.25,
+          "reading": "でも"
+        },
+        {
+          "text": "手",
+          "start": 28.25,
+          "end": 29.167,
+          "reading": "て"
+        },
+        {
+          "text": "を",
+          "start": 29.167,
+          "end": 30.083,
+          "reading": "を"
+        },
+        {
+          "text": "はなさず",
+          "start": 30.083,
+          "end": 31.0,
+          "reading": "はなさず"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 31.0,
+      "end": 36.0,
+      "text": "君の声だけ信じて",
+      "singableText": "君の声だけ信じて",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 31.0,
+          "end": 32.0,
+          "reading": "きみ"
+        },
+        {
+          "text": "の",
+          "start": 32.0,
+          "end": 33.0,
+          "reading": "の"
+        },
+        {
+          "text": "声",
+          "start": 33.0,
+          "end": 34.0,
+          "reading": "こえ"
+        },
+        {
+          "text": "だけ",
+          "start": 34.0,
+          "end": 35.0,
+          "reading": "だけ"
+        },
+        {
+          "text": "信じて",
+          "start": 35.0,
+          "end": 36.0,
+          "reading": "しんじて"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 37.5,
+      "end": 41.0,
+      "text": "Take care of yourself",
+      "singableText": "Take care of yourself",
+      "tokens": [
+        {
+          "text": "Take",
+          "start": 37.5,
+          "end": 38.375
+        },
+        {
+          "text": "care",
+          "start": 38.375,
+          "end": 39.25
+        },
+        {
+          "text": "of",
+          "start": 39.25,
+          "end": 40.125
+        },
+        {
+          "text": "yourself",
+          "start": 40.125,
+          "end": 41.0
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 41.0,
+      "end": 46.0,
+      "text": "暗い道にも朝はくる",
+      "singableText": "暗い道にも朝はくる",
+      "tokens": [
+        {
+          "text": "暗い",
+          "start": 41.0,
+          "end": 41.833,
+          "reading": "くらい"
+        },
+        {
+          "text": "道",
+          "start": 41.833,
+          "end": 42.667,
+          "reading": "みち"
+        },
+        {
+          "text": "にも",
+          "start": 42.667,
+          "end": 43.5,
+          "reading": "にも"
+        },
+        {
+          "text": "朝",
+          "start": 43.5,
+          "end": 44.333,
+          "reading": "あさ"
+        },
+        {
+          "text": "は",
+          "start": 44.333,
+          "end": 45.167,
+          "reading": "は"
+        },
+        {
+          "text": "くる",
+          "start": 45.167,
+          "end": 46.0,
+          "reading": "くる"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 47.0,
+      "end": 50.2,
+      "text": "Take care of yourself",
+      "singableText": "Take care of yourself",
+      "tokens": [
+        {
+          "text": "Take",
+          "start": 47.0,
+          "end": 47.8
+        },
+        {
+          "text": "care",
+          "start": 47.8,
+          "end": 48.6
+        },
+        {
+          "text": "of",
+          "start": 48.6,
+          "end": 49.4
+        },
+        {
+          "text": "yourself",
+          "start": 49.4,
+          "end": 50.2
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 50.2,
+      "end": 56.0,
+      "text": "胸のひかりが君を守る",
+      "singableText": "胸のひかりが君を守る",
+      "tokens": [
+        {
+          "text": "胸",
+          "start": 50.2,
+          "end": 51.029,
+          "reading": "むね"
+        },
+        {
+          "text": "の",
+          "start": 51.029,
+          "end": 51.857,
+          "reading": "の"
+        },
+        {
+          "text": "ひかり",
+          "start": 51.857,
+          "end": 52.686,
+          "reading": "ひかり"
+        },
+        {
+          "text": "が",
+          "start": 52.686,
+          "end": 53.514,
+          "reading": "が"
+        },
+        {
+          "text": "君",
+          "start": 53.514,
+          "end": 54.343,
+          "reading": "きみ"
+        },
+        {
+          "text": "を",
+          "start": 54.343,
+          "end": 55.171,
+          "reading": "を"
+        },
+        {
+          "text": "守る",
+          "start": 55.171,
+          "end": 56.0,
+          "reading": "まもる"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 58.0,
+      "end": 62.0,
+      "text": "涙は地図になり",
+      "singableText": "涙は地図になり",
+      "tokens": [
+        {
+          "text": "涙",
+          "start": 58.0,
+          "end": 59.0,
+          "reading": "なみだ"
+        },
+        {
+          "text": "は",
+          "start": 59.0,
+          "end": 60.0,
+          "reading": "は"
+        },
+        {
+          "text": "地図",
+          "start": 60.0,
+          "end": 61.0,
+          "reading": "ちず"
+        },
+        {
+          "text": "になり",
+          "start": 61.0,
+          "end": 62.0,
+          "reading": "になり"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 62.0,
+      "end": 66.0,
+      "text": "一歩が扉を開く",
+      "singableText": "一歩が扉を開く",
+      "tokens": [
+        {
+          "text": "一歩",
+          "start": 62.0,
+          "end": 62.8,
+          "reading": "いっぽ"
+        },
+        {
+          "text": "が",
+          "start": 62.8,
+          "end": 63.6,
+          "reading": "が"
+        },
+        {
+          "text": "扉",
+          "start": 63.6,
+          "end": 64.4,
+          "reading": "とびら"
+        },
+        {
+          "text": "を",
+          "start": 64.4,
+          "end": 65.2,
+          "reading": "を"
+        },
+        {
+          "text": "開く",
+          "start": 65.2,
+          "end": 66.0,
+          "reading": "ひらく"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 67.0,
+      "end": 70.0,
+      "text": "Take care of yourself",
+      "singableText": "Take care of yourself",
+      "tokens": [
+        {
+          "text": "Take",
+          "start": 67.0,
+          "end": 67.75
+        },
+        {
+          "text": "care",
+          "start": 67.75,
+          "end": 68.5
+        },
+        {
+          "text": "of",
+          "start": 68.5,
+          "end": 69.25
+        },
+        {
+          "text": "yourself",
+          "start": 69.25,
+          "end": 70.0
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 70.0,
+      "end": 74.5,
+      "text": "風を信じて進めるよ",
+      "singableText": "風を信じて進めるよ",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 70.0,
+          "end": 70.9,
+          "reading": "かぜ"
+        },
+        {
+          "text": "を",
+          "start": 70.9,
+          "end": 71.8,
+          "reading": "を"
+        },
+        {
+          "text": "信じて",
+          "start": 71.8,
+          "end": 72.7,
+          "reading": "しんじて"
+        },
+        {
+          "text": "進める",
+          "start": 72.7,
+          "end": 73.6,
+          "reading": "すすめる"
+        },
+        {
+          "text": "よ",
+          "start": 73.6,
+          "end": 74.5,
+          "reading": "よ"
+        }
+      ]
+    }
+  ]
+}
