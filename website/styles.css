@@ -267,6 +267,7 @@ h2 {
   gap: 2px;
   text-align: left;
   line-height: 1;
+  max-width: 128px;
 }
 
 .peek-copy strong {
@@ -279,6 +280,38 @@ h2 {
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.peek-song {
+  max-width: 128px;
+  margin-top: 3px;
+  color: var(--teal);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.peek-song.is-looping {
+  animation: peekSongLoop 780ms ease both;
+}
+
+@keyframes peekSongLoop {
+  0% {
+    opacity: .22;
+    transform: translateY(5px);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .library-panel {
@@ -1021,6 +1054,9 @@ body.capture-mode.capture-portrait .carousel-track .ruby-line {
   .peek-copy span {
     display: none;
   }
+  .peek-song {
+    max-width: 104px;
+  }
   .title-row {
     grid-template-columns: 76px minmax(0, 1fr);
   }
@@ -1033,5 +1069,11 @@ body.capture-mode.capture-portrait .carousel-track .ruby-line {
   }
   h1 {
     font-size: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .peek-song.is-looping {
+    animation: none;
   }
 }

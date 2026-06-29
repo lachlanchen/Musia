@@ -25,7 +25,9 @@ const state = {
   skipIntroOnLoad: false,
   didApplySkipIntro: false,
   renderedChordKey: "",
-  captureTime: null
+  captureTime: null,
+  libraryPreviewIndex: 0,
+  libraryPreviewTimer: null
 };
 
 const $ = (id) => document.getElementById(id);
@@ -523,6 +525,33 @@ function renderLibrary() {
   });
 }
 
+function libraryPreviewItems() {
+  return (state.catalog?.items || [])
+    .filter((item) => item.kind === "song" || item.kind === "localized-song")
+    .slice(0, 3);
+}
+
+function updateLibraryPeekPreview() {
+  const node = $("peek-song");
+  const items = libraryPreviewItems();
+  if (!node || !items.length) return;
+  const item = items[state.libraryPreviewIndex % items.length];
+  state.libraryPreviewIndex = (state.libraryPreviewIndex + 1) % items.length;
+  node.textContent = item.title;
+  node.classList.remove("is-looping");
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    void node.offsetWidth;
+    node.classList.add("is-looping");
+  }
+}
+
+function startLibraryPeekLoop() {
+  if (state.libraryPreviewTimer) clearInterval(state.libraryPreviewTimer);
+  updateLibraryPeekPreview();
+  if (state.captureMode || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  state.libraryPreviewTimer = setInterval(updateLibraryPeekPreview, 2800);
+}
+
 function renderAssetSwitcher() {
   const assets = playableAssets(state.manifest);
   $("asset-switcher").innerHTML = assets.map((asset) => `
@@ -918,6 +947,7 @@ async function boot() {
   document.body.classList.toggle("capture-portrait", state.captureMode && params.get("portrait") === "1");
   bindEvents();
   state.catalog = await loadJson("data/catalog.json");
+  startLibraryPeekLoop();
   const requestedId = params.get("media") || params.get("id") || window.location.hash.replace(/^#/, "");
   const hashId = decodeURIComponent(requestedId);
   const item = state.catalog.items.find((entry) => entry.id === hashId)
