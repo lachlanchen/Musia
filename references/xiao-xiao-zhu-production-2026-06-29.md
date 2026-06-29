@@ -40,6 +40,55 @@ Source idea folder:
 ideas-and-inspirations/xiao-xiao-zhu/
 ```
 
+## Website Publication
+
+Fun Lazying Art media ID:
+
+```text
+xiao-xiao-zhu-trilingual
+```
+
+Website URL:
+
+```text
+https://fun.lazying.art/#xiao-xiao-zhu-trilingual
+```
+
+Website data:
+
+```text
+website/data/songs/xiao-xiao-zhu-trilingual/manifest.json
+website/data/songs/xiao-xiao-zhu-trilingual/lyrics/zh-vocal/
+website/data/songs/xiao-xiao-zhu-trilingual/lyrics/en-vocal/
+website/data/songs/xiao-xiao-zhu-trilingual/lyrics/ja-vocal/
+website/assets/covers/xiao-xiao-zhu-16x9.png
+```
+
+Public audio repo:
+
+```text
+https://github.com/lazyingart/MusiaSongs
+```
+
+Public audio URLs:
+
+```text
+https://lazyingart.github.io/MusiaSongs/audio/xiao-xiao-zhu-zh-Hans.mp3
+https://lazyingart.github.io/MusiaSongs/audio/xiao-xiao-zhu-en.mp3
+https://lazyingart.github.io/MusiaSongs/audio/xiao-xiao-zhu-ja.mp3
+```
+
+Publication checks:
+
+```text
+npm run website:validate
+musia fun-audit --media-id xiao-xiao-zhu-trilingual --strict
+node --check website/app.js
+git diff --check
+```
+
+All checks passed locally on 2026-06-29.
+
 ## Pipeline Used
 
 1. Wrote Chinese, English, and Japanese singable lyrics.
