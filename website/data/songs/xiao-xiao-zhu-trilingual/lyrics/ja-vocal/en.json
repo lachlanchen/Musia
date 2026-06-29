@@ -1,0 +1,959 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xiao-xiao-zhu-trilingual",
+  "language": {
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn",
+    "code": "en"
+  },
+  "notes": "ASR/STT corrected against selected Musia render and intended lyric. Active vocal timing uses the selected render's analysis segments; translations share line IDs for rough highlighting.",
+  "provenance": {
+    "source": "Musia selected render",
+    "analysisRun": "data/runs/ja-20260629-193836-analysis",
+    "policy": "actual audible structure > close intended lyric > ASR guess > translation draft"
+  },
+  "lines": [
+    {
+      "id": "ja-001",
+      "start": 0.0,
+      "end": 4.06,
+      "text": "You are a piggy, a tiny little piggy",
+      "singableText": "You are a piggy, a tiny little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 0.0,
+          "end": 0.507
+        },
+        {
+          "text": "are",
+          "start": 0.507,
+          "end": 1.015
+        },
+        {
+          "text": "a",
+          "start": 1.015,
+          "end": 1.522
+        },
+        {
+          "text": "piggy",
+          "start": 1.522,
+          "end": 2.03
+        },
+        {
+          "text": "a",
+          "start": 2.03,
+          "end": 2.537
+        },
+        {
+          "text": "tiny",
+          "start": 2.537,
+          "end": 3.045
+        },
+        {
+          "text": "little",
+          "start": 3.045,
+          "end": 3.552
+        },
+        {
+          "text": "piggy",
+          "start": 3.552,
+          "end": 4.06
+        }
+      ]
+    },
+    {
+      "id": "ja-002",
+      "start": 4.06,
+      "end": 9.26,
+      "text": "Smiling like a cloud, hungry when you wake",
+      "singableText": "Smiling like a cloud, hungry when you wake",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Smiling",
+          "start": 4.06,
+          "end": 4.71
+        },
+        {
+          "text": "like",
+          "start": 4.71,
+          "end": 5.36
+        },
+        {
+          "text": "a",
+          "start": 5.36,
+          "end": 6.01
+        },
+        {
+          "text": "cloud",
+          "start": 6.01,
+          "end": 6.66
+        },
+        {
+          "text": "hungry",
+          "start": 6.66,
+          "end": 7.31
+        },
+        {
+          "text": "when",
+          "start": 7.31,
+          "end": 7.96
+        },
+        {
+          "text": "you",
+          "start": 7.96,
+          "end": 8.61
+        },
+        {
+          "text": "wake",
+          "start": 8.61,
+          "end": 9.26
+        }
+      ]
+    },
+    {
+      "id": "ja-003",
+      "start": 9.26,
+      "end": 13.42,
+      "text": "I want to stop too, no more running",
+      "singableText": "I want to stop too, no more running",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 9.26,
+          "end": 9.78
+        },
+        {
+          "text": "want",
+          "start": 9.78,
+          "end": 10.3
+        },
+        {
+          "text": "to",
+          "start": 10.3,
+          "end": 10.82
+        },
+        {
+          "text": "stop",
+          "start": 10.82,
+          "end": 11.34
+        },
+        {
+          "text": "too",
+          "start": 11.34,
+          "end": 11.86
+        },
+        {
+          "text": "no",
+          "start": 11.86,
+          "end": 12.38
+        },
+        {
+          "text": "more",
+          "start": 12.38,
+          "end": 12.9
+        },
+        {
+          "text": "running",
+          "start": 12.9,
+          "end": 13.42
+        }
+      ]
+    },
+    {
+      "id": "ja-004",
+      "start": 13.42,
+      "end": 18.42,
+      "text": "Make the world small and drift to sleep",
+      "singableText": "Make the world small and drift to sleep",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Make",
+          "start": 13.42,
+          "end": 14.045
+        },
+        {
+          "text": "the",
+          "start": 14.045,
+          "end": 14.67
+        },
+        {
+          "text": "world",
+          "start": 14.67,
+          "end": 15.295
+        },
+        {
+          "text": "small",
+          "start": 15.295,
+          "end": 15.92
+        },
+        {
+          "text": "and",
+          "start": 15.92,
+          "end": 16.545
+        },
+        {
+          "text": "drift",
+          "start": 16.545,
+          "end": 17.17
+        },
+        {
+          "text": "to",
+          "start": 17.17,
+          "end": 17.795
+        },
+        {
+          "text": "sleep",
+          "start": 17.795,
+          "end": 18.42
+        }
+      ]
+    },
+    {
+      "id": "ja-005",
+      "start": 19.0,
+      "end": 23.58,
+      "text": "Little piggy, little piggy, I want to be a little piggy",
+      "singableText": "Little piggy, little piggy, I want to be a little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 19.0,
+          "end": 19.416
+        },
+        {
+          "text": "piggy",
+          "start": 19.416,
+          "end": 19.833
+        },
+        {
+          "text": "little",
+          "start": 19.833,
+          "end": 20.249
+        },
+        {
+          "text": "piggy",
+          "start": 20.249,
+          "end": 20.665
+        },
+        {
+          "text": "I",
+          "start": 20.665,
+          "end": 21.082
+        },
+        {
+          "text": "want",
+          "start": 21.082,
+          "end": 21.498
+        },
+        {
+          "text": "to",
+          "start": 21.498,
+          "end": 21.915
+        },
+        {
+          "text": "be",
+          "start": 21.915,
+          "end": 22.331
+        },
+        {
+          "text": "a",
+          "start": 22.331,
+          "end": 22.747
+        },
+        {
+          "text": "little",
+          "start": 22.747,
+          "end": 23.164
+        },
+        {
+          "text": "piggy",
+          "start": 23.164,
+          "end": 23.58
+        }
+      ]
+    },
+    {
+      "id": "ja-006",
+      "start": 23.58,
+      "end": 27.98,
+      "text": "No homework, no work, hold me close tonight",
+      "singableText": "No homework, no work, hold me close tonight",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 23.58,
+          "end": 24.13
+        },
+        {
+          "text": "homework",
+          "start": 24.13,
+          "end": 24.68
+        },
+        {
+          "text": "no",
+          "start": 24.68,
+          "end": 25.23
+        },
+        {
+          "text": "work",
+          "start": 25.23,
+          "end": 25.78
+        },
+        {
+          "text": "hold",
+          "start": 25.78,
+          "end": 26.33
+        },
+        {
+          "text": "me",
+          "start": 26.33,
+          "end": 26.88
+        },
+        {
+          "text": "close",
+          "start": 26.88,
+          "end": 27.43
+        },
+        {
+          "text": "tonight",
+          "start": 27.43,
+          "end": 27.98
+        }
+      ]
+    },
+    {
+      "id": "ja-007",
+      "start": 27.98,
+      "end": 31.96,
+      "text": "Little piggy, little piggy, one small happiness",
+      "singableText": "Little piggy, little piggy, one small happiness",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 27.98,
+          "end": 28.549
+        },
+        {
+          "text": "piggy",
+          "start": 28.549,
+          "end": 29.117
+        },
+        {
+          "text": "little",
+          "start": 29.117,
+          "end": 29.686
+        },
+        {
+          "text": "piggy",
+          "start": 29.686,
+          "end": 30.254
+        },
+        {
+          "text": "one",
+          "start": 30.254,
+          "end": 30.823
+        },
+        {
+          "text": "small",
+          "start": 30.823,
+          "end": 31.391
+        },
+        {
+          "text": "happiness",
+          "start": 31.391,
+          "end": 31.96
+        }
+      ]
+    },
+    {
+      "id": "ja-008",
+      "start": 31.96,
+      "end": 34.9,
+      "text": "Listening to songs and being patted",
+      "singableText": "Listening to songs and being patted",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Listening",
+          "start": 31.96,
+          "end": 32.45
+        },
+        {
+          "text": "to",
+          "start": 32.45,
+          "end": 32.94
+        },
+        {
+          "text": "songs",
+          "start": 32.94,
+          "end": 33.43
+        },
+        {
+          "text": "and",
+          "start": 33.43,
+          "end": 33.92
+        },
+        {
+          "text": "being",
+          "start": 33.92,
+          "end": 34.41
+        },
+        {
+          "text": "patted",
+          "start": 34.41,
+          "end": 34.9
+        }
+      ]
+    },
+    {
+      "id": "ja-009",
+      "start": 34.9,
+      "end": 37.48,
+      "text": "No rushing, no crying",
+      "singableText": "No rushing, no crying",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 34.9,
+          "end": 35.545
+        },
+        {
+          "text": "rushing",
+          "start": 35.545,
+          "end": 36.19
+        },
+        {
+          "text": "no",
+          "start": 36.19,
+          "end": 36.835
+        },
+        {
+          "text": "crying",
+          "start": 36.835,
+          "end": 37.48
+        }
+      ]
+    },
+    {
+      "id": "ja-010",
+      "start": 38.81,
+      "end": 42.98,
+      "text": "The clock is calling, messages are piling up",
+      "singableText": "The clock is calling, messages are piling up",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 38.81,
+          "end": 39.331
+        },
+        {
+          "text": "clock",
+          "start": 39.331,
+          "end": 39.852
+        },
+        {
+          "text": "is",
+          "start": 39.852,
+          "end": 40.374
+        },
+        {
+          "text": "calling",
+          "start": 40.374,
+          "end": 40.895
+        },
+        {
+          "text": "messages",
+          "start": 40.895,
+          "end": 41.416
+        },
+        {
+          "text": "are",
+          "start": 41.416,
+          "end": 41.938
+        },
+        {
+          "text": "piling",
+          "start": 41.938,
+          "end": 42.459
+        },
+        {
+          "text": "up",
+          "start": 42.459,
+          "end": 42.98
+        }
+      ]
+    },
+    {
+      "id": "ja-011",
+      "start": 43.48,
+      "end": 47.88,
+      "text": "I smile and say I am okay, but I am tired",
+      "singableText": "I smile and say I am okay, but I am tired",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 43.48,
+          "end": 43.88
+        },
+        {
+          "text": "smile",
+          "start": 43.88,
+          "end": 44.28
+        },
+        {
+          "text": "and",
+          "start": 44.28,
+          "end": 44.68
+        },
+        {
+          "text": "say",
+          "start": 44.68,
+          "end": 45.08
+        },
+        {
+          "text": "I",
+          "start": 45.08,
+          "end": 45.48
+        },
+        {
+          "text": "am",
+          "start": 45.48,
+          "end": 45.88
+        },
+        {
+          "text": "okay",
+          "start": 45.88,
+          "end": 46.28
+        },
+        {
+          "text": "but",
+          "start": 46.28,
+          "end": 46.68
+        },
+        {
+          "text": "I",
+          "start": 46.68,
+          "end": 47.08
+        },
+        {
+          "text": "am",
+          "start": 47.08,
+          "end": 47.48
+        },
+        {
+          "text": "tired",
+          "start": 47.48,
+          "end": 47.88
+        }
+      ]
+    },
+    {
+      "id": "ja-012",
+      "start": 47.88,
+      "end": 52.54,
+      "text": "I do not hate growing up, I just want to breathe",
+      "singableText": "I do not hate growing up, I just want to breathe",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 47.88,
+          "end": 48.304
+        },
+        {
+          "text": "do",
+          "start": 48.304,
+          "end": 48.727
+        },
+        {
+          "text": "not",
+          "start": 48.727,
+          "end": 49.151
+        },
+        {
+          "text": "hate",
+          "start": 49.151,
+          "end": 49.575
+        },
+        {
+          "text": "growing",
+          "start": 49.575,
+          "end": 49.998
+        },
+        {
+          "text": "up",
+          "start": 49.998,
+          "end": 50.422
+        },
+        {
+          "text": "I",
+          "start": 50.422,
+          "end": 50.845
+        },
+        {
+          "text": "just",
+          "start": 50.845,
+          "end": 51.269
+        },
+        {
+          "text": "want",
+          "start": 51.269,
+          "end": 51.693
+        },
+        {
+          "text": "to",
+          "start": 51.693,
+          "end": 52.116
+        },
+        {
+          "text": "breathe",
+          "start": 52.116,
+          "end": 52.54
+        }
+      ]
+    },
+    {
+      "id": "ja-013",
+      "start": 52.54,
+      "end": 56.74,
+      "text": "Awkward happiness is trying hard too",
+      "singableText": "Awkward happiness is trying hard too",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Awkward",
+          "start": 52.54,
+          "end": 53.24
+        },
+        {
+          "text": "happiness",
+          "start": 53.24,
+          "end": 53.94
+        },
+        {
+          "text": "is",
+          "start": 53.94,
+          "end": 54.64
+        },
+        {
+          "text": "trying",
+          "start": 54.64,
+          "end": 55.34
+        },
+        {
+          "text": "hard",
+          "start": 55.34,
+          "end": 56.04
+        },
+        {
+          "text": "too",
+          "start": 56.04,
+          "end": 56.74
+        }
+      ]
+    },
+    {
+      "id": "ja-014",
+      "start": 56.74,
+      "end": 60.76,
+      "text": "Little piggy, little piggy, I want to be a little piggy",
+      "singableText": "Little piggy, little piggy, I want to be a little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 56.74,
+          "end": 57.105
+        },
+        {
+          "text": "piggy",
+          "start": 57.105,
+          "end": 57.471
+        },
+        {
+          "text": "little",
+          "start": 57.471,
+          "end": 57.836
+        },
+        {
+          "text": "piggy",
+          "start": 57.836,
+          "end": 58.202
+        },
+        {
+          "text": "I",
+          "start": 58.202,
+          "end": 58.567
+        },
+        {
+          "text": "want",
+          "start": 58.567,
+          "end": 58.933
+        },
+        {
+          "text": "to",
+          "start": 58.933,
+          "end": 59.298
+        },
+        {
+          "text": "be",
+          "start": 59.298,
+          "end": 59.664
+        },
+        {
+          "text": "a",
+          "start": 59.664,
+          "end": 60.029
+        },
+        {
+          "text": "little",
+          "start": 60.029,
+          "end": 60.395
+        },
+        {
+          "text": "piggy",
+          "start": 60.395,
+          "end": 60.76
+        }
+      ]
+    },
+    {
+      "id": "ja-015",
+      "start": 60.76,
+      "end": 65.16,
+      "text": "Eat a lot and sleep deep, no pain in dreams",
+      "singableText": "Eat a lot and sleep deep, no pain in dreams",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Eat",
+          "start": 60.76,
+          "end": 61.2
+        },
+        {
+          "text": "a",
+          "start": 61.2,
+          "end": 61.64
+        },
+        {
+          "text": "lot",
+          "start": 61.64,
+          "end": 62.08
+        },
+        {
+          "text": "and",
+          "start": 62.08,
+          "end": 62.52
+        },
+        {
+          "text": "sleep",
+          "start": 62.52,
+          "end": 62.96
+        },
+        {
+          "text": "deep",
+          "start": 62.96,
+          "end": 63.4
+        },
+        {
+          "text": "no",
+          "start": 63.4,
+          "end": 63.84
+        },
+        {
+          "text": "pain",
+          "start": 63.84,
+          "end": 64.28
+        },
+        {
+          "text": "in",
+          "start": 64.28,
+          "end": 64.72
+        },
+        {
+          "text": "dreams",
+          "start": 64.72,
+          "end": 65.16
+        }
+      ]
+    },
+    {
+      "id": "ja-016",
+      "start": 65.74,
+      "end": 69.4,
+      "text": "Little piggy, little piggy, holding a tiny pig",
+      "singableText": "Little piggy, little piggy, holding a tiny pig",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 65.74,
+          "end": 66.197
+        },
+        {
+          "text": "piggy",
+          "start": 66.197,
+          "end": 66.655
+        },
+        {
+          "text": "little",
+          "start": 66.655,
+          "end": 67.112
+        },
+        {
+          "text": "piggy",
+          "start": 67.112,
+          "end": 67.57
+        },
+        {
+          "text": "holding",
+          "start": 67.57,
+          "end": 68.028
+        },
+        {
+          "text": "a",
+          "start": 68.028,
+          "end": 68.485
+        },
+        {
+          "text": "tiny",
+          "start": 68.485,
+          "end": 68.943
+        },
+        {
+          "text": "pig",
+          "start": 68.943,
+          "end": 69.4
+        }
+      ]
+    },
+    {
+      "id": "ja-017",
+      "start": 69.4,
+      "end": 74.3,
+      "text": "The world is heavy, the heart is soft, sleep slowly tonight",
+      "singableText": "The world is heavy, the heart is soft, sleep slowly tonight",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 69.4,
+          "end": 69.845
+        },
+        {
+          "text": "world",
+          "start": 69.845,
+          "end": 70.291
+        },
+        {
+          "text": "is",
+          "start": 70.291,
+          "end": 70.736
+        },
+        {
+          "text": "heavy",
+          "start": 70.736,
+          "end": 71.182
+        },
+        {
+          "text": "the",
+          "start": 71.182,
+          "end": 71.627
+        },
+        {
+          "text": "heart",
+          "start": 71.627,
+          "end": 72.073
+        },
+        {
+          "text": "is",
+          "start": 72.073,
+          "end": 72.518
+        },
+        {
+          "text": "soft",
+          "start": 72.518,
+          "end": 72.964
+        },
+        {
+          "text": "sleep",
+          "start": 72.964,
+          "end": 73.409
+        },
+        {
+          "text": "slowly",
+          "start": 73.409,
+          "end": 73.855
+        },
+        {
+          "text": "tonight",
+          "start": 73.855,
+          "end": 74.3
+        }
+      ]
+    },
+    {
+      "id": "ja-018",
+      "start": 74.3,
+      "end": 78.46,
+      "text": "Little piggy, I am a tiny piggy too",
+      "singableText": "Little piggy, I am a tiny piggy too",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 74.3,
+          "end": 74.82
+        },
+        {
+          "text": "piggy",
+          "start": 74.82,
+          "end": 75.34
+        },
+        {
+          "text": "I",
+          "start": 75.34,
+          "end": 75.86
+        },
+        {
+          "text": "am",
+          "start": 75.86,
+          "end": 76.38
+        },
+        {
+          "text": "a",
+          "start": 76.38,
+          "end": 76.9
+        },
+        {
+          "text": "tiny",
+          "start": 76.9,
+          "end": 77.42
+        },
+        {
+          "text": "piggy",
+          "start": 77.42,
+          "end": 77.94
+        },
+        {
+          "text": "too",
+          "start": 77.94,
+          "end": 78.46
+        }
+      ]
+    }
+  ]
+}

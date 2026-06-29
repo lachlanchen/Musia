@@ -1,0 +1,1698 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xiao-xiao-zhu-trilingual",
+  "language": {
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana",
+    "code": "ja"
+  },
+  "notes": "ASR/STT corrected against selected Musia render and intended lyric. Active vocal timing uses the selected render's analysis segments; translations share line IDs for rough highlighting.",
+  "provenance": {
+    "source": "Musia selected render",
+    "analysisRun": "data/runs/en-20260629-193403-analysis",
+    "policy": "actual audible structure > close intended lyric > ASR guess > translation draft"
+  },
+  "lines": [
+    {
+      "id": "en-001",
+      "start": 0.0,
+      "end": 4.0,
+      "text": "でもきみはこぶた ちいさなこぶた",
+      "singableText": "でもきみはこぶた ちいさなこぶた",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "で",
+          "start": 0.0,
+          "end": 0.267
+        },
+        {
+          "text": "も",
+          "start": 0.267,
+          "end": 0.533
+        },
+        {
+          "text": "き",
+          "start": 0.533,
+          "end": 0.8
+        },
+        {
+          "text": "み",
+          "start": 0.8,
+          "end": 1.067
+        },
+        {
+          "text": "は",
+          "start": 1.067,
+          "end": 1.333
+        },
+        {
+          "text": "こ",
+          "start": 1.333,
+          "end": 1.6
+        },
+        {
+          "text": "ぶ",
+          "start": 1.6,
+          "end": 1.867
+        },
+        {
+          "text": "た",
+          "start": 1.867,
+          "end": 2.133
+        },
+        {
+          "text": "ち",
+          "start": 2.133,
+          "end": 2.4
+        },
+        {
+          "text": "い",
+          "start": 2.4,
+          "end": 2.667
+        },
+        {
+          "text": "さ",
+          "start": 2.667,
+          "end": 2.933
+        },
+        {
+          "text": "な",
+          "start": 2.933,
+          "end": 3.2
+        },
+        {
+          "text": "こ",
+          "start": 3.2,
+          "end": 3.467
+        },
+        {
+          "text": "ぶ",
+          "start": 3.467,
+          "end": 3.733
+        },
+        {
+          "text": "た",
+          "start": 3.733,
+          "end": 4.0
+        }
+      ]
+    },
+    {
+      "id": "en-002",
+      "start": 4.65,
+      "end": 8.72,
+      "text": "雲みたいに笑って 目覚めてもおなかすく",
+      "singableText": "雲みたいに笑って 目覚めてもおなかすく",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "雲",
+          "start": 4.65,
+          "end": 4.876,
+          "reading": "くも"
+        },
+        {
+          "text": "み",
+          "start": 4.876,
+          "end": 5.102
+        },
+        {
+          "text": "た",
+          "start": 5.102,
+          "end": 5.328
+        },
+        {
+          "text": "い",
+          "start": 5.328,
+          "end": 5.554
+        },
+        {
+          "text": "に",
+          "start": 5.554,
+          "end": 5.781
+        },
+        {
+          "text": "笑",
+          "start": 5.781,
+          "end": 6.007,
+          "reading": "わら"
+        },
+        {
+          "text": "っ",
+          "start": 6.007,
+          "end": 6.233
+        },
+        {
+          "text": "て",
+          "start": 6.233,
+          "end": 6.459
+        },
+        {
+          "text": "目",
+          "start": 6.459,
+          "end": 6.685,
+          "reading": "目"
+        },
+        {
+          "text": "覚",
+          "start": 6.685,
+          "end": 6.911,
+          "reading": "覚"
+        },
+        {
+          "text": "め",
+          "start": 6.911,
+          "end": 7.137
+        },
+        {
+          "text": "て",
+          "start": 7.137,
+          "end": 7.363
+        },
+        {
+          "text": "も",
+          "start": 7.363,
+          "end": 7.589
+        },
+        {
+          "text": "お",
+          "start": 7.589,
+          "end": 7.816
+        },
+        {
+          "text": "な",
+          "start": 7.816,
+          "end": 8.042
+        },
+        {
+          "text": "か",
+          "start": 8.042,
+          "end": 8.268
+        },
+        {
+          "text": "す",
+          "start": 8.268,
+          "end": 8.494
+        },
+        {
+          "text": "く",
+          "start": 8.494,
+          "end": 8.72
+        }
+      ]
+    },
+    {
+      "id": "en-003",
+      "start": 9.28,
+      "end": 13.42,
+      "text": "僕は止まりたい もう走らない",
+      "singableText": "僕は止まりたい もう走らない",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "僕",
+          "start": 9.28,
+          "end": 9.598,
+          "reading": "ぼく"
+        },
+        {
+          "text": "は",
+          "start": 9.598,
+          "end": 9.917
+        },
+        {
+          "text": "止",
+          "start": 9.917,
+          "end": 10.235,
+          "reading": "止"
+        },
+        {
+          "text": "ま",
+          "start": 10.235,
+          "end": 10.554
+        },
+        {
+          "text": "り",
+          "start": 10.554,
+          "end": 10.872
+        },
+        {
+          "text": "た",
+          "start": 10.872,
+          "end": 11.191
+        },
+        {
+          "text": "い",
+          "start": 11.191,
+          "end": 11.509
+        },
+        {
+          "text": "も",
+          "start": 11.509,
+          "end": 11.828
+        },
+        {
+          "text": "う",
+          "start": 11.828,
+          "end": 12.146
+        },
+        {
+          "text": "走",
+          "start": 12.146,
+          "end": 12.465,
+          "reading": "はし"
+        },
+        {
+          "text": "ら",
+          "start": 12.465,
+          "end": 12.783
+        },
+        {
+          "text": "な",
+          "start": 12.783,
+          "end": 13.102
+        },
+        {
+          "text": "い",
+          "start": 13.102,
+          "end": 13.42
+        }
+      ]
+    },
+    {
+      "id": "en-004",
+      "start": 13.87,
+      "end": 17.74,
+      "text": "世界をそっと小さくして きみの部屋へ",
+      "singableText": "世界をそっと小さくして きみの部屋へ",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "世",
+          "start": 13.87,
+          "end": 14.098,
+          "reading": "せ"
+        },
+        {
+          "text": "界",
+          "start": 14.098,
+          "end": 14.325,
+          "reading": "かい"
+        },
+        {
+          "text": "を",
+          "start": 14.325,
+          "end": 14.553
+        },
+        {
+          "text": "そ",
+          "start": 14.553,
+          "end": 14.781
+        },
+        {
+          "text": "っ",
+          "start": 14.781,
+          "end": 15.008
+        },
+        {
+          "text": "と",
+          "start": 15.008,
+          "end": 15.236
+        },
+        {
+          "text": "小",
+          "start": 15.236,
+          "end": 15.464,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 15.464,
+          "end": 15.691
+        },
+        {
+          "text": "く",
+          "start": 15.691,
+          "end": 15.919
+        },
+        {
+          "text": "し",
+          "start": 15.919,
+          "end": 16.146
+        },
+        {
+          "text": "て",
+          "start": 16.146,
+          "end": 16.374
+        },
+        {
+          "text": "き",
+          "start": 16.374,
+          "end": 16.602
+        },
+        {
+          "text": "み",
+          "start": 16.602,
+          "end": 16.829
+        },
+        {
+          "text": "の",
+          "start": 16.829,
+          "end": 17.057
+        },
+        {
+          "text": "部",
+          "start": 17.057,
+          "end": 17.285,
+          "reading": "へ"
+        },
+        {
+          "text": "屋",
+          "start": 17.285,
+          "end": 17.512,
+          "reading": "や"
+        },
+        {
+          "text": "へ",
+          "start": 17.512,
+          "end": 17.74
+        }
+      ]
+    },
+    {
+      "id": "en-005",
+      "start": 18.6,
+      "end": 20.7,
+      "text": "こぶた こぶた",
+      "singableText": "こぶた こぶた",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 18.6,
+          "end": 18.95
+        },
+        {
+          "text": "ぶ",
+          "start": 18.95,
+          "end": 19.3
+        },
+        {
+          "text": "た",
+          "start": 19.3,
+          "end": 19.65
+        },
+        {
+          "text": "こ",
+          "start": 19.65,
+          "end": 20.0
+        },
+        {
+          "text": "ぶ",
+          "start": 20.0,
+          "end": 20.35
+        },
+        {
+          "text": "た",
+          "start": 20.35,
+          "end": 20.7
+        }
+      ]
+    },
+    {
+      "id": "en-006",
+      "start": 20.7,
+      "end": 23.0,
+      "text": "僕もこぶたになりたい",
+      "singableText": "僕もこぶたになりたい",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "僕",
+          "start": 20.7,
+          "end": 20.93,
+          "reading": "ぼく"
+        },
+        {
+          "text": "も",
+          "start": 20.93,
+          "end": 21.16
+        },
+        {
+          "text": "こ",
+          "start": 21.16,
+          "end": 21.39
+        },
+        {
+          "text": "ぶ",
+          "start": 21.39,
+          "end": 21.62
+        },
+        {
+          "text": "た",
+          "start": 21.62,
+          "end": 21.85
+        },
+        {
+          "text": "に",
+          "start": 21.85,
+          "end": 22.08
+        },
+        {
+          "text": "な",
+          "start": 22.08,
+          "end": 22.31
+        },
+        {
+          "text": "り",
+          "start": 22.31,
+          "end": 22.54
+        },
+        {
+          "text": "た",
+          "start": 22.54,
+          "end": 22.77
+        },
+        {
+          "text": "い",
+          "start": 22.77,
+          "end": 23.0
+        }
+      ]
+    },
+    {
+      "id": "en-007",
+      "start": 23.0,
+      "end": 24.98,
+      "text": "宿題も仕事もない夜",
+      "singableText": "宿題も仕事もない夜",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "宿",
+          "start": 23.0,
+          "end": 23.22,
+          "reading": "しゅく"
+        },
+        {
+          "text": "題",
+          "start": 23.22,
+          "end": 23.44,
+          "reading": "だい"
+        },
+        {
+          "text": "も",
+          "start": 23.44,
+          "end": 23.66
+        },
+        {
+          "text": "仕",
+          "start": 23.66,
+          "end": 23.88,
+          "reading": "し"
+        },
+        {
+          "text": "事",
+          "start": 23.88,
+          "end": 24.1,
+          "reading": "ごと"
+        },
+        {
+          "text": "も",
+          "start": 24.1,
+          "end": 24.32
+        },
+        {
+          "text": "な",
+          "start": 24.32,
+          "end": 24.54
+        },
+        {
+          "text": "い",
+          "start": 24.54,
+          "end": 24.76
+        },
+        {
+          "text": "夜",
+          "start": 24.76,
+          "end": 24.98,
+          "reading": "や"
+        }
+      ]
+    },
+    {
+      "id": "en-008",
+      "start": 24.98,
+      "end": 27.04,
+      "text": "ただ抱きしめてほしい",
+      "singableText": "ただ抱きしめてほしい",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "た",
+          "start": 24.98,
+          "end": 25.186
+        },
+        {
+          "text": "だ",
+          "start": 25.186,
+          "end": 25.392
+        },
+        {
+          "text": "抱",
+          "start": 25.392,
+          "end": 25.598,
+          "reading": "だ"
+        },
+        {
+          "text": "き",
+          "start": 25.598,
+          "end": 25.804
+        },
+        {
+          "text": "し",
+          "start": 25.804,
+          "end": 26.01
+        },
+        {
+          "text": "め",
+          "start": 26.01,
+          "end": 26.216
+        },
+        {
+          "text": "て",
+          "start": 26.216,
+          "end": 26.422
+        },
+        {
+          "text": "ほ",
+          "start": 26.422,
+          "end": 26.628
+        },
+        {
+          "text": "し",
+          "start": 26.628,
+          "end": 26.834
+        },
+        {
+          "text": "い",
+          "start": 26.834,
+          "end": 27.04
+        }
+      ]
+    },
+    {
+      "id": "en-009",
+      "start": 27.64,
+      "end": 29.94,
+      "text": "こぶた こぶた",
+      "singableText": "こぶた こぶた",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 27.64,
+          "end": 28.023
+        },
+        {
+          "text": "ぶ",
+          "start": 28.023,
+          "end": 28.407
+        },
+        {
+          "text": "た",
+          "start": 28.407,
+          "end": 28.79
+        },
+        {
+          "text": "こ",
+          "start": 28.79,
+          "end": 29.173
+        },
+        {
+          "text": "ぶ",
+          "start": 29.173,
+          "end": 29.557
+        },
+        {
+          "text": "た",
+          "start": 29.557,
+          "end": 29.94
+        }
+      ]
+    },
+    {
+      "id": "en-010",
+      "start": 29.94,
+      "end": 32.0,
+      "text": "小さなしあわせ貸して",
+      "singableText": "小さなしあわせ貸して",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 29.94,
+          "end": 30.146,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 30.146,
+          "end": 30.352
+        },
+        {
+          "text": "な",
+          "start": 30.352,
+          "end": 30.558
+        },
+        {
+          "text": "し",
+          "start": 30.558,
+          "end": 30.764
+        },
+        {
+          "text": "あ",
+          "start": 30.764,
+          "end": 30.97
+        },
+        {
+          "text": "わ",
+          "start": 30.97,
+          "end": 31.176
+        },
+        {
+          "text": "せ",
+          "start": 31.176,
+          "end": 31.382
+        },
+        {
+          "text": "貸",
+          "start": 31.382,
+          "end": 31.588,
+          "reading": "貸"
+        },
+        {
+          "text": "し",
+          "start": 31.588,
+          "end": 31.794
+        },
+        {
+          "text": "て",
+          "start": 31.794,
+          "end": 32.0
+        }
+      ]
+    },
+    {
+      "id": "en-011",
+      "start": 32.0,
+      "end": 34.72,
+      "text": "歌を聴いて なでられて",
+      "singableText": "歌を聴いて なでられて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "歌",
+          "start": 32.0,
+          "end": 32.272,
+          "reading": "うた"
+        },
+        {
+          "text": "を",
+          "start": 32.272,
+          "end": 32.544
+        },
+        {
+          "text": "聴",
+          "start": 32.544,
+          "end": 32.816,
+          "reading": "き"
+        },
+        {
+          "text": "い",
+          "start": 32.816,
+          "end": 33.088
+        },
+        {
+          "text": "て",
+          "start": 33.088,
+          "end": 33.36
+        },
+        {
+          "text": "な",
+          "start": 33.36,
+          "end": 33.632
+        },
+        {
+          "text": "で",
+          "start": 33.632,
+          "end": 33.904
+        },
+        {
+          "text": "ら",
+          "start": 33.904,
+          "end": 34.176
+        },
+        {
+          "text": "れ",
+          "start": 34.176,
+          "end": 34.448
+        },
+        {
+          "text": "て",
+          "start": 34.448,
+          "end": 34.72
+        }
+      ]
+    },
+    {
+      "id": "en-012",
+      "start": 34.72,
+      "end": 37.14,
+      "text": "急がない 泣かない",
+      "singableText": "急がない 泣かない",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "急",
+          "start": 34.72,
+          "end": 35.023,
+          "reading": "いそ"
+        },
+        {
+          "text": "が",
+          "start": 35.023,
+          "end": 35.325
+        },
+        {
+          "text": "な",
+          "start": 35.325,
+          "end": 35.627
+        },
+        {
+          "text": "い",
+          "start": 35.627,
+          "end": 35.93
+        },
+        {
+          "text": "泣",
+          "start": 35.93,
+          "end": 36.233,
+          "reading": "な"
+        },
+        {
+          "text": "か",
+          "start": 36.233,
+          "end": 36.535
+        },
+        {
+          "text": "な",
+          "start": 36.535,
+          "end": 36.837
+        },
+        {
+          "text": "い",
+          "start": 36.837,
+          "end": 37.14
+        }
+      ]
+    },
+    {
+      "id": "en-013",
+      "start": 39.47,
+      "end": 43.07,
+      "text": "時計が鳴って メールが積もる",
+      "singableText": "時計が鳴って メールが積もる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "時",
+          "start": 39.47,
+          "end": 39.747,
+          "reading": "と"
+        },
+        {
+          "text": "計",
+          "start": 39.747,
+          "end": 40.024,
+          "reading": "けい"
+        },
+        {
+          "text": "が",
+          "start": 40.024,
+          "end": 40.301
+        },
+        {
+          "text": "鳴",
+          "start": 40.301,
+          "end": 40.578,
+          "reading": "な"
+        },
+        {
+          "text": "っ",
+          "start": 40.578,
+          "end": 40.855
+        },
+        {
+          "text": "て",
+          "start": 40.855,
+          "end": 41.132
+        },
+        {
+          "text": "メ",
+          "start": 41.132,
+          "end": 41.408
+        },
+        {
+          "text": "ー",
+          "start": 41.408,
+          "end": 41.685
+        },
+        {
+          "text": "ル",
+          "start": 41.685,
+          "end": 41.962
+        },
+        {
+          "text": "が",
+          "start": 41.962,
+          "end": 42.239
+        },
+        {
+          "text": "積",
+          "start": 42.239,
+          "end": 42.516,
+          "reading": "つ"
+        },
+        {
+          "text": "も",
+          "start": 42.516,
+          "end": 42.793
+        },
+        {
+          "text": "る",
+          "start": 42.793,
+          "end": 43.07
+        }
+      ]
+    },
+    {
+      "id": "en-014",
+      "start": 43.07,
+      "end": 46.53,
+      "text": "大丈夫って言うけど 少し疲れた",
+      "singableText": "大丈夫って言うけど 少し疲れた",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "大",
+          "start": 43.07,
+          "end": 43.317,
+          "reading": "だい"
+        },
+        {
+          "text": "丈",
+          "start": 43.317,
+          "end": 43.564,
+          "reading": "じょう"
+        },
+        {
+          "text": "夫",
+          "start": 43.564,
+          "end": 43.811,
+          "reading": "ぶ"
+        },
+        {
+          "text": "っ",
+          "start": 43.811,
+          "end": 44.059
+        },
+        {
+          "text": "て",
+          "start": 44.059,
+          "end": 44.306
+        },
+        {
+          "text": "言",
+          "start": 44.306,
+          "end": 44.553,
+          "reading": "い"
+        },
+        {
+          "text": "う",
+          "start": 44.553,
+          "end": 44.8
+        },
+        {
+          "text": "け",
+          "start": 44.8,
+          "end": 45.047
+        },
+        {
+          "text": "ど",
+          "start": 45.047,
+          "end": 45.294
+        },
+        {
+          "text": "少",
+          "start": 45.294,
+          "end": 45.541,
+          "reading": "すこ"
+        },
+        {
+          "text": "し",
+          "start": 45.541,
+          "end": 45.789
+        },
+        {
+          "text": "疲",
+          "start": 45.789,
+          "end": 46.036,
+          "reading": "つか"
+        },
+        {
+          "text": "れ",
+          "start": 46.036,
+          "end": 46.283
+        },
+        {
+          "text": "た",
+          "start": 46.283,
+          "end": 46.53
+        }
+      ]
+    },
+    {
+      "id": "en-015",
+      "start": 46.53,
+      "end": 48.99,
+      "text": "大人がいやじゃない",
+      "singableText": "大人がいやじゃない",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "大",
+          "start": 46.53,
+          "end": 46.803,
+          "reading": "だい"
+        },
+        {
+          "text": "人",
+          "start": 46.803,
+          "end": 47.077,
+          "reading": "と"
+        },
+        {
+          "text": "が",
+          "start": 47.077,
+          "end": 47.35
+        },
+        {
+          "text": "い",
+          "start": 47.35,
+          "end": 47.623
+        },
+        {
+          "text": "や",
+          "start": 47.623,
+          "end": 47.897
+        },
+        {
+          "text": "じ",
+          "start": 47.897,
+          "end": 48.17
+        },
+        {
+          "text": "ゃ",
+          "start": 48.17,
+          "end": 48.443
+        },
+        {
+          "text": "な",
+          "start": 48.443,
+          "end": 48.717
+        },
+        {
+          "text": "い",
+          "start": 48.717,
+          "end": 48.99
+        }
+      ]
+    },
+    {
+      "id": "en-016",
+      "start": 49.69,
+      "end": 51.19,
+      "text": "ただ息をしたい",
+      "singableText": "ただ息をしたい",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "た",
+          "start": 49.69,
+          "end": 49.904
+        },
+        {
+          "text": "だ",
+          "start": 49.904,
+          "end": 50.119
+        },
+        {
+          "text": "息",
+          "start": 50.119,
+          "end": 50.333,
+          "reading": "いき"
+        },
+        {
+          "text": "を",
+          "start": 50.333,
+          "end": 50.547
+        },
+        {
+          "text": "し",
+          "start": 50.547,
+          "end": 50.761
+        },
+        {
+          "text": "た",
+          "start": 50.761,
+          "end": 50.976
+        },
+        {
+          "text": "い",
+          "start": 50.976,
+          "end": 51.19
+        }
+      ]
+    },
+    {
+      "id": "en-017",
+      "start": 51.19,
+      "end": 53.67,
+      "text": "不器用な幸せも頑張ってる",
+      "singableText": "不器用な幸せも頑張ってる",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "不",
+          "start": 51.19,
+          "end": 51.397,
+          "reading": "ぶ"
+        },
+        {
+          "text": "器",
+          "start": 51.397,
+          "end": 51.603,
+          "reading": "き"
+        },
+        {
+          "text": "用",
+          "start": 51.603,
+          "end": 51.81,
+          "reading": "よう"
+        },
+        {
+          "text": "な",
+          "start": 51.81,
+          "end": 52.017
+        },
+        {
+          "text": "幸",
+          "start": 52.017,
+          "end": 52.223,
+          "reading": "しあわ"
+        },
+        {
+          "text": "せ",
+          "start": 52.223,
+          "end": 52.43
+        },
+        {
+          "text": "も",
+          "start": 52.43,
+          "end": 52.637
+        },
+        {
+          "text": "頑",
+          "start": 52.637,
+          "end": 52.843,
+          "reading": "がん"
+        },
+        {
+          "text": "張",
+          "start": 52.843,
+          "end": 53.05,
+          "reading": "ば"
+        },
+        {
+          "text": "っ",
+          "start": 53.05,
+          "end": 53.257
+        },
+        {
+          "text": "て",
+          "start": 53.257,
+          "end": 53.463
+        },
+        {
+          "text": "る",
+          "start": 53.463,
+          "end": 53.67
+        }
+      ]
+    },
+    {
+      "id": "en-018",
+      "start": 53.67,
+      "end": 56.09,
+      "text": "それも僕の精一杯",
+      "singableText": "それも僕の精一杯",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "そ",
+          "start": 53.67,
+          "end": 53.973
+        },
+        {
+          "text": "れ",
+          "start": 53.973,
+          "end": 54.275
+        },
+        {
+          "text": "も",
+          "start": 54.275,
+          "end": 54.578
+        },
+        {
+          "text": "僕",
+          "start": 54.578,
+          "end": 54.88,
+          "reading": "ぼく"
+        },
+        {
+          "text": "の",
+          "start": 54.88,
+          "end": 55.183
+        },
+        {
+          "text": "精",
+          "start": 55.183,
+          "end": 55.485,
+          "reading": "せい"
+        },
+        {
+          "text": "一",
+          "start": 55.485,
+          "end": 55.788,
+          "reading": "いっ"
+        },
+        {
+          "text": "杯",
+          "start": 55.788,
+          "end": 56.09,
+          "reading": "ぱい"
+        }
+      ]
+    },
+    {
+      "id": "en-019",
+      "start": 56.09,
+      "end": 58.77,
+      "text": "こぶた こぶた",
+      "singableText": "こぶた こぶた",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 56.09,
+          "end": 56.537
+        },
+        {
+          "text": "ぶ",
+          "start": 56.537,
+          "end": 56.983
+        },
+        {
+          "text": "た",
+          "start": 56.983,
+          "end": 57.43
+        },
+        {
+          "text": "こ",
+          "start": 57.43,
+          "end": 57.877
+        },
+        {
+          "text": "ぶ",
+          "start": 57.877,
+          "end": 58.323
+        },
+        {
+          "text": "た",
+          "start": 58.323,
+          "end": 58.77
+        }
+      ]
+    },
+    {
+      "id": "en-020",
+      "start": 58.77,
+      "end": 61.25,
+      "text": "僕もこぶたになりたい",
+      "singableText": "僕もこぶたになりたい",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "僕",
+          "start": 58.77,
+          "end": 59.018,
+          "reading": "ぼく"
+        },
+        {
+          "text": "も",
+          "start": 59.018,
+          "end": 59.266
+        },
+        {
+          "text": "こ",
+          "start": 59.266,
+          "end": 59.514
+        },
+        {
+          "text": "ぶ",
+          "start": 59.514,
+          "end": 59.762
+        },
+        {
+          "text": "た",
+          "start": 59.762,
+          "end": 60.01
+        },
+        {
+          "text": "に",
+          "start": 60.01,
+          "end": 60.258
+        },
+        {
+          "text": "な",
+          "start": 60.258,
+          "end": 60.506
+        },
+        {
+          "text": "り",
+          "start": 60.506,
+          "end": 60.754
+        },
+        {
+          "text": "た",
+          "start": 60.754,
+          "end": 61.002
+        },
+        {
+          "text": "い",
+          "start": 61.002,
+          "end": 61.25
+        }
+      ]
+    },
+    {
+      "id": "en-021",
+      "start": 61.25,
+      "end": 63.27,
+      "text": "いっぱい食べて 深く眠る",
+      "singableText": "いっぱい食べて 深く眠る",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "い",
+          "start": 61.25,
+          "end": 61.434
+        },
+        {
+          "text": "っ",
+          "start": 61.434,
+          "end": 61.617
+        },
+        {
+          "text": "ぱ",
+          "start": 61.617,
+          "end": 61.801
+        },
+        {
+          "text": "い",
+          "start": 61.801,
+          "end": 61.985
+        },
+        {
+          "text": "食",
+          "start": 61.985,
+          "end": 62.168,
+          "reading": "た"
+        },
+        {
+          "text": "べ",
+          "start": 62.168,
+          "end": 62.352
+        },
+        {
+          "text": "て",
+          "start": 62.352,
+          "end": 62.535
+        },
+        {
+          "text": "深",
+          "start": 62.535,
+          "end": 62.719,
+          "reading": "ふか"
+        },
+        {
+          "text": "く",
+          "start": 62.719,
+          "end": 62.903
+        },
+        {
+          "text": "眠",
+          "start": 62.903,
+          "end": 63.086,
+          "reading": "ねむ"
+        },
+        {
+          "text": "る",
+          "start": 63.086,
+          "end": 63.27
+        }
+      ]
+    },
+    {
+      "id": "en-022",
+      "start": 63.27,
+      "end": 65.17,
+      "text": "夢に痛みはない",
+      "singableText": "夢に痛みはない",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "夢",
+          "start": 63.27,
+          "end": 63.541,
+          "reading": "ゆめ"
+        },
+        {
+          "text": "に",
+          "start": 63.541,
+          "end": 63.813
+        },
+        {
+          "text": "痛",
+          "start": 63.813,
+          "end": 64.084,
+          "reading": "いた"
+        },
+        {
+          "text": "み",
+          "start": 64.084,
+          "end": 64.356
+        },
+        {
+          "text": "は",
+          "start": 64.356,
+          "end": 64.627
+        },
+        {
+          "text": "な",
+          "start": 64.627,
+          "end": 64.899
+        },
+        {
+          "text": "い",
+          "start": 64.899,
+          "end": 65.17
+        }
+      ]
+    },
+    {
+      "id": "en-023",
+      "start": 65.17,
+      "end": 68.03,
+      "text": "こぶた こぶた",
+      "singableText": "こぶた こぶた",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 65.17,
+          "end": 65.647
+        },
+        {
+          "text": "ぶ",
+          "start": 65.647,
+          "end": 66.123
+        },
+        {
+          "text": "た",
+          "start": 66.123,
+          "end": 66.6
+        },
+        {
+          "text": "こ",
+          "start": 66.6,
+          "end": 67.077
+        },
+        {
+          "text": "ぶ",
+          "start": 67.077,
+          "end": 67.553
+        },
+        {
+          "text": "た",
+          "start": 67.553,
+          "end": 68.03
+        }
+      ]
+    },
+    {
+      "id": "en-024",
+      "start": 68.03,
+      "end": 69.95,
+      "text": "小さなこぶたを抱いて",
+      "singableText": "小さなこぶたを抱いて",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 68.03,
+          "end": 68.222,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 68.222,
+          "end": 68.414
+        },
+        {
+          "text": "な",
+          "start": 68.414,
+          "end": 68.606
+        },
+        {
+          "text": "こ",
+          "start": 68.606,
+          "end": 68.798
+        },
+        {
+          "text": "ぶ",
+          "start": 68.798,
+          "end": 68.99
+        },
+        {
+          "text": "た",
+          "start": 68.99,
+          "end": 69.182
+        },
+        {
+          "text": "を",
+          "start": 69.182,
+          "end": 69.374
+        },
+        {
+          "text": "抱",
+          "start": 69.374,
+          "end": 69.566,
+          "reading": "だ"
+        },
+        {
+          "text": "い",
+          "start": 69.566,
+          "end": 69.758
+        },
+        {
+          "text": "て",
+          "start": 69.758,
+          "end": 69.95
+        }
+      ]
+    },
+    {
+      "id": "en-025",
+      "start": 69.95,
+      "end": 72.51,
+      "text": "世界は重い 心はやわい",
+      "singableText": "世界は重い 心はやわい",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "世",
+          "start": 69.95,
+          "end": 70.206,
+          "reading": "せ"
+        },
+        {
+          "text": "界",
+          "start": 70.206,
+          "end": 70.462,
+          "reading": "かい"
+        },
+        {
+          "text": "は",
+          "start": 70.462,
+          "end": 70.718
+        },
+        {
+          "text": "重",
+          "start": 70.718,
+          "end": 70.974,
+          "reading": "おも"
+        },
+        {
+          "text": "い",
+          "start": 70.974,
+          "end": 71.23
+        },
+        {
+          "text": "心",
+          "start": 71.23,
+          "end": 71.486,
+          "reading": "こころ"
+        },
+        {
+          "text": "は",
+          "start": 71.486,
+          "end": 71.742
+        },
+        {
+          "text": "や",
+          "start": 71.742,
+          "end": 71.998
+        },
+        {
+          "text": "わ",
+          "start": 71.998,
+          "end": 72.254
+        },
+        {
+          "text": "い",
+          "start": 72.254,
+          "end": 72.51
+        }
+      ]
+    },
+    {
+      "id": "en-026",
+      "start": 72.51,
+      "end": 74.91,
+      "text": "今夜はゆっくり息をする",
+      "singableText": "今夜はゆっくり息をする",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "今",
+          "start": 72.51,
+          "end": 72.728,
+          "reading": "こん"
+        },
+        {
+          "text": "夜",
+          "start": 72.728,
+          "end": 72.946,
+          "reading": "や"
+        },
+        {
+          "text": "は",
+          "start": 72.946,
+          "end": 73.165
+        },
+        {
+          "text": "ゆ",
+          "start": 73.165,
+          "end": 73.383
+        },
+        {
+          "text": "っ",
+          "start": 73.383,
+          "end": 73.601
+        },
+        {
+          "text": "く",
+          "start": 73.601,
+          "end": 73.819
+        },
+        {
+          "text": "り",
+          "start": 73.819,
+          "end": 74.037
+        },
+        {
+          "text": "息",
+          "start": 74.037,
+          "end": 74.255,
+          "reading": "いき"
+        },
+        {
+          "text": "を",
+          "start": 74.255,
+          "end": 74.474
+        },
+        {
+          "text": "す",
+          "start": 74.474,
+          "end": 74.692
+        },
+        {
+          "text": "る",
+          "start": 74.692,
+          "end": 74.91
+        }
+      ]
+    },
+    {
+      "id": "en-027",
+      "start": 74.91,
+      "end": 83.49,
+      "text": "こぶた",
+      "singableText": "こぶた",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 74.91,
+          "end": 77.77
+        },
+        {
+          "text": "ぶ",
+          "start": 77.77,
+          "end": 80.63
+        },
+        {
+          "text": "た",
+          "start": 80.63,
+          "end": 83.49
+        }
+      ]
+    }
+  ]
+}

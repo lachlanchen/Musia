@@ -1,0 +1,984 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xiao-xiao-zhu-trilingual",
+  "language": {
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn",
+    "code": "en"
+  },
+  "notes": "ASR/STT corrected against selected Musia render and intended lyric. Active vocal timing uses the selected render's analysis segments; translations share line IDs for rough highlighting.",
+  "provenance": {
+    "source": "Musia selected render",
+    "analysisRun": "data/runs/ni-shi-yi-zhi-zhu-20260629-20260629-192414-analysis",
+    "policy": "actual audible structure > close intended lyric > ASR guess > translation draft"
+  },
+  "lines": [
+    {
+      "id": "zh-001",
+      "start": 8.69,
+      "end": 13.07,
+      "text": "You are a piggy, a tiny little piggy",
+      "singableText": "You are a piggy, a tiny little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 8.69,
+          "end": 9.237
+        },
+        {
+          "text": "are",
+          "start": 9.237,
+          "end": 9.785
+        },
+        {
+          "text": "a",
+          "start": 9.785,
+          "end": 10.332
+        },
+        {
+          "text": "piggy",
+          "start": 10.332,
+          "end": 10.88
+        },
+        {
+          "text": "a",
+          "start": 10.88,
+          "end": 11.428
+        },
+        {
+          "text": "tiny",
+          "start": 11.428,
+          "end": 11.975
+        },
+        {
+          "text": "little",
+          "start": 11.975,
+          "end": 12.523
+        },
+        {
+          "text": "piggy",
+          "start": 12.523,
+          "end": 13.07
+        }
+      ]
+    },
+    {
+      "id": "zh-002",
+      "start": 13.07,
+      "end": 17.63,
+      "text": "How do you smile like a cloud and wake up hungry?",
+      "singableText": "How do you smile like a cloud and wake up hungry?",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "How",
+          "start": 13.07,
+          "end": 13.485
+        },
+        {
+          "text": "do",
+          "start": 13.485,
+          "end": 13.899
+        },
+        {
+          "text": "you",
+          "start": 13.899,
+          "end": 14.314
+        },
+        {
+          "text": "smile",
+          "start": 14.314,
+          "end": 14.728
+        },
+        {
+          "text": "like",
+          "start": 14.728,
+          "end": 15.143
+        },
+        {
+          "text": "a",
+          "start": 15.143,
+          "end": 15.557
+        },
+        {
+          "text": "cloud",
+          "start": 15.557,
+          "end": 15.972
+        },
+        {
+          "text": "and",
+          "start": 15.972,
+          "end": 16.386
+        },
+        {
+          "text": "wake",
+          "start": 16.386,
+          "end": 16.801
+        },
+        {
+          "text": "up",
+          "start": 16.801,
+          "end": 17.215
+        },
+        {
+          "text": "hungry",
+          "start": 17.215,
+          "end": 17.63
+        }
+      ]
+    },
+    {
+      "id": "zh-003",
+      "start": 18.41,
+      "end": 21.93,
+      "text": "I want to stop, no more running",
+      "singableText": "I want to stop, no more running",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 18.41,
+          "end": 18.913
+        },
+        {
+          "text": "want",
+          "start": 18.913,
+          "end": 19.416
+        },
+        {
+          "text": "to",
+          "start": 19.416,
+          "end": 19.919
+        },
+        {
+          "text": "stop",
+          "start": 19.919,
+          "end": 20.421
+        },
+        {
+          "text": "no",
+          "start": 20.421,
+          "end": 20.924
+        },
+        {
+          "text": "more",
+          "start": 20.924,
+          "end": 21.427
+        },
+        {
+          "text": "running",
+          "start": 21.427,
+          "end": 21.93
+        }
+      ]
+    },
+    {
+      "id": "zh-004",
+      "start": 22.77,
+      "end": 27.91,
+      "text": "Turn the world down, hide in your tiny room",
+      "singableText": "Turn the world down, hide in your tiny room",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Turn",
+          "start": 22.77,
+          "end": 23.341
+        },
+        {
+          "text": "the",
+          "start": 23.341,
+          "end": 23.912
+        },
+        {
+          "text": "world",
+          "start": 23.912,
+          "end": 24.483
+        },
+        {
+          "text": "down",
+          "start": 24.483,
+          "end": 25.054
+        },
+        {
+          "text": "hide",
+          "start": 25.054,
+          "end": 25.626
+        },
+        {
+          "text": "in",
+          "start": 25.626,
+          "end": 26.197
+        },
+        {
+          "text": "your",
+          "start": 26.197,
+          "end": 26.768
+        },
+        {
+          "text": "tiny",
+          "start": 26.768,
+          "end": 27.339
+        },
+        {
+          "text": "room",
+          "start": 27.339,
+          "end": 27.91
+        }
+      ]
+    },
+    {
+      "id": "zh-005",
+      "start": 27.91,
+      "end": 30.11,
+      "text": "Little piggy, I want to be a little piggy",
+      "singableText": "Little piggy, I want to be a little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 27.91,
+          "end": 28.154
+        },
+        {
+          "text": "piggy",
+          "start": 28.154,
+          "end": 28.399
+        },
+        {
+          "text": "I",
+          "start": 28.399,
+          "end": 28.643
+        },
+        {
+          "text": "want",
+          "start": 28.643,
+          "end": 28.888
+        },
+        {
+          "text": "to",
+          "start": 28.888,
+          "end": 29.132
+        },
+        {
+          "text": "be",
+          "start": 29.132,
+          "end": 29.377
+        },
+        {
+          "text": "a",
+          "start": 29.377,
+          "end": 29.621
+        },
+        {
+          "text": "little",
+          "start": 29.621,
+          "end": 29.866
+        },
+        {
+          "text": "piggy",
+          "start": 29.866,
+          "end": 30.11
+        }
+      ]
+    },
+    {
+      "id": "zh-006",
+      "start": 30.11,
+      "end": 34.35,
+      "text": "No homework, no work, just held close tonight",
+      "singableText": "No homework, no work, just held close tonight",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 30.11,
+          "end": 30.64
+        },
+        {
+          "text": "homework",
+          "start": 30.64,
+          "end": 31.17
+        },
+        {
+          "text": "no",
+          "start": 31.17,
+          "end": 31.7
+        },
+        {
+          "text": "work",
+          "start": 31.7,
+          "end": 32.23
+        },
+        {
+          "text": "just",
+          "start": 32.23,
+          "end": 32.76
+        },
+        {
+          "text": "held",
+          "start": 32.76,
+          "end": 33.29
+        },
+        {
+          "text": "close",
+          "start": 33.29,
+          "end": 33.82
+        },
+        {
+          "text": "tonight",
+          "start": 33.82,
+          "end": 34.35
+        }
+      ]
+    },
+    {
+      "id": "zh-007",
+      "start": 34.85,
+      "end": 37.15,
+      "text": "Little piggy, little piggy",
+      "singableText": "Little piggy, little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 34.85,
+          "end": 35.425
+        },
+        {
+          "text": "piggy",
+          "start": 35.425,
+          "end": 36.0
+        },
+        {
+          "text": "little",
+          "start": 36.0,
+          "end": 36.575
+        },
+        {
+          "text": "piggy",
+          "start": 36.575,
+          "end": 37.15
+        }
+      ]
+    },
+    {
+      "id": "zh-008",
+      "start": 37.15,
+      "end": 39.49,
+      "text": "Lend me one small happiness",
+      "singableText": "Lend me one small happiness",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Lend",
+          "start": 37.15,
+          "end": 37.618
+        },
+        {
+          "text": "me",
+          "start": 37.618,
+          "end": 38.086
+        },
+        {
+          "text": "one",
+          "start": 38.086,
+          "end": 38.554
+        },
+        {
+          "text": "small",
+          "start": 38.554,
+          "end": 39.022
+        },
+        {
+          "text": "happiness",
+          "start": 39.022,
+          "end": 39.49
+        }
+      ]
+    },
+    {
+      "id": "zh-009",
+      "start": 39.49,
+      "end": 41.91,
+      "text": "Someone sings, someone pats me",
+      "singableText": "Someone sings, someone pats me",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Someone",
+          "start": 39.49,
+          "end": 39.974
+        },
+        {
+          "text": "sings",
+          "start": 39.974,
+          "end": 40.458
+        },
+        {
+          "text": "someone",
+          "start": 40.458,
+          "end": 40.942
+        },
+        {
+          "text": "pats",
+          "start": 40.942,
+          "end": 41.426
+        },
+        {
+          "text": "me",
+          "start": 41.426,
+          "end": 41.91
+        }
+      ]
+    },
+    {
+      "id": "zh-010",
+      "start": 41.91,
+      "end": 43.99,
+      "text": "Oh oh, no more running",
+      "singableText": "Oh oh, no more running",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Oh",
+          "start": 41.91,
+          "end": 42.326
+        },
+        {
+          "text": "oh",
+          "start": 42.326,
+          "end": 42.742
+        },
+        {
+          "text": "no",
+          "start": 42.742,
+          "end": 43.158
+        },
+        {
+          "text": "more",
+          "start": 43.158,
+          "end": 43.574
+        },
+        {
+          "text": "running",
+          "start": 43.574,
+          "end": 43.99
+        }
+      ]
+    },
+    {
+      "id": "zh-011",
+      "start": 44.79,
+      "end": 48.71,
+      "text": "Alarms cry too much, messages keep calling",
+      "singableText": "Alarms cry too much, messages keep calling",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Alarms",
+          "start": 44.79,
+          "end": 45.35
+        },
+        {
+          "text": "cry",
+          "start": 45.35,
+          "end": 45.91
+        },
+        {
+          "text": "too",
+          "start": 45.91,
+          "end": 46.47
+        },
+        {
+          "text": "much",
+          "start": 46.47,
+          "end": 47.03
+        },
+        {
+          "text": "messages",
+          "start": 47.03,
+          "end": 47.59
+        },
+        {
+          "text": "keep",
+          "start": 47.59,
+          "end": 48.15
+        },
+        {
+          "text": "calling",
+          "start": 48.15,
+          "end": 48.71
+        }
+      ]
+    },
+    {
+      "id": "zh-012",
+      "start": 49.43,
+      "end": 53.37,
+      "text": "I say I am okay, but my heart feels tired",
+      "singableText": "I say I am okay, but my heart feels tired",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 49.43,
+          "end": 49.824
+        },
+        {
+          "text": "say",
+          "start": 49.824,
+          "end": 50.218
+        },
+        {
+          "text": "I",
+          "start": 50.218,
+          "end": 50.612
+        },
+        {
+          "text": "am",
+          "start": 50.612,
+          "end": 51.006
+        },
+        {
+          "text": "okay",
+          "start": 51.006,
+          "end": 51.4
+        },
+        {
+          "text": "but",
+          "start": 51.4,
+          "end": 51.794
+        },
+        {
+          "text": "my",
+          "start": 51.794,
+          "end": 52.188
+        },
+        {
+          "text": "heart",
+          "start": 52.188,
+          "end": 52.582
+        },
+        {
+          "text": "feels",
+          "start": 52.582,
+          "end": 52.976
+        },
+        {
+          "text": "tired",
+          "start": 52.976,
+          "end": 53.37
+        }
+      ]
+    },
+    {
+      "id": "zh-013",
+      "start": 54.23,
+      "end": 58.15,
+      "text": "I am not refusing growing, just catching breath",
+      "singableText": "I am not refusing growing, just catching breath",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 54.23,
+          "end": 54.72
+        },
+        {
+          "text": "am",
+          "start": 54.72,
+          "end": 55.21
+        },
+        {
+          "text": "not",
+          "start": 55.21,
+          "end": 55.7
+        },
+        {
+          "text": "refusing",
+          "start": 55.7,
+          "end": 56.19
+        },
+        {
+          "text": "growing",
+          "start": 56.19,
+          "end": 56.68
+        },
+        {
+          "text": "just",
+          "start": 56.68,
+          "end": 57.17
+        },
+        {
+          "text": "catching",
+          "start": 57.17,
+          "end": 57.66
+        },
+        {
+          "text": "breath",
+          "start": 57.66,
+          "end": 58.15
+        }
+      ]
+    },
+    {
+      "id": "zh-014",
+      "start": 59.01,
+      "end": 62.59,
+      "text": "Silly joy is still doing my best",
+      "singableText": "Silly joy is still doing my best",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Silly",
+          "start": 59.01,
+          "end": 59.521
+        },
+        {
+          "text": "joy",
+          "start": 59.521,
+          "end": 60.033
+        },
+        {
+          "text": "is",
+          "start": 60.033,
+          "end": 60.544
+        },
+        {
+          "text": "still",
+          "start": 60.544,
+          "end": 61.056
+        },
+        {
+          "text": "doing",
+          "start": 61.056,
+          "end": 61.567
+        },
+        {
+          "text": "my",
+          "start": 61.567,
+          "end": 62.079
+        },
+        {
+          "text": "best",
+          "start": 62.079,
+          "end": 62.59
+        }
+      ]
+    },
+    {
+      "id": "zh-015",
+      "start": 62.59,
+      "end": 66.15,
+      "text": "Little piggy, I want to be a little piggy",
+      "singableText": "Little piggy, I want to be a little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 62.59,
+          "end": 62.986
+        },
+        {
+          "text": "piggy",
+          "start": 62.986,
+          "end": 63.381
+        },
+        {
+          "text": "I",
+          "start": 63.381,
+          "end": 63.777
+        },
+        {
+          "text": "want",
+          "start": 63.777,
+          "end": 64.172
+        },
+        {
+          "text": "to",
+          "start": 64.172,
+          "end": 64.568
+        },
+        {
+          "text": "be",
+          "start": 64.568,
+          "end": 64.963
+        },
+        {
+          "text": "a",
+          "start": 64.963,
+          "end": 65.359
+        },
+        {
+          "text": "little",
+          "start": 65.359,
+          "end": 65.754
+        },
+        {
+          "text": "piggy",
+          "start": 65.754,
+          "end": 66.15
+        }
+      ]
+    },
+    {
+      "id": "zh-016",
+      "start": 66.15,
+      "end": 70.51,
+      "text": "Eat a lot, sleep so deep, no pain in dreams",
+      "singableText": "Eat a lot, sleep so deep, no pain in dreams",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Eat",
+          "start": 66.15,
+          "end": 66.586
+        },
+        {
+          "text": "a",
+          "start": 66.586,
+          "end": 67.022
+        },
+        {
+          "text": "lot",
+          "start": 67.022,
+          "end": 67.458
+        },
+        {
+          "text": "sleep",
+          "start": 67.458,
+          "end": 67.894
+        },
+        {
+          "text": "so",
+          "start": 67.894,
+          "end": 68.33
+        },
+        {
+          "text": "deep",
+          "start": 68.33,
+          "end": 68.766
+        },
+        {
+          "text": "no",
+          "start": 68.766,
+          "end": 69.202
+        },
+        {
+          "text": "pain",
+          "start": 69.202,
+          "end": 69.638
+        },
+        {
+          "text": "in",
+          "start": 69.638,
+          "end": 70.074
+        },
+        {
+          "text": "dreams",
+          "start": 70.074,
+          "end": 70.51
+        }
+      ]
+    },
+    {
+      "id": "zh-017",
+      "start": 70.51,
+      "end": 73.05,
+      "text": "Little piggy, little piggy",
+      "singableText": "Little piggy, little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 70.51,
+          "end": 71.145
+        },
+        {
+          "text": "piggy",
+          "start": 71.145,
+          "end": 71.78
+        },
+        {
+          "text": "little",
+          "start": 71.78,
+          "end": 72.415
+        },
+        {
+          "text": "piggy",
+          "start": 72.415,
+          "end": 73.05
+        }
+      ]
+    },
+    {
+      "id": "zh-018",
+      "start": 73.05,
+      "end": 75.43,
+      "text": "Holding my little piggy",
+      "singableText": "Holding my little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Holding",
+          "start": 73.05,
+          "end": 73.645
+        },
+        {
+          "text": "my",
+          "start": 73.645,
+          "end": 74.24
+        },
+        {
+          "text": "little",
+          "start": 74.24,
+          "end": 74.835
+        },
+        {
+          "text": "piggy",
+          "start": 74.835,
+          "end": 75.43
+        }
+      ]
+    },
+    {
+      "id": "zh-019",
+      "start": 75.43,
+      "end": 80.07,
+      "text": "The world is heavy, the heart is soft, breathe slow tonight",
+      "singableText": "The world is heavy, the heart is soft, breathe slow tonight",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 75.43,
+          "end": 75.852
+        },
+        {
+          "text": "world",
+          "start": 75.852,
+          "end": 76.274
+        },
+        {
+          "text": "is",
+          "start": 76.274,
+          "end": 76.695
+        },
+        {
+          "text": "heavy",
+          "start": 76.695,
+          "end": 77.117
+        },
+        {
+          "text": "the",
+          "start": 77.117,
+          "end": 77.539
+        },
+        {
+          "text": "heart",
+          "start": 77.539,
+          "end": 77.961
+        },
+        {
+          "text": "is",
+          "start": 77.961,
+          "end": 78.383
+        },
+        {
+          "text": "soft",
+          "start": 78.383,
+          "end": 78.805
+        },
+        {
+          "text": "breathe",
+          "start": 78.805,
+          "end": 79.226
+        },
+        {
+          "text": "slow",
+          "start": 79.226,
+          "end": 79.648
+        },
+        {
+          "text": "tonight",
+          "start": 79.648,
+          "end": 80.07
+        }
+      ]
+    },
+    {
+      "id": "zh-020",
+      "start": 81.63,
+      "end": 84.63,
+      "text": "Oh oh oh, little piggy",
+      "singableText": "Oh oh oh, little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Oh",
+          "start": 81.63,
+          "end": 82.23
+        },
+        {
+          "text": "oh",
+          "start": 82.23,
+          "end": 82.83
+        },
+        {
+          "text": "oh",
+          "start": 82.83,
+          "end": 83.43
+        },
+        {
+          "text": "little",
+          "start": 83.43,
+          "end": 84.03
+        },
+        {
+          "text": "piggy",
+          "start": 84.03,
+          "end": 84.63
+        }
+      ]
+    },
+    {
+      "id": "zh-021",
+      "start": 84.63,
+      "end": 89.29,
+      "text": "Oh oh oh, little piggy",
+      "singableText": "Oh oh oh, little piggy",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "Oh",
+          "start": 84.63,
+          "end": 85.562
+        },
+        {
+          "text": "oh",
+          "start": 85.562,
+          "end": 86.494
+        },
+        {
+          "text": "oh",
+          "start": 86.494,
+          "end": 87.426
+        },
+        {
+          "text": "little",
+          "start": 87.426,
+          "end": 88.358
+        },
+        {
+          "text": "piggy",
+          "start": 88.358,
+          "end": 89.29
+        }
+      ]
+    }
+  ]
+}

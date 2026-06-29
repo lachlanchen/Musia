@@ -1,0 +1,1340 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xiao-xiao-zhu-trilingual",
+  "language": {
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin",
+    "code": "zh-Hans"
+  },
+  "notes": "ASR/STT corrected against selected Musia render and intended lyric. Active vocal timing uses the selected render's analysis segments; translations share line IDs for rough highlighting.",
+  "provenance": {
+    "source": "Musia selected render",
+    "analysisRun": "data/runs/ja-20260629-193836-analysis",
+    "policy": "actual audible structure > close intended lyric > ASR guess > translation draft"
+  },
+  "lines": [
+    {
+      "id": "ja-001",
+      "start": 0.0,
+      "end": 4.06,
+      "text": "你是小猪 一只小小猪",
+      "singableText": "你是小猪 一只小小猪",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 0.0,
+          "end": 0.451,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "是",
+          "start": 0.451,
+          "end": 0.902,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "小",
+          "start": 0.902,
+          "end": 1.353,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 1.353,
+          "end": 1.804,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "一",
+          "start": 1.804,
+          "end": 2.256,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "只",
+          "start": 2.256,
+          "end": 2.707,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "小",
+          "start": 2.707,
+          "end": 3.158,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 3.158,
+          "end": 3.609,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 3.609,
+          "end": 4.06,
+          "pinyin": "zhu1"
+        }
+      ]
+    },
+    {
+      "id": "ja-002",
+      "start": 4.06,
+      "end": 9.26,
+      "text": "像云朵一样笑着 醒来还是会饿",
+      "singableText": "像云朵一样笑着 醒来还是会饿",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "像",
+          "start": 4.06,
+          "end": 4.46,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "云",
+          "start": 4.46,
+          "end": 4.86,
+          "pinyin": "yun2"
+        },
+        {
+          "text": "朵",
+          "start": 4.86,
+          "end": 5.26,
+          "pinyin": "duo3"
+        },
+        {
+          "text": "一",
+          "start": 5.26,
+          "end": 5.66,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "样",
+          "start": 5.66,
+          "end": 6.06,
+          "pinyin": "yang4"
+        },
+        {
+          "text": "笑",
+          "start": 6.06,
+          "end": 6.46,
+          "pinyin": "xiao4"
+        },
+        {
+          "text": "着",
+          "start": 6.46,
+          "end": 6.86,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "醒",
+          "start": 6.86,
+          "end": 7.26,
+          "pinyin": "xing3"
+        },
+        {
+          "text": "来",
+          "start": 7.26,
+          "end": 7.66,
+          "pinyin": "lai2"
+        },
+        {
+          "text": "还",
+          "start": 7.66,
+          "end": 8.06,
+          "pinyin": "hai2"
+        },
+        {
+          "text": "是",
+          "start": 8.06,
+          "end": 8.46,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "会",
+          "start": 8.46,
+          "end": 8.86,
+          "pinyin": "hui4"
+        },
+        {
+          "text": "饿",
+          "start": 8.86,
+          "end": 9.26,
+          "pinyin": "e4"
+        }
+      ]
+    },
+    {
+      "id": "ja-003",
+      "start": 9.26,
+      "end": 13.42,
+      "text": "我也想停住 不再奔跑",
+      "singableText": "我也想停住 不再奔跑",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 9.26,
+          "end": 9.722,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "也",
+          "start": 9.722,
+          "end": 10.184,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "想",
+          "start": 10.184,
+          "end": 10.647,
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "停",
+          "start": 10.647,
+          "end": 11.109,
+          "pinyin": "ting2"
+        },
+        {
+          "text": "住",
+          "start": 11.109,
+          "end": 11.571,
+          "pinyin": "zhu4"
+        },
+        {
+          "text": "不",
+          "start": 11.571,
+          "end": 12.033,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "再",
+          "start": 12.033,
+          "end": 12.496,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "奔",
+          "start": 12.496,
+          "end": 12.958,
+          "pinyin": "ben1"
+        },
+        {
+          "text": "跑",
+          "start": 12.958,
+          "end": 13.42,
+          "pinyin": "pao3"
+        }
+      ]
+    },
+    {
+      "id": "ja-004",
+      "start": 13.42,
+      "end": 18.42,
+      "text": "把世界变小 轻轻睡去",
+      "singableText": "把世界变小 轻轻睡去",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "把",
+          "start": 13.42,
+          "end": 13.976,
+          "pinyin": "ba3"
+        },
+        {
+          "text": "世",
+          "start": 13.976,
+          "end": 14.531,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "界",
+          "start": 14.531,
+          "end": 15.087,
+          "pinyin": "jie4"
+        },
+        {
+          "text": "变",
+          "start": 15.087,
+          "end": 15.642,
+          "pinyin": "bian4"
+        },
+        {
+          "text": "小",
+          "start": 15.642,
+          "end": 16.198,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "轻",
+          "start": 16.198,
+          "end": 16.753,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "轻",
+          "start": 16.753,
+          "end": 17.309,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "睡",
+          "start": 17.309,
+          "end": 17.864,
+          "pinyin": "shui4"
+        },
+        {
+          "text": "去",
+          "start": 17.864,
+          "end": 18.42,
+          "pinyin": "qu4"
+        }
+      ]
+    },
+    {
+      "id": "ja-005",
+      "start": 19.0,
+      "end": 23.58,
+      "text": "小小猪 小小猪 我也想做小小猪",
+      "singableText": "小小猪 小小猪 我也想做小小猪",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 19.0,
+          "end": 19.352,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 19.352,
+          "end": 19.705,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 19.705,
+          "end": 20.057,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "小",
+          "start": 20.057,
+          "end": 20.409,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 20.409,
+          "end": 20.762,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 20.762,
+          "end": 21.114,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "我",
+          "start": 21.114,
+          "end": 21.466,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "也",
+          "start": 21.466,
+          "end": 21.818,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "想",
+          "start": 21.818,
+          "end": 22.171,
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "做",
+          "start": 22.171,
+          "end": 22.523,
+          "pinyin": "zuo4"
+        },
+        {
+          "text": "小",
+          "start": 22.523,
+          "end": 22.875,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 22.875,
+          "end": 23.228,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 23.228,
+          "end": 23.58,
+          "pinyin": "zhu1"
+        }
+      ]
+    },
+    {
+      "id": "ja-006",
+      "start": 23.58,
+      "end": 27.98,
+      "text": "没有作业 没有工作 今晚抱抱我",
+      "singableText": "没有作业 没有工作 今晚抱抱我",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "没",
+          "start": 23.58,
+          "end": 23.918,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "有",
+          "start": 23.918,
+          "end": 24.257,
+          "pinyin": "you3"
+        },
+        {
+          "text": "作",
+          "start": 24.257,
+          "end": 24.595,
+          "pinyin": "zuo4"
+        },
+        {
+          "text": "业",
+          "start": 24.595,
+          "end": 24.934,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "没",
+          "start": 24.934,
+          "end": 25.272,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "有",
+          "start": 25.272,
+          "end": 25.611,
+          "pinyin": "you3"
+        },
+        {
+          "text": "工",
+          "start": 25.611,
+          "end": 25.949,
+          "pinyin": "gong1"
+        },
+        {
+          "text": "作",
+          "start": 25.949,
+          "end": 26.288,
+          "pinyin": "zuo4"
+        },
+        {
+          "text": "今",
+          "start": 26.288,
+          "end": 26.626,
+          "pinyin": "jin1"
+        },
+        {
+          "text": "晚",
+          "start": 26.626,
+          "end": 26.965,
+          "pinyin": "wan3"
+        },
+        {
+          "text": "抱",
+          "start": 26.965,
+          "end": 27.303,
+          "pinyin": "bao4"
+        },
+        {
+          "text": "抱",
+          "start": 27.303,
+          "end": 27.642,
+          "pinyin": "bao4"
+        },
+        {
+          "text": "我",
+          "start": 27.642,
+          "end": 27.98,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "ja-007",
+      "start": 27.98,
+      "end": 31.96,
+      "text": "小小猪 小小猪 一点小幸福",
+      "singableText": "小小猪 小小猪 一点小幸福",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 27.98,
+          "end": 28.342,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 28.342,
+          "end": 28.704,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 28.704,
+          "end": 29.065,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "小",
+          "start": 29.065,
+          "end": 29.427,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 29.427,
+          "end": 29.789,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 29.789,
+          "end": 30.151,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "一",
+          "start": 30.151,
+          "end": 30.513,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "点",
+          "start": 30.513,
+          "end": 30.875,
+          "pinyin": "dian3"
+        },
+        {
+          "text": "小",
+          "start": 30.875,
+          "end": 31.236,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "幸",
+          "start": 31.236,
+          "end": 31.598,
+          "pinyin": "xing4"
+        },
+        {
+          "text": "福",
+          "start": 31.598,
+          "end": 31.96,
+          "pinyin": "fu2"
+        }
+      ]
+    },
+    {
+      "id": "ja-008",
+      "start": 31.96,
+      "end": 34.9,
+      "text": "听你唱歌 被你摸摸",
+      "singableText": "听你唱歌 被你摸摸",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "听",
+          "start": 31.96,
+          "end": 32.328,
+          "pinyin": "ting1"
+        },
+        {
+          "text": "你",
+          "start": 32.328,
+          "end": 32.695,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "唱",
+          "start": 32.695,
+          "end": 33.062,
+          "pinyin": "chang4"
+        },
+        {
+          "text": "歌",
+          "start": 33.062,
+          "end": 33.43,
+          "pinyin": "ge1"
+        },
+        {
+          "text": "被",
+          "start": 33.43,
+          "end": 33.797,
+          "pinyin": "bei4"
+        },
+        {
+          "text": "你",
+          "start": 33.797,
+          "end": 34.165,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "摸",
+          "start": 34.165,
+          "end": 34.532,
+          "pinyin": "mo1"
+        },
+        {
+          "text": "摸",
+          "start": 34.532,
+          "end": 34.9,
+          "pinyin": "mo1"
+        }
+      ]
+    },
+    {
+      "id": "ja-009",
+      "start": 34.9,
+      "end": 37.48,
+      "text": "不赶路 不哭了",
+      "singableText": "不赶路 不哭了",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "不",
+          "start": 34.9,
+          "end": 35.33,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "赶",
+          "start": 35.33,
+          "end": 35.76,
+          "pinyin": "gan3"
+        },
+        {
+          "text": "路",
+          "start": 35.76,
+          "end": 36.19,
+          "pinyin": "lu4"
+        },
+        {
+          "text": "不",
+          "start": 36.19,
+          "end": 36.62,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "哭",
+          "start": 36.62,
+          "end": 37.05,
+          "pinyin": "ku1"
+        },
+        {
+          "text": "了",
+          "start": 37.05,
+          "end": 37.48,
+          "pinyin": "le5"
+        }
+      ]
+    },
+    {
+      "id": "ja-010",
+      "start": 38.81,
+      "end": 42.98,
+      "text": "时钟在叫 消息堆起来",
+      "singableText": "时钟在叫 消息堆起来",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "时",
+          "start": 38.81,
+          "end": 39.273,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "钟",
+          "start": 39.273,
+          "end": 39.737,
+          "pinyin": "zhong1"
+        },
+        {
+          "text": "在",
+          "start": 39.737,
+          "end": 40.2,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "叫",
+          "start": 40.2,
+          "end": 40.663,
+          "pinyin": "jiao4"
+        },
+        {
+          "text": "消",
+          "start": 40.663,
+          "end": 41.127,
+          "pinyin": "xiao1"
+        },
+        {
+          "text": "息",
+          "start": 41.127,
+          "end": 41.59,
+          "pinyin": "xi1"
+        },
+        {
+          "text": "堆",
+          "start": 41.59,
+          "end": 42.053,
+          "pinyin": "dui1"
+        },
+        {
+          "text": "起",
+          "start": 42.053,
+          "end": 42.517,
+          "pinyin": "qi3"
+        },
+        {
+          "text": "来",
+          "start": 42.517,
+          "end": 42.98,
+          "pinyin": "lai2"
+        }
+      ]
+    },
+    {
+      "id": "ja-011",
+      "start": 43.48,
+      "end": 47.88,
+      "text": "我笑着说没事 其实有点累",
+      "singableText": "我笑着说没事 其实有点累",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 43.48,
+          "end": 43.88,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "笑",
+          "start": 43.88,
+          "end": 44.28,
+          "pinyin": "xiao4"
+        },
+        {
+          "text": "着",
+          "start": 44.28,
+          "end": 44.68,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "说",
+          "start": 44.68,
+          "end": 45.08,
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "没",
+          "start": 45.08,
+          "end": 45.48,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "事",
+          "start": 45.48,
+          "end": 45.88,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "其",
+          "start": 45.88,
+          "end": 46.28,
+          "pinyin": "qi2"
+        },
+        {
+          "text": "实",
+          "start": 46.28,
+          "end": 46.68,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "有",
+          "start": 46.68,
+          "end": 47.08,
+          "pinyin": "you3"
+        },
+        {
+          "text": "点",
+          "start": 47.08,
+          "end": 47.48,
+          "pinyin": "dian3"
+        },
+        {
+          "text": "累",
+          "start": 47.48,
+          "end": 47.88,
+          "pinyin": "lei4"
+        }
+      ]
+    },
+    {
+      "id": "ja-012",
+      "start": 47.88,
+      "end": 52.54,
+      "text": "不是讨厌长大 只是想呼吸",
+      "singableText": "不是讨厌长大 只是想呼吸",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "不",
+          "start": 47.88,
+          "end": 48.304,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "是",
+          "start": 48.304,
+          "end": 48.727,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "讨",
+          "start": 48.727,
+          "end": 49.151,
+          "pinyin": "tao3"
+        },
+        {
+          "text": "厌",
+          "start": 49.151,
+          "end": 49.575,
+          "pinyin": "yan4"
+        },
+        {
+          "text": "长",
+          "start": 49.575,
+          "end": 49.998,
+          "pinyin": "zhang3"
+        },
+        {
+          "text": "大",
+          "start": 49.998,
+          "end": 50.422,
+          "pinyin": "da4"
+        },
+        {
+          "text": "只",
+          "start": 50.422,
+          "end": 50.845,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "是",
+          "start": 50.845,
+          "end": 51.269,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "想",
+          "start": 51.269,
+          "end": 51.693,
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "呼",
+          "start": 51.693,
+          "end": 52.116,
+          "pinyin": "hu1"
+        },
+        {
+          "text": "吸",
+          "start": 52.116,
+          "end": 52.54,
+          "pinyin": "xi1"
+        }
+      ]
+    },
+    {
+      "id": "ja-013",
+      "start": 52.54,
+      "end": 56.74,
+      "text": "笨拙的幸福也在努力",
+      "singableText": "笨拙的幸福也在努力",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "笨",
+          "start": 52.54,
+          "end": 53.007,
+          "pinyin": "ben4"
+        },
+        {
+          "text": "拙",
+          "start": 53.007,
+          "end": 53.473,
+          "pinyin": "zhuo1"
+        },
+        {
+          "text": "的",
+          "start": 53.473,
+          "end": 53.94,
+          "pinyin": "de5"
+        },
+        {
+          "text": "幸",
+          "start": 53.94,
+          "end": 54.407,
+          "pinyin": "xing4"
+        },
+        {
+          "text": "福",
+          "start": 54.407,
+          "end": 54.873,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "也",
+          "start": 54.873,
+          "end": 55.34,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "在",
+          "start": 55.34,
+          "end": 55.807,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "努",
+          "start": 55.807,
+          "end": 56.273,
+          "pinyin": "nu3"
+        },
+        {
+          "text": "力",
+          "start": 56.273,
+          "end": 56.74,
+          "pinyin": "li4"
+        }
+      ]
+    },
+    {
+      "id": "ja-014",
+      "start": 56.74,
+      "end": 60.76,
+      "text": "小小猪 小小猪 我也想做小小猪",
+      "singableText": "小小猪 小小猪 我也想做小小猪",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 56.74,
+          "end": 57.049,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 57.049,
+          "end": 57.358,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 57.358,
+          "end": 57.668,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "小",
+          "start": 57.668,
+          "end": 57.977,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 57.977,
+          "end": 58.286,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 58.286,
+          "end": 58.595,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "我",
+          "start": 58.595,
+          "end": 58.905,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "也",
+          "start": 58.905,
+          "end": 59.214,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "想",
+          "start": 59.214,
+          "end": 59.523,
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "做",
+          "start": 59.523,
+          "end": 59.832,
+          "pinyin": "zuo4"
+        },
+        {
+          "text": "小",
+          "start": 59.832,
+          "end": 60.142,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 60.142,
+          "end": 60.451,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 60.451,
+          "end": 60.76,
+          "pinyin": "zhu1"
+        }
+      ]
+    },
+    {
+      "id": "ja-015",
+      "start": 60.76,
+      "end": 65.16,
+      "text": "吃得很多 深深睡去 梦里没有痛苦",
+      "singableText": "吃得很多 深深睡去 梦里没有痛苦",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "吃",
+          "start": 60.76,
+          "end": 61.074,
+          "pinyin": "chi1"
+        },
+        {
+          "text": "得",
+          "start": 61.074,
+          "end": 61.389,
+          "pinyin": "de2"
+        },
+        {
+          "text": "很",
+          "start": 61.389,
+          "end": 61.703,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "多",
+          "start": 61.703,
+          "end": 62.017,
+          "pinyin": "duo1"
+        },
+        {
+          "text": "深",
+          "start": 62.017,
+          "end": 62.331,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "深",
+          "start": 62.331,
+          "end": 62.646,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "睡",
+          "start": 62.646,
+          "end": 62.96,
+          "pinyin": "shui4"
+        },
+        {
+          "text": "去",
+          "start": 62.96,
+          "end": 63.274,
+          "pinyin": "qu4"
+        },
+        {
+          "text": "梦",
+          "start": 63.274,
+          "end": 63.589,
+          "pinyin": "meng4"
+        },
+        {
+          "text": "里",
+          "start": 63.589,
+          "end": 63.903,
+          "pinyin": "li3"
+        },
+        {
+          "text": "没",
+          "start": 63.903,
+          "end": 64.217,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "有",
+          "start": 64.217,
+          "end": 64.531,
+          "pinyin": "you3"
+        },
+        {
+          "text": "痛",
+          "start": 64.531,
+          "end": 64.846,
+          "pinyin": "tong4"
+        },
+        {
+          "text": "苦",
+          "start": 64.846,
+          "end": 65.16,
+          "pinyin": "ku3"
+        }
+      ]
+    },
+    {
+      "id": "ja-016",
+      "start": 65.74,
+      "end": 69.4,
+      "text": "小小猪 小小猪 抱着小小猪",
+      "singableText": "小小猪 小小猪 抱着小小猪",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 65.74,
+          "end": 66.073,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 66.073,
+          "end": 66.405,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 66.405,
+          "end": 66.738,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "小",
+          "start": 66.738,
+          "end": 67.071,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 67.071,
+          "end": 67.404,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 67.404,
+          "end": 67.736,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "抱",
+          "start": 67.736,
+          "end": 68.069,
+          "pinyin": "bao4"
+        },
+        {
+          "text": "着",
+          "start": 68.069,
+          "end": 68.402,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "小",
+          "start": 68.402,
+          "end": 68.735,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 68.735,
+          "end": 69.067,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 69.067,
+          "end": 69.4,
+          "pinyin": "zhu1"
+        }
+      ]
+    },
+    {
+      "id": "ja-017",
+      "start": 69.4,
+      "end": 74.3,
+      "text": "世界很重 心很软 今晚慢慢睡",
+      "singableText": "世界很重 心很软 今晚慢慢睡",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "世",
+          "start": 69.4,
+          "end": 69.808,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "界",
+          "start": 69.808,
+          "end": 70.217,
+          "pinyin": "jie4"
+        },
+        {
+          "text": "很",
+          "start": 70.217,
+          "end": 70.625,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "重",
+          "start": 70.625,
+          "end": 71.033,
+          "pinyin": "zhong4"
+        },
+        {
+          "text": "心",
+          "start": 71.033,
+          "end": 71.442,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "很",
+          "start": 71.442,
+          "end": 71.85,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "软",
+          "start": 71.85,
+          "end": 72.258,
+          "pinyin": "ruan3"
+        },
+        {
+          "text": "今",
+          "start": 72.258,
+          "end": 72.667,
+          "pinyin": "jin1"
+        },
+        {
+          "text": "晚",
+          "start": 72.667,
+          "end": 73.075,
+          "pinyin": "wan3"
+        },
+        {
+          "text": "慢",
+          "start": 73.075,
+          "end": 73.483,
+          "pinyin": "man4"
+        },
+        {
+          "text": "慢",
+          "start": 73.483,
+          "end": 73.892,
+          "pinyin": "man4"
+        },
+        {
+          "text": "睡",
+          "start": 73.892,
+          "end": 74.3,
+          "pinyin": "shui4"
+        }
+      ]
+    },
+    {
+      "id": "ja-018",
+      "start": 74.3,
+      "end": 78.46,
+      "text": "小小猪 我也是小小猪",
+      "singableText": "小小猪 我也是小小猪",
+      "role": "translation",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 74.3,
+          "end": 74.762,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 74.762,
+          "end": 75.224,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 75.224,
+          "end": 75.687,
+          "pinyin": "zhu1"
+        },
+        {
+          "text": "我",
+          "start": 75.687,
+          "end": 76.149,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "也",
+          "start": 76.149,
+          "end": 76.611,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "是",
+          "start": 76.611,
+          "end": 77.073,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "小",
+          "start": 77.073,
+          "end": 77.536,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 77.536,
+          "end": 77.998,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "猪",
+          "start": 77.998,
+          "end": 78.46,
+          "pinyin": "zhu1"
+        }
+      ]
+    }
+  ]
+}

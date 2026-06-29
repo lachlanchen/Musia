@@ -1,0 +1,1084 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xiao-xiao-zhu-trilingual",
+  "language": {
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn",
+    "code": "en"
+  },
+  "notes": "ASR/STT corrected against selected Musia render and intended lyric. Active vocal timing uses the selected render's analysis segments; translations share line IDs for rough highlighting.",
+  "provenance": {
+    "source": "Musia selected render",
+    "analysisRun": "data/runs/en-20260629-193403-analysis",
+    "policy": "actual audible structure > close intended lyric > ASR guess > translation draft"
+  },
+  "lines": [
+    {
+      "id": "en-001",
+      "start": 0.0,
+      "end": 4.0,
+      "text": "But you are a piggy, a tiny little piggy",
+      "singableText": "But you are a piggy, a tiny little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "But",
+          "start": 0.0,
+          "end": 0.444
+        },
+        {
+          "text": "you",
+          "start": 0.444,
+          "end": 0.889
+        },
+        {
+          "text": "are",
+          "start": 0.889,
+          "end": 1.333
+        },
+        {
+          "text": "a",
+          "start": 1.333,
+          "end": 1.778
+        },
+        {
+          "text": "piggy",
+          "start": 1.778,
+          "end": 2.222
+        },
+        {
+          "text": "a",
+          "start": 2.222,
+          "end": 2.667
+        },
+        {
+          "text": "tiny",
+          "start": 2.667,
+          "end": 3.111
+        },
+        {
+          "text": "little",
+          "start": 3.111,
+          "end": 3.556
+        },
+        {
+          "text": "piggy",
+          "start": 3.556,
+          "end": 4.0
+        }
+      ]
+    },
+    {
+      "id": "en-002",
+      "start": 4.65,
+      "end": 8.72,
+      "text": "How do you smile like a cloud and wake up hungry?",
+      "singableText": "How do you smile like a cloud and wake up hungry?",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "How",
+          "start": 4.65,
+          "end": 5.02
+        },
+        {
+          "text": "do",
+          "start": 5.02,
+          "end": 5.39
+        },
+        {
+          "text": "you",
+          "start": 5.39,
+          "end": 5.76
+        },
+        {
+          "text": "smile",
+          "start": 5.76,
+          "end": 6.13
+        },
+        {
+          "text": "like",
+          "start": 6.13,
+          "end": 6.5
+        },
+        {
+          "text": "a",
+          "start": 6.5,
+          "end": 6.87
+        },
+        {
+          "text": "cloud",
+          "start": 6.87,
+          "end": 7.24
+        },
+        {
+          "text": "and",
+          "start": 7.24,
+          "end": 7.61
+        },
+        {
+          "text": "wake",
+          "start": 7.61,
+          "end": 7.98
+        },
+        {
+          "text": "up",
+          "start": 7.98,
+          "end": 8.35
+        },
+        {
+          "text": "hungry",
+          "start": 8.35,
+          "end": 8.72
+        }
+      ]
+    },
+    {
+      "id": "en-003",
+      "start": 9.28,
+      "end": 13.42,
+      "text": "I wanna stop now, no more running",
+      "singableText": "I wanna stop now, no more running",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 9.28,
+          "end": 9.871
+        },
+        {
+          "text": "wanna",
+          "start": 9.871,
+          "end": 10.463
+        },
+        {
+          "text": "stop",
+          "start": 10.463,
+          "end": 11.054
+        },
+        {
+          "text": "now",
+          "start": 11.054,
+          "end": 11.646
+        },
+        {
+          "text": "no",
+          "start": 11.646,
+          "end": 12.237
+        },
+        {
+          "text": "more",
+          "start": 12.237,
+          "end": 12.829
+        },
+        {
+          "text": "running",
+          "start": 12.829,
+          "end": 13.42
+        }
+      ]
+    },
+    {
+      "id": "en-004",
+      "start": 13.87,
+      "end": 17.74,
+      "text": "Turn the world down softly in your tiny room",
+      "singableText": "Turn the world down softly in your tiny room",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Turn",
+          "start": 13.87,
+          "end": 14.3
+        },
+        {
+          "text": "the",
+          "start": 14.3,
+          "end": 14.73
+        },
+        {
+          "text": "world",
+          "start": 14.73,
+          "end": 15.16
+        },
+        {
+          "text": "down",
+          "start": 15.16,
+          "end": 15.59
+        },
+        {
+          "text": "softly",
+          "start": 15.59,
+          "end": 16.02
+        },
+        {
+          "text": "in",
+          "start": 16.02,
+          "end": 16.45
+        },
+        {
+          "text": "your",
+          "start": 16.45,
+          "end": 16.88
+        },
+        {
+          "text": "tiny",
+          "start": 16.88,
+          "end": 17.31
+        },
+        {
+          "text": "room",
+          "start": 17.31,
+          "end": 17.74
+        }
+      ]
+    },
+    {
+      "id": "en-005",
+      "start": 18.6,
+      "end": 20.7,
+      "text": "Little piggy, little piggy",
+      "singableText": "Little piggy, little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 18.6,
+          "end": 19.125
+        },
+        {
+          "text": "piggy",
+          "start": 19.125,
+          "end": 19.65
+        },
+        {
+          "text": "little",
+          "start": 19.65,
+          "end": 20.175
+        },
+        {
+          "text": "piggy",
+          "start": 20.175,
+          "end": 20.7
+        }
+      ]
+    },
+    {
+      "id": "en-006",
+      "start": 20.7,
+      "end": 23.0,
+      "text": "I wanna be a little piggy",
+      "singableText": "I wanna be a little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 20.7,
+          "end": 21.083
+        },
+        {
+          "text": "wanna",
+          "start": 21.083,
+          "end": 21.467
+        },
+        {
+          "text": "be",
+          "start": 21.467,
+          "end": 21.85
+        },
+        {
+          "text": "a",
+          "start": 21.85,
+          "end": 22.233
+        },
+        {
+          "text": "little",
+          "start": 22.233,
+          "end": 22.617
+        },
+        {
+          "text": "piggy",
+          "start": 22.617,
+          "end": 23.0
+        }
+      ]
+    },
+    {
+      "id": "en-007",
+      "start": 23.0,
+      "end": 24.98,
+      "text": "No homework, no work tonight",
+      "singableText": "No homework, no work tonight",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 23.0,
+          "end": 23.396
+        },
+        {
+          "text": "homework",
+          "start": 23.396,
+          "end": 23.792
+        },
+        {
+          "text": "no",
+          "start": 23.792,
+          "end": 24.188
+        },
+        {
+          "text": "work",
+          "start": 24.188,
+          "end": 24.584
+        },
+        {
+          "text": "tonight",
+          "start": 24.584,
+          "end": 24.98
+        }
+      ]
+    },
+    {
+      "id": "en-008",
+      "start": 24.98,
+      "end": 27.04,
+      "text": "Just let me be held close",
+      "singableText": "Just let me be held close",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Just",
+          "start": 24.98,
+          "end": 25.323
+        },
+        {
+          "text": "let",
+          "start": 25.323,
+          "end": 25.667
+        },
+        {
+          "text": "me",
+          "start": 25.667,
+          "end": 26.01
+        },
+        {
+          "text": "be",
+          "start": 26.01,
+          "end": 26.353
+        },
+        {
+          "text": "held",
+          "start": 26.353,
+          "end": 26.697
+        },
+        {
+          "text": "close",
+          "start": 26.697,
+          "end": 27.04
+        }
+      ]
+    },
+    {
+      "id": "en-009",
+      "start": 27.64,
+      "end": 29.94,
+      "text": "Little piggy, little piggy",
+      "singableText": "Little piggy, little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 27.64,
+          "end": 28.215
+        },
+        {
+          "text": "piggy",
+          "start": 28.215,
+          "end": 28.79
+        },
+        {
+          "text": "little",
+          "start": 28.79,
+          "end": 29.365
+        },
+        {
+          "text": "piggy",
+          "start": 29.365,
+          "end": 29.94
+        }
+      ]
+    },
+    {
+      "id": "en-010",
+      "start": 29.94,
+      "end": 32.0,
+      "text": "Lend me one small happiness",
+      "singableText": "Lend me one small happiness",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Lend",
+          "start": 29.94,
+          "end": 30.352
+        },
+        {
+          "text": "me",
+          "start": 30.352,
+          "end": 30.764
+        },
+        {
+          "text": "one",
+          "start": 30.764,
+          "end": 31.176
+        },
+        {
+          "text": "small",
+          "start": 31.176,
+          "end": 31.588
+        },
+        {
+          "text": "happiness",
+          "start": 31.588,
+          "end": 32.0
+        }
+      ]
+    },
+    {
+      "id": "en-011",
+      "start": 32.0,
+      "end": 34.72,
+      "text": "Someone sings and someone pats me",
+      "singableText": "Someone sings and someone pats me",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Someone",
+          "start": 32.0,
+          "end": 32.453
+        },
+        {
+          "text": "sings",
+          "start": 32.453,
+          "end": 32.907
+        },
+        {
+          "text": "and",
+          "start": 32.907,
+          "end": 33.36
+        },
+        {
+          "text": "someone",
+          "start": 33.36,
+          "end": 33.813
+        },
+        {
+          "text": "pats",
+          "start": 33.813,
+          "end": 34.267
+        },
+        {
+          "text": "me",
+          "start": 34.267,
+          "end": 34.72
+        }
+      ]
+    },
+    {
+      "id": "en-012",
+      "start": 34.72,
+      "end": 37.14,
+      "text": "No more running, no more tears",
+      "singableText": "No more running, no more tears",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 34.72,
+          "end": 35.123
+        },
+        {
+          "text": "more",
+          "start": 35.123,
+          "end": 35.527
+        },
+        {
+          "text": "running",
+          "start": 35.527,
+          "end": 35.93
+        },
+        {
+          "text": "no",
+          "start": 35.93,
+          "end": 36.333
+        },
+        {
+          "text": "more",
+          "start": 36.333,
+          "end": 36.737
+        },
+        {
+          "text": "tears",
+          "start": 36.737,
+          "end": 37.14
+        }
+      ]
+    },
+    {
+      "id": "en-013",
+      "start": 39.47,
+      "end": 43.07,
+      "text": "Alarms keep calling, messages pile up",
+      "singableText": "Alarms keep calling, messages pile up",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Alarms",
+          "start": 39.47,
+          "end": 40.07
+        },
+        {
+          "text": "keep",
+          "start": 40.07,
+          "end": 40.67
+        },
+        {
+          "text": "calling",
+          "start": 40.67,
+          "end": 41.27
+        },
+        {
+          "text": "messages",
+          "start": 41.27,
+          "end": 41.87
+        },
+        {
+          "text": "pile",
+          "start": 41.87,
+          "end": 42.47
+        },
+        {
+          "text": "up",
+          "start": 42.47,
+          "end": 43.07
+        }
+      ]
+    },
+    {
+      "id": "en-014",
+      "start": 43.07,
+      "end": 46.53,
+      "text": "I say I am okay, but I am a little tired",
+      "singableText": "I say I am okay, but I am a little tired",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 43.07,
+          "end": 43.385
+        },
+        {
+          "text": "say",
+          "start": 43.385,
+          "end": 43.699
+        },
+        {
+          "text": "I",
+          "start": 43.699,
+          "end": 44.014
+        },
+        {
+          "text": "am",
+          "start": 44.014,
+          "end": 44.328
+        },
+        {
+          "text": "okay",
+          "start": 44.328,
+          "end": 44.643
+        },
+        {
+          "text": "but",
+          "start": 44.643,
+          "end": 44.957
+        },
+        {
+          "text": "I",
+          "start": 44.957,
+          "end": 45.272
+        },
+        {
+          "text": "am",
+          "start": 45.272,
+          "end": 45.586
+        },
+        {
+          "text": "a",
+          "start": 45.586,
+          "end": 45.901
+        },
+        {
+          "text": "little",
+          "start": 45.901,
+          "end": 46.215
+        },
+        {
+          "text": "tired",
+          "start": 46.215,
+          "end": 46.53
+        }
+      ]
+    },
+    {
+      "id": "en-015",
+      "start": 46.53,
+      "end": 48.99,
+      "text": "I am not refusing growing",
+      "singableText": "I am not refusing growing",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 46.53,
+          "end": 47.022
+        },
+        {
+          "text": "am",
+          "start": 47.022,
+          "end": 47.514
+        },
+        {
+          "text": "not",
+          "start": 47.514,
+          "end": 48.006
+        },
+        {
+          "text": "refusing",
+          "start": 48.006,
+          "end": 48.498
+        },
+        {
+          "text": "growing",
+          "start": 48.498,
+          "end": 48.99
+        }
+      ]
+    },
+    {
+      "id": "en-016",
+      "start": 49.69,
+      "end": 51.19,
+      "text": "I just need one breath",
+      "singableText": "I just need one breath",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 49.69,
+          "end": 49.99
+        },
+        {
+          "text": "just",
+          "start": 49.99,
+          "end": 50.29
+        },
+        {
+          "text": "need",
+          "start": 50.29,
+          "end": 50.59
+        },
+        {
+          "text": "one",
+          "start": 50.59,
+          "end": 50.89
+        },
+        {
+          "text": "breath",
+          "start": 50.89,
+          "end": 51.19
+        }
+      ]
+    },
+    {
+      "id": "en-017",
+      "start": 51.19,
+      "end": 53.67,
+      "text": "Silly joy is still trying",
+      "singableText": "Silly joy is still trying",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Silly",
+          "start": 51.19,
+          "end": 51.686
+        },
+        {
+          "text": "joy",
+          "start": 51.686,
+          "end": 52.182
+        },
+        {
+          "text": "is",
+          "start": 52.182,
+          "end": 52.678
+        },
+        {
+          "text": "still",
+          "start": 52.678,
+          "end": 53.174
+        },
+        {
+          "text": "trying",
+          "start": 53.174,
+          "end": 53.67
+        }
+      ]
+    },
+    {
+      "id": "en-018",
+      "start": 53.67,
+      "end": 56.09,
+      "text": "That is also doing my best",
+      "singableText": "That is also doing my best",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "That",
+          "start": 53.67,
+          "end": 54.073
+        },
+        {
+          "text": "is",
+          "start": 54.073,
+          "end": 54.477
+        },
+        {
+          "text": "also",
+          "start": 54.477,
+          "end": 54.88
+        },
+        {
+          "text": "doing",
+          "start": 54.88,
+          "end": 55.283
+        },
+        {
+          "text": "my",
+          "start": 55.283,
+          "end": 55.687
+        },
+        {
+          "text": "best",
+          "start": 55.687,
+          "end": 56.09
+        }
+      ]
+    },
+    {
+      "id": "en-019",
+      "start": 56.09,
+      "end": 58.77,
+      "text": "Little piggy, little piggy",
+      "singableText": "Little piggy, little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 56.09,
+          "end": 56.76
+        },
+        {
+          "text": "piggy",
+          "start": 56.76,
+          "end": 57.43
+        },
+        {
+          "text": "little",
+          "start": 57.43,
+          "end": 58.1
+        },
+        {
+          "text": "piggy",
+          "start": 58.1,
+          "end": 58.77
+        }
+      ]
+    },
+    {
+      "id": "en-020",
+      "start": 58.77,
+      "end": 61.25,
+      "text": "I wanna be a little piggy",
+      "singableText": "I wanna be a little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 58.77,
+          "end": 59.183
+        },
+        {
+          "text": "wanna",
+          "start": 59.183,
+          "end": 59.597
+        },
+        {
+          "text": "be",
+          "start": 59.597,
+          "end": 60.01
+        },
+        {
+          "text": "a",
+          "start": 60.01,
+          "end": 60.423
+        },
+        {
+          "text": "little",
+          "start": 60.423,
+          "end": 60.837
+        },
+        {
+          "text": "piggy",
+          "start": 60.837,
+          "end": 61.25
+        }
+      ]
+    },
+    {
+      "id": "en-021",
+      "start": 61.25,
+      "end": 63.27,
+      "text": "Eat a lot and sleep so deep",
+      "singableText": "Eat a lot and sleep so deep",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Eat",
+          "start": 61.25,
+          "end": 61.539
+        },
+        {
+          "text": "a",
+          "start": 61.539,
+          "end": 61.827
+        },
+        {
+          "text": "lot",
+          "start": 61.827,
+          "end": 62.116
+        },
+        {
+          "text": "and",
+          "start": 62.116,
+          "end": 62.404
+        },
+        {
+          "text": "sleep",
+          "start": 62.404,
+          "end": 62.693
+        },
+        {
+          "text": "so",
+          "start": 62.693,
+          "end": 62.981
+        },
+        {
+          "text": "deep",
+          "start": 62.981,
+          "end": 63.27
+        }
+      ]
+    },
+    {
+      "id": "en-022",
+      "start": 63.27,
+      "end": 65.17,
+      "text": "No pain inside my dreams",
+      "singableText": "No pain inside my dreams",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 63.27,
+          "end": 63.65
+        },
+        {
+          "text": "pain",
+          "start": 63.65,
+          "end": 64.03
+        },
+        {
+          "text": "inside",
+          "start": 64.03,
+          "end": 64.41
+        },
+        {
+          "text": "my",
+          "start": 64.41,
+          "end": 64.79
+        },
+        {
+          "text": "dreams",
+          "start": 64.79,
+          "end": 65.17
+        }
+      ]
+    },
+    {
+      "id": "en-023",
+      "start": 65.17,
+      "end": 68.03,
+      "text": "Little piggy, little piggy",
+      "singableText": "Little piggy, little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 65.17,
+          "end": 65.885
+        },
+        {
+          "text": "piggy",
+          "start": 65.885,
+          "end": 66.6
+        },
+        {
+          "text": "little",
+          "start": 66.6,
+          "end": 67.315
+        },
+        {
+          "text": "piggy",
+          "start": 67.315,
+          "end": 68.03
+        }
+      ]
+    },
+    {
+      "id": "en-024",
+      "start": 68.03,
+      "end": 69.95,
+      "text": "Hold my little piggy",
+      "singableText": "Hold my little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Hold",
+          "start": 68.03,
+          "end": 68.51
+        },
+        {
+          "text": "my",
+          "start": 68.51,
+          "end": 68.99
+        },
+        {
+          "text": "little",
+          "start": 68.99,
+          "end": 69.47
+        },
+        {
+          "text": "piggy",
+          "start": 69.47,
+          "end": 69.95
+        }
+      ]
+    },
+    {
+      "id": "en-025",
+      "start": 69.95,
+      "end": 72.51,
+      "text": "The world is heavy, heart is soft",
+      "singableText": "The world is heavy, heart is soft",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 69.95,
+          "end": 70.316
+        },
+        {
+          "text": "world",
+          "start": 70.316,
+          "end": 70.681
+        },
+        {
+          "text": "is",
+          "start": 70.681,
+          "end": 71.047
+        },
+        {
+          "text": "heavy",
+          "start": 71.047,
+          "end": 71.413
+        },
+        {
+          "text": "heart",
+          "start": 71.413,
+          "end": 71.779
+        },
+        {
+          "text": "is",
+          "start": 71.779,
+          "end": 72.144
+        },
+        {
+          "text": "soft",
+          "start": 72.144,
+          "end": 72.51
+        }
+      ]
+    },
+    {
+      "id": "en-026",
+      "start": 72.51,
+      "end": 74.91,
+      "text": "Tonight I breathe slow",
+      "singableText": "Tonight I breathe slow",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Tonight",
+          "start": 72.51,
+          "end": 73.11
+        },
+        {
+          "text": "I",
+          "start": 73.11,
+          "end": 73.71
+        },
+        {
+          "text": "breathe",
+          "start": 73.71,
+          "end": 74.31
+        },
+        {
+          "text": "slow",
+          "start": 74.31,
+          "end": 74.91
+        }
+      ]
+    },
+    {
+      "id": "en-027",
+      "start": 74.91,
+      "end": 83.49,
+      "text": "Little piggy",
+      "singableText": "Little piggy",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "Little",
+          "start": 74.91,
+          "end": 79.2
+        },
+        {
+          "text": "piggy",
+          "start": 79.2,
+          "end": 83.49
+        }
+      ]
+    }
+  ]
+}

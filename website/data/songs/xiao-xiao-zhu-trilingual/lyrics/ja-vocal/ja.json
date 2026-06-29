@@ -1,0 +1,1574 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xiao-xiao-zhu-trilingual",
+  "language": {
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana",
+    "code": "ja"
+  },
+  "notes": "ASR/STT corrected against selected Musia render and intended lyric. Active vocal timing uses the selected render's analysis segments; translations share line IDs for rough highlighting.",
+  "provenance": {
+    "source": "Musia selected render",
+    "analysisRun": "data/runs/ja-20260629-193836-analysis",
+    "policy": "actual audible structure > close intended lyric > ASR guess > translation draft"
+  },
+  "lines": [
+    {
+      "id": "ja-001",
+      "start": 0.0,
+      "end": 4.06,
+      "text": "君はこぶた 小さなこぶた",
+      "singableText": "君はこぶた 小さなこぶた",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 0.0,
+          "end": 0.369,
+          "reading": "きみ"
+        },
+        {
+          "text": "は",
+          "start": 0.369,
+          "end": 0.738
+        },
+        {
+          "text": "こ",
+          "start": 0.738,
+          "end": 1.107
+        },
+        {
+          "text": "ぶ",
+          "start": 1.107,
+          "end": 1.476
+        },
+        {
+          "text": "た",
+          "start": 1.476,
+          "end": 1.845
+        },
+        {
+          "text": "小",
+          "start": 1.845,
+          "end": 2.215,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 2.215,
+          "end": 2.584
+        },
+        {
+          "text": "な",
+          "start": 2.584,
+          "end": 2.953
+        },
+        {
+          "text": "こ",
+          "start": 2.953,
+          "end": 3.322
+        },
+        {
+          "text": "ぶ",
+          "start": 3.322,
+          "end": 3.691
+        },
+        {
+          "text": "た",
+          "start": 3.691,
+          "end": 4.06
+        }
+      ]
+    },
+    {
+      "id": "ja-002",
+      "start": 4.06,
+      "end": 9.26,
+      "text": "雲のように笑って またお腹がすく",
+      "singableText": "雲のように笑って またお腹がすく",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "雲",
+          "start": 4.06,
+          "end": 4.407,
+          "reading": "くも"
+        },
+        {
+          "text": "の",
+          "start": 4.407,
+          "end": 4.753
+        },
+        {
+          "text": "よ",
+          "start": 4.753,
+          "end": 5.1
+        },
+        {
+          "text": "う",
+          "start": 5.1,
+          "end": 5.447
+        },
+        {
+          "text": "に",
+          "start": 5.447,
+          "end": 5.793
+        },
+        {
+          "text": "笑",
+          "start": 5.793,
+          "end": 6.14,
+          "reading": "わら"
+        },
+        {
+          "text": "っ",
+          "start": 6.14,
+          "end": 6.487
+        },
+        {
+          "text": "て",
+          "start": 6.487,
+          "end": 6.833
+        },
+        {
+          "text": "ま",
+          "start": 6.833,
+          "end": 7.18
+        },
+        {
+          "text": "た",
+          "start": 7.18,
+          "end": 7.527
+        },
+        {
+          "text": "お",
+          "start": 7.527,
+          "end": 7.873
+        },
+        {
+          "text": "腹",
+          "start": 7.873,
+          "end": 8.22,
+          "reading": "なか"
+        },
+        {
+          "text": "が",
+          "start": 8.22,
+          "end": 8.567
+        },
+        {
+          "text": "す",
+          "start": 8.567,
+          "end": 8.913
+        },
+        {
+          "text": "く",
+          "start": 8.913,
+          "end": 9.26
+        }
+      ]
+    },
+    {
+      "id": "ja-003",
+      "start": 9.26,
+      "end": 13.42,
+      "text": "僕もとまりたい もう走らない",
+      "singableText": "僕もとまりたい もう走らない",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "start": 9.26,
+          "end": 9.58,
+          "reading": "ぼく"
+        },
+        {
+          "text": "も",
+          "start": 9.58,
+          "end": 9.9
+        },
+        {
+          "text": "と",
+          "start": 9.9,
+          "end": 10.22
+        },
+        {
+          "text": "ま",
+          "start": 10.22,
+          "end": 10.54
+        },
+        {
+          "text": "り",
+          "start": 10.54,
+          "end": 10.86
+        },
+        {
+          "text": "た",
+          "start": 10.86,
+          "end": 11.18
+        },
+        {
+          "text": "い",
+          "start": 11.18,
+          "end": 11.5
+        },
+        {
+          "text": "も",
+          "start": 11.5,
+          "end": 11.82
+        },
+        {
+          "text": "う",
+          "start": 11.82,
+          "end": 12.14
+        },
+        {
+          "text": "走",
+          "start": 12.14,
+          "end": 12.46,
+          "reading": "はし"
+        },
+        {
+          "text": "ら",
+          "start": 12.46,
+          "end": 12.78
+        },
+        {
+          "text": "な",
+          "start": 12.78,
+          "end": 13.1
+        },
+        {
+          "text": "い",
+          "start": 13.1,
+          "end": 13.42
+        }
+      ]
+    },
+    {
+      "id": "ja-004",
+      "start": 13.42,
+      "end": 18.42,
+      "text": "世界を小さくして ふうっと眠ろう",
+      "singableText": "世界を小さくして ふうっと眠ろう",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "世",
+          "start": 13.42,
+          "end": 13.753,
+          "reading": "せ"
+        },
+        {
+          "text": "界",
+          "start": 13.753,
+          "end": 14.087,
+          "reading": "かい"
+        },
+        {
+          "text": "を",
+          "start": 14.087,
+          "end": 14.42
+        },
+        {
+          "text": "小",
+          "start": 14.42,
+          "end": 14.753,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 14.753,
+          "end": 15.087
+        },
+        {
+          "text": "く",
+          "start": 15.087,
+          "end": 15.42
+        },
+        {
+          "text": "し",
+          "start": 15.42,
+          "end": 15.753
+        },
+        {
+          "text": "て",
+          "start": 15.753,
+          "end": 16.087
+        },
+        {
+          "text": "ふ",
+          "start": 16.087,
+          "end": 16.42
+        },
+        {
+          "text": "う",
+          "start": 16.42,
+          "end": 16.753
+        },
+        {
+          "text": "っ",
+          "start": 16.753,
+          "end": 17.087
+        },
+        {
+          "text": "と",
+          "start": 17.087,
+          "end": 17.42
+        },
+        {
+          "text": "眠",
+          "start": 17.42,
+          "end": 17.753,
+          "reading": "ねむ"
+        },
+        {
+          "text": "ろ",
+          "start": 17.753,
+          "end": 18.087
+        },
+        {
+          "text": "う",
+          "start": 18.087,
+          "end": 18.42
+        }
+      ]
+    },
+    {
+      "id": "ja-005",
+      "start": 19.0,
+      "end": 23.58,
+      "text": "こぶた こぶた 僕もこぶたになりたい",
+      "singableText": "こぶた こぶた 僕もこぶたになりたい",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 19.0,
+          "end": 19.286
+        },
+        {
+          "text": "ぶ",
+          "start": 19.286,
+          "end": 19.572
+        },
+        {
+          "text": "た",
+          "start": 19.572,
+          "end": 19.859
+        },
+        {
+          "text": "こ",
+          "start": 19.859,
+          "end": 20.145
+        },
+        {
+          "text": "ぶ",
+          "start": 20.145,
+          "end": 20.431
+        },
+        {
+          "text": "た",
+          "start": 20.431,
+          "end": 20.718
+        },
+        {
+          "text": "僕",
+          "start": 20.718,
+          "end": 21.004,
+          "reading": "ぼく"
+        },
+        {
+          "text": "も",
+          "start": 21.004,
+          "end": 21.29
+        },
+        {
+          "text": "こ",
+          "start": 21.29,
+          "end": 21.576
+        },
+        {
+          "text": "ぶ",
+          "start": 21.576,
+          "end": 21.862
+        },
+        {
+          "text": "た",
+          "start": 21.862,
+          "end": 22.149
+        },
+        {
+          "text": "に",
+          "start": 22.149,
+          "end": 22.435
+        },
+        {
+          "text": "な",
+          "start": 22.435,
+          "end": 22.721
+        },
+        {
+          "text": "り",
+          "start": 22.721,
+          "end": 23.008
+        },
+        {
+          "text": "た",
+          "start": 23.008,
+          "end": 23.294
+        },
+        {
+          "text": "い",
+          "start": 23.294,
+          "end": 23.58
+        }
+      ]
+    },
+    {
+      "id": "ja-006",
+      "start": 23.58,
+      "end": 27.98,
+      "text": "宿題も仕事もない 今夜は抱きしめて",
+      "singableText": "宿題も仕事もない 今夜は抱きしめて",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "宿",
+          "start": 23.58,
+          "end": 23.855,
+          "reading": "しゅく"
+        },
+        {
+          "text": "題",
+          "start": 23.855,
+          "end": 24.13,
+          "reading": "だい"
+        },
+        {
+          "text": "も",
+          "start": 24.13,
+          "end": 24.405
+        },
+        {
+          "text": "仕",
+          "start": 24.405,
+          "end": 24.68,
+          "reading": "し"
+        },
+        {
+          "text": "事",
+          "start": 24.68,
+          "end": 24.955,
+          "reading": "ごと"
+        },
+        {
+          "text": "も",
+          "start": 24.955,
+          "end": 25.23
+        },
+        {
+          "text": "な",
+          "start": 25.23,
+          "end": 25.505
+        },
+        {
+          "text": "い",
+          "start": 25.505,
+          "end": 25.78
+        },
+        {
+          "text": "今",
+          "start": 25.78,
+          "end": 26.055,
+          "reading": "こん"
+        },
+        {
+          "text": "夜",
+          "start": 26.055,
+          "end": 26.33,
+          "reading": "や"
+        },
+        {
+          "text": "は",
+          "start": 26.33,
+          "end": 26.605
+        },
+        {
+          "text": "抱",
+          "start": 26.605,
+          "end": 26.88,
+          "reading": "だ"
+        },
+        {
+          "text": "き",
+          "start": 26.88,
+          "end": 27.155
+        },
+        {
+          "text": "し",
+          "start": 27.155,
+          "end": 27.43
+        },
+        {
+          "text": "め",
+          "start": 27.43,
+          "end": 27.705
+        },
+        {
+          "text": "て",
+          "start": 27.705,
+          "end": 27.98
+        }
+      ]
+    },
+    {
+      "id": "ja-007",
+      "start": 27.98,
+      "end": 31.96,
+      "text": "こぶた こぶた 小さな幸せ",
+      "singableText": "こぶた こぶた 小さな幸せ",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 27.98,
+          "end": 28.342
+        },
+        {
+          "text": "ぶ",
+          "start": 28.342,
+          "end": 28.704
+        },
+        {
+          "text": "た",
+          "start": 28.704,
+          "end": 29.065
+        },
+        {
+          "text": "こ",
+          "start": 29.065,
+          "end": 29.427
+        },
+        {
+          "text": "ぶ",
+          "start": 29.427,
+          "end": 29.789
+        },
+        {
+          "text": "た",
+          "start": 29.789,
+          "end": 30.151
+        },
+        {
+          "text": "小",
+          "start": 30.151,
+          "end": 30.513,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 30.513,
+          "end": 30.875
+        },
+        {
+          "text": "な",
+          "start": 30.875,
+          "end": 31.236
+        },
+        {
+          "text": "幸",
+          "start": 31.236,
+          "end": 31.598,
+          "reading": "しあわ"
+        },
+        {
+          "text": "せ",
+          "start": 31.598,
+          "end": 31.96
+        }
+      ]
+    },
+    {
+      "id": "ja-008",
+      "start": 31.96,
+      "end": 34.9,
+      "text": "歌を聴いて 撫でられて",
+      "singableText": "歌を聴いて 撫でられて",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "歌",
+          "start": 31.96,
+          "end": 32.254,
+          "reading": "うた"
+        },
+        {
+          "text": "を",
+          "start": 32.254,
+          "end": 32.548
+        },
+        {
+          "text": "聴",
+          "start": 32.548,
+          "end": 32.842,
+          "reading": "き"
+        },
+        {
+          "text": "い",
+          "start": 32.842,
+          "end": 33.136
+        },
+        {
+          "text": "て",
+          "start": 33.136,
+          "end": 33.43
+        },
+        {
+          "text": "撫",
+          "start": 33.43,
+          "end": 33.724,
+          "reading": "な"
+        },
+        {
+          "text": "で",
+          "start": 33.724,
+          "end": 34.018
+        },
+        {
+          "text": "ら",
+          "start": 34.018,
+          "end": 34.312
+        },
+        {
+          "text": "れ",
+          "start": 34.312,
+          "end": 34.606
+        },
+        {
+          "text": "て",
+          "start": 34.606,
+          "end": 34.9
+        }
+      ]
+    },
+    {
+      "id": "ja-009",
+      "start": 34.9,
+      "end": 37.48,
+      "text": "急がない 泣かない",
+      "singableText": "急がない 泣かない",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "急",
+          "start": 34.9,
+          "end": 35.222,
+          "reading": "いそ"
+        },
+        {
+          "text": "が",
+          "start": 35.222,
+          "end": 35.545
+        },
+        {
+          "text": "な",
+          "start": 35.545,
+          "end": 35.867
+        },
+        {
+          "text": "い",
+          "start": 35.867,
+          "end": 36.19
+        },
+        {
+          "text": "泣",
+          "start": 36.19,
+          "end": 36.512,
+          "reading": "な"
+        },
+        {
+          "text": "か",
+          "start": 36.512,
+          "end": 36.835
+        },
+        {
+          "text": "な",
+          "start": 36.835,
+          "end": 37.157
+        },
+        {
+          "text": "い",
+          "start": 37.157,
+          "end": 37.48
+        }
+      ]
+    },
+    {
+      "id": "ja-010",
+      "start": 38.81,
+      "end": 42.98,
+      "text": "時計が呼んでる メールが積もってる",
+      "singableText": "時計が呼んでる メールが積もってる",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "時",
+          "start": 38.81,
+          "end": 39.071,
+          "reading": "と"
+        },
+        {
+          "text": "計",
+          "start": 39.071,
+          "end": 39.331,
+          "reading": "けい"
+        },
+        {
+          "text": "が",
+          "start": 39.331,
+          "end": 39.592
+        },
+        {
+          "text": "呼",
+          "start": 39.592,
+          "end": 39.852,
+          "reading": "よ"
+        },
+        {
+          "text": "ん",
+          "start": 39.852,
+          "end": 40.113
+        },
+        {
+          "text": "で",
+          "start": 40.113,
+          "end": 40.374
+        },
+        {
+          "text": "る",
+          "start": 40.374,
+          "end": 40.634
+        },
+        {
+          "text": "メ",
+          "start": 40.634,
+          "end": 40.895
+        },
+        {
+          "text": "ー",
+          "start": 40.895,
+          "end": 41.156
+        },
+        {
+          "text": "ル",
+          "start": 41.156,
+          "end": 41.416
+        },
+        {
+          "text": "が",
+          "start": 41.416,
+          "end": 41.677
+        },
+        {
+          "text": "積",
+          "start": 41.677,
+          "end": 41.938,
+          "reading": "つ"
+        },
+        {
+          "text": "も",
+          "start": 41.938,
+          "end": 42.198
+        },
+        {
+          "text": "っ",
+          "start": 42.198,
+          "end": 42.459
+        },
+        {
+          "text": "て",
+          "start": 42.459,
+          "end": 42.719
+        },
+        {
+          "text": "る",
+          "start": 42.719,
+          "end": 42.98
+        }
+      ]
+    },
+    {
+      "id": "ja-011",
+      "start": 43.48,
+      "end": 47.88,
+      "text": "大丈夫って笑うけど 本当は少し疲れた",
+      "singableText": "大丈夫って笑うけど 本当は少し疲れた",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "大",
+          "start": 43.48,
+          "end": 43.739,
+          "reading": "だい"
+        },
+        {
+          "text": "丈",
+          "start": 43.739,
+          "end": 43.998,
+          "reading": "じょう"
+        },
+        {
+          "text": "夫",
+          "start": 43.998,
+          "end": 44.256,
+          "reading": "ぶ"
+        },
+        {
+          "text": "っ",
+          "start": 44.256,
+          "end": 44.515
+        },
+        {
+          "text": "て",
+          "start": 44.515,
+          "end": 44.774
+        },
+        {
+          "text": "笑",
+          "start": 44.774,
+          "end": 45.033,
+          "reading": "わら"
+        },
+        {
+          "text": "う",
+          "start": 45.033,
+          "end": 45.292
+        },
+        {
+          "text": "け",
+          "start": 45.292,
+          "end": 45.551
+        },
+        {
+          "text": "ど",
+          "start": 45.551,
+          "end": 45.809
+        },
+        {
+          "text": "本",
+          "start": 45.809,
+          "end": 46.068,
+          "reading": "ほん"
+        },
+        {
+          "text": "当",
+          "start": 46.068,
+          "end": 46.327,
+          "reading": "とう"
+        },
+        {
+          "text": "は",
+          "start": 46.327,
+          "end": 46.586
+        },
+        {
+          "text": "少",
+          "start": 46.586,
+          "end": 46.845,
+          "reading": "すこ"
+        },
+        {
+          "text": "し",
+          "start": 46.845,
+          "end": 47.104
+        },
+        {
+          "text": "疲",
+          "start": 47.104,
+          "end": 47.362,
+          "reading": "つか"
+        },
+        {
+          "text": "れ",
+          "start": 47.362,
+          "end": 47.621
+        },
+        {
+          "text": "た",
+          "start": 47.621,
+          "end": 47.88
+        }
+      ]
+    },
+    {
+      "id": "ja-012",
+      "start": 47.88,
+      "end": 52.54,
+      "text": "大人がいやじゃない ただ息をしたい",
+      "singableText": "大人がいやじゃない ただ息をしたい",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "大",
+          "start": 47.88,
+          "end": 48.171,
+          "reading": "だい"
+        },
+        {
+          "text": "人",
+          "start": 48.171,
+          "end": 48.463,
+          "reading": "と"
+        },
+        {
+          "text": "が",
+          "start": 48.463,
+          "end": 48.754
+        },
+        {
+          "text": "い",
+          "start": 48.754,
+          "end": 49.045
+        },
+        {
+          "text": "や",
+          "start": 49.045,
+          "end": 49.336
+        },
+        {
+          "text": "じ",
+          "start": 49.336,
+          "end": 49.627
+        },
+        {
+          "text": "ゃ",
+          "start": 49.627,
+          "end": 49.919
+        },
+        {
+          "text": "な",
+          "start": 49.919,
+          "end": 50.21
+        },
+        {
+          "text": "い",
+          "start": 50.21,
+          "end": 50.501
+        },
+        {
+          "text": "た",
+          "start": 50.501,
+          "end": 50.793
+        },
+        {
+          "text": "だ",
+          "start": 50.793,
+          "end": 51.084
+        },
+        {
+          "text": "息",
+          "start": 51.084,
+          "end": 51.375,
+          "reading": "いき"
+        },
+        {
+          "text": "を",
+          "start": 51.375,
+          "end": 51.666
+        },
+        {
+          "text": "し",
+          "start": 51.666,
+          "end": 51.957
+        },
+        {
+          "text": "た",
+          "start": 51.957,
+          "end": 52.249
+        },
+        {
+          "text": "い",
+          "start": 52.249,
+          "end": 52.54
+        }
+      ]
+    },
+    {
+      "id": "ja-013",
+      "start": 52.54,
+      "end": 56.74,
+      "text": "不器用な幸せも ちゃんと頑張ってる",
+      "singableText": "不器用な幸せも ちゃんと頑張ってる",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "不",
+          "start": 52.54,
+          "end": 52.803,
+          "reading": "ぶ"
+        },
+        {
+          "text": "器",
+          "start": 52.803,
+          "end": 53.065,
+          "reading": "き"
+        },
+        {
+          "text": "用",
+          "start": 53.065,
+          "end": 53.328,
+          "reading": "よう"
+        },
+        {
+          "text": "な",
+          "start": 53.328,
+          "end": 53.59
+        },
+        {
+          "text": "幸",
+          "start": 53.59,
+          "end": 53.852,
+          "reading": "しあわ"
+        },
+        {
+          "text": "せ",
+          "start": 53.852,
+          "end": 54.115
+        },
+        {
+          "text": "も",
+          "start": 54.115,
+          "end": 54.377
+        },
+        {
+          "text": "ち",
+          "start": 54.377,
+          "end": 54.64
+        },
+        {
+          "text": "ゃ",
+          "start": 54.64,
+          "end": 54.903
+        },
+        {
+          "text": "ん",
+          "start": 54.903,
+          "end": 55.165
+        },
+        {
+          "text": "と",
+          "start": 55.165,
+          "end": 55.428
+        },
+        {
+          "text": "頑",
+          "start": 55.428,
+          "end": 55.69,
+          "reading": "がん"
+        },
+        {
+          "text": "張",
+          "start": 55.69,
+          "end": 55.953,
+          "reading": "ば"
+        },
+        {
+          "text": "っ",
+          "start": 55.953,
+          "end": 56.215
+        },
+        {
+          "text": "て",
+          "start": 56.215,
+          "end": 56.477
+        },
+        {
+          "text": "る",
+          "start": 56.477,
+          "end": 56.74
+        }
+      ]
+    },
+    {
+      "id": "ja-014",
+      "start": 56.74,
+      "end": 60.76,
+      "text": "こぶた こぶた 僕もこぶたになりたい",
+      "singableText": "こぶた こぶた 僕もこぶたになりたい",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 56.74,
+          "end": 56.991
+        },
+        {
+          "text": "ぶ",
+          "start": 56.991,
+          "end": 57.242
+        },
+        {
+          "text": "た",
+          "start": 57.242,
+          "end": 57.494
+        },
+        {
+          "text": "こ",
+          "start": 57.494,
+          "end": 57.745
+        },
+        {
+          "text": "ぶ",
+          "start": 57.745,
+          "end": 57.996
+        },
+        {
+          "text": "た",
+          "start": 57.996,
+          "end": 58.248
+        },
+        {
+          "text": "僕",
+          "start": 58.248,
+          "end": 58.499,
+          "reading": "ぼく"
+        },
+        {
+          "text": "も",
+          "start": 58.499,
+          "end": 58.75
+        },
+        {
+          "text": "こ",
+          "start": 58.75,
+          "end": 59.001
+        },
+        {
+          "text": "ぶ",
+          "start": 59.001,
+          "end": 59.252
+        },
+        {
+          "text": "た",
+          "start": 59.252,
+          "end": 59.504
+        },
+        {
+          "text": "に",
+          "start": 59.504,
+          "end": 59.755
+        },
+        {
+          "text": "な",
+          "start": 59.755,
+          "end": 60.006
+        },
+        {
+          "text": "り",
+          "start": 60.006,
+          "end": 60.258
+        },
+        {
+          "text": "た",
+          "start": 60.258,
+          "end": 60.509
+        },
+        {
+          "text": "い",
+          "start": 60.509,
+          "end": 60.76
+        }
+      ]
+    },
+    {
+      "id": "ja-015",
+      "start": 60.76,
+      "end": 65.16,
+      "text": "いっぱい食べて 深く眠る 夢に苦しみはない",
+      "singableText": "いっぱい食べて 深く眠る 夢に苦しみはない",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "い",
+          "start": 60.76,
+          "end": 60.992
+        },
+        {
+          "text": "っ",
+          "start": 60.992,
+          "end": 61.223
+        },
+        {
+          "text": "ぱ",
+          "start": 61.223,
+          "end": 61.455
+        },
+        {
+          "text": "い",
+          "start": 61.455,
+          "end": 61.686
+        },
+        {
+          "text": "食",
+          "start": 61.686,
+          "end": 61.918,
+          "reading": "た"
+        },
+        {
+          "text": "べ",
+          "start": 61.918,
+          "end": 62.149
+        },
+        {
+          "text": "て",
+          "start": 62.149,
+          "end": 62.381
+        },
+        {
+          "text": "深",
+          "start": 62.381,
+          "end": 62.613,
+          "reading": "ふか"
+        },
+        {
+          "text": "く",
+          "start": 62.613,
+          "end": 62.844
+        },
+        {
+          "text": "眠",
+          "start": 62.844,
+          "end": 63.076,
+          "reading": "ねむ"
+        },
+        {
+          "text": "る",
+          "start": 63.076,
+          "end": 63.307
+        },
+        {
+          "text": "夢",
+          "start": 63.307,
+          "end": 63.539,
+          "reading": "ゆめ"
+        },
+        {
+          "text": "に",
+          "start": 63.539,
+          "end": 63.771
+        },
+        {
+          "text": "苦",
+          "start": 63.771,
+          "end": 64.002,
+          "reading": "くる"
+        },
+        {
+          "text": "し",
+          "start": 64.002,
+          "end": 64.234
+        },
+        {
+          "text": "み",
+          "start": 64.234,
+          "end": 64.465
+        },
+        {
+          "text": "は",
+          "start": 64.465,
+          "end": 64.697
+        },
+        {
+          "text": "な",
+          "start": 64.697,
+          "end": 64.928
+        },
+        {
+          "text": "い",
+          "start": 64.928,
+          "end": 65.16
+        }
+      ]
+    },
+    {
+      "id": "ja-016",
+      "start": 65.74,
+      "end": 69.4,
+      "text": "こぶた こぶた 小さなこぶたを抱いて",
+      "singableText": "こぶた こぶた 小さなこぶたを抱いて",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 65.74,
+          "end": 65.969
+        },
+        {
+          "text": "ぶ",
+          "start": 65.969,
+          "end": 66.197
+        },
+        {
+          "text": "た",
+          "start": 66.197,
+          "end": 66.426
+        },
+        {
+          "text": "こ",
+          "start": 66.426,
+          "end": 66.655
+        },
+        {
+          "text": "ぶ",
+          "start": 66.655,
+          "end": 66.884
+        },
+        {
+          "text": "た",
+          "start": 66.884,
+          "end": 67.112
+        },
+        {
+          "text": "小",
+          "start": 67.112,
+          "end": 67.341,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 67.341,
+          "end": 67.57
+        },
+        {
+          "text": "な",
+          "start": 67.57,
+          "end": 67.799
+        },
+        {
+          "text": "こ",
+          "start": 67.799,
+          "end": 68.028
+        },
+        {
+          "text": "ぶ",
+          "start": 68.028,
+          "end": 68.256
+        },
+        {
+          "text": "た",
+          "start": 68.256,
+          "end": 68.485
+        },
+        {
+          "text": "を",
+          "start": 68.485,
+          "end": 68.714
+        },
+        {
+          "text": "抱",
+          "start": 68.714,
+          "end": 68.943,
+          "reading": "だ"
+        },
+        {
+          "text": "い",
+          "start": 68.943,
+          "end": 69.171
+        },
+        {
+          "text": "て",
+          "start": 69.171,
+          "end": 69.4
+        }
+      ]
+    },
+    {
+      "id": "ja-017",
+      "start": 69.4,
+      "end": 74.3,
+      "text": "世界は重い 心はやわい 今夜はゆっくり眠ろう",
+      "singableText": "世界は重い 心はやわい 今夜はゆっくり眠ろう",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "世",
+          "start": 69.4,
+          "end": 69.645,
+          "reading": "せ"
+        },
+        {
+          "text": "界",
+          "start": 69.645,
+          "end": 69.89,
+          "reading": "かい"
+        },
+        {
+          "text": "は",
+          "start": 69.89,
+          "end": 70.135
+        },
+        {
+          "text": "重",
+          "start": 70.135,
+          "end": 70.38,
+          "reading": "おも"
+        },
+        {
+          "text": "い",
+          "start": 70.38,
+          "end": 70.625
+        },
+        {
+          "text": "心",
+          "start": 70.625,
+          "end": 70.87,
+          "reading": "こころ"
+        },
+        {
+          "text": "は",
+          "start": 70.87,
+          "end": 71.115
+        },
+        {
+          "text": "や",
+          "start": 71.115,
+          "end": 71.36
+        },
+        {
+          "text": "わ",
+          "start": 71.36,
+          "end": 71.605
+        },
+        {
+          "text": "い",
+          "start": 71.605,
+          "end": 71.85
+        },
+        {
+          "text": "今",
+          "start": 71.85,
+          "end": 72.095,
+          "reading": "こん"
+        },
+        {
+          "text": "夜",
+          "start": 72.095,
+          "end": 72.34,
+          "reading": "や"
+        },
+        {
+          "text": "は",
+          "start": 72.34,
+          "end": 72.585
+        },
+        {
+          "text": "ゆ",
+          "start": 72.585,
+          "end": 72.83
+        },
+        {
+          "text": "っ",
+          "start": 72.83,
+          "end": 73.075
+        },
+        {
+          "text": "く",
+          "start": 73.075,
+          "end": 73.32
+        },
+        {
+          "text": "り",
+          "start": 73.32,
+          "end": 73.565
+        },
+        {
+          "text": "眠",
+          "start": 73.565,
+          "end": 73.81,
+          "reading": "ねむ"
+        },
+        {
+          "text": "ろ",
+          "start": 73.81,
+          "end": 74.055
+        },
+        {
+          "text": "う",
+          "start": 74.055,
+          "end": 74.3
+        }
+      ]
+    },
+    {
+      "id": "ja-018",
+      "start": 74.3,
+      "end": 78.46,
+      "text": "こぶた 僕も小さなこぶた",
+      "singableText": "こぶた 僕も小さなこぶた",
+      "role": "active-vocal-lyric",
+      "tokens": [
+        {
+          "text": "こ",
+          "start": 74.3,
+          "end": 74.678
+        },
+        {
+          "text": "ぶ",
+          "start": 74.678,
+          "end": 75.056
+        },
+        {
+          "text": "た",
+          "start": 75.056,
+          "end": 75.435
+        },
+        {
+          "text": "僕",
+          "start": 75.435,
+          "end": 75.813,
+          "reading": "ぼく"
+        },
+        {
+          "text": "も",
+          "start": 75.813,
+          "end": 76.191
+        },
+        {
+          "text": "小",
+          "start": 76.191,
+          "end": 76.569,
+          "reading": "こ"
+        },
+        {
+          "text": "さ",
+          "start": 76.569,
+          "end": 76.947
+        },
+        {
+          "text": "な",
+          "start": 76.947,
+          "end": 77.325
+        },
+        {
+          "text": "こ",
+          "start": 77.325,
+          "end": 77.704
+        },
+        {
+          "text": "ぶ",
+          "start": 77.704,
+          "end": 78.082
+        },
+        {
+          "text": "た",
+          "start": 78.082,
+          "end": 78.46
+        }
+      ]
+    }
+  ]
+}
