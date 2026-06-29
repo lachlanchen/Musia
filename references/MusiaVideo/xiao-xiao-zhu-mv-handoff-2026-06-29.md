@@ -54,7 +54,7 @@ Story: the four buddies are tired by homework, messages, reports, and deadlines.
 
 ## LALACHAN Character Roles
 
-- 阿芽酱: lead singer / gentle organizer; comforts everyone.
+- 阿芽酱: red panda lead singer and camera center; most vocal lines should return to her face, gestures, and performance.
 - 啦啦侠: warm and brave, slightly hungry, protects the tiny piggy cloud.
 - 飒飒君: quick movement and comic reactions; dodges notification bubbles.
 - 庄子机器人: precise and dry; uses a tiny `quiet mode` remote and blanket-shield.
