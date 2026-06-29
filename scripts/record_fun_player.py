@@ -19,7 +19,8 @@ import tempfile
 import threading
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
+from urllib.request import urlretrieve
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -54,6 +55,20 @@ def playable_assets(manifest: dict) -> list[dict]:
     if video.get("src"):
         result.append({**video, "id": video.get("id") or "video", "type": "video"})
     return result
+
+
+def resolve_media_source(src: str) -> Path:
+    parsed = urlparse(src)
+    if parsed.scheme in {"http", "https"}:
+        filename = Path(parsed.path).name or "remote-audio"
+        cache_dir = ROOT / "data" / "video_captures" / "_audio_cache"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        cached = cache_dir / filename
+        if not cached.exists() or cached.stat().st_size == 0:
+            print(f"Downloading remote media for muxing: {src}", flush=True)
+            urlretrieve(src, cached)
+        return cached.resolve()
+    return (WEBSITE / src).resolve()
 
 
 def start_server(root: Path) -> tuple[ThreadingHTTPServer, str]:
@@ -140,7 +155,7 @@ def main() -> None:
         fail(f"No playable local assets in manifest: {manifest_path}")
     asset = next((entry for entry in assets if entry.get("id") == args.asset_id), assets[0])
     media_src = asset.get("src")
-    audio_path = (WEBSITE / media_src).resolve()
+    audio_path = resolve_media_source(media_src)
     if not audio_path.exists():
         fail(f"Audio/video source not found: {audio_path}")
 

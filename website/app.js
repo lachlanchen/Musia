@@ -477,6 +477,7 @@ function setMediaSource(asset, keepTime = false) {
   video.hidden = asset.type !== "video";
   $("play").disabled = false;
   $("play").title = "";
+  state.mediaElement.crossOrigin = "anonymous";
   state.mediaElement.src = resolveSitePath(asset.src);
   if (keepTime) state.mediaElement.currentTime = Math.min(previousTime, (state.manifest.duration || previousTime) - 0.1);
   if (wasPlaying) state.mediaElement.play();
@@ -777,19 +778,26 @@ function initAudioGraph() {
   if (!media || state.sourceElement === media) return;
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   if (!AudioContext) return;
-  if (!state.audioContext) state.audioContext = new AudioContext();
-  if (state.source) state.source.disconnect();
-  state.analyser = state.audioContext.createAnalyser();
-  state.analyser.fftSize = 128;
-  state.frequencyData = new Uint8Array(state.analyser.frequencyBinCount);
-  state.source = state.sourceNodes.get(media);
-  if (!state.source) {
-    state.source = state.audioContext.createMediaElementSource(media);
-    state.sourceNodes.set(media, state.source);
+  try {
+    if (!state.audioContext) state.audioContext = new AudioContext();
+    if (state.source) state.source.disconnect();
+    state.analyser = state.audioContext.createAnalyser();
+    state.analyser.fftSize = 128;
+    state.frequencyData = new Uint8Array(state.analyser.frequencyBinCount);
+    state.source = state.sourceNodes.get(media);
+    if (!state.source) {
+      state.source = state.audioContext.createMediaElementSource(media);
+      state.sourceNodes.set(media, state.source);
+    }
+    state.source.connect(state.analyser);
+    state.analyser.connect(state.audioContext.destination);
+    state.sourceElement = media;
+  } catch (error) {
+    console.warn("Audio visualizer unavailable; continuing normal media playback.", error);
+    state.analyser = null;
+    state.frequencyData = null;
+    state.sourceElement = null;
   }
-  state.source.connect(state.analyser);
-  state.analyser.connect(state.audioContext.destination);
-  state.sourceElement = media;
 }
 
 function drawVisualizer() {
