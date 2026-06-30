@@ -79,6 +79,57 @@ Important policy decision:
 
 The public lyric JSON preserves Li Bai's original poem text where the rendered syllables are sound-close and the poem context is clear. This is not a perfect commercial master. Some classical words are garbled, and the website item is labeled/provenanced as an original-poem ACE experiment.
 
+## Lyric Realignment - 2026-07-01
+
+After user review, the public lyric JSON was tightened again against the actual
+selected audio. Evidence used:
+
+- existing selected-audio and vocal-stem `small` / `medium` / `large-v3` ASR;
+- existing no-VAD ASR packet under
+  `data/creative_projects/xia-ke-xing-original-poem-20260701/correction_packets/candidate3/`;
+- an additional `large-v3` prompted ASR pass on the separated vocal stem using
+  the source poem as initial prompt.
+
+Prompted vocal-stem `large-v3` anchors:
+
+```text
+20.00-27.24 客门呼应 客门呼应 吴钩霜雪明
+28.56-32.18 银鞍照白马洒脱入流星
+33.14-34.96 誓不杀一人
+34.96-37.14 誓了负一曲
+37.14-40.00 生苍生与命
+43.64-45.82 拖剑系前行
+46.62-48.92 将枝挡住怀
+48.92-51.34 持上拳后一举
+51.34-53.64 持上拳后一
+56.26-61.82 三辈徒然诺五月到为期
+64.28-68.86 愿法而得后一气俗离神
+68.86-75.20 就照辉青春 / 寒淡鲜鲜真净
+76.20-80.50 千秋而壮世 / 鲜河大凉城
+80.50-86.20 从死下孤狭 / 不残血上瘾
+88.80-93.96 谁能说孤狭 / 白首抬陷阱
+```
+
+Website correction decisions:
+
+- the opening now starts at `20.00s` and shows `赵客缦胡缨` twice before
+  `吴钩霜雪明`, matching the repeated vocal shape;
+- `千里不留行` is not published as a sung line because the audio goes directly
+  from the `十步杀一人`-like phrase into the `事了拂衣去`-like phrase;
+- `闲过信陵饮` is not published because the slot is much closer to
+  `脱剑膝前横`;
+- `持觞劝侯嬴` is shown twice because the render repeats that phrase;
+- the final two lines now follow the AI-mutated sound as `谁能说孤侠` and
+  `白首太仙境` instead of forcing the clean poem text.
+
+Updated files:
+
+- `scripts/prepare_xia_ke_xing_original_poem_fun_item.py`
+- `website/data/songs/xia-ke-xing-original-poem/manifest.json`
+- `website/data/songs/xia-ke-xing-original-poem/lyrics/zh-vocal/zh-Hans.json`
+- `website/data/songs/xia-ke-xing-original-poem/lyrics/zh-vocal/en.json`
+- `website/data/songs/xia-ke-xing-original-poem/lyrics/zh-vocal/ja.json`
+
 ## Website Item
 
 Website URL:
@@ -106,4 +157,3 @@ git diff --check
 ```
 
 All passed before commit.
-

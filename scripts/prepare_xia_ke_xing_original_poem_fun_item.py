@@ -138,34 +138,36 @@ def make_line(line_id: str, start: float, end: float, text: str, code: str) -> d
 
 
 def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
-    # Candidate 3 was selected from four exact-poem ACE passes. Timings are based
-    # on vocal-stem medium/large no-VAD ASR, with sound-close restoration to the
-    # original poem text where the rendered syllables support the source line.
+    # Candidate 3 was selected from four exact-poem ACE passes. Timings and line
+    # choices are based on vocal-stem medium/large no-VAD ASR plus a large-v3
+    # prompted pass. The active text preserves Li Bai's poem only where the
+    # rendered syllables support it; omitted, repeated, and mutated lines follow
+    # the actual sound instead of the prompt.
     return [
-        ("l01", 20.08, 23.60, "赵客缦胡缨", "Zhao knights wear rough Hu tassels.", "趙の侠客は胡の粗い冠紐をまとう"),
-        ("l02", 23.60, 28.42, "吴钩霜雪明", "Their Wu hooks gleam like frost and snow.", "呉鉤は霜雪のように明るい"),
-        ("l03", 28.42, 30.80, "银鞍照白马", "Silver saddles shine on white horses.", "銀の鞍が白馬を照らす"),
-        ("l04", 30.80, 33.54, "飒沓如流星", "Swift and ringing, like falling stars.", "颯沓として流星のように駆ける"),
-        ("l05", 33.54, 35.20, "十步杀一人", "In ten steps, one man falls.", "十歩に一人を斬る"),
-        ("l06", 35.20, 36.55, "千里不留行", "Across a thousand miles, no trace remains.", "千里を行き跡を留めない"),
-        ("l07", 36.55, 37.90, "事了拂衣去", "When the deed is done, he brushes his robe and leaves.", "事が終われば衣を払って去る"),
-        ("l08", 37.90, 43.42, "深藏身与名", "Hiding both his body and his name.", "身も名も深く隠す"),
-        ("l09", 44.12, 46.70, "闲过信陵饮", "Leisurely he passes Xinling to drink.", "閑かに信陵に過り酒を飲む"),
-        ("l10", 46.70, 49.22, "脱剑膝前横", "He takes off his sword and lays it across his knees.", "剣を脱ぎ膝前に横たえる"),
-        ("l11", 49.22, 51.70, "将炙啖朱亥", "He brings roast meat for Zhu Hai to eat.", "炙り肉を朱亥にすすめる"),
-        ("l12", 51.70, 54.18, "持觞劝侯嬴", "Holding a cup, he urges Hou Ying to drink.", "杯を持って侯嬴に勧める"),
-        ("l13", 56.54, 59.30, "三杯吐然诺", "After three cups, his pledge is spoken.", "三杯の後、約束を口にする"),
-        ("l14", 59.30, 64.02, "五岳倒为轻", "The Five Sacred Peaks become light beside it.", "五岳も倒れて軽しとなる"),
-        ("l15", 64.02, 66.70, "眼花耳热后", "When eyes dazzle and ears burn,", "目はくらみ耳は熱した後"),
-        ("l16", 66.70, 69.68, "意气素霓生", "His spirit rises like a white rainbow.", "意気は白い虹となって生じる"),
-        ("l17", 69.68, 72.50, "救赵挥金槌", "To rescue Zhao, he swings the golden hammer.", "趙を救わんと金槌を振るう"),
-        ("l18", 72.50, 76.68, "邯郸先震惊", "Handan is shaken before all others.", "邯鄲はまず震え驚く"),
-        ("l19", 76.68, 78.90, "千秋二壮士", "For a thousand autumns, the two heroes remain.", "千秋に二人の壮士あり"),
-        ("l20", 78.90, 81.00, "烜赫大梁城", "Their fame blazes through Daliang city.", "大梁の城に赫々と名をあげる"),
-        ("l21", 81.00, 83.36, "纵死侠骨香", "Even in death, knightly bones are fragrant.", "たとえ死しても侠骨は香る"),
+        ("l01", 20.00, 22.72, "赵客缦胡缨", "Zhao knights wear rough Hu tassels.", "趙の侠客は胡の粗い冠紐をまとう"),
+        ("l02", 22.72, 25.18, "赵客缦胡缨", "Zhao knights wear rough Hu tassels again.", "趙の侠客はふたたび胡の冠紐をまとう"),
+        ("l03", 25.18, 27.24, "吴钩霜雪明", "Their Wu hooks gleam like frost and snow.", "呉鉤は霜雪のように明るい"),
+        ("l04", 28.56, 30.35, "银鞍照白马", "Silver saddles shine on white horses.", "銀の鞍が白馬を照らす"),
+        ("l05", 30.35, 32.18, "飒沓如流星", "Swift and ringing, like falling stars.", "颯沓として流星のように駆ける"),
+        ("l06", 33.14, 34.96, "十步杀一人", "In ten steps, one man falls.", "十歩に一人を斬る"),
+        ("l07", 34.96, 37.14, "事了拂衣去", "When the deed is done, he brushes his robe and leaves.", "事が終われば衣を払って去る"),
+        ("l08", 37.14, 40.00, "深藏身与名", "Hiding both his body and his name.", "身も名も深く隠す"),
+        ("l09", 43.64, 45.82, "脱剑膝前横", "He takes off his sword and lays it across his knees.", "剣を脱ぎ膝前に横たえる"),
+        ("l10", 46.62, 48.92, "将炙啖朱亥", "He brings roast meat for Zhu Hai to eat.", "炙り肉を朱亥にすすめる"),
+        ("l11", 48.92, 51.34, "持觞劝侯嬴", "Holding a cup, he urges Hou Ying to drink.", "杯を持って侯嬴に勧める"),
+        ("l12", 51.34, 53.64, "持觞劝侯嬴", "Holding the cup, he urges Hou Ying again.", "杯を持ち、もう一度侯嬴に勧める"),
+        ("l13", 56.26, 59.20, "三杯吐然诺", "After three cups, his pledge is spoken.", "三杯の後、約束を口にする"),
+        ("l14", 59.20, 61.82, "五岳倒为轻", "The Five Sacred Peaks become light beside it.", "五岳も倒れて軽しとなる"),
+        ("l15", 64.28, 66.55, "眼花耳热后", "When eyes dazzle and ears burn,", "目はくらみ耳は熱した後"),
+        ("l16", 66.55, 68.86, "意气素霓生", "His spirit rises like a white rainbow.", "意気は白い虹となって生じる"),
+        ("l17", 68.86, 71.34, "救赵挥金槌", "To rescue Zhao, he swings the golden hammer.", "趙を救わんと金槌を振るう"),
+        ("l18", 71.34, 75.20, "邯郸先震惊", "Handan is shaken before all others.", "邯鄲はまず震え驚く"),
+        ("l19", 76.20, 78.30, "千秋二壮士", "For a thousand autumns, the two heroes remain.", "千秋に二人の壮士あり"),
+        ("l20", 78.30, 80.50, "烜赫大梁城", "Their fame blazes through Daliang city.", "大梁の城に赫々と名をあげる"),
+        ("l21", 80.50, 83.36, "纵死侠骨香", "Even in death, knightly bones are fragrant.", "たとえ死しても侠骨は香る"),
         ("l22", 83.36, 86.20, "不惭世上英", "They need not blush before the world's heroes.", "世の英傑に恥じることはない"),
-        ("l23", 88.80, 91.14, "谁能书阁下", "Who could write beneath the library tower,", "誰が書閣の下で記せよう"),
-        ("l24", 91.14, 93.96, "白首太玄经", "White-haired over the Taixuan Classic?", "白髪で太玄経を読むばかりの者に"),
+        ("l23", 88.80, 91.14, "谁能说孤侠", "Who can speak for the lone knight?", "誰が孤高の侠客を語れるだろう"),
+        ("l24", 91.14, 93.96, "白首太仙境", "White hair drifts toward a fairy realm.", "白髪は仙境へと向かう"),
     ]
 
 
@@ -343,8 +345,10 @@ def write_media_item() -> None:
                 "gate": "experimental-review",
             },
             "lyricCorrection": (
-                "ASR-audited original-poem track. Exact poem text is preserved where sound-close ASR and context support it. "
-                "This render has imperfect classical diction; do not treat it as a perfect commercial master."
+                "ASR-realigned original-poem track, updated 2026-07-01 after a large-v3 prompted pass on the separated vocal stem. "
+                "The active Mandarin lyric reflects repeated, omitted, and mutated lines in the render: the opening repeats a "
+                "赵客缦胡缨-like phrase, 千里不留行 and 闲过信陵饮 are not published as sung lines, 持觞劝侯嬴 repeats, and the "
+                "final couplet follows the AI-mutated sound. This render has imperfect classical diction; do not treat it as a perfect commercial master."
             ),
             "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0075c3bed0eb0cd1016a440b08763c8191833a70b775131ef6.png",
             "publicAudio": PUBLIC_AUDIO_NAME,
