@@ -1,0 +1,1522 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "qiang-jin-jiu-normal-song",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 13.74,
+      "end": 15.78,
+      "text": "The Yellow River comes from the sky.",
+      "singableText": "The Yellow River comes from the sky.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 13.74,
+          "end": 13.995
+        },
+        {
+          "text": "Yellow",
+          "start": 13.995,
+          "end": 14.25
+        },
+        {
+          "text": "River",
+          "start": 14.25,
+          "end": 14.505
+        },
+        {
+          "text": "comes",
+          "start": 14.505,
+          "end": 14.76
+        },
+        {
+          "text": "from",
+          "start": 14.76,
+          "end": 15.015
+        },
+        {
+          "text": "the",
+          "start": 15.015,
+          "end": 15.27
+        },
+        {
+          "text": "sky",
+          "start": 15.27,
+          "end": 15.525
+        },
+        {
+          "text": ".",
+          "start": 15.525,
+          "end": 15.78
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 15.78,
+      "end": 17.74,
+      "text": "Moonlight fills the terrace.",
+      "singableText": "Moonlight fills the terrace.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Moonlight",
+          "start": 15.78,
+          "end": 16.172
+        },
+        {
+          "text": "fills",
+          "start": 16.172,
+          "end": 16.564
+        },
+        {
+          "text": "the",
+          "start": 16.564,
+          "end": 16.956
+        },
+        {
+          "text": "terrace",
+          "start": 16.956,
+          "end": 17.348
+        },
+        {
+          "text": ".",
+          "start": 17.348,
+          "end": 17.74
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 17.74,
+      "end": 19.28,
+      "text": "One cup to wind and snow.",
+      "singableText": "One cup to wind and snow.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "One",
+          "start": 17.74,
+          "end": 17.96
+        },
+        {
+          "text": "cup",
+          "start": 17.96,
+          "end": 18.18
+        },
+        {
+          "text": "to",
+          "start": 18.18,
+          "end": 18.4
+        },
+        {
+          "text": "wind",
+          "start": 18.4,
+          "end": 18.62
+        },
+        {
+          "text": "and",
+          "start": 18.62,
+          "end": 18.84
+        },
+        {
+          "text": "snow",
+          "start": 18.84,
+          "end": 19.06
+        },
+        {
+          "text": ".",
+          "start": 19.06,
+          "end": 19.28
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 19.28,
+      "end": 20.82,
+      "text": "One cup to dust and earth.",
+      "singableText": "One cup to dust and earth.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "One",
+          "start": 19.28,
+          "end": 19.5
+        },
+        {
+          "text": "cup",
+          "start": 19.5,
+          "end": 19.72
+        },
+        {
+          "text": "to",
+          "start": 19.72,
+          "end": 19.94
+        },
+        {
+          "text": "dust",
+          "start": 19.94,
+          "end": 20.16
+        },
+        {
+          "text": "and",
+          "start": 20.16,
+          "end": 20.38
+        },
+        {
+          "text": "earth",
+          "start": 20.38,
+          "end": 20.6
+        },
+        {
+          "text": ".",
+          "start": 20.6,
+          "end": 20.82
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 20.82,
+      "end": 22.38,
+      "text": "White hair shines in the bright mirror.",
+      "singableText": "White hair shines in the bright mirror.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "White",
+          "start": 20.82,
+          "end": 21.015
+        },
+        {
+          "text": "hair",
+          "start": 21.015,
+          "end": 21.21
+        },
+        {
+          "text": "shines",
+          "start": 21.21,
+          "end": 21.405
+        },
+        {
+          "text": "in",
+          "start": 21.405,
+          "end": 21.6
+        },
+        {
+          "text": "the",
+          "start": 21.6,
+          "end": 21.795
+        },
+        {
+          "text": "bright",
+          "start": 21.795,
+          "end": 21.99
+        },
+        {
+          "text": "mirror",
+          "start": 21.99,
+          "end": 22.185
+        },
+        {
+          "text": ".",
+          "start": 22.185,
+          "end": 22.38
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 22.38,
+      "end": 23.94,
+      "text": "The young heart is still in my chest.",
+      "singableText": "The young heart is still in my chest.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 22.38,
+          "end": 22.553
+        },
+        {
+          "text": "young",
+          "start": 22.553,
+          "end": 22.727
+        },
+        {
+          "text": "heart",
+          "start": 22.727,
+          "end": 22.9
+        },
+        {
+          "text": "is",
+          "start": 22.9,
+          "end": 23.073
+        },
+        {
+          "text": "still",
+          "start": 23.073,
+          "end": 23.247
+        },
+        {
+          "text": "in",
+          "start": 23.247,
+          "end": 23.42
+        },
+        {
+          "text": "my",
+          "start": 23.42,
+          "end": 23.593
+        },
+        {
+          "text": "chest",
+          "start": 23.593,
+          "end": 23.767
+        },
+        {
+          "text": ".",
+          "start": 23.767,
+          "end": 23.94
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 23.94,
+      "end": 26.17,
+      "text": "Do not ask whether I return.",
+      "singableText": "Do not ask whether I return.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Do",
+          "start": 23.94,
+          "end": 24.259
+        },
+        {
+          "text": "not",
+          "start": 24.259,
+          "end": 24.577
+        },
+        {
+          "text": "ask",
+          "start": 24.577,
+          "end": 24.896
+        },
+        {
+          "text": "whether",
+          "start": 24.896,
+          "end": 25.214
+        },
+        {
+          "text": "I",
+          "start": 25.214,
+          "end": 25.533
+        },
+        {
+          "text": "return",
+          "start": 25.533,
+          "end": 25.851
+        },
+        {
+          "text": ".",
+          "start": 25.851,
+          "end": 26.17
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 26.17,
+      "end": 28.4,
+      "text": "Tonight the flowers are opening.",
+      "singableText": "Tonight the flowers are opening.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Tonight",
+          "start": 26.17,
+          "end": 26.542
+        },
+        {
+          "text": "the",
+          "start": 26.542,
+          "end": 26.913
+        },
+        {
+          "text": "flowers",
+          "start": 26.913,
+          "end": 27.285
+        },
+        {
+          "text": "are",
+          "start": 27.285,
+          "end": 27.657
+        },
+        {
+          "text": "opening",
+          "start": 27.657,
+          "end": 28.028
+        },
+        {
+          "text": ".",
+          "start": 28.028,
+          "end": 28.4
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 28.4,
+      "end": 31.41,
+      "text": "How many chances does life give?",
+      "singableText": "How many chances does life give?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "How",
+          "start": 28.4,
+          "end": 28.83
+        },
+        {
+          "text": "many",
+          "start": 28.83,
+          "end": 29.26
+        },
+        {
+          "text": "chances",
+          "start": 29.26,
+          "end": 29.69
+        },
+        {
+          "text": "does",
+          "start": 29.69,
+          "end": 30.12
+        },
+        {
+          "text": "life",
+          "start": 30.12,
+          "end": 30.55
+        },
+        {
+          "text": "give",
+          "start": 30.55,
+          "end": 30.98
+        },
+        {
+          "text": "?",
+          "start": 30.98,
+          "end": 31.41
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 31.41,
+      "end": 34.42,
+      "text": "Dare to set the dream alight.",
+      "singableText": "Dare to set the dream alight.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Dare",
+          "start": 31.41,
+          "end": 31.84
+        },
+        {
+          "text": "to",
+          "start": 31.84,
+          "end": 32.27
+        },
+        {
+          "text": "set",
+          "start": 32.27,
+          "end": 32.7
+        },
+        {
+          "text": "the",
+          "start": 32.7,
+          "end": 33.13
+        },
+        {
+          "text": "dream",
+          "start": 33.13,
+          "end": 33.56
+        },
+        {
+          "text": "alight",
+          "start": 33.56,
+          "end": 33.99
+        },
+        {
+          "text": ".",
+          "start": 33.99,
+          "end": 34.42
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 34.42,
+      "end": 37.13,
+      "text": "After all the gold is spent.",
+      "singableText": "After all the gold is spent.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "After",
+          "start": 34.42,
+          "end": 34.807
+        },
+        {
+          "text": "all",
+          "start": 34.807,
+          "end": 35.194
+        },
+        {
+          "text": "the",
+          "start": 35.194,
+          "end": 35.581
+        },
+        {
+          "text": "gold",
+          "start": 35.581,
+          "end": 35.969
+        },
+        {
+          "text": "is",
+          "start": 35.969,
+          "end": 36.356
+        },
+        {
+          "text": "spent",
+          "start": 36.356,
+          "end": 36.743
+        },
+        {
+          "text": ".",
+          "start": 36.743,
+          "end": 37.13
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 37.13,
+      "end": 39.84,
+      "text": "I still turn toward clouded mountains.",
+      "singableText": "I still turn toward clouded mountains.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 37.13,
+          "end": 37.517
+        },
+        {
+          "text": "still",
+          "start": 37.517,
+          "end": 37.904
+        },
+        {
+          "text": "turn",
+          "start": 37.904,
+          "end": 38.291
+        },
+        {
+          "text": "toward",
+          "start": 38.291,
+          "end": 38.679
+        },
+        {
+          "text": "clouded",
+          "start": 38.679,
+          "end": 39.066
+        },
+        {
+          "text": "mountains",
+          "start": 39.066,
+          "end": 39.453
+        },
+        {
+          "text": ".",
+          "start": 39.453,
+          "end": 39.84
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 39.84,
+      "end": 42.7,
+      "text": "Bring in the wine; let the cup not stop.",
+      "singableText": "Bring in the wine; let the cup not stop.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Bring",
+          "start": 39.84,
+          "end": 40.1
+        },
+        {
+          "text": "in",
+          "start": 40.1,
+          "end": 40.36
+        },
+        {
+          "text": "the",
+          "start": 40.36,
+          "end": 40.62
+        },
+        {
+          "text": "wine",
+          "start": 40.62,
+          "end": 40.88
+        },
+        {
+          "text": ";",
+          "start": 40.88,
+          "end": 41.14
+        },
+        {
+          "text": "let",
+          "start": 41.14,
+          "end": 41.4
+        },
+        {
+          "text": "the",
+          "start": 41.4,
+          "end": 41.66
+        },
+        {
+          "text": "cup",
+          "start": 41.66,
+          "end": 41.92
+        },
+        {
+          "text": "not",
+          "start": 41.92,
+          "end": 42.18
+        },
+        {
+          "text": "stop",
+          "start": 42.18,
+          "end": 42.44
+        },
+        {
+          "text": ".",
+          "start": 42.44,
+          "end": 42.7
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 42.7,
+      "end": 46.48,
+      "text": "Let the long wind wake my heart.",
+      "singableText": "Let the long wind wake my heart.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Let",
+          "start": 42.7,
+          "end": 43.172
+        },
+        {
+          "text": "the",
+          "start": 43.172,
+          "end": 43.645
+        },
+        {
+          "text": "long",
+          "start": 43.645,
+          "end": 44.117
+        },
+        {
+          "text": "wind",
+          "start": 44.117,
+          "end": 44.59
+        },
+        {
+          "text": "wake",
+          "start": 44.59,
+          "end": 45.062
+        },
+        {
+          "text": "my",
+          "start": 45.062,
+          "end": 45.535
+        },
+        {
+          "text": "heart",
+          "start": 45.535,
+          "end": 46.008
+        },
+        {
+          "text": ".",
+          "start": 46.008,
+          "end": 46.48
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 46.48,
+      "end": 48.96,
+      "text": "Heaven made my gifts for a purpose.",
+      "singableText": "Heaven made my gifts for a purpose.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Heaven",
+          "start": 46.48,
+          "end": 46.79
+        },
+        {
+          "text": "made",
+          "start": 46.79,
+          "end": 47.1
+        },
+        {
+          "text": "my",
+          "start": 47.1,
+          "end": 47.41
+        },
+        {
+          "text": "gifts",
+          "start": 47.41,
+          "end": 47.72
+        },
+        {
+          "text": "for",
+          "start": 47.72,
+          "end": 48.03
+        },
+        {
+          "text": "a",
+          "start": 48.03,
+          "end": 48.34
+        },
+        {
+          "text": "purpose",
+          "start": 48.34,
+          "end": 48.65
+        },
+        {
+          "text": ".",
+          "start": 48.65,
+          "end": 48.96
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 48.96,
+      "end": 53.38,
+      "text": "Alone and brave, yet full of feeling.",
+      "singableText": "Alone and brave, yet full of feeling.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Alone",
+          "start": 48.96,
+          "end": 49.451
+        },
+        {
+          "text": "and",
+          "start": 49.451,
+          "end": 49.942
+        },
+        {
+          "text": "brave",
+          "start": 49.942,
+          "end": 50.433
+        },
+        {
+          "text": ",",
+          "start": 50.433,
+          "end": 50.924
+        },
+        {
+          "text": "yet",
+          "start": 50.924,
+          "end": 51.416
+        },
+        {
+          "text": "full",
+          "start": 51.416,
+          "end": 51.907
+        },
+        {
+          "text": "of",
+          "start": 51.907,
+          "end": 52.398
+        },
+        {
+          "text": "feeling",
+          "start": 52.398,
+          "end": 52.889
+        },
+        {
+          "text": ".",
+          "start": 52.889,
+          "end": 53.38
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 53.38,
+      "end": 56.44,
+      "text": "Bells and drums need not be prized.",
+      "singableText": "Bells and drums need not be prized.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Bells",
+          "start": 53.38,
+          "end": 53.763
+        },
+        {
+          "text": "and",
+          "start": 53.763,
+          "end": 54.145
+        },
+        {
+          "text": "drums",
+          "start": 54.145,
+          "end": 54.528
+        },
+        {
+          "text": "need",
+          "start": 54.528,
+          "end": 54.91
+        },
+        {
+          "text": "not",
+          "start": 54.91,
+          "end": 55.292
+        },
+        {
+          "text": "be",
+          "start": 55.292,
+          "end": 55.675
+        },
+        {
+          "text": "prized",
+          "start": 55.675,
+          "end": 56.057
+        },
+        {
+          "text": ".",
+          "start": 56.057,
+          "end": 56.44
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 56.44,
+      "end": 59.68,
+      "text": "The bright moon is the most generous.",
+      "singableText": "The bright moon is the most generous.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 56.44,
+          "end": 56.845
+        },
+        {
+          "text": "bright",
+          "start": 56.845,
+          "end": 57.25
+        },
+        {
+          "text": "moon",
+          "start": 57.25,
+          "end": 57.655
+        },
+        {
+          "text": "is",
+          "start": 57.655,
+          "end": 58.06
+        },
+        {
+          "text": "the",
+          "start": 58.06,
+          "end": 58.465
+        },
+        {
+          "text": "most",
+          "start": 58.465,
+          "end": 58.87
+        },
+        {
+          "text": "generous",
+          "start": 58.87,
+          "end": 59.275
+        },
+        {
+          "text": ".",
+          "start": 59.275,
+          "end": 59.68
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 59.68,
+      "end": 61.4,
+      "text": "Sages are often lonely.",
+      "singableText": "Sages are often lonely.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Sages",
+          "start": 59.68,
+          "end": 60.024
+        },
+        {
+          "text": "are",
+          "start": 60.024,
+          "end": 60.368
+        },
+        {
+          "text": "often",
+          "start": 60.368,
+          "end": 60.712
+        },
+        {
+          "text": "lonely",
+          "start": 60.712,
+          "end": 61.056
+        },
+        {
+          "text": ".",
+          "start": 61.056,
+          "end": 61.4
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 61.4,
+      "end": 65.86,
+      "text": "Drinkers leave their names behind.",
+      "singableText": "Drinkers leave their names behind.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Drinkers",
+          "start": 61.4,
+          "end": 62.143
+        },
+        {
+          "text": "leave",
+          "start": 62.143,
+          "end": 62.887
+        },
+        {
+          "text": "their",
+          "start": 62.887,
+          "end": 63.63
+        },
+        {
+          "text": "names",
+          "start": 63.63,
+          "end": 64.373
+        },
+        {
+          "text": "behind",
+          "start": 64.373,
+          "end": 65.117
+        },
+        {
+          "text": ".",
+          "start": 65.117,
+          "end": 65.86
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 65.86,
+      "end": 68.44,
+      "text": "If heaven and earth ask me.",
+      "singableText": "If heaven and earth ask me.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "If",
+          "start": 65.86,
+          "end": 66.229
+        },
+        {
+          "text": "heaven",
+          "start": 66.229,
+          "end": 66.597
+        },
+        {
+          "text": "and",
+          "start": 66.597,
+          "end": 66.966
+        },
+        {
+          "text": "earth",
+          "start": 66.966,
+          "end": 67.334
+        },
+        {
+          "text": "ask",
+          "start": 67.334,
+          "end": 67.703
+        },
+        {
+          "text": "me",
+          "start": 67.703,
+          "end": 68.071
+        },
+        {
+          "text": ".",
+          "start": 68.071,
+          "end": 68.44
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 69.16,
+      "end": 71.94,
+      "text": "Why I still do not wake.",
+      "singableText": "Why I still do not wake.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Why",
+          "start": 69.16,
+          "end": 69.557
+        },
+        {
+          "text": "I",
+          "start": 69.557,
+          "end": 69.954
+        },
+        {
+          "text": "still",
+          "start": 69.954,
+          "end": 70.351
+        },
+        {
+          "text": "do",
+          "start": 70.351,
+          "end": 70.749
+        },
+        {
+          "text": "not",
+          "start": 70.749,
+          "end": 71.146
+        },
+        {
+          "text": "wake",
+          "start": 71.146,
+          "end": 71.543
+        },
+        {
+          "text": ".",
+          "start": 71.543,
+          "end": 71.94
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 71.94,
+      "end": 74.28,
+      "text": "I smile and speak of the human world.",
+      "singableText": "I smile and speak of the human world.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 71.94,
+          "end": 72.2
+        },
+        {
+          "text": "smile",
+          "start": 72.2,
+          "end": 72.46
+        },
+        {
+          "text": "and",
+          "start": 72.46,
+          "end": 72.72
+        },
+        {
+          "text": "speak",
+          "start": 72.72,
+          "end": 72.98
+        },
+        {
+          "text": "of",
+          "start": 72.98,
+          "end": 73.24
+        },
+        {
+          "text": "the",
+          "start": 73.24,
+          "end": 73.5
+        },
+        {
+          "text": "human",
+          "start": 73.5,
+          "end": 73.76
+        },
+        {
+          "text": "world",
+          "start": 73.76,
+          "end": 74.02
+        },
+        {
+          "text": ".",
+          "start": 74.02,
+          "end": 74.28
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 74.28,
+      "end": 77.6,
+      "text": "With you, there are stars.",
+      "singableText": "With you, there are stars.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "With",
+          "start": 74.28,
+          "end": 74.754
+        },
+        {
+          "text": "you",
+          "start": 74.754,
+          "end": 75.229
+        },
+        {
+          "text": ",",
+          "start": 75.229,
+          "end": 75.703
+        },
+        {
+          "text": "there",
+          "start": 75.703,
+          "end": 76.177
+        },
+        {
+          "text": "are",
+          "start": 76.177,
+          "end": 76.651
+        },
+        {
+          "text": "stars",
+          "start": 76.651,
+          "end": 77.126
+        },
+        {
+          "text": ".",
+          "start": 77.126,
+          "end": 77.6
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 77.6,
+      "end": 80.44,
+      "text": "Bring in the wine; let the cup not stop.",
+      "singableText": "Bring in the wine; let the cup not stop.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Bring",
+          "start": 77.6,
+          "end": 77.858
+        },
+        {
+          "text": "in",
+          "start": 77.858,
+          "end": 78.116
+        },
+        {
+          "text": "the",
+          "start": 78.116,
+          "end": 78.375
+        },
+        {
+          "text": "wine",
+          "start": 78.375,
+          "end": 78.633
+        },
+        {
+          "text": ";",
+          "start": 78.633,
+          "end": 78.891
+        },
+        {
+          "text": "let",
+          "start": 78.891,
+          "end": 79.149
+        },
+        {
+          "text": "the",
+          "start": 79.149,
+          "end": 79.407
+        },
+        {
+          "text": "cup",
+          "start": 79.407,
+          "end": 79.665
+        },
+        {
+          "text": "not",
+          "start": 79.665,
+          "end": 79.924
+        },
+        {
+          "text": "stop",
+          "start": 79.924,
+          "end": 80.182
+        },
+        {
+          "text": ".",
+          "start": 80.182,
+          "end": 80.44
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 80.44,
+      "end": 83.9,
+      "text": "Let the Yellow River surge through my chest.",
+      "singableText": "Let the Yellow River surge through my chest.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Let",
+          "start": 80.44,
+          "end": 80.824
+        },
+        {
+          "text": "the",
+          "start": 80.824,
+          "end": 81.209
+        },
+        {
+          "text": "Yellow",
+          "start": 81.209,
+          "end": 81.593
+        },
+        {
+          "text": "River",
+          "start": 81.593,
+          "end": 81.978
+        },
+        {
+          "text": "surge",
+          "start": 81.978,
+          "end": 82.362
+        },
+        {
+          "text": "through",
+          "start": 82.362,
+          "end": 82.747
+        },
+        {
+          "text": "my",
+          "start": 82.747,
+          "end": 83.131
+        },
+        {
+          "text": "chest",
+          "start": 83.131,
+          "end": 83.516
+        },
+        {
+          "text": ".",
+          "start": 83.516,
+          "end": 83.9
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 83.9,
+      "end": 86.3,
+      "text": "Heaven made my gifts for a purpose.",
+      "singableText": "Heaven made my gifts for a purpose.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Heaven",
+          "start": 83.9,
+          "end": 84.2
+        },
+        {
+          "text": "made",
+          "start": 84.2,
+          "end": 84.5
+        },
+        {
+          "text": "my",
+          "start": 84.5,
+          "end": 84.8
+        },
+        {
+          "text": "gifts",
+          "start": 84.8,
+          "end": 85.1
+        },
+        {
+          "text": "for",
+          "start": 85.1,
+          "end": 85.4
+        },
+        {
+          "text": "a",
+          "start": 85.4,
+          "end": 85.7
+        },
+        {
+          "text": "purpose",
+          "start": 85.7,
+          "end": 86.0
+        },
+        {
+          "text": ".",
+          "start": 86.0,
+          "end": 86.3
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 86.3,
+      "end": 89.1,
+      "text": "Through a thousand turns.",
+      "singableText": "Through a thousand turns.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Through",
+          "start": 86.3,
+          "end": 86.86
+        },
+        {
+          "text": "a",
+          "start": 86.86,
+          "end": 87.42
+        },
+        {
+          "text": "thousand",
+          "start": 87.42,
+          "end": 87.98
+        },
+        {
+          "text": "turns",
+          "start": 87.98,
+          "end": 88.54
+        },
+        {
+          "text": ".",
+          "start": 88.54,
+          "end": 89.1
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 89.1,
+      "end": 93.48,
+      "text": "Still I believe.",
+      "singableText": "Still I believe.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Still",
+          "start": 89.1,
+          "end": 90.195
+        },
+        {
+          "text": "I",
+          "start": 90.195,
+          "end": 91.29
+        },
+        {
+          "text": "believe",
+          "start": 91.29,
+          "end": 92.385
+        },
+        {
+          "text": ".",
+          "start": 92.385,
+          "end": 93.48
+        }
+      ]
+    },
+    {
+      "id": "l30",
+      "start": 93.48,
+      "end": 96.46,
+      "text": "Let the cup not stop.",
+      "singableText": "Let the cup not stop.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Let",
+          "start": 93.48,
+          "end": 93.977
+        },
+        {
+          "text": "the",
+          "start": 93.977,
+          "end": 94.473
+        },
+        {
+          "text": "cup",
+          "start": 94.473,
+          "end": 94.97
+        },
+        {
+          "text": "not",
+          "start": 94.97,
+          "end": 95.467
+        },
+        {
+          "text": "stop",
+          "start": 95.467,
+          "end": 95.963
+        },
+        {
+          "text": ".",
+          "start": 95.963,
+          "end": 96.46
+        }
+      ]
+    },
+    {
+      "id": "l31",
+      "start": 96.46,
+      "end": 99.44,
+      "text": "Let the cup not stop.",
+      "singableText": "Let the cup not stop.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Let",
+          "start": 96.46,
+          "end": 96.957
+        },
+        {
+          "text": "the",
+          "start": 96.957,
+          "end": 97.453
+        },
+        {
+          "text": "cup",
+          "start": 97.453,
+          "end": 97.95
+        },
+        {
+          "text": "not",
+          "start": 97.95,
+          "end": 98.447
+        },
+        {
+          "text": "stop",
+          "start": 98.447,
+          "end": 98.943
+        },
+        {
+          "text": ".",
+          "start": 98.943,
+          "end": 99.44
+        }
+      ]
+    },
+    {
+      "id": "l32",
+      "start": 99.44,
+      "end": 102.91,
+      "text": "May this heart.",
+      "singableText": "May this heart.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "May",
+          "start": 99.44,
+          "end": 100.308
+        },
+        {
+          "text": "this",
+          "start": 100.308,
+          "end": 101.175
+        },
+        {
+          "text": "heart",
+          "start": 101.175,
+          "end": 102.042
+        },
+        {
+          "text": ".",
+          "start": 102.042,
+          "end": 102.91
+        }
+      ]
+    },
+    {
+      "id": "l33",
+      "start": 102.91,
+      "end": 106.38,
+      "text": "Never be still.",
+      "singableText": "Never be still.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Never",
+          "start": 102.91,
+          "end": 103.778
+        },
+        {
+          "text": "be",
+          "start": 103.778,
+          "end": 104.645
+        },
+        {
+          "text": "still",
+          "start": 104.645,
+          "end": 105.512
+        },
+        {
+          "text": ".",
+          "start": 105.512,
+          "end": 106.38
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "Normal-song candidate 1 corrected from same-audio large-v3 ASR, selected/vocal-stem small and medium ASR, no-VAD passes, and the intended adapted lyric. Prompt sections that the render skipped or garbled beyond recoverability are not published as sung text."
+  }
+}

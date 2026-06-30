@@ -1,0 +1,862 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "qiang-jin-jiu-normal-song",
+  "kind": "song",
+  "title": "将进酒",
+  "localizedTitles": {
+    "zh-Hans": "将进酒",
+    "en": "Bring In the Wine",
+    "ja": "将進酒"
+  },
+  "artist": "Musia",
+  "description": "An ACE-Step Mandarin normal-song adaptation inspired by Li Bai's 将进酒, corrected against the selected audio's own ASR evidence.",
+  "caption": "Heroic wine, Yellow River moonlight, and a heart that refuses to go quiet.",
+  "duration": 112.0,
+  "canonicalUrl": "https://fun.lazying.art/#qiang-jin-jiu-normal-song",
+  "share": {
+    "title": "将进酒 - Fun Lazying Art",
+    "description": "A Musia Mandarin normal-song adaptation of 将进酒 with corrected trilingual lyrics.",
+    "url": "https://fun.lazying.art/#qiang-jin-jiu-normal-song",
+    "image": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "将进酒 cover",
+      "role": "cover",
+      "src": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "qiang-jin-jiu-normal-zh",
+      "label": "中文",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
+      "lyricSetId": "zh-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/qiang-jin-jiu-normal-song-zh-Hans-ace-20260701.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "D minor requested / detected Dm-F-Am centered progression",
+    "bpm": 151.999,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 10.426,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 10.426,
+        "end": 11.192,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 11.192,
+        "end": 11.587,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 11.587,
+        "end": 14.327,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 14.327,
+        "end": 15.488,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 15.488,
+        "end": 15.859,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 15.859,
+        "end": 16.254,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 16.254,
+        "end": 17.043,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 17.043,
+        "end": 17.438,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 17.438,
+        "end": 18.622,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 18.622,
+        "end": 19.807,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 19.807,
+        "end": 20.201,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 20.201,
+        "end": 20.573,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 20.573,
+        "end": 22.547,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 22.547,
+        "end": 23.29,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 23.29,
+        "end": 23.661,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 23.661,
+        "end": 26.006,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 26.006,
+        "end": 26.378,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 26.378,
+        "end": 26.773,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 26.773,
+        "end": 28.398,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 28.398,
+        "end": 29.954,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 29.954,
+        "end": 31.486,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 31.486,
+        "end": 33.065,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 33.065,
+        "end": 34.621,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 34.621,
+        "end": 37.732,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 37.732,
+        "end": 39.335,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 39.335,
+        "end": 39.706,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 39.706,
+        "end": 40.89,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 40.89,
+        "end": 44.42,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 44.42,
+        "end": 47.438,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 47.438,
+        "end": 49.017,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 49.017,
+        "end": 50.573,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 50.573,
+        "end": 52.152,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 52.152,
+        "end": 52.524,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 52.524,
+        "end": 56.424,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 56.424,
+        "end": 56.796,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 56.796,
+        "end": 59.907,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 59.907,
+        "end": 61.463,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 61.463,
+        "end": 61.858,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 61.858,
+        "end": 62.229,
+        "name": "Cm",
+        "degree": ""
+      },
+      {
+        "start": 62.229,
+        "end": 63.019,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 63.019,
+        "end": 63.414,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 63.414,
+        "end": 66.154,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 66.154,
+        "end": 67.709,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 67.709,
+        "end": 68.87,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 68.87,
+        "end": 69.265,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 69.265,
+        "end": 70.821,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 70.821,
+        "end": 72.377,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 72.377,
+        "end": 73.143,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 73.143,
+        "end": 73.538,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 73.538,
+        "end": 73.932,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 73.932,
+        "end": 75.511,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 75.511,
+        "end": 75.906,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 75.906,
+        "end": 76.649,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 76.649,
+        "end": 77.044,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 77.044,
+        "end": 77.833,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 77.833,
+        "end": 78.251,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 78.251,
+        "end": 79.784,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 79.784,
+        "end": 81.734,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 81.734,
+        "end": 82.129,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 82.129,
+        "end": 82.5,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 82.5,
+        "end": 83.29,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 83.29,
+        "end": 83.685,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 83.685,
+        "end": 84.451,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 84.451,
+        "end": 84.846,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 84.846,
+        "end": 86.401,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 86.401,
+        "end": 87.957,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 87.957,
+        "end": 89.513,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 89.513,
+        "end": 91.069,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 91.069,
+        "end": 91.463,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 91.463,
+        "end": 93.019,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 93.019,
+        "end": 93.414,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 93.414,
+        "end": 93.785,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 93.785,
+        "end": 94.18,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 94.18,
+        "end": 94.575,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 94.575,
+        "end": 96.92,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 96.92,
+        "end": 97.315,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 97.315,
+        "end": 98.871,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 98.871,
+        "end": 100.426,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 100.426,
+        "end": 100.821,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 100.821,
+        "end": 101.982,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 101.982,
+        "end": 103.143,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 103.143,
+        "end": 103.538,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 103.538,
+        "end": 107.416,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 107.416,
+        "end": 107.81,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 107.81,
+        "end": 108.205,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 108.205,
+        "end": 108.6,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 108.6,
+        "end": 108.971,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 108.971,
+        "end": 109.366,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 109.366,
+        "end": 112.0,
+        "name": "Bm",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "zh-vocal",
+      "label": "中文 vocal",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "active-vocal"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 13.74,
+        "end": 15.78,
+        "text": "黄河从天来"
+      },
+      {
+        "id": "l02",
+        "start": 15.78,
+        "end": 17.74,
+        "text": "月光落满台"
+      },
+      {
+        "id": "l03",
+        "start": 17.74,
+        "end": 19.28,
+        "text": "一杯敬风雪"
+      },
+      {
+        "id": "l04",
+        "start": 19.28,
+        "end": 20.82,
+        "text": "一杯敬尘埃"
+      },
+      {
+        "id": "l05",
+        "start": 20.82,
+        "end": 22.38,
+        "text": "白发照明镜"
+      },
+      {
+        "id": "l06",
+        "start": 22.38,
+        "end": 23.94,
+        "text": "少年还在怀"
+      },
+      {
+        "id": "l07",
+        "start": 23.94,
+        "end": 26.17,
+        "text": "别问归不归"
+      },
+      {
+        "id": "l08",
+        "start": 26.17,
+        "end": 28.4,
+        "text": "今夜花正开"
+      },
+      {
+        "id": "l09",
+        "start": 28.4,
+        "end": 31.41,
+        "text": "人生有几回"
+      },
+      {
+        "id": "l10",
+        "start": 31.41,
+        "end": 34.42,
+        "text": "敢把梦点燃"
+      },
+      {
+        "id": "l11",
+        "start": 34.42,
+        "end": 37.13,
+        "text": "千金散尽后"
+      },
+      {
+        "id": "l12",
+        "start": 37.13,
+        "end": 39.84,
+        "text": "我仍向云山"
+      },
+      {
+        "id": "l13",
+        "start": 39.84,
+        "end": 42.7,
+        "text": "将进酒，杯莫停"
+      },
+      {
+        "id": "l14",
+        "start": 42.7,
+        "end": 46.48,
+        "text": "让长风吹醒我的心"
+      },
+      {
+        "id": "l15",
+        "start": 46.48,
+        "end": 48.96,
+        "text": "天生我材必有用"
+      },
+      {
+        "id": "l16",
+        "start": 48.96,
+        "end": 53.38,
+        "text": "一身孤勇也多情"
+      },
+      {
+        "id": "l17",
+        "start": 53.38,
+        "end": 56.44,
+        "text": "钟鼓不必贵"
+      },
+      {
+        "id": "l18",
+        "start": 56.44,
+        "end": 59.68,
+        "text": "明月最慷慨"
+      },
+      {
+        "id": "l19",
+        "start": 59.68,
+        "end": 61.4,
+        "text": "圣贤多寂寞"
+      },
+      {
+        "id": "l20",
+        "start": 61.4,
+        "end": 65.86,
+        "text": "饮者留名来"
+      },
+      {
+        "id": "l21",
+        "start": 65.86,
+        "end": 68.44,
+        "text": "若天地问我"
+      },
+      {
+        "id": "l22",
+        "start": 69.16,
+        "end": 71.94,
+        "text": "为何还不醒"
+      },
+      {
+        "id": "l23",
+        "start": 71.94,
+        "end": 74.28,
+        "text": "我笑说人间"
+      },
+      {
+        "id": "l24",
+        "start": 74.28,
+        "end": 77.6,
+        "text": "有你便有星"
+      },
+      {
+        "id": "l25",
+        "start": 77.6,
+        "end": 80.44,
+        "text": "将进酒，杯莫停"
+      },
+      {
+        "id": "l26",
+        "start": 80.44,
+        "end": 83.9,
+        "text": "让黄河奔过我胸襟"
+      },
+      {
+        "id": "l27",
+        "start": 83.9,
+        "end": 86.3,
+        "text": "天生我材必有用"
+      },
+      {
+        "id": "l28",
+        "start": 86.3,
+        "end": 89.1,
+        "text": "千回百转"
+      },
+      {
+        "id": "l29",
+        "start": 89.1,
+        "end": 93.48,
+        "text": "仍相信"
+      },
+      {
+        "id": "l30",
+        "start": 93.48,
+        "end": 96.46,
+        "text": "杯莫停"
+      },
+      {
+        "id": "l31",
+        "start": 96.46,
+        "end": 99.44,
+        "text": "杯莫停"
+      },
+      {
+        "id": "l32",
+        "start": 99.44,
+        "end": 102.91,
+        "text": "愿此心"
+      },
+      {
+        "id": "l33",
+        "start": 102.91,
+        "end": 106.38,
+        "text": "永不平"
+      }
+    ]
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/qiang-jin-jiu-normal-song-20260701",
+    "audioSource": "ACE-Step 1.5 XL Turbo candidate 1 from the normal-song 将进酒 adaptation workflow.",
+    "analysisRun": "data/runs/qiang-jin-jiu-normal-song-20260701-20260701-004055-analysis",
+    "quality": {
+      "asrOverlap": 0.49377593360995853,
+      "gate": "pass"
+    },
+    "lyricCorrection": "Corrected from same-audio large-v3 ASR plus selected/vocal-stem small and medium no-VAD ASR. The active lyrics follow the audible structure of the selected render, not the full prompt.",
+    "coverSource": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
+    "publicAudio": "qiang-jin-jiu-normal-song-zh-Hans-ace-20260701.mp3"
+  },
+  "artifacts": []
+}
