@@ -1,0 +1,909 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xia-ke-xing",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.5,
+      "end": 5.2,
+      "text": "长风起，白马行",
+      "singableText": "长风起，白马行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "长",
+          "start": 0.5,
+          "end": 1.171,
+          "pinyin": "zhang3"
+        },
+        {
+          "text": "风",
+          "start": 1.171,
+          "end": 1.843,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "起",
+          "start": 1.843,
+          "end": 2.514,
+          "pinyin": "qi3"
+        },
+        {
+          "text": "，",
+          "start": 2.514,
+          "end": 3.186
+        },
+        {
+          "text": "白",
+          "start": 3.186,
+          "end": 3.857,
+          "pinyin": "bai2"
+        },
+        {
+          "text": "马",
+          "start": 3.857,
+          "end": 4.529,
+          "pinyin": "ma3"
+        },
+        {
+          "text": "行",
+          "start": 4.529,
+          "end": 5.2,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 7.57,
+      "end": 8.77,
+      "text": "月下剑光明",
+      "singableText": "月下剑光明",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 7.57,
+          "end": 7.81,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "下",
+          "start": 7.81,
+          "end": 8.05,
+          "pinyin": "xia4"
+        },
+        {
+          "text": "剑",
+          "start": 8.05,
+          "end": 8.29,
+          "pinyin": "jian4"
+        },
+        {
+          "text": "光",
+          "start": 8.29,
+          "end": 8.53,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "明",
+          "start": 8.53,
+          "end": 8.77,
+          "pinyin": "ming2"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 10.53,
+      "end": 12.23,
+      "text": "照我少年心",
+      "singableText": "照我少年心",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "照",
+          "start": 10.53,
+          "end": 10.87,
+          "pinyin": "zhao4"
+        },
+        {
+          "text": "我",
+          "start": 10.87,
+          "end": 11.21,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "少",
+          "start": 11.21,
+          "end": 11.55,
+          "pinyin": "shao3"
+        },
+        {
+          "text": "年",
+          "start": 11.55,
+          "end": 11.89,
+          "pinyin": "nian2"
+        },
+        {
+          "text": "心",
+          "start": 11.89,
+          "end": 12.23,
+          "pinyin": "xin1"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 25.2,
+      "end": 27.34,
+      "text": "吴钩明，霜雪清",
+      "singableText": "吴钩明，霜雪清",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "吴",
+          "start": 25.2,
+          "end": 25.506,
+          "pinyin": "wu2"
+        },
+        {
+          "text": "钩",
+          "start": 25.506,
+          "end": 25.811,
+          "pinyin": "gou1"
+        },
+        {
+          "text": "明",
+          "start": 25.811,
+          "end": 26.117,
+          "pinyin": "ming2"
+        },
+        {
+          "text": "，",
+          "start": 26.117,
+          "end": 26.423
+        },
+        {
+          "text": "霜",
+          "start": 26.423,
+          "end": 26.729,
+          "pinyin": "shuang1"
+        },
+        {
+          "text": "雪",
+          "start": 26.729,
+          "end": 27.034,
+          "pinyin": "xue3"
+        },
+        {
+          "text": "清",
+          "start": 27.034,
+          "end": 27.34,
+          "pinyin": "qing1"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 27.86,
+      "end": 29.34,
+      "text": "银鞍照白马",
+      "singableText": "银鞍照白马",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "银",
+          "start": 27.86,
+          "end": 28.156,
+          "pinyin": "yin2"
+        },
+        {
+          "text": "鞍",
+          "start": 28.156,
+          "end": 28.452,
+          "pinyin": "an1"
+        },
+        {
+          "text": "照",
+          "start": 28.452,
+          "end": 28.748,
+          "pinyin": "zhao4"
+        },
+        {
+          "text": "白",
+          "start": 28.748,
+          "end": 29.044,
+          "pinyin": "bai2"
+        },
+        {
+          "text": "马",
+          "start": 29.044,
+          "end": 29.34,
+          "pinyin": "ma3"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 29.34,
+      "end": 31.52,
+      "text": "一闪如流星",
+      "singableText": "一闪如流星",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 29.34,
+          "end": 29.776,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "闪",
+          "start": 29.776,
+          "end": 30.212,
+          "pinyin": "shan3"
+        },
+        {
+          "text": "如",
+          "start": 30.212,
+          "end": 30.648,
+          "pinyin": "ru2"
+        },
+        {
+          "text": "流",
+          "start": 30.648,
+          "end": 31.084,
+          "pinyin": "liu2"
+        },
+        {
+          "text": "星",
+          "start": 31.084,
+          "end": 31.52,
+          "pinyin": "xing1"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 32.62,
+      "end": 33.74,
+      "text": "三杯酒",
+      "singableText": "三杯酒",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "三",
+          "start": 32.62,
+          "end": 32.993,
+          "pinyin": "san1"
+        },
+        {
+          "text": "杯",
+          "start": 32.993,
+          "end": 33.367,
+          "pinyin": "bei1"
+        },
+        {
+          "text": "酒",
+          "start": 33.367,
+          "end": 33.74,
+          "pinyin": "jiu3"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 33.74,
+      "end": 35.3,
+      "text": "一诺定",
+      "singableText": "一诺定",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 33.74,
+          "end": 34.26,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "诺",
+          "start": 34.26,
+          "end": 34.78,
+          "pinyin": "nuo4"
+        },
+        {
+          "text": "定",
+          "start": 34.78,
+          "end": 35.3,
+          "pinyin": "ding4"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 35.86,
+      "end": 37.26,
+      "text": "千里走人间",
+      "singableText": "千里走人间",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "千",
+          "start": 35.86,
+          "end": 36.14,
+          "pinyin": "qian1"
+        },
+        {
+          "text": "里",
+          "start": 36.14,
+          "end": 36.42,
+          "pinyin": "li3"
+        },
+        {
+          "text": "走",
+          "start": 36.42,
+          "end": 36.7,
+          "pinyin": "zou3"
+        },
+        {
+          "text": "人",
+          "start": 36.7,
+          "end": 36.98,
+          "pinyin": "ren2"
+        },
+        {
+          "text": "间",
+          "start": 36.98,
+          "end": 37.26,
+          "pinyin": "jian1"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 37.26,
+      "end": 39.76,
+      "text": "不留姓名",
+      "singableText": "不留姓名",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "不",
+          "start": 37.26,
+          "end": 37.885,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "留",
+          "start": 37.885,
+          "end": 38.51,
+          "pinyin": "liu2"
+        },
+        {
+          "text": "姓",
+          "start": 38.51,
+          "end": 39.135,
+          "pinyin": "xing4"
+        },
+        {
+          "text": "名",
+          "start": 39.135,
+          "end": 39.76,
+          "pinyin": "ming2"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 39.76,
+      "end": 43.52,
+      "text": "风雷近，马蹄轻",
+      "singableText": "风雷近，马蹄轻",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 39.76,
+          "end": 40.297,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "雷",
+          "start": 40.297,
+          "end": 40.834,
+          "pinyin": "lei2"
+        },
+        {
+          "text": "近",
+          "start": 40.834,
+          "end": 41.371,
+          "pinyin": "jin4"
+        },
+        {
+          "text": "，",
+          "start": 41.371,
+          "end": 41.909
+        },
+        {
+          "text": "马",
+          "start": 41.909,
+          "end": 42.446,
+          "pinyin": "ma3"
+        },
+        {
+          "text": "蹄",
+          "start": 42.446,
+          "end": 42.983,
+          "pinyin": "ti2"
+        },
+        {
+          "text": "轻",
+          "start": 42.983,
+          "end": 43.52,
+          "pinyin": "qing1"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 44.08,
+      "end": 46.06,
+      "text": "夜过邯郸城",
+      "singableText": "夜过邯郸城",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "夜",
+          "start": 44.08,
+          "end": 44.476,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "过",
+          "start": 44.476,
+          "end": 44.872,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "邯",
+          "start": 44.872,
+          "end": 45.268,
+          "pinyin": "han2"
+        },
+        {
+          "text": "郸",
+          "start": 45.268,
+          "end": 45.664,
+          "pinyin": "dan1"
+        },
+        {
+          "text": "城",
+          "start": 45.664,
+          "end": 46.06,
+          "pinyin": "cheng2"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 49.36,
+      "end": 50.66,
+      "text": "侠客行",
+      "singableText": "侠客行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "侠",
+          "start": 49.36,
+          "end": 49.793,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "客",
+          "start": 49.793,
+          "end": 50.227,
+          "pinyin": "ke4"
+        },
+        {
+          "text": "行",
+          "start": 50.227,
+          "end": 50.66,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 51.04,
+      "end": 53.26,
+      "text": "侠客行",
+      "singableText": "侠客行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "侠",
+          "start": 51.04,
+          "end": 51.78,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "客",
+          "start": 51.78,
+          "end": 52.52,
+          "pinyin": "ke4"
+        },
+        {
+          "text": "行",
+          "start": 52.52,
+          "end": 53.26,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 53.26,
+      "end": 54.94,
+      "text": "侠客行",
+      "singableText": "侠客行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "侠",
+          "start": 53.26,
+          "end": 53.82,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "客",
+          "start": 53.82,
+          "end": 54.38,
+          "pinyin": "ke4"
+        },
+        {
+          "text": "行",
+          "start": 54.38,
+          "end": 54.94,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 56.99,
+      "end": 57.47,
+      "text": "拂衣去",
+      "singableText": "拂衣去",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "拂",
+          "start": 56.99,
+          "end": 57.15,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "衣",
+          "start": 57.15,
+          "end": 57.31,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "去",
+          "start": 57.31,
+          "end": 57.47,
+          "pinyin": "qu4"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 58.69,
+      "end": 60.89,
+      "text": "深藏身与名",
+      "singableText": "深藏身与名",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "深",
+          "start": 58.69,
+          "end": 59.13,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "藏",
+          "start": 59.13,
+          "end": 59.57,
+          "pinyin": "cang2"
+        },
+        {
+          "text": "身",
+          "start": 59.57,
+          "end": 60.01,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "与",
+          "start": 60.01,
+          "end": 60.45,
+          "pinyin": "yu3"
+        },
+        {
+          "text": "名",
+          "start": 60.45,
+          "end": 60.89,
+          "pinyin": "ming2"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 61.39,
+      "end": 62.63,
+      "text": "侠客行",
+      "singableText": "侠客行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "侠",
+          "start": 61.39,
+          "end": 61.803,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "客",
+          "start": 61.803,
+          "end": 62.217,
+          "pinyin": "ke4"
+        },
+        {
+          "text": "行",
+          "start": 62.217,
+          "end": 62.63,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 62.85,
+      "end": 64.61,
+      "text": "侠客行",
+      "singableText": "侠客行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "侠",
+          "start": 62.85,
+          "end": 63.437,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "客",
+          "start": 63.437,
+          "end": 64.023,
+          "pinyin": "ke4"
+        },
+        {
+          "text": "行",
+          "start": 64.023,
+          "end": 64.61,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 64.61,
+      "end": 66.35,
+      "text": "长风吹白马",
+      "singableText": "长风吹白马",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "长",
+          "start": 64.61,
+          "end": 64.958,
+          "pinyin": "zhang3"
+        },
+        {
+          "text": "风",
+          "start": 64.958,
+          "end": 65.306,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "吹",
+          "start": 65.306,
+          "end": 65.654,
+          "pinyin": "chui1"
+        },
+        {
+          "text": "白",
+          "start": 65.654,
+          "end": 66.002,
+          "pinyin": "bai2"
+        },
+        {
+          "text": "马",
+          "start": 66.002,
+          "end": 66.35,
+          "pinyin": "ma3"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 66.77,
+      "end": 69.75,
+      "text": "月下吴钩明",
+      "singableText": "月下吴钩明",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 66.77,
+          "end": 67.366,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "下",
+          "start": 67.366,
+          "end": 67.962,
+          "pinyin": "xia4"
+        },
+        {
+          "text": "吴",
+          "start": 67.962,
+          "end": 68.558,
+          "pinyin": "wu2"
+        },
+        {
+          "text": "钩",
+          "start": 68.558,
+          "end": 69.154,
+          "pinyin": "gou1"
+        },
+        {
+          "text": "明",
+          "start": 69.154,
+          "end": 69.75,
+          "pinyin": "ming2"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 72.09,
+      "end": 74.83,
+      "text": "人间风雪深",
+      "singableText": "人间风雪深",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "人",
+          "start": 72.09,
+          "end": 72.638,
+          "pinyin": "ren2"
+        },
+        {
+          "text": "间",
+          "start": 72.638,
+          "end": 73.186,
+          "pinyin": "jian1"
+        },
+        {
+          "text": "风",
+          "start": 73.186,
+          "end": 73.734,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "雪",
+          "start": 73.734,
+          "end": 74.282,
+          "pinyin": "xue3"
+        },
+        {
+          "text": "深",
+          "start": 74.282,
+          "end": 74.83,
+          "pinyin": "shen1"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 79.98,
+      "end": 82.5,
+      "text": "不为身后名",
+      "singableText": "不为身后名",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "不",
+          "start": 79.98,
+          "end": 80.484,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "为",
+          "start": 80.484,
+          "end": 80.988,
+          "pinyin": "wei4"
+        },
+        {
+          "text": "身",
+          "start": 80.988,
+          "end": 81.492,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "后",
+          "start": 81.492,
+          "end": 81.996,
+          "pinyin": "hou4"
+        },
+        {
+          "text": "名",
+          "start": 81.996,
+          "end": 82.5,
+          "pinyin": "ming2"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 82.5,
+      "end": 84.46,
+      "text": "只为一诺真",
+      "singableText": "只为一诺真",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "只",
+          "start": 82.5,
+          "end": 82.892,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "为",
+          "start": 82.892,
+          "end": 83.284,
+          "pinyin": "wei4"
+        },
+        {
+          "text": "一",
+          "start": 83.284,
+          "end": 83.676,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "诺",
+          "start": 83.676,
+          "end": 84.068,
+          "pinyin": "nuo4"
+        },
+        {
+          "text": "真",
+          "start": 84.068,
+          "end": 84.46,
+          "pinyin": "zhen1"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "Mandarin active lyrics corrected from same-vocal small ASR plus the intended Li Bai adaptation. Sound-close ASR variants such as 夏可熏 are corrected to 侠客行 because the hook is phonetically close and context/title support the intended phrase. Unsung or unclear final-chorus prompt lines are intentionally omitted from the public lyric timing."
+  }
+}

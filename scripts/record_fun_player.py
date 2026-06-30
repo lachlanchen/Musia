@@ -25,6 +25,7 @@ from urllib.request import urlretrieve
 
 ROOT = Path(__file__).resolve().parents[1]
 WEBSITE = ROOT / "website"
+DEFAULT_SYNC_DIR = Path("/home/lachlan/Nutstore Files/Projects/Musia")
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
@@ -119,6 +120,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--full-page", action="store_true", help="Capture the full scrollable page instead of only the viewport.")
     parser.add_argument("--include-full-lyrics", action="store_true", help="Keep the bottom full lyrics visible during capture.")
     parser.add_argument("--portrait", action="store_true", help="Use portrait capture layout for vertical videos.")
+    parser.add_argument(
+        "--sync-dir",
+        default=str(DEFAULT_SYNC_DIR),
+        help="Directory to copy the final MP4 to after recording. Defaults to the Nutstore Musia share folder.",
+    )
+    parser.add_argument("--no-sync", action="store_true", help="Do not copy the final MP4 to --sync-dir.")
     parser.add_argument("--chrome-channel", default="chrome", help="Playwright Chromium channel, usually chrome or chromium.")
     return parser.parse_args()
 
@@ -137,8 +144,10 @@ def main() -> None:
     except Exception as exc:  # pragma: no cover - depends on local setup
         fail(
             "Python Playwright is required. Install locally with:\n"
-            "  python3 -m pip install --user playwright\n"
-            "The script uses the installed Chrome channel, so Playwright browser downloads are optional.\n"
+            "  PYTHONNOUSERSITE=1 conda run -n musia python -m pip install playwright\n"
+            "or rerun:\n"
+            "  bash scripts/bootstrap_musia.sh\n"
+            "The script uses the installed Chrome channel by default, so Playwright browser downloads are optional.\n"
             f"Import error: {exc}"
         )
 
@@ -211,6 +220,16 @@ def main() -> None:
                 viewport={"width": args.width, "height": args.height},
                 device_scale_factor=args.device_scale_factor,
             )
+            parsed_media = urlparse(media_src or "")
+            if parsed_media.scheme in {"http", "https"} and audio_path.exists():
+                page.route(
+                    media_src,
+                    lambda route: route.fulfill(
+                        status=200,
+                        path=str(audio_path),
+                        headers={"Access-Control-Allow-Origin": "*"},
+                    ),
+                )
             page.goto(url, wait_until="networkidle")
             page.wait_for_selector("#audio", state="attached", timeout=15000)
             page.wait_for_function(
@@ -274,6 +293,12 @@ def main() -> None:
     if server:
         server.shutdown()
     print(f"Wrote: {output}")
+    if not args.no_sync and args.sync_dir:
+        sync_dir = Path(args.sync_dir).expanduser()
+        sync_dir.mkdir(parents=True, exist_ok=True)
+        synced = sync_dir / output.name
+        shutil.copy2(output, synced)
+        print(f"Synced: {synced}")
 
 
 if __name__ == "__main__":
