@@ -1,0 +1,207 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 18.48,
+      "end": 24.36,
+      "text": "風に乗ってその場所を探す",
+      "singableText": "風に乗ってその場所を探す",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 18.48,
+          "end": 18.97,
+          "reading": "かぜ"
+        },
+        {
+          "text": "に",
+          "start": 18.97,
+          "end": 19.46
+        },
+        {
+          "text": "乗",
+          "start": 19.46,
+          "end": 19.95,
+          "reading": "じょう"
+        },
+        {
+          "text": "っ",
+          "start": 19.95,
+          "end": 20.44
+        },
+        {
+          "text": "て",
+          "start": 20.44,
+          "end": 20.93
+        },
+        {
+          "text": "そ",
+          "start": 20.93,
+          "end": 21.42
+        },
+        {
+          "text": "の",
+          "start": 21.42,
+          "end": 21.91
+        },
+        {
+          "text": "場",
+          "start": 21.91,
+          "end": 22.4,
+          "reading": "ば"
+        },
+        {
+          "text": "所",
+          "start": 22.4,
+          "end": 22.89,
+          "reading": "ところ"
+        },
+        {
+          "text": "を",
+          "start": 22.89,
+          "end": 23.38
+        },
+        {
+          "text": "探",
+          "start": 23.38,
+          "end": 23.87,
+          "reading": "たん"
+        },
+        {
+          "text": "す",
+          "start": 23.87,
+          "end": 24.36
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 29.91,
+      "end": 33.01,
+      "text": "雲の愛はひとすじ",
+      "singableText": "雲の愛はひとすじ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "雲",
+          "start": 29.91,
+          "end": 30.297,
+          "reading": "くも"
+        },
+        {
+          "text": "の",
+          "start": 30.297,
+          "end": 30.685
+        },
+        {
+          "text": "愛",
+          "start": 30.685,
+          "end": 31.072,
+          "reading": "あい"
+        },
+        {
+          "text": "は",
+          "start": 31.072,
+          "end": 31.46
+        },
+        {
+          "text": "ひ",
+          "start": 31.46,
+          "end": 31.848
+        },
+        {
+          "text": "と",
+          "start": 31.848,
+          "end": 32.235
+        },
+        {
+          "text": "す",
+          "start": 32.235,
+          "end": 32.622
+        },
+        {
+          "text": "じ",
+          "start": 32.622,
+          "end": 33.01
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 34.45,
+      "end": 40.23,
+      "text": "流れめぐる時をこえて",
+      "singableText": "流れめぐる時をこえて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "流",
+          "start": 34.45,
+          "end": 35.028,
+          "reading": "りゅう"
+        },
+        {
+          "text": "れ",
+          "start": 35.028,
+          "end": 35.606
+        },
+        {
+          "text": "め",
+          "start": 35.606,
+          "end": 36.184
+        },
+        {
+          "text": "ぐ",
+          "start": 36.184,
+          "end": 36.762
+        },
+        {
+          "text": "る",
+          "start": 36.762,
+          "end": 37.34
+        },
+        {
+          "text": "時",
+          "start": 37.34,
+          "end": 37.918,
+          "reading": "とき"
+        },
+        {
+          "text": "を",
+          "start": 37.918,
+          "end": 38.496
+        },
+        {
+          "text": "こ",
+          "start": 38.496,
+          "end": 39.074
+        },
+        {
+          "text": "え",
+          "start": 39.074,
+          "end": 39.652
+        },
+        {
+          "text": "て",
+          "start": 39.652,
+          "end": 40.23
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

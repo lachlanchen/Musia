@@ -1,0 +1,342 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 22.13,
+      "end": 23.67,
+      "text": "君を想う",
+      "singableText": "君を想う",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 22.13,
+          "end": 22.515,
+          "reading": "くん"
+        },
+        {
+          "text": "を",
+          "start": 22.515,
+          "end": 22.9
+        },
+        {
+          "text": "想",
+          "start": 22.9,
+          "end": 23.285,
+          "reading": "そう"
+        },
+        {
+          "text": "う",
+          "start": 23.285,
+          "end": 23.67
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 24.73,
+      "end": 30.23,
+      "text": "風のように君のそばへ",
+      "singableText": "風のように君のそばへ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 24.73,
+          "end": 25.28,
+          "reading": "かぜ"
+        },
+        {
+          "text": "の",
+          "start": 25.28,
+          "end": 25.83
+        },
+        {
+          "text": "よ",
+          "start": 25.83,
+          "end": 26.38
+        },
+        {
+          "text": "う",
+          "start": 26.38,
+          "end": 26.93
+        },
+        {
+          "text": "に",
+          "start": 26.93,
+          "end": 27.48
+        },
+        {
+          "text": "君",
+          "start": 27.48,
+          "end": 28.03,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 28.03,
+          "end": 28.58
+        },
+        {
+          "text": "そ",
+          "start": 28.58,
+          "end": 29.13
+        },
+        {
+          "text": "ば",
+          "start": 29.13,
+          "end": 29.68
+        },
+        {
+          "text": "へ",
+          "start": 29.68,
+          "end": 30.23
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 31.01,
+      "end": 36.43,
+      "text": "雲海のあいだ 愛はひとすじ",
+      "singableText": "雲海のあいだ 愛はひとすじ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "雲",
+          "start": 31.01,
+          "end": 31.462,
+          "reading": "くも"
+        },
+        {
+          "text": "海",
+          "start": 31.462,
+          "end": 31.913,
+          "reading": "うみ"
+        },
+        {
+          "text": "の",
+          "start": 31.913,
+          "end": 32.365
+        },
+        {
+          "text": "あ",
+          "start": 32.365,
+          "end": 32.817
+        },
+        {
+          "text": "い",
+          "start": 32.817,
+          "end": 33.268
+        },
+        {
+          "text": "だ",
+          "start": 33.268,
+          "end": 33.72
+        },
+        {
+          "text": "愛",
+          "start": 33.72,
+          "end": 34.172,
+          "reading": "あい"
+        },
+        {
+          "text": "は",
+          "start": 34.172,
+          "end": 34.623
+        },
+        {
+          "text": "ひ",
+          "start": 34.623,
+          "end": 35.075
+        },
+        {
+          "text": "と",
+          "start": 35.075,
+          "end": 35.527
+        },
+        {
+          "text": "す",
+          "start": 35.527,
+          "end": 35.978
+        },
+        {
+          "text": "じ",
+          "start": 35.978,
+          "end": 36.43
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 37.63,
+      "end": 42.06,
+      "text": "時をこえて 変わらない",
+      "singableText": "時をこえて 変わらない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "時",
+          "start": 37.63,
+          "end": 38.073,
+          "reading": "とき"
+        },
+        {
+          "text": "を",
+          "start": 38.073,
+          "end": 38.516
+        },
+        {
+          "text": "こ",
+          "start": 38.516,
+          "end": 38.959
+        },
+        {
+          "text": "え",
+          "start": 38.959,
+          "end": 39.402
+        },
+        {
+          "text": "て",
+          "start": 39.402,
+          "end": 39.845
+        },
+        {
+          "text": "変",
+          "start": 39.845,
+          "end": 40.288,
+          "reading": "へん"
+        },
+        {
+          "text": "わ",
+          "start": 40.288,
+          "end": 40.731
+        },
+        {
+          "text": "ら",
+          "start": 40.731,
+          "end": 41.174
+        },
+        {
+          "text": "な",
+          "start": 41.174,
+          "end": 41.617
+        },
+        {
+          "text": "い",
+          "start": 41.617,
+          "end": 42.06
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 46.5,
+      "end": 49.4,
+      "text": "君は目の前のよう",
+      "singableText": "君は目の前のよう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 46.5,
+          "end": 46.862,
+          "reading": "くん"
+        },
+        {
+          "text": "は",
+          "start": 46.862,
+          "end": 47.225
+        },
+        {
+          "text": "目",
+          "start": 47.225,
+          "end": 47.587,
+          "reading": "め"
+        },
+        {
+          "text": "の",
+          "start": 47.587,
+          "end": 47.95
+        },
+        {
+          "text": "前",
+          "start": 47.95,
+          "end": 48.312,
+          "reading": "まえ"
+        },
+        {
+          "text": "の",
+          "start": 48.312,
+          "end": 48.675
+        },
+        {
+          "text": "よ",
+          "start": 48.675,
+          "end": 49.038
+        },
+        {
+          "text": "う",
+          "start": 49.038,
+          "end": 49.4
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 51.06,
+      "end": 52.56,
+      "text": "千年のあとも",
+      "singableText": "千年のあとも",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "千",
+          "start": 51.06,
+          "end": 51.31,
+          "reading": "せん"
+        },
+        {
+          "text": "年",
+          "start": 51.31,
+          "end": 51.56,
+          "reading": "ねん"
+        },
+        {
+          "text": "の",
+          "start": 51.56,
+          "end": 51.81
+        },
+        {
+          "text": "あ",
+          "start": 51.81,
+          "end": 52.06
+        },
+        {
+          "text": "と",
+          "start": 52.06,
+          "end": 52.31
+        },
+        {
+          "text": "も",
+          "start": 52.31,
+          "end": 52.56
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

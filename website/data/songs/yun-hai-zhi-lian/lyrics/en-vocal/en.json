@@ -1,0 +1,147 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 18.48,
+      "end": 24.36,
+      "text": "Upon the wind, I find the place",
+      "singableText": "Upon the wind, I find the place",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Upon",
+          "start": 18.48,
+          "end": 19.215
+        },
+        {
+          "text": "the",
+          "start": 19.215,
+          "end": 19.95
+        },
+        {
+          "text": "wind",
+          "start": 19.95,
+          "end": 20.685
+        },
+        {
+          "text": ",",
+          "start": 20.685,
+          "end": 21.42
+        },
+        {
+          "text": "I",
+          "start": 21.42,
+          "end": 22.155
+        },
+        {
+          "text": "find",
+          "start": 22.155,
+          "end": 22.89
+        },
+        {
+          "text": "the",
+          "start": 22.89,
+          "end": 23.625
+        },
+        {
+          "text": "place",
+          "start": 23.625,
+          "end": 24.36
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 29.91,
+      "end": 33.01,
+      "text": "A cloud's love is just one line",
+      "singableText": "A cloud's love is just one line",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 29.91,
+          "end": 30.353
+        },
+        {
+          "text": "cloud's",
+          "start": 30.353,
+          "end": 30.796
+        },
+        {
+          "text": "love",
+          "start": 30.796,
+          "end": 31.239
+        },
+        {
+          "text": "is",
+          "start": 31.239,
+          "end": 31.681
+        },
+        {
+          "text": "just",
+          "start": 31.681,
+          "end": 32.124
+        },
+        {
+          "text": "one",
+          "start": 32.124,
+          "end": 32.567
+        },
+        {
+          "text": "line",
+          "start": 32.567,
+          "end": 33.01
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 34.45,
+      "end": 40.23,
+      "text": "through flowing and turning time",
+      "singableText": "through flowing and turning time",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "through",
+          "start": 34.45,
+          "end": 35.606
+        },
+        {
+          "text": "flowing",
+          "start": 35.606,
+          "end": 36.762
+        },
+        {
+          "text": "and",
+          "start": 36.762,
+          "end": 37.918
+        },
+        {
+          "text": "turning",
+          "start": 37.918,
+          "end": 39.074
+        },
+        {
+          "text": "time",
+          "start": 39.074,
+          "end": 40.23
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

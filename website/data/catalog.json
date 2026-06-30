@@ -6,7 +6,7 @@
     "url": "https://fun.lazying.art",
     "protocol": "fun.lazying.media.v1"
   },
-  "defaultMedia": "one-sky-three-lights-mixed",
+  "defaultMedia": "yun-hai-zhi-lian",
   "items": [
     {
       "id": "one-sky-three-lights-mixed",
@@ -30,6 +30,30 @@
         "lyrics",
         "chords",
         "Cantonese"
+      ]
+    },
+    {
+      "id": "yun-hai-zhi-lian",
+      "kind": "song",
+      "title": "云海之恋",
+      "artist": "Musia",
+      "summary": "A spacious cloud-sea love ballad with Mandarin, English, and Japanese vocals, corrected multilingual lyrics, pinyin, furigana, and chord timing.",
+      "manifest": "data/songs/yun-hai-zhi-lian/manifest.json",
+      "cover": "assets/covers/yun-hai-zhi-lian-16x9.png",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "love",
+        "cloud-sea",
+        "Mandarin",
+        "English",
+        "Japanese",
+        "pinyin",
+        "furigana"
       ]
     },
     {

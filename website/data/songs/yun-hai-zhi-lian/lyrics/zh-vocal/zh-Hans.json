@@ -1,0 +1,298 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 22.13,
+      "end": 23.67,
+      "text": "我想你",
+      "singableText": "我想你",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 22.13,
+          "end": 22.643,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "想",
+          "start": 22.643,
+          "end": 23.157,
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "你",
+          "start": 23.157,
+          "end": 23.67,
+          "pinyin": "ni3"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 24.73,
+      "end": 30.23,
+      "text": "像风落在你身边",
+      "singableText": "像风落在你身边",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "像",
+          "start": 24.73,
+          "end": 25.516,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "风",
+          "start": 25.516,
+          "end": 26.301,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "落",
+          "start": 26.301,
+          "end": 27.087,
+          "pinyin": "luo4"
+        },
+        {
+          "text": "在",
+          "start": 27.087,
+          "end": 27.873,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "你",
+          "start": 27.873,
+          "end": 28.659,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "身",
+          "start": 28.659,
+          "end": 29.444,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "边",
+          "start": 29.444,
+          "end": 30.23,
+          "pinyin": "bian1"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 31.01,
+      "end": 36.43,
+      "text": "云海之间，爱是一线",
+      "singableText": "云海之间，爱是一线",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "云",
+          "start": 31.01,
+          "end": 31.612,
+          "pinyin": "yun2"
+        },
+        {
+          "text": "海",
+          "start": 31.612,
+          "end": 32.214,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "之",
+          "start": 32.214,
+          "end": 32.817,
+          "pinyin": "zhi1"
+        },
+        {
+          "text": "间",
+          "start": 32.817,
+          "end": 33.419,
+          "pinyin": "jian1"
+        },
+        {
+          "text": "，",
+          "start": 33.419,
+          "end": 34.021
+        },
+        {
+          "text": "爱",
+          "start": 34.021,
+          "end": 34.623,
+          "pinyin": "ai4"
+        },
+        {
+          "text": "是",
+          "start": 34.623,
+          "end": 35.226,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "一",
+          "start": 35.226,
+          "end": 35.828,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "线",
+          "start": 35.828,
+          "end": 36.43,
+          "pinyin": "xian4"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 37.63,
+      "end": 42.06,
+      "text": "穿过流年，不改从前",
+      "singableText": "穿过流年，不改从前",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "穿",
+          "start": 37.63,
+          "end": 38.122,
+          "pinyin": "chuan1"
+        },
+        {
+          "text": "过",
+          "start": 38.122,
+          "end": 38.614,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "流",
+          "start": 38.614,
+          "end": 39.107,
+          "pinyin": "liu2"
+        },
+        {
+          "text": "年",
+          "start": 39.107,
+          "end": 39.599,
+          "pinyin": "nian2"
+        },
+        {
+          "text": "，",
+          "start": 39.599,
+          "end": 40.091
+        },
+        {
+          "text": "不",
+          "start": 40.091,
+          "end": 40.583,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "改",
+          "start": 40.583,
+          "end": 41.076,
+          "pinyin": "gai3"
+        },
+        {
+          "text": "从",
+          "start": 41.076,
+          "end": 41.568,
+          "pinyin": "cong2"
+        },
+        {
+          "text": "前",
+          "start": 41.568,
+          "end": 42.06,
+          "pinyin": "qian2"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 46.5,
+      "end": 49.4,
+      "text": "你像在眼前",
+      "singableText": "你像在眼前",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 46.5,
+          "end": 47.08,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "像",
+          "start": 47.08,
+          "end": 47.66,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "在",
+          "start": 47.66,
+          "end": 48.24,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "眼",
+          "start": 48.24,
+          "end": 48.82,
+          "pinyin": "yan3"
+        },
+        {
+          "text": "前",
+          "start": 48.82,
+          "end": 49.4,
+          "pinyin": "qian2"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 51.06,
+      "end": 52.56,
+      "text": "千年以后",
+      "singableText": "千年以后",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "千",
+          "start": 51.06,
+          "end": 51.435,
+          "pinyin": "qian1"
+        },
+        {
+          "text": "年",
+          "start": 51.435,
+          "end": 51.81,
+          "pinyin": "nian2"
+        },
+        {
+          "text": "以",
+          "start": 51.81,
+          "end": 52.185,
+          "pinyin": "yi3"
+        },
+        {
+          "text": "后",
+          "start": 52.185,
+          "end": 52.56,
+          "pinyin": "hou4"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

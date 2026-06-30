@@ -1,0 +1,247 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 22.13,
+      "end": 23.67,
+      "text": "I miss you",
+      "singableText": "I miss you",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 22.13,
+          "end": 22.643
+        },
+        {
+          "text": "miss",
+          "start": 22.643,
+          "end": 23.157
+        },
+        {
+          "text": "you",
+          "start": 23.157,
+          "end": 23.67
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 24.73,
+      "end": 30.23,
+      "text": "like wind falling beside you",
+      "singableText": "like wind falling beside you",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "like",
+          "start": 24.73,
+          "end": 25.83
+        },
+        {
+          "text": "wind",
+          "start": 25.83,
+          "end": 26.93
+        },
+        {
+          "text": "falling",
+          "start": 26.93,
+          "end": 28.03
+        },
+        {
+          "text": "beside",
+          "start": 28.03,
+          "end": 29.13
+        },
+        {
+          "text": "you",
+          "start": 29.13,
+          "end": 30.23
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 31.01,
+      "end": 36.43,
+      "text": "between clouds and sea, love is one line",
+      "singableText": "between clouds and sea, love is one line",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "between",
+          "start": 31.01,
+          "end": 31.612
+        },
+        {
+          "text": "clouds",
+          "start": 31.612,
+          "end": 32.214
+        },
+        {
+          "text": "and",
+          "start": 32.214,
+          "end": 32.817
+        },
+        {
+          "text": "sea",
+          "start": 32.817,
+          "end": 33.419
+        },
+        {
+          "text": ",",
+          "start": 33.419,
+          "end": 34.021
+        },
+        {
+          "text": "love",
+          "start": 34.021,
+          "end": 34.623
+        },
+        {
+          "text": "is",
+          "start": 34.623,
+          "end": 35.226
+        },
+        {
+          "text": "one",
+          "start": 35.226,
+          "end": 35.828
+        },
+        {
+          "text": "line",
+          "start": 35.828,
+          "end": 36.43
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 37.63,
+      "end": 42.06,
+      "text": "through the flowing years, still unchanged",
+      "singableText": "through the flowing years, still unchanged",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "through",
+          "start": 37.63,
+          "end": 38.263
+        },
+        {
+          "text": "the",
+          "start": 38.263,
+          "end": 38.896
+        },
+        {
+          "text": "flowing",
+          "start": 38.896,
+          "end": 39.529
+        },
+        {
+          "text": "years",
+          "start": 39.529,
+          "end": 40.161
+        },
+        {
+          "text": ",",
+          "start": 40.161,
+          "end": 40.794
+        },
+        {
+          "text": "still",
+          "start": 40.794,
+          "end": 41.427
+        },
+        {
+          "text": "unchanged",
+          "start": 41.427,
+          "end": 42.06
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 46.5,
+      "end": 49.4,
+      "text": "you feel close before my eyes",
+      "singableText": "you feel close before my eyes",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "you",
+          "start": 46.5,
+          "end": 46.983
+        },
+        {
+          "text": "feel",
+          "start": 46.983,
+          "end": 47.467
+        },
+        {
+          "text": "close",
+          "start": 47.467,
+          "end": 47.95
+        },
+        {
+          "text": "before",
+          "start": 47.95,
+          "end": 48.433
+        },
+        {
+          "text": "my",
+          "start": 48.433,
+          "end": 48.917
+        },
+        {
+          "text": "eyes",
+          "start": 48.917,
+          "end": 49.4
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 51.06,
+      "end": 52.56,
+      "text": "after a thousand years",
+      "singableText": "after a thousand years",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "after",
+          "start": 51.06,
+          "end": 51.435
+        },
+        {
+          "text": "a",
+          "start": 51.435,
+          "end": 51.81
+        },
+        {
+          "text": "thousand",
+          "start": 51.81,
+          "end": 52.185
+        },
+        {
+          "text": "years",
+          "start": 52.185,
+          "end": 52.56
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

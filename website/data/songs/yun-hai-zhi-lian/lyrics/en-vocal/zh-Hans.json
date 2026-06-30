@@ -1,0 +1,198 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 18.48,
+      "end": 24.36,
+      "text": "我乘着风寻找那个地方",
+      "singableText": "我乘着风寻找那个地方",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 18.48,
+          "end": 19.068,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "乘",
+          "start": 19.068,
+          "end": 19.656,
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "着",
+          "start": 19.656,
+          "end": 20.244,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "风",
+          "start": 20.244,
+          "end": 20.832,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "寻",
+          "start": 20.832,
+          "end": 21.42,
+          "pinyin": "xun2"
+        },
+        {
+          "text": "找",
+          "start": 21.42,
+          "end": 22.008,
+          "pinyin": "zhao3"
+        },
+        {
+          "text": "那",
+          "start": 22.008,
+          "end": 22.596,
+          "pinyin": "na4"
+        },
+        {
+          "text": "个",
+          "start": 22.596,
+          "end": 23.184,
+          "pinyin": "ge4"
+        },
+        {
+          "text": "地",
+          "start": 23.184,
+          "end": 23.772,
+          "pinyin": "di4"
+        },
+        {
+          "text": "方",
+          "start": 23.772,
+          "end": 24.36,
+          "pinyin": "fang1"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 29.91,
+      "end": 33.01,
+      "text": "云的爱只是一条线",
+      "singableText": "云的爱只是一条线",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "云",
+          "start": 29.91,
+          "end": 30.297,
+          "pinyin": "yun2"
+        },
+        {
+          "text": "的",
+          "start": 30.297,
+          "end": 30.685,
+          "pinyin": "de5"
+        },
+        {
+          "text": "爱",
+          "start": 30.685,
+          "end": 31.072,
+          "pinyin": "ai4"
+        },
+        {
+          "text": "只",
+          "start": 31.072,
+          "end": 31.46,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "是",
+          "start": 31.46,
+          "end": 31.848,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "一",
+          "start": 31.848,
+          "end": 32.235,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "条",
+          "start": 32.235,
+          "end": 32.622,
+          "pinyin": "tiao2"
+        },
+        {
+          "text": "线",
+          "start": 32.622,
+          "end": 33.01,
+          "pinyin": "xian4"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 34.45,
+      "end": 40.23,
+      "text": "穿过流转的时光",
+      "singableText": "穿过流转的时光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "穿",
+          "start": 34.45,
+          "end": 35.276,
+          "pinyin": "chuan1"
+        },
+        {
+          "text": "过",
+          "start": 35.276,
+          "end": 36.101,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "流",
+          "start": 36.101,
+          "end": 36.927,
+          "pinyin": "liu2"
+        },
+        {
+          "text": "转",
+          "start": 36.927,
+          "end": 37.753,
+          "pinyin": "zhuan3"
+        },
+        {
+          "text": "的",
+          "start": 37.753,
+          "end": 38.579,
+          "pinyin": "de5"
+        },
+        {
+          "text": "时",
+          "start": 38.579,
+          "end": 39.404,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "光",
+          "start": 39.404,
+          "end": 40.23,
+          "pinyin": "guang1"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

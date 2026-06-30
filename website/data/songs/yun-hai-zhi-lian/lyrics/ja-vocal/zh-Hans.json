@@ -1,0 +1,166 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 3.25,
+      "end": 4.69,
+      "text": "风",
+      "singableText": "风",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 3.25,
+          "end": 4.69,
+          "pinyin": "feng1"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 27.98,
+      "end": 33.06,
+      "text": "把心放在风里",
+      "singableText": "把心放在风里",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "把",
+          "start": 27.98,
+          "end": 28.827,
+          "pinyin": "ba3"
+        },
+        {
+          "text": "心",
+          "start": 28.827,
+          "end": 29.673,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "放",
+          "start": 29.673,
+          "end": 30.52,
+          "pinyin": "fang4"
+        },
+        {
+          "text": "在",
+          "start": 30.52,
+          "end": 31.367,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "风",
+          "start": 31.367,
+          "end": 32.213,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "里",
+          "start": 32.213,
+          "end": 33.06,
+          "pinyin": "li3"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 34.06,
+      "end": 39.02,
+      "text": "送到你的身边",
+      "singableText": "送到你的身边",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "送",
+          "start": 34.06,
+          "end": 34.887,
+          "pinyin": "song4"
+        },
+        {
+          "text": "到",
+          "start": 34.887,
+          "end": 35.713,
+          "pinyin": "dao4"
+        },
+        {
+          "text": "你",
+          "start": 35.713,
+          "end": 36.54,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "的",
+          "start": 36.54,
+          "end": 37.367,
+          "pinyin": "de5"
+        },
+        {
+          "text": "身",
+          "start": 37.367,
+          "end": 38.193,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "边",
+          "start": 38.193,
+          "end": 39.02,
+          "pinyin": "bian1"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 54.88,
+      "end": 57.22,
+      "text": "一路通向你",
+      "singableText": "一路通向你",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 54.88,
+          "end": 55.348,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "路",
+          "start": 55.348,
+          "end": 55.816,
+          "pinyin": "lu4"
+        },
+        {
+          "text": "通",
+          "start": 55.816,
+          "end": 56.284,
+          "pinyin": "tong1"
+        },
+        {
+          "text": "向",
+          "start": 56.284,
+          "end": 56.752,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "你",
+          "start": 56.752,
+          "end": 57.22,
+          "pinyin": "ni3"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

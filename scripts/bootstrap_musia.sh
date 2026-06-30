@@ -73,7 +73,10 @@ conda run -n "$ENV_NAME" python -m pip install \
   jieba \
   phonemizer \
   pedalboard \
-  pyloudnorm
+  pyloudnorm \
+  pillow \
+  pykakasi \
+  playwright
 
 echo "Installing NLTK data needed by g2p_en."
 conda run -n "$ENV_NAME" python -m nltk.downloader averaged_perceptron_tagger_eng cmudict
@@ -84,7 +87,7 @@ if [[ "$WITH_BASIC_PITCH" == "1" ]]; then
 fi
 
 echo "Checking install."
-conda run -n "$ENV_NAME" python -c "import importlib.util, torch; mods=['torch','torchaudio','librosa','soundfile','demucs','faster_whisper','openai','pypinyin','g2p_en','jieba']; [print(f'{m}: {\"ok\" if importlib.util.find_spec(m) else \"missing\"}') for m in mods]; print('torch_cuda_available:', torch.cuda.is_available())"
+conda run -n "$ENV_NAME" python -c "import importlib.util, torch; mods=['torch','torchaudio','librosa','soundfile','demucs','faster_whisper','openai','pypinyin','g2p_en','jieba','PIL','pykakasi','playwright']; [print(f'{m}: {\"ok\" if importlib.util.find_spec(m) else \"missing\"}') for m in mods]; print('torch_cuda_available:', torch.cuda.is_available())"
 
 cat <<EOF
 
@@ -93,4 +96,5 @@ Musia environment is ready.
 Run:
   PYTHONNOUSERSITE=1 conda run -n $ENV_NAME python scripts/download_open_songs.py --id danny-boy-1917
   PYTHONNOUSERSITE=1 conda run -n $ENV_NAME python scripts/run_pipeline.py data/open_songs/danny-boy-1917/original.ogg --run-name smoke-danny --max-duration 45 --asr-model tiny
+  PYTHONNOUSERSITE=1 conda run -n $ENV_NAME python scripts/record_fun_player.py --help
 EOF

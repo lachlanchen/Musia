@@ -1,0 +1,142 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 3.25,
+      "end": 4.69,
+      "text": "wind",
+      "singableText": "wind",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "wind",
+          "start": 3.25,
+          "end": 4.69
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 27.98,
+      "end": 33.06,
+      "text": "I place my heart upon the wind",
+      "singableText": "I place my heart upon the wind",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 27.98,
+          "end": 28.706
+        },
+        {
+          "text": "place",
+          "start": 28.706,
+          "end": 29.431
+        },
+        {
+          "text": "my",
+          "start": 29.431,
+          "end": 30.157
+        },
+        {
+          "text": "heart",
+          "start": 30.157,
+          "end": 30.883
+        },
+        {
+          "text": "upon",
+          "start": 30.883,
+          "end": 31.609
+        },
+        {
+          "text": "the",
+          "start": 31.609,
+          "end": 32.334
+        },
+        {
+          "text": "wind",
+          "start": 32.334,
+          "end": 33.06
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 34.06,
+      "end": 39.02,
+      "text": "may it reach your side",
+      "singableText": "may it reach your side",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "may",
+          "start": 34.06,
+          "end": 35.052
+        },
+        {
+          "text": "it",
+          "start": 35.052,
+          "end": 36.044
+        },
+        {
+          "text": "reach",
+          "start": 36.044,
+          "end": 37.036
+        },
+        {
+          "text": "your",
+          "start": 37.036,
+          "end": 38.028
+        },
+        {
+          "text": "side",
+          "start": 38.028,
+          "end": 39.02
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 54.88,
+      "end": 57.22,
+      "text": "it continues to you",
+      "singableText": "it continues to you",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "it",
+          "start": 54.88,
+          "end": 55.465
+        },
+        {
+          "text": "continues",
+          "start": 55.465,
+          "end": 56.05
+        },
+        {
+          "text": "to",
+          "start": 56.05,
+          "end": 56.635
+        },
+        {
+          "text": "you",
+          "start": 56.635,
+          "end": 57.22
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}

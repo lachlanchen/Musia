@@ -1,0 +1,156 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "yun-hai-zhi-lian",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 3.25,
+      "end": 4.69,
+      "text": "風",
+      "singableText": "風",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 3.25,
+          "end": 4.69,
+          "reading": "かぜ"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 27.98,
+      "end": 33.06,
+      "text": "風に乗せて 心",
+      "singableText": "風に乗せて 心",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 27.98,
+          "end": 28.827,
+          "reading": "かぜ"
+        },
+        {
+          "text": "に",
+          "start": 28.827,
+          "end": 29.673
+        },
+        {
+          "text": "乗",
+          "start": 29.673,
+          "end": 30.52,
+          "reading": "じょう"
+        },
+        {
+          "text": "せ",
+          "start": 30.52,
+          "end": 31.367
+        },
+        {
+          "text": "て",
+          "start": 31.367,
+          "end": 32.213
+        },
+        {
+          "text": "心",
+          "start": 32.213,
+          "end": 33.06,
+          "reading": "こころ"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 34.06,
+      "end": 39.02,
+      "text": "君のそばへ 届け",
+      "singableText": "君のそばへ 届け",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 34.06,
+          "end": 34.769,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 34.769,
+          "end": 35.477
+        },
+        {
+          "text": "そ",
+          "start": 35.477,
+          "end": 36.186
+        },
+        {
+          "text": "ば",
+          "start": 36.186,
+          "end": 36.894
+        },
+        {
+          "text": "へ",
+          "start": 36.894,
+          "end": 37.603
+        },
+        {
+          "text": "届",
+          "start": 37.603,
+          "end": 38.311,
+          "reading": "とどけ"
+        },
+        {
+          "text": "け",
+          "start": 38.311,
+          "end": 39.02
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 54.88,
+      "end": 57.22,
+      "text": "君へ続く",
+      "singableText": "君へ続く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 54.88,
+          "end": 55.465,
+          "reading": "くん"
+        },
+        {
+          "text": "へ",
+          "start": 55.465,
+          "end": 56.05
+        },
+        {
+          "text": "続",
+          "start": 56.05,
+          "end": 56.635,
+          "reading": "ぞく"
+        },
+        {
+          "text": "く",
+          "start": 56.635,
+          "end": 57.22
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "correction": "ASR/STT corrected against prompt references; active vocal track follows that vocal's own recognized structure."
+  }
+}
