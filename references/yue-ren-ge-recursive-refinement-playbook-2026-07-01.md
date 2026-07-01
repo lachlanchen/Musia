@@ -131,6 +131,21 @@ do not add modern words
 This gave ACE enough repeated phrase material to create a coherent melody while
 still staying faithful to the user's "原诗版" request.
 
+The deeper lesson is that repetition is part of songwriting, not a compromise.
+For short poems, repeat the best original lines to create form. For long poems,
+select the most musical original lines first, then repeat the strongest hook.
+In both cases, the goal is:
+
+```text
+original words
+selected for mouth-feel and emotional force
+reorganized into music
+```
+
+Do not treat a poem as a transcript that must be sung from first character to
+last character. Treat it as a source of musical phrases. The best line may need
+to return like a chorus so the listener remembers it.
+
 ### 2. The hook was emotionally central
 
 The strongest line is:
@@ -234,6 +249,27 @@ The selected project tried these routes:
 
 The lesson is not "always use Turbo." The lesson is "always run a real
 candidate matrix when the song matters."
+
+## Long-Poem Extension
+
+For a long poem, use the same philosophy but invert the problem:
+
+```text
+short poem problem: too little structure -> repeat original hook
+long poem problem: too much text -> select original hooks
+```
+
+The long-poem original-text route should:
+
+- find the most 朗朗上口 / 啷啷上口 original lines;
+- prefer lines with clean rhyme, vowel color, parallelism, and strong imagery;
+- preserve exact source wording for selected lines;
+- omit less musical or overly dense sections instead of cramming them;
+- arrange selected lines into verse / pre-chorus / chorus / bridge;
+- repeat the strongest couplet when repetition makes it more memorable.
+
+This is still an original-text route if every sung line comes from the source.
+The composition work is selection, ordering, repetition, and pacing.
 
 ## Recursive Refinement Loop
 

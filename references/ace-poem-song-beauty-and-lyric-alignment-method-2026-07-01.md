@@ -194,6 +194,15 @@ For exact poem experiments:
   single-pass render produces no ASR recovery or credit/subtitle hallucinations,
   repeat only original poem lines into verse/chorus form instead of adding
   modern text;
+- long poems should not automatically be sung end-to-end. When the goal is a
+  beautiful original-text song, first choose the most 朗朗上口, emotionally
+  central, and musically rhyme-friendly original phrases, then reorganize those
+  exact poem lines into verse / pre-chorus / chorus / bridge form. Repeating a
+  strong couplet is allowed and often preferred when it improves melody, memory,
+  押韵, and audience resonance;
+- preserve the public text of the selected lines when using this route. The
+  creative act is selection, ordering, repetition, and musical pacing, not
+  rewriting the poem into modern lyrics;
 - avoid putting forbidden-word lists in short-poem captions because the model
   can sing those warning words; use positive style/vocal instructions and keep
   pronunciation hints compact;
@@ -223,6 +232,78 @@ Selection criteria:
 5. Are skipped/repeated lines corrected in the final JSON?
 6. Would the website player show the truth?
 ```
+
+## Long-Poem Original-Text Selection Route
+
+Use this when the user wants the poem's original language, but the source is too
+long or uneven to become a beautiful song if sung linearly.
+
+The method:
+
+```text
+long poem
+-> identify the emotional spine
+-> rank original lines by musicality and memorability
+-> select the most singable lines
+-> repeat the strongest hook/couplet
+-> arrange into song form
+-> generate candidates
+-> ASR/listening correction
+```
+
+What to look for:
+
+- 朗朗上口 / 啷啷上口: lines with clean mouth-feel, clear vowels, and natural
+  phrase endings;
+- 合乎音韵: repeated vowel/rhyme colors, balanced tones, parallel structure,
+  and lines that can sit on melody without rushing;
+- emotional center: a line that tells the listener why the song matters;
+- image clarity: one or two vivid images are stronger than ten dense allusions;
+- hook potential: a couplet that still feels powerful after two or three
+  repetitions.
+
+Allowed transformations while still calling it an original-text route:
+
+```text
+select original lines
+repeat original lines
+change order for song form
+split a long line across breath points
+omit less musical sections
+```
+
+Not allowed unless the route is explicitly "adapted":
+
+```text
+replace the poem with modern paraphrase
+add new explanatory lyrics
+invent a chorus not present in the source
+```
+
+Good structure:
+
+```text
+[Verse]
+selected opening image
+selected motion/conflict line
+
+[Pre-Chorus]
+line that raises emotional tension
+
+[Chorus]
+strongest original couplet
+strongest original couplet repeated
+
+[Bridge]
+contrasting original image or philosophical turn
+
+[Final Chorus]
+strongest original couplet
+short selected closing line
+```
+
+This route is the long-poem counterpart of the `越人歌` lesson: repetition is
+not filler when it makes the original text become music.
 
 ## Lyric Correction Routine
 
