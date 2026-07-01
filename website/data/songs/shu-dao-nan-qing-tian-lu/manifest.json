@@ -1,0 +1,658 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "shu-dao-nan-qing-tian-lu",
+  "kind": "song",
+  "title": "晴天路",
+  "localizedTitles": {
+    "zh-Hans": "晴天路",
+    "en": "Road to Clear Sky",
+    "ja": "晴天への道"
+  },
+  "artist": "Musia",
+  "description": "An original Mandarin Musia song inspired by 蜀道难: a hopeful clear-sky road through impossible mountains.",
+  "caption": "A compact xianxia ballad about fear, cliffs, and walking until the night opens.",
+  "duration": 84.5,
+  "canonicalUrl": "https://fun.lazying.art/#shu-dao-nan-qing-tian-lu",
+  "share": {
+    "title": "晴天路 - Fun Lazying Art",
+    "description": "An original Musia song inspired by 蜀道难, with corrected trilingual lyrics.",
+    "url": "https://fun.lazying.art/#shu-dao-nan-qing-tian-lu",
+    "image": "assets/covers/shu-dao-nan-qing-tian-lu-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "晴天路 cover",
+      "role": "cover",
+      "src": "assets/covers/shu-dao-nan-qing-tian-lu-16x9.png",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/shu-dao-nan-qing-tian-lu-16x9.png",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    "primaryAudio": {
+      "id": "qing-tian-lu-zh",
+      "label": "中文",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
+      "lyricSetId": "zh-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/shu-dao-nan-qing-tian-lu-zh-Hans-ace-20260701.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "D minor requested / detected A-Dm-Bb centered progression",
+    "bpm": 151.999,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 2.09,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 2.09,
+        "end": 5.178,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 5.178,
+        "end": 5.968,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 5.968,
+        "end": 7.895,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 7.895,
+        "end": 8.29,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 8.29,
+        "end": 9.845,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 9.845,
+        "end": 11.401,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 11.401,
+        "end": 14.536,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 14.536,
+        "end": 16.509,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 16.509,
+        "end": 17.276,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 17.276,
+        "end": 17.67,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 17.67,
+        "end": 20.434,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 20.434,
+        "end": 20.805,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 20.805,
+        "end": 22.338,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 22.338,
+        "end": 23.917,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 23.917,
+        "end": 25.472,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 25.472,
+        "end": 25.867,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 25.867,
+        "end": 26.262,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 26.262,
+        "end": 26.657,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 26.657,
+        "end": 27.028,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 27.028,
+        "end": 29.745,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 29.745,
+        "end": 30.14,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 30.14,
+        "end": 30.534,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 30.534,
+        "end": 32.856,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 32.856,
+        "end": 33.251,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 33.251,
+        "end": 33.622,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 33.622,
+        "end": 34.389,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 34.389,
+        "end": 34.783,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 34.783,
+        "end": 36.339,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 36.339,
+        "end": 39.404,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 39.404,
+        "end": 40.171,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 40.171,
+        "end": 40.565,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 40.565,
+        "end": 40.937,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 40.937,
+        "end": 41.726,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 41.726,
+        "end": 42.098,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 42.098,
+        "end": 42.493,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 42.493,
+        "end": 45.558,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 45.558,
+        "end": 46.695,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 46.695,
+        "end": 47.88,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 47.88,
+        "end": 48.251,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 48.251,
+        "end": 48.623,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 48.623,
+        "end": 50.155,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 50.155,
+        "end": 51.339,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 51.339,
+        "end": 51.711,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 51.711,
+        "end": 52.082,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 52.082,
+        "end": 52.454,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 52.454,
+        "end": 52.849,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 52.849,
+        "end": 54.01,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 54.01,
+        "end": 54.776,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 54.776,
+        "end": 57.887,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 57.887,
+        "end": 60.929,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 60.929,
+        "end": 64.017,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 64.017,
+        "end": 64.389,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 64.389,
+        "end": 64.784,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 64.784,
+        "end": 66.316,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 66.316,
+        "end": 66.711,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 66.711,
+        "end": 67.872,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 67.872,
+        "end": 68.267,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 68.267,
+        "end": 69.404,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 69.404,
+        "end": 69.799,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 69.799,
+        "end": 70.194,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 70.194,
+        "end": 71.332,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 71.332,
+        "end": 71.75,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 71.75,
+        "end": 73.259,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 73.259,
+        "end": 73.654,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 73.654,
+        "end": 74.072,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 74.072,
+        "end": 74.443,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 74.443,
+        "end": 74.838,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 74.838,
+        "end": 75.233,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 75.233,
+        "end": 76.417,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 76.417,
+        "end": 79.459,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 79.459,
+        "end": 84.5,
+        "name": "Dm",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "zh-vocal",
+      "label": "中文 vocal",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "active-vocal"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 12.36,
+        "end": 14.72,
+        "text": "山风过肩"
+      },
+      {
+        "id": "l02",
+        "start": 14.72,
+        "end": 18.18,
+        "text": "云在脚边"
+      },
+      {
+        "id": "l03",
+        "start": 19.0,
+        "end": 21.7,
+        "text": "旧路弯弯"
+      },
+      {
+        "id": "l04",
+        "start": 21.7,
+        "end": 24.36,
+        "text": "看不见终点"
+      },
+      {
+        "id": "l05",
+        "start": 25.0,
+        "end": 27.48,
+        "text": "有人说别走"
+      },
+      {
+        "id": "l06",
+        "start": 27.48,
+        "end": 30.7,
+        "text": "前方太遥远"
+      },
+      {
+        "id": "l07",
+        "start": 30.7,
+        "end": 36.62,
+        "text": "我把害怕放进心里面"
+      },
+      {
+        "id": "l08",
+        "start": 49.52,
+        "end": 52.1,
+        "text": "夜鸟飞远"
+      },
+      {
+        "id": "l09",
+        "start": 52.1,
+        "end": 54.92,
+        "text": "月落桥边"
+      },
+      {
+        "id": "l10",
+        "start": 55.8,
+        "end": 58.06,
+        "text": "照我向云间"
+      },
+      {
+        "id": "l11",
+        "start": 59.1,
+        "end": 61.06,
+        "text": "不是不怕"
+      },
+      {
+        "id": "l12",
+        "start": 61.94,
+        "end": 64.14,
+        "text": "只想到天破"
+      },
+      {
+        "id": "l13",
+        "start": 64.7,
+        "end": 67.24,
+        "text": "路再难也要走"
+      },
+      {
+        "id": "l14",
+        "start": 67.78,
+        "end": 70.26,
+        "text": "眼中还有尽头"
+      },
+      {
+        "id": "l15",
+        "start": 70.26,
+        "end": 73.7,
+        "text": "心不要低头"
+      },
+      {
+        "id": "l16",
+        "start": 74.28,
+        "end": 76.54,
+        "text": "黑夜被风吹散"
+      },
+      {
+        "id": "l17",
+        "start": 76.54,
+        "end": 79.76,
+        "text": "梦越过山尽头"
+      }
+    ]
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/shu-dao-nan-original-song-20260701",
+    "audioSource": "ACE-Step 1.5 XL Turbo direct-clear seed 735601, trimmed at 84.5s to remove generated outro.",
+    "analysisRun": "data/runs/shu-dao-nan-qing-tian-lu-20260701-analysis",
+    "quality": {
+      "vocalStemLargeV3Overlap": 0.47770700636942676,
+      "gate": "pass-with-correction"
+    },
+    "lyricCorrection": "Corrected from trimmed selected audio large-v3 no-VAD ASR, vocal stem ASR, and the intended direct-clear lyric.",
+    "coverSource": "Generated 16:9 cover with Codex image generation; original saved under ~/.codex/generated_images.",
+    "publicAudio": "shu-dao-nan-qing-tian-lu-zh-Hans-ace-20260701.mp3"
+  },
+  "artifacts": []
+}

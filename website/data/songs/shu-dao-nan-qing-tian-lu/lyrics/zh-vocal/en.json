@@ -1,0 +1,817 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "shu-dao-nan-qing-tian-lu",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 12.36,
+      "end": 14.72,
+      "text": "Mountain wind crosses my shoulder.",
+      "singableText": "Mountain wind crosses my shoulder.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Mountain",
+          "start": 12.36,
+          "end": 12.753
+        },
+        {
+          "text": "wind",
+          "start": 12.753,
+          "end": 13.147
+        },
+        {
+          "text": "crosses",
+          "start": 13.147,
+          "end": 13.54
+        },
+        {
+          "text": "my",
+          "start": 13.54,
+          "end": 13.933
+        },
+        {
+          "text": "shoulder",
+          "start": 13.933,
+          "end": 14.327
+        },
+        {
+          "text": ".",
+          "start": 14.327,
+          "end": 14.72
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 14.72,
+      "end": 18.18,
+      "text": "Clouds are beside my feet.",
+      "singableText": "Clouds are beside my feet.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Clouds",
+          "start": 14.72,
+          "end": 15.297
+        },
+        {
+          "text": "are",
+          "start": 15.297,
+          "end": 15.873
+        },
+        {
+          "text": "beside",
+          "start": 15.873,
+          "end": 16.45
+        },
+        {
+          "text": "my",
+          "start": 16.45,
+          "end": 17.027
+        },
+        {
+          "text": "feet",
+          "start": 17.027,
+          "end": 17.603
+        },
+        {
+          "text": ".",
+          "start": 17.603,
+          "end": 18.18
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 19.0,
+      "end": 21.7,
+      "text": "The old road bends and bends.",
+      "singableText": "The old road bends and bends.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 19.0,
+          "end": 19.386
+        },
+        {
+          "text": "old",
+          "start": 19.386,
+          "end": 19.771
+        },
+        {
+          "text": "road",
+          "start": 19.771,
+          "end": 20.157
+        },
+        {
+          "text": "bends",
+          "start": 20.157,
+          "end": 20.543
+        },
+        {
+          "text": "and",
+          "start": 20.543,
+          "end": 20.929
+        },
+        {
+          "text": "bends",
+          "start": 20.929,
+          "end": 21.314
+        },
+        {
+          "text": ".",
+          "start": 21.314,
+          "end": 21.7
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 21.7,
+      "end": 24.36,
+      "text": "I cannot see the end.",
+      "singableText": "I cannot see the end.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 21.7,
+          "end": 22.143
+        },
+        {
+          "text": "cannot",
+          "start": 22.143,
+          "end": 22.587
+        },
+        {
+          "text": "see",
+          "start": 22.587,
+          "end": 23.03
+        },
+        {
+          "text": "the",
+          "start": 23.03,
+          "end": 23.473
+        },
+        {
+          "text": "end",
+          "start": 23.473,
+          "end": 23.917
+        },
+        {
+          "text": ".",
+          "start": 23.917,
+          "end": 24.36
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 25.0,
+      "end": 27.48,
+      "text": "Someone says, do not go.",
+      "singableText": "Someone says, do not go.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Someone",
+          "start": 25.0,
+          "end": 25.354
+        },
+        {
+          "text": "says",
+          "start": 25.354,
+          "end": 25.709
+        },
+        {
+          "text": ",",
+          "start": 25.709,
+          "end": 26.063
+        },
+        {
+          "text": "do",
+          "start": 26.063,
+          "end": 26.417
+        },
+        {
+          "text": "not",
+          "start": 26.417,
+          "end": 26.771
+        },
+        {
+          "text": "go",
+          "start": 26.771,
+          "end": 27.126
+        },
+        {
+          "text": ".",
+          "start": 27.126,
+          "end": 27.48
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 27.48,
+      "end": 30.7,
+      "text": "The road ahead is too far.",
+      "singableText": "The road ahead is too far.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 27.48,
+          "end": 27.94
+        },
+        {
+          "text": "road",
+          "start": 27.94,
+          "end": 28.4
+        },
+        {
+          "text": "ahead",
+          "start": 28.4,
+          "end": 28.86
+        },
+        {
+          "text": "is",
+          "start": 28.86,
+          "end": 29.32
+        },
+        {
+          "text": "too",
+          "start": 29.32,
+          "end": 29.78
+        },
+        {
+          "text": "far",
+          "start": 29.78,
+          "end": 30.24
+        },
+        {
+          "text": ".",
+          "start": 30.24,
+          "end": 30.7
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 30.7,
+      "end": 36.62,
+      "text": "I put my fear inside my heart.",
+      "singableText": "I put my fear inside my heart.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 30.7,
+          "end": 31.44
+        },
+        {
+          "text": "put",
+          "start": 31.44,
+          "end": 32.18
+        },
+        {
+          "text": "my",
+          "start": 32.18,
+          "end": 32.92
+        },
+        {
+          "text": "fear",
+          "start": 32.92,
+          "end": 33.66
+        },
+        {
+          "text": "inside",
+          "start": 33.66,
+          "end": 34.4
+        },
+        {
+          "text": "my",
+          "start": 34.4,
+          "end": 35.14
+        },
+        {
+          "text": "heart",
+          "start": 35.14,
+          "end": 35.88
+        },
+        {
+          "text": ".",
+          "start": 35.88,
+          "end": 36.62
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 49.52,
+      "end": 52.1,
+      "text": "Night birds fly far away.",
+      "singableText": "Night birds fly far away.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Night",
+          "start": 49.52,
+          "end": 49.95
+        },
+        {
+          "text": "birds",
+          "start": 49.95,
+          "end": 50.38
+        },
+        {
+          "text": "fly",
+          "start": 50.38,
+          "end": 50.81
+        },
+        {
+          "text": "far",
+          "start": 50.81,
+          "end": 51.24
+        },
+        {
+          "text": "away",
+          "start": 51.24,
+          "end": 51.67
+        },
+        {
+          "text": ".",
+          "start": 51.67,
+          "end": 52.1
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 52.1,
+      "end": 54.92,
+      "text": "The moon falls beside the bridge.",
+      "singableText": "The moon falls beside the bridge.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 52.1,
+          "end": 52.503
+        },
+        {
+          "text": "moon",
+          "start": 52.503,
+          "end": 52.906
+        },
+        {
+          "text": "falls",
+          "start": 52.906,
+          "end": 53.309
+        },
+        {
+          "text": "beside",
+          "start": 53.309,
+          "end": 53.711
+        },
+        {
+          "text": "the",
+          "start": 53.711,
+          "end": 54.114
+        },
+        {
+          "text": "bridge",
+          "start": 54.114,
+          "end": 54.517
+        },
+        {
+          "text": ".",
+          "start": 54.517,
+          "end": 54.92
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 55.8,
+      "end": 58.06,
+      "text": "It lights me toward the clouds.",
+      "singableText": "It lights me toward the clouds.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "It",
+          "start": 55.8,
+          "end": 56.123
+        },
+        {
+          "text": "lights",
+          "start": 56.123,
+          "end": 56.446
+        },
+        {
+          "text": "me",
+          "start": 56.446,
+          "end": 56.769
+        },
+        {
+          "text": "toward",
+          "start": 56.769,
+          "end": 57.091
+        },
+        {
+          "text": "the",
+          "start": 57.091,
+          "end": 57.414
+        },
+        {
+          "text": "clouds",
+          "start": 57.414,
+          "end": 57.737
+        },
+        {
+          "text": ".",
+          "start": 57.737,
+          "end": 58.06
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 59.1,
+      "end": 61.06,
+      "text": "It is not that I am unafraid.",
+      "singableText": "It is not that I am unafraid.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "It",
+          "start": 59.1,
+          "end": 59.345
+        },
+        {
+          "text": "is",
+          "start": 59.345,
+          "end": 59.59
+        },
+        {
+          "text": "not",
+          "start": 59.59,
+          "end": 59.835
+        },
+        {
+          "text": "that",
+          "start": 59.835,
+          "end": 60.08
+        },
+        {
+          "text": "I",
+          "start": 60.08,
+          "end": 60.325
+        },
+        {
+          "text": "am",
+          "start": 60.325,
+          "end": 60.57
+        },
+        {
+          "text": "unafraid",
+          "start": 60.57,
+          "end": 60.815
+        },
+        {
+          "text": ".",
+          "start": 60.815,
+          "end": 61.06
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 61.94,
+      "end": 64.14,
+      "text": "I only think of breaking through the sky.",
+      "singableText": "I only think of breaking through the sky.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 61.94,
+          "end": 62.184
+        },
+        {
+          "text": "only",
+          "start": 62.184,
+          "end": 62.429
+        },
+        {
+          "text": "think",
+          "start": 62.429,
+          "end": 62.673
+        },
+        {
+          "text": "of",
+          "start": 62.673,
+          "end": 62.918
+        },
+        {
+          "text": "breaking",
+          "start": 62.918,
+          "end": 63.162
+        },
+        {
+          "text": "through",
+          "start": 63.162,
+          "end": 63.407
+        },
+        {
+          "text": "the",
+          "start": 63.407,
+          "end": 63.651
+        },
+        {
+          "text": "sky",
+          "start": 63.651,
+          "end": 63.896
+        },
+        {
+          "text": ".",
+          "start": 63.896,
+          "end": 64.14
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 64.7,
+      "end": 67.24,
+      "text": "However hard the road is, I must walk.",
+      "singableText": "However hard the road is, I must walk.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "However",
+          "start": 64.7,
+          "end": 64.954
+        },
+        {
+          "text": "hard",
+          "start": 64.954,
+          "end": 65.208
+        },
+        {
+          "text": "the",
+          "start": 65.208,
+          "end": 65.462
+        },
+        {
+          "text": "road",
+          "start": 65.462,
+          "end": 65.716
+        },
+        {
+          "text": "is",
+          "start": 65.716,
+          "end": 65.97
+        },
+        {
+          "text": ",",
+          "start": 65.97,
+          "end": 66.224
+        },
+        {
+          "text": "I",
+          "start": 66.224,
+          "end": 66.478
+        },
+        {
+          "text": "must",
+          "start": 66.478,
+          "end": 66.732
+        },
+        {
+          "text": "walk",
+          "start": 66.732,
+          "end": 66.986
+        },
+        {
+          "text": ".",
+          "start": 66.986,
+          "end": 67.24
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 67.78,
+      "end": 70.26,
+      "text": "There is still an end in sight.",
+      "singableText": "There is still an end in sight.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "There",
+          "start": 67.78,
+          "end": 68.09
+        },
+        {
+          "text": "is",
+          "start": 68.09,
+          "end": 68.4
+        },
+        {
+          "text": "still",
+          "start": 68.4,
+          "end": 68.71
+        },
+        {
+          "text": "an",
+          "start": 68.71,
+          "end": 69.02
+        },
+        {
+          "text": "end",
+          "start": 69.02,
+          "end": 69.33
+        },
+        {
+          "text": "in",
+          "start": 69.33,
+          "end": 69.64
+        },
+        {
+          "text": "sight",
+          "start": 69.64,
+          "end": 69.95
+        },
+        {
+          "text": ".",
+          "start": 69.95,
+          "end": 70.26
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 70.26,
+      "end": 73.7,
+      "text": "Heart, do not lower your head.",
+      "singableText": "Heart, do not lower your head.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Heart",
+          "start": 70.26,
+          "end": 70.69
+        },
+        {
+          "text": ",",
+          "start": 70.69,
+          "end": 71.12
+        },
+        {
+          "text": "do",
+          "start": 71.12,
+          "end": 71.55
+        },
+        {
+          "text": "not",
+          "start": 71.55,
+          "end": 71.98
+        },
+        {
+          "text": "lower",
+          "start": 71.98,
+          "end": 72.41
+        },
+        {
+          "text": "your",
+          "start": 72.41,
+          "end": 72.84
+        },
+        {
+          "text": "head",
+          "start": 72.84,
+          "end": 73.27
+        },
+        {
+          "text": ".",
+          "start": 73.27,
+          "end": 73.7
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 74.28,
+      "end": 76.54,
+      "text": "The night is scattered by the wind.",
+      "singableText": "The night is scattered by the wind.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 74.28,
+          "end": 74.562
+        },
+        {
+          "text": "night",
+          "start": 74.562,
+          "end": 74.845
+        },
+        {
+          "text": "is",
+          "start": 74.845,
+          "end": 75.127
+        },
+        {
+          "text": "scattered",
+          "start": 75.127,
+          "end": 75.41
+        },
+        {
+          "text": "by",
+          "start": 75.41,
+          "end": 75.693
+        },
+        {
+          "text": "the",
+          "start": 75.693,
+          "end": 75.975
+        },
+        {
+          "text": "wind",
+          "start": 75.975,
+          "end": 76.258
+        },
+        {
+          "text": ".",
+          "start": 76.258,
+          "end": 76.54
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 76.54,
+      "end": 79.76,
+      "text": "The dream crosses beyond the mountain's end.",
+      "singableText": "The dream crosses beyond the mountain's end.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 76.54,
+          "end": 76.943
+        },
+        {
+          "text": "dream",
+          "start": 76.943,
+          "end": 77.345
+        },
+        {
+          "text": "crosses",
+          "start": 77.345,
+          "end": 77.748
+        },
+        {
+          "text": "beyond",
+          "start": 77.748,
+          "end": 78.15
+        },
+        {
+          "text": "the",
+          "start": 78.15,
+          "end": 78.553
+        },
+        {
+          "text": "mountain's",
+          "start": 78.553,
+          "end": 78.955
+        },
+        {
+          "text": "end",
+          "start": 78.955,
+          "end": 79.358
+        },
+        {
+          "text": ".",
+          "start": 79.358,
+          "end": 79.76
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "Active Mandarin lyrics corrected from trimmed full-mix large-v3 no-VAD ASR, cross-checked with the vocal stem and prompt lyric. The selected full mix was trimmed before a generated Amara outro. Stem-only credit hallucinations were not published because they were not recovered from the selected full mix."
+  }
+}
