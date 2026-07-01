@@ -73,6 +73,19 @@ No XXL/XXXL ACE checkpoint was present in the installed model list. Current
 Musia policy is now: try the best practical local model first, but let listening
 and ASR decide the final selection.
 
+External model/community check on 2026-07-01:
+
+- official ACE-Step 1.5 docs list the XL family as `xl-base`, `xl-sft`, and
+  `xl-turbo`, all using the larger 4B DiT route;
+- the `acestep-v15-xl-sft` model card describes XL SFT as the detail-oriented
+  SFT route with CFG and 50-step inference;
+- the ACE Hugging Face organization shows newer Diffusers-format XL checkpoints,
+  but no public ACE XXL/XXXL checkpoint was found;
+- community issue/discussion reports include cases where XL SFT has higher
+  audio quality but weaker melody/rhythm/lyric coherence than Turbo or older
+  routes on specific prompts, so Musia must select by listening and ASR rather
+  than model size alone.
+
 ## Candidate Results
 
 The single-pass exact poem was too short for ACE. Most candidates produced

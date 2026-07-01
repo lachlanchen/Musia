@@ -190,6 +190,11 @@ For exact poem experiments:
   listening evidence. For `越人歌`, XL SFT was installed and tested, but XL
   Turbo repeated-hook seed `736361` was selected because it recovered more of
   the poem and the `心悦君兮` hook.
+- keep a model-watch note per serious generation. As of 2026-07-01, the public
+  ACE-Step 1.5 family exposes XL base/SFT/turbo routes and newer Diffusers XL
+  checkpoints, but no public ACE XXL/XXXL checkpoint was found. Community
+  reports show that XL SFT can be cleaner but less coherent for some lyric
+  prompts, so final selection must be evidence-based.
 
 - generate at least three candidates with different density/layout settings;
 - include one simpler arrangement with the vocal very exposed;
