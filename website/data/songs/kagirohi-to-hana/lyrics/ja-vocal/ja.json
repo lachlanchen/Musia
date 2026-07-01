@@ -1,0 +1,682 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "kagirohi-to-hana",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.34,
+      "end": 3.54,
+      "text": "東の野に",
+      "singableText": "東の野に",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "東",
+          "start": 0.34,
+          "end": 1.14,
+          "reading": "ひむがし"
+        },
+        {
+          "text": "の",
+          "start": 1.14,
+          "end": 1.94
+        },
+        {
+          "text": "野",
+          "start": 1.94,
+          "end": 2.74,
+          "reading": "の"
+        },
+        {
+          "text": "に",
+          "start": 2.74,
+          "end": 3.54
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.54,
+      "end": 7.66,
+      "text": "かぎろひの立つ見えて",
+      "singableText": "かぎろひの立つ見えて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "か",
+          "start": 3.54,
+          "end": 3.952
+        },
+        {
+          "text": "ぎ",
+          "start": 3.952,
+          "end": 4.364
+        },
+        {
+          "text": "ろ",
+          "start": 4.364,
+          "end": 4.776
+        },
+        {
+          "text": "ひ",
+          "start": 4.776,
+          "end": 5.188
+        },
+        {
+          "text": "の",
+          "start": 5.188,
+          "end": 5.6
+        },
+        {
+          "text": "立",
+          "start": 5.6,
+          "end": 6.012,
+          "reading": "た"
+        },
+        {
+          "text": "つ",
+          "start": 6.012,
+          "end": 6.424
+        },
+        {
+          "text": "見",
+          "start": 6.424,
+          "end": 6.836,
+          "reading": "み"
+        },
+        {
+          "text": "え",
+          "start": 6.836,
+          "end": 7.248
+        },
+        {
+          "text": "て",
+          "start": 7.248,
+          "end": 7.66
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 7.66,
+      "end": 10.9,
+      "text": "かへり見すれば",
+      "singableText": "かへり見すれば",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "か",
+          "start": 7.66,
+          "end": 8.123
+        },
+        {
+          "text": "へ",
+          "start": 8.123,
+          "end": 8.586
+        },
+        {
+          "text": "り",
+          "start": 8.586,
+          "end": 9.049
+        },
+        {
+          "text": "見",
+          "start": 9.049,
+          "end": 9.511,
+          "reading": "み"
+        },
+        {
+          "text": "す",
+          "start": 9.511,
+          "end": 9.974
+        },
+        {
+          "text": "れ",
+          "start": 9.974,
+          "end": 10.437
+        },
+        {
+          "text": "ば",
+          "start": 10.437,
+          "end": 10.9
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 10.9,
+      "end": 13.72,
+      "text": "あかねさす",
+      "singableText": "あかねさす",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "あ",
+          "start": 10.9,
+          "end": 11.464
+        },
+        {
+          "text": "か",
+          "start": 11.464,
+          "end": 12.028
+        },
+        {
+          "text": "ね",
+          "start": 12.028,
+          "end": 12.592
+        },
+        {
+          "text": "さ",
+          "start": 12.592,
+          "end": 13.156
+        },
+        {
+          "text": "す",
+          "start": 13.156,
+          "end": 13.72
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 13.72,
+      "end": 16.36,
+      "text": "紫野行き",
+      "singableText": "紫野行き",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "紫",
+          "start": 13.72,
+          "end": 14.38,
+          "reading": "むらさき"
+        },
+        {
+          "text": "野",
+          "start": 14.38,
+          "end": 15.04,
+          "reading": "の"
+        },
+        {
+          "text": "行",
+          "start": 15.04,
+          "end": 15.7,
+          "reading": "ゆ"
+        },
+        {
+          "text": "き",
+          "start": 15.7,
+          "end": 16.36
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 16.84,
+      "end": 19.24,
+      "text": "標野行き",
+      "singableText": "標野行き",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "標",
+          "start": 16.84,
+          "end": 17.44,
+          "reading": "しめ"
+        },
+        {
+          "text": "野",
+          "start": 17.44,
+          "end": 18.04,
+          "reading": "の"
+        },
+        {
+          "text": "行",
+          "start": 18.04,
+          "end": 18.64,
+          "reading": "ゆ"
+        },
+        {
+          "text": "き",
+          "start": 18.64,
+          "end": 19.24
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 19.72,
+      "end": 22.26,
+      "text": "君が袖振る",
+      "singableText": "君が袖振る",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 19.72,
+          "end": 20.228,
+          "reading": "きみ"
+        },
+        {
+          "text": "が",
+          "start": 20.228,
+          "end": 20.736
+        },
+        {
+          "text": "袖",
+          "start": 20.736,
+          "end": 21.244,
+          "reading": "そで"
+        },
+        {
+          "text": "振",
+          "start": 21.244,
+          "end": 21.752,
+          "reading": "しん"
+        },
+        {
+          "text": "る",
+          "start": 21.752,
+          "end": 22.26
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 23.28,
+      "end": 25.5,
+      "text": "君待つと",
+      "singableText": "君待つと",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 23.28,
+          "end": 23.835,
+          "reading": "きみ"
+        },
+        {
+          "text": "待",
+          "start": 23.835,
+          "end": 24.39,
+          "reading": "たい"
+        },
+        {
+          "text": "つ",
+          "start": 24.39,
+          "end": 24.945
+        },
+        {
+          "text": "と",
+          "start": 24.945,
+          "end": 25.5
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 25.58,
+      "end": 28.36,
+      "text": "吾が恋ひをれば",
+      "singableText": "吾が恋ひをれば",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "吾",
+          "start": 25.58,
+          "end": 25.977,
+          "reading": "あ"
+        },
+        {
+          "text": "が",
+          "start": 25.977,
+          "end": 26.374
+        },
+        {
+          "text": "恋",
+          "start": 26.374,
+          "end": 26.771,
+          "reading": "こ"
+        },
+        {
+          "text": "ひ",
+          "start": 26.771,
+          "end": 27.169
+        },
+        {
+          "text": "を",
+          "start": 27.169,
+          "end": 27.566
+        },
+        {
+          "text": "れ",
+          "start": 27.566,
+          "end": 27.963
+        },
+        {
+          "text": "ば",
+          "start": 27.963,
+          "end": 28.36
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 28.44,
+      "end": 31.1,
+      "text": "簾動かし",
+      "singableText": "簾動かし",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "簾",
+          "start": 28.44,
+          "end": 29.105,
+          "reading": "すだれ"
+        },
+        {
+          "text": "動",
+          "start": 29.105,
+          "end": 29.77,
+          "reading": "うご"
+        },
+        {
+          "text": "か",
+          "start": 29.77,
+          "end": 30.435
+        },
+        {
+          "text": "し",
+          "start": 30.435,
+          "end": 31.1
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 31.3,
+      "end": 34.16,
+      "text": "秋の風吹く",
+      "singableText": "秋の風吹く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "秋",
+          "start": 31.3,
+          "end": 31.872,
+          "reading": "あき"
+        },
+        {
+          "text": "の",
+          "start": 31.872,
+          "end": 32.444
+        },
+        {
+          "text": "風",
+          "start": 32.444,
+          "end": 33.016,
+          "reading": "かぜ"
+        },
+        {
+          "text": "吹",
+          "start": 33.016,
+          "end": 33.588,
+          "reading": "ふ"
+        },
+        {
+          "text": "く",
+          "start": 33.588,
+          "end": 34.16
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 35.26,
+      "end": 36.98,
+      "text": "久方の",
+      "singableText": "久方の",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "久",
+          "start": 35.26,
+          "end": 35.833,
+          "reading": "ひさ"
+        },
+        {
+          "text": "方",
+          "start": 35.833,
+          "end": 36.407,
+          "reading": "かた"
+        },
+        {
+          "text": "の",
+          "start": 36.407,
+          "end": 36.98
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 36.98,
+      "end": 40.3,
+      "text": "光のどけき",
+      "singableText": "光のどけき",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "光",
+          "start": 36.98,
+          "end": 37.644,
+          "reading": "ひかり"
+        },
+        {
+          "text": "の",
+          "start": 37.644,
+          "end": 38.308
+        },
+        {
+          "text": "ど",
+          "start": 38.308,
+          "end": 38.972
+        },
+        {
+          "text": "け",
+          "start": 38.972,
+          "end": 39.636
+        },
+        {
+          "text": "き",
+          "start": 39.636,
+          "end": 40.3
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 40.3,
+      "end": 43.06,
+      "text": "久方の",
+      "singableText": "久方の",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "久",
+          "start": 40.3,
+          "end": 41.22,
+          "reading": "ひさ"
+        },
+        {
+          "text": "方",
+          "start": 41.22,
+          "end": 42.14,
+          "reading": "かた"
+        },
+        {
+          "text": "の",
+          "start": 42.14,
+          "end": 43.06
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 43.06,
+      "end": 45.26,
+      "text": "光のどけき",
+      "singableText": "光のどけき",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "光",
+          "start": 43.06,
+          "end": 43.5,
+          "reading": "ひかり"
+        },
+        {
+          "text": "の",
+          "start": 43.5,
+          "end": 43.94
+        },
+        {
+          "text": "ど",
+          "start": 43.94,
+          "end": 44.38
+        },
+        {
+          "text": "け",
+          "start": 44.38,
+          "end": 44.82
+        },
+        {
+          "text": "き",
+          "start": 44.82,
+          "end": 45.26
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 46.42,
+      "end": 48.82,
+      "text": "春の日に",
+      "singableText": "春の日に",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "春",
+          "start": 46.42,
+          "end": 47.02,
+          "reading": "はる"
+        },
+        {
+          "text": "の",
+          "start": 47.02,
+          "end": 47.62
+        },
+        {
+          "text": "日",
+          "start": 47.62,
+          "end": 48.22,
+          "reading": "ひ"
+        },
+        {
+          "text": "に",
+          "start": 48.22,
+          "end": 48.82
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 48.98,
+      "end": 51.24,
+      "text": "しづ心なく",
+      "singableText": "しづ心なく",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "し",
+          "start": 48.98,
+          "end": 49.432
+        },
+        {
+          "text": "づ",
+          "start": 49.432,
+          "end": 49.884
+        },
+        {
+          "text": "心",
+          "start": 49.884,
+          "end": 50.336,
+          "reading": "こころ"
+        },
+        {
+          "text": "な",
+          "start": 50.336,
+          "end": 50.788
+        },
+        {
+          "text": "く",
+          "start": 50.788,
+          "end": 51.24
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 51.24,
+      "end": 53.76,
+      "text": "花の散るらむ",
+      "singableText": "花の散るらむ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "花",
+          "start": 51.24,
+          "end": 51.66,
+          "reading": "はな"
+        },
+        {
+          "text": "の",
+          "start": 51.66,
+          "end": 52.08
+        },
+        {
+          "text": "散",
+          "start": 52.08,
+          "end": 52.5,
+          "reading": "ち"
+        },
+        {
+          "text": "る",
+          "start": 52.5,
+          "end": 52.92
+        },
+        {
+          "text": "ら",
+          "start": 52.92,
+          "end": 53.34
+        },
+        {
+          "text": "む",
+          "start": 53.34,
+          "end": 53.76
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "correction": "Selected Japanese ACE-Step render corrected with large-v3 ASR on the full mix, large-v3 ASR on separated vocals, planned kana lyrics, and the source waka text. Original text is preserved where sound and phrase length are close; planned lines not actually recovered in the selected audio are omitted from the public timing track."
+  }
+}

@@ -1,0 +1,690 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "kagirohi-to-hana",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.34,
+      "end": 3.54,
+      "text": "东方原野",
+      "singableText": "东方原野",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "东",
+          "start": 0.34,
+          "end": 1.14,
+          "pinyin": "dong1"
+        },
+        {
+          "text": "方",
+          "start": 1.14,
+          "end": 1.94,
+          "pinyin": "fang1"
+        },
+        {
+          "text": "原",
+          "start": 1.94,
+          "end": 2.74,
+          "pinyin": "yuan2"
+        },
+        {
+          "text": "野",
+          "start": 2.74,
+          "end": 3.54,
+          "pinyin": "ye3"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.54,
+      "end": 7.66,
+      "text": "晨曦升起",
+      "singableText": "晨曦升起",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "晨",
+          "start": 3.54,
+          "end": 4.57,
+          "pinyin": "chen2"
+        },
+        {
+          "text": "曦",
+          "start": 4.57,
+          "end": 5.6,
+          "pinyin": "xi1"
+        },
+        {
+          "text": "升",
+          "start": 5.6,
+          "end": 6.63,
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "起",
+          "start": 6.63,
+          "end": 7.66,
+          "pinyin": "qi3"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 7.66,
+      "end": 10.9,
+      "text": "回首望去",
+      "singableText": "回首望去",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "回",
+          "start": 7.66,
+          "end": 8.47,
+          "pinyin": "hui2"
+        },
+        {
+          "text": "首",
+          "start": 8.47,
+          "end": 9.28,
+          "pinyin": "shou3"
+        },
+        {
+          "text": "望",
+          "start": 9.28,
+          "end": 10.09,
+          "pinyin": "wang4"
+        },
+        {
+          "text": "去",
+          "start": 10.09,
+          "end": 10.9,
+          "pinyin": "qu4"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 10.9,
+      "end": 13.72,
+      "text": "茜色映照",
+      "singableText": "茜色映照",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "茜",
+          "start": 10.9,
+          "end": 11.605,
+          "pinyin": "qian4"
+        },
+        {
+          "text": "色",
+          "start": 11.605,
+          "end": 12.31,
+          "pinyin": "se4"
+        },
+        {
+          "text": "映",
+          "start": 12.31,
+          "end": 13.015,
+          "pinyin": "ying4"
+        },
+        {
+          "text": "照",
+          "start": 13.015,
+          "end": 13.72,
+          "pinyin": "zhao4"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 13.72,
+      "end": 16.36,
+      "text": "行过紫野",
+      "singableText": "行过紫野",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "行",
+          "start": 13.72,
+          "end": 14.38,
+          "pinyin": "xing2"
+        },
+        {
+          "text": "过",
+          "start": 14.38,
+          "end": 15.04,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "紫",
+          "start": 15.04,
+          "end": 15.7,
+          "pinyin": "zi3"
+        },
+        {
+          "text": "野",
+          "start": 15.7,
+          "end": 16.36,
+          "pinyin": "ye3"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 16.84,
+      "end": 19.24,
+      "text": "行过标野",
+      "singableText": "行过标野",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "行",
+          "start": 16.84,
+          "end": 17.44,
+          "pinyin": "xing2"
+        },
+        {
+          "text": "过",
+          "start": 17.44,
+          "end": 18.04,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "标",
+          "start": 18.04,
+          "end": 18.64,
+          "pinyin": "biao1"
+        },
+        {
+          "text": "野",
+          "start": 18.64,
+          "end": 19.24,
+          "pinyin": "ye3"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 19.72,
+      "end": 22.26,
+      "text": "你挥动衣袖",
+      "singableText": "你挥动衣袖",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 19.72,
+          "end": 20.228,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "挥",
+          "start": 20.228,
+          "end": 20.736,
+          "pinyin": "hui1"
+        },
+        {
+          "text": "动",
+          "start": 20.736,
+          "end": 21.244,
+          "pinyin": "dong4"
+        },
+        {
+          "text": "衣",
+          "start": 21.244,
+          "end": 21.752,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "袖",
+          "start": 21.752,
+          "end": 22.26,
+          "pinyin": "xiu4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 23.28,
+      "end": 25.5,
+      "text": "我等待着你",
+      "singableText": "我等待着你",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 23.28,
+          "end": 23.724,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "等",
+          "start": 23.724,
+          "end": 24.168,
+          "pinyin": "deng3"
+        },
+        {
+          "text": "待",
+          "start": 24.168,
+          "end": 24.612,
+          "pinyin": "dai4"
+        },
+        {
+          "text": "着",
+          "start": 24.612,
+          "end": 25.056,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "你",
+          "start": 25.056,
+          "end": 25.5,
+          "pinyin": "ni3"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 25.58,
+      "end": 28.36,
+      "text": "在恋慕中停留",
+      "singableText": "在恋慕中停留",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "在",
+          "start": 25.58,
+          "end": 26.043,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "恋",
+          "start": 26.043,
+          "end": 26.507,
+          "pinyin": "lian4"
+        },
+        {
+          "text": "慕",
+          "start": 26.507,
+          "end": 26.97,
+          "pinyin": "mu4"
+        },
+        {
+          "text": "中",
+          "start": 26.97,
+          "end": 27.433,
+          "pinyin": "zhong1"
+        },
+        {
+          "text": "停",
+          "start": 27.433,
+          "end": 27.897,
+          "pinyin": "ting2"
+        },
+        {
+          "text": "留",
+          "start": 27.897,
+          "end": 28.36,
+          "pinyin": "liu2"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 28.44,
+      "end": 31.1,
+      "text": "帘子轻轻摇动",
+      "singableText": "帘子轻轻摇动",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帘",
+          "start": 28.44,
+          "end": 28.883,
+          "pinyin": "lian2"
+        },
+        {
+          "text": "子",
+          "start": 28.883,
+          "end": 29.327,
+          "pinyin": "zi5"
+        },
+        {
+          "text": "轻",
+          "start": 29.327,
+          "end": 29.77,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "轻",
+          "start": 29.77,
+          "end": 30.213,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "摇",
+          "start": 30.213,
+          "end": 30.657,
+          "pinyin": "yao2"
+        },
+        {
+          "text": "动",
+          "start": 30.657,
+          "end": 31.1,
+          "pinyin": "dong4"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 31.3,
+      "end": 34.16,
+      "text": "秋风吹来",
+      "singableText": "秋风吹来",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "秋",
+          "start": 31.3,
+          "end": 32.015,
+          "pinyin": "qiu1"
+        },
+        {
+          "text": "风",
+          "start": 32.015,
+          "end": 32.73,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "吹",
+          "start": 32.73,
+          "end": 33.445,
+          "pinyin": "chui1"
+        },
+        {
+          "text": "来",
+          "start": 33.445,
+          "end": 34.16,
+          "pinyin": "lai2"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 35.26,
+      "end": 36.98,
+      "text": "久远天光",
+      "singableText": "久远天光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "久",
+          "start": 35.26,
+          "end": 35.69,
+          "pinyin": "jiu3"
+        },
+        {
+          "text": "远",
+          "start": 35.69,
+          "end": 36.12,
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "天",
+          "start": 36.12,
+          "end": 36.55,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "光",
+          "start": 36.55,
+          "end": 36.98,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 36.98,
+      "end": 40.3,
+      "text": "光影如此安宁",
+      "singableText": "光影如此安宁",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "光",
+          "start": 36.98,
+          "end": 37.533,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "影",
+          "start": 37.533,
+          "end": 38.087,
+          "pinyin": "ying3"
+        },
+        {
+          "text": "如",
+          "start": 38.087,
+          "end": 38.64,
+          "pinyin": "ru2"
+        },
+        {
+          "text": "此",
+          "start": 38.64,
+          "end": 39.193,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "安",
+          "start": 39.193,
+          "end": 39.747,
+          "pinyin": "an1"
+        },
+        {
+          "text": "宁",
+          "start": 39.747,
+          "end": 40.3,
+          "pinyin": "ning2"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 40.3,
+      "end": 43.06,
+      "text": "久远天光",
+      "singableText": "久远天光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "久",
+          "start": 40.3,
+          "end": 40.99,
+          "pinyin": "jiu3"
+        },
+        {
+          "text": "远",
+          "start": 40.99,
+          "end": 41.68,
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "天",
+          "start": 41.68,
+          "end": 42.37,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "光",
+          "start": 42.37,
+          "end": 43.06,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 43.06,
+      "end": 45.26,
+      "text": "光影如此安宁",
+      "singableText": "光影如此安宁",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "光",
+          "start": 43.06,
+          "end": 43.427,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "影",
+          "start": 43.427,
+          "end": 43.793,
+          "pinyin": "ying3"
+        },
+        {
+          "text": "如",
+          "start": 43.793,
+          "end": 44.16,
+          "pinyin": "ru2"
+        },
+        {
+          "text": "此",
+          "start": 44.16,
+          "end": 44.527,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "安",
+          "start": 44.527,
+          "end": 44.893,
+          "pinyin": "an1"
+        },
+        {
+          "text": "宁",
+          "start": 44.893,
+          "end": 45.26,
+          "pinyin": "ning2"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 46.42,
+      "end": 48.82,
+      "text": "春日里",
+      "singableText": "春日里",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "春",
+          "start": 46.42,
+          "end": 47.22,
+          "pinyin": "chun1"
+        },
+        {
+          "text": "日",
+          "start": 47.22,
+          "end": 48.02,
+          "pinyin": "ri4"
+        },
+        {
+          "text": "里",
+          "start": 48.02,
+          "end": 48.82,
+          "pinyin": "li3"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 48.98,
+      "end": 51.24,
+      "text": "心不能静",
+      "singableText": "心不能静",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "心",
+          "start": 48.98,
+          "end": 49.545,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "不",
+          "start": 49.545,
+          "end": 50.11,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "能",
+          "start": 50.11,
+          "end": 50.675,
+          "pinyin": "neng2"
+        },
+        {
+          "text": "静",
+          "start": 50.675,
+          "end": 51.24,
+          "pinyin": "jing4"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 51.24,
+      "end": 53.76,
+      "text": "花为何散落",
+      "singableText": "花为何散落",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "花",
+          "start": 51.24,
+          "end": 51.744,
+          "pinyin": "hua1"
+        },
+        {
+          "text": "为",
+          "start": 51.744,
+          "end": 52.248,
+          "pinyin": "wei4"
+        },
+        {
+          "text": "何",
+          "start": 52.248,
+          "end": 52.752,
+          "pinyin": "he2"
+        },
+        {
+          "text": "散",
+          "start": 52.752,
+          "end": 53.256,
+          "pinyin": "san4"
+        },
+        {
+          "text": "落",
+          "start": 53.256,
+          "end": 53.76,
+          "pinyin": "luo4"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "correction": "Selected Japanese ACE-Step render corrected with large-v3 ASR on the full mix, large-v3 ASR on separated vocals, planned kana lyrics, and the source waka text. Original text is preserved where sound and phrase length are close; planned lines not actually recovered in the selected audio are omitted from the public timing track."
+  }
+}

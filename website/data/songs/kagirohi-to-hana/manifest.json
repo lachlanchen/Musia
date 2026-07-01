@@ -1,0 +1,610 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "kagirohi-to-hana",
+  "kind": "song",
+  "title": "かぎろひと花",
+  "localizedTitles": {
+    "ja": "かぎろひと花",
+    "zh-Hans": "晨曦与花",
+    "en": "Dawnlight and Blossoms"
+  },
+  "artist": "Musia",
+  "description": "A Musia Japanese waka art-pop setting built only from selected Manyoshu and Kokin Wakashu source lines.",
+  "caption": "Dawn glow, a sleeve in the purple fields, autumn wind, and spring blossoms.",
+  "duration": 76.0,
+  "canonicalUrl": "https://fun.lazying.art/#kagirohi-to-hana",
+  "share": {
+    "title": "かぎろひと花 - Fun Lazying Art",
+    "description": "A Musia Japanese waka song with ASR-corrected trilingual lyrics.",
+    "url": "https://fun.lazying.art/#kagirohi-to-hana",
+    "image": "assets/covers/kagirohi-to-hana-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "かぎろひと花 cover",
+      "role": "cover",
+      "src": "assets/covers/kagirohi-to-hana-16x9.png",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/kagirohi-to-hana-16x9.png",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941
+    },
+    "primaryAudio": {
+      "id": "kagirohi-to-hana-ja",
+      "label": "日本語",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "ja",
+      "languageLabel": "日本語",
+      "lyricSetId": "ja-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/kagirohi-to-hana-ja-ace-20260701.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "musical": {
+    "key": "G major requested / detected G-centered progression",
+    "bpm": 83.354,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 1.091,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 1.091,
+        "end": 2.577,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 2.577,
+        "end": 3.971,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 3.971,
+        "end": 5.433,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 5.433,
+        "end": 6.153,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 6.153,
+        "end": 6.85,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 6.85,
+        "end": 8.243,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 8.243,
+        "end": 9.729,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 9.729,
+        "end": 10.472,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 10.472,
+        "end": 11.146,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 11.146,
+        "end": 11.865,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 11.865,
+        "end": 14.048,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 14.048,
+        "end": 15.464,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 15.464,
+        "end": 16.881,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 16.881,
+        "end": 17.601,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 17.601,
+        "end": 18.297,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 18.297,
+        "end": 19.737,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 19.737,
+        "end": 20.457,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 20.457,
+        "end": 21.153,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 21.153,
+        "end": 22.616,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 22.616,
+        "end": 25.519,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 25.519,
+        "end": 26.935,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 26.935,
+        "end": 28.375,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 28.375,
+        "end": 29.071,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 29.071,
+        "end": 29.814,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 29.814,
+        "end": 31.231,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 31.231,
+        "end": 31.974,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 31.974,
+        "end": 32.647,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 32.647,
+        "end": 34.11,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 34.11,
+        "end": 35.527,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 35.527,
+        "end": 36.27,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 36.27,
+        "end": 36.966,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 36.966,
+        "end": 38.406,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 38.406,
+        "end": 39.102,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 39.102,
+        "end": 39.822,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 39.822,
+        "end": 41.262,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 41.262,
+        "end": 41.982,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 41.982,
+        "end": 42.678,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 42.678,
+        "end": 44.048,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 44.048,
+        "end": 44.815,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 44.815,
+        "end": 45.558,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 45.558,
+        "end": 46.277,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 46.277,
+        "end": 48.39,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 48.39,
+        "end": 49.853,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 49.853,
+        "end": 50.527,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 50.527,
+        "end": 51.177,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 51.177,
+        "end": 52.524,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 52.524,
+        "end": 53.197,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 53.197,
+        "end": 55.356,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 55.356,
+        "end": 56.959,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 56.959,
+        "end": 57.771,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 57.771,
+        "end": 58.584,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 58.584,
+        "end": 60.024,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 60.024,
+        "end": 62.88,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 62.88,
+        "end": 64.319,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 64.319,
+        "end": 65.759,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 65.759,
+        "end": 67.175,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 67.175,
+        "end": 68.615,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 68.615,
+        "end": 70.055,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 70.055,
+        "end": 70.774,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 70.774,
+        "end": 71.471,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 71.471,
+        "end": 76.0,
+        "name": "G",
+        "degree": ""
+      }
+    ]
+  },
+  "lyricSets": [
+    {
+      "id": "ja-vocal",
+      "label": "日本語 vocal",
+      "languageCode": "ja",
+      "tracks": [
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "active-vocal"
+          ],
+          "path": "lyrics/ja-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/ja-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/ja-vocal/en.json"
+        }
+      ]
+    }
+  ],
+  "textTracks": [],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 0.34,
+        "end": 3.54,
+        "text": "東の野に"
+      },
+      {
+        "id": "l02",
+        "start": 3.54,
+        "end": 7.66,
+        "text": "かぎろひの立つ見えて"
+      },
+      {
+        "id": "l03",
+        "start": 7.66,
+        "end": 10.9,
+        "text": "かへり見すれば"
+      },
+      {
+        "id": "l04",
+        "start": 10.9,
+        "end": 13.72,
+        "text": "あかねさす"
+      },
+      {
+        "id": "l05",
+        "start": 13.72,
+        "end": 16.36,
+        "text": "紫野行き"
+      },
+      {
+        "id": "l06",
+        "start": 16.84,
+        "end": 19.24,
+        "text": "標野行き"
+      },
+      {
+        "id": "l07",
+        "start": 19.72,
+        "end": 22.26,
+        "text": "君が袖振る"
+      },
+      {
+        "id": "l08",
+        "start": 23.28,
+        "end": 25.5,
+        "text": "君待つと"
+      },
+      {
+        "id": "l09",
+        "start": 25.58,
+        "end": 28.36,
+        "text": "吾が恋ひをれば"
+      },
+      {
+        "id": "l10",
+        "start": 28.44,
+        "end": 31.1,
+        "text": "簾動かし"
+      },
+      {
+        "id": "l11",
+        "start": 31.3,
+        "end": 34.16,
+        "text": "秋の風吹く"
+      },
+      {
+        "id": "l12",
+        "start": 35.26,
+        "end": 36.98,
+        "text": "久方の"
+      },
+      {
+        "id": "l13",
+        "start": 36.98,
+        "end": 40.3,
+        "text": "光のどけき"
+      },
+      {
+        "id": "l14",
+        "start": 40.3,
+        "end": 43.06,
+        "text": "久方の"
+      },
+      {
+        "id": "l15",
+        "start": 43.06,
+        "end": 45.26,
+        "text": "光のどけき"
+      },
+      {
+        "id": "l16",
+        "start": 46.42,
+        "end": 48.82,
+        "text": "春の日に"
+      },
+      {
+        "id": "l17",
+        "start": 48.98,
+        "end": 51.24,
+        "text": "しづ心なく"
+      },
+      {
+        "id": "l18",
+        "start": 51.24,
+        "end": 53.76,
+        "text": "花の散るらむ"
+      }
+    ]
+  },
+  "artifacts": [],
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/kagirohi-to-hana-20260701",
+    "audioSource": "ACE-Step 1.5 XL Turbo short-kana seed 741214, selected after XL SFT, normal Japanese, kana, romaji, compact-hook, and two-hook comparisons.",
+    "analysisRun": "data/runs/kagirohi-to-hana-20260701-selected-analysis",
+    "quality": {
+      "xlSftInstalled": true,
+      "selectedAudioLargeV3Overlap": 0.6519337016574586,
+      "selectionReason": "Best ASR recovery and practical melodic continuity among tested waka layouts; public lyric omits unrecovered planned lines.",
+      "gate": "selected-with-documented-waka-source-text-corrections"
+    },
+    "lyricCorrection": "Corrected from selected full-mix large-v3 ASR, separated-vocal large-v3 ASR, planned kana control lyric, and source waka text. The public lyric preserves original Manyoshu/Kokin wording where sound-close and does not publish lines the selected render skipped.",
+    "coverPrompt": "16:9 album cover, elegant Japanese waka art-pop song, dawn eastern field, kagirohi glow, sinking moon, spring blossoms, no text.",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_089711b3c858c776016a44c117ebfc819184691047b01ca2b7.png",
+    "publicAudio": "kagirohi-to-hana-ja-ace-20260701.mp3"
+  }
+}

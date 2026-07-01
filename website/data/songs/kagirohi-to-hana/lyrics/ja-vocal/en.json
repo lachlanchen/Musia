@@ -1,0 +1,577 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "kagirohi-to-hana",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.34,
+      "end": 3.54,
+      "text": "In the eastern field",
+      "singableText": "In the eastern field",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "In",
+          "start": 0.34,
+          "end": 1.14
+        },
+        {
+          "text": "the",
+          "start": 1.14,
+          "end": 1.94
+        },
+        {
+          "text": "eastern",
+          "start": 1.94,
+          "end": 2.74
+        },
+        {
+          "text": "field",
+          "start": 2.74,
+          "end": 3.54
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.54,
+      "end": 7.66,
+      "text": "I see the dawn glow rise",
+      "singableText": "I see the dawn glow rise",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 3.54,
+          "end": 4.227
+        },
+        {
+          "text": "see",
+          "start": 4.227,
+          "end": 4.913
+        },
+        {
+          "text": "the",
+          "start": 4.913,
+          "end": 5.6
+        },
+        {
+          "text": "dawn",
+          "start": 5.6,
+          "end": 6.287
+        },
+        {
+          "text": "glow",
+          "start": 6.287,
+          "end": 6.973
+        },
+        {
+          "text": "rise",
+          "start": 6.973,
+          "end": 7.66
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 7.66,
+      "end": 10.9,
+      "text": "When I look back",
+      "singableText": "When I look back",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "When",
+          "start": 7.66,
+          "end": 8.47
+        },
+        {
+          "text": "I",
+          "start": 8.47,
+          "end": 9.28
+        },
+        {
+          "text": "look",
+          "start": 9.28,
+          "end": 10.09
+        },
+        {
+          "text": "back",
+          "start": 10.09,
+          "end": 10.9
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 10.9,
+      "end": 13.72,
+      "text": "Madder-red light",
+      "singableText": "Madder-red light",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Madder-red",
+          "start": 10.9,
+          "end": 12.31
+        },
+        {
+          "text": "light",
+          "start": 12.31,
+          "end": 13.72
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 13.72,
+      "end": 16.36,
+      "text": "Through the purple fields",
+      "singableText": "Through the purple fields",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Through",
+          "start": 13.72,
+          "end": 14.38
+        },
+        {
+          "text": "the",
+          "start": 14.38,
+          "end": 15.04
+        },
+        {
+          "text": "purple",
+          "start": 15.04,
+          "end": 15.7
+        },
+        {
+          "text": "fields",
+          "start": 15.7,
+          "end": 16.36
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 16.84,
+      "end": 19.24,
+      "text": "Through the marked fields",
+      "singableText": "Through the marked fields",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Through",
+          "start": 16.84,
+          "end": 17.44
+        },
+        {
+          "text": "the",
+          "start": 17.44,
+          "end": 18.04
+        },
+        {
+          "text": "marked",
+          "start": 18.04,
+          "end": 18.64
+        },
+        {
+          "text": "fields",
+          "start": 18.64,
+          "end": 19.24
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 19.72,
+      "end": 22.26,
+      "text": "You wave your sleeve",
+      "singableText": "You wave your sleeve",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 19.72,
+          "end": 20.355
+        },
+        {
+          "text": "wave",
+          "start": 20.355,
+          "end": 20.99
+        },
+        {
+          "text": "your",
+          "start": 20.99,
+          "end": 21.625
+        },
+        {
+          "text": "sleeve",
+          "start": 21.625,
+          "end": 22.26
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 23.28,
+      "end": 25.5,
+      "text": "Waiting for you",
+      "singableText": "Waiting for you",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Waiting",
+          "start": 23.28,
+          "end": 24.02
+        },
+        {
+          "text": "for",
+          "start": 24.02,
+          "end": 24.76
+        },
+        {
+          "text": "you",
+          "start": 24.76,
+          "end": 25.5
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 25.58,
+      "end": 28.36,
+      "text": "As I remain in longing",
+      "singableText": "As I remain in longing",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "As",
+          "start": 25.58,
+          "end": 26.136
+        },
+        {
+          "text": "I",
+          "start": 26.136,
+          "end": 26.692
+        },
+        {
+          "text": "remain",
+          "start": 26.692,
+          "end": 27.248
+        },
+        {
+          "text": "in",
+          "start": 27.248,
+          "end": 27.804
+        },
+        {
+          "text": "longing",
+          "start": 27.804,
+          "end": 28.36
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 28.44,
+      "end": 31.1,
+      "text": "The blind stirs",
+      "singableText": "The blind stirs",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 28.44,
+          "end": 29.327
+        },
+        {
+          "text": "blind",
+          "start": 29.327,
+          "end": 30.213
+        },
+        {
+          "text": "stirs",
+          "start": 30.213,
+          "end": 31.1
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 31.3,
+      "end": 34.16,
+      "text": "Autumn wind blows",
+      "singableText": "Autumn wind blows",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Autumn",
+          "start": 31.3,
+          "end": 32.253
+        },
+        {
+          "text": "wind",
+          "start": 32.253,
+          "end": 33.207
+        },
+        {
+          "text": "blows",
+          "start": 33.207,
+          "end": 34.16
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 35.26,
+      "end": 36.98,
+      "text": "From the far bright sky",
+      "singableText": "From the far bright sky",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "From",
+          "start": 35.26,
+          "end": 35.604
+        },
+        {
+          "text": "the",
+          "start": 35.604,
+          "end": 35.948
+        },
+        {
+          "text": "far",
+          "start": 35.948,
+          "end": 36.292
+        },
+        {
+          "text": "bright",
+          "start": 36.292,
+          "end": 36.636
+        },
+        {
+          "text": "sky",
+          "start": 36.636,
+          "end": 36.98
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 36.98,
+      "end": 40.3,
+      "text": "The light is so calm",
+      "singableText": "The light is so calm",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 36.98,
+          "end": 37.644
+        },
+        {
+          "text": "light",
+          "start": 37.644,
+          "end": 38.308
+        },
+        {
+          "text": "is",
+          "start": 38.308,
+          "end": 38.972
+        },
+        {
+          "text": "so",
+          "start": 38.972,
+          "end": 39.636
+        },
+        {
+          "text": "calm",
+          "start": 39.636,
+          "end": 40.3
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 40.3,
+      "end": 43.06,
+      "text": "From the far bright sky",
+      "singableText": "From the far bright sky",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "From",
+          "start": 40.3,
+          "end": 40.852
+        },
+        {
+          "text": "the",
+          "start": 40.852,
+          "end": 41.404
+        },
+        {
+          "text": "far",
+          "start": 41.404,
+          "end": 41.956
+        },
+        {
+          "text": "bright",
+          "start": 41.956,
+          "end": 42.508
+        },
+        {
+          "text": "sky",
+          "start": 42.508,
+          "end": 43.06
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 43.06,
+      "end": 45.26,
+      "text": "The light is so calm",
+      "singableText": "The light is so calm",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 43.06,
+          "end": 43.5
+        },
+        {
+          "text": "light",
+          "start": 43.5,
+          "end": 43.94
+        },
+        {
+          "text": "is",
+          "start": 43.94,
+          "end": 44.38
+        },
+        {
+          "text": "so",
+          "start": 44.38,
+          "end": 44.82
+        },
+        {
+          "text": "calm",
+          "start": 44.82,
+          "end": 45.26
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 46.42,
+      "end": 48.82,
+      "text": "On this spring day",
+      "singableText": "On this spring day",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "On",
+          "start": 46.42,
+          "end": 47.02
+        },
+        {
+          "text": "this",
+          "start": 47.02,
+          "end": 47.62
+        },
+        {
+          "text": "spring",
+          "start": 47.62,
+          "end": 48.22
+        },
+        {
+          "text": "day",
+          "start": 48.22,
+          "end": 48.82
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 48.98,
+      "end": 51.24,
+      "text": "My heart cannot be still",
+      "singableText": "My heart cannot be still",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 48.98,
+          "end": 49.432
+        },
+        {
+          "text": "heart",
+          "start": 49.432,
+          "end": 49.884
+        },
+        {
+          "text": "cannot",
+          "start": 49.884,
+          "end": 50.336
+        },
+        {
+          "text": "be",
+          "start": 50.336,
+          "end": 50.788
+        },
+        {
+          "text": "still",
+          "start": 50.788,
+          "end": 51.24
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 51.24,
+      "end": 53.76,
+      "text": "Why do blossoms fall?",
+      "singableText": "Why do blossoms fall?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Why",
+          "start": 51.24,
+          "end": 51.744
+        },
+        {
+          "text": "do",
+          "start": 51.744,
+          "end": 52.248
+        },
+        {
+          "text": "blossoms",
+          "start": 52.248,
+          "end": 52.752
+        },
+        {
+          "text": "fall",
+          "start": 52.752,
+          "end": 53.256
+        },
+        {
+          "text": "?",
+          "start": 53.256,
+          "end": 53.76
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "correction": "Selected Japanese ACE-Step render corrected with large-v3 ASR on the full mix, large-v3 ASR on separated vocals, planned kana lyrics, and the source waka text. Original text is preserved where sound and phrase length are close; planned lines not actually recovered in the selected audio are omitted from the public timing track."
+  }
+}
