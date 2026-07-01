@@ -69,6 +69,10 @@ def zh_pinyin_for(line_text: str, char: str) -> str:
         return ""
     if char == "搴":
         return "qian1"
+    if "追不着" in line_text and char == "着":
+        return "zhao2"
+    if "王子" in line_text and char == "子":
+        return "zi3"
     if "被好" in line_text and char == "被":
         return "pi1"
     if char == "訾":
@@ -137,33 +141,35 @@ def make_line(line_id: str, start: float, end: float, text: str, code: str) -> d
 
 def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
     # Hook seed 736361 selected after XL SFT and XL Turbo comparisons. Text is
-    # corrected against large-v3 full-mix ASR and the planned poem-only hook
-    # prompt. Preserve original poem wording where the render is sound-close.
+    # corrected against large-v3 full-mix ASR and the planned poem-only hook.
+    # This public track uses a sound-close, context-smooth compromise where the
+    # render clearly diverges from strict original text but still carries the
+    # poem's emotional meaning.
     return [
         ("l01", 15.98, 18.38, "今夕何夕兮", "What night is this?", "今宵は何という夜か"),
-        ("l02", 19.18, 21.64, "搴舟中流", "I draw the boat into midstream.", "舟を流れの中へ進める"),
+        ("l02", 19.18, 21.64, "牵愁中流", "Longing is drawn through midstream.", "愁いを流れの中へ引いていく"),
         ("l03", 21.64, 25.18, "今日何日兮", "What day is this?", "今日は何という日か"),
-        ("l04", 25.18, 28.42, "得与王子同舟", "To share a boat with the prince.", "王子と同じ舟にいる"),
+        ("l04", 25.18, 28.42, "得遇望之王子", "I meet the prince I have longed for.", "憧れの王子に出会う"),
         ("l05", 32.07, 33.51, "山有木兮", "The mountain has trees.", "山には木があり"),
         ("l06", 33.51, 35.39, "木有枝", "The trees have branches.", "木には枝がある"),
-        ("l07", 35.39, 37.87, "心悦君兮", "My heart delights in you.", "心は君を悦ぶのに"),
-        ("l08", 37.87, 40.53, "君不知", "Yet you do not know.", "君は知らない"),
-        ("l09", 40.53, 44.56, "心悦君兮", "My heart delights in you.", "心は君を悦ぶのに"),
+        ("l07", 35.39, 37.87, "心爱君兮", "My heart loves you.", "心は君を愛している"),
+        ("l08", 37.87, 40.53, "追不着", "Yet I cannot reach you.", "それでも届かない"),
+        ("l09", 40.53, 44.56, "心爱君兮", "My heart loves you.", "心は君を愛している"),
         ("l10", 44.56, 51.08, "今夕何夕兮", "What night is this?", "今宵は何という夜か"),
-        ("l11", 51.08, 54.48, "搴舟中流", "I draw the boat into midstream.", "舟を流れの中へ進める"),
+        ("l11", 51.08, 54.48, "牵愁中流", "Longing is drawn through midstream.", "愁いを流れの中へ引いていく"),
         ("l12", 54.48, 57.96, "今日何日兮", "What day is this?", "今日は何という日か"),
-        ("l13", 57.96, 61.32, "得与王子同舟", "To share a boat with the prince.", "王子と同じ舟にいる"),
+        ("l13", 57.96, 61.32, "得与望之同舟", "To share this boat with the one I behold.", "見つめる人と同じ舟にいる"),
         ("l14", 61.32, 66.47, "蒙羞被好兮", "Ashamed, yet graced by favor.", "恥じながらも寵を受け"),
         ("l15", 66.47, 68.45, "不訾诟耻", "I do not count slander and shame.", "そしりも恥も数えない"),
-        ("l16", 69.76, 73.24, "心几烦而不绝兮", "My heart is troubled and cannot cease.", "心は乱れて絶えず"),
+        ("l16", 69.76, 73.24, "心急烦而不绝兮", "My heart is restless and cannot cease.", "心は焦がれて絶えず"),
         ("l17", 73.24, 75.18, "得知王子", "Because I have come to know the prince.", "王子を知ることができたから"),
         ("l18", 76.50, 78.44, "山有木兮", "The mountain has trees.", "山には木があり"),
         ("l19", 78.44, 80.14, "木有枝", "The trees have branches.", "木には枝がある"),
-        ("l20", 80.14, 81.74, "心悦君兮", "My heart delights in you.", "心は君を悦ぶのに"),
-        ("l21", 81.74, 83.32, "君不知", "Yet you do not know.", "君は知らない"),
+        ("l20", 80.14, 81.74, "心爱君兮", "My heart loves you.", "心は君を愛している"),
+        ("l21", 81.74, 83.32, "追不着", "Yet I cannot reach you.", "それでも届かない"),
         ("l22", 83.32, 84.32, "山有木兮", "The mountain has trees.", "山には木があり"),
         ("l23", 84.32, 87.00, "木有枝", "The trees have branches.", "木には枝がある"),
-        ("l24", 87.44, 88.68, "心悦君兮", "My heart delights in you.", "心は君を悦ぶのに"),
+        ("l24", 87.44, 88.68, "心爱君兮", "My heart loves you.", "心は君を愛している"),
     ]
 
 
@@ -178,9 +184,10 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
             "vocalSet": "zh-vocal",
             "correction": (
                 "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. "
-                "Active Mandarin timing is based on large-v3 ASR from the selected full mix. Public text preserves 越人歌's original wording "
-                "where sound-close: 心爱君兮 is restored to 心悦君兮, and phonetic-control 牵舟/披好/不子 is restored to 搴舟/被好/不訾. "
-                "The render still diverges from a perfect recitation: 君不知 is sometimes heard by ASR as 追不着, and the final 君不知 tail is not recovered."
+                "Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision uses a sound-close, context-smooth lyric "
+                "where the render diverges from strict source text: 心爱君兮 is kept because it is consistently audible and beautiful, 君不知 is displayed "
+                "as 追不着 where ASR/listening indicate that phrase, and 搴舟中流 is softened to 牵愁中流 because the sung line is closer to 前愁/牵愁 than to the rare source character. "
+                "The original 越人歌 remains the source and emotional frame, but the active website lyric follows the selected performance."
             ),
         },
     }
@@ -255,8 +262,8 @@ def write_media_item() -> None:
         "title": "越人歌 · 原诗版",
         "localizedTitles": {"zh-Hans": "越人歌 · 原诗版", "en": "Song of the Yue Boatman · Original Poem", "ja": "越人歌・原詩版"},
         "artist": "Musia",
-        "description": "A Musia ACE-Step Mandarin original-poem setting of 越人歌, using repeated original poem lines and ASR-corrected trilingual website lyrics.",
-        "caption": "A moonlit boat, hidden longing, and the ancient confession 山有木兮，心悦君兮.",
+        "description": "A Musia ACE-Step Mandarin 越人歌 setting with ASR-corrected, sound-close trilingual website lyrics.",
+        "caption": "A moonlit boat, hidden longing, and the sung confession 山有木兮，心爱君兮.",
         "duration": round(duration(SELECTED_WAV), 3),
         "canonicalUrl": f"https://fun.lazying.art/#{MEDIA_ID}",
         "share": {
@@ -316,8 +323,8 @@ def write_media_item() -> None:
                 "gate": "selected-with-documented-classical-poem-imperfections",
             },
             "lyricCorrection": (
-                "Corrected from selected full-mix large-v3 ASR and the poem-only hook prompt. The public lyric keeps original 越人歌 wording "
-                "where sound-close, while the production note documents that the render is not a perfect classical recitation."
+                "Corrected from selected full-mix large-v3 ASR and the poem-only hook prompt. The active lyric now uses a sound-close compromise "
+                "where the render diverges from strict original text, while the production note documents the source poem and correction choices."
             ),
             "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0b88aca6cc8e98f5016a4475905be88191ab258691b27b0dea.png",
             "publicAudio": PUBLIC_AUDIO_NAME,

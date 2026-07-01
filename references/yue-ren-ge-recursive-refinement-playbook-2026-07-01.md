@@ -91,16 +91,26 @@ ASR is also not absolute truth. The final correction uses this hierarchy:
 
 ```text
 actual audible structure
+> sound-close poetic compromise
 > close intended original poem text
 > ASR guess
 > draft translation
 ```
 
-That is why `心爱君兮` was restored to `心悦君兮`: the sound is close, the
-planned poem requires `悦`, and the phrase is culturally and semantically right.
-But the production note also records that the render is not perfect; ASR
-sometimes hears `君不知` as `追不着`, and the final tail does not fully recover
-`君不知`.
+The first publication restored more original text where the sound was close.
+After user listening feedback, the active lyric was revised to a stronger
+sound-close compromise where the render clearly sang a different but meaningful
+phrase. For example, `心悦君兮` is now displayed as `心爱君兮`, and repeated
+`君不知` positions are displayed as `追不着`. This makes the player feel closer
+to the actual song while preserving the poem's emotional frame.
+
+Rule:
+
+```text
+restore source when the sung phrase is close enough
+compromise poetically when the model clearly sang another useful phrase
+document every compromise
+```
 
 ## Why This Worked
 
@@ -363,6 +373,8 @@ uses:
 - actual line timings from ASR/listening;
 - pinyin per character;
 - original poem text restored where sound-close;
+- sound-close compromise wording where the rendered vocal consistently differs
+  and the compromise is clearer, beautiful, and emotionally coherent;
 - translations aligned to the corrected active lyric lines.
 
 ### Pass 8: Document the imperfections

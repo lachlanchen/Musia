@@ -10,8 +10,8 @@
     "ja": "越人歌・原詩版"
   },
   "artist": "Musia",
-  "description": "A Musia ACE-Step Mandarin original-poem setting of 越人歌, using repeated original poem lines and ASR-corrected trilingual website lyrics.",
-  "caption": "A moonlit boat, hidden longing, and the ancient confession 山有木兮，心悦君兮.",
+  "description": "A Musia ACE-Step Mandarin 越人歌 setting with ASR-corrected, sound-close trilingual website lyrics.",
+  "caption": "A moonlit boat, hidden longing, and the sung confession 山有木兮，心爱君兮.",
   "duration": 100.0,
   "canonicalUrl": "https://fun.lazying.art/#yue-ren-ge-original-poem",
   "share": {
@@ -268,7 +268,7 @@
         "id": "l02",
         "start": 19.18,
         "end": 21.64,
-        "text": "搴舟中流"
+        "text": "牵愁中流"
       },
       {
         "id": "l03",
@@ -280,7 +280,7 @@
         "id": "l04",
         "start": 25.18,
         "end": 28.42,
-        "text": "得与王子同舟"
+        "text": "得遇望之王子"
       },
       {
         "id": "l05",
@@ -298,19 +298,19 @@
         "id": "l07",
         "start": 35.39,
         "end": 37.87,
-        "text": "心悦君兮"
+        "text": "心爱君兮"
       },
       {
         "id": "l08",
         "start": 37.87,
         "end": 40.53,
-        "text": "君不知"
+        "text": "追不着"
       },
       {
         "id": "l09",
         "start": 40.53,
         "end": 44.56,
-        "text": "心悦君兮"
+        "text": "心爱君兮"
       },
       {
         "id": "l10",
@@ -322,7 +322,7 @@
         "id": "l11",
         "start": 51.08,
         "end": 54.48,
-        "text": "搴舟中流"
+        "text": "牵愁中流"
       },
       {
         "id": "l12",
@@ -334,7 +334,7 @@
         "id": "l13",
         "start": 57.96,
         "end": 61.32,
-        "text": "得与王子同舟"
+        "text": "得与望之同舟"
       },
       {
         "id": "l14",
@@ -352,7 +352,7 @@
         "id": "l16",
         "start": 69.76,
         "end": 73.24,
-        "text": "心几烦而不绝兮"
+        "text": "心急烦而不绝兮"
       },
       {
         "id": "l17",
@@ -376,13 +376,13 @@
         "id": "l20",
         "start": 80.14,
         "end": 81.74,
-        "text": "心悦君兮"
+        "text": "心爱君兮"
       },
       {
         "id": "l21",
         "start": 81.74,
         "end": 83.32,
-        "text": "君不知"
+        "text": "追不着"
       },
       {
         "id": "l22",
@@ -400,7 +400,7 @@
         "id": "l24",
         "start": 87.44,
         "end": 88.68,
-        "text": "心悦君兮"
+        "text": "心爱君兮"
       }
     ]
   },
@@ -416,7 +416,7 @@
       "selectionReason": "Best practical balance of poem recovery and final-couplet hook clarity.",
       "gate": "selected-with-documented-classical-poem-imperfections"
     },
-    "lyricCorrection": "Corrected from selected full-mix large-v3 ASR and the poem-only hook prompt. The public lyric keeps original 越人歌 wording where sound-close, while the production note documents that the render is not a perfect classical recitation.",
+    "lyricCorrection": "Corrected from selected full-mix large-v3 ASR and the poem-only hook prompt. The active lyric now uses a sound-close compromise where the render diverges from strict original text, while the production note documents the source poem and correction choices.",
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0b88aca6cc8e98f5016a4475905be88191ab258691b27b0dea.png",
     "publicAudio": "yue-ren-ge-original-poem-zh-Hans-ace-20260701.mp3"
   }

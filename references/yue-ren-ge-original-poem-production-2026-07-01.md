@@ -186,6 +186,34 @@ Correction policy used:
   sometimes hears `君不知` as `追不着`, and the final `君不知` tail is not
   recovered.
 
+### Sound-Close Compromise Revision
+
+After user review, the active website lyric was revised from strict source
+restoration to a sound-close, context-smooth sung lyric. The original poem
+remains the source and emotional frame, but the website player now follows the
+selected performance more honestly where the rendered vocal repeatedly differs
+from the classical text.
+
+Important replacements:
+
+| Original/source-restored text | Large-v3 ASR evidence | Published sung compromise | Reason |
+| --- | --- | --- | --- |
+| `搴舟中流` | `前愁终留` | `牵愁中流` | keeps the river image, matches the audible `qian/chou/zhong/liu` shape, and reads poetically |
+| `得与王子同舟` | `得欲望之王子` | `得遇望之王子` | preserves the prince/longing meaning while matching the audible phrase better |
+| `得与王子同舟` | `得欲望之同舟` | `得与望之同舟` | keeps the boat image and the audible `wang zhi tong zhou` shape |
+| `心悦君兮` | `心爱君兮` | `心爱君兮` | consistently audible, semantically beautiful, and close to the intended confession |
+| `君不知` | `追不着` | `追不着` | audible in two repeated hook positions and emotionally coherent as unreachable longing |
+| `心几烦而不绝兮` | `心急凡尔不觉兮` | `心急烦而不绝兮` | keeps the source meaning of restless longing while using the clearer sung shape |
+
+This is the preferred policy when the user wants the visible lyric to feel good
+with the rendered song:
+
+```text
+strict source text only when sound-close
+sound-close poetic compromise when the model clearly sang a different phrase
+document the compromise instead of pretending the render is exact
+```
+
 Validation:
 
 ```text
