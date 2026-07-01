@@ -152,6 +152,30 @@
       ]
     },
     {
+      "id": "shu-dao-nan",
+      "kind": "song",
+      "title": "蜀道难",
+      "artist": "Musia",
+      "summary": "A cinematic ACE-Step Mandarin normal-song adaptation of Li Bai's 蜀道难, with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
+      "manifest": "data/songs/shu-dao-nan/manifest.json",
+      "cover": "assets/covers/shu-dao-nan-16x9.png",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "Li Bai",
+        "Tang poetry",
+        "Mandarin",
+        "ACE-Step",
+        "xianxia",
+        "pinyin",
+        "furigana"
+      ]
+    },
+    {
       "id": "qiang-jin-jiu-normal-song",
       "kind": "song",
       "title": "将进酒",
