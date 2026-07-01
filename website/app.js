@@ -31,7 +31,8 @@ const state = {
   requestedAssetId: "",
   playbackMode: "off",
   userPlaybackMode: false,
-  advancingPlayback: false
+  advancingPlayback: false,
+  mediaSessionHandlersInstalled: false
 };
 
 const $ = (id) => document.getElementById(id);
@@ -527,6 +528,125 @@ function updateShareMetadata(manifest) {
   setMeta('meta[name="twitter:image"]', image ? new URL(image, window.location.href).href : "");
 }
 
+function mediaSessionArtwork() {
+  const cover = coverUrl(state.manifest || {});
+  const resolvedCover = cover ? new URL(cover, window.location.href).href : "";
+  const logo192 = new URL("assets/brand/fun-lazying-art-logo-192.png", window.location.href).href;
+  const logo1024 = new URL("assets/brand/fun-lazying-art-logo.png", window.location.href).href;
+  const artwork = [
+    ...(resolvedCover ? [{ src: resolvedCover, sizes: "512x512", type: "image/png" }] : []),
+    { src: logo192, sizes: "192x192", type: "image/png" },
+    { src: logo1024, sizes: "1024x1024", type: "image/png" }
+  ];
+  return artwork;
+}
+
+function updateMediaSessionPosition() {
+  if (!("mediaSession" in navigator) || typeof navigator.mediaSession.setPositionState !== "function") return;
+  const media = state.mediaElement;
+  if (!media) return;
+  const duration = media.duration || state.manifest?.duration || 0;
+  if (!Number.isFinite(duration) || duration <= 0) return;
+  try {
+    navigator.mediaSession.setPositionState({
+      duration,
+      playbackRate: media.playbackRate || 1,
+      position: Math.min(duration, Math.max(0, media.currentTime || 0))
+    });
+  } catch {
+    // Some browsers reject position updates before metadata is fully ready.
+  }
+}
+
+function updateMediaSessionPlaybackState() {
+  if (!("mediaSession" in navigator)) return;
+  const media = state.mediaElement;
+  navigator.mediaSession.playbackState = media && !media.paused ? "playing" : "paused";
+  updateMediaSessionPosition();
+}
+
+async function playCurrentMedia() {
+  const media = state.mediaElement;
+  if (!media) return;
+  state.captureTime = null;
+  if (state.audioContext?.state === "suspended") await state.audioContext.resume();
+  await media.play();
+  updateMediaSessionPlaybackState();
+}
+
+function pauseCurrentMedia() {
+  const media = state.mediaElement;
+  if (!media) return;
+  media.pause();
+  updateMediaSessionPlaybackState();
+}
+
+async function loadAdjacentMedia({ previous = false, shuffle = false } = {}) {
+  const items = playbackQueueItems();
+  if (!items.length) return;
+  let item = null;
+  if (shuffle) {
+    item = nextPlaybackItem({ shuffle: true });
+  } else {
+    const index = Math.max(0, items.findIndex((entry) => entry.id === state.activeMediaId));
+    item = previous ? items[(index - 1 + items.length) % items.length] : items[(index + 1) % items.length];
+  }
+  if (!item) return;
+  await loadMediaItem(item, true);
+  await playLoadedMediaFromStart();
+}
+
+function installMediaSessionHandlers() {
+  if (state.mediaSessionHandlersInstalled || !("mediaSession" in navigator)) return;
+  state.mediaSessionHandlersInstalled = true;
+  const setHandler = (name, handler) => {
+    try {
+      navigator.mediaSession.setActionHandler(name, handler);
+    } catch {
+      // Browsers support different Media Session action subsets.
+    }
+  };
+  setHandler("play", () => playCurrentMedia());
+  setHandler("pause", () => pauseCurrentMedia());
+  setHandler("seekbackward", (details) => {
+    const media = state.mediaElement;
+    if (!media) return;
+    media.currentTime = Math.max(0, media.currentTime - (details.seekOffset || 10));
+    updateSync();
+    updateMediaSessionPosition();
+  });
+  setHandler("seekforward", (details) => {
+    const media = state.mediaElement;
+    if (!media) return;
+    const duration = media.duration || state.manifest?.duration || Number.MAX_SAFE_INTEGER;
+    media.currentTime = Math.min(duration, media.currentTime + (details.seekOffset || 10));
+    updateSync();
+    updateMediaSessionPosition();
+  });
+  setHandler("seekto", (details) => {
+    const media = state.mediaElement;
+    if (!media || !Number.isFinite(details.seekTime)) return;
+    media.currentTime = Math.max(0, details.seekTime);
+    updateSync();
+    updateMediaSessionPosition();
+  });
+  setHandler("previoustrack", () => loadAdjacentMedia({ previous: true }));
+  setHandler("nexttrack", () => loadAdjacentMedia({ shuffle: state.playbackMode === "shuffle" }));
+}
+
+function updateMediaSession() {
+  if (!("mediaSession" in navigator) || !state.manifest || !window.MediaMetadata) return;
+  installMediaSessionHandlers();
+  const asset = activePlayableAsset();
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: displayTitleForAsset(asset),
+    artist: state.manifest.artist || "Musia",
+    album: "Fun Lazying Art",
+    artwork: mediaSessionArtwork()
+  });
+  updateMediaSessionPlaybackState();
+}
+
 function setMediaSource(asset, keepTime = false) {
   const previous = state.mediaElement;
   const previousTime = previous?.currentTime || 0;
@@ -551,6 +671,7 @@ function setMediaSource(asset, keepTime = false) {
     renderVocalLanguageSelect();
     updateMediaTitle();
     updateMusicalLabels();
+    updateMediaSession();
     updateSync();
     return;
   }
@@ -569,7 +690,7 @@ function setMediaSource(asset, keepTime = false) {
   }
   state.mediaElement.src = resolveSitePath(asset.src);
   if (keepTime) state.mediaElement.currentTime = Math.min(previousTime, (state.manifest.duration || previousTime) - 0.1);
-  if (wasPlaying) state.mediaElement.play();
+  if (wasPlaying) state.mediaElement.play().catch((error) => console.warn("Playback after asset switch was blocked.", error));
   applyActiveLyricSet();
   state.renderedChordKey = "";
   renderAssetSwitcher();
@@ -577,6 +698,7 @@ function setMediaSource(asset, keepTime = false) {
   renderVocalLanguageSelect();
   updateMediaTitle();
   updateMusicalLabels();
+  updateMediaSession();
   updateSync();
 }
 
@@ -863,6 +985,8 @@ window.funPlayerSetTime = function funPlayerSetTime(time) {
 window.funPlayerUpdateSync = updateSync;
 
 function initAudioGraph() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("audioGraph") !== "1") return;
   const media = state.mediaElement;
   if (!media || state.sourceElement === media) return;
   const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -911,25 +1035,38 @@ function drawVisualizer() {
 }
 
 function mediaListeners(element) {
-  element.addEventListener("play", () => { $("play-symbol").textContent = "❚❚"; });
-  element.addEventListener("pause", () => { $("play-symbol").textContent = "▶"; });
-  element.addEventListener("timeupdate", updateSync);
-  element.addEventListener("loadedmetadata", updateSync);
+  element.addEventListener("play", () => {
+    $("play-symbol").textContent = "❚❚";
+    updateMediaSessionPlaybackState();
+  });
+  element.addEventListener("pause", () => {
+    $("play-symbol").textContent = "▶";
+    updateMediaSessionPlaybackState();
+  });
+  element.addEventListener("timeupdate", () => {
+    updateSync();
+    updateMediaSessionPosition();
+  });
+  element.addEventListener("loadedmetadata", () => {
+    updateSync();
+    updateMediaSession();
+  });
   element.addEventListener("loadedmetadata", () => {
     if (state.skipIntroOnLoad) applySkipIntro();
   });
+  element.addEventListener("durationchange", updateMediaSessionPosition);
+  element.addEventListener("ratechange", updateMediaSessionPosition);
+  element.addEventListener("seeked", updateMediaSessionPosition);
   element.addEventListener("ended", handleMediaEnded);
 }
 
 function bindEvents() {
   $("play").addEventListener("click", async () => {
     state.captureTime = null;
-    initAudioGraph();
-    if (state.audioContext?.state === "suspended") await state.audioContext.resume();
     const media = state.mediaElement;
     if (!media) return;
-    if (media.paused) await media.play();
-    else media.pause();
+    if (media.paused) await playCurrentMedia();
+    else pauseCurrentMedia();
   });
   $("seek").addEventListener("input", () => {
     const media = state.mediaElement;
@@ -940,7 +1077,7 @@ function bindEvents() {
   });
   $("skip-intro").addEventListener("click", () => {
     applySkipIntro({ force: true });
-    state.mediaElement?.play();
+    playCurrentMedia();
   });
   $("playback-mode").addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target : null;
@@ -982,6 +1119,7 @@ function bindEvents() {
       setSearchOpen(true);
     }
   });
+  document.addEventListener("visibilitychange", updateMediaSessionPlaybackState);
 }
 
 async function loadJson(url) {
@@ -1041,6 +1179,7 @@ async function loadMediaItem(item, updateHash = false) {
   const selectedAsset = assets.find((asset) => asset.id === state.requestedAssetId) || assets[0];
   if (!selectedAsset) throw new Error("No playable media asset in manifest.");
   setMediaSource(selectedAsset);
+  updateMediaSession();
   updateSync();
   if (updateHash) history.replaceState(null, "", `#${encodeURIComponent(item.id)}`);
 }

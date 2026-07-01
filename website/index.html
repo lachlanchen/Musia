@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Fun Lazying Art bright media player for music, localized songs, MVs, short films, and synced multilingual lyrics.">
+  <meta name="theme-color" content="#fff7ed">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Fun Lazying Art">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta property="og:site_name" content="Fun Lazying Art">
   <meta property="og:type" content="music.song">
   <meta property="og:title" content="Fun Lazying Art">
@@ -17,6 +22,7 @@
   <title>Fun Lazying Art</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/fun-lazying-art-logo-192.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -119,7 +125,7 @@
           <button id="skip-intro" class="skip-intro-button" type="button" hidden>Start vocal</button>
         </div>
         <div id="asset-switcher" class="asset-switcher" aria-label="Playable versions"></div>
-        <audio id="audio" preload="metadata"></audio>
+        <audio id="audio" preload="auto"></audio>
       </article>
 
       <article class="lyrics-card" aria-label="Current lyrics">
@@ -146,6 +152,6 @@
     </section>
   </main>
 
-  <script src="app.js?v=20260630-playback-modes"></script>
+  <script src="app.js?v=20260701-background-audio"></script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+{
+  "name": "Fun Lazying Art",
+  "short_name": "Fun Art",
+  "description": "Musia songs, localized music, MVs, short films, and synced multilingual lyrics.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#fff7ed",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/brand/fun-lazying-art-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/brand/fun-lazying-art-logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["music", "entertainment", "education"]
+}
