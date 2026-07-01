@@ -488,58 +488,48 @@
       "id": "l13",
       "start": 57.96,
       "end": 61.32,
-      "text": "To share this boat with the one I behold.",
-      "singableText": "To share this boat with the one I behold.",
+      "text": "To share this boat with the prince.",
+      "singableText": "To share this boat with the prince.",
       "role": "lyric",
       "tokens": [
         {
           "text": "To",
           "start": 57.96,
-          "end": 58.296
+          "end": 58.38
         },
         {
           "text": "share",
-          "start": 58.296,
-          "end": 58.632
+          "start": 58.38,
+          "end": 58.8
         },
         {
           "text": "this",
-          "start": 58.632,
-          "end": 58.968
+          "start": 58.8,
+          "end": 59.22
         },
         {
           "text": "boat",
-          "start": 58.968,
-          "end": 59.304
-        },
-        {
-          "text": "with",
-          "start": 59.304,
+          "start": 59.22,
           "end": 59.64
         },
         {
-          "text": "the",
+          "text": "with",
           "start": 59.64,
-          "end": 59.976
+          "end": 60.06
         },
         {
-          "text": "one",
-          "start": 59.976,
-          "end": 60.312
+          "text": "the",
+          "start": 60.06,
+          "end": 60.48
         },
         {
-          "text": "I",
-          "start": 60.312,
-          "end": 60.648
-        },
-        {
-          "text": "behold",
-          "start": 60.648,
-          "end": 60.984
+          "text": "prince",
+          "start": 60.48,
+          "end": 60.9
         },
         {
           "text": ".",
-          "start": 60.984,
+          "start": 60.9,
           "end": 61.32
         }
       ]
@@ -1032,6 +1022,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: 心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and the original poem is stronger. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, such as the two 望之 phrases where ASR/listening indicate a changed structure. The original 越人歌 remains the source and emotional frame."
+    "correction": "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: 心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and the original poem is stronger. The second 同舟 line is restored from 得与望之同舟 to 得与王子同舟 because 王子 is close to the sung sound and is the original, stronger text. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, such as the first 望之王子 phrase where ASR/listening indicate a changed structure. The original 越人歌 remains the source and emotional frame."
   }
 }

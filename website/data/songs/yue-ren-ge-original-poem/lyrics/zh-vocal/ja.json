@@ -700,72 +700,57 @@
       "id": "l13",
       "start": 57.96,
       "end": 61.32,
-      "text": "見つめる人と同じ舟にいる",
-      "singableText": "見つめる人と同じ舟にいる",
+      "text": "王子と同じ舟にいる",
+      "singableText": "王子と同じ舟にいる",
       "role": "lyric",
       "tokens": [
         {
-          "text": "見",
+          "text": "王",
           "start": 57.96,
-          "end": 58.24,
-          "reading": "けん"
+          "end": 58.333,
+          "reading": "おう"
         },
         {
-          "text": "つ",
-          "start": 58.24,
-          "end": 58.52
-        },
-        {
-          "text": "め",
-          "start": 58.52,
-          "end": 58.8
-        },
-        {
-          "text": "る",
-          "start": 58.8,
-          "end": 59.08
-        },
-        {
-          "text": "人",
-          "start": 59.08,
-          "end": 59.36,
-          "reading": "にん"
+          "text": "子",
+          "start": 58.333,
+          "end": 58.707,
+          "reading": "こ"
         },
         {
           "text": "と",
-          "start": 59.36,
-          "end": 59.64
+          "start": 58.707,
+          "end": 59.08
         },
         {
           "text": "同",
-          "start": 59.64,
-          "end": 59.92,
+          "start": 59.08,
+          "end": 59.453,
           "reading": "どう"
         },
         {
           "text": "じ",
-          "start": 59.92,
-          "end": 60.2
+          "start": 59.453,
+          "end": 59.827
         },
         {
           "text": "舟",
-          "start": 60.2,
-          "end": 60.48,
+          "start": 59.827,
+          "end": 60.2,
           "reading": "ふね"
         },
         {
           "text": "に",
-          "start": 60.48,
-          "end": 60.76
+          "start": 60.2,
+          "end": 60.573
         },
         {
           "text": "い",
-          "start": 60.76,
-          "end": 61.04
+          "start": 60.573,
+          "end": 60.947
         },
         {
           "text": "る",
-          "start": 61.04,
+          "start": 60.947,
           "end": 61.32
         }
       ]
@@ -1431,6 +1416,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: 心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and the original poem is stronger. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, such as the two 望之 phrases where ASR/listening indicate a changed structure. The original 越人歌 remains the source and emotional frame."
+    "correction": "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: 心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and the original poem is stronger. The second 同舟 line is restored from 得与望之同舟 to 得与王子同舟 because 王子 is close to the sung sound and is the original, stronger text. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, such as the first 望之王子 phrase where ASR/listening indicate a changed structure. The original 越人歌 remains the source and emotional frame."
   }
 }

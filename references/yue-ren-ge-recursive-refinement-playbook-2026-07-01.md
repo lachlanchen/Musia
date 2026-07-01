@@ -103,7 +103,9 @@ because it is usually more beautiful than an ASR guess. For `越人歌`,
 `心爱君兮` was restored back to `心悦君兮`, `追不着` was restored back to
 `君不知`, and `牵愁中流` was restored back to `搴舟中流`. The website keeps
 sound-close compromises only where the rendered phrase changes structure more
-clearly, such as the `望之` lines. A final soft `不知` tail was added from user
+clearly, such as the first `望之王子` line. The second `同舟` line was restored to
+`得与王子同舟` after user review because `王子` is close to the sound and is the
+stronger original text. A final soft `不知` tail was added from user
 listening because ASR swallowed it.
 
 Rule:

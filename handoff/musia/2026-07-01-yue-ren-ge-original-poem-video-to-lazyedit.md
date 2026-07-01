@@ -174,7 +174,7 @@ Corrected visible lyric sequence:
 今夕何夕兮
 搴舟中流
 今日何日兮
-得与望之同舟
+得与王子同舟
 蒙羞被好兮
 不訾诟耻
 心急烦而不绝兮
@@ -204,6 +204,7 @@ User-reviewed corrections already applied:
 心爱君兮 -> 心悦君兮
 追不着 -> 君不知
 final soft tail -> 不知
+second 同舟 line -> 得与王子同舟
 ```
 
 ## Cover / Thumbnail

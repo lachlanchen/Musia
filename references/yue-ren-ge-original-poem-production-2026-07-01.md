@@ -200,7 +200,7 @@ Important replacements:
 | --- | --- | --- | --- |
 | `搴舟中流` | `前愁终留` | `搴舟中流` | same four-syllable shape, close enough sound, and the original boat image is more beautiful |
 | `得与王子同舟` | `得欲望之王子` | `得遇望之王子` | preserves the prince/longing meaning while matching the audible phrase better |
-| `得与王子同舟` | `得欲望之同舟` | `得与望之同舟` | keeps the boat image and the audible `wang zhi tong zhou` shape |
+| `得与王子同舟` | `得欲望之同舟` | `得与王子同舟` | user review: the second phrase is closer to `王子` than `望之`, and the original line is stronger |
 | `心悦君兮` | `心爱君兮` | `心悦君兮` | same four-character shape, close sound, and the original confession is stronger |
 | `君不知` | `追不着` | `君不知` | same three-character shape, close sound, and the original line is more beautiful |
 | final `不知` tail | omitted by ASR | `不知` | user listening caught a soft final tail that ASR swallowed |

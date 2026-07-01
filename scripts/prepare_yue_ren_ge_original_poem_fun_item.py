@@ -156,7 +156,7 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
         ("l10", 44.56, 51.08, "今夕何夕兮", "What night is this?", "今宵は何という夜か"),
         ("l11", 51.08, 54.48, "搴舟中流", "I draw the boat into midstream.", "舟を流れの中へ進める"),
         ("l12", 54.48, 57.96, "今日何日兮", "What day is this?", "今日は何という日か"),
-        ("l13", 57.96, 61.32, "得与望之同舟", "To share this boat with the one I behold.", "見つめる人と同じ舟にいる"),
+        ("l13", 57.96, 61.32, "得与王子同舟", "To share this boat with the prince.", "王子と同じ舟にいる"),
         ("l14", 61.32, 66.47, "蒙羞被好兮", "Ashamed, yet graced by favor.", "恥じながらも寵を受け"),
         ("l15", 66.47, 68.45, "不訾诟耻", "I do not count slander and shame.", "そしりも恥も数えない"),
         ("l16", 69.76, 73.24, "心急烦而不绝兮", "My heart is restless and cannot cease.", "心は焦がれて絶えず"),
@@ -185,8 +185,9 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
                 "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. "
                 "Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: "
                 "心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and "
-                "the original poem is stronger. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, "
-                "such as the two 望之 phrases where ASR/listening indicate a changed structure. "
+                "the original poem is stronger. The second 同舟 line is restored from 得与望之同舟 to 得与王子同舟 because 王子 is close to the sung sound and is the original, stronger text. "
+                "The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, "
+                "such as the first 望之王子 phrase where ASR/listening indicate a changed structure. "
                 "The original 越人歌 remains the source and emotional frame."
             ),
         },
