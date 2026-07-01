@@ -27,6 +27,7 @@ SONGS = ROOT.parent / "MusiaSongs"
 SONGS_AUDIO = SONGS / "audio"
 WEBSITE = ROOT / "website"
 AUDIO_BASE = "https://lazyingart.github.io/MusiaSongs/audio/"
+AUDIO_CACHE_VERSION = "20260701-dr"
 MANIFEST_SCHEMA = "fun.lazying.media.manifest.v1"
 TEXT_SCHEMA = "fun.lazying.media.text-track.v1"
 
@@ -393,7 +394,7 @@ def write_item(item: DraftItem) -> None:
                 "languageCode": "zh-Hans",
                 "languageLabel": "中文",
                 "lyricSetId": "zh-vocal",
-                "src": AUDIO_BASE + item.audio_name,
+                "src": f"{AUDIO_BASE}{item.audio_name}?v={AUDIO_CACHE_VERSION}",
                 "mime": "audio/mpeg",
             },
             "alternateAudio": [],
