@@ -33,6 +33,7 @@ const state = {
   userPlaybackMode: false,
   advancingPlayback: false,
   advancedMode: false,
+  playbackSyncFrame: 0,
   mediaSessionHandlersInstalled: false
 };
 
@@ -1055,8 +1056,10 @@ function renderChords(activeChord = null) {
     requestAnimationFrame(() => {
       const activeButton = row.querySelector(".chord-pill.active");
       if (!activeButton) return;
-      const rowRelativeLeft = activeButton.offsetLeft - row.offsetLeft;
-      const centeredLeft = rowRelativeLeft - (row.clientWidth / 2) + (activeButton.clientWidth / 2);
+      const rowRect = row.getBoundingClientRect();
+      const buttonRect = activeButton.getBoundingClientRect();
+      const buttonCenter = (buttonRect.left - rowRect.left) + row.scrollLeft + (buttonRect.width / 2);
+      const centeredLeft = buttonCenter - (row.clientWidth / 2);
       row.scrollTo({ left: Math.max(0, centeredLeft), behavior: state.captureMode ? "auto" : "smooth" });
     });
   }
@@ -1229,13 +1232,39 @@ function drawVisualizer() {
   requestAnimationFrame(drawVisualizer);
 }
 
+function stopPlaybackSync({ render = true } = {}) {
+  if (state.playbackSyncFrame) {
+    cancelAnimationFrame(state.playbackSyncFrame);
+    state.playbackSyncFrame = 0;
+  }
+  if (render) updateSync();
+}
+
+function startPlaybackSync() {
+  if (state.playbackSyncFrame) return;
+  const tick = () => {
+    const media = state.mediaElement;
+    if (!media || media.paused || media.ended) {
+      state.playbackSyncFrame = 0;
+      updateSync();
+      updateMediaSessionPosition();
+      return;
+    }
+    updateSync();
+    state.playbackSyncFrame = requestAnimationFrame(tick);
+  };
+  state.playbackSyncFrame = requestAnimationFrame(tick);
+}
+
 function mediaListeners(element) {
   element.addEventListener("play", () => {
     $("play-symbol").textContent = "❚❚";
+    startPlaybackSync();
     updateMediaSessionPlaybackState();
   });
   element.addEventListener("pause", () => {
     $("play-symbol").textContent = "▶";
+    stopPlaybackSync();
     updateMediaSessionPlaybackState();
   });
   element.addEventListener("timeupdate", () => {
@@ -1252,7 +1281,10 @@ function mediaListeners(element) {
   element.addEventListener("durationchange", updateMediaSessionPosition);
   element.addEventListener("ratechange", updateMediaSessionPosition);
   element.addEventListener("seeked", updateMediaSessionPosition);
-  element.addEventListener("ended", handleMediaEnded);
+  element.addEventListener("ended", () => {
+    stopPlaybackSync({ render: false });
+    handleMediaEnded();
+  });
 }
 
 function bindEvents() {
