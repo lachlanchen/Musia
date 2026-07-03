@@ -276,6 +276,10 @@ def main() -> None:
                 ffmpeg_cmd = [
                     ffmpeg_bin,
                     "-y",
+                    "-hide_banner",
+                    "-loglevel",
+                    "error",
+                    "-nostats",
                     "-f",
                     "x11grab",
                     "-draw_mouse",
@@ -322,6 +326,10 @@ def main() -> None:
                 [
                     ffmpeg_bin,
                     "-y",
+                    "-hide_banner",
+                    "-loglevel",
+                    "error",
+                    "-nostats",
                     "-i",
                     str(raw_video),
                     "-ss",
