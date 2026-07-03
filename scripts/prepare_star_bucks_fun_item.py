@@ -134,27 +134,34 @@ def make_line(line_id: str, start: float, end: float, text: str, code: str) -> d
 
 
 def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
-    """Audible structure from the selected vocal, corrected against large-v3 ASR."""
+    """Audible structure from the selected vocal, corrected against large-v3 ASR.
+
+    The selected ACE render omits the planned outro. It sings the chorus with a
+    few stretched/sustained words, so these timings use the 2026-07-03
+    large-v3 selected-audio + vocal-stem correction packet instead of the older
+    base ASR line split.
+    """
 
     return [
-        ("l01", 0.00, 3.54, "Moon on the water", "水上月光", "水面に浮かぶ月"),
-        ("l02", 5.60, 8.54, "I sail alone", "我独自航行", "ひとりで帆を上げる"),
-        ("l03", 10.27, 13.67, "I left the harbor late at night", "我在深夜离开港口", "夜更けに港を離れた"),
-        ("l04", 13.67, 16.17, "The stars were guiding me", "群星为我引路", "星たちが導いてくれた"),
-        ("l05", 16.63, 18.03, "The waves said breathe", "海浪说，呼吸", "波は息をしてと言った"),
-        ("l06", 19.03, 21.35, "The wind said hold on", "风说，坚持住", "風はあきらめるなと言った"),
-        ("l07", 22.11, 24.13, "And do not fear the sea", "不要害怕这片海", "海を恐れないで"),
-        ("l08", 25.13, 28.23, "I saw bright antlers in the foam", "我看见浪沫里明亮的鹿角", "泡の中に光る角を見た"),
-        ("l09", 28.23, 31.15, "Like fire above the moon", "像月上的火焰", "月の上の炎のように"),
-        ("l10", 32.10, 34.87, "They ran across the midnight tide", "它们奔过午夜的潮汐", "真夜中の潮を駆け抜けた"),
-        ("l11", 36.11, 37.87, "And showed me what to do", "也告诉我该怎么走", "進む道を教えてくれた"),
-        ("l12", 37.87, 40.69, "Star bucks, star bucks", "星鹿啊，星鹿", "星の鹿よ、星の鹿よ"),
-        ("l13", 40.69, 43.77, "Swimming through the sea", "在海中向前游", "海を泳いでゆく"),
-        ("l14", 43.77, 47.49, "Hooves of light on midnight waves", "光的蹄印落在午夜浪上", "光のひづめが夜の波に残る"),
-        ("l15", 47.49, 55.74, "Still running next to me", "仍然在我身旁奔跑", "今も私のそばを走っている"),
-        ("l16", 56.31, 58.90, "Star bucks, carry on", "星鹿啊，继续向前", "星の鹿よ、進み続けて"),
-        ("l17", 58.90, 61.70, "Across the darkest water", "越过最黑的海水", "いちばん暗い水を越えて"),
-        ("l18", 62.55, 64.78, "I can make it here", "我也能抵达这里", "私もここへ辿り着ける"),
+        ("l01", 0.00, 3.54, "Moon on the water", "水上月光", "水面に映る月"),
+        ("l02", 5.60, 8.68, "I sail alone", "我独自航行", "ひとりで帆を上げる"),
+        ("l03", 9.90, 13.67, "I left the harbor late at night", "我在深夜离开港口", "夜更けに港を離れた"),
+        ("l04", 13.67, 15.86, "The stars were guiding me", "群星为我引路", "星たちが導いてくれた"),
+        ("l05", 15.86, 18.03, "The waves said breathe", "海浪说，呼吸", "波は息をしてと言った"),
+        ("l06", 19.03, 21.38, "The wind said hold on", "风说，坚持住", "風は踏みとどまれと言った"),
+        ("l07", 21.38, 24.00, "And do not fear the sea", "不要害怕这片海", "海を恐れないで"),
+        ("l08", 24.00, 28.23, "I saw bright antlers in the foam", "我看见浪沫里明亮的鹿角", "泡の中に光る角を見た"),
+        ("l09", 28.23, 31.02, "Like fire above the blue", "像蓝色天际上的火", "青の上で燃える火のように"),
+        ("l10", 31.02, 34.76, "They ran across the midnight tide", "它们奔过午夜的潮汐", "真夜中の潮を駆け抜けた"),
+        ("l11", 34.76, 37.66, "And showed me what to do", "也告诉我该怎么走", "進む道を教えてくれた"),
+        ("l12", 37.66, 39.08, "Star bucks", "星鹿啊", "星の鹿よ"),
+        ("l13", 40.62, 41.56, "Star bucks", "星鹿啊", "星の鹿よ"),
+        ("l14", 41.56, 43.70, "Swimming through the sea", "在海中向前游", "海を泳いでゆく"),
+        ("l15", 44.60, 49.50, "Hooves of light on midnight waves", "光的蹄印踏过午夜浪", "光のひづめが夜の波を渡る"),
+        ("l16", 49.50, 52.34, "Still running next to me", "仍在我身旁奔跑", "今も私のそばを走る"),
+        ("l17", 52.34, 58.52, "Star bucks, carry on my dear", "星鹿啊，亲爱的，继续向前", "星の鹿よ、どうか進み続けて"),
+        ("l18", 58.80, 61.70, "If they can cross the darkest water", "若它们能越过最黑的海水", "いちばん暗い水を越えられるなら"),
+        ("l19", 62.55, 64.78, "I can make it here", "我也能抵达这里", "私もここへ辿り着ける"),
     ]
 
 
@@ -168,8 +175,8 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
         "provenance": {
             "vocalSet": "en-vocal",
             "correction": (
-                "Active English lyrics corrected from the selected ACE Turbo vocal using the pipeline ASR, "
-                "a large-v3 QA pass, and the intended lyric only where pronunciation/context stayed close. "
+                "Active English lyrics corrected from the selected ACE Turbo vocal using selected-audio large-v3 ASR, "
+                "separated-vocal large-v3 ASR, no-VAD segment anchors, and the intended lyric only where pronunciation/context stayed close. "
                 "Dropped planned outro lines are not published because the selected audio does not sing them."
             ),
         },
@@ -352,7 +359,8 @@ def write_media_item() -> None:
             "audioSource": "ACE-Step XL Turbo seed 743103 selected after rejecting noisy SFT/vocal-hook candidates.",
             "analysisRun": str(ANALYSIS.relative_to(ROOT)),
             "quality": {"largeV3LyricOverlap": 0.7647058823529411, "gate": "pass"},
-            "lyricCorrection": "Corrected from selected full-mix ASR, a large-v3 QA pass, and a manual source-vs-sound review.",
+            "lyricCorrection": "Corrected from selected full-mix and separated-vocal large-v3 ASR plus no-VAD segment anchors. The active text follows the audible render; planned outro lines are omitted because the selected audio does not sing them.",
+            "correctionPacket": "data/creative_projects/star-bucks-ace-turbo-sweep-20260702/correction_packets/selected-large-v3-20260703/CORRECTION_PACKET.md",
             "coverSource": "Procedural 16:9 cover generated by scripts/prepare_star_bucks_fun_item.py.",
             "publicAudio": PUBLIC_AUDIO_NAME,
         },

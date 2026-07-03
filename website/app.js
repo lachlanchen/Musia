@@ -1465,6 +1465,7 @@ async function boot() {
   document.body.classList.toggle("capture-mode", state.captureMode);
   document.body.classList.toggle("capture-full-lyrics", state.captureMode && params.get("fullLyrics") === "1");
   document.body.classList.toggle("capture-portrait", state.captureMode && params.get("portrait") === "1");
+  document.body.classList.toggle("capture-guitar-focus", state.captureMode && params.get("guitarFocus") === "1");
   bindEvents();
   setAdvancedMode(state.advancedMode, { persist: false });
   state.catalog = await loadJson("data/catalog.json");

@@ -120,6 +120,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--full-page", action="store_true", help="Capture the full scrollable page instead of only the viewport.")
     parser.add_argument("--include-full-lyrics", action="store_true", help="Keep the bottom full lyrics visible during capture.")
     parser.add_argument("--portrait", action="store_true", help="Use portrait capture layout for vertical videos.")
+    parser.add_argument("--advanced", action="store_true", help="Enable the Fun player advanced guitar chord panel during capture.")
+    parser.add_argument(
+        "--guitar-focus",
+        action="store_true",
+        help="In capture mode, hide the lyric carousel and use the lower panel for chord/guitar fingering.",
+    )
     parser.add_argument(
         "--sync-dir",
         default=str(DEFAULT_SYNC_DIR),
@@ -187,6 +193,8 @@ def main() -> None:
         "media": media_id,
         "portrait": "1" if args.portrait else "0",
         "skipIntro": "1" if args.skip_intro else "0",
+        "advanced": "1" if args.advanced else "0",
+        "guitarFocus": "1" if args.guitar_focus else "0",
     })
     url = f"{base_url}?{query}#{media_id}"
     frame_count = int(duration * args.fps + 0.999)
