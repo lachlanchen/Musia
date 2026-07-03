@@ -1,0 +1,657 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "star-bucks",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.0,
+      "end": 3.54,
+      "text": "Moon on the water",
+      "singableText": "Moon on the water",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Moon",
+          "start": 0.0,
+          "end": 0.885
+        },
+        {
+          "text": "on",
+          "start": 0.885,
+          "end": 1.77
+        },
+        {
+          "text": "the",
+          "start": 1.77,
+          "end": 2.655
+        },
+        {
+          "text": "water",
+          "start": 2.655,
+          "end": 3.54
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 5.6,
+      "end": 8.54,
+      "text": "I sail alone",
+      "singableText": "I sail alone",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 5.6,
+          "end": 6.58
+        },
+        {
+          "text": "sail",
+          "start": 6.58,
+          "end": 7.56
+        },
+        {
+          "text": "alone",
+          "start": 7.56,
+          "end": 8.54
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 10.27,
+      "end": 13.67,
+      "text": "I left the harbor late at night",
+      "singableText": "I left the harbor late at night",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 10.27,
+          "end": 10.756
+        },
+        {
+          "text": "left",
+          "start": 10.756,
+          "end": 11.241
+        },
+        {
+          "text": "the",
+          "start": 11.241,
+          "end": 11.727
+        },
+        {
+          "text": "harbor",
+          "start": 11.727,
+          "end": 12.213
+        },
+        {
+          "text": "late",
+          "start": 12.213,
+          "end": 12.699
+        },
+        {
+          "text": "at",
+          "start": 12.699,
+          "end": 13.184
+        },
+        {
+          "text": "night",
+          "start": 13.184,
+          "end": 13.67
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 13.67,
+      "end": 16.17,
+      "text": "The stars were guiding me",
+      "singableText": "The stars were guiding me",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 13.67,
+          "end": 14.17
+        },
+        {
+          "text": "stars",
+          "start": 14.17,
+          "end": 14.67
+        },
+        {
+          "text": "were",
+          "start": 14.67,
+          "end": 15.17
+        },
+        {
+          "text": "guiding",
+          "start": 15.17,
+          "end": 15.67
+        },
+        {
+          "text": "me",
+          "start": 15.67,
+          "end": 16.17
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 16.63,
+      "end": 18.03,
+      "text": "The waves said breathe",
+      "singableText": "The waves said breathe",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 16.63,
+          "end": 16.98
+        },
+        {
+          "text": "waves",
+          "start": 16.98,
+          "end": 17.33
+        },
+        {
+          "text": "said",
+          "start": 17.33,
+          "end": 17.68
+        },
+        {
+          "text": "breathe",
+          "start": 17.68,
+          "end": 18.03
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 19.03,
+      "end": 21.35,
+      "text": "The wind said hold on",
+      "singableText": "The wind said hold on",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 19.03,
+          "end": 19.494
+        },
+        {
+          "text": "wind",
+          "start": 19.494,
+          "end": 19.958
+        },
+        {
+          "text": "said",
+          "start": 19.958,
+          "end": 20.422
+        },
+        {
+          "text": "hold",
+          "start": 20.422,
+          "end": 20.886
+        },
+        {
+          "text": "on",
+          "start": 20.886,
+          "end": 21.35
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 22.11,
+      "end": 24.13,
+      "text": "And do not fear the sea",
+      "singableText": "And do not fear the sea",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "And",
+          "start": 22.11,
+          "end": 22.447
+        },
+        {
+          "text": "do",
+          "start": 22.447,
+          "end": 22.783
+        },
+        {
+          "text": "not",
+          "start": 22.783,
+          "end": 23.12
+        },
+        {
+          "text": "fear",
+          "start": 23.12,
+          "end": 23.457
+        },
+        {
+          "text": "the",
+          "start": 23.457,
+          "end": 23.793
+        },
+        {
+          "text": "sea",
+          "start": 23.793,
+          "end": 24.13
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 25.13,
+      "end": 28.23,
+      "text": "I saw bright antlers in the foam",
+      "singableText": "I saw bright antlers in the foam",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 25.13,
+          "end": 25.573
+        },
+        {
+          "text": "saw",
+          "start": 25.573,
+          "end": 26.016
+        },
+        {
+          "text": "bright",
+          "start": 26.016,
+          "end": 26.459
+        },
+        {
+          "text": "antlers",
+          "start": 26.459,
+          "end": 26.901
+        },
+        {
+          "text": "in",
+          "start": 26.901,
+          "end": 27.344
+        },
+        {
+          "text": "the",
+          "start": 27.344,
+          "end": 27.787
+        },
+        {
+          "text": "foam",
+          "start": 27.787,
+          "end": 28.23
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 28.23,
+      "end": 31.15,
+      "text": "Like fire above the moon",
+      "singableText": "Like fire above the moon",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Like",
+          "start": 28.23,
+          "end": 28.814
+        },
+        {
+          "text": "fire",
+          "start": 28.814,
+          "end": 29.398
+        },
+        {
+          "text": "above",
+          "start": 29.398,
+          "end": 29.982
+        },
+        {
+          "text": "the",
+          "start": 29.982,
+          "end": 30.566
+        },
+        {
+          "text": "moon",
+          "start": 30.566,
+          "end": 31.15
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 32.1,
+      "end": 34.87,
+      "text": "They ran across the midnight tide",
+      "singableText": "They ran across the midnight tide",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "They",
+          "start": 32.1,
+          "end": 32.562
+        },
+        {
+          "text": "ran",
+          "start": 32.562,
+          "end": 33.023
+        },
+        {
+          "text": "across",
+          "start": 33.023,
+          "end": 33.485
+        },
+        {
+          "text": "the",
+          "start": 33.485,
+          "end": 33.947
+        },
+        {
+          "text": "midnight",
+          "start": 33.947,
+          "end": 34.408
+        },
+        {
+          "text": "tide",
+          "start": 34.408,
+          "end": 34.87
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 36.11,
+      "end": 37.87,
+      "text": "And showed me what to do",
+      "singableText": "And showed me what to do",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "And",
+          "start": 36.11,
+          "end": 36.403
+        },
+        {
+          "text": "showed",
+          "start": 36.403,
+          "end": 36.697
+        },
+        {
+          "text": "me",
+          "start": 36.697,
+          "end": 36.99
+        },
+        {
+          "text": "what",
+          "start": 36.99,
+          "end": 37.283
+        },
+        {
+          "text": "to",
+          "start": 37.283,
+          "end": 37.577
+        },
+        {
+          "text": "do",
+          "start": 37.577,
+          "end": 37.87
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 37.87,
+      "end": 40.69,
+      "text": "Star bucks, star bucks",
+      "singableText": "Star bucks, star bucks",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Star",
+          "start": 37.87,
+          "end": 38.434
+        },
+        {
+          "text": "bucks",
+          "start": 38.434,
+          "end": 38.998
+        },
+        {
+          "text": ",",
+          "start": 38.998,
+          "end": 39.562
+        },
+        {
+          "text": "star",
+          "start": 39.562,
+          "end": 40.126
+        },
+        {
+          "text": "bucks",
+          "start": 40.126,
+          "end": 40.69
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 40.69,
+      "end": 43.77,
+      "text": "Swimming through the sea",
+      "singableText": "Swimming through the sea",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Swimming",
+          "start": 40.69,
+          "end": 41.46
+        },
+        {
+          "text": "through",
+          "start": 41.46,
+          "end": 42.23
+        },
+        {
+          "text": "the",
+          "start": 42.23,
+          "end": 43.0
+        },
+        {
+          "text": "sea",
+          "start": 43.0,
+          "end": 43.77
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 43.77,
+      "end": 47.49,
+      "text": "Hooves of light on midnight waves",
+      "singableText": "Hooves of light on midnight waves",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hooves",
+          "start": 43.77,
+          "end": 44.39
+        },
+        {
+          "text": "of",
+          "start": 44.39,
+          "end": 45.01
+        },
+        {
+          "text": "light",
+          "start": 45.01,
+          "end": 45.63
+        },
+        {
+          "text": "on",
+          "start": 45.63,
+          "end": 46.25
+        },
+        {
+          "text": "midnight",
+          "start": 46.25,
+          "end": 46.87
+        },
+        {
+          "text": "waves",
+          "start": 46.87,
+          "end": 47.49
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 47.49,
+      "end": 55.74,
+      "text": "Still running next to me",
+      "singableText": "Still running next to me",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Still",
+          "start": 47.49,
+          "end": 49.14
+        },
+        {
+          "text": "running",
+          "start": 49.14,
+          "end": 50.79
+        },
+        {
+          "text": "next",
+          "start": 50.79,
+          "end": 52.44
+        },
+        {
+          "text": "to",
+          "start": 52.44,
+          "end": 54.09
+        },
+        {
+          "text": "me",
+          "start": 54.09,
+          "end": 55.74
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 56.31,
+      "end": 58.9,
+      "text": "Star bucks, carry on",
+      "singableText": "Star bucks, carry on",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Star",
+          "start": 56.31,
+          "end": 56.828
+        },
+        {
+          "text": "bucks",
+          "start": 56.828,
+          "end": 57.346
+        },
+        {
+          "text": ",",
+          "start": 57.346,
+          "end": 57.864
+        },
+        {
+          "text": "carry",
+          "start": 57.864,
+          "end": 58.382
+        },
+        {
+          "text": "on",
+          "start": 58.382,
+          "end": 58.9
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 58.9,
+      "end": 61.7,
+      "text": "Across the darkest water",
+      "singableText": "Across the darkest water",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Across",
+          "start": 58.9,
+          "end": 59.6
+        },
+        {
+          "text": "the",
+          "start": 59.6,
+          "end": 60.3
+        },
+        {
+          "text": "darkest",
+          "start": 60.3,
+          "end": 61.0
+        },
+        {
+          "text": "water",
+          "start": 61.0,
+          "end": 61.7
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 62.55,
+      "end": 64.78,
+      "text": "I can make it here",
+      "singableText": "I can make it here",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 62.55,
+          "end": 62.996
+        },
+        {
+          "text": "can",
+          "start": 62.996,
+          "end": 63.442
+        },
+        {
+          "text": "make",
+          "start": 63.442,
+          "end": 63.888
+        },
+        {
+          "text": "it",
+          "start": 63.888,
+          "end": 64.334
+        },
+        {
+          "text": "here",
+          "start": 64.334,
+          "end": 64.78
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "correction": "Active English lyrics corrected from the selected ACE Turbo vocal using the pipeline ASR, a large-v3 QA pass, and the intended lyric only where pronunciation/context stayed close. Dropped planned outro lines are not published because the selected audio does not sing them."
+  }
+}

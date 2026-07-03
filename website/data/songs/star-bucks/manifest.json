@@ -1,0 +1,403 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "star-bucks",
+  "kind": "song",
+  "title": "Star Bucks",
+  "localizedTitles": {
+    "en": "Star Bucks",
+    "zh-Hans": "星鹿之海",
+    "ja": "星の鹿"
+  },
+  "artist": "Musia",
+  "description": "An original English Musia ocean anthem about a lone sailor, stars, luminous deer, and refusing to give up.",
+  "caption": "Moon on the water, star-deer in the tide, and a small human heart still carrying on.",
+  "duration": 70.0,
+  "canonicalUrl": "https://fun.lazying.art/#star-bucks",
+  "share": {
+    "title": "Star Bucks - Fun Lazying Art",
+    "description": "An original Musia ocean anthem with corrected lyrics, translations, chords, and guitar fingering.",
+    "url": "https://fun.lazying.art/#star-bucks",
+    "image": "assets/covers/star-bucks-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Star Bucks cover",
+      "role": "cover",
+      "src": "assets/covers/star-bucks-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/star-bucks-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "star-bucks-en",
+      "label": "English",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "en",
+      "languageLabel": "English",
+      "lyricSetId": "en-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/star-bucks-en-ace-turbo-seed-743103-20260703.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "detected D/F# minor centered ocean-pop progression",
+    "bpm": 80.75,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 0.209,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 0.209,
+        "end": 2.368,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 2.368,
+        "end": 3.088,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 3.088,
+        "end": 6.13,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 6.13,
+        "end": 9.079,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 9.079,
+        "end": 12.074,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 12.074,
+        "end": 15.047,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 15.047,
+        "end": 18.042,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 18.042,
+        "end": 20.944,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 20.944,
+        "end": 23.893,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 23.893,
+        "end": 26.842,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 26.842,
+        "end": 29.768,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 29.768,
+        "end": 32.694,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 32.694,
+        "end": 37.802,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 37.802,
+        "end": 40.774,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 40.774,
+        "end": 43.723,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 43.723,
+        "end": 45.209,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 45.209,
+        "end": 46.672,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 46.672,
+        "end": 48.158,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 48.158,
+        "end": 49.621,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 49.621,
+        "end": 52.593,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 52.593,
+        "end": 55.542,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 55.542,
+        "end": 58.514,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 58.514,
+        "end": 59.977,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 59.977,
+        "end": 61.463,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 61.463,
+        "end": 63.739,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 63.739,
+        "end": 64.482,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 64.482,
+        "end": 70.0,
+        "name": "D",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "en-vocal",
+      "label": "English vocal",
+      "languageCode": "en",
+      "tracks": [
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "active-vocal"
+          ],
+          "path": "lyrics/en-vocal/en.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/en-vocal/zh-Hans.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/en-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 0.0,
+        "end": 3.54,
+        "text": "Moon on the water"
+      },
+      {
+        "id": "l02",
+        "start": 5.6,
+        "end": 8.54,
+        "text": "I sail alone"
+      },
+      {
+        "id": "l03",
+        "start": 10.27,
+        "end": 13.67,
+        "text": "I left the harbor late at night"
+      },
+      {
+        "id": "l04",
+        "start": 13.67,
+        "end": 16.17,
+        "text": "The stars were guiding me"
+      },
+      {
+        "id": "l05",
+        "start": 16.63,
+        "end": 18.03,
+        "text": "The waves said breathe"
+      },
+      {
+        "id": "l06",
+        "start": 19.03,
+        "end": 21.35,
+        "text": "The wind said hold on"
+      },
+      {
+        "id": "l07",
+        "start": 22.11,
+        "end": 24.13,
+        "text": "And do not fear the sea"
+      },
+      {
+        "id": "l08",
+        "start": 25.13,
+        "end": 28.23,
+        "text": "I saw bright antlers in the foam"
+      },
+      {
+        "id": "l09",
+        "start": 28.23,
+        "end": 31.15,
+        "text": "Like fire above the moon"
+      },
+      {
+        "id": "l10",
+        "start": 32.1,
+        "end": 34.87,
+        "text": "They ran across the midnight tide"
+      },
+      {
+        "id": "l11",
+        "start": 36.11,
+        "end": 37.87,
+        "text": "And showed me what to do"
+      },
+      {
+        "id": "l12",
+        "start": 37.87,
+        "end": 40.69,
+        "text": "Star bucks, star bucks"
+      },
+      {
+        "id": "l13",
+        "start": 40.69,
+        "end": 43.77,
+        "text": "Swimming through the sea"
+      },
+      {
+        "id": "l14",
+        "start": 43.77,
+        "end": 47.49,
+        "text": "Hooves of light on midnight waves"
+      },
+      {
+        "id": "l15",
+        "start": 47.49,
+        "end": 55.74,
+        "text": "Still running next to me"
+      },
+      {
+        "id": "l16",
+        "start": 56.31,
+        "end": 58.9,
+        "text": "Star bucks, carry on"
+      },
+      {
+        "id": "l17",
+        "start": 58.9,
+        "end": 61.7,
+        "text": "Across the darkest water"
+      },
+      {
+        "id": "l18",
+        "start": 62.55,
+        "end": 64.78,
+        "text": "I can make it here"
+      }
+    ]
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/star-bucks-ace-turbo-sweep-20260702",
+    "audioSource": "ACE-Step XL Turbo seed 743103 selected after rejecting noisy SFT/vocal-hook candidates.",
+    "analysisRun": "data/runs/star-bucks-ace-turbo-seed-743103-analysis",
+    "quality": {
+      "largeV3LyricOverlap": 0.7647058823529411,
+      "gate": "pass"
+    },
+    "lyricCorrection": "Corrected from selected full-mix ASR, a large-v3 QA pass, and a manual source-vs-sound review.",
+    "coverSource": "Procedural 16:9 cover generated by scripts/prepare_star_bucks_fun_item.py.",
+    "publicAudio": "star-bucks-en-ace-turbo-seed-743103-20260703.mp3"
+  },
+  "artifacts": []
+}

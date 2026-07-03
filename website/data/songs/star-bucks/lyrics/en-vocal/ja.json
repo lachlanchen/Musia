@@ -1,0 +1,1132 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "star-bucks",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.0,
+      "end": 3.54,
+      "text": "水面に浮かぶ月",
+      "singableText": "水面に浮かぶ月",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "水",
+          "start": 0.0,
+          "end": 0.506,
+          "reading": "みず"
+        },
+        {
+          "text": "面",
+          "start": 0.506,
+          "end": 1.011,
+          "reading": "めん"
+        },
+        {
+          "text": "に",
+          "start": 1.011,
+          "end": 1.517
+        },
+        {
+          "text": "浮",
+          "start": 1.517,
+          "end": 2.023,
+          "reading": "ふ"
+        },
+        {
+          "text": "か",
+          "start": 2.023,
+          "end": 2.529
+        },
+        {
+          "text": "ぶ",
+          "start": 2.529,
+          "end": 3.034
+        },
+        {
+          "text": "月",
+          "start": 3.034,
+          "end": 3.54,
+          "reading": "がつ"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 5.6,
+      "end": 8.54,
+      "text": "ひとりで帆を上げる",
+      "singableText": "ひとりで帆を上げる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ひ",
+          "start": 5.6,
+          "end": 5.927
+        },
+        {
+          "text": "と",
+          "start": 5.927,
+          "end": 6.253
+        },
+        {
+          "text": "り",
+          "start": 6.253,
+          "end": 6.58
+        },
+        {
+          "text": "で",
+          "start": 6.58,
+          "end": 6.907
+        },
+        {
+          "text": "帆",
+          "start": 6.907,
+          "end": 7.233,
+          "reading": "ほ"
+        },
+        {
+          "text": "を",
+          "start": 7.233,
+          "end": 7.56
+        },
+        {
+          "text": "上",
+          "start": 7.56,
+          "end": 7.887,
+          "reading": "うえ"
+        },
+        {
+          "text": "げ",
+          "start": 7.887,
+          "end": 8.213
+        },
+        {
+          "text": "る",
+          "start": 8.213,
+          "end": 8.54
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 10.27,
+      "end": 13.67,
+      "text": "夜更けに港を離れた",
+      "singableText": "夜更けに港を離れた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "夜",
+          "start": 10.27,
+          "end": 10.648,
+          "reading": "よる"
+        },
+        {
+          "text": "更",
+          "start": 10.648,
+          "end": 11.026,
+          "reading": "こう"
+        },
+        {
+          "text": "け",
+          "start": 11.026,
+          "end": 11.403
+        },
+        {
+          "text": "に",
+          "start": 11.403,
+          "end": 11.781
+        },
+        {
+          "text": "港",
+          "start": 11.781,
+          "end": 12.159,
+          "reading": "みなと"
+        },
+        {
+          "text": "を",
+          "start": 12.159,
+          "end": 12.537
+        },
+        {
+          "text": "離",
+          "start": 12.537,
+          "end": 12.914,
+          "reading": "り"
+        },
+        {
+          "text": "れ",
+          "start": 12.914,
+          "end": 13.292
+        },
+        {
+          "text": "た",
+          "start": 13.292,
+          "end": 13.67
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 13.67,
+      "end": 16.17,
+      "text": "星たちが導いてくれた",
+      "singableText": "星たちが導いてくれた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "start": 13.67,
+          "end": 13.92,
+          "reading": "ほし"
+        },
+        {
+          "text": "た",
+          "start": 13.92,
+          "end": 14.17
+        },
+        {
+          "text": "ち",
+          "start": 14.17,
+          "end": 14.42
+        },
+        {
+          "text": "が",
+          "start": 14.42,
+          "end": 14.67
+        },
+        {
+          "text": "導",
+          "start": 14.67,
+          "end": 14.92,
+          "reading": "どう"
+        },
+        {
+          "text": "い",
+          "start": 14.92,
+          "end": 15.17
+        },
+        {
+          "text": "て",
+          "start": 15.17,
+          "end": 15.42
+        },
+        {
+          "text": "く",
+          "start": 15.42,
+          "end": 15.67
+        },
+        {
+          "text": "れ",
+          "start": 15.67,
+          "end": 15.92
+        },
+        {
+          "text": "た",
+          "start": 15.92,
+          "end": 16.17
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 16.63,
+      "end": 18.03,
+      "text": "波は息をしてと言った",
+      "singableText": "波は息をしてと言った",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "波",
+          "start": 16.63,
+          "end": 16.77,
+          "reading": "なみ"
+        },
+        {
+          "text": "は",
+          "start": 16.77,
+          "end": 16.91
+        },
+        {
+          "text": "息",
+          "start": 16.91,
+          "end": 17.05,
+          "reading": "いき"
+        },
+        {
+          "text": "を",
+          "start": 17.05,
+          "end": 17.19
+        },
+        {
+          "text": "し",
+          "start": 17.19,
+          "end": 17.33
+        },
+        {
+          "text": "て",
+          "start": 17.33,
+          "end": 17.47
+        },
+        {
+          "text": "と",
+          "start": 17.47,
+          "end": 17.61
+        },
+        {
+          "text": "言",
+          "start": 17.61,
+          "end": 17.75,
+          "reading": "げん"
+        },
+        {
+          "text": "っ",
+          "start": 17.75,
+          "end": 17.89
+        },
+        {
+          "text": "た",
+          "start": 17.89,
+          "end": 18.03
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 19.03,
+      "end": 21.35,
+      "text": "風はあきらめるなと言った",
+      "singableText": "風はあきらめるなと言った",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 19.03,
+          "end": 19.223,
+          "reading": "かぜ"
+        },
+        {
+          "text": "は",
+          "start": 19.223,
+          "end": 19.417
+        },
+        {
+          "text": "あ",
+          "start": 19.417,
+          "end": 19.61
+        },
+        {
+          "text": "き",
+          "start": 19.61,
+          "end": 19.803
+        },
+        {
+          "text": "ら",
+          "start": 19.803,
+          "end": 19.997
+        },
+        {
+          "text": "め",
+          "start": 19.997,
+          "end": 20.19
+        },
+        {
+          "text": "る",
+          "start": 20.19,
+          "end": 20.383
+        },
+        {
+          "text": "な",
+          "start": 20.383,
+          "end": 20.577
+        },
+        {
+          "text": "と",
+          "start": 20.577,
+          "end": 20.77
+        },
+        {
+          "text": "言",
+          "start": 20.77,
+          "end": 20.963,
+          "reading": "げん"
+        },
+        {
+          "text": "っ",
+          "start": 20.963,
+          "end": 21.157
+        },
+        {
+          "text": "た",
+          "start": 21.157,
+          "end": 21.35
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 22.11,
+      "end": 24.13,
+      "text": "海を恐れないで",
+      "singableText": "海を恐れないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "海",
+          "start": 22.11,
+          "end": 22.399,
+          "reading": "うみ"
+        },
+        {
+          "text": "を",
+          "start": 22.399,
+          "end": 22.687
+        },
+        {
+          "text": "恐",
+          "start": 22.687,
+          "end": 22.976,
+          "reading": "きょう"
+        },
+        {
+          "text": "れ",
+          "start": 22.976,
+          "end": 23.264
+        },
+        {
+          "text": "な",
+          "start": 23.264,
+          "end": 23.553
+        },
+        {
+          "text": "い",
+          "start": 23.553,
+          "end": 23.841
+        },
+        {
+          "text": "で",
+          "start": 23.841,
+          "end": 24.13
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 25.13,
+      "end": 28.23,
+      "text": "泡の中に光る角を見た",
+      "singableText": "泡の中に光る角を見た",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "泡",
+          "start": 25.13,
+          "end": 25.44,
+          "reading": "あわ"
+        },
+        {
+          "text": "の",
+          "start": 25.44,
+          "end": 25.75
+        },
+        {
+          "text": "中",
+          "start": 25.75,
+          "end": 26.06,
+          "reading": "なか"
+        },
+        {
+          "text": "に",
+          "start": 26.06,
+          "end": 26.37
+        },
+        {
+          "text": "光",
+          "start": 26.37,
+          "end": 26.68,
+          "reading": "ひかり"
+        },
+        {
+          "text": "る",
+          "start": 26.68,
+          "end": 26.99
+        },
+        {
+          "text": "角",
+          "start": 26.99,
+          "end": 27.3,
+          "reading": "かく"
+        },
+        {
+          "text": "を",
+          "start": 27.3,
+          "end": 27.61
+        },
+        {
+          "text": "見",
+          "start": 27.61,
+          "end": 27.92,
+          "reading": "けん"
+        },
+        {
+          "text": "た",
+          "start": 27.92,
+          "end": 28.23
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 28.23,
+      "end": 31.15,
+      "text": "月の上の炎のように",
+      "singableText": "月の上の炎のように",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 28.23,
+          "end": 28.554,
+          "reading": "がつ"
+        },
+        {
+          "text": "の",
+          "start": 28.554,
+          "end": 28.879
+        },
+        {
+          "text": "上",
+          "start": 28.879,
+          "end": 29.203,
+          "reading": "うえ"
+        },
+        {
+          "text": "の",
+          "start": 29.203,
+          "end": 29.528
+        },
+        {
+          "text": "炎",
+          "start": 29.528,
+          "end": 29.852,
+          "reading": "ほのお"
+        },
+        {
+          "text": "の",
+          "start": 29.852,
+          "end": 30.177
+        },
+        {
+          "text": "よ",
+          "start": 30.177,
+          "end": 30.501
+        },
+        {
+          "text": "う",
+          "start": 30.501,
+          "end": 30.826
+        },
+        {
+          "text": "に",
+          "start": 30.826,
+          "end": 31.15
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 32.1,
+      "end": 34.87,
+      "text": "真夜中の潮を駆け抜けた",
+      "singableText": "真夜中の潮を駆け抜けた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "真",
+          "start": 32.1,
+          "end": 32.352,
+          "reading": "まこと"
+        },
+        {
+          "text": "夜",
+          "start": 32.352,
+          "end": 32.604,
+          "reading": "よる"
+        },
+        {
+          "text": "中",
+          "start": 32.604,
+          "end": 32.855,
+          "reading": "なか"
+        },
+        {
+          "text": "の",
+          "start": 32.855,
+          "end": 33.107
+        },
+        {
+          "text": "潮",
+          "start": 33.107,
+          "end": 33.359,
+          "reading": "しお"
+        },
+        {
+          "text": "を",
+          "start": 33.359,
+          "end": 33.611
+        },
+        {
+          "text": "駆",
+          "start": 33.611,
+          "end": 33.863,
+          "reading": "く"
+        },
+        {
+          "text": "け",
+          "start": 33.863,
+          "end": 34.115
+        },
+        {
+          "text": "抜",
+          "start": 34.115,
+          "end": 34.366,
+          "reading": "ばつ"
+        },
+        {
+          "text": "け",
+          "start": 34.366,
+          "end": 34.618
+        },
+        {
+          "text": "た",
+          "start": 34.618,
+          "end": 34.87
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 36.11,
+      "end": 37.87,
+      "text": "進む道を教えてくれた",
+      "singableText": "進む道を教えてくれた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "進",
+          "start": 36.11,
+          "end": 36.286,
+          "reading": "すすむ"
+        },
+        {
+          "text": "む",
+          "start": 36.286,
+          "end": 36.462
+        },
+        {
+          "text": "道",
+          "start": 36.462,
+          "end": 36.638,
+          "reading": "みち"
+        },
+        {
+          "text": "を",
+          "start": 36.638,
+          "end": 36.814
+        },
+        {
+          "text": "教",
+          "start": 36.814,
+          "end": 36.99,
+          "reading": "きょう"
+        },
+        {
+          "text": "え",
+          "start": 36.99,
+          "end": 37.166
+        },
+        {
+          "text": "て",
+          "start": 37.166,
+          "end": 37.342
+        },
+        {
+          "text": "く",
+          "start": 37.342,
+          "end": 37.518
+        },
+        {
+          "text": "れ",
+          "start": 37.518,
+          "end": 37.694
+        },
+        {
+          "text": "た",
+          "start": 37.694,
+          "end": 37.87
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 37.87,
+      "end": 40.69,
+      "text": "星の鹿よ、星の鹿よ",
+      "singableText": "星の鹿よ、星の鹿よ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "start": 37.87,
+          "end": 38.183,
+          "reading": "ほし"
+        },
+        {
+          "text": "の",
+          "start": 38.183,
+          "end": 38.497
+        },
+        {
+          "text": "鹿",
+          "start": 38.497,
+          "end": 38.81,
+          "reading": "しか"
+        },
+        {
+          "text": "よ",
+          "start": 38.81,
+          "end": 39.123
+        },
+        {
+          "text": "、",
+          "start": 39.123,
+          "end": 39.437
+        },
+        {
+          "text": "星",
+          "start": 39.437,
+          "end": 39.75,
+          "reading": "ほし"
+        },
+        {
+          "text": "の",
+          "start": 39.75,
+          "end": 40.063
+        },
+        {
+          "text": "鹿",
+          "start": 40.063,
+          "end": 40.377,
+          "reading": "しか"
+        },
+        {
+          "text": "よ",
+          "start": 40.377,
+          "end": 40.69
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 40.69,
+      "end": 43.77,
+      "text": "海を泳いでゆく",
+      "singableText": "海を泳いでゆく",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "海",
+          "start": 40.69,
+          "end": 41.13,
+          "reading": "うみ"
+        },
+        {
+          "text": "を",
+          "start": 41.13,
+          "end": 41.57
+        },
+        {
+          "text": "泳",
+          "start": 41.57,
+          "end": 42.01,
+          "reading": "えい"
+        },
+        {
+          "text": "い",
+          "start": 42.01,
+          "end": 42.45
+        },
+        {
+          "text": "で",
+          "start": 42.45,
+          "end": 42.89
+        },
+        {
+          "text": "ゆ",
+          "start": 42.89,
+          "end": 43.33
+        },
+        {
+          "text": "く",
+          "start": 43.33,
+          "end": 43.77
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 43.77,
+      "end": 47.49,
+      "text": "光のひづめが夜の波に残る",
+      "singableText": "光のひづめが夜の波に残る",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "光",
+          "start": 43.77,
+          "end": 44.08,
+          "reading": "ひかり"
+        },
+        {
+          "text": "の",
+          "start": 44.08,
+          "end": 44.39
+        },
+        {
+          "text": "ひ",
+          "start": 44.39,
+          "end": 44.7
+        },
+        {
+          "text": "づ",
+          "start": 44.7,
+          "end": 45.01
+        },
+        {
+          "text": "め",
+          "start": 45.01,
+          "end": 45.32
+        },
+        {
+          "text": "が",
+          "start": 45.32,
+          "end": 45.63
+        },
+        {
+          "text": "夜",
+          "start": 45.63,
+          "end": 45.94,
+          "reading": "よる"
+        },
+        {
+          "text": "の",
+          "start": 45.94,
+          "end": 46.25
+        },
+        {
+          "text": "波",
+          "start": 46.25,
+          "end": 46.56,
+          "reading": "なみ"
+        },
+        {
+          "text": "に",
+          "start": 46.56,
+          "end": 46.87
+        },
+        {
+          "text": "残",
+          "start": 46.87,
+          "end": 47.18,
+          "reading": "ざん"
+        },
+        {
+          "text": "る",
+          "start": 47.18,
+          "end": 47.49
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 47.49,
+      "end": 55.74,
+      "text": "今も私のそばを走っている",
+      "singableText": "今も私のそばを走っている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "今",
+          "start": 47.49,
+          "end": 48.178,
+          "reading": "いま"
+        },
+        {
+          "text": "も",
+          "start": 48.178,
+          "end": 48.865
+        },
+        {
+          "text": "私",
+          "start": 48.865,
+          "end": 49.553,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 49.553,
+          "end": 50.24
+        },
+        {
+          "text": "そ",
+          "start": 50.24,
+          "end": 50.928
+        },
+        {
+          "text": "ば",
+          "start": 50.928,
+          "end": 51.615
+        },
+        {
+          "text": "を",
+          "start": 51.615,
+          "end": 52.303
+        },
+        {
+          "text": "走",
+          "start": 52.303,
+          "end": 52.99,
+          "reading": "そう"
+        },
+        {
+          "text": "っ",
+          "start": 52.99,
+          "end": 53.678
+        },
+        {
+          "text": "て",
+          "start": 53.678,
+          "end": 54.365
+        },
+        {
+          "text": "い",
+          "start": 54.365,
+          "end": 55.053
+        },
+        {
+          "text": "る",
+          "start": 55.053,
+          "end": 55.74
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 56.31,
+      "end": 58.9,
+      "text": "星の鹿よ、進み続けて",
+      "singableText": "星の鹿よ、進み続けて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "start": 56.31,
+          "end": 56.569,
+          "reading": "ほし"
+        },
+        {
+          "text": "の",
+          "start": 56.569,
+          "end": 56.828
+        },
+        {
+          "text": "鹿",
+          "start": 56.828,
+          "end": 57.087,
+          "reading": "しか"
+        },
+        {
+          "text": "よ",
+          "start": 57.087,
+          "end": 57.346
+        },
+        {
+          "text": "、",
+          "start": 57.346,
+          "end": 57.605
+        },
+        {
+          "text": "進",
+          "start": 57.605,
+          "end": 57.864,
+          "reading": "すすむ"
+        },
+        {
+          "text": "み",
+          "start": 57.864,
+          "end": 58.123
+        },
+        {
+          "text": "続",
+          "start": 58.123,
+          "end": 58.382,
+          "reading": "ぞく"
+        },
+        {
+          "text": "け",
+          "start": 58.382,
+          "end": 58.641
+        },
+        {
+          "text": "て",
+          "start": 58.641,
+          "end": 58.9
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 58.9,
+      "end": 61.7,
+      "text": "いちばん暗い水を越えて",
+      "singableText": "いちばん暗い水を越えて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "い",
+          "start": 58.9,
+          "end": 59.155
+        },
+        {
+          "text": "ち",
+          "start": 59.155,
+          "end": 59.409
+        },
+        {
+          "text": "ば",
+          "start": 59.409,
+          "end": 59.664
+        },
+        {
+          "text": "ん",
+          "start": 59.664,
+          "end": 59.918
+        },
+        {
+          "text": "暗",
+          "start": 59.918,
+          "end": 60.173,
+          "reading": "あん"
+        },
+        {
+          "text": "い",
+          "start": 60.173,
+          "end": 60.427
+        },
+        {
+          "text": "水",
+          "start": 60.427,
+          "end": 60.682,
+          "reading": "みず"
+        },
+        {
+          "text": "を",
+          "start": 60.682,
+          "end": 60.936
+        },
+        {
+          "text": "越",
+          "start": 60.936,
+          "end": 61.191,
+          "reading": "えつ"
+        },
+        {
+          "text": "え",
+          "start": 61.191,
+          "end": 61.445
+        },
+        {
+          "text": "て",
+          "start": 61.445,
+          "end": 61.7
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 62.55,
+      "end": 64.78,
+      "text": "私もここへ辿り着ける",
+      "singableText": "私もここへ辿り着ける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 62.55,
+          "end": 62.773,
+          "reading": "わたし"
+        },
+        {
+          "text": "も",
+          "start": 62.773,
+          "end": 62.996
+        },
+        {
+          "text": "こ",
+          "start": 62.996,
+          "end": 63.219
+        },
+        {
+          "text": "こ",
+          "start": 63.219,
+          "end": 63.442
+        },
+        {
+          "text": "へ",
+          "start": 63.442,
+          "end": 63.665
+        },
+        {
+          "text": "辿",
+          "start": 63.665,
+          "end": 63.888,
+          "reading": "てん"
+        },
+        {
+          "text": "り",
+          "start": 63.888,
+          "end": 64.111
+        },
+        {
+          "text": "着",
+          "start": 64.111,
+          "end": 64.334,
+          "reading": "ちゃく"
+        },
+        {
+          "text": "け",
+          "start": 64.334,
+          "end": 64.557
+        },
+        {
+          "text": "る",
+          "start": 64.557,
+          "end": 64.78
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "correction": "Active English lyrics corrected from the selected ACE Turbo vocal using the pipeline ASR, a large-v3 QA pass, and the intended lyric only where pronunciation/context stayed close. Dropped planned outro lines are not published because the selected audio does not sing them."
+  }
+}

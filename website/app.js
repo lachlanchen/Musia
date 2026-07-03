@@ -373,6 +373,24 @@ function activeLineAt(time) {
   return null;
 }
 
+function lyricGapState(time) {
+  const lines = timingLines();
+  if (!lines.length) return null;
+  const previousIndex = [...lines].reverse().findIndex((line) => time >= line.end);
+  const previous = previousIndex >= 0 ? lines[lines.length - 1 - previousIndex] : null;
+  const next = lines.find((line) => time < line.start) || null;
+  if (!previous && next) {
+    return { label: "Intro", detail: `lyrics start at ${formatTime(next.start)}`, next };
+  }
+  if (previous && next) {
+    return { label: "Instrumental", detail: `next line at ${formatTime(next.start)}`, previous, next };
+  }
+  if (previous && !next) {
+    return { label: "Outro", detail: "last lyric finished", previous };
+  }
+  return null;
+}
+
 function activeChordAt(time) {
   const list = chords();
   return list.find((chord) => time >= chord.start && time < chord.end)
@@ -1085,9 +1103,20 @@ function renderCarousel(activeLine) {
   }
   const rawActiveIndex = activeLine ? lines.findIndex((line) => line.id === activeLine.id) : -1;
   const time = state.mediaElement?.currentTime || 0;
+  const gap = rawActiveIndex >= 0 ? null : lyricGapState(time);
+  const nextIndex = gap?.next ? lines.findIndex((line) => line.id === gap.next.id) : -1;
+  const previousIndex = gap?.previous ? lines.findIndex((line) => line.id === gap.previous.id) : -1;
   const upcomingIndex = lines.findIndex((line) => time < line.end);
-  const centerIndex = rawActiveIndex >= 0 ? rawActiveIndex : Math.max(0, upcomingIndex);
+  const centerIndex = rawActiveIndex >= 0
+    ? rawActiveIndex
+    : Math.max(0, nextIndex >= 0 ? nextIndex : previousIndex >= 0 ? previousIndex : upcomingIndex);
   const pairStart = Math.max(0, centerIndex - (centerIndex % 2));
+  const idle = gap ? `
+    <div class="carousel-idle" aria-live="polite">
+      <span>${escapeHtml(gap.label)}</span>
+      <strong>${escapeHtml(gap.detail || "")}</strong>
+    </div>
+  ` : "";
   const items = [pairStart, pairStart + 1]
     .filter((index) => index >= 0 && index < lines.length)
     .map((index) => {
@@ -1109,7 +1138,7 @@ function renderCarousel(activeLine) {
         </div>
       `;
     }).join("");
-  $("lyric-carousel").innerHTML = items;
+  $("lyric-carousel").innerHTML = idle + items;
 }
 
 function renderFullLyrics(activeLine = null) {
@@ -1153,6 +1182,7 @@ function updateSync() {
   const duration = media?.duration || state.manifest.duration || 1;
   const activeLine = activeLineAt(time);
   const activeChord = activeChordAt(time);
+  const gap = activeLine ? null : lyricGapState(time);
   const activeAsset = activePlayableAsset();
   const track = activeTimingTrack() || state.trackByCode.get(activeAsset?.languageCode) || selectedLyricTracks()[0] || state.tracks[0] || null;
   const trackLine = lineForTrack(track, activeLine?.id);
@@ -1164,7 +1194,7 @@ function updateSync() {
   $("progress-fill").style.width = `${progress}%`;
   $("now-chord").textContent = activeChord?.name || "--";
   $("now-degree").textContent = activeChord?.degree || "";
-  $("stage-line").textContent = trackLine?.singableText || trackLine?.text || state.manifest.caption || "";
+  $("stage-line").textContent = trackLine?.singableText || trackLine?.text || gap?.label || "";
   $("current-lyric-label").textContent = selectedLyricSummary();
   const introStart = firstVocalStart();
   $("skip-intro").hidden = !state.mediaElement || introStart <= 0.25;

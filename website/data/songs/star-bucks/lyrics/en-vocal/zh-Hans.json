@@ -1,0 +1,962 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "star-bucks",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.0,
+      "end": 3.54,
+      "text": "水上月光",
+      "singableText": "水上月光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "水",
+          "start": 0.0,
+          "end": 0.885,
+          "pinyin": "shui3"
+        },
+        {
+          "text": "上",
+          "start": 0.885,
+          "end": 1.77,
+          "pinyin": "shang4"
+        },
+        {
+          "text": "月",
+          "start": 1.77,
+          "end": 2.655,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "光",
+          "start": 2.655,
+          "end": 3.54,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 5.6,
+      "end": 8.54,
+      "text": "我独自航行",
+      "singableText": "我独自航行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 5.6,
+          "end": 6.188,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "独",
+          "start": 6.188,
+          "end": 6.776,
+          "pinyin": "du2"
+        },
+        {
+          "text": "自",
+          "start": 6.776,
+          "end": 7.364,
+          "pinyin": "zi4"
+        },
+        {
+          "text": "航",
+          "start": 7.364,
+          "end": 7.952,
+          "pinyin": "hang2"
+        },
+        {
+          "text": "行",
+          "start": 7.952,
+          "end": 8.54,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 10.27,
+      "end": 13.67,
+      "text": "我在深夜离开港口",
+      "singableText": "我在深夜离开港口",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 10.27,
+          "end": 10.695,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "在",
+          "start": 10.695,
+          "end": 11.12,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "深",
+          "start": 11.12,
+          "end": 11.545,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "夜",
+          "start": 11.545,
+          "end": 11.97,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "离",
+          "start": 11.97,
+          "end": 12.395,
+          "pinyin": "li2"
+        },
+        {
+          "text": "开",
+          "start": 12.395,
+          "end": 12.82,
+          "pinyin": "kai1"
+        },
+        {
+          "text": "港",
+          "start": 12.82,
+          "end": 13.245,
+          "pinyin": "gang3"
+        },
+        {
+          "text": "口",
+          "start": 13.245,
+          "end": 13.67,
+          "pinyin": "kou3"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 13.67,
+      "end": 16.17,
+      "text": "群星为我引路",
+      "singableText": "群星为我引路",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "群",
+          "start": 13.67,
+          "end": 14.087,
+          "pinyin": "qun2"
+        },
+        {
+          "text": "星",
+          "start": 14.087,
+          "end": 14.503,
+          "pinyin": "xing1"
+        },
+        {
+          "text": "为",
+          "start": 14.503,
+          "end": 14.92,
+          "pinyin": "wei4"
+        },
+        {
+          "text": "我",
+          "start": 14.92,
+          "end": 15.337,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "引",
+          "start": 15.337,
+          "end": 15.753,
+          "pinyin": "yin3"
+        },
+        {
+          "text": "路",
+          "start": 15.753,
+          "end": 16.17,
+          "pinyin": "lu4"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 16.63,
+      "end": 18.03,
+      "text": "海浪说，呼吸",
+      "singableText": "海浪说，呼吸",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "海",
+          "start": 16.63,
+          "end": 16.863,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "浪",
+          "start": 16.863,
+          "end": 17.097,
+          "pinyin": "lang4"
+        },
+        {
+          "text": "说",
+          "start": 17.097,
+          "end": 17.33,
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "，",
+          "start": 17.33,
+          "end": 17.563
+        },
+        {
+          "text": "呼",
+          "start": 17.563,
+          "end": 17.797,
+          "pinyin": "hu1"
+        },
+        {
+          "text": "吸",
+          "start": 17.797,
+          "end": 18.03,
+          "pinyin": "xi1"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 19.03,
+      "end": 21.35,
+      "text": "风说，坚持住",
+      "singableText": "风说，坚持住",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 19.03,
+          "end": 19.417,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "说",
+          "start": 19.417,
+          "end": 19.803,
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "，",
+          "start": 19.803,
+          "end": 20.19
+        },
+        {
+          "text": "坚",
+          "start": 20.19,
+          "end": 20.577,
+          "pinyin": "jian1"
+        },
+        {
+          "text": "持",
+          "start": 20.577,
+          "end": 20.963,
+          "pinyin": "chi2"
+        },
+        {
+          "text": "住",
+          "start": 20.963,
+          "end": 21.35,
+          "pinyin": "zhu4"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 22.11,
+      "end": 24.13,
+      "text": "不要害怕这片海",
+      "singableText": "不要害怕这片海",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "不",
+          "start": 22.11,
+          "end": 22.399,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "要",
+          "start": 22.399,
+          "end": 22.687,
+          "pinyin": "yao4"
+        },
+        {
+          "text": "害",
+          "start": 22.687,
+          "end": 22.976,
+          "pinyin": "hai4"
+        },
+        {
+          "text": "怕",
+          "start": 22.976,
+          "end": 23.264,
+          "pinyin": "pa4"
+        },
+        {
+          "text": "这",
+          "start": 23.264,
+          "end": 23.553,
+          "pinyin": "zhe4"
+        },
+        {
+          "text": "片",
+          "start": 23.553,
+          "end": 23.841,
+          "pinyin": "pian4"
+        },
+        {
+          "text": "海",
+          "start": 23.841,
+          "end": 24.13,
+          "pinyin": "hai3"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 25.13,
+      "end": 28.23,
+      "text": "我看见浪沫里明亮的鹿角",
+      "singableText": "我看见浪沫里明亮的鹿角",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 25.13,
+          "end": 25.412,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "看",
+          "start": 25.412,
+          "end": 25.694,
+          "pinyin": "kan4"
+        },
+        {
+          "text": "见",
+          "start": 25.694,
+          "end": 25.975,
+          "pinyin": "jian4"
+        },
+        {
+          "text": "浪",
+          "start": 25.975,
+          "end": 26.257,
+          "pinyin": "lang4"
+        },
+        {
+          "text": "沫",
+          "start": 26.257,
+          "end": 26.539,
+          "pinyin": "mo4"
+        },
+        {
+          "text": "里",
+          "start": 26.539,
+          "end": 26.821,
+          "pinyin": "li3"
+        },
+        {
+          "text": "明",
+          "start": 26.821,
+          "end": 27.103,
+          "pinyin": "ming2"
+        },
+        {
+          "text": "亮",
+          "start": 27.103,
+          "end": 27.385,
+          "pinyin": "liang4"
+        },
+        {
+          "text": "的",
+          "start": 27.385,
+          "end": 27.666,
+          "pinyin": "de5"
+        },
+        {
+          "text": "鹿",
+          "start": 27.666,
+          "end": 27.948,
+          "pinyin": "lu4"
+        },
+        {
+          "text": "角",
+          "start": 27.948,
+          "end": 28.23,
+          "pinyin": "jiao3"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 28.23,
+      "end": 31.15,
+      "text": "像月上的火焰",
+      "singableText": "像月上的火焰",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "像",
+          "start": 28.23,
+          "end": 28.717,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "月",
+          "start": 28.717,
+          "end": 29.203,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "上",
+          "start": 29.203,
+          "end": 29.69,
+          "pinyin": "shang4"
+        },
+        {
+          "text": "的",
+          "start": 29.69,
+          "end": 30.177,
+          "pinyin": "de5"
+        },
+        {
+          "text": "火",
+          "start": 30.177,
+          "end": 30.663,
+          "pinyin": "huo3"
+        },
+        {
+          "text": "焰",
+          "start": 30.663,
+          "end": 31.15,
+          "pinyin": "yan4"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 32.1,
+      "end": 34.87,
+      "text": "它们奔过午夜的潮汐",
+      "singableText": "它们奔过午夜的潮汐",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "它",
+          "start": 32.1,
+          "end": 32.408,
+          "pinyin": "ta1"
+        },
+        {
+          "text": "们",
+          "start": 32.408,
+          "end": 32.716,
+          "pinyin": "men5"
+        },
+        {
+          "text": "奔",
+          "start": 32.716,
+          "end": 33.023,
+          "pinyin": "ben1"
+        },
+        {
+          "text": "过",
+          "start": 33.023,
+          "end": 33.331,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "午",
+          "start": 33.331,
+          "end": 33.639,
+          "pinyin": "wu3"
+        },
+        {
+          "text": "夜",
+          "start": 33.639,
+          "end": 33.947,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "的",
+          "start": 33.947,
+          "end": 34.254,
+          "pinyin": "de5"
+        },
+        {
+          "text": "潮",
+          "start": 34.254,
+          "end": 34.562,
+          "pinyin": "chao2"
+        },
+        {
+          "text": "汐",
+          "start": 34.562,
+          "end": 34.87,
+          "pinyin": "xi1"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 36.11,
+      "end": 37.87,
+      "text": "也告诉我该怎么走",
+      "singableText": "也告诉我该怎么走",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "也",
+          "start": 36.11,
+          "end": 36.33,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "告",
+          "start": 36.33,
+          "end": 36.55,
+          "pinyin": "gao4"
+        },
+        {
+          "text": "诉",
+          "start": 36.55,
+          "end": 36.77,
+          "pinyin": "su4"
+        },
+        {
+          "text": "我",
+          "start": 36.77,
+          "end": 36.99,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "该",
+          "start": 36.99,
+          "end": 37.21,
+          "pinyin": "gai1"
+        },
+        {
+          "text": "怎",
+          "start": 37.21,
+          "end": 37.43,
+          "pinyin": "zen3"
+        },
+        {
+          "text": "么",
+          "start": 37.43,
+          "end": 37.65,
+          "pinyin": "me5"
+        },
+        {
+          "text": "走",
+          "start": 37.65,
+          "end": 37.87,
+          "pinyin": "zou3"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 37.87,
+      "end": 40.69,
+      "text": "星鹿啊，星鹿",
+      "singableText": "星鹿啊，星鹿",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "start": 37.87,
+          "end": 38.34,
+          "pinyin": "xing1"
+        },
+        {
+          "text": "鹿",
+          "start": 38.34,
+          "end": 38.81,
+          "pinyin": "lu4"
+        },
+        {
+          "text": "啊",
+          "start": 38.81,
+          "end": 39.28,
+          "pinyin": "a5"
+        },
+        {
+          "text": "，",
+          "start": 39.28,
+          "end": 39.75
+        },
+        {
+          "text": "星",
+          "start": 39.75,
+          "end": 40.22,
+          "pinyin": "xing1"
+        },
+        {
+          "text": "鹿",
+          "start": 40.22,
+          "end": 40.69,
+          "pinyin": "lu4"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 40.69,
+      "end": 43.77,
+      "text": "在海中向前游",
+      "singableText": "在海中向前游",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "在",
+          "start": 40.69,
+          "end": 41.203,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "海",
+          "start": 41.203,
+          "end": 41.717,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "中",
+          "start": 41.717,
+          "end": 42.23,
+          "pinyin": "zhong1"
+        },
+        {
+          "text": "向",
+          "start": 42.23,
+          "end": 42.743,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "前",
+          "start": 42.743,
+          "end": 43.257,
+          "pinyin": "qian2"
+        },
+        {
+          "text": "游",
+          "start": 43.257,
+          "end": 43.77,
+          "pinyin": "you2"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 43.77,
+      "end": 47.49,
+      "text": "光的蹄印落在午夜浪上",
+      "singableText": "光的蹄印落在午夜浪上",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "光",
+          "start": 43.77,
+          "end": 44.142,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "的",
+          "start": 44.142,
+          "end": 44.514,
+          "pinyin": "de5"
+        },
+        {
+          "text": "蹄",
+          "start": 44.514,
+          "end": 44.886,
+          "pinyin": "ti2"
+        },
+        {
+          "text": "印",
+          "start": 44.886,
+          "end": 45.258,
+          "pinyin": "yin4"
+        },
+        {
+          "text": "落",
+          "start": 45.258,
+          "end": 45.63,
+          "pinyin": "luo4"
+        },
+        {
+          "text": "在",
+          "start": 45.63,
+          "end": 46.002,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "午",
+          "start": 46.002,
+          "end": 46.374,
+          "pinyin": "wu3"
+        },
+        {
+          "text": "夜",
+          "start": 46.374,
+          "end": 46.746,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "浪",
+          "start": 46.746,
+          "end": 47.118,
+          "pinyin": "lang4"
+        },
+        {
+          "text": "上",
+          "start": 47.118,
+          "end": 47.49,
+          "pinyin": "shang4"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 47.49,
+      "end": 55.74,
+      "text": "仍然在我身旁奔跑",
+      "singableText": "仍然在我身旁奔跑",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "仍",
+          "start": 47.49,
+          "end": 48.521,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "然",
+          "start": 48.521,
+          "end": 49.553,
+          "pinyin": "ran2"
+        },
+        {
+          "text": "在",
+          "start": 49.553,
+          "end": 50.584,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "我",
+          "start": 50.584,
+          "end": 51.615,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "身",
+          "start": 51.615,
+          "end": 52.646,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "旁",
+          "start": 52.646,
+          "end": 53.678,
+          "pinyin": "pang2"
+        },
+        {
+          "text": "奔",
+          "start": 53.678,
+          "end": 54.709,
+          "pinyin": "ben1"
+        },
+        {
+          "text": "跑",
+          "start": 54.709,
+          "end": 55.74,
+          "pinyin": "pao3"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 56.31,
+      "end": 58.9,
+      "text": "星鹿啊，继续向前",
+      "singableText": "星鹿啊，继续向前",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "星",
+          "start": 56.31,
+          "end": 56.634,
+          "pinyin": "xing1"
+        },
+        {
+          "text": "鹿",
+          "start": 56.634,
+          "end": 56.958,
+          "pinyin": "lu4"
+        },
+        {
+          "text": "啊",
+          "start": 56.958,
+          "end": 57.281,
+          "pinyin": "a5"
+        },
+        {
+          "text": "，",
+          "start": 57.281,
+          "end": 57.605
+        },
+        {
+          "text": "继",
+          "start": 57.605,
+          "end": 57.929,
+          "pinyin": "ji4"
+        },
+        {
+          "text": "续",
+          "start": 57.929,
+          "end": 58.252,
+          "pinyin": "xu4"
+        },
+        {
+          "text": "向",
+          "start": 58.252,
+          "end": 58.576,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "前",
+          "start": 58.576,
+          "end": 58.9,
+          "pinyin": "qian2"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 58.9,
+      "end": 61.7,
+      "text": "越过最黑的海水",
+      "singableText": "越过最黑的海水",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "越",
+          "start": 58.9,
+          "end": 59.3,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "过",
+          "start": 59.3,
+          "end": 59.7,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "最",
+          "start": 59.7,
+          "end": 60.1,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "黑",
+          "start": 60.1,
+          "end": 60.5,
+          "pinyin": "hei1"
+        },
+        {
+          "text": "的",
+          "start": 60.5,
+          "end": 60.9,
+          "pinyin": "de5"
+        },
+        {
+          "text": "海",
+          "start": 60.9,
+          "end": 61.3,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "水",
+          "start": 61.3,
+          "end": 61.7,
+          "pinyin": "shui3"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 62.55,
+      "end": 64.78,
+      "text": "我也能抵达这里",
+      "singableText": "我也能抵达这里",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 62.55,
+          "end": 62.869,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "也",
+          "start": 62.869,
+          "end": 63.187,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "能",
+          "start": 63.187,
+          "end": 63.506,
+          "pinyin": "neng2"
+        },
+        {
+          "text": "抵",
+          "start": 63.506,
+          "end": 63.824,
+          "pinyin": "di3"
+        },
+        {
+          "text": "达",
+          "start": 63.824,
+          "end": 64.143,
+          "pinyin": "da2"
+        },
+        {
+          "text": "这",
+          "start": 64.143,
+          "end": 64.461,
+          "pinyin": "zhe4"
+        },
+        {
+          "text": "里",
+          "start": 64.461,
+          "end": 64.78,
+          "pinyin": "li3"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "correction": "Active English lyrics corrected from the selected ACE Turbo vocal using the pipeline ASR, a large-v3 QA pass, and the intended lyric only where pronunciation/context stayed close. Dropped planned outro lines are not published because the selected audio does not sing them."
+  }
+}
