@@ -1512,10 +1512,14 @@ async function boot() {
   } catch {
     state.advancedMode = params.get("advanced") === "1";
   }
+  const captureFullLyrics = state.captureMode && params.get("fullLyrics") === "1";
+  const capturePortrait = state.captureMode && params.get("portrait") === "1";
+  const captureGuitarFocus = state.captureMode && params.get("guitarFocus") === "1";
   document.body.classList.toggle("capture-mode", state.captureMode);
-  document.body.classList.toggle("capture-full-lyrics", state.captureMode && params.get("fullLyrics") === "1");
-  document.body.classList.toggle("capture-portrait", state.captureMode && params.get("portrait") === "1");
-  document.body.classList.toggle("capture-guitar-focus", state.captureMode && params.get("guitarFocus") === "1");
+  document.body.classList.toggle("capture-full-lyrics", captureFullLyrics);
+  document.body.classList.toggle("capture-portrait", capturePortrait);
+  document.body.classList.toggle("capture-guitar-focus", captureGuitarFocus);
+  document.body.classList.toggle("capture-ktv", capturePortrait && !captureFullLyrics && !captureGuitarFocus);
   bindEvents();
   setAdvancedMode(state.advancedMode, { persist: false });
   state.catalog = await loadJson("data/catalog.json");
