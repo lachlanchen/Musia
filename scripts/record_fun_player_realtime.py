@@ -109,12 +109,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", required=True, help="Output MP4 path.")
     parser.add_argument("--width", type=int, default=2160, help="Capture display width.")
     parser.add_argument("--height", type=int, default=3840, help="Capture display height.")
+    parser.add_argument("--css-width", type=int, default=0, help="Chrome CSS viewport width. Defaults to --width.")
+    parser.add_argument("--css-height", type=int, default=0, help="Chrome CSS viewport height. Defaults to --height.")
+    parser.add_argument("--device-scale-factor", type=float, default=1.0, help="Chrome device scale factor.")
     parser.add_argument("--fps", type=int, default=24, help="Realtime capture frame rate.")
     parser.add_argument("--duration", type=float, default=60.0, help="Seconds to record.")
     parser.add_argument("--start", type=float, default=0.0, help="Audio/player start time in seconds.")
     parser.add_argument("--crf", type=int, default=12, help="x264 CRF. Lower is higher quality.")
     parser.add_argument("--preset", default="ultrafast", help="x264 preset. ultrafast keeps 4K realtime responsive.")
     parser.add_argument("--audio-bitrate", default="320k", help="AAC audio bitrate.")
+    parser.add_argument("--include-full-lyrics", action="store_true", help="Keep the full lyrics panel visible.")
+    parser.add_argument("--portrait", action=argparse.BooleanOptionalAction, default=True, help="Use portrait capture layout.")
+    parser.add_argument("--advanced", action=argparse.BooleanOptionalAction, default=True, help="Enable advanced chord/guitar mode.")
+    parser.add_argument("--guitar-focus", action=argparse.BooleanOptionalAction, default=True, help="Use the lower panel for guitar fingering.")
     parser.add_argument("--ffmpeg-bin", default="", help="FFmpeg binary. Defaults to /usr/bin/ffmpeg when available for x11grab.")
     parser.add_argument("--display", default="", help="Existing X display to use. Defaults to a new Xvfb display.")
     parser.add_argument("--chrome-channel", default="chrome", help="Playwright Chrome channel.")
@@ -160,6 +167,8 @@ def main() -> None:
 
     server, base_url = start_server(WEBSITE)
     display = args.display or choose_display()
+    css_width = args.css_width or args.width
+    css_height = args.css_height or args.height
     xvfb = None
     chrome = None
     ffmpeg = None
@@ -170,12 +179,12 @@ def main() -> None:
         {
             "asset": asset.get("id") or args.asset_id,
             "capture": "1",
-            "fullLyrics": "0",
+            "fullLyrics": "1" if args.include_full_lyrics else "0",
             "media": args.media_id,
-            "portrait": "1",
+            "portrait": "1" if args.portrait else "0",
             "skipIntro": "0",
-            "advanced": "1",
-            "guitarFocus": "1",
+            "advanced": "1" if args.advanced else "0",
+            "guitarFocus": "1" if args.guitar_focus else "0",
         }
     )
     url = f"{base_url}?{query}#{args.media_id}"
@@ -206,14 +215,19 @@ def main() -> None:
                 "--hide-scrollbars",
                 "--disable-dev-shm-usage",
                 "--no-sandbox",
-                "--force-device-scale-factor=1",
+                f"--force-device-scale-factor={args.device_scale_factor:g}",
                 "--window-position=0,0",
-                f"--window-size={args.width},{args.height}",
+                f"--window-size={css_width},{css_height}",
                 "--kiosk",
                 f"--app={url}",
             ]
             print(f"Realtime URL: {url}", flush=True)
-            print(f"Display: {display}  Size: {args.width}x{args.height}  Duration: {args.duration:.3f}s", flush=True)
+            print(
+                f"Display: {display}  Capture: {args.width}x{args.height}  "
+                f"CSS viewport: {css_width}x{css_height} @ {args.device_scale_factor:g}x  "
+                f"Duration: {args.duration:.3f}s",
+                flush=True,
+            )
             print(f"Audio: {audio_path}", flush=True)
             chrome = subprocess.Popen(chrome_cmd, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             time.sleep(1.5)
