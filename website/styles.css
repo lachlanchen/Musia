@@ -744,6 +744,9 @@ h2 {
 }
 
 .carousel-idle span {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(45,143,131,.1);
   color: var(--teal);
   font-size: 12px;
   font-weight: 900;
@@ -1052,6 +1055,32 @@ rt {
   background: linear-gradient(90deg, rgba(45,143,131,.08), transparent);
   border-radius: 12px;
   padding-left: 10px;
+}
+
+.full-row.instrumental-row {
+  border-top-style: dashed;
+  color: var(--muted);
+  background: linear-gradient(90deg, rgba(45,143,131,.06), rgba(255,255,255,0));
+}
+
+.full-row.instrumental-row .line-index {
+  color: var(--gold);
+}
+
+.full-row.instrumental-row .language-lines {
+  grid-template-columns: 1fr;
+}
+
+.full-row.instrumental-row .plain-line {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.full-row.instrumental-row .plain-line span {
+  margin-left: 8px;
+  color: rgba(95,105,97,.78);
+  font-size: .82em;
+  font-weight: 600;
 }
 
 .line-index {
@@ -1401,6 +1430,185 @@ body.capture-mode.capture-portrait .carousel-track .token-line,
 body.capture-mode.capture-portrait .carousel-track .ruby-line {
   font-size: 34px;
   line-height: 1.15;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .page-shell {
+  padding: 22px 30px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .site-header {
+  min-height: 72px;
+  margin-bottom: 12px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .brand-logo {
+  width: 62px;
+  height: 62px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .brand strong {
+  font-size: 54px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .advanced-toggle,
+body.capture-mode.capture-portrait.capture-full-lyrics .asset-switcher {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .hero-grid {
+  min-height: 0;
+  grid-template-rows: minmax(0, 700px);
+  gap: 14px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .player-card,
+body.capture-mode.capture-portrait.capture-full-lyrics .lyrics-card,
+body.capture-mode.capture-portrait.capture-full-lyrics .full-lyrics-section {
+  border-radius: 24px;
+  padding: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .title-row {
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .cover-thumb {
+  width: 104px;
+  border-radius: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics h1 {
+  font-size: 66px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .media-artist {
+  font-size: 42px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .stage {
+  max-height: 392px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .stage-copy {
+  left: 34px;
+  right: 34px;
+  bottom: 32px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .stage-copy p {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .stage-line {
+  font-size: 58px;
+  line-height: 1.08;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .transport {
+  margin-top: 16px;
+  gap: 18px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .play-button {
+  width: 76px;
+  height: 76px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .time-readout {
+  grid-template-columns: 72px minmax(0, 1fr) 72px;
+  font-size: 26px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .lyrics-card {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .chord-row {
+  min-height: 54px;
+  margin-bottom: 8px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .chord-pill {
+  padding: 8px 18px;
+  font-size: 22px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .full-lyrics-section {
+  display: block;
+  height: calc(100vh - 22px - 72px - 12px - 700px - 14px - 22px);
+  min-height: 1030px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .section-title {
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .section-title h2 {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .section-title .eyebrow {
+  font-size: 15px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .full-lyrics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 18px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row {
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 8px;
+  padding: 4px 0;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .line-index {
+  font-size: 17px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .line-index span {
+  margin-top: 2px;
+  font-size: 10px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .language-lines {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .language-lines section:not(:first-child) {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .language-lines label {
+  margin-bottom: 2px;
+  font-size: 9px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row .plain-line,
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row .token-line,
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row .ruby-line {
+  font-size: 16px;
+  line-height: 1.12;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row rt {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row .token-line,
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row .ruby-line {
+  gap: 4px;
+}
+
+body.capture-mode.capture-portrait.capture-full-lyrics .full-row.instrumental-row .plain-line span {
+  display: none;
 }
 
 @media (max-width: 980px) {

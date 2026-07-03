@@ -380,15 +380,47 @@ function lyricGapState(time) {
   const previous = previousIndex >= 0 ? lines[lines.length - 1 - previousIndex] : null;
   const next = lines.find((line) => time < line.start) || null;
   if (!previous && next) {
-    return { label: "Intro", detail: `lyrics start at ${formatTime(next.start)}`, next };
+    return { label: "♪♪♪", detail: `[Instrumental intro] vocal starts at ${formatTime(next.start)}`, next };
   }
   if (previous && next) {
-    return { label: "Instrumental", detail: `next line at ${formatTime(next.start)}`, previous, next };
+    return { label: "♪♪♪", detail: `[Instrumental break] next vocal at ${formatTime(next.start)}`, previous, next };
   }
   if (previous && !next) {
-    return { label: "Outro", detail: "last lyric finished", previous };
+    return { label: "♪♪♪", detail: "[Instrumental outro] vocal has ended", previous };
   }
   return null;
+}
+
+function fullLyricDisplayRows(lines) {
+  const rows = [];
+  const gapThreshold = 1.6;
+  const duration = Number(state.manifest?.duration) || 0;
+  lines.forEach((line, index) => {
+    rows.push({ type: "lyric", line });
+    const next = lines[index + 1];
+    if (next && next.start - line.end > gapThreshold) {
+      rows.push({
+        type: "instrumental",
+        id: `gap-${line.id}-${next.id}`,
+        start: line.end,
+        end: next.start,
+        label: "♪♪♪",
+        detail: `${index === 0 ? "[Instrumental intro]" : "[Instrumental break]"} no vocal lyric · next vocal ${formatTime(next.start)}`
+      });
+    }
+  });
+  const last = lines[lines.length - 1];
+  if (last && duration && duration - last.end > gapThreshold) {
+    rows.push({
+      type: "instrumental",
+      id: `gap-${last.id}-outro`,
+      start: last.end,
+      end: duration,
+      label: "♪♪♪",
+      detail: "[Instrumental outro] no vocal lyric"
+    });
+  }
+  return rows;
 }
 
 function activeChordAt(time) {
@@ -1147,22 +1179,40 @@ function renderFullLyrics(activeLine = null) {
     $("full-lyrics").innerHTML = "";
     return;
   }
-  $("full-lyrics").innerHTML = lines.map((line, index) => `
-    <article class="full-row ${line.id === activeLine?.id ? "active" : ""}" data-line-id="${escapeHtml(line.id)}">
-      <div class="line-index">${String(index + 1).padStart(2, "0")}<span>${formatTime(lineStartForDisplay(line))}</span></div>
-      <div class="language-lines">
-        ${state.tracks.map((track) => {
-          const trackLine = lineForTrack(track, line.id);
-          return `
-            <section data-track-code="${escapeHtml(track.language.code)}">
-              <label>${escapeHtml(track.language.nativeLabel || track.language.code)}</label>
-              ${renderTrackLine(track, trackLine, { compact: true })}
+  let lyricNumber = 0;
+  $("full-lyrics").innerHTML = fullLyricDisplayRows(lines).map((row) => {
+    if (row.type === "instrumental") {
+      return `
+        <article class="full-row instrumental-row" data-line-id="${escapeHtml(row.id)}">
+          <div class="line-index">♪<span>${formatTime(row.start)}-${formatTime(row.end)}</span></div>
+          <div class="language-lines">
+            <section>
+              <label>Instrumental</label>
+              <div class="plain-line">${escapeHtml(row.label)} <span>${escapeHtml(row.detail || "")}</span></div>
             </section>
-          `;
-        }).join("")}
-      </div>
-    </article>
-  `).join("");
+          </div>
+        </article>
+      `;
+    }
+    const line = row.line;
+    lyricNumber += 1;
+    return `
+      <article class="full-row ${line.id === activeLine?.id ? "active" : ""}" data-line-id="${escapeHtml(line.id)}">
+        <div class="line-index">${String(lyricNumber).padStart(2, "0")}<span>${formatTime(lineStartForDisplay(line))}</span></div>
+        <div class="language-lines">
+          ${state.tracks.map((track) => {
+            const trackLine = lineForTrack(track, line.id);
+            return `
+              <section data-track-code="${escapeHtml(track.language.code)}">
+                <label>${escapeHtml(track.language.nativeLabel || track.language.code)}</label>
+                ${renderTrackLine(track, trackLine, { compact: true })}
+              </section>
+            `;
+          }).join("")}
+        </div>
+      </article>
+    `;
+  }).join("");
 }
 
 function updateTokenHighlights(time, activeLine = activeLineAt(time)) {
