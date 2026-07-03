@@ -115,6 +115,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fps", type=int, default=24, help="Realtime capture frame rate.")
     parser.add_argument("--duration", type=float, default=60.0, help="Seconds to record.")
     parser.add_argument("--start", type=float, default=0.0, help="Audio/player start time in seconds.")
+    parser.add_argument(
+        "--capture-lead",
+        type=float,
+        default=0.25,
+        help="Seconds of preroll to capture before browser playback starts; trimmed before muxing for tighter audio/video sync.",
+    )
     parser.add_argument("--crf", type=int, default=12, help="x264 CRF. Lower is higher quality.")
     parser.add_argument("--preset", default="ultrafast", help="x264 preset. ultrafast keeps 4K realtime responsive.")
     parser.add_argument("--audio-bitrate", default="320k", help="AAC audio bitrate.")
@@ -134,6 +140,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if args.capture_lead < 0:
+        fail("--capture-lead must be non-negative.")
     if not WEBSITE.exists():
         fail(f"Missing website directory: {WEBSITE}")
     ffmpeg_bin = args.ffmpeg_bin or ("/usr/bin/ffmpeg" if Path("/usr/bin/ffmpeg").exists() else shutil.which("ffmpeg") or "")
@@ -225,7 +233,7 @@ def main() -> None:
             print(
                 f"Display: {display}  Capture: {args.width}x{args.height}  "
                 f"CSS viewport: {css_width}x{css_height} @ {args.device_scale_factor:g}x  "
-                f"Duration: {args.duration:.3f}s",
+                f"Duration: {args.duration:.3f}s  Capture lead: {args.capture_lead:.3f}s",
                 flush=True,
             )
             print(f"Audio: {audio_path}", flush=True)
@@ -262,11 +270,28 @@ def main() -> None:
                     timeout=30000,
                 )
                 page.evaluate(
-                    """(start) => {
+                    """async (start) => {
                       const media = document.getElementById('audio') || document.getElementById('video');
                       media.muted = true;
                       media.volume = 0;
-                      media.currentTime = Math.max(0, Number(start) || 0);
+                      media.pause();
+                      const target = Math.max(0, Number(start) || 0);
+                      if (Math.abs((media.currentTime || 0) - target) > 0.05) {
+                        await new Promise((resolve) => {
+                          let done = false;
+                          const finish = () => {
+                            if (done) return;
+                            done = true;
+                            media.removeEventListener('seeked', finish);
+                            resolve();
+                          };
+                          media.addEventListener('seeked', finish, { once: true });
+                          media.currentTime = target;
+                          window.setTimeout(finish, 3000);
+                        });
+                      } else {
+                        media.currentTime = target;
+                      }
                       window.funPlayerUpdateSync();
                     }""",
                     args.start,
@@ -291,7 +316,7 @@ def main() -> None:
                     "-i",
                     f"{display}.0+0,0",
                     "-t",
-                    f"{args.duration:.3f}",
+                    f"{args.duration + args.capture_lead:.3f}",
                     "-c:v",
                     "libx264",
                     "-preset",
@@ -306,18 +331,16 @@ def main() -> None:
                 ]
                 print("+", " ".join(ffmpeg_cmd), flush=True)
                 ffmpeg = subprocess.Popen(ffmpeg_cmd, env=env)
-                time.sleep(0.15)
+                time.sleep(args.capture_lead)
                 page.evaluate(
-                    """async (start) => {
+                    """async () => {
                       const media = document.getElementById('audio') || document.getElementById('video');
                       media.muted = true;
                       media.volume = 0;
-                      media.currentTime = Math.max(0, Number(start) || 0);
                       await media.play();
                     }""",
-                    args.start,
                 )
-                code = ffmpeg.wait(timeout=args.duration + 120)
+                code = ffmpeg.wait(timeout=args.duration + args.capture_lead + 120)
                 if code != 0:
                     fail(f"FFmpeg screen capture failed with code {code}")
                 browser.close()
@@ -330,6 +353,8 @@ def main() -> None:
                     "-loglevel",
                     "error",
                     "-nostats",
+                    "-ss",
+                    f"{args.capture_lead:.3f}",
                     "-i",
                     str(raw_video),
                     "-ss",

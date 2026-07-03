@@ -226,28 +226,25 @@ def load_chords() -> list[dict[str, Any]]:
     if not source:
         return []
 
-    # The detector emits beat-level chord changes. For the website's guitar
-    # fingering panel, show stable two-bar blocks so the current chord moves in
-    # time without flickering every half second.
-    window = 5.2
+    # For the guitar-fingering recording, timing matters more than a simplified
+    # lead-sheet view. Preserve the detector's real chord boundaries and only
+    # merge immediately adjacent identical labels so the diagram follows the
+    # audio instead of a coarse artificial grid.
     total = duration(SELECTED_AUDIO)
-    smoothed: list[dict[str, Any]] = []
-    start = 0.0
-    while start < total - 0.05:
-        end = min(total, start + window)
-        scores: dict[str, float] = {}
-        for chord in source:
-            overlap = max(0.0, min(end, chord["end"]) - max(start, chord["start"]))
-            if overlap <= 0:
-                continue
-            scores[chord["name"]] = scores.get(chord["name"], 0.0) + overlap * chord["confidence"]
-        name = max(scores.items(), key=lambda item: item[1])[0] if scores else (smoothed[-1]["name"] if smoothed else "N.C.")
-        if smoothed and smoothed[-1]["name"] == name:
-            smoothed[-1]["end"] = round(end, 3)
+    detected: list[dict[str, Any]] = []
+    for chord in source:
+        start = max(0.0, min(total, chord["start"]))
+        end = max(start, min(total, chord["end"]))
+        if end - start < 0.05:
+            continue
+        item = {"start": round(start, 3), "end": round(end, 3), "name": chord["name"], "degree": ""}
+        if detected and detected[-1]["name"] == item["name"] and abs(detected[-1]["end"] - item["start"]) < 0.08:
+            detected[-1]["end"] = item["end"]
         else:
-            smoothed.append({"start": round(start, 3), "end": round(end, 3), "name": name, "degree": ""})
-        start = end
-    return smoothed
+            detected.append(item)
+    if detected and detected[-1]["end"] < total:
+        detected[-1]["end"] = round(total, 3)
+    return detected
 
 
 def ensure_audio() -> None:

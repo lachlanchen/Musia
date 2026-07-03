@@ -33,6 +33,7 @@ const state = {
   userPlaybackMode: false,
   advancingPlayback: false,
   advancedMode: false,
+  advancedChordRenderKey: "",
   playbackSyncFrame: 0,
   mediaSessionHandlersInstalled: false
 };
@@ -547,8 +548,14 @@ function updateAdvancedChord(activeChord = null) {
   const panel = $("advanced-panel");
   if (!panel) return;
   panel.hidden = !state.advancedMode || !activeChord;
-  if (!state.advancedMode) return;
+  if (!state.advancedMode) {
+    state.advancedChordRenderKey = "";
+    return;
+  }
   const chordName = activeChord?.name || "";
+  const chordKey = `${activeChord?.start ?? ""}-${activeChord?.end ?? ""}-${chordName}`;
+  if (state.advancedChordRenderKey === chordKey) return;
+  state.advancedChordRenderKey = chordKey;
   renderGuitarDiagram(chordName, guitarShapeForChord(chordName));
 }
 
