@@ -1,0 +1,429 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "animal-no-di-liu-gan",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.02,
+      "end": 13.71,
+      "text": "赤足でネオンの雨を駆ける",
+      "singableText": "赤足でネオンの雨を駆ける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "赤",
+          "start": 0.02,
+          "end": 1.161,
+          "reading": "あか"
+        },
+        {
+          "text": "足",
+          "start": 1.161,
+          "end": 2.302,
+          "reading": "あし"
+        },
+        {
+          "text": "で",
+          "start": 2.302,
+          "end": 3.443
+        },
+        {
+          "text": "ネ",
+          "start": 3.443,
+          "end": 4.583
+        },
+        {
+          "text": "オ",
+          "start": 4.583,
+          "end": 5.724
+        },
+        {
+          "text": "ン",
+          "start": 5.724,
+          "end": 6.865
+        },
+        {
+          "text": "の",
+          "start": 6.865,
+          "end": 8.006
+        },
+        {
+          "text": "雨",
+          "start": 8.006,
+          "end": 9.147,
+          "reading": "あめ"
+        },
+        {
+          "text": "を",
+          "start": 9.147,
+          "end": 10.287
+        },
+        {
+          "text": "駆",
+          "start": 10.287,
+          "end": 11.428,
+          "reading": "く"
+        },
+        {
+          "text": "け",
+          "start": 11.428,
+          "end": 12.569
+        },
+        {
+          "text": "る",
+          "start": 12.569,
+          "end": 13.71
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 13.71,
+      "end": 16.91,
+      "text": "鼓動は私の名を知っている",
+      "singableText": "鼓動は私の名を知っている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "鼓",
+          "start": 13.71,
+          "end": 13.977,
+          "reading": "つづみ"
+        },
+        {
+          "text": "動",
+          "start": 13.977,
+          "end": 14.243,
+          "reading": "どう"
+        },
+        {
+          "text": "は",
+          "start": 14.243,
+          "end": 14.51
+        },
+        {
+          "text": "私",
+          "start": 14.51,
+          "end": 14.777,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 14.777,
+          "end": 15.043
+        },
+        {
+          "text": "名",
+          "start": 15.043,
+          "end": 15.31,
+          "reading": "めい"
+        },
+        {
+          "text": "を",
+          "start": 15.31,
+          "end": 15.577
+        },
+        {
+          "text": "知",
+          "start": 15.577,
+          "end": 15.843,
+          "reading": "ち"
+        },
+        {
+          "text": "っ",
+          "start": 15.843,
+          "end": 16.11
+        },
+        {
+          "text": "て",
+          "start": 16.11,
+          "end": 16.377
+        },
+        {
+          "text": "い",
+          "start": 16.377,
+          "end": 16.643
+        },
+        {
+          "text": "る",
+          "start": 16.643,
+          "end": 16.91
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 16.91,
+      "end": 19.11,
+      "text": "風が街の壁を吹き抜ける",
+      "singableText": "風が街の壁を吹き抜ける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 16.91,
+          "end": 17.11,
+          "reading": "かぜ"
+        },
+        {
+          "text": "が",
+          "start": 17.11,
+          "end": 17.31
+        },
+        {
+          "text": "街",
+          "start": 17.31,
+          "end": 17.51,
+          "reading": "まち"
+        },
+        {
+          "text": "の",
+          "start": 17.51,
+          "end": 17.71
+        },
+        {
+          "text": "壁",
+          "start": 17.71,
+          "end": 17.91,
+          "reading": "かべ"
+        },
+        {
+          "text": "を",
+          "start": 17.91,
+          "end": 18.11
+        },
+        {
+          "text": "吹",
+          "start": 18.11,
+          "end": 18.31,
+          "reading": "すい"
+        },
+        {
+          "text": "き",
+          "start": 18.31,
+          "end": 18.51
+        },
+        {
+          "text": "抜",
+          "start": 18.51,
+          "end": 18.71,
+          "reading": "ばつ"
+        },
+        {
+          "text": "け",
+          "start": 18.71,
+          "end": 18.91
+        },
+        {
+          "text": "る",
+          "start": 18.91,
+          "end": 19.11
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 19.11,
+      "end": 21.93,
+      "text": "森が呼んでいるのを聞く",
+      "singableText": "森が呼んでいるのを聞く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "森",
+          "start": 19.11,
+          "end": 19.366,
+          "reading": "もり"
+        },
+        {
+          "text": "が",
+          "start": 19.366,
+          "end": 19.623
+        },
+        {
+          "text": "呼",
+          "start": 19.623,
+          "end": 19.879,
+          "reading": "こ"
+        },
+        {
+          "text": "ん",
+          "start": 19.879,
+          "end": 20.135
+        },
+        {
+          "text": "で",
+          "start": 20.135,
+          "end": 20.392
+        },
+        {
+          "text": "い",
+          "start": 20.392,
+          "end": 20.648
+        },
+        {
+          "text": "る",
+          "start": 20.648,
+          "end": 20.905
+        },
+        {
+          "text": "の",
+          "start": 20.905,
+          "end": 21.161
+        },
+        {
+          "text": "を",
+          "start": 21.161,
+          "end": 21.417
+        },
+        {
+          "text": "聞",
+          "start": 21.417,
+          "end": 21.674,
+          "reading": "ぶん"
+        },
+        {
+          "text": "く",
+          "start": 21.674,
+          "end": 21.93
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 21.93,
+      "end": 24.53,
+      "text": "迷子でも逃亡でもない",
+      "singableText": "迷子でも逃亡でもない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "迷",
+          "start": 21.93,
+          "end": 22.19,
+          "reading": "めい"
+        },
+        {
+          "text": "子",
+          "start": 22.19,
+          "end": 22.45,
+          "reading": "こ"
+        },
+        {
+          "text": "で",
+          "start": 22.45,
+          "end": 22.71
+        },
+        {
+          "text": "も",
+          "start": 22.71,
+          "end": 22.97
+        },
+        {
+          "text": "逃",
+          "start": 22.97,
+          "end": 23.23,
+          "reading": "とう"
+        },
+        {
+          "text": "亡",
+          "start": 23.23,
+          "end": 23.49,
+          "reading": "ぼう"
+        },
+        {
+          "text": "で",
+          "start": 23.49,
+          "end": 23.75
+        },
+        {
+          "text": "も",
+          "start": 23.75,
+          "end": 24.01
+        },
+        {
+          "text": "な",
+          "start": 24.01,
+          "end": 24.27
+        },
+        {
+          "text": "い",
+          "start": 24.27,
+          "end": 24.53
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 24.53,
+      "end": 26.89,
+      "text": "魂が目覚める方角だ",
+      "singableText": "魂が目覚める方角だ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "魂",
+          "start": 24.53,
+          "end": 24.792,
+          "reading": "たましい"
+        },
+        {
+          "text": "が",
+          "start": 24.792,
+          "end": 25.054
+        },
+        {
+          "text": "目",
+          "start": 25.054,
+          "end": 25.317,
+          "reading": "め"
+        },
+        {
+          "text": "覚",
+          "start": 25.317,
+          "end": 25.579,
+          "reading": "かく"
+        },
+        {
+          "text": "め",
+          "start": 25.579,
+          "end": 25.841
+        },
+        {
+          "text": "る",
+          "start": 25.841,
+          "end": 26.103
+        },
+        {
+          "text": "方",
+          "start": 26.103,
+          "end": 26.366,
+          "reading": "ほう"
+        },
+        {
+          "text": "角",
+          "start": 26.366,
+          "end": 26.628,
+          "reading": "かく"
+        },
+        {
+          "text": "だ",
+          "start": 26.628,
+          "end": 26.89
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from the selected ACE XL Turbo seed 747304 vocal using same-render faster-whisper small ASR in zh/en/auto modes and the intended lyric only where pronunciation and structure were close. The selected render does not audibly carry the later Japanese/chorus prompt lines, so they are not published as sung lyrics."
+  }
+}
