@@ -12,246 +12,791 @@
     {
       "id": "l01",
       "start": 0.02,
-      "end": 13.71,
+      "end": 0.76,
+      "text": "Yeah",
+      "singableText": "Yeah",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Yeah",
+          "start": 0.02,
+          "end": 0.76
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 6.06,
+      "end": 13.72,
       "text": "Running barefoot through a neon rain",
       "singableText": "Running barefoot through a neon rain",
       "role": "lyric",
       "tokens": [
         {
           "text": "Running",
-          "start": 0.02,
-          "end": 2.302
+          "start": 6.06,
+          "end": 7.337
         },
         {
           "text": "barefoot",
-          "start": 2.302,
-          "end": 4.583
+          "start": 7.337,
+          "end": 8.613
         },
         {
           "text": "through",
-          "start": 4.583,
-          "end": 6.865
+          "start": 8.613,
+          "end": 9.89
         },
         {
           "text": "a",
-          "start": 6.865,
-          "end": 9.147
+          "start": 9.89,
+          "end": 11.167
         },
         {
           "text": "neon",
-          "start": 9.147,
-          "end": 11.428
+          "start": 11.167,
+          "end": 12.443
         },
         {
           "text": "rain",
-          "start": 11.428,
-          "end": 13.71
+          "start": 12.443,
+          "end": 13.72
         }
       ]
     },
     {
-      "id": "l02",
-      "start": 13.71,
-      "end": 16.91,
+      "id": "l03",
+      "start": 13.72,
+      "end": 16.56,
       "text": "Every heartbeat knows my name",
       "singableText": "Every heartbeat knows my name",
       "role": "lyric",
       "tokens": [
         {
           "text": "Every",
-          "start": 13.71,
-          "end": 14.35
+          "start": 13.72,
+          "end": 14.288
         },
         {
           "text": "heartbeat",
-          "start": 14.35,
-          "end": 14.99
+          "start": 14.288,
+          "end": 14.856
         },
         {
           "text": "knows",
-          "start": 14.99,
-          "end": 15.63
+          "start": 14.856,
+          "end": 15.424
         },
         {
           "text": "my",
-          "start": 15.63,
-          "end": 16.27
+          "start": 15.424,
+          "end": 15.992
         },
         {
           "text": "name",
-          "start": 16.27,
-          "end": 16.91
+          "start": 15.992,
+          "end": 16.56
         }
       ]
     },
     {
-      "id": "l03",
-      "start": 16.91,
-      "end": 19.11,
+      "id": "l04",
+      "start": 16.56,
+      "end": 19.14,
       "text": "Wind blows across the city wall",
       "singableText": "Wind blows across the city wall",
       "role": "lyric",
       "tokens": [
         {
           "text": "Wind",
-          "start": 16.91,
-          "end": 17.277
+          "start": 16.56,
+          "end": 16.99
         },
         {
           "text": "blows",
-          "start": 17.277,
-          "end": 17.643
+          "start": 16.99,
+          "end": 17.42
         },
         {
           "text": "across",
-          "start": 17.643,
-          "end": 18.01
+          "start": 17.42,
+          "end": 17.85
         },
         {
           "text": "the",
-          "start": 18.01,
-          "end": 18.377
+          "start": 17.85,
+          "end": 18.28
         },
         {
           "text": "city",
-          "start": 18.377,
-          "end": 18.743
+          "start": 18.28,
+          "end": 18.71
         },
         {
           "text": "wall",
-          "start": 18.743,
-          "end": 19.11
+          "start": 18.71,
+          "end": 19.14
         }
       ]
     },
     {
-      "id": "l04",
-      "start": 19.11,
-      "end": 21.93,
+      "id": "l05",
+      "start": 19.14,
+      "end": 21.78,
       "text": "I hear the forest calling",
       "singableText": "I hear the forest calling",
       "role": "lyric",
       "tokens": [
         {
           "text": "I",
-          "start": 19.11,
-          "end": 19.674
+          "start": 19.14,
+          "end": 19.668
         },
         {
           "text": "hear",
-          "start": 19.674,
-          "end": 20.238
+          "start": 19.668,
+          "end": 20.196
         },
         {
           "text": "the",
-          "start": 20.238,
-          "end": 20.802
+          "start": 20.196,
+          "end": 20.724
         },
         {
           "text": "forest",
-          "start": 20.802,
-          "end": 21.366
+          "start": 20.724,
+          "end": 21.252
         },
         {
           "text": "calling",
-          "start": 21.366,
-          "end": 21.93
+          "start": 21.252,
+          "end": 21.78
         }
       ]
     },
     {
-      "id": "l05",
-      "start": 21.93,
-      "end": 24.53,
+      "id": "l06",
+      "start": 21.78,
+      "end": 24.44,
       "text": "Not lost, not running away",
       "singableText": "Not lost, not running away",
       "role": "lyric",
       "tokens": [
         {
           "text": "Not",
-          "start": 21.93,
-          "end": 22.363
+          "start": 21.78,
+          "end": 22.223
         },
         {
           "text": "lost",
-          "start": 22.363,
-          "end": 22.797
+          "start": 22.223,
+          "end": 22.667
         },
         {
           "text": ",",
-          "start": 22.797,
-          "end": 23.23
+          "start": 22.667,
+          "end": 23.11
         },
         {
           "text": "not",
-          "start": 23.23,
-          "end": 23.663
+          "start": 23.11,
+          "end": 23.553
         },
         {
           "text": "running",
-          "start": 23.663,
-          "end": 24.097
+          "start": 23.553,
+          "end": 23.997
         },
         {
           "text": "away",
-          "start": 24.097,
-          "end": 24.53
+          "start": 23.997,
+          "end": 24.44
         }
       ]
     },
     {
-      "id": "l06",
-      "start": 24.53,
-      "end": 26.89,
-      "text": "It is the direction where the soul wakes",
-      "singableText": "It is the direction where the soul wakes",
+      "id": "l07",
+      "start": 24.44,
+      "end": 27.08,
+      "text": "The heart wakes toward its way",
+      "singableText": "The heart wakes toward its way",
       "role": "lyric",
       "tokens": [
         {
-          "text": "It",
-          "start": 24.53,
-          "end": 24.825
+          "text": "The",
+          "start": 24.44,
+          "end": 24.88
         },
         {
-          "text": "is",
-          "start": 24.825,
-          "end": 25.12
-        },
-        {
-          "text": "the",
-          "start": 25.12,
-          "end": 25.415
-        },
-        {
-          "text": "direction",
-          "start": 25.415,
-          "end": 25.71
-        },
-        {
-          "text": "where",
-          "start": 25.71,
-          "end": 26.005
-        },
-        {
-          "text": "the",
-          "start": 26.005,
-          "end": 26.3
-        },
-        {
-          "text": "soul",
-          "start": 26.3,
-          "end": 26.595
+          "text": "heart",
+          "start": 24.88,
+          "end": 25.32
         },
         {
           "text": "wakes",
-          "start": 26.595,
-          "end": 26.89
+          "start": 25.32,
+          "end": 25.76
+        },
+        {
+          "text": "toward",
+          "start": 25.76,
+          "end": 26.2
+        },
+        {
+          "text": "its",
+          "start": 26.2,
+          "end": 26.64
+        },
+        {
+          "text": "way",
+          "start": 26.64,
+          "end": 27.08
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 27.08,
+      "end": 30.42,
+      "text": "The night has a scent deep in my chest",
+      "singableText": "The night has a scent deep in my chest",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 27.08,
+          "end": 27.451
+        },
+        {
+          "text": "night",
+          "start": 27.451,
+          "end": 27.822
+        },
+        {
+          "text": "has",
+          "start": 27.822,
+          "end": 28.193
+        },
+        {
+          "text": "a",
+          "start": 28.193,
+          "end": 28.564
+        },
+        {
+          "text": "scent",
+          "start": 28.564,
+          "end": 28.936
+        },
+        {
+          "text": "deep",
+          "start": 28.936,
+          "end": 29.307
+        },
+        {
+          "text": "in",
+          "start": 29.307,
+          "end": 29.678
+        },
+        {
+          "text": "my",
+          "start": 29.678,
+          "end": 30.049
+        },
+        {
+          "text": "chest",
+          "start": 30.049,
+          "end": 30.42
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 30.42,
+      "end": 33.78,
+      "text": "A light glows inside; I am not afraid",
+      "singableText": "A light glows inside; I am not afraid",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 30.42,
+          "end": 30.793
+        },
+        {
+          "text": "light",
+          "start": 30.793,
+          "end": 31.167
+        },
+        {
+          "text": "glows",
+          "start": 31.167,
+          "end": 31.54
+        },
+        {
+          "text": "inside",
+          "start": 31.54,
+          "end": 31.913
+        },
+        {
+          "text": ";",
+          "start": 31.913,
+          "end": 32.287
+        },
+        {
+          "text": "I",
+          "start": 32.287,
+          "end": 32.66
+        },
+        {
+          "text": "am",
+          "start": 32.66,
+          "end": 33.033
+        },
+        {
+          "text": "not",
+          "start": 33.033,
+          "end": 33.407
+        },
+        {
+          "text": "afraid",
+          "start": 33.407,
+          "end": 33.78
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 33.78,
+      "end": 36.56,
+      "text": "Toward a tomorrow still unseen",
+      "singableText": "Toward a tomorrow still unseen",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Toward",
+          "start": 33.78,
+          "end": 34.336
+        },
+        {
+          "text": "a",
+          "start": 34.336,
+          "end": 34.892
+        },
+        {
+          "text": "tomorrow",
+          "start": 34.892,
+          "end": 35.448
+        },
+        {
+          "text": "still",
+          "start": 35.448,
+          "end": 36.004
+        },
+        {
+          "text": "unseen",
+          "start": 36.004,
+          "end": 36.56
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 39.18,
+      "end": 41.06,
+      "text": "I trust my sixth sense",
+      "singableText": "I trust my sixth sense",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 39.18,
+          "end": 39.556
+        },
+        {
+          "text": "trust",
+          "start": 39.556,
+          "end": 39.932
+        },
+        {
+          "text": "my",
+          "start": 39.932,
+          "end": 40.308
+        },
+        {
+          "text": "sixth",
+          "start": 40.308,
+          "end": 40.684
+        },
+        {
+          "text": "sense",
+          "start": 40.684,
+          "end": 41.06
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 41.86,
+      "end": 44.76,
+      "text": "Wildness burns inside my heart",
+      "singableText": "Wildness burns inside my heart",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Wildness",
+          "start": 41.86,
+          "end": 42.44
+        },
+        {
+          "text": "burns",
+          "start": 42.44,
+          "end": 43.02
+        },
+        {
+          "text": "inside",
+          "start": 43.02,
+          "end": 43.6
+        },
+        {
+          "text": "my",
+          "start": 43.6,
+          "end": 44.18
+        },
+        {
+          "text": "heart",
+          "start": 44.18,
+          "end": 44.76
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 44.76,
+      "end": 47.1,
+      "text": "I dance with my defense",
+      "singableText": "I dance with my defense",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 44.76,
+          "end": 45.228
+        },
+        {
+          "text": "dance",
+          "start": 45.228,
+          "end": 45.696
+        },
+        {
+          "text": "with",
+          "start": 45.696,
+          "end": 46.164
+        },
+        {
+          "text": "my",
+          "start": 46.164,
+          "end": 46.632
+        },
+        {
+          "text": "defense",
+          "start": 46.632,
+          "end": 47.1
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 48.06,
+      "end": 50.84,
+      "text": "No crown, no golden cage",
+      "singableText": "No crown, no golden cage",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 48.06,
+          "end": 48.523
+        },
+        {
+          "text": "crown",
+          "start": 48.523,
+          "end": 48.987
+        },
+        {
+          "text": ",",
+          "start": 48.987,
+          "end": 49.45
+        },
+        {
+          "text": "no",
+          "start": 49.45,
+          "end": 49.913
+        },
+        {
+          "text": "golden",
+          "start": 49.913,
+          "end": 50.377
+        },
+        {
+          "text": "cage",
+          "start": 50.377,
+          "end": 50.84
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 64.01,
+      "end": 68.32,
+      "text": "Even on wounded days, I hold a dream",
+      "singableText": "Even on wounded days, I hold a dream",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Even",
+          "start": 64.01,
+          "end": 64.489
+        },
+        {
+          "text": "on",
+          "start": 64.489,
+          "end": 64.968
+        },
+        {
+          "text": "wounded",
+          "start": 64.968,
+          "end": 65.447
+        },
+        {
+          "text": "days",
+          "start": 65.447,
+          "end": 65.926
+        },
+        {
+          "text": ",",
+          "start": 65.926,
+          "end": 66.404
+        },
+        {
+          "text": "I",
+          "start": 66.404,
+          "end": 66.883
+        },
+        {
+          "text": "hold",
+          "start": 66.883,
+          "end": 67.362
+        },
+        {
+          "text": "a",
+          "start": 67.362,
+          "end": 67.841
+        },
+        {
+          "text": "dream",
+          "start": 67.841,
+          "end": 68.32
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 69.04,
+      "end": 71.66,
+      "text": "A small animal protects my heart",
+      "singableText": "A small animal protects my heart",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 69.04,
+          "end": 69.477
+        },
+        {
+          "text": "small",
+          "start": 69.477,
+          "end": 69.913
+        },
+        {
+          "text": "animal",
+          "start": 69.913,
+          "end": 70.35
+        },
+        {
+          "text": "protects",
+          "start": 70.35,
+          "end": 70.787
+        },
+        {
+          "text": "my",
+          "start": 70.787,
+          "end": 71.223
+        },
+        {
+          "text": "heart",
+          "start": 71.223,
+          "end": 71.66
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 71.66,
+      "end": 73.98,
+      "text": "I rise with innocence",
+      "singableText": "I rise with innocence",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 71.66,
+          "end": 72.24
+        },
+        {
+          "text": "rise",
+          "start": 72.24,
+          "end": 72.82
+        },
+        {
+          "text": "with",
+          "start": 72.82,
+          "end": 73.4
+        },
+        {
+          "text": "innocence",
+          "start": 73.4,
+          "end": 73.98
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 73.98,
+      "end": 77.66,
+      "text": "No one can take my sixth sense",
+      "singableText": "No one can take my sixth sense",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "No",
+          "start": 73.98,
+          "end": 74.506
+        },
+        {
+          "text": "one",
+          "start": 74.506,
+          "end": 75.031
+        },
+        {
+          "text": "can",
+          "start": 75.031,
+          "end": 75.557
+        },
+        {
+          "text": "take",
+          "start": 75.557,
+          "end": 76.083
+        },
+        {
+          "text": "my",
+          "start": 76.083,
+          "end": 76.609
+        },
+        {
+          "text": "sixth",
+          "start": 76.609,
+          "end": 77.134
+        },
+        {
+          "text": "sense",
+          "start": 77.134,
+          "end": 77.66
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 79.04,
+      "end": 81.22,
+      "text": "But I know, I know",
+      "singableText": "But I know, I know",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "But",
+          "start": 79.04,
+          "end": 79.403
+        },
+        {
+          "text": "I",
+          "start": 79.403,
+          "end": 79.767
+        },
+        {
+          "text": "know",
+          "start": 79.767,
+          "end": 80.13
+        },
+        {
+          "text": ",",
+          "start": 80.13,
+          "end": 80.493
+        },
+        {
+          "text": "I",
+          "start": 80.493,
+          "end": 80.857
+        },
+        {
+          "text": "know",
+          "start": 80.857,
+          "end": 81.22
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 81.9,
+      "end": 83.98,
+      "text": "My wild heart is in love",
+      "singableText": "My wild heart is in love",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 81.9,
+          "end": 82.247
+        },
+        {
+          "text": "wild",
+          "start": 82.247,
+          "end": 82.593
+        },
+        {
+          "text": "heart",
+          "start": 82.593,
+          "end": 82.94
+        },
+        {
+          "text": "is",
+          "start": 82.94,
+          "end": 83.287
+        },
+        {
+          "text": "in",
+          "start": 83.287,
+          "end": 83.633
+        },
+        {
+          "text": "love",
+          "start": 83.633,
+          "end": 83.98
         }
       ]
     }
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from the selected ACE XL Turbo seed 747304 vocal using same-render faster-whisper small ASR in zh/en/auto modes and the intended lyric only where pronunciation and structure were close. The selected render does not audibly carry the later Japanese/chorus prompt lines, so they are not published as sung lyrics."
+    "correction": "Corrected from the selected ACE XL Turbo seed 747304 vocal using same-render faster-whisper small ASR in zh/en/auto modes and the intended lyric only where pronunciation and structure were close. The published timing follows all 20 ASR-supported vocal segments through 83.98s."
   }
 }

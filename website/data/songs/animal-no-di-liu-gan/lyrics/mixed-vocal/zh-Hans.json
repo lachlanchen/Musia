@@ -13,371 +13,1199 @@
     {
       "id": "l01",
       "start": 0.02,
-      "end": 13.71,
+      "end": 0.76,
+      "text": "Yeah",
+      "singableText": "Yeah",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Y",
+          "start": 0.02,
+          "end": 0.205
+        },
+        {
+          "text": "e",
+          "start": 0.205,
+          "end": 0.39
+        },
+        {
+          "text": "a",
+          "start": 0.39,
+          "end": 0.575
+        },
+        {
+          "text": "h",
+          "start": 0.575,
+          "end": 0.76
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 6.06,
+      "end": 13.72,
       "text": "赤脚跑过霓虹雨",
       "singableText": "赤脚跑过霓虹雨",
       "role": "lyric",
       "tokens": [
         {
           "text": "赤",
-          "start": 0.02,
-          "end": 1.976,
+          "start": 6.06,
+          "end": 7.154,
           "pinyin": "chi4"
         },
         {
           "text": "脚",
-          "start": 1.976,
-          "end": 3.931,
+          "start": 7.154,
+          "end": 8.249,
           "pinyin": "jiao3"
         },
         {
           "text": "跑",
-          "start": 3.931,
-          "end": 5.887,
+          "start": 8.249,
+          "end": 9.343,
           "pinyin": "pao3"
         },
         {
           "text": "过",
-          "start": 5.887,
-          "end": 7.843,
+          "start": 9.343,
+          "end": 10.437,
           "pinyin": "guo4"
         },
         {
           "text": "霓",
-          "start": 7.843,
-          "end": 9.799,
+          "start": 10.437,
+          "end": 11.531,
           "pinyin": "ni2"
         },
         {
           "text": "虹",
-          "start": 9.799,
-          "end": 11.754,
+          "start": 11.531,
+          "end": 12.626,
           "pinyin": "hong2"
         },
         {
           "text": "雨",
-          "start": 11.754,
-          "end": 13.71,
+          "start": 12.626,
+          "end": 13.72,
           "pinyin": "yu3"
         }
       ]
     },
     {
-      "id": "l02",
-      "start": 13.71,
-      "end": 16.91,
+      "id": "l03",
+      "start": 13.72,
+      "end": 16.56,
       "text": "每一次心跳都知道我的名字",
       "singableText": "每一次心跳都知道我的名字",
       "role": "lyric",
       "tokens": [
         {
           "text": "每",
-          "start": 13.71,
-          "end": 13.977,
+          "start": 13.72,
+          "end": 13.957,
           "pinyin": "mei3"
         },
         {
           "text": "一",
-          "start": 13.977,
-          "end": 14.243,
+          "start": 13.957,
+          "end": 14.193,
           "pinyin": "yi1"
         },
         {
           "text": "次",
-          "start": 14.243,
-          "end": 14.51,
+          "start": 14.193,
+          "end": 14.43,
           "pinyin": "ci4"
         },
         {
           "text": "心",
-          "start": 14.51,
-          "end": 14.777,
+          "start": 14.43,
+          "end": 14.667,
           "pinyin": "xin1"
         },
         {
           "text": "跳",
-          "start": 14.777,
-          "end": 15.043,
+          "start": 14.667,
+          "end": 14.903,
           "pinyin": "tiao4"
         },
         {
           "text": "都",
-          "start": 15.043,
-          "end": 15.31,
+          "start": 14.903,
+          "end": 15.14,
           "pinyin": "dou1"
         },
         {
           "text": "知",
-          "start": 15.31,
-          "end": 15.577,
+          "start": 15.14,
+          "end": 15.377,
           "pinyin": "zhi1"
         },
         {
           "text": "道",
-          "start": 15.577,
-          "end": 15.843,
+          "start": 15.377,
+          "end": 15.613,
           "pinyin": "dao4"
         },
         {
           "text": "我",
-          "start": 15.843,
-          "end": 16.11,
+          "start": 15.613,
+          "end": 15.85,
           "pinyin": "wo3"
         },
         {
           "text": "的",
-          "start": 16.11,
-          "end": 16.377,
+          "start": 15.85,
+          "end": 16.087,
           "pinyin": "de5"
         },
         {
           "text": "名",
-          "start": 16.377,
-          "end": 16.643,
+          "start": 16.087,
+          "end": 16.323,
           "pinyin": "ming2"
         },
         {
           "text": "字",
-          "start": 16.643,
-          "end": 16.91,
+          "start": 16.323,
+          "end": 16.56,
           "pinyin": "zi4"
         }
       ]
     },
     {
-      "id": "l03",
-      "start": 16.91,
-      "end": 19.11,
+      "id": "l04",
+      "start": 16.56,
+      "end": 19.14,
       "text": "风吹过城市的墙",
       "singableText": "风吹过城市的墙",
       "role": "lyric",
       "tokens": [
         {
           "text": "风",
-          "start": 16.91,
-          "end": 17.224,
+          "start": 16.56,
+          "end": 16.929,
           "pinyin": "feng1"
         },
         {
           "text": "吹",
-          "start": 17.224,
-          "end": 17.539,
+          "start": 16.929,
+          "end": 17.297,
           "pinyin": "chui1"
         },
         {
           "text": "过",
-          "start": 17.539,
-          "end": 17.853,
+          "start": 17.297,
+          "end": 17.666,
           "pinyin": "guo4"
         },
         {
           "text": "城",
-          "start": 17.853,
-          "end": 18.167,
+          "start": 17.666,
+          "end": 18.034,
           "pinyin": "cheng2"
         },
         {
           "text": "市",
-          "start": 18.167,
-          "end": 18.481,
+          "start": 18.034,
+          "end": 18.403,
           "pinyin": "shi4"
         },
         {
           "text": "的",
-          "start": 18.481,
-          "end": 18.796,
+          "start": 18.403,
+          "end": 18.771,
           "pinyin": "de5"
         },
         {
           "text": "墙",
-          "start": 18.796,
-          "end": 19.11,
+          "start": 18.771,
+          "end": 19.14,
           "pinyin": "qiang2"
         }
       ]
     },
     {
-      "id": "l04",
-      "start": 19.11,
-      "end": 21.93,
+      "id": "l05",
+      "start": 19.14,
+      "end": 21.78,
       "text": "我听见森林在呼唤",
       "singableText": "我听见森林在呼唤",
       "role": "lyric",
       "tokens": [
         {
           "text": "我",
-          "start": 19.11,
-          "end": 19.462,
+          "start": 19.14,
+          "end": 19.47,
           "pinyin": "wo3"
         },
         {
           "text": "听",
-          "start": 19.462,
-          "end": 19.815,
+          "start": 19.47,
+          "end": 19.8,
           "pinyin": "ting1"
         },
         {
           "text": "见",
-          "start": 19.815,
-          "end": 20.168,
+          "start": 19.8,
+          "end": 20.13,
           "pinyin": "jian4"
         },
         {
           "text": "森",
-          "start": 20.168,
-          "end": 20.52,
+          "start": 20.13,
+          "end": 20.46,
           "pinyin": "sen1"
         },
         {
           "text": "林",
-          "start": 20.52,
-          "end": 20.872,
+          "start": 20.46,
+          "end": 20.79,
           "pinyin": "lin2"
         },
         {
           "text": "在",
-          "start": 20.872,
-          "end": 21.225,
+          "start": 20.79,
+          "end": 21.12,
           "pinyin": "zai4"
         },
         {
           "text": "呼",
-          "start": 21.225,
-          "end": 21.578,
+          "start": 21.12,
+          "end": 21.45,
           "pinyin": "hu1"
         },
         {
           "text": "唤",
-          "start": 21.578,
-          "end": 21.93,
+          "start": 21.45,
+          "end": 21.78,
           "pinyin": "huan4"
         }
       ]
     },
     {
-      "id": "l05",
-      "start": 21.93,
-      "end": 24.53,
+      "id": "l06",
+      "start": 21.78,
+      "end": 24.44,
       "text": "不是迷路，不是逃亡",
       "singableText": "不是迷路，不是逃亡",
       "role": "lyric",
       "tokens": [
         {
           "text": "不",
-          "start": 21.93,
-          "end": 22.219,
+          "start": 21.78,
+          "end": 22.076,
           "pinyin": "bu4"
         },
         {
           "text": "是",
-          "start": 22.219,
-          "end": 22.508,
+          "start": 22.076,
+          "end": 22.371,
           "pinyin": "shi4"
         },
         {
           "text": "迷",
-          "start": 22.508,
-          "end": 22.797,
+          "start": 22.371,
+          "end": 22.667,
           "pinyin": "mi2"
         },
         {
           "text": "路",
-          "start": 22.797,
-          "end": 23.086,
+          "start": 22.667,
+          "end": 22.962,
           "pinyin": "lu4"
         },
         {
           "text": "，",
-          "start": 23.086,
-          "end": 23.374
+          "start": 22.962,
+          "end": 23.258
         },
         {
           "text": "不",
-          "start": 23.374,
-          "end": 23.663,
+          "start": 23.258,
+          "end": 23.553,
           "pinyin": "bu4"
         },
         {
           "text": "是",
-          "start": 23.663,
-          "end": 23.952,
+          "start": 23.553,
+          "end": 23.849,
           "pinyin": "shi4"
         },
         {
           "text": "逃",
-          "start": 23.952,
-          "end": 24.241,
+          "start": 23.849,
+          "end": 24.144,
           "pinyin": "tao2"
         },
         {
           "text": "亡",
-          "start": 24.241,
-          "end": 24.53,
+          "start": 24.144,
+          "end": 24.44,
           "pinyin": "wang2"
         }
       ]
     },
     {
-      "id": "l06",
-      "start": 24.53,
-      "end": 26.89,
-      "text": "是灵魂醒来的方向",
-      "singableText": "是灵魂醒来的方向",
+      "id": "l07",
+      "start": 24.44,
+      "end": 27.08,
+      "text": "心灵唤醒来的方向",
+      "singableText": "心灵唤醒来的方向",
       "role": "lyric",
       "tokens": [
         {
-          "text": "是",
-          "start": 24.53,
-          "end": 24.825,
-          "pinyin": "shi4"
+          "text": "心",
+          "start": 24.44,
+          "end": 24.77,
+          "pinyin": "xin1"
         },
         {
           "text": "灵",
-          "start": 24.825,
-          "end": 25.12,
+          "start": 24.77,
+          "end": 25.1,
           "pinyin": "ling2"
         },
         {
-          "text": "魂",
-          "start": 25.12,
-          "end": 25.415,
-          "pinyin": "hun2"
+          "text": "唤",
+          "start": 25.1,
+          "end": 25.43,
+          "pinyin": "huan4"
         },
         {
           "text": "醒",
-          "start": 25.415,
-          "end": 25.71,
+          "start": 25.43,
+          "end": 25.76,
           "pinyin": "xing3"
         },
         {
           "text": "来",
-          "start": 25.71,
-          "end": 26.005,
+          "start": 25.76,
+          "end": 26.09,
           "pinyin": "lai2"
         },
         {
           "text": "的",
-          "start": 26.005,
-          "end": 26.3,
+          "start": 26.09,
+          "end": 26.42,
           "pinyin": "de5"
         },
         {
           "text": "方",
-          "start": 26.3,
-          "end": 26.595,
+          "start": 26.42,
+          "end": 26.75,
           "pinyin": "fang1"
         },
         {
           "text": "向",
-          "start": 26.595,
-          "end": 26.89,
+          "start": 26.75,
+          "end": 27.08,
           "pinyin": "xiang4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 27.08,
+      "end": 30.42,
+      "text": "夜的气息在胸口深处",
+      "singableText": "夜的气息在胸口深处",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "夜",
+          "start": 27.08,
+          "end": 27.451,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "的",
+          "start": 27.451,
+          "end": 27.822,
+          "pinyin": "de5"
+        },
+        {
+          "text": "气",
+          "start": 27.822,
+          "end": 28.193,
+          "pinyin": "qi4"
+        },
+        {
+          "text": "息",
+          "start": 28.193,
+          "end": 28.564,
+          "pinyin": "xi1"
+        },
+        {
+          "text": "在",
+          "start": 28.564,
+          "end": 28.936,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "胸",
+          "start": 28.936,
+          "end": 29.307,
+          "pinyin": "xiong1"
+        },
+        {
+          "text": "口",
+          "start": 29.307,
+          "end": 29.678,
+          "pinyin": "kou3"
+        },
+        {
+          "text": "深",
+          "start": 29.678,
+          "end": 30.049,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "处",
+          "start": 30.049,
+          "end": 30.42,
+          "pinyin": "chu4"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 30.42,
+      "end": 33.78,
+      "text": "心底发光，不再害怕",
+      "singableText": "心底发光，不再害怕",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "心",
+          "start": 30.42,
+          "end": 30.793,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "底",
+          "start": 30.793,
+          "end": 31.167,
+          "pinyin": "di3"
+        },
+        {
+          "text": "发",
+          "start": 31.167,
+          "end": 31.54,
+          "pinyin": "fa1"
+        },
+        {
+          "text": "光",
+          "start": 31.54,
+          "end": 31.913,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "，",
+          "start": 31.913,
+          "end": 32.287
+        },
+        {
+          "text": "不",
+          "start": 32.287,
+          "end": 32.66,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "再",
+          "start": 32.66,
+          "end": 33.033,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "害",
+          "start": 33.033,
+          "end": 33.407,
+          "pinyin": "hai4"
+        },
+        {
+          "text": "怕",
+          "start": 33.407,
+          "end": 33.78,
+          "pinyin": "pa4"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 33.78,
+      "end": 36.56,
+      "text": "走向还看不见的明天",
+      "singableText": "走向还看不见的明天",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "走",
+          "start": 33.78,
+          "end": 34.089,
+          "pinyin": "zou3"
+        },
+        {
+          "text": "向",
+          "start": 34.089,
+          "end": 34.398,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "还",
+          "start": 34.398,
+          "end": 34.707,
+          "pinyin": "hai2"
+        },
+        {
+          "text": "看",
+          "start": 34.707,
+          "end": 35.016,
+          "pinyin": "kan4"
+        },
+        {
+          "text": "不",
+          "start": 35.016,
+          "end": 35.324,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "见",
+          "start": 35.324,
+          "end": 35.633,
+          "pinyin": "jian4"
+        },
+        {
+          "text": "的",
+          "start": 35.633,
+          "end": 35.942,
+          "pinyin": "de5"
+        },
+        {
+          "text": "明",
+          "start": 35.942,
+          "end": 36.251,
+          "pinyin": "ming2"
+        },
+        {
+          "text": "天",
+          "start": 36.251,
+          "end": 36.56,
+          "pinyin": "tian1"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 39.18,
+      "end": 41.06,
+      "text": "我相信我的第六感",
+      "singableText": "我相信我的第六感",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 39.18,
+          "end": 39.415,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "相",
+          "start": 39.415,
+          "end": 39.65,
+          "pinyin": "xiang1"
+        },
+        {
+          "text": "信",
+          "start": 39.65,
+          "end": 39.885,
+          "pinyin": "xin4"
+        },
+        {
+          "text": "我",
+          "start": 39.885,
+          "end": 40.12,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "的",
+          "start": 40.12,
+          "end": 40.355,
+          "pinyin": "de5"
+        },
+        {
+          "text": "第",
+          "start": 40.355,
+          "end": 40.59,
+          "pinyin": "di4"
+        },
+        {
+          "text": "六",
+          "start": 40.59,
+          "end": 40.825,
+          "pinyin": "liu4"
+        },
+        {
+          "text": "感",
+          "start": 40.825,
+          "end": 41.06,
+          "pinyin": "gan3"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 41.86,
+      "end": 44.76,
+      "text": "野性在心里燃烧",
+      "singableText": "野性在心里燃烧",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "野",
+          "start": 41.86,
+          "end": 42.274,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "性",
+          "start": 42.274,
+          "end": 42.689,
+          "pinyin": "xing4"
+        },
+        {
+          "text": "在",
+          "start": 42.689,
+          "end": 43.103,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "心",
+          "start": 43.103,
+          "end": 43.517,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "里",
+          "start": 43.517,
+          "end": 43.931,
+          "pinyin": "li3"
+        },
+        {
+          "text": "燃",
+          "start": 43.931,
+          "end": 44.346,
+          "pinyin": "ran2"
+        },
+        {
+          "text": "烧",
+          "start": 44.346,
+          "end": 44.76,
+          "pinyin": "shao1"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 44.76,
+      "end": 47.1,
+      "text": "我与防备共舞",
+      "singableText": "我与防备共舞",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 44.76,
+          "end": 45.15,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "与",
+          "start": 45.15,
+          "end": 45.54,
+          "pinyin": "yu3"
+        },
+        {
+          "text": "防",
+          "start": 45.54,
+          "end": 45.93,
+          "pinyin": "fang2"
+        },
+        {
+          "text": "备",
+          "start": 45.93,
+          "end": 46.32,
+          "pinyin": "bei4"
+        },
+        {
+          "text": "共",
+          "start": 46.32,
+          "end": 46.71,
+          "pinyin": "gong4"
+        },
+        {
+          "text": "舞",
+          "start": 46.71,
+          "end": 47.1,
+          "pinyin": "wu3"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 48.06,
+      "end": 50.84,
+      "text": "没有王冠，也没有金色牢笼",
+      "singableText": "没有王冠，也没有金色牢笼",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "没",
+          "start": 48.06,
+          "end": 48.292,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "有",
+          "start": 48.292,
+          "end": 48.523,
+          "pinyin": "you3"
+        },
+        {
+          "text": "王",
+          "start": 48.523,
+          "end": 48.755,
+          "pinyin": "wang2"
+        },
+        {
+          "text": "冠",
+          "start": 48.755,
+          "end": 48.987,
+          "pinyin": "guan1"
+        },
+        {
+          "text": "，",
+          "start": 48.987,
+          "end": 49.218
+        },
+        {
+          "text": "也",
+          "start": 49.218,
+          "end": 49.45,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "没",
+          "start": 49.45,
+          "end": 49.682,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "有",
+          "start": 49.682,
+          "end": 49.913,
+          "pinyin": "you3"
+        },
+        {
+          "text": "金",
+          "start": 49.913,
+          "end": 50.145,
+          "pinyin": "jin1"
+        },
+        {
+          "text": "色",
+          "start": 50.145,
+          "end": 50.377,
+          "pinyin": "se4"
+        },
+        {
+          "text": "牢",
+          "start": 50.377,
+          "end": 50.608,
+          "pinyin": "lao2"
+        },
+        {
+          "text": "笼",
+          "start": 50.608,
+          "end": 50.84,
+          "pinyin": "long2"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 64.01,
+      "end": 68.32,
+      "text": "受伤的日子里，也抱着梦",
+      "singableText": "受伤的日子里，也抱着梦",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "受",
+          "start": 64.01,
+          "end": 64.402,
+          "pinyin": "shou4"
+        },
+        {
+          "text": "伤",
+          "start": 64.402,
+          "end": 64.794,
+          "pinyin": "shang1"
+        },
+        {
+          "text": "的",
+          "start": 64.794,
+          "end": 65.185,
+          "pinyin": "de5"
+        },
+        {
+          "text": "日",
+          "start": 65.185,
+          "end": 65.577,
+          "pinyin": "ri4"
+        },
+        {
+          "text": "子",
+          "start": 65.577,
+          "end": 65.969,
+          "pinyin": "zi5"
+        },
+        {
+          "text": "里",
+          "start": 65.969,
+          "end": 66.361,
+          "pinyin": "li3"
+        },
+        {
+          "text": "，",
+          "start": 66.361,
+          "end": 66.753
+        },
+        {
+          "text": "也",
+          "start": 66.753,
+          "end": 67.145,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "抱",
+          "start": 67.145,
+          "end": 67.536,
+          "pinyin": "bao4"
+        },
+        {
+          "text": "着",
+          "start": 67.536,
+          "end": 67.928,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "梦",
+          "start": 67.928,
+          "end": 68.32,
+          "pinyin": "meng4"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 69.04,
+      "end": 71.66,
+      "text": "小小的兽守护着心",
+      "singableText": "小小的兽守护着心",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 69.04,
+          "end": 69.368,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 69.368,
+          "end": 69.695,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "的",
+          "start": 69.695,
+          "end": 70.023,
+          "pinyin": "de5"
+        },
+        {
+          "text": "兽",
+          "start": 70.023,
+          "end": 70.35,
+          "pinyin": "shou4"
+        },
+        {
+          "text": "守",
+          "start": 70.35,
+          "end": 70.677,
+          "pinyin": "shou3"
+        },
+        {
+          "text": "护",
+          "start": 70.677,
+          "end": 71.005,
+          "pinyin": "hu4"
+        },
+        {
+          "text": "着",
+          "start": 71.005,
+          "end": 71.332,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "心",
+          "start": 71.332,
+          "end": 71.66,
+          "pinyin": "xin1"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 71.66,
+      "end": 73.98,
+      "text": "我带着纯真站起",
+      "singableText": "我带着纯真站起",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 71.66,
+          "end": 71.991,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "带",
+          "start": 71.991,
+          "end": 72.323,
+          "pinyin": "dai4"
+        },
+        {
+          "text": "着",
+          "start": 72.323,
+          "end": 72.654,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "纯",
+          "start": 72.654,
+          "end": 72.986,
+          "pinyin": "chun2"
+        },
+        {
+          "text": "真",
+          "start": 72.986,
+          "end": 73.317,
+          "pinyin": "zhen1"
+        },
+        {
+          "text": "站",
+          "start": 73.317,
+          "end": 73.649,
+          "pinyin": "zhan4"
+        },
+        {
+          "text": "起",
+          "start": 73.649,
+          "end": 73.98,
+          "pinyin": "qi3"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 73.98,
+      "end": 77.66,
+      "text": "谁也夺不走我的第六感",
+      "singableText": "谁也夺不走我的第六感",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "谁",
+          "start": 73.98,
+          "end": 74.348,
+          "pinyin": "shui2"
+        },
+        {
+          "text": "也",
+          "start": 74.348,
+          "end": 74.716,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "夺",
+          "start": 74.716,
+          "end": 75.084,
+          "pinyin": "duo2"
+        },
+        {
+          "text": "不",
+          "start": 75.084,
+          "end": 75.452,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "走",
+          "start": 75.452,
+          "end": 75.82,
+          "pinyin": "zou3"
+        },
+        {
+          "text": "我",
+          "start": 75.82,
+          "end": 76.188,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "的",
+          "start": 76.188,
+          "end": 76.556,
+          "pinyin": "de5"
+        },
+        {
+          "text": "第",
+          "start": 76.556,
+          "end": 76.924,
+          "pinyin": "di4"
+        },
+        {
+          "text": "六",
+          "start": 76.924,
+          "end": 77.292,
+          "pinyin": "liu4"
+        },
+        {
+          "text": "感",
+          "start": 77.292,
+          "end": 77.66,
+          "pinyin": "gan3"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 79.04,
+      "end": 81.22,
+      "text": "但我知道，我知道",
+      "singableText": "但我知道，我知道",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "但",
+          "start": 79.04,
+          "end": 79.312,
+          "pinyin": "dan4"
+        },
+        {
+          "text": "我",
+          "start": 79.312,
+          "end": 79.585,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "知",
+          "start": 79.585,
+          "end": 79.858,
+          "pinyin": "zhi1"
+        },
+        {
+          "text": "道",
+          "start": 79.858,
+          "end": 80.13,
+          "pinyin": "dao4"
+        },
+        {
+          "text": "，",
+          "start": 80.13,
+          "end": 80.403
+        },
+        {
+          "text": "我",
+          "start": 80.403,
+          "end": 80.675,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "知",
+          "start": 80.675,
+          "end": 80.948,
+          "pinyin": "zhi1"
+        },
+        {
+          "text": "道",
+          "start": 80.948,
+          "end": 81.22,
+          "pinyin": "dao4"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 81.9,
+      "end": 83.98,
+      "text": "我的野心正在爱里",
+      "singableText": "我的野心正在爱里",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 81.9,
+          "end": 82.16,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "的",
+          "start": 82.16,
+          "end": 82.42,
+          "pinyin": "de5"
+        },
+        {
+          "text": "野",
+          "start": 82.42,
+          "end": 82.68,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "心",
+          "start": 82.68,
+          "end": 82.94,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "正",
+          "start": 82.94,
+          "end": 83.2,
+          "pinyin": "zheng4"
+        },
+        {
+          "text": "在",
+          "start": 83.2,
+          "end": 83.46,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "爱",
+          "start": 83.46,
+          "end": 83.72,
+          "pinyin": "ai4"
+        },
+        {
+          "text": "里",
+          "start": 83.72,
+          "end": 83.98,
+          "pinyin": "li3"
         }
       ]
     }
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from the selected ACE XL Turbo seed 747304 vocal using same-render faster-whisper small ASR in zh/en/auto modes and the intended lyric only where pronunciation and structure were close. The selected render does not audibly carry the later Japanese/chorus prompt lines, so they are not published as sung lyrics."
+    "correction": "Corrected from the selected ACE XL Turbo seed 747304 vocal using same-render faster-whisper small ASR in zh/en/auto modes and the intended lyric only where pronunciation and structure were close. The published timing follows all 20 ASR-supported vocal segments through 83.98s."
   }
 }

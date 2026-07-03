@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import csv
 import json
 import math
 import shutil
@@ -149,19 +148,34 @@ def make_line(line_id: str, start: float, end: float, text: str, code: str) -> d
 def corrected_rows() -> list[tuple[str, float, float, str, str, str, str]]:
     """Audible structure from selected ACE XL Turbo seed 747304.
 
-    The long native mixed-language prompt collapsed into a short English +
-    Mandarin-style vocal. These rows use same-render ASR anchors plus the
-    intended lyric only where the sound is close enough to preserve meaning.
-    Skipped Japanese/chorus prompt lines are not published as sung lyrics.
+    These rows follow the full same-render ASR timing from
+    data/runs/animal-no-di-liu-gan-mixed-seed-747304-analysis/analysis/lyrics.json.
+    The active lyric preserves the intended lyric only when it is sound-close
+    and structurally supported by ASR/listening; otherwise it follows the
+    generated vocal.
     """
 
     return [
-        ("l01", 0.02, 13.71, "Running barefoot through a neon rain", "Running barefoot through a neon rain", "赤足でネオンの雨を駆ける", "赤脚跑过霓虹雨"),
-        ("l02", 13.71, 16.91, "Every heartbeat knows my name", "Every heartbeat knows my name", "鼓動は私の名を知っている", "每一次心跳都知道我的名字"),
-        ("l03", 16.91, 19.11, "风吹过城市的墙", "Wind blows across the city wall", "風が街の壁を吹き抜ける", "风吹过城市的墙"),
-        ("l04", 19.11, 21.93, "我听见森林在呼唤", "I hear the forest calling", "森が呼んでいるのを聞く", "我听见森林在呼唤"),
-        ("l05", 21.93, 24.53, "不是迷路，不是逃亡", "Not lost, not running away", "迷子でも逃亡でもない", "不是迷路，不是逃亡"),
-        ("l06", 24.53, 26.89, "是灵魂醒来的方向", "It is the direction where the soul wakes", "魂が目覚める方角だ", "是灵魂醒来的方向"),
+        ("l01", 0.02, 0.76, "Yeah", "Yeah", "Yeah", "Yeah"),
+        ("l02", 6.06, 13.72, "Running barefoot through a neon rain", "Running barefoot through a neon rain", "赤足でネオンの雨を駆ける", "赤脚跑过霓虹雨"),
+        ("l03", 13.72, 16.56, "Every heartbeat knows my name", "Every heartbeat knows my name", "鼓動は私の名を知っている", "每一次心跳都知道我的名字"),
+        ("l04", 16.56, 19.14, "风吹过城市的墙", "Wind blows across the city wall", "風が街の壁を吹き抜ける", "风吹过城市的墙"),
+        ("l05", 19.14, 21.78, "我听见森林在呼唤", "I hear the forest calling", "森が呼んでいるのを聞く", "我听见森林在呼唤"),
+        ("l06", 21.78, 24.44, "不是迷路，不是逃亡", "Not lost, not running away", "迷子でも逃亡でもない", "不是迷路，不是逃亡"),
+        ("l07", 24.44, 27.08, "心灵唤醒来的方向", "The heart wakes toward its way", "心が目覚める方角へ", "心灵唤醒来的方向"),
+        ("l08", 27.08, 30.42, "夜の匂いがする 胸の奥", "The night has a scent deep in my chest", "夜の匂いがする 胸の奥", "夜的气息在胸口深处"),
+        ("l09", 30.42, 33.78, "胸の奥で光る 怖くないよ", "A light glows inside; I am not afraid", "胸の奥で光る 怖くないよ", "心底发光，不再害怕"),
+        ("l10", 33.78, 36.56, "まだ見えない明日へ", "Toward a tomorrow still unseen", "まだ見えない明日へ", "走向还看不见的明天"),
+        ("l11", 39.18, 41.06, "I trust my sixth sense", "I trust my sixth sense", "第六感を信じる", "我相信我的第六感"),
+        ("l12", 41.86, 44.76, "野性在心里燃烧", "Wildness burns inside my heart", "野性が心で燃えている", "野性在心里燃烧"),
+        ("l13", 44.76, 47.10, "I dance with my defense", "I dance with my defense", "守りながら踊る", "我与防备共舞"),
+        ("l14", 48.06, 50.84, "No crown, no golden cage", "No crown, no golden cage", "冠も黄金の檻もいらない", "没有王冠，也没有金色牢笼"),
+        ("l15", 64.01, 68.32, "傷ついた日も 夢を抱いて", "Even on wounded days, I hold a dream", "傷ついた日も 夢を抱いて", "受伤的日子里，也抱着梦"),
+        ("l16", 69.04, 71.66, "小さな獣が 心を守る", "A small animal protects my heart", "小さな獣が 心を守る", "小小的兽守护着心"),
+        ("l17", 71.66, 73.98, "I rise with innocence", "I rise with innocence", "無垢なまま立ち上がる", "我带着纯真站起"),
+        ("l18", 73.98, 77.66, "誰も I trust my sixth sense", "No one can take my sixth sense", "誰も 第六感は奪えない", "谁也夺不走我的第六感"),
+        ("l19", 79.04, 81.22, "但我知道，我知道", "But I know, I know", "でもわかっている", "但我知道，我知道"),
+        ("l20", 81.90, 83.98, "My wild heart is in love", "My wild heart is in love", "野生の心は恋をしている", "我的野心正在爱里"),
     ]
 
 
@@ -177,8 +191,7 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
             "correction": (
                 "Corrected from the selected ACE XL Turbo seed 747304 vocal using same-render faster-whisper "
                 "small ASR in zh/en/auto modes and the intended lyric only where pronunciation and structure were close. "
-                "The selected render does not audibly carry the later Japanese/chorus prompt lines, so they are not "
-                "published as sung lyrics."
+                "The published timing follows all 20 ASR-supported vocal segments through 83.98s."
             ),
         },
     }
@@ -198,20 +211,43 @@ def load_chords() -> list[dict[str, Any]]:
     raw_path = ANALYSIS / "analysis/chords.json"
     if raw_path.exists():
         raw = read_json(raw_path).get("chords", [])
-        return [
+        source = [
             {
-                "start": round(float(item["start"]), 3),
-                "end": round(float(item["end"]), 3),
+                "start": float(item["start"]),
+                "end": float(item["end"]),
                 "name": item.get("chord") or item.get("name") or "N.C.",
-                "degree": "",
+                "confidence": float(item.get("confidence") or 1.0),
             }
             for item in raw
         ]
-    rows: list[dict[str, Any]] = []
-    with (ANALYSIS / "analysis/chords.csv").open("r", encoding="utf-8", newline="") as handle:
-        for item in csv.DictReader(handle):
-            rows.append({"start": float(item["start"]), "end": float(item["end"]), "name": item.get("chord") or "N.C.", "degree": ""})
-    return rows
+    else:
+        source = []
+
+    if not source:
+        return []
+
+    # The detector emits beat-level chord changes. For the website's guitar
+    # fingering panel, show stable two-bar blocks so the current chord moves in
+    # time without flickering every half second.
+    window = 5.2
+    total = duration(SELECTED_AUDIO)
+    smoothed: list[dict[str, Any]] = []
+    start = 0.0
+    while start < total - 0.05:
+        end = min(total, start + window)
+        scores: dict[str, float] = {}
+        for chord in source:
+            overlap = max(0.0, min(end, chord["end"]) - max(start, chord["start"]))
+            if overlap <= 0:
+                continue
+            scores[chord["name"]] = scores.get(chord["name"], 0.0) + overlap * chord["confidence"]
+        name = max(scores.items(), key=lambda item: item[1])[0] if scores else (smoothed[-1]["name"] if smoothed else "N.C.")
+        if smoothed and smoothed[-1]["name"] == name:
+            smoothed[-1]["end"] = round(end, 3)
+        else:
+            smoothed.append({"start": round(start, 3), "end": round(end, 3), "name": name, "degree": ""})
+        start = end
+    return smoothed
 
 
 def ensure_audio() -> None:
@@ -281,7 +317,7 @@ def make_cover() -> None:
 
     title_font = font(78)
     sub_font = font(34)
-    draw.text((86, 84), "Animal no 第六感", fill=(255, 250, 236, 255), font=title_font)
+    draw.text((86, 84), "Animal の 第六感", fill=(255, 250, 236, 255), font=title_font)
     draw.text((92, 184), "Mixed-language sixth-sense hook by Musia", fill=(194, 244, 229, 235), font=sub_font)
     draw.text((92, 784), "Fun Lazying Art", fill=(255, 244, 210, 220), font=sub_font)
     img.save(cover_path)
@@ -299,22 +335,22 @@ def write_media_item() -> None:
         "version": 1,
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "Animal no 第六感",
-        "localizedTitles": {"en": "Animal no Sixth Sense", "zh-Hans": "动物的第六感", "ja": "アニマルの第六感"},
+        "title": "Animal の 第六感",
+        "localizedTitles": {"en": "Animal's Sixth Sense", "zh-Hans": "动物的第六感", "ja": "アニマルの第六感"},
         "artist": "Musia",
         "description": "A Musia mixed-language ACE-Step hook about animal intuition, neon rain, city walls, forest calling, and the sixth sense.",
         "caption": "Neon rain, a forest call, and the animal instinct that points the soul forward.",
         "duration": round(duration(SELECTED_AUDIO), 3),
         "canonicalUrl": f"https://fun.lazying.art/#{MEDIA_ID}",
         "share": {
-            "title": "Animal no 第六感 - Fun Lazying Art",
+            "title": "Animal の 第六感 - Fun Lazying Art",
             "description": "A Musia mixed-language sixth-sense hook with corrected lyrics, translations, chords, and guitar fingering.",
             "url": f"https://fun.lazying.art/#{MEDIA_ID}",
             "image": COVER,
             "siteName": "Fun Lazying Art",
         },
         "assets": {
-            "cover": {"id": "cover", "label": "Animal no 第六感 cover", "role": "cover", "src": COVER, "mime": "image/png", "width": 1600, "height": 900},
+            "cover": {"id": "cover", "label": "Animal の 第六感 cover", "role": "cover", "src": COVER, "mime": "image/png", "width": 1600, "height": 900},
             "poster": {"id": "poster", "label": "16:9 Poster", "role": "poster", "src": COVER, "mime": "image/png", "width": 1600, "height": 900},
             "primaryAudio": {
                 "id": "animal-no-di-liu-gan-mixed",
@@ -356,8 +392,8 @@ def write_media_item() -> None:
             "generationProject": str(PROJECT.relative_to(ROOT)),
             "audioSource": "ACE-Step XL Turbo zh-biased mixed-language seed 747304 selected after rejecting native-CJK, latin-hook, and SFT candidates with poor lyric recovery.",
             "analysisRun": str(ANALYSIS.relative_to(ROOT)),
-            "quality": {"gate": "experimental-public", "note": "Mixed-language ACE render is publishable as a short hook, but not a full faithful long lyric render."},
-            "lyricCorrection": "Same-render ASR plus intended lyric where sound-close; skipped prompt lines omitted.",
+            "quality": {"gate": "experimental-public", "note": "Mixed-language ACE render is publishable as an imperfect but musical mixed hook."},
+            "lyricCorrection": "Full same-render ASR timing from data/runs/animal-no-di-liu-gan-mixed-seed-747304-analysis/analysis/lyrics.json plus intended lyric where sound-close.",
             "publicAudio": PUBLIC_AUDIO_NAME,
         },
         "artifacts": [
@@ -375,7 +411,7 @@ def update_catalog() -> None:
     item = {
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "Animal no 第六感",
+        "title": "Animal の 第六感",
         "artist": "Musia",
         "summary": "A mixed-language sixth-sense hook with corrected lyrics, translations, chords, and guitar fingering.",
         "manifest": f"data/songs/{MEDIA_ID}/manifest.json",
