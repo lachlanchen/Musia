@@ -272,6 +272,13 @@ def font(size: int) -> ImageFont.ImageFont:
 
 def make_cover() -> None:
     cover_path = ROOT / "website" / COVER
+    if cover_path.exists():
+        return
+
+    # Fallback only. The public cover is an image-generated, text-free asset
+    # committed at website/assets/covers/animal-no-di-liu-gan-16x9.png.
+    # Keep this fallback text-free so reruns never leak title text onto a
+    # music-publish cover.
     cover_path.parent.mkdir(parents=True, exist_ok=True)
     width, height = 1600, 900
     img = Image.new("RGB", (width, height), "#111827")
@@ -315,11 +322,10 @@ def make_cover() -> None:
         draw.line([base, (base[0] + side * 42, base[1] - 92)], fill=(255, 248, 219, 230), width=9)
         draw.line([(base[0] + side * 24, base[1] - 56), (base[0] + side * 76, base[1] - 64)], fill=(255, 248, 219, 200), width=6)
 
-    title_font = font(78)
-    sub_font = font(34)
-    draw.text((86, 84), "Animal の 第六感", fill=(255, 250, 236, 255), font=title_font)
-    draw.text((92, 184), "Mixed-language sixth-sense hook by Musia", fill=(194, 244, 229, 235), font=sub_font)
-    draw.text((92, 784), "Fun Lazying Art", fill=(255, 244, 210, 220), font=sub_font)
+    for radius, alpha in [(112, 85), (62, 180), (24, 245)]:
+        draw.ellipse((cx + 22 - radius, cy - radius, cx + 22 + radius, cy + radius), fill=(48, 237, 225, alpha))
+    for offset, color in [(0, (45, 237, 225, 180)), (26, (237, 72, 173, 150)), (-30, (246, 209, 83, 145))]:
+        draw.arc((cx - 330 + offset, cy - 280, cx + 460 + offset, cy + 260), 198, 340, fill=color, width=8)
     img.save(cover_path)
 
 
@@ -394,6 +400,7 @@ def write_media_item() -> None:
             "analysisRun": str(ANALYSIS.relative_to(ROOT)),
             "quality": {"gate": "experimental-public", "note": "Mixed-language ACE render is publishable as an imperfect but musical mixed hook."},
             "lyricCorrection": "Full same-render ASR timing from data/runs/animal-no-di-liu-gan-mixed-seed-747304-analysis/analysis/lyrics.json plus intended lyric where sound-close.",
+            "coverSource": "Image generation, 16:9 text-free cover: fox-like animal intuition between neon rain city and glowing forest.",
             "publicAudio": PUBLIC_AUDIO_NAME,
         },
         "artifacts": [
