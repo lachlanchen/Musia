@@ -1255,6 +1255,7 @@ body.capture-mode.capture-portrait.advanced-mode .chord-fingering {
 
 body.capture-mode.capture-portrait.capture-guitar-focus .lyrics-card {
   grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
 }
 
 body.capture-mode.capture-portrait.capture-guitar-focus .lyrics-head,
@@ -1271,9 +1272,10 @@ body.capture-mode.capture-portrait.capture-guitar-focus.advanced-mode .advanced-
   align-self: stretch;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
-  width: min(94%, 860px);
-  margin: 0 auto;
-  padding: 26px;
+  width: min(92%, 820px);
+  margin: 12px auto 0;
+  padding: 24px;
+  min-height: 0;
 }
 
 body.capture-mode.capture-portrait.capture-guitar-focus.advanced-mode .advanced-panel h3 {
@@ -1281,8 +1283,10 @@ body.capture-mode.capture-portrait.capture-guitar-focus.advanced-mode .advanced-
 }
 
 body.capture-mode.capture-portrait.capture-guitar-focus.advanced-mode .guitar-diagram {
-  width: min(680px, 94%);
-  height: 560px;
+  width: min(660px, 94%);
+  height: 100%;
+  min-height: 520px;
+  margin-bottom: 14px;
 }
 
 body.capture-mode.capture-portrait.capture-guitar-focus.advanced-mode .guitar-marker {
