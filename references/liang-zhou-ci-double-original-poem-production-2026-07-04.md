@@ -111,3 +111,29 @@ start slightly before the first vocal, not exactly on the syllable
 
 The first lyric line starts at `18.38s`. A smoother recording start is around
 `16.50s`, or another nearby musical lead-in selected by listening.
+
+## 2026-07-05 Lyric Correction
+
+The first website publication had 17 active lyric lines and omitted the
+early-hook `葡萄美酒夜光杯` before `欲饮琵琶马上催`. This was corrected after a
+fresh Demucs-separated `large-v3` ASR re-audit:
+
+```text
+data/runs/liang-zhou-ci-double-original-poem-selected-large-v3-reaudit-20260705/
+```
+
+ASR merged that early hook region as `大马上催` from `30.66 -> 39.66`, which is
+better treated as compressed/garbled recovery of the source lyric, not as an
+instrumental gap. The website now preserves the source-supported 18-line
+structure and splits:
+
+```text
+30.66 -> 38.60  葡萄美酒夜光杯
+38.60 -> 39.66  欲饮琵琶马上催
+```
+
+See:
+
+```text
+references/liang-zhou-ci-lyric-correction-2026-07-05.md
+```

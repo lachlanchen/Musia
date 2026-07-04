@@ -321,8 +321,91 @@
     },
     {
       "id": "l05",
+      "start": 30.66,
+      "end": 38.6,
+      "text": "葡萄の美酒は夜光の杯に輝く",
+      "singableText": "葡萄の美酒は夜光の杯に輝く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "葡",
+          "start": 30.66,
+          "end": 31.271,
+          "reading": "ぶ"
+        },
+        {
+          "text": "萄",
+          "start": 31.271,
+          "end": 31.882,
+          "reading": "どう"
+        },
+        {
+          "text": "の",
+          "start": 31.882,
+          "end": 32.492
+        },
+        {
+          "text": "美",
+          "start": 32.492,
+          "end": 33.103,
+          "reading": "び"
+        },
+        {
+          "text": "酒",
+          "start": 33.103,
+          "end": 33.714,
+          "reading": "さけ"
+        },
+        {
+          "text": "は",
+          "start": 33.714,
+          "end": 34.325
+        },
+        {
+          "text": "夜",
+          "start": 34.325,
+          "end": 34.935,
+          "reading": "よる"
+        },
+        {
+          "text": "光",
+          "start": 34.935,
+          "end": 35.546,
+          "reading": "ひかり"
+        },
+        {
+          "text": "の",
+          "start": 35.546,
+          "end": 36.157
+        },
+        {
+          "text": "杯",
+          "start": 36.157,
+          "end": 36.768,
+          "reading": "はい"
+        },
+        {
+          "text": "に",
+          "start": 36.768,
+          "end": 37.378
+        },
+        {
+          "text": "輝",
+          "start": 37.378,
+          "end": 37.989,
+          "reading": "てる"
+        },
+        {
+          "text": "く",
+          "start": 37.989,
+          "end": 38.6
+        }
+      ]
+    },
+    {
+      "id": "l06",
       "start": 38.6,
-      "end": 39.64,
+      "end": 39.66,
       "text": "飲まんとすれば琵琶が馬上で急かす",
       "singableText": "飲まんとすれば琵琶が馬上で急かす",
       "role": "lyric",
@@ -330,94 +413,94 @@
         {
           "text": "飲",
           "start": 38.6,
-          "end": 38.665,
+          "end": 38.666,
           "reading": "いん"
         },
         {
           "text": "ま",
-          "start": 38.665,
-          "end": 38.73
+          "start": 38.666,
+          "end": 38.733
         },
         {
           "text": "ん",
-          "start": 38.73,
-          "end": 38.795
+          "start": 38.733,
+          "end": 38.799
         },
         {
           "text": "と",
-          "start": 38.795,
-          "end": 38.86
+          "start": 38.799,
+          "end": 38.865
         },
         {
           "text": "す",
-          "start": 38.86,
-          "end": 38.925
+          "start": 38.865,
+          "end": 38.931
         },
         {
           "text": "れ",
-          "start": 38.925,
-          "end": 38.99
+          "start": 38.931,
+          "end": 38.998
         },
         {
           "text": "ば",
-          "start": 38.99,
-          "end": 39.055
+          "start": 38.998,
+          "end": 39.064
         },
         {
           "text": "琵",
-          "start": 39.055,
-          "end": 39.12,
+          "start": 39.064,
+          "end": 39.13,
           "reading": "び"
         },
         {
           "text": "琶",
-          "start": 39.12,
-          "end": 39.185,
+          "start": 39.13,
+          "end": 39.196,
           "reading": "は"
         },
         {
           "text": "が",
-          "start": 39.185,
-          "end": 39.25
+          "start": 39.196,
+          "end": 39.262
         },
         {
           "text": "馬",
-          "start": 39.25,
-          "end": 39.315,
+          "start": 39.262,
+          "end": 39.329,
           "reading": "うま"
         },
         {
           "text": "上",
-          "start": 39.315,
-          "end": 39.38,
+          "start": 39.329,
+          "end": 39.395,
           "reading": "うえ"
         },
         {
           "text": "で",
-          "start": 39.38,
-          "end": 39.445
+          "start": 39.395,
+          "end": 39.461
         },
         {
           "text": "急",
-          "start": 39.445,
-          "end": 39.51,
+          "start": 39.461,
+          "end": 39.527,
           "reading": "きゅう"
         },
         {
           "text": "か",
-          "start": 39.51,
-          "end": 39.575
+          "start": 39.527,
+          "end": 39.594
         },
         {
           "text": "す",
-          "start": 39.575,
-          "end": 39.64
+          "start": 39.594,
+          "end": 39.66
         }
       ]
     },
     {
-      "id": "l06",
-      "start": 39.72,
+      "id": "l07",
+      "start": 39.66,
       "end": 42.46,
       "text": "酔って沙場に伏しても君よ笑うな",
       "singableText": "酔って沙場に伏しても君よ笑うな",
@@ -425,89 +508,89 @@
       "tokens": [
         {
           "text": "酔",
-          "start": 39.72,
-          "end": 39.903,
+          "start": 39.66,
+          "end": 39.847,
           "reading": "すい"
         },
         {
           "text": "っ",
-          "start": 39.903,
-          "end": 40.085
+          "start": 39.847,
+          "end": 40.033
         },
         {
           "text": "て",
-          "start": 40.085,
-          "end": 40.268
+          "start": 40.033,
+          "end": 40.22
         },
         {
           "text": "沙",
-          "start": 40.268,
-          "end": 40.451,
+          "start": 40.22,
+          "end": 40.407,
           "reading": "さ"
         },
         {
           "text": "場",
-          "start": 40.451,
-          "end": 40.633,
+          "start": 40.407,
+          "end": 40.593,
           "reading": "ば"
         },
         {
           "text": "に",
-          "start": 40.633,
-          "end": 40.816
+          "start": 40.593,
+          "end": 40.78
         },
         {
           "text": "伏",
-          "start": 40.816,
-          "end": 40.999,
+          "start": 40.78,
+          "end": 40.967,
           "reading": "ふく"
         },
         {
           "text": "し",
-          "start": 40.999,
-          "end": 41.181
+          "start": 40.967,
+          "end": 41.153
         },
         {
           "text": "て",
-          "start": 41.181,
-          "end": 41.364
+          "start": 41.153,
+          "end": 41.34
         },
         {
           "text": "も",
-          "start": 41.364,
-          "end": 41.547
+          "start": 41.34,
+          "end": 41.527
         },
         {
           "text": "君",
-          "start": 41.547,
-          "end": 41.729,
+          "start": 41.527,
+          "end": 41.713,
           "reading": "くん"
         },
         {
           "text": "よ",
-          "start": 41.729,
-          "end": 41.912
+          "start": 41.713,
+          "end": 41.9
         },
         {
           "text": "笑",
-          "start": 41.912,
-          "end": 42.095,
+          "start": 41.9,
+          "end": 42.087,
           "reading": "わらい"
         },
         {
           "text": "う",
-          "start": 42.095,
-          "end": 42.277
+          "start": 42.087,
+          "end": 42.273
         },
         {
           "text": "な",
-          "start": 42.277,
+          "start": 42.273,
           "end": 42.46
         }
       ]
     },
     {
-      "id": "l07",
+      "id": "l08",
       "start": 42.46,
       "end": 45.52,
       "text": "昔から征戦より幾人が帰っただろう",
@@ -603,7 +686,7 @@
       ]
     },
     {
-      "id": "l08",
+      "id": "l09",
       "start": 58.94,
       "end": 61.92,
       "text": "羌笛はなぜ楊柳を怨むのか",
@@ -678,7 +761,7 @@
       ]
     },
     {
-      "id": "l09",
+      "id": "l10",
       "start": 62.42,
       "end": 64.58,
       "text": "春風は玉門関を越えない",
@@ -749,7 +832,7 @@
       ]
     },
     {
-      "id": "l10",
+      "id": "l11",
       "start": 64.58,
       "end": 67.72,
       "text": "葡萄の美酒は夜光の杯に輝く",
@@ -832,7 +915,7 @@
       ]
     },
     {
-      "id": "l11",
+      "id": "l12",
       "start": 67.74,
       "end": 70.4,
       "text": "飲まんとすれば琵琶が馬上で急かす",
@@ -928,9 +1011,9 @@
       ]
     },
     {
-      "id": "l12",
+      "id": "l13",
       "start": 70.4,
-      "end": 72.9,
+      "end": 72.88,
       "text": "酔って沙場に伏しても君よ笑うな",
       "singableText": "酔って沙場に伏しても君よ笑うな",
       "role": "lyric",
@@ -938,89 +1021,89 @@
         {
           "text": "酔",
           "start": 70.4,
-          "end": 70.567,
+          "end": 70.565,
           "reading": "すい"
         },
         {
           "text": "っ",
-          "start": 70.567,
-          "end": 70.733
+          "start": 70.565,
+          "end": 70.731
         },
         {
           "text": "て",
-          "start": 70.733,
-          "end": 70.9
+          "start": 70.731,
+          "end": 70.896
         },
         {
           "text": "沙",
-          "start": 70.9,
-          "end": 71.067,
+          "start": 70.896,
+          "end": 71.061,
           "reading": "さ"
         },
         {
           "text": "場",
-          "start": 71.067,
-          "end": 71.233,
+          "start": 71.061,
+          "end": 71.227,
           "reading": "ば"
         },
         {
           "text": "に",
-          "start": 71.233,
-          "end": 71.4
+          "start": 71.227,
+          "end": 71.392
         },
         {
           "text": "伏",
-          "start": 71.4,
-          "end": 71.567,
+          "start": 71.392,
+          "end": 71.557,
           "reading": "ふく"
         },
         {
           "text": "し",
-          "start": 71.567,
-          "end": 71.733
+          "start": 71.557,
+          "end": 71.723
         },
         {
           "text": "て",
-          "start": 71.733,
-          "end": 71.9
+          "start": 71.723,
+          "end": 71.888
         },
         {
           "text": "も",
-          "start": 71.9,
-          "end": 72.067
+          "start": 71.888,
+          "end": 72.053
         },
         {
           "text": "君",
-          "start": 72.067,
-          "end": 72.233,
+          "start": 72.053,
+          "end": 72.219,
           "reading": "くん"
         },
         {
           "text": "よ",
-          "start": 72.233,
-          "end": 72.4
+          "start": 72.219,
+          "end": 72.384
         },
         {
           "text": "笑",
-          "start": 72.4,
-          "end": 72.567,
+          "start": 72.384,
+          "end": 72.549,
           "reading": "わらい"
         },
         {
           "text": "う",
-          "start": 72.567,
-          "end": 72.733
+          "start": 72.549,
+          "end": 72.715
         },
         {
           "text": "な",
-          "start": 72.733,
-          "end": 72.9
+          "start": 72.715,
+          "end": 72.88
         }
       ]
     },
     {
-      "id": "l13",
-      "start": 73.2,
+      "id": "l14",
+      "start": 72.88,
       "end": 75.22,
       "text": "昔から征戦より幾人が帰っただろう",
       "singableText": "昔から征戦より幾人が帰っただろう",
@@ -1028,96 +1111,96 @@
       "tokens": [
         {
           "text": "昔",
-          "start": 73.2,
-          "end": 73.326,
+          "start": 72.88,
+          "end": 73.026,
           "reading": "むかし"
         },
         {
           "text": "か",
-          "start": 73.326,
-          "end": 73.453
+          "start": 73.026,
+          "end": 73.172
         },
         {
           "text": "ら",
-          "start": 73.453,
-          "end": 73.579
+          "start": 73.172,
+          "end": 73.319
         },
         {
           "text": "征",
-          "start": 73.579,
-          "end": 73.705,
+          "start": 73.319,
+          "end": 73.465,
           "reading": "せい"
         },
         {
           "text": "戦",
-          "start": 73.705,
-          "end": 73.831,
+          "start": 73.465,
+          "end": 73.611,
           "reading": "せん"
         },
         {
           "text": "よ",
-          "start": 73.831,
-          "end": 73.957
+          "start": 73.611,
+          "end": 73.757
         },
         {
           "text": "り",
-          "start": 73.957,
-          "end": 74.084
+          "start": 73.757,
+          "end": 73.904
         },
         {
           "text": "幾",
-          "start": 74.084,
-          "end": 74.21,
+          "start": 73.904,
+          "end": 74.05,
           "reading": "き"
         },
         {
           "text": "人",
-          "start": 74.21,
-          "end": 74.336,
+          "start": 74.05,
+          "end": 74.196,
           "reading": "にん"
         },
         {
           "text": "が",
-          "start": 74.336,
-          "end": 74.463
+          "start": 74.196,
+          "end": 74.343
         },
         {
           "text": "帰",
-          "start": 74.463,
-          "end": 74.589,
+          "start": 74.343,
+          "end": 74.489,
           "reading": "き"
         },
         {
           "text": "っ",
-          "start": 74.589,
-          "end": 74.715
+          "start": 74.489,
+          "end": 74.635
         },
         {
           "text": "た",
-          "start": 74.715,
-          "end": 74.841
+          "start": 74.635,
+          "end": 74.781
         },
         {
           "text": "だ",
-          "start": 74.841,
-          "end": 74.968
+          "start": 74.781,
+          "end": 74.927
         },
         {
           "text": "ろ",
-          "start": 74.968,
-          "end": 75.094
+          "start": 74.927,
+          "end": 75.074
         },
         {
           "text": "う",
-          "start": 75.094,
+          "start": 75.074,
           "end": 75.22
         }
       ]
     },
     {
-      "id": "l14",
+      "id": "l15",
       "start": 75.78,
-      "end": 79.57,
+      "end": 78.86,
       "text": "葡萄の美酒は夜光の杯に輝く",
       "singableText": "葡萄の美酒は夜光の杯に輝く",
       "role": "lyric",
@@ -1125,81 +1208,81 @@
         {
           "text": "葡",
           "start": 75.78,
-          "end": 76.072,
+          "end": 76.017,
           "reading": "ぶ"
         },
         {
           "text": "萄",
-          "start": 76.072,
-          "end": 76.363,
+          "start": 76.017,
+          "end": 76.254,
           "reading": "どう"
         },
         {
           "text": "の",
-          "start": 76.363,
-          "end": 76.655
+          "start": 76.254,
+          "end": 76.491
         },
         {
           "text": "美",
-          "start": 76.655,
-          "end": 76.946,
+          "start": 76.491,
+          "end": 76.728,
           "reading": "び"
         },
         {
           "text": "酒",
-          "start": 76.946,
-          "end": 77.238,
+          "start": 76.728,
+          "end": 76.965,
           "reading": "さけ"
         },
         {
           "text": "は",
-          "start": 77.238,
-          "end": 77.529
+          "start": 76.965,
+          "end": 77.202
         },
         {
           "text": "夜",
-          "start": 77.529,
-          "end": 77.821,
+          "start": 77.202,
+          "end": 77.438,
           "reading": "よる"
         },
         {
           "text": "光",
-          "start": 77.821,
-          "end": 78.112,
+          "start": 77.438,
+          "end": 77.675,
           "reading": "ひかり"
         },
         {
           "text": "の",
-          "start": 78.112,
-          "end": 78.404
+          "start": 77.675,
+          "end": 77.912
         },
         {
           "text": "杯",
-          "start": 78.404,
-          "end": 78.695,
+          "start": 77.912,
+          "end": 78.149,
           "reading": "はい"
         },
         {
           "text": "に",
-          "start": 78.695,
-          "end": 78.987
+          "start": 78.149,
+          "end": 78.386
         },
         {
           "text": "輝",
-          "start": 78.987,
-          "end": 79.278,
+          "start": 78.386,
+          "end": 78.623,
           "reading": "てる"
         },
         {
           "text": "く",
-          "start": 79.278,
-          "end": 79.57
+          "start": 78.623,
+          "end": 78.86
         }
       ]
     },
     {
-      "id": "l15",
-      "start": 79.57,
+      "id": "l16",
+      "start": 78.86,
       "end": 82.23,
       "text": "飲まんとすれば琵琶が馬上で急かす",
       "singableText": "飲まんとすれば琵琶が馬上で急かす",
@@ -1207,95 +1290,95 @@
       "tokens": [
         {
           "text": "飲",
-          "start": 79.57,
-          "end": 79.736,
+          "start": 78.86,
+          "end": 79.071,
           "reading": "いん"
         },
         {
           "text": "ま",
-          "start": 79.736,
-          "end": 79.902
+          "start": 79.071,
+          "end": 79.281
         },
         {
           "text": "ん",
-          "start": 79.902,
-          "end": 80.069
+          "start": 79.281,
+          "end": 79.492
         },
         {
           "text": "と",
-          "start": 80.069,
-          "end": 80.235
+          "start": 79.492,
+          "end": 79.703
         },
         {
           "text": "す",
-          "start": 80.235,
-          "end": 80.401
+          "start": 79.703,
+          "end": 79.913
         },
         {
           "text": "れ",
-          "start": 80.401,
-          "end": 80.567
+          "start": 79.913,
+          "end": 80.124
         },
         {
           "text": "ば",
-          "start": 80.567,
-          "end": 80.734
+          "start": 80.124,
+          "end": 80.334
         },
         {
           "text": "琵",
-          "start": 80.734,
-          "end": 80.9,
+          "start": 80.334,
+          "end": 80.545,
           "reading": "び"
         },
         {
           "text": "琶",
-          "start": 80.9,
-          "end": 81.066,
+          "start": 80.545,
+          "end": 80.756,
           "reading": "は"
         },
         {
           "text": "が",
-          "start": 81.066,
-          "end": 81.233
+          "start": 80.756,
+          "end": 80.966
         },
         {
           "text": "馬",
-          "start": 81.233,
-          "end": 81.399,
+          "start": 80.966,
+          "end": 81.177,
           "reading": "うま"
         },
         {
           "text": "上",
-          "start": 81.399,
-          "end": 81.565,
+          "start": 81.177,
+          "end": 81.388,
           "reading": "うえ"
         },
         {
           "text": "で",
-          "start": 81.565,
-          "end": 81.731
+          "start": 81.388,
+          "end": 81.598
         },
         {
           "text": "急",
-          "start": 81.731,
-          "end": 81.898,
+          "start": 81.598,
+          "end": 81.809,
           "reading": "きゅう"
         },
         {
           "text": "か",
-          "start": 81.898,
-          "end": 82.064
+          "start": 81.809,
+          "end": 82.019
         },
         {
           "text": "す",
-          "start": 82.064,
+          "start": 82.019,
           "end": 82.23
         }
       ]
     },
     {
-      "id": "l16",
-      "start": 83.63,
+      "id": "l17",
+      "start": 83.52,
       "end": 86.57,
       "text": "酔って沙場に伏しても君よ笑うな",
       "singableText": "酔って沙場に伏しても君よ笑うな",
@@ -1303,90 +1386,90 @@
       "tokens": [
         {
           "text": "酔",
-          "start": 83.63,
-          "end": 83.826,
+          "start": 83.52,
+          "end": 83.723,
           "reading": "すい"
         },
         {
           "text": "っ",
-          "start": 83.826,
-          "end": 84.022
+          "start": 83.723,
+          "end": 83.927
         },
         {
           "text": "て",
-          "start": 84.022,
-          "end": 84.218
+          "start": 83.927,
+          "end": 84.13
         },
         {
           "text": "沙",
-          "start": 84.218,
-          "end": 84.414,
+          "start": 84.13,
+          "end": 84.333,
           "reading": "さ"
         },
         {
           "text": "場",
-          "start": 84.414,
-          "end": 84.61,
+          "start": 84.333,
+          "end": 84.537,
           "reading": "ば"
         },
         {
           "text": "に",
-          "start": 84.61,
-          "end": 84.806
+          "start": 84.537,
+          "end": 84.74
         },
         {
           "text": "伏",
-          "start": 84.806,
-          "end": 85.002,
+          "start": 84.74,
+          "end": 84.943,
           "reading": "ふく"
         },
         {
           "text": "し",
-          "start": 85.002,
-          "end": 85.198
+          "start": 84.943,
+          "end": 85.147
         },
         {
           "text": "て",
-          "start": 85.198,
-          "end": 85.394
+          "start": 85.147,
+          "end": 85.35
         },
         {
           "text": "も",
-          "start": 85.394,
-          "end": 85.59
+          "start": 85.35,
+          "end": 85.553
         },
         {
           "text": "君",
-          "start": 85.59,
-          "end": 85.786,
+          "start": 85.553,
+          "end": 85.757,
           "reading": "くん"
         },
         {
           "text": "よ",
-          "start": 85.786,
-          "end": 85.982
+          "start": 85.757,
+          "end": 85.96
         },
         {
           "text": "笑",
-          "start": 85.982,
-          "end": 86.178,
+          "start": 85.96,
+          "end": 86.163,
           "reading": "わらい"
         },
         {
           "text": "う",
-          "start": 86.178,
-          "end": 86.374
+          "start": 86.163,
+          "end": 86.367
         },
         {
           "text": "な",
-          "start": 86.374,
+          "start": 86.367,
           "end": 86.57
         }
       ]
     },
     {
-      "id": "l17",
-      "start": 86.95,
+      "id": "l18",
+      "start": 87.04,
       "end": 90.37,
       "text": "昔から征戦より幾人が帰っただろう",
       "singableText": "昔から征戦より幾人が帰っただろう",
@@ -1394,88 +1477,88 @@
       "tokens": [
         {
           "text": "昔",
-          "start": 86.95,
-          "end": 87.164,
+          "start": 87.04,
+          "end": 87.248,
           "reading": "むかし"
         },
         {
           "text": "か",
-          "start": 87.164,
-          "end": 87.377
+          "start": 87.248,
+          "end": 87.456
         },
         {
           "text": "ら",
-          "start": 87.377,
-          "end": 87.591
+          "start": 87.456,
+          "end": 87.664
         },
         {
           "text": "征",
-          "start": 87.591,
-          "end": 87.805,
+          "start": 87.664,
+          "end": 87.873,
           "reading": "せい"
         },
         {
           "text": "戦",
-          "start": 87.805,
-          "end": 88.019,
+          "start": 87.873,
+          "end": 88.081,
           "reading": "せん"
         },
         {
           "text": "よ",
-          "start": 88.019,
-          "end": 88.233
+          "start": 88.081,
+          "end": 88.289
         },
         {
           "text": "り",
-          "start": 88.233,
-          "end": 88.446
+          "start": 88.289,
+          "end": 88.497
         },
         {
           "text": "幾",
-          "start": 88.446,
-          "end": 88.66,
+          "start": 88.497,
+          "end": 88.705,
           "reading": "き"
         },
         {
           "text": "人",
-          "start": 88.66,
-          "end": 88.874,
+          "start": 88.705,
+          "end": 88.913,
           "reading": "にん"
         },
         {
           "text": "が",
-          "start": 88.874,
-          "end": 89.088
+          "start": 88.913,
+          "end": 89.121
         },
         {
           "text": "帰",
-          "start": 89.088,
-          "end": 89.301,
+          "start": 89.121,
+          "end": 89.329,
           "reading": "き"
         },
         {
           "text": "っ",
-          "start": 89.301,
-          "end": 89.515
+          "start": 89.329,
+          "end": 89.538
         },
         {
           "text": "た",
-          "start": 89.515,
-          "end": 89.729
+          "start": 89.538,
+          "end": 89.746
         },
         {
           "text": "だ",
-          "start": 89.729,
-          "end": 89.943
+          "start": 89.746,
+          "end": 89.954
         },
         {
           "text": "ろ",
-          "start": 89.943,
-          "end": 90.156
+          "start": 89.954,
+          "end": 90.162
         },
         {
           "text": "う",
-          "start": 90.156,
+          "start": 90.162,
           "end": 90.37
         }
       ]
@@ -1483,6 +1566,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ACE-Step XL Turbo seed 747323. Timings use Demucs-separated vocal large-v3 ASR. The active Mandarin track restores original Liangzhou Ci poem lines where ASR drift is sound-close; the omitted first 葡萄美酒夜光杯 in the early hook is not published because the vocal did not clearly recover it."
+    "correction": "ACE-Step XL Turbo seed 747323. Timings use Demucs-separated vocal large-v3 ASR. The active Mandarin track restores original Liangzhou Ci poem lines where ASR drift is sound-close. The early-hook 葡萄美酒夜光杯 is preserved because the source lyric expects the Wang Han quatrain there and ASR/listening evidence points to compressed or weakly recovered vocal content rather than a true instrumental gap."
   }
 }

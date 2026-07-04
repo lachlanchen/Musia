@@ -220,8 +220,60 @@
     },
     {
       "id": "l05",
+      "start": 30.66,
+      "end": 38.6,
+      "text": "葡萄美酒夜光杯",
+      "singableText": "葡萄美酒夜光杯",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "葡",
+          "start": 30.66,
+          "end": 31.794,
+          "pinyin": "pu2"
+        },
+        {
+          "text": "萄",
+          "start": 31.794,
+          "end": 32.929,
+          "pinyin": "tao2"
+        },
+        {
+          "text": "美",
+          "start": 32.929,
+          "end": 34.063,
+          "pinyin": "mei3"
+        },
+        {
+          "text": "酒",
+          "start": 34.063,
+          "end": 35.197,
+          "pinyin": "jiu3"
+        },
+        {
+          "text": "夜",
+          "start": 35.197,
+          "end": 36.331,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "光",
+          "start": 36.331,
+          "end": 37.466,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "杯",
+          "start": 37.466,
+          "end": 38.6,
+          "pinyin": "bei1"
+        }
+      ]
+    },
+    {
+      "id": "l06",
       "start": 38.6,
-      "end": 39.64,
+      "end": 39.66,
       "text": "欲饮琵琶马上催",
       "singableText": "欲饮琵琶马上催",
       "role": "lyric",
@@ -229,50 +281,50 @@
         {
           "text": "欲",
           "start": 38.6,
-          "end": 38.749,
+          "end": 38.751,
           "pinyin": "yu4"
         },
         {
           "text": "饮",
-          "start": 38.749,
-          "end": 38.897,
+          "start": 38.751,
+          "end": 38.903,
           "pinyin": "yin3"
         },
         {
           "text": "琵",
-          "start": 38.897,
-          "end": 39.046,
+          "start": 38.903,
+          "end": 39.054,
           "pinyin": "pi2"
         },
         {
           "text": "琶",
-          "start": 39.046,
-          "end": 39.194,
+          "start": 39.054,
+          "end": 39.206,
           "pinyin": "pa2"
         },
         {
           "text": "马",
-          "start": 39.194,
-          "end": 39.343,
+          "start": 39.206,
+          "end": 39.357,
           "pinyin": "ma3"
         },
         {
           "text": "上",
-          "start": 39.343,
-          "end": 39.491,
+          "start": 39.357,
+          "end": 39.509,
           "pinyin": "shang4"
         },
         {
           "text": "催",
-          "start": 39.491,
-          "end": 39.64,
+          "start": 39.509,
+          "end": 39.66,
           "pinyin": "cui1"
         }
       ]
     },
     {
-      "id": "l06",
-      "start": 39.72,
+      "id": "l07",
+      "start": 39.66,
       "end": 42.46,
       "text": "醉卧沙场君莫笑",
       "singableText": "醉卧沙场君莫笑",
@@ -280,50 +332,50 @@
       "tokens": [
         {
           "text": "醉",
-          "start": 39.72,
-          "end": 40.111,
+          "start": 39.66,
+          "end": 40.06,
           "pinyin": "zui4"
         },
         {
           "text": "卧",
-          "start": 40.111,
-          "end": 40.503,
+          "start": 40.06,
+          "end": 40.46,
           "pinyin": "wo4"
         },
         {
           "text": "沙",
-          "start": 40.503,
-          "end": 40.894,
+          "start": 40.46,
+          "end": 40.86,
           "pinyin": "sha1"
         },
         {
           "text": "场",
-          "start": 40.894,
-          "end": 41.286,
+          "start": 40.86,
+          "end": 41.26,
           "pinyin": "chang3"
         },
         {
           "text": "君",
-          "start": 41.286,
-          "end": 41.677,
+          "start": 41.26,
+          "end": 41.66,
           "pinyin": "jun1"
         },
         {
           "text": "莫",
-          "start": 41.677,
-          "end": 42.069,
+          "start": 41.66,
+          "end": 42.06,
           "pinyin": "mo4"
         },
         {
           "text": "笑",
-          "start": 42.069,
+          "start": 42.06,
           "end": 42.46,
           "pinyin": "xiao4"
         }
       ]
     },
     {
-      "id": "l07",
+      "id": "l08",
       "start": 42.46,
       "end": 45.52,
       "text": "古来征战几人回",
@@ -375,7 +427,7 @@
       ]
     },
     {
-      "id": "l08",
+      "id": "l09",
       "start": 58.94,
       "end": 61.92,
       "text": "羌笛何须怨杨柳",
@@ -427,7 +479,7 @@
       ]
     },
     {
-      "id": "l09",
+      "id": "l10",
       "start": 62.42,
       "end": 64.58,
       "text": "春风不度玉门关",
@@ -479,7 +531,7 @@
       ]
     },
     {
-      "id": "l10",
+      "id": "l11",
       "start": 64.58,
       "end": 67.72,
       "text": "葡萄美酒夜光杯",
@@ -531,7 +583,7 @@
       ]
     },
     {
-      "id": "l11",
+      "id": "l12",
       "start": 67.74,
       "end": 70.4,
       "text": "欲饮琵琶马上催",
@@ -583,9 +635,9 @@
       ]
     },
     {
-      "id": "l12",
+      "id": "l13",
       "start": 70.4,
-      "end": 72.9,
+      "end": 72.88,
       "text": "醉卧沙场君莫笑",
       "singableText": "醉卧沙场君莫笑",
       "role": "lyric",
@@ -593,50 +645,50 @@
         {
           "text": "醉",
           "start": 70.4,
-          "end": 70.757,
+          "end": 70.754,
           "pinyin": "zui4"
         },
         {
           "text": "卧",
-          "start": 70.757,
-          "end": 71.114,
+          "start": 70.754,
+          "end": 71.109,
           "pinyin": "wo4"
         },
         {
           "text": "沙",
-          "start": 71.114,
-          "end": 71.471,
+          "start": 71.109,
+          "end": 71.463,
           "pinyin": "sha1"
         },
         {
           "text": "场",
-          "start": 71.471,
-          "end": 71.829,
+          "start": 71.463,
+          "end": 71.817,
           "pinyin": "chang3"
         },
         {
           "text": "君",
-          "start": 71.829,
-          "end": 72.186,
+          "start": 71.817,
+          "end": 72.171,
           "pinyin": "jun1"
         },
         {
           "text": "莫",
-          "start": 72.186,
-          "end": 72.543,
+          "start": 72.171,
+          "end": 72.526,
           "pinyin": "mo4"
         },
         {
           "text": "笑",
-          "start": 72.543,
-          "end": 72.9,
+          "start": 72.526,
+          "end": 72.88,
           "pinyin": "xiao4"
         }
       ]
     },
     {
-      "id": "l13",
-      "start": 73.2,
+      "id": "l14",
+      "start": 72.88,
       "end": 75.22,
       "text": "古来征战几人回",
       "singableText": "古来征战几人回",
@@ -644,52 +696,52 @@
       "tokens": [
         {
           "text": "古",
-          "start": 73.2,
-          "end": 73.489,
+          "start": 72.88,
+          "end": 73.214,
           "pinyin": "gu3"
         },
         {
           "text": "来",
-          "start": 73.489,
-          "end": 73.777,
+          "start": 73.214,
+          "end": 73.549,
           "pinyin": "lai2"
         },
         {
           "text": "征",
-          "start": 73.777,
-          "end": 74.066,
+          "start": 73.549,
+          "end": 73.883,
           "pinyin": "zheng1"
         },
         {
           "text": "战",
-          "start": 74.066,
-          "end": 74.354,
+          "start": 73.883,
+          "end": 74.217,
           "pinyin": "zhan4"
         },
         {
           "text": "几",
-          "start": 74.354,
-          "end": 74.643,
+          "start": 74.217,
+          "end": 74.551,
           "pinyin": "ji3"
         },
         {
           "text": "人",
-          "start": 74.643,
-          "end": 74.931,
+          "start": 74.551,
+          "end": 74.886,
           "pinyin": "ren2"
         },
         {
           "text": "回",
-          "start": 74.931,
+          "start": 74.886,
           "end": 75.22,
           "pinyin": "hui2"
         }
       ]
     },
     {
-      "id": "l14",
+      "id": "l15",
       "start": 75.78,
-      "end": 79.57,
+      "end": 78.86,
       "text": "葡萄美酒夜光杯",
       "singableText": "葡萄美酒夜光杯",
       "role": "lyric",
@@ -697,50 +749,50 @@
         {
           "text": "葡",
           "start": 75.78,
-          "end": 76.321,
+          "end": 76.22,
           "pinyin": "pu2"
         },
         {
           "text": "萄",
-          "start": 76.321,
-          "end": 76.863,
+          "start": 76.22,
+          "end": 76.66,
           "pinyin": "tao2"
         },
         {
           "text": "美",
-          "start": 76.863,
-          "end": 77.404,
+          "start": 76.66,
+          "end": 77.1,
           "pinyin": "mei3"
         },
         {
           "text": "酒",
-          "start": 77.404,
-          "end": 77.946,
+          "start": 77.1,
+          "end": 77.54,
           "pinyin": "jiu3"
         },
         {
           "text": "夜",
-          "start": 77.946,
-          "end": 78.487,
+          "start": 77.54,
+          "end": 77.98,
           "pinyin": "ye4"
         },
         {
           "text": "光",
-          "start": 78.487,
-          "end": 79.029,
+          "start": 77.98,
+          "end": 78.42,
           "pinyin": "guang1"
         },
         {
           "text": "杯",
-          "start": 79.029,
-          "end": 79.57,
+          "start": 78.42,
+          "end": 78.86,
           "pinyin": "bei1"
         }
       ]
     },
     {
-      "id": "l15",
-      "start": 79.57,
+      "id": "l16",
+      "start": 78.86,
       "end": 82.23,
       "text": "欲饮琵琶马上催",
       "singableText": "欲饮琵琶马上催",
@@ -748,51 +800,51 @@
       "tokens": [
         {
           "text": "欲",
-          "start": 79.57,
-          "end": 79.95,
+          "start": 78.86,
+          "end": 79.341,
           "pinyin": "yu4"
         },
         {
           "text": "饮",
-          "start": 79.95,
-          "end": 80.33,
+          "start": 79.341,
+          "end": 79.823,
           "pinyin": "yin3"
         },
         {
           "text": "琵",
-          "start": 80.33,
-          "end": 80.71,
+          "start": 79.823,
+          "end": 80.304,
           "pinyin": "pi2"
         },
         {
           "text": "琶",
-          "start": 80.71,
-          "end": 81.09,
+          "start": 80.304,
+          "end": 80.786,
           "pinyin": "pa2"
         },
         {
           "text": "马",
-          "start": 81.09,
-          "end": 81.47,
+          "start": 80.786,
+          "end": 81.267,
           "pinyin": "ma3"
         },
         {
           "text": "上",
-          "start": 81.47,
-          "end": 81.85,
+          "start": 81.267,
+          "end": 81.749,
           "pinyin": "shang4"
         },
         {
           "text": "催",
-          "start": 81.85,
+          "start": 81.749,
           "end": 82.23,
           "pinyin": "cui1"
         }
       ]
     },
     {
-      "id": "l16",
-      "start": 83.63,
+      "id": "l17",
+      "start": 83.52,
       "end": 86.57,
       "text": "醉卧沙场君莫笑",
       "singableText": "醉卧沙场君莫笑",
@@ -800,51 +852,51 @@
       "tokens": [
         {
           "text": "醉",
-          "start": 83.63,
-          "end": 84.05,
+          "start": 83.52,
+          "end": 83.956,
           "pinyin": "zui4"
         },
         {
           "text": "卧",
-          "start": 84.05,
-          "end": 84.47,
+          "start": 83.956,
+          "end": 84.391,
           "pinyin": "wo4"
         },
         {
           "text": "沙",
-          "start": 84.47,
-          "end": 84.89,
+          "start": 84.391,
+          "end": 84.827,
           "pinyin": "sha1"
         },
         {
           "text": "场",
-          "start": 84.89,
-          "end": 85.31,
+          "start": 84.827,
+          "end": 85.263,
           "pinyin": "chang3"
         },
         {
           "text": "君",
-          "start": 85.31,
-          "end": 85.73,
+          "start": 85.263,
+          "end": 85.699,
           "pinyin": "jun1"
         },
         {
           "text": "莫",
-          "start": 85.73,
-          "end": 86.15,
+          "start": 85.699,
+          "end": 86.134,
           "pinyin": "mo4"
         },
         {
           "text": "笑",
-          "start": 86.15,
+          "start": 86.134,
           "end": 86.57,
           "pinyin": "xiao4"
         }
       ]
     },
     {
-      "id": "l17",
-      "start": 86.95,
+      "id": "l18",
+      "start": 87.04,
       "end": 90.37,
       "text": "古来征战几人回",
       "singableText": "古来征战几人回",
@@ -852,43 +904,43 @@
       "tokens": [
         {
           "text": "古",
-          "start": 86.95,
-          "end": 87.439,
+          "start": 87.04,
+          "end": 87.516,
           "pinyin": "gu3"
         },
         {
           "text": "来",
-          "start": 87.439,
-          "end": 87.927,
+          "start": 87.516,
+          "end": 87.991,
           "pinyin": "lai2"
         },
         {
           "text": "征",
-          "start": 87.927,
-          "end": 88.416,
+          "start": 87.991,
+          "end": 88.467,
           "pinyin": "zheng1"
         },
         {
           "text": "战",
-          "start": 88.416,
-          "end": 88.904,
+          "start": 88.467,
+          "end": 88.943,
           "pinyin": "zhan4"
         },
         {
           "text": "几",
-          "start": 88.904,
-          "end": 89.393,
+          "start": 88.943,
+          "end": 89.419,
           "pinyin": "ji3"
         },
         {
           "text": "人",
-          "start": 89.393,
-          "end": 89.881,
+          "start": 89.419,
+          "end": 89.894,
           "pinyin": "ren2"
         },
         {
           "text": "回",
-          "start": 89.881,
+          "start": 89.894,
           "end": 90.37,
           "pinyin": "hui2"
         }
@@ -897,6 +949,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ACE-Step XL Turbo seed 747323. Timings use Demucs-separated vocal large-v3 ASR. The active Mandarin track restores original Liangzhou Ci poem lines where ASR drift is sound-close; the omitted first 葡萄美酒夜光杯 in the early hook is not published because the vocal did not clearly recover it."
+    "correction": "ACE-Step XL Turbo seed 747323. Timings use Demucs-separated vocal large-v3 ASR. The active Mandarin track restores original Liangzhou Ci poem lines where ASR drift is sound-close. The early-hook 葡萄美酒夜光杯 is preserved because the source lyric expects the Wang Han quatrain there and ASR/listening evidence points to compressed or weakly recovered vocal content rather than a true instrumental gap."
   }
 }

@@ -150,19 +150,20 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
         ("l02", 21.66, 25.02, "一片孤城万仞山", "A lonely fortress stands among ten-thousand-fathom mountains.", "一つの孤城が万仞の山に立つ"),
         ("l03", 25.26, 28.06, "羌笛何须怨杨柳", "Why should the Qiang flute lament the willows?", "羌笛はなぜ楊柳を怨むのか"),
         ("l04", 28.32, 30.66, "春风不度玉门关", "The spring wind never crosses Yumen Pass.", "春風は玉門関を越えない"),
-        ("l05", 38.60, 39.64, "欲饮琵琶马上催", "Just as we raise the cup, the pipa urges us from horseback.", "飲まんとすれば琵琶が馬上で急かす"),
-        ("l06", 39.72, 42.46, "醉卧沙场君莫笑", "If I lie drunk on the battlefield, my lord, do not laugh.", "酔って沙場に伏しても君よ笑うな"),
-        ("l07", 42.46, 45.52, "古来征战几人回", "Since ancient times, how many return from war?", "昔から征戦より幾人が帰っただろう"),
-        ("l08", 58.94, 61.92, "羌笛何须怨杨柳", "Why should the Qiang flute lament the willows?", "羌笛はなぜ楊柳を怨むのか"),
-        ("l09", 62.42, 64.58, "春风不度玉门关", "The spring wind never crosses Yumen Pass.", "春風は玉門関を越えない"),
-        ("l10", 64.58, 67.72, "葡萄美酒夜光杯", "Grape wine gleams in a luminous night cup.", "葡萄の美酒は夜光の杯に輝く"),
-        ("l11", 67.74, 70.40, "欲饮琵琶马上催", "Just as we raise the cup, the pipa urges us from horseback.", "飲まんとすれば琵琶が馬上で急かす"),
-        ("l12", 70.40, 72.90, "醉卧沙场君莫笑", "If I lie drunk on the battlefield, my lord, do not laugh.", "酔って沙場に伏しても君よ笑うな"),
-        ("l13", 73.20, 75.22, "古来征战几人回", "Since ancient times, how many return from war?", "昔から征戦より幾人が帰っただろう"),
-        ("l14", 75.78, 79.57, "葡萄美酒夜光杯", "Grape wine gleams in a luminous night cup.", "葡萄の美酒は夜光の杯に輝く"),
-        ("l15", 79.57, 82.23, "欲饮琵琶马上催", "Just as we raise the cup, the pipa urges us from horseback.", "飲まんとすれば琵琶が馬上で急かす"),
-        ("l16", 83.63, 86.57, "醉卧沙场君莫笑", "If I lie drunk on the battlefield, my lord, do not laugh.", "酔って沙場に伏しても君よ笑うな"),
-        ("l17", 86.95, 90.37, "古来征战几人回", "Since ancient times, how many return from war?", "昔から征戦より幾人が帰っただろう"),
+        ("l05", 30.66, 38.60, "葡萄美酒夜光杯", "Grape wine gleams in a luminous night cup.", "葡萄の美酒は夜光の杯に輝く"),
+        ("l06", 38.60, 39.66, "欲饮琵琶马上催", "Just as we raise the cup, the pipa urges us from horseback.", "飲まんとすれば琵琶が馬上で急かす"),
+        ("l07", 39.66, 42.46, "醉卧沙场君莫笑", "If I lie drunk on the battlefield, my lord, do not laugh.", "酔って沙場に伏しても君よ笑うな"),
+        ("l08", 42.46, 45.52, "古来征战几人回", "Since ancient times, how many return from war?", "昔から征戦より幾人が帰っただろう"),
+        ("l09", 58.94, 61.92, "羌笛何须怨杨柳", "Why should the Qiang flute lament the willows?", "羌笛はなぜ楊柳を怨むのか"),
+        ("l10", 62.42, 64.58, "春风不度玉门关", "The spring wind never crosses Yumen Pass.", "春風は玉門関を越えない"),
+        ("l11", 64.58, 67.72, "葡萄美酒夜光杯", "Grape wine gleams in a luminous night cup.", "葡萄の美酒は夜光の杯に輝く"),
+        ("l12", 67.74, 70.40, "欲饮琵琶马上催", "Just as we raise the cup, the pipa urges us from horseback.", "飲まんとすれば琵琶が馬上で急かす"),
+        ("l13", 70.40, 72.88, "醉卧沙场君莫笑", "If I lie drunk on the battlefield, my lord, do not laugh.", "酔って沙場に伏しても君よ笑うな"),
+        ("l14", 72.88, 75.22, "古来征战几人回", "Since ancient times, how many return from war?", "昔から征戦より幾人が帰っただろう"),
+        ("l15", 75.78, 78.86, "葡萄美酒夜光杯", "Grape wine gleams in a luminous night cup.", "葡萄の美酒は夜光の杯に輝く"),
+        ("l16", 78.86, 82.23, "欲饮琵琶马上催", "Just as we raise the cup, the pipa urges us from horseback.", "飲まんとすれば琵琶が馬上で急かす"),
+        ("l17", 83.52, 86.57, "醉卧沙场君莫笑", "If I lie drunk on the battlefield, my lord, do not laugh.", "酔って沙場に伏しても君よ笑うな"),
+        ("l18", 87.04, 90.37, "古来征战几人回", "Since ancient times, how many return from war?", "昔から征戦より幾人が帰っただろう"),
     ]
 
 
@@ -177,8 +178,9 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
             "vocalSet": "zh-vocal",
             "correction": (
                 "ACE-Step XL Turbo seed 747323. Timings use Demucs-separated vocal large-v3 ASR. "
-                "The active Mandarin track restores original Liangzhou Ci poem lines where ASR drift is sound-close; "
-                "the omitted first 葡萄美酒夜光杯 in the early hook is not published because the vocal did not clearly recover it."
+                "The active Mandarin track restores original Liangzhou Ci poem lines where ASR drift is sound-close. "
+                "The early-hook 葡萄美酒夜光杯 is preserved because the source lyric expects the Wang Han quatrain there "
+                "and ASR/listening evidence points to compressed or weakly recovered vocal content rather than a true instrumental gap."
             ),
         },
     }
