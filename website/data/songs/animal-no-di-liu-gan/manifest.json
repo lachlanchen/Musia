@@ -626,7 +626,8 @@
           "script": "Latn+Hans+Jpan",
           "features": [
             "active-vocal",
-            "pinyin"
+            "pinyin",
+            "furigana"
           ],
           "path": "lyrics/mixed-vocal/mul.json"
         },
@@ -641,17 +642,6 @@
           "path": "lyrics/mixed-vocal/en.json"
         },
         {
-          "code": "zh-Hans",
-          "label": "Mandarin Chinese",
-          "nativeLabel": "中文",
-          "script": "Hans",
-          "features": [
-            "pinyin",
-            "translation"
-          ],
-          "path": "lyrics/mixed-vocal/zh-Hans.json"
-        },
-        {
           "code": "ja",
           "label": "Japanese",
           "nativeLabel": "日本語",
@@ -661,6 +651,17 @@
             "translation"
           ],
           "path": "lyrics/mixed-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
         }
       ]
     }

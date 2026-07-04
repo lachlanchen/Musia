@@ -22,6 +22,7 @@ const state = {
   sourceElement: null,
   frequencyData: null,
   captureMode: false,
+  captureMultilingual: false,
   skipIntroOnLoad: false,
   didApplySkipIntro: false,
   renderedChordKey: "",
@@ -197,11 +198,11 @@ function timingAttrs(token) {
 
 function renderRubyToken(token) {
   const attrs = timingAttrs(token);
-  if (token.pinyin) {
-    return `<span class="text-token ruby-token"${attrs}><ruby>${escapeHtml(token.text)}<rt>${escapeHtml(pinyinTone(token.pinyin))}</rt></ruby></span>`;
-  }
   if (token.reading) {
     return `<span class="text-token ruby-token"${attrs}><ruby>${escapeHtml(token.text)}<rt>${escapeHtml(token.reading)}</rt></ruby></span>`;
+  }
+  if (token.pinyin) {
+    return `<span class="text-token ruby-token"${attrs}><ruby>${escapeHtml(token.text)}<rt>${escapeHtml(pinyinTone(token.pinyin))}</rt></ruby></span>`;
   }
   return attrs ? `<span class="text-token ruby-token"${attrs}>${escapeHtml(token.text)}</span>` : escapeHtml(token.text);
 }
@@ -1150,13 +1151,14 @@ function renderCarousel(activeLine) {
     ? rawActiveIndex
     : Math.max(0, nextIndex >= 0 ? nextIndex : previousIndex >= 0 ? previousIndex : upcomingIndex);
   const pairStart = Math.max(0, centerIndex - (centerIndex % 2));
+  const itemIndexes = state.captureMultilingual ? [centerIndex] : [pairStart, pairStart + 1];
   const idle = gap ? `
     <div class="carousel-idle" aria-live="polite">
       <span>${escapeHtml(gap.label)}</span>
       <strong>${escapeHtml(gap.detail || "")}</strong>
     </div>
   ` : "";
-  const items = [pairStart, pairStart + 1]
+  const items = itemIndexes
     .filter((index) => index >= 0 && index < lines.length)
     .map((index) => {
       const active = rawActiveIndex >= 0 && index === rawActiveIndex;
@@ -1522,10 +1524,12 @@ async function boot() {
   const captureFullLyrics = state.captureMode && params.get("fullLyrics") === "1";
   const capturePortrait = state.captureMode && params.get("portrait") === "1";
   const captureGuitarFocus = state.captureMode && params.get("guitarFocus") === "1";
+  state.captureMultilingual = state.captureMode && params.get("multiLyrics") === "1";
   document.body.classList.toggle("capture-mode", state.captureMode);
   document.body.classList.toggle("capture-full-lyrics", captureFullLyrics);
   document.body.classList.toggle("capture-portrait", capturePortrait);
   document.body.classList.toggle("capture-guitar-focus", captureGuitarFocus);
+  document.body.classList.toggle("capture-multilingual", state.captureMultilingual);
   document.body.classList.toggle("capture-ktv", capturePortrait && !captureFullLyrics && !captureGuitarFocus);
   bindEvents();
   setAdvancedMode(state.advancedMode, { persist: false });

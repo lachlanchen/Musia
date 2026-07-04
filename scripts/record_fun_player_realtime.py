@@ -125,6 +125,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--preset", default="ultrafast", help="x264 preset. ultrafast keeps 4K realtime responsive.")
     parser.add_argument("--audio-bitrate", default="320k", help="AAC audio bitrate.")
     parser.add_argument("--include-full-lyrics", action="store_true", help="Keep the full lyrics panel visible.")
+    parser.add_argument("--multilingual-lyrics", action="store_true", help="Use one-line multilingual EN/JP/ZH lyric capture layout.")
     parser.add_argument("--portrait", action=argparse.BooleanOptionalAction, default=True, help="Use portrait capture layout.")
     parser.add_argument("--advanced", action=argparse.BooleanOptionalAction, default=True, help="Enable advanced chord/guitar mode.")
     parser.add_argument("--guitar-focus", action=argparse.BooleanOptionalAction, default=True, help="Use the lower panel for guitar fingering.")
@@ -188,6 +189,7 @@ def main() -> None:
             "asset": asset.get("id") or args.asset_id,
             "capture": "1",
             "fullLyrics": "1" if args.include_full_lyrics else "0",
+            "multiLyrics": "1" if args.multilingual_lyrics else "0",
             "media": args.media_id,
             "portrait": "1" if args.portrait else "0",
             "skipIntro": "0",

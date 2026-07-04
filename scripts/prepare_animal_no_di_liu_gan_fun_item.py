@@ -77,10 +77,31 @@ def split_en(text: str) -> list[str]:
     return [part for part in spaced.split() if part]
 
 
+def has_kana(text: str) -> bool:
+    return any("\u3040" <= char <= "\u30ff" for char in text)
+
+
+def split_ja(text: str) -> list[str]:
+    parts: list[str] = []
+    for item in KAKASI.convert(text):
+        orig = item.get("orig") or ""
+        if not orig or orig.isspace():
+            continue
+        if all(ord(char) < 128 for char in orig):
+            parts.extend(split_en(orig))
+        else:
+            parts.append(orig)
+    return parts
+
+
 def split_visible(text: str, code: str) -> list[str]:
     if code == "en":
         return split_en(text)
+    if code == "ja":
+        return split_ja(text)
     if code == "mul":
+        if has_kana(text):
+            return split_ja(text)
         parts: list[str] = []
         current = ""
         for char in text:
@@ -120,11 +141,12 @@ def tokens_for(line: dict[str, Any], code: str) -> list[dict[str, Any]]:
             "start": round(start + step * index, 3),
             "end": round(start + step * (index + 1), 3),
         }
-        if code in {"zh-Hans", "mul"}:
+        japanese_context = code == "ja" or (code == "mul" and has_kana(line["text"]))
+        if code == "zh-Hans" or (code == "mul" and not japanese_context):
             reading = zh_pinyin(part)
             if reading:
                 token["pinyin"] = reading
-        if code == "ja":
+        if japanese_context:
             reading = ja_reading(part)
             if reading:
                 token["reading"] = reading
@@ -381,10 +403,10 @@ def write_media_item() -> None:
                 "label": "Mixed vocal",
                 "languageCode": "mul",
                 "tracks": [
-                    {"code": "mul", "label": "Mixed", "nativeLabel": "Mixed", "script": "Latn+Hans+Jpan", "features": ["active-vocal", "pinyin"], "path": "lyrics/mixed-vocal/mul.json"},
+                    {"code": "mul", "label": "Mixed", "nativeLabel": "Mixed", "script": "Latn+Hans+Jpan", "features": ["active-vocal", "pinyin", "furigana"], "path": "lyrics/mixed-vocal/mul.json"},
                     {"code": "en", "label": "English", "nativeLabel": "English", "script": "Latn", "features": ["translation"], "path": "lyrics/mixed-vocal/en.json"},
-                    {"code": "zh-Hans", "label": "Mandarin Chinese", "nativeLabel": "中文", "script": "Hans", "features": ["pinyin", "translation"], "path": "lyrics/mixed-vocal/zh-Hans.json"},
                     {"code": "ja", "label": "Japanese", "nativeLabel": "日本語", "script": "Jpan", "features": ["furigana", "translation"], "path": "lyrics/mixed-vocal/ja.json"},
+                    {"code": "zh-Hans", "label": "Mandarin Chinese", "nativeLabel": "中文", "script": "Hans", "features": ["pinyin", "translation"], "path": "lyrics/mixed-vocal/zh-Hans.json"},
                 ],
             }
         ],

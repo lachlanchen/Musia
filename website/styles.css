@@ -1636,6 +1636,93 @@ body.capture-mode.capture-portrait.capture-ktv .text-token.active {
   text-shadow: 0 0 22px rgba(185,133,36,.18);
 }
 
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .lyric-carousel {
+  gap: 0;
+  align-content: center;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .advanced-toggle {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .hero-grid {
+  height: calc(100vh - 112px);
+  min-height: 0;
+  grid-template-rows: minmax(0, 1380px) minmax(0, 1fr);
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .player-card {
+  min-height: 0;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .stage {
+  width: min(100%, 1120px);
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .lyrics-card {
+  padding: 28px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-line {
+  padding: 30px 34px;
+  border-radius: 32px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-line > span {
+  margin-bottom: 18px;
+  font-size: 26px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-translations {
+  gap: 18px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track:not(:first-child) {
+  display: grid;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track[data-track-code="mul"] {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track {
+  gap: 7px;
+  padding: 10px 0 12px;
+  border-bottom: 1px solid rgba(45,143,131,.16);
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track:last-child {
+  border-bottom: 0;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track label {
+  display: block;
+  color: var(--teal-dark);
+  font-size: 25px;
+  font-weight: 900;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track .plain-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track .token-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-track .ruby-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-line:not(.active) .plain-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-line:not(.active) .token-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-line:not(.active) .ruby-line {
+  font-size: clamp(38px, 4.8vw, 58px);
+  line-height: 1.18;
+  font-weight: 880;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual rt {
+  margin-bottom: 6px;
+  font-size: .42em;
+  line-height: 1;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .ruby-line {
+  gap: 5px 10px;
+}
+
 body.capture-mode.capture-portrait.capture-full-lyrics .page-shell {
   padding: 22px 30px;
 }
