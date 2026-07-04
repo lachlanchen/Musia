@@ -1,0 +1,1488 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "liang-zhou-ci-double-original-poem",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 18.38,
+      "end": 21.66,
+      "text": "黄河は白雲の間へ遠くのぼる",
+      "singableText": "黄河は白雲の間へ遠くのぼる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "黄",
+          "start": 18.38,
+          "end": 18.632,
+          "reading": "き"
+        },
+        {
+          "text": "河",
+          "start": 18.632,
+          "end": 18.885,
+          "reading": "かわ"
+        },
+        {
+          "text": "は",
+          "start": 18.885,
+          "end": 19.137
+        },
+        {
+          "text": "白",
+          "start": 19.137,
+          "end": 19.389,
+          "reading": "しろ"
+        },
+        {
+          "text": "雲",
+          "start": 19.389,
+          "end": 19.642,
+          "reading": "くも"
+        },
+        {
+          "text": "の",
+          "start": 19.642,
+          "end": 19.894
+        },
+        {
+          "text": "間",
+          "start": 19.894,
+          "end": 20.146,
+          "reading": "かん"
+        },
+        {
+          "text": "へ",
+          "start": 20.146,
+          "end": 20.398
+        },
+        {
+          "text": "遠",
+          "start": 20.398,
+          "end": 20.651,
+          "reading": "えん"
+        },
+        {
+          "text": "く",
+          "start": 20.651,
+          "end": 20.903
+        },
+        {
+          "text": "の",
+          "start": 20.903,
+          "end": 21.155
+        },
+        {
+          "text": "ぼ",
+          "start": 21.155,
+          "end": 21.408
+        },
+        {
+          "text": "る",
+          "start": 21.408,
+          "end": 21.66
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 21.66,
+      "end": 25.02,
+      "text": "一つの孤城が万仞の山に立つ",
+      "singableText": "一つの孤城が万仞の山に立つ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 21.66,
+          "end": 21.918,
+          "reading": "いち"
+        },
+        {
+          "text": "つ",
+          "start": 21.918,
+          "end": 22.177
+        },
+        {
+          "text": "の",
+          "start": 22.177,
+          "end": 22.435
+        },
+        {
+          "text": "孤",
+          "start": 22.435,
+          "end": 22.694,
+          "reading": "こ"
+        },
+        {
+          "text": "城",
+          "start": 22.694,
+          "end": 22.952,
+          "reading": "しろ"
+        },
+        {
+          "text": "が",
+          "start": 22.952,
+          "end": 23.211
+        },
+        {
+          "text": "万",
+          "start": 23.211,
+          "end": 23.469,
+          "reading": "まん"
+        },
+        {
+          "text": "仞",
+          "start": 23.469,
+          "end": 23.728,
+          "reading": "じん"
+        },
+        {
+          "text": "の",
+          "start": 23.728,
+          "end": 23.986
+        },
+        {
+          "text": "山",
+          "start": 23.986,
+          "end": 24.245,
+          "reading": "やま"
+        },
+        {
+          "text": "に",
+          "start": 24.245,
+          "end": 24.503
+        },
+        {
+          "text": "立",
+          "start": 24.503,
+          "end": 24.762,
+          "reading": "りつ"
+        },
+        {
+          "text": "つ",
+          "start": 24.762,
+          "end": 25.02
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 25.26,
+      "end": 28.06,
+      "text": "羌笛はなぜ楊柳を怨むのか",
+      "singableText": "羌笛はなぜ楊柳を怨むのか",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "羌",
+          "start": 25.26,
+          "end": 25.493,
+          "reading": "きょう"
+        },
+        {
+          "text": "笛",
+          "start": 25.493,
+          "end": 25.727,
+          "reading": "ふえ"
+        },
+        {
+          "text": "は",
+          "start": 25.727,
+          "end": 25.96
+        },
+        {
+          "text": "な",
+          "start": 25.96,
+          "end": 26.193
+        },
+        {
+          "text": "ぜ",
+          "start": 26.193,
+          "end": 26.427
+        },
+        {
+          "text": "楊",
+          "start": 26.427,
+          "end": 26.66,
+          "reading": "よう"
+        },
+        {
+          "text": "柳",
+          "start": 26.66,
+          "end": 26.893,
+          "reading": "やなぎ"
+        },
+        {
+          "text": "を",
+          "start": 26.893,
+          "end": 27.127
+        },
+        {
+          "text": "怨",
+          "start": 27.127,
+          "end": 27.36,
+          "reading": "えん"
+        },
+        {
+          "text": "む",
+          "start": 27.36,
+          "end": 27.593
+        },
+        {
+          "text": "の",
+          "start": 27.593,
+          "end": 27.827
+        },
+        {
+          "text": "か",
+          "start": 27.827,
+          "end": 28.06
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 28.32,
+      "end": 30.66,
+      "text": "春風は玉門関を越えない",
+      "singableText": "春風は玉門関を越えない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "春",
+          "start": 28.32,
+          "end": 28.533,
+          "reading": "はる"
+        },
+        {
+          "text": "風",
+          "start": 28.533,
+          "end": 28.745,
+          "reading": "かぜ"
+        },
+        {
+          "text": "は",
+          "start": 28.745,
+          "end": 28.958
+        },
+        {
+          "text": "玉",
+          "start": 28.958,
+          "end": 29.171,
+          "reading": "たま"
+        },
+        {
+          "text": "門",
+          "start": 29.171,
+          "end": 29.384,
+          "reading": "もん"
+        },
+        {
+          "text": "関",
+          "start": 29.384,
+          "end": 29.596,
+          "reading": "かん"
+        },
+        {
+          "text": "を",
+          "start": 29.596,
+          "end": 29.809
+        },
+        {
+          "text": "越",
+          "start": 29.809,
+          "end": 30.022,
+          "reading": "えつ"
+        },
+        {
+          "text": "え",
+          "start": 30.022,
+          "end": 30.235
+        },
+        {
+          "text": "な",
+          "start": 30.235,
+          "end": 30.447
+        },
+        {
+          "text": "い",
+          "start": 30.447,
+          "end": 30.66
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 38.6,
+      "end": 39.64,
+      "text": "飲まんとすれば琵琶が馬上で急かす",
+      "singableText": "飲まんとすれば琵琶が馬上で急かす",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "飲",
+          "start": 38.6,
+          "end": 38.665,
+          "reading": "いん"
+        },
+        {
+          "text": "ま",
+          "start": 38.665,
+          "end": 38.73
+        },
+        {
+          "text": "ん",
+          "start": 38.73,
+          "end": 38.795
+        },
+        {
+          "text": "と",
+          "start": 38.795,
+          "end": 38.86
+        },
+        {
+          "text": "す",
+          "start": 38.86,
+          "end": 38.925
+        },
+        {
+          "text": "れ",
+          "start": 38.925,
+          "end": 38.99
+        },
+        {
+          "text": "ば",
+          "start": 38.99,
+          "end": 39.055
+        },
+        {
+          "text": "琵",
+          "start": 39.055,
+          "end": 39.12,
+          "reading": "び"
+        },
+        {
+          "text": "琶",
+          "start": 39.12,
+          "end": 39.185,
+          "reading": "は"
+        },
+        {
+          "text": "が",
+          "start": 39.185,
+          "end": 39.25
+        },
+        {
+          "text": "馬",
+          "start": 39.25,
+          "end": 39.315,
+          "reading": "うま"
+        },
+        {
+          "text": "上",
+          "start": 39.315,
+          "end": 39.38,
+          "reading": "うえ"
+        },
+        {
+          "text": "で",
+          "start": 39.38,
+          "end": 39.445
+        },
+        {
+          "text": "急",
+          "start": 39.445,
+          "end": 39.51,
+          "reading": "きゅう"
+        },
+        {
+          "text": "か",
+          "start": 39.51,
+          "end": 39.575
+        },
+        {
+          "text": "す",
+          "start": 39.575,
+          "end": 39.64
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 39.72,
+      "end": 42.46,
+      "text": "酔って沙場に伏しても君よ笑うな",
+      "singableText": "酔って沙場に伏しても君よ笑うな",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "酔",
+          "start": 39.72,
+          "end": 39.903,
+          "reading": "すい"
+        },
+        {
+          "text": "っ",
+          "start": 39.903,
+          "end": 40.085
+        },
+        {
+          "text": "て",
+          "start": 40.085,
+          "end": 40.268
+        },
+        {
+          "text": "沙",
+          "start": 40.268,
+          "end": 40.451,
+          "reading": "さ"
+        },
+        {
+          "text": "場",
+          "start": 40.451,
+          "end": 40.633,
+          "reading": "ば"
+        },
+        {
+          "text": "に",
+          "start": 40.633,
+          "end": 40.816
+        },
+        {
+          "text": "伏",
+          "start": 40.816,
+          "end": 40.999,
+          "reading": "ふく"
+        },
+        {
+          "text": "し",
+          "start": 40.999,
+          "end": 41.181
+        },
+        {
+          "text": "て",
+          "start": 41.181,
+          "end": 41.364
+        },
+        {
+          "text": "も",
+          "start": 41.364,
+          "end": 41.547
+        },
+        {
+          "text": "君",
+          "start": 41.547,
+          "end": 41.729,
+          "reading": "くん"
+        },
+        {
+          "text": "よ",
+          "start": 41.729,
+          "end": 41.912
+        },
+        {
+          "text": "笑",
+          "start": 41.912,
+          "end": 42.095,
+          "reading": "わらい"
+        },
+        {
+          "text": "う",
+          "start": 42.095,
+          "end": 42.277
+        },
+        {
+          "text": "な",
+          "start": 42.277,
+          "end": 42.46
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 42.46,
+      "end": 45.52,
+      "text": "昔から征戦より幾人が帰っただろう",
+      "singableText": "昔から征戦より幾人が帰っただろう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "昔",
+          "start": 42.46,
+          "end": 42.651,
+          "reading": "むかし"
+        },
+        {
+          "text": "か",
+          "start": 42.651,
+          "end": 42.843
+        },
+        {
+          "text": "ら",
+          "start": 42.843,
+          "end": 43.034
+        },
+        {
+          "text": "征",
+          "start": 43.034,
+          "end": 43.225,
+          "reading": "せい"
+        },
+        {
+          "text": "戦",
+          "start": 43.225,
+          "end": 43.416,
+          "reading": "せん"
+        },
+        {
+          "text": "よ",
+          "start": 43.416,
+          "end": 43.608
+        },
+        {
+          "text": "り",
+          "start": 43.608,
+          "end": 43.799
+        },
+        {
+          "text": "幾",
+          "start": 43.799,
+          "end": 43.99,
+          "reading": "き"
+        },
+        {
+          "text": "人",
+          "start": 43.99,
+          "end": 44.181,
+          "reading": "にん"
+        },
+        {
+          "text": "が",
+          "start": 44.181,
+          "end": 44.373
+        },
+        {
+          "text": "帰",
+          "start": 44.373,
+          "end": 44.564,
+          "reading": "き"
+        },
+        {
+          "text": "っ",
+          "start": 44.564,
+          "end": 44.755
+        },
+        {
+          "text": "た",
+          "start": 44.755,
+          "end": 44.946
+        },
+        {
+          "text": "だ",
+          "start": 44.946,
+          "end": 45.138
+        },
+        {
+          "text": "ろ",
+          "start": 45.138,
+          "end": 45.329
+        },
+        {
+          "text": "う",
+          "start": 45.329,
+          "end": 45.52
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 58.94,
+      "end": 61.92,
+      "text": "羌笛はなぜ楊柳を怨むのか",
+      "singableText": "羌笛はなぜ楊柳を怨むのか",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "羌",
+          "start": 58.94,
+          "end": 59.188,
+          "reading": "きょう"
+        },
+        {
+          "text": "笛",
+          "start": 59.188,
+          "end": 59.437,
+          "reading": "ふえ"
+        },
+        {
+          "text": "は",
+          "start": 59.437,
+          "end": 59.685
+        },
+        {
+          "text": "な",
+          "start": 59.685,
+          "end": 59.933
+        },
+        {
+          "text": "ぜ",
+          "start": 59.933,
+          "end": 60.182
+        },
+        {
+          "text": "楊",
+          "start": 60.182,
+          "end": 60.43,
+          "reading": "よう"
+        },
+        {
+          "text": "柳",
+          "start": 60.43,
+          "end": 60.678,
+          "reading": "やなぎ"
+        },
+        {
+          "text": "を",
+          "start": 60.678,
+          "end": 60.927
+        },
+        {
+          "text": "怨",
+          "start": 60.927,
+          "end": 61.175,
+          "reading": "えん"
+        },
+        {
+          "text": "む",
+          "start": 61.175,
+          "end": 61.423
+        },
+        {
+          "text": "の",
+          "start": 61.423,
+          "end": 61.672
+        },
+        {
+          "text": "か",
+          "start": 61.672,
+          "end": 61.92
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 62.42,
+      "end": 64.58,
+      "text": "春風は玉門関を越えない",
+      "singableText": "春風は玉門関を越えない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "春",
+          "start": 62.42,
+          "end": 62.616,
+          "reading": "はる"
+        },
+        {
+          "text": "風",
+          "start": 62.616,
+          "end": 62.813,
+          "reading": "かぜ"
+        },
+        {
+          "text": "は",
+          "start": 62.813,
+          "end": 63.009
+        },
+        {
+          "text": "玉",
+          "start": 63.009,
+          "end": 63.205,
+          "reading": "たま"
+        },
+        {
+          "text": "門",
+          "start": 63.205,
+          "end": 63.402,
+          "reading": "もん"
+        },
+        {
+          "text": "関",
+          "start": 63.402,
+          "end": 63.598,
+          "reading": "かん"
+        },
+        {
+          "text": "を",
+          "start": 63.598,
+          "end": 63.795
+        },
+        {
+          "text": "越",
+          "start": 63.795,
+          "end": 63.991,
+          "reading": "えつ"
+        },
+        {
+          "text": "え",
+          "start": 63.991,
+          "end": 64.187
+        },
+        {
+          "text": "な",
+          "start": 64.187,
+          "end": 64.384
+        },
+        {
+          "text": "い",
+          "start": 64.384,
+          "end": 64.58
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 64.58,
+      "end": 67.72,
+      "text": "葡萄の美酒は夜光の杯に輝く",
+      "singableText": "葡萄の美酒は夜光の杯に輝く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "葡",
+          "start": 64.58,
+          "end": 64.822,
+          "reading": "ぶ"
+        },
+        {
+          "text": "萄",
+          "start": 64.822,
+          "end": 65.063,
+          "reading": "どう"
+        },
+        {
+          "text": "の",
+          "start": 65.063,
+          "end": 65.305
+        },
+        {
+          "text": "美",
+          "start": 65.305,
+          "end": 65.546,
+          "reading": "び"
+        },
+        {
+          "text": "酒",
+          "start": 65.546,
+          "end": 65.788,
+          "reading": "さけ"
+        },
+        {
+          "text": "は",
+          "start": 65.788,
+          "end": 66.029
+        },
+        {
+          "text": "夜",
+          "start": 66.029,
+          "end": 66.271,
+          "reading": "よる"
+        },
+        {
+          "text": "光",
+          "start": 66.271,
+          "end": 66.512,
+          "reading": "ひかり"
+        },
+        {
+          "text": "の",
+          "start": 66.512,
+          "end": 66.754
+        },
+        {
+          "text": "杯",
+          "start": 66.754,
+          "end": 66.995,
+          "reading": "はい"
+        },
+        {
+          "text": "に",
+          "start": 66.995,
+          "end": 67.237
+        },
+        {
+          "text": "輝",
+          "start": 67.237,
+          "end": 67.478,
+          "reading": "てる"
+        },
+        {
+          "text": "く",
+          "start": 67.478,
+          "end": 67.72
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 67.74,
+      "end": 70.4,
+      "text": "飲まんとすれば琵琶が馬上で急かす",
+      "singableText": "飲まんとすれば琵琶が馬上で急かす",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "飲",
+          "start": 67.74,
+          "end": 67.906,
+          "reading": "いん"
+        },
+        {
+          "text": "ま",
+          "start": 67.906,
+          "end": 68.072
+        },
+        {
+          "text": "ん",
+          "start": 68.072,
+          "end": 68.239
+        },
+        {
+          "text": "と",
+          "start": 68.239,
+          "end": 68.405
+        },
+        {
+          "text": "す",
+          "start": 68.405,
+          "end": 68.571
+        },
+        {
+          "text": "れ",
+          "start": 68.571,
+          "end": 68.737
+        },
+        {
+          "text": "ば",
+          "start": 68.737,
+          "end": 68.904
+        },
+        {
+          "text": "琵",
+          "start": 68.904,
+          "end": 69.07,
+          "reading": "び"
+        },
+        {
+          "text": "琶",
+          "start": 69.07,
+          "end": 69.236,
+          "reading": "は"
+        },
+        {
+          "text": "が",
+          "start": 69.236,
+          "end": 69.403
+        },
+        {
+          "text": "馬",
+          "start": 69.403,
+          "end": 69.569,
+          "reading": "うま"
+        },
+        {
+          "text": "上",
+          "start": 69.569,
+          "end": 69.735,
+          "reading": "うえ"
+        },
+        {
+          "text": "で",
+          "start": 69.735,
+          "end": 69.901
+        },
+        {
+          "text": "急",
+          "start": 69.901,
+          "end": 70.068,
+          "reading": "きゅう"
+        },
+        {
+          "text": "か",
+          "start": 70.068,
+          "end": 70.234
+        },
+        {
+          "text": "す",
+          "start": 70.234,
+          "end": 70.4
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 70.4,
+      "end": 72.9,
+      "text": "酔って沙場に伏しても君よ笑うな",
+      "singableText": "酔って沙場に伏しても君よ笑うな",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "酔",
+          "start": 70.4,
+          "end": 70.567,
+          "reading": "すい"
+        },
+        {
+          "text": "っ",
+          "start": 70.567,
+          "end": 70.733
+        },
+        {
+          "text": "て",
+          "start": 70.733,
+          "end": 70.9
+        },
+        {
+          "text": "沙",
+          "start": 70.9,
+          "end": 71.067,
+          "reading": "さ"
+        },
+        {
+          "text": "場",
+          "start": 71.067,
+          "end": 71.233,
+          "reading": "ば"
+        },
+        {
+          "text": "に",
+          "start": 71.233,
+          "end": 71.4
+        },
+        {
+          "text": "伏",
+          "start": 71.4,
+          "end": 71.567,
+          "reading": "ふく"
+        },
+        {
+          "text": "し",
+          "start": 71.567,
+          "end": 71.733
+        },
+        {
+          "text": "て",
+          "start": 71.733,
+          "end": 71.9
+        },
+        {
+          "text": "も",
+          "start": 71.9,
+          "end": 72.067
+        },
+        {
+          "text": "君",
+          "start": 72.067,
+          "end": 72.233,
+          "reading": "くん"
+        },
+        {
+          "text": "よ",
+          "start": 72.233,
+          "end": 72.4
+        },
+        {
+          "text": "笑",
+          "start": 72.4,
+          "end": 72.567,
+          "reading": "わらい"
+        },
+        {
+          "text": "う",
+          "start": 72.567,
+          "end": 72.733
+        },
+        {
+          "text": "な",
+          "start": 72.733,
+          "end": 72.9
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 73.2,
+      "end": 75.22,
+      "text": "昔から征戦より幾人が帰っただろう",
+      "singableText": "昔から征戦より幾人が帰っただろう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "昔",
+          "start": 73.2,
+          "end": 73.326,
+          "reading": "むかし"
+        },
+        {
+          "text": "か",
+          "start": 73.326,
+          "end": 73.453
+        },
+        {
+          "text": "ら",
+          "start": 73.453,
+          "end": 73.579
+        },
+        {
+          "text": "征",
+          "start": 73.579,
+          "end": 73.705,
+          "reading": "せい"
+        },
+        {
+          "text": "戦",
+          "start": 73.705,
+          "end": 73.831,
+          "reading": "せん"
+        },
+        {
+          "text": "よ",
+          "start": 73.831,
+          "end": 73.957
+        },
+        {
+          "text": "り",
+          "start": 73.957,
+          "end": 74.084
+        },
+        {
+          "text": "幾",
+          "start": 74.084,
+          "end": 74.21,
+          "reading": "き"
+        },
+        {
+          "text": "人",
+          "start": 74.21,
+          "end": 74.336,
+          "reading": "にん"
+        },
+        {
+          "text": "が",
+          "start": 74.336,
+          "end": 74.463
+        },
+        {
+          "text": "帰",
+          "start": 74.463,
+          "end": 74.589,
+          "reading": "き"
+        },
+        {
+          "text": "っ",
+          "start": 74.589,
+          "end": 74.715
+        },
+        {
+          "text": "た",
+          "start": 74.715,
+          "end": 74.841
+        },
+        {
+          "text": "だ",
+          "start": 74.841,
+          "end": 74.968
+        },
+        {
+          "text": "ろ",
+          "start": 74.968,
+          "end": 75.094
+        },
+        {
+          "text": "う",
+          "start": 75.094,
+          "end": 75.22
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 75.78,
+      "end": 79.57,
+      "text": "葡萄の美酒は夜光の杯に輝く",
+      "singableText": "葡萄の美酒は夜光の杯に輝く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "葡",
+          "start": 75.78,
+          "end": 76.072,
+          "reading": "ぶ"
+        },
+        {
+          "text": "萄",
+          "start": 76.072,
+          "end": 76.363,
+          "reading": "どう"
+        },
+        {
+          "text": "の",
+          "start": 76.363,
+          "end": 76.655
+        },
+        {
+          "text": "美",
+          "start": 76.655,
+          "end": 76.946,
+          "reading": "び"
+        },
+        {
+          "text": "酒",
+          "start": 76.946,
+          "end": 77.238,
+          "reading": "さけ"
+        },
+        {
+          "text": "は",
+          "start": 77.238,
+          "end": 77.529
+        },
+        {
+          "text": "夜",
+          "start": 77.529,
+          "end": 77.821,
+          "reading": "よる"
+        },
+        {
+          "text": "光",
+          "start": 77.821,
+          "end": 78.112,
+          "reading": "ひかり"
+        },
+        {
+          "text": "の",
+          "start": 78.112,
+          "end": 78.404
+        },
+        {
+          "text": "杯",
+          "start": 78.404,
+          "end": 78.695,
+          "reading": "はい"
+        },
+        {
+          "text": "に",
+          "start": 78.695,
+          "end": 78.987
+        },
+        {
+          "text": "輝",
+          "start": 78.987,
+          "end": 79.278,
+          "reading": "てる"
+        },
+        {
+          "text": "く",
+          "start": 79.278,
+          "end": 79.57
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 79.57,
+      "end": 82.23,
+      "text": "飲まんとすれば琵琶が馬上で急かす",
+      "singableText": "飲まんとすれば琵琶が馬上で急かす",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "飲",
+          "start": 79.57,
+          "end": 79.736,
+          "reading": "いん"
+        },
+        {
+          "text": "ま",
+          "start": 79.736,
+          "end": 79.902
+        },
+        {
+          "text": "ん",
+          "start": 79.902,
+          "end": 80.069
+        },
+        {
+          "text": "と",
+          "start": 80.069,
+          "end": 80.235
+        },
+        {
+          "text": "す",
+          "start": 80.235,
+          "end": 80.401
+        },
+        {
+          "text": "れ",
+          "start": 80.401,
+          "end": 80.567
+        },
+        {
+          "text": "ば",
+          "start": 80.567,
+          "end": 80.734
+        },
+        {
+          "text": "琵",
+          "start": 80.734,
+          "end": 80.9,
+          "reading": "び"
+        },
+        {
+          "text": "琶",
+          "start": 80.9,
+          "end": 81.066,
+          "reading": "は"
+        },
+        {
+          "text": "が",
+          "start": 81.066,
+          "end": 81.233
+        },
+        {
+          "text": "馬",
+          "start": 81.233,
+          "end": 81.399,
+          "reading": "うま"
+        },
+        {
+          "text": "上",
+          "start": 81.399,
+          "end": 81.565,
+          "reading": "うえ"
+        },
+        {
+          "text": "で",
+          "start": 81.565,
+          "end": 81.731
+        },
+        {
+          "text": "急",
+          "start": 81.731,
+          "end": 81.898,
+          "reading": "きゅう"
+        },
+        {
+          "text": "か",
+          "start": 81.898,
+          "end": 82.064
+        },
+        {
+          "text": "す",
+          "start": 82.064,
+          "end": 82.23
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 83.63,
+      "end": 86.57,
+      "text": "酔って沙場に伏しても君よ笑うな",
+      "singableText": "酔って沙場に伏しても君よ笑うな",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "酔",
+          "start": 83.63,
+          "end": 83.826,
+          "reading": "すい"
+        },
+        {
+          "text": "っ",
+          "start": 83.826,
+          "end": 84.022
+        },
+        {
+          "text": "て",
+          "start": 84.022,
+          "end": 84.218
+        },
+        {
+          "text": "沙",
+          "start": 84.218,
+          "end": 84.414,
+          "reading": "さ"
+        },
+        {
+          "text": "場",
+          "start": 84.414,
+          "end": 84.61,
+          "reading": "ば"
+        },
+        {
+          "text": "に",
+          "start": 84.61,
+          "end": 84.806
+        },
+        {
+          "text": "伏",
+          "start": 84.806,
+          "end": 85.002,
+          "reading": "ふく"
+        },
+        {
+          "text": "し",
+          "start": 85.002,
+          "end": 85.198
+        },
+        {
+          "text": "て",
+          "start": 85.198,
+          "end": 85.394
+        },
+        {
+          "text": "も",
+          "start": 85.394,
+          "end": 85.59
+        },
+        {
+          "text": "君",
+          "start": 85.59,
+          "end": 85.786,
+          "reading": "くん"
+        },
+        {
+          "text": "よ",
+          "start": 85.786,
+          "end": 85.982
+        },
+        {
+          "text": "笑",
+          "start": 85.982,
+          "end": 86.178,
+          "reading": "わらい"
+        },
+        {
+          "text": "う",
+          "start": 86.178,
+          "end": 86.374
+        },
+        {
+          "text": "な",
+          "start": 86.374,
+          "end": 86.57
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 86.95,
+      "end": 90.37,
+      "text": "昔から征戦より幾人が帰っただろう",
+      "singableText": "昔から征戦より幾人が帰っただろう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "昔",
+          "start": 86.95,
+          "end": 87.164,
+          "reading": "むかし"
+        },
+        {
+          "text": "か",
+          "start": 87.164,
+          "end": 87.377
+        },
+        {
+          "text": "ら",
+          "start": 87.377,
+          "end": 87.591
+        },
+        {
+          "text": "征",
+          "start": 87.591,
+          "end": 87.805,
+          "reading": "せい"
+        },
+        {
+          "text": "戦",
+          "start": 87.805,
+          "end": 88.019,
+          "reading": "せん"
+        },
+        {
+          "text": "よ",
+          "start": 88.019,
+          "end": 88.233
+        },
+        {
+          "text": "り",
+          "start": 88.233,
+          "end": 88.446
+        },
+        {
+          "text": "幾",
+          "start": 88.446,
+          "end": 88.66,
+          "reading": "き"
+        },
+        {
+          "text": "人",
+          "start": 88.66,
+          "end": 88.874,
+          "reading": "にん"
+        },
+        {
+          "text": "が",
+          "start": 88.874,
+          "end": 89.088
+        },
+        {
+          "text": "帰",
+          "start": 89.088,
+          "end": 89.301,
+          "reading": "き"
+        },
+        {
+          "text": "っ",
+          "start": 89.301,
+          "end": 89.515
+        },
+        {
+          "text": "た",
+          "start": 89.515,
+          "end": 89.729
+        },
+        {
+          "text": "だ",
+          "start": 89.729,
+          "end": 89.943
+        },
+        {
+          "text": "ろ",
+          "start": 89.943,
+          "end": 90.156
+        },
+        {
+          "text": "う",
+          "start": 90.156,
+          "end": 90.37
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ACE-Step XL Turbo seed 747323. Timings use Demucs-separated vocal large-v3 ASR. The active Mandarin track restores original Liangzhou Ci poem lines where ASR drift is sound-close; the omitted first 葡萄美酒夜光杯 in the early hook is not published because the vocal did not clearly recover it."
+  }
+}
