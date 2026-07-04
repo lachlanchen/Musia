@@ -1735,6 +1735,79 @@ body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .ruby-line {
   gap: 5px 10px;
 }
 
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar .hero-grid {
+  height: calc(100vh - 110px);
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar .lyrics-card {
+  height: 100%;
+  grid-template-rows: auto auto minmax(0, auto) minmax(760px, 1fr);
+  gap: 0;
+  align-content: stretch;
+  overflow: hidden;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar .lyrics-head {
+  order: 1;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar .chord-row {
+  order: 2;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar .lyric-carousel {
+  order: 3;
+  align-content: start;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar .advanced-panel {
+  order: 4;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.advanced-mode .advanced-panel {
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  width: min(88%, 1600px);
+  min-height: 820px;
+  margin: 20px auto 0;
+  padding: 30px 42px 32px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.advanced-mode .advanced-panel h3 {
+  font-size: 68px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.advanced-mode .diagram-position {
+  font-size: 24px;
+  padding: 10px 16px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.advanced-mode .guitar-diagram {
+  align-self: center;
+  width: min(1120px, 82%);
+  height: 760px;
+  margin-bottom: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.advanced-mode .guitar-marker {
+  width: 62px;
+  height: 62px;
+  font-size: 28px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.advanced-mode .guitar-open {
+  font-size: 30px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.advanced-mode .chord-fingering {
+  gap: 10px;
+  font-size: 25px;
+}
+
 body.capture-mode.capture-portrait.capture-full-lyrics .page-shell {
   padding: 22px 30px;
 }

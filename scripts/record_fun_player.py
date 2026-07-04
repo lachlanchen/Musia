@@ -127,6 +127,11 @@ def parse_args() -> argparse.Namespace:
         help="In capture mode, hide the lyric carousel and use the lower panel for chord/guitar fingering.",
     )
     parser.add_argument(
+        "--lyrics-guitar",
+        action="store_true",
+        help="In portrait capture mode, keep current lyrics visible and use spare lower space for guitar fingering.",
+    )
+    parser.add_argument(
         "--sync-dir",
         default=str(DEFAULT_SYNC_DIR),
         help="Directory to copy the final MP4 to after recording. Defaults to the Nutstore Musia share folder.",
@@ -195,6 +200,7 @@ def main() -> None:
         "skipIntro": "1" if args.skip_intro else "0",
         "advanced": "1" if args.advanced else "0",
         "guitarFocus": "1" if args.guitar_focus else "0",
+        "lyricsGuitar": "1" if args.lyrics_guitar else "0",
     })
     url = f"{base_url}?{query}#{media_id}"
     frame_count = int(duration * args.fps + 0.999)

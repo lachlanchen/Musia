@@ -1524,11 +1524,13 @@ async function boot() {
   const captureFullLyrics = state.captureMode && params.get("fullLyrics") === "1";
   const capturePortrait = state.captureMode && params.get("portrait") === "1";
   const captureGuitarFocus = state.captureMode && params.get("guitarFocus") === "1";
+  const captureLyricsGuitar = state.captureMode && params.get("lyricsGuitar") === "1";
   state.captureMultilingual = state.captureMode && params.get("multiLyrics") === "1";
   document.body.classList.toggle("capture-mode", state.captureMode);
   document.body.classList.toggle("capture-full-lyrics", captureFullLyrics);
   document.body.classList.toggle("capture-portrait", capturePortrait);
   document.body.classList.toggle("capture-guitar-focus", captureGuitarFocus);
+  document.body.classList.toggle("capture-lyrics-guitar", captureLyricsGuitar);
   document.body.classList.toggle("capture-multilingual", state.captureMultilingual);
   document.body.classList.toggle("capture-ktv", capturePortrait && !captureFullLyrics && !captureGuitarFocus);
   bindEvents();

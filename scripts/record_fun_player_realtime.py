@@ -129,6 +129,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--portrait", action=argparse.BooleanOptionalAction, default=True, help="Use portrait capture layout.")
     parser.add_argument("--advanced", action=argparse.BooleanOptionalAction, default=True, help="Enable advanced chord/guitar mode.")
     parser.add_argument("--guitar-focus", action=argparse.BooleanOptionalAction, default=True, help="Use the lower panel for guitar fingering.")
+    parser.add_argument("--lyrics-guitar", action="store_true", help="Keep multilingual lyrics visible and use the lower spare portrait area for guitar fingering.")
     parser.add_argument("--ffmpeg-bin", default="", help="FFmpeg binary. Defaults to /usr/bin/ffmpeg when available for x11grab.")
     parser.add_argument("--display", default="", help="Existing X display to use. Defaults to a new Xvfb display.")
     parser.add_argument("--chrome-channel", default="chrome", help="Playwright Chrome channel.")
@@ -195,6 +196,7 @@ def main() -> None:
             "skipIntro": "0",
             "advanced": "1" if args.advanced else "0",
             "guitarFocus": "1" if args.guitar_focus else "0",
+            "lyricsGuitar": "1" if args.lyrics_guitar else "0",
         }
     )
     url = f"{base_url}?{query}#{args.media_id}"
