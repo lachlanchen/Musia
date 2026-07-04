@@ -8,7 +8,6 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
-from PIL import Image, ImageDraw, ImageFilter
 import pykakasi
 from pypinyin import Style, pinyin
 
@@ -223,42 +222,11 @@ def ensure_cover() -> None:
     cover_path.parent.mkdir(parents=True, exist_ok=True)
     if cover_path.exists():
         return
-    width, height = 1600, 900
-    img = Image.new("RGB", (width, height), "#efe8d8")
-    draw = ImageDraw.Draw(img)
-
-    # Soft desert sky gradient.
-    for y in range(height):
-        t = y / (height - 1)
-        r = int(238 * (1 - t) + 202 * t)
-        g = int(234 * (1 - t) + 181 * t)
-        b = int(222 * (1 - t) + 128 * t)
-        draw.line([(0, y), (width, y)], fill=(r, g, b))
-
-    # Distant mountains and pass.
-    mountains = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-    m = ImageDraw.Draw(mountains)
-    m.polygon([(0, 575), (240, 390), (430, 535), (650, 350), (880, 570), (1130, 400), (1600, 590), (1600, 900), (0, 900)], fill=(106, 107, 98, 125))
-    m.polygon([(0, 650), (330, 500), (580, 640), (900, 460), (1210, 660), (1600, 505), (1600, 900), (0, 900)], fill=(111, 86, 72, 110))
-    mountains = mountains.filter(ImageFilter.GaussianBlur(1.0))
-    img = Image.alpha_composite(img.convert("RGBA"), mountains)
-
-    draw = ImageDraw.Draw(img)
-    # River/cloud ribbon.
-    draw.ellipse((-150, -150, 740, 390), fill=(245, 244, 229, 68))
-    draw.ellipse((830, 35, 1690, 370), fill=(246, 239, 220, 54))
-    # Fortress silhouette and moon cup.
-    draw.rectangle((1070, 445, 1260, 596), fill=(58, 47, 45, 210))
-    draw.rectangle((1122, 365, 1210, 455), fill=(58, 47, 45, 220))
-    for x in range(1060, 1280, 36):
-        draw.rectangle((x, 422, x + 20, 455), fill=(58, 47, 45, 220))
-    draw.ellipse((235, 222, 380, 367), fill=(255, 238, 177, 170))
-    draw.arc((210, 260, 410, 525), start=20, end=160, fill=(91, 54, 45, 150), width=8)
-    draw.line((310, 410, 310, 535), fill=(91, 54, 45, 150), width=8)
-    draw.line((246, 535, 374, 535), fill=(91, 54, 45, 150), width=8)
-
-    # No text in the artwork; website renders title separately.
-    img.convert("RGB").save(cover_path)
+    raise FileNotFoundError(
+        f"Missing public cover: {cover_path}. Generate or copy a no-text 16:9 "
+        "AgInTi/image-generation cover that matches the song mood before "
+        "publishing the Fun website item."
+    )
 
 
 def write_media_item() -> None:
@@ -383,7 +351,7 @@ def write_media_item() -> None:
                 "The first early hook omits 葡萄美酒夜光杯 because separated-vocal ASR did not support a clear line there. "
                 "Translations follow the corrected active-vocal line structure."
             ),
-            "coverSource": "Generated locally by scripts/prepare_liang_zhou_ci_double_original_poem_fun_item.py as a no-text 16:9 frontier landscape cover.",
+            "coverSource": "No-text 16:9 AgInTi/image-generation frontier landscape cover, visually selected for Liangzhou Ci before publication.",
             "publicAudio": PUBLIC_AUDIO_NAME,
         },
     }

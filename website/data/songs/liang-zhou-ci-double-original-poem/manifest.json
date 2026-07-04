@@ -746,7 +746,7 @@
       "note": "Separated-vocal ASR recovered the repeated Wang Han hook best; opening Wang Zhihuan quatrain has diction drift."
     },
     "lyricCorrection": "Active Mandarin text restores original Liangzhou Ci lines where the selected vocal is sound-close. The first early hook omits 葡萄美酒夜光杯 because separated-vocal ASR did not support a clear line there. Translations follow the corrected active-vocal line structure.",
-    "coverSource": "Generated locally by scripts/prepare_liang_zhou_ci_double_original_poem_fun_item.py as a no-text 16:9 frontier landscape cover.",
+    "coverSource": "No-text 16:9 AgInTi/image-generation frontier landscape cover, visually selected for Liangzhou Ci before publication.",
     "publicAudio": "liang-zhou-ci-double-original-poem-zh-Hans-ace-xl-turbo-seed747323-20260704.mp3"
   }
 }

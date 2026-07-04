@@ -33,6 +33,14 @@ data/runs/liang-zhou-ci-double-original-poem-7525030-deep-analysis/analysis/beat
 data/runs/liang-zhou-ci-double-original-poem-7525030-deep-analysis/analysis/lyrics.json
 ```
 
+Website:
+
+```text
+https://fun.lazying.art/#liang-zhou-ci-double-original-poem
+website/data/songs/liang-zhou-ci-double-original-poem/manifest.json
+website/assets/covers/liang-zhou-ci-double-original-poem-16x9.png
+```
+
 ## Lyric Source
 
 Public lyrics use only original poem lines:
@@ -83,3 +91,23 @@ ASR recovered the structure and repeated hook but showed diction drift:
 Public lyrics restore these to the original lines because the sounds are close
 and the original text is the artistic target. The opening quatrain is weaker and
 should be manually listened before public release.
+
+## Cover And Recording
+
+The public cover is a no-text 16:9 AgInTi/image-generation frontier landscape:
+moonlit pass, long river, luminous wine cup, and pipa. Do not regenerate this
+item with the old procedural placeholder cover.
+
+For portrait publication recording, use the Musia default lyrics-and-fingering
+style:
+
+```text
+4K portrait
+upper player/cover/header
+lower current trilingual lyrics
+guitar chord fingering below
+start slightly before the first vocal, not exactly on the syllable
+```
+
+The first lyric line starts at `18.38s`. A smoother recording start is around
+`16.50s`, or another nearby musical lead-in selected by listening.
