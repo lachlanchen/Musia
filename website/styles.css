@@ -1646,9 +1646,12 @@ body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .advanced-to
 }
 
 body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .hero-grid {
-  height: calc(100vh - 112px);
+  height: auto;
   min-height: 0;
-  grid-template-rows: minmax(0, 1380px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-content: start;
+  gap: 22px;
 }
 
 body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .player-card {
@@ -1656,15 +1659,24 @@ body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .player-card
 }
 
 body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .stage {
-  width: min(100%, 1120px);
+  width: 100%;
+  max-height: none;
 }
 
 body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .lyrics-card {
   padding: 28px;
+  min-height: 0;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .lyric-carousel {
+  min-height: 0;
+  align-content: start;
 }
 
 body.capture-mode.capture-portrait.capture-ktv.capture-multilingual .carousel-line {
-  padding: 30px 34px;
+  padding: 26px 34px;
   border-radius: 32px;
 }
 
