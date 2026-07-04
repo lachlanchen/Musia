@@ -1808,6 +1808,256 @@ body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyri
   font-size: 25px;
 }
 
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .page-shell {
+  height: 100vh;
+  padding: 18px 30px;
+  overflow: hidden;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .site-header {
+  min-height: 70px;
+  margin-bottom: 12px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .brand-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .brand strong {
+  font-size: 54px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .hero-grid {
+  height: calc(100vh - 100px);
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 760px) minmax(0, 1fr);
+  gap: 18px;
+  align-content: stretch;
+  overflow: hidden;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .player-card,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .lyrics-card {
+  min-height: 0;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .player-card {
+  padding: 18px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .title-row {
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .cover-thumb {
+  width: 96px;
+  border-radius: 18px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication h1 {
+  font-size: 58px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .eyebrow {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .media-artist {
+  font-size: 36px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .stage {
+  width: 100%;
+  max-height: 390px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .stage-copy {
+  left: 30px;
+  right: 30px;
+  bottom: 26px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .stage-copy p {
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 1.18;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .stage-line {
+  font-size: 48px;
+  line-height: 1.04;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .transport {
+  margin-top: 14px;
+  gap: 16px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .play-button {
+  width: 72px;
+  height: 72px;
+  font-size: 27px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .time-readout {
+  grid-template-columns: 72px minmax(0, 1fr) 72px;
+  font-size: 27px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .meta-row {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .lyrics-card {
+  display: grid;
+  height: 100%;
+  padding: 20px 24px 22px;
+  grid-template-rows: minmax(0, 430px) 74px minmax(0, 1fr);
+  gap: 12px;
+  align-content: stretch;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .lyrics-head {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .lyric-carousel {
+  order: 1;
+  min-height: 0;
+  align-content: stretch;
+  overflow: hidden;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-idle {
+  margin-bottom: 8px;
+  padding: 14px 20px;
+  border-radius: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-idle span {
+  font-size: 22px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-idle strong {
+  font-size: 25px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-idle + .carousel-line {
+  display: none;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-line {
+  height: 100%;
+  padding: 18px 24px;
+  border-radius: 24px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-line > span {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-translations {
+  gap: 8px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-track {
+  gap: 4px;
+  padding: 5px 0 7px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-track label {
+  font-size: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-track .plain-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-track .token-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-track .ruby-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-line:not(.active) .plain-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-line:not(.active) .token-line,
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .carousel-line:not(.active) .ruby-line {
+  font-size: clamp(27px, 3.55vw, 39px);
+  line-height: 1.16;
+  font-weight: 880;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication rt {
+  margin-bottom: 3px;
+  font-size: .38em;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .chord-row {
+  order: 2;
+  min-height: 74px;
+  margin: 0;
+  gap: 10px;
+  align-self: stretch;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .chord-pill {
+  padding: 11px 22px;
+  font-size: 30px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication .chord-pill span {
+  font-size: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication.advanced-mode .advanced-panel {
+  order: 3;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 16px 24px 18px;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication.advanced-mode .advanced-panel h3 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication.advanced-mode .diagram-position {
+  font-size: 19px;
+  padding: 7px 12px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication.advanced-mode .guitar-diagram {
+  align-self: center;
+  width: min(720px, 74%);
+  height: min(430px, 100%);
+  margin: 0 auto;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication.advanced-mode .guitar-marker {
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication.advanced-mode .guitar-open {
+  font-size: 20px;
+}
+
+body.capture-mode.capture-portrait.capture-ktv.capture-multilingual.capture-lyrics-guitar.capture-publication.advanced-mode .chord-fingering {
+  gap: 8px;
+  font-size: 18px;
+}
+
 body.capture-mode.capture-portrait.capture-full-lyrics .page-shell {
   padding: 22px 30px;
 }

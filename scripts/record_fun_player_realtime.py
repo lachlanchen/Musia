@@ -130,6 +130,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--advanced", action=argparse.BooleanOptionalAction, default=True, help="Enable advanced chord/guitar mode.")
     parser.add_argument("--guitar-focus", action=argparse.BooleanOptionalAction, default=True, help="Use the lower panel for guitar fingering.")
     parser.add_argument("--lyrics-guitar", action="store_true", help="Keep multilingual lyrics visible and use the lower spare portrait area for guitar fingering.")
+    parser.add_argument("--publication-layout", action="store_true", help="Use the dedicated player + lyrics + guitar publication capture layout.")
+    parser.add_argument("--capture-clock", action="store_true", help="Drive the visible player timeline from a synthetic clock locked to the muxed audio start time.")
     parser.add_argument("--ffmpeg-bin", default="", help="FFmpeg binary. Defaults to /usr/bin/ffmpeg when available for x11grab.")
     parser.add_argument("--display", default="", help="Existing X display to use. Defaults to a new Xvfb display.")
     parser.add_argument("--chrome-channel", default="chrome", help="Playwright Chrome channel.")
@@ -197,6 +199,7 @@ def main() -> None:
             "advanced": "1" if args.advanced else "0",
             "guitarFocus": "1" if args.guitar_focus else "0",
             "lyricsGuitar": "1" if args.lyrics_guitar else "0",
+            "publication": "1" if args.publication_layout else "0",
         }
     )
     url = f"{base_url}?{query}#{args.media_id}"
@@ -280,6 +283,9 @@ def main() -> None:
                       media.volume = 0;
                       media.pause();
                       const target = Math.max(0, Number(start) || 0);
+                      if (window.funPlayerSetTime) {
+                        window.funPlayerSetTime(target);
+                      }
                       if (Math.abs((media.currentTime || 0) - target) > 0.05) {
                         await new Promise((resolve) => {
                           let done = false;
@@ -296,7 +302,11 @@ def main() -> None:
                       } else {
                         media.currentTime = target;
                       }
-                      window.funPlayerUpdateSync();
+                      if (window.funPlayerSetTime) {
+                        window.funPlayerSetTime(target);
+                      } else {
+                        window.funPlayerUpdateSync();
+                      }
                     }""",
                     args.start,
                 )
@@ -336,14 +346,32 @@ def main() -> None:
                 print("+", " ".join(ffmpeg_cmd), flush=True)
                 ffmpeg = subprocess.Popen(ffmpeg_cmd, env=env)
                 time.sleep(args.capture_lead)
-                page.evaluate(
-                    """async () => {
-                      const media = document.getElementById('audio') || document.getElementById('video');
-                      media.muted = true;
-                      media.volume = 0;
-                      await media.play();
-                    }""",
-                )
+                if args.capture_clock:
+                    page.evaluate(
+                        """(start) => {
+                          const media = document.getElementById('audio') || document.getElementById('video');
+                          if (media) {
+                            media.muted = true;
+                            media.volume = 0;
+                            media.pause();
+                          }
+                          if (window.funPlayerStartCaptureClock) {
+                            window.funPlayerStartCaptureClock(start, 1);
+                          } else if (window.funPlayerSetTime) {
+                            window.funPlayerSetTime(start);
+                          }
+                        }""",
+                        args.start,
+                    )
+                else:
+                    page.evaluate(
+                        """async () => {
+                          const media = document.getElementById('audio') || document.getElementById('video');
+                          media.muted = true;
+                          media.volume = 0;
+                          await media.play();
+                        }""",
+                    )
                 code = ffmpeg.wait(timeout=args.duration + args.capture_lead + 120)
                 if code != 0:
                     fail(f"FFmpeg screen capture failed with code {code}")

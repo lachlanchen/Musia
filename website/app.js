@@ -36,6 +36,7 @@ const state = {
   advancedMode: false,
   advancedChordRenderKey: "",
   playbackSyncFrame: 0,
+  captureClockFrame: 0,
   mediaSessionHandlersInstalled: false
 };
 
@@ -1134,7 +1135,7 @@ function renderChords(activeChord = null) {
   updateAdvancedChord(activeChord);
 }
 
-function renderCarousel(activeLine) {
+function renderCarousel(activeLine, timeOverride = null) {
   const tracks = selectedLyricTracks();
   const lines = timingLines();
   if (!tracks.length || !lines.length) {
@@ -1142,7 +1143,9 @@ function renderCarousel(activeLine) {
     return;
   }
   const rawActiveIndex = activeLine ? lines.findIndex((line) => line.id === activeLine.id) : -1;
-  const time = state.mediaElement?.currentTime || 0;
+  const time = Number.isFinite(timeOverride)
+    ? timeOverride
+    : (Number.isFinite(state.captureTime) ? state.captureTime : (state.mediaElement?.currentTime || 0));
   const gap = rawActiveIndex >= 0 ? null : lyricGapState(time);
   const nextIndex = gap?.next ? lines.findIndex((line) => line.id === gap.next.id) : -1;
   const previousIndex = gap?.previous ? lines.findIndex((line) => line.id === gap.previous.id) : -1;
@@ -1237,8 +1240,9 @@ function updateTokenHighlights(time, activeLine = activeLineAt(time)) {
 function updateSync() {
   if (!state.manifest) return;
   const media = state.mediaElement;
-  const time = Number.isFinite(state.captureTime) ? state.captureTime : (media?.currentTime || 0);
   const duration = media?.duration || state.manifest.duration || 1;
+  const rawTime = Number.isFinite(state.captureTime) ? state.captureTime : (media?.currentTime || 0);
+  const time = Math.min(Math.max(0, rawTime), duration);
   const activeLine = activeLineAt(time);
   const activeChord = activeChordAt(time);
   const gap = activeLine ? null : lyricGapState(time);
@@ -1257,15 +1261,24 @@ function updateSync() {
   $("current-lyric-label").textContent = selectedLyricSummary();
   const introStart = firstVocalStart();
   $("skip-intro").hidden = !state.mediaElement || introStart <= 0.25;
-  renderCarousel(activeLine);
+  renderCarousel(activeLine, time);
   renderFullLyrics(activeLine);
   renderChords(activeChord);
   updateTokenHighlights(time, activeLine);
 }
 
+function stopCaptureClock({ render = false } = {}) {
+  if (state.captureClockFrame) {
+    cancelAnimationFrame(state.captureClockFrame);
+    state.captureClockFrame = 0;
+  }
+  if (render) updateSync();
+}
+
 window.funPlayerSetTime = function funPlayerSetTime(time) {
   const media = state.mediaElement || audio || video;
   const nextTime = Math.max(0, Number(time) || 0);
+  stopCaptureClock();
   state.captureTime = nextTime;
   if (media) {
     try {
@@ -1277,6 +1290,29 @@ window.funPlayerSetTime = function funPlayerSetTime(time) {
   }
   updateSync();
   return nextTime;
+};
+
+window.funPlayerStartCaptureClock = function funPlayerStartCaptureClock(start = 0, rate = 1) {
+  const duration = state.mediaElement?.duration || state.manifest?.duration || Infinity;
+  const baseTime = Math.max(0, Number(start) || 0);
+  const speed = Number.isFinite(Number(rate)) && Number(rate) > 0 ? Number(rate) : 1;
+  const origin = performance.now();
+  stopCaptureClock();
+  const tick = () => {
+    state.captureTime = Math.min(duration, baseTime + ((performance.now() - origin) / 1000) * speed);
+    updateSync();
+    if (state.captureTime < duration) {
+      state.captureClockFrame = requestAnimationFrame(tick);
+    } else {
+      state.captureClockFrame = 0;
+    }
+  };
+  tick();
+  return baseTime;
+};
+
+window.funPlayerStopCaptureClock = function funPlayerStopCaptureClock() {
+  stopCaptureClock({ render: true });
 };
 
 window.funPlayerUpdateSync = updateSync;
@@ -1388,6 +1424,7 @@ function mediaListeners(element) {
 
 function bindEvents() {
   $("play").addEventListener("click", async () => {
+    stopCaptureClock();
     state.captureTime = null;
     const media = state.mediaElement;
     if (!media) return;
@@ -1397,6 +1434,7 @@ function bindEvents() {
   $("seek").addEventListener("input", () => {
     const media = state.mediaElement;
     if (!media) return;
+    stopCaptureClock();
     state.captureTime = null;
     const duration = media.duration || state.manifest.duration || 1;
     media.currentTime = Number($("seek").value) / 1000 * duration;
@@ -1525,12 +1563,14 @@ async function boot() {
   const capturePortrait = state.captureMode && params.get("portrait") === "1";
   const captureGuitarFocus = state.captureMode && params.get("guitarFocus") === "1";
   const captureLyricsGuitar = state.captureMode && params.get("lyricsGuitar") === "1";
+  const capturePublication = state.captureMode && (params.get("publication") === "1" || params.get("layout") === "publication");
   state.captureMultilingual = state.captureMode && params.get("multiLyrics") === "1";
   document.body.classList.toggle("capture-mode", state.captureMode);
   document.body.classList.toggle("capture-full-lyrics", captureFullLyrics);
   document.body.classList.toggle("capture-portrait", capturePortrait);
   document.body.classList.toggle("capture-guitar-focus", captureGuitarFocus);
   document.body.classList.toggle("capture-lyrics-guitar", captureLyricsGuitar);
+  document.body.classList.toggle("capture-publication", capturePublication);
   document.body.classList.toggle("capture-multilingual", state.captureMultilingual);
   document.body.classList.toggle("capture-ktv", capturePortrait && !captureFullLyrics && !captureGuitarFocus);
   bindEvents();
