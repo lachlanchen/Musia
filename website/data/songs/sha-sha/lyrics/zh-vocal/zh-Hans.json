@@ -1,0 +1,690 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "sha-sha",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 12.11,
+      "end": 17.07,
+      "text": "沙沙，沙沙，大海的沙",
+      "singableText": "沙沙，沙沙，大海的沙",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "沙",
+          "start": 12.11,
+          "end": 12.606,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "沙",
+          "start": 12.606,
+          "end": 13.102,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 13.102,
+          "end": 13.598
+        },
+        {
+          "text": "沙",
+          "start": 13.598,
+          "end": 14.094,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "沙",
+          "start": 14.094,
+          "end": 14.59,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 14.59,
+          "end": 15.086
+        },
+        {
+          "text": "大",
+          "start": 15.086,
+          "end": 15.582,
+          "pinyin": "da4"
+        },
+        {
+          "text": "海",
+          "start": 15.582,
+          "end": 16.078,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "的",
+          "start": 16.078,
+          "end": 16.574,
+          "pinyin": "de5"
+        },
+        {
+          "text": "沙",
+          "start": 16.574,
+          "end": 17.07,
+          "pinyin": "sha1"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 18.03,
+      "end": 24.35,
+      "text": "沙漠的沙，沙漠的沙，数不尽它",
+      "singableText": "沙漠的沙，沙漠的沙，数不尽它",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "沙",
+          "start": 18.03,
+          "end": 18.481,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "漠",
+          "start": 18.481,
+          "end": 18.933,
+          "pinyin": "mo4"
+        },
+        {
+          "text": "的",
+          "start": 18.933,
+          "end": 19.384,
+          "pinyin": "de5"
+        },
+        {
+          "text": "沙",
+          "start": 19.384,
+          "end": 19.836,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 19.836,
+          "end": 20.287
+        },
+        {
+          "text": "沙",
+          "start": 20.287,
+          "end": 20.739,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "漠",
+          "start": 20.739,
+          "end": 21.19,
+          "pinyin": "mo4"
+        },
+        {
+          "text": "的",
+          "start": 21.19,
+          "end": 21.641,
+          "pinyin": "de5"
+        },
+        {
+          "text": "沙",
+          "start": 21.641,
+          "end": 22.093,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 22.093,
+          "end": 22.544
+        },
+        {
+          "text": "数",
+          "start": 22.544,
+          "end": 22.996,
+          "pinyin": "shu4"
+        },
+        {
+          "text": "不",
+          "start": 22.996,
+          "end": 23.447,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "尽",
+          "start": 23.447,
+          "end": 23.899,
+          "pinyin": "jin3"
+        },
+        {
+          "text": "它",
+          "start": 23.899,
+          "end": 24.35,
+          "pinyin": "ta1"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 25.25,
+      "end": 30.19,
+      "text": "你牵着我，沿着浪花",
+      "singableText": "你牵着我，沿着浪花",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 25.25,
+          "end": 25.799,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "牵",
+          "start": 25.799,
+          "end": 26.348,
+          "pinyin": "qian1"
+        },
+        {
+          "text": "着",
+          "start": 26.348,
+          "end": 26.897,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "我",
+          "start": 26.897,
+          "end": 27.446,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "，",
+          "start": 27.446,
+          "end": 27.994
+        },
+        {
+          "text": "沿",
+          "start": 27.994,
+          "end": 28.543,
+          "pinyin": "yan2"
+        },
+        {
+          "text": "着",
+          "start": 28.543,
+          "end": 29.092,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "浪",
+          "start": 29.092,
+          "end": 29.641,
+          "pinyin": "lang4"
+        },
+        {
+          "text": "花",
+          "start": 29.641,
+          "end": 30.19,
+          "pinyin": "hua1"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.19,
+      "end": 40.81,
+      "text": "风吹到千叶海边，轻指楼兰姑娘面庞",
+      "singableText": "风吹到千叶海边，轻指楼兰姑娘面庞",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 30.19,
+          "end": 30.854,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "吹",
+          "start": 30.854,
+          "end": 31.518,
+          "pinyin": "chui1"
+        },
+        {
+          "text": "到",
+          "start": 31.518,
+          "end": 32.181,
+          "pinyin": "dao4"
+        },
+        {
+          "text": "千",
+          "start": 32.181,
+          "end": 32.845,
+          "pinyin": "qian1"
+        },
+        {
+          "text": "叶",
+          "start": 32.845,
+          "end": 33.509,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "海",
+          "start": 33.509,
+          "end": 34.172,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "边",
+          "start": 34.172,
+          "end": 34.836,
+          "pinyin": "bian1"
+        },
+        {
+          "text": "，",
+          "start": 34.836,
+          "end": 35.5
+        },
+        {
+          "text": "轻",
+          "start": 35.5,
+          "end": 36.164,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "指",
+          "start": 36.164,
+          "end": 36.828,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "楼",
+          "start": 36.828,
+          "end": 37.491,
+          "pinyin": "lou2"
+        },
+        {
+          "text": "兰",
+          "start": 37.491,
+          "end": 38.155,
+          "pinyin": "lan2"
+        },
+        {
+          "text": "姑",
+          "start": 38.155,
+          "end": 38.819,
+          "pinyin": "gu1"
+        },
+        {
+          "text": "娘",
+          "start": 38.819,
+          "end": 39.483,
+          "pinyin": "niang2"
+        },
+        {
+          "text": "面",
+          "start": 39.483,
+          "end": 40.146,
+          "pinyin": "mian4"
+        },
+        {
+          "text": "庞",
+          "start": 40.146,
+          "end": 40.81,
+          "pinyin": "pang2"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 40.81,
+      "end": 44.05,
+      "text": "你笑着说，世界很大",
+      "singableText": "你笑着说，世界很大",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 40.81,
+          "end": 41.17,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "笑",
+          "start": 41.17,
+          "end": 41.53,
+          "pinyin": "xiao4"
+        },
+        {
+          "text": "着",
+          "start": 41.53,
+          "end": 41.89,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "说",
+          "start": 41.89,
+          "end": 42.25,
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "，",
+          "start": 42.25,
+          "end": 42.61
+        },
+        {
+          "text": "世",
+          "start": 42.61,
+          "end": 42.97,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "界",
+          "start": 42.97,
+          "end": 43.33,
+          "pinyin": "jie4"
+        },
+        {
+          "text": "很",
+          "start": 43.33,
+          "end": 43.69,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "大",
+          "start": 43.69,
+          "end": 44.05,
+          "pinyin": "da4"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 44.05,
+      "end": 48.41,
+      "text": "可此刻只装得下，我们俩",
+      "singableText": "可此刻只装得下，我们俩",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "可",
+          "start": 44.05,
+          "end": 44.446,
+          "pinyin": "ke3"
+        },
+        {
+          "text": "此",
+          "start": 44.446,
+          "end": 44.843,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "刻",
+          "start": 44.843,
+          "end": 45.239,
+          "pinyin": "ke4"
+        },
+        {
+          "text": "只",
+          "start": 45.239,
+          "end": 45.635,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "装",
+          "start": 45.635,
+          "end": 46.032,
+          "pinyin": "zhuang1"
+        },
+        {
+          "text": "得",
+          "start": 46.032,
+          "end": 46.428,
+          "pinyin": "de2"
+        },
+        {
+          "text": "下",
+          "start": 46.428,
+          "end": 46.825,
+          "pinyin": "xia4"
+        },
+        {
+          "text": "，",
+          "start": 46.825,
+          "end": 47.221
+        },
+        {
+          "text": "我",
+          "start": 47.221,
+          "end": 47.617,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "们",
+          "start": 47.617,
+          "end": 48.014,
+          "pinyin": "men5"
+        },
+        {
+          "text": "俩",
+          "start": 48.014,
+          "end": 48.41,
+          "pinyin": "lia3"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 55.99,
+      "end": 58.47,
+      "text": "夕阳落在肩上",
+      "singableText": "夕阳落在肩上",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "夕",
+          "start": 55.99,
+          "end": 56.403,
+          "pinyin": "xi1"
+        },
+        {
+          "text": "阳",
+          "start": 56.403,
+          "end": 56.817,
+          "pinyin": "yang2"
+        },
+        {
+          "text": "落",
+          "start": 56.817,
+          "end": 57.23,
+          "pinyin": "luo4"
+        },
+        {
+          "text": "在",
+          "start": 57.23,
+          "end": 57.643,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "肩",
+          "start": 57.643,
+          "end": 58.057,
+          "pinyin": "jian1"
+        },
+        {
+          "text": "上",
+          "start": 58.057,
+          "end": 58.47,
+          "pinyin": "shang4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 58.47,
+      "end": 64.57,
+      "text": "沙沙，沙沙，海浪说悄悄话",
+      "singableText": "沙沙，沙沙，海浪说悄悄话",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "沙",
+          "start": 58.47,
+          "end": 58.978,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "沙",
+          "start": 58.978,
+          "end": 59.487,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 59.487,
+          "end": 59.995
+        },
+        {
+          "text": "沙",
+          "start": 59.995,
+          "end": 60.503,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "沙",
+          "start": 60.503,
+          "end": 61.012,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 61.012,
+          "end": 61.52
+        },
+        {
+          "text": "海",
+          "start": 61.52,
+          "end": 62.028,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "浪",
+          "start": 62.028,
+          "end": 62.537,
+          "pinyin": "lang4"
+        },
+        {
+          "text": "说",
+          "start": 62.537,
+          "end": 63.045,
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "悄",
+          "start": 63.045,
+          "end": 63.553,
+          "pinyin": "qiao1"
+        },
+        {
+          "text": "悄",
+          "start": 63.553,
+          "end": 64.062,
+          "pinyin": "qiao1"
+        },
+        {
+          "text": "话",
+          "start": 64.062,
+          "end": 64.57,
+          "pinyin": "hua4"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 64.57,
+      "end": 70.37,
+      "text": "沙沙，沙沙，太阳慢慢落下",
+      "singableText": "沙沙，沙沙，太阳慢慢落下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "沙",
+          "start": 64.57,
+          "end": 65.053,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "沙",
+          "start": 65.053,
+          "end": 65.537,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 65.537,
+          "end": 66.02
+        },
+        {
+          "text": "沙",
+          "start": 66.02,
+          "end": 66.503,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "沙",
+          "start": 66.503,
+          "end": 66.987,
+          "pinyin": "sha1"
+        },
+        {
+          "text": "，",
+          "start": 66.987,
+          "end": 67.47
+        },
+        {
+          "text": "太",
+          "start": 67.47,
+          "end": 67.953,
+          "pinyin": "tai4"
+        },
+        {
+          "text": "阳",
+          "start": 67.953,
+          "end": 68.437,
+          "pinyin": "yang2"
+        },
+        {
+          "text": "慢",
+          "start": 68.437,
+          "end": 68.92,
+          "pinyin": "man4"
+        },
+        {
+          "text": "慢",
+          "start": 68.92,
+          "end": 69.403,
+          "pinyin": "man4"
+        },
+        {
+          "text": "落",
+          "start": 69.403,
+          "end": 69.887,
+          "pinyin": "luo4"
+        },
+        {
+          "text": "下",
+          "start": 69.887,
+          "end": 70.37,
+          "pinyin": "xia4"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽, 楼栏->楼兰 were restored to the more beautiful planned text."
+  }
+}

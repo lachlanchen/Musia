@@ -1,0 +1,770 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "sha-sha",
+  "kind": "song",
+  "title": "沙沙",
+  "localizedTitles": {
+    "zh-Hans": "沙沙",
+    "en": "Sha Sha",
+    "ja": "さらさら"
+  },
+  "artist": "Musia",
+  "description": "A soft Mandarin ACE-Step beach-sunset ballad with ASR-audited trilingual lyrics, pinyin, furigana, chords, stems, and beats.",
+  "caption": "Sea sand, desert sand, Chiba sea wind, Loulan dream, and two people watching the sun by the waves.",
+  "duration": 88.0,
+  "canonicalUrl": "https://fun.lazying.art/#sha-sha",
+  "share": {
+    "title": "沙沙 - Fun Lazying Art",
+    "description": "Musia soft Mandarin beach-sunset song.",
+    "url": "https://fun.lazying.art/#sha-sha",
+    "image": "assets/covers/sha-sha-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "沙沙 cover",
+      "role": "cover",
+      "src": "assets/covers/sha-sha-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/sha-sha-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "sha-sha-zh",
+      "label": "中文",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
+      "lyricSetId": "zh-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/sha-sha-zh-Hans-ace-xl-turbo-seed750531-20260705.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "musical": {
+    "key": "F major requested / analysis detects A-minor-centered pop progression",
+    "bpm": 161.5,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 1.556,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 1.556,
+        "end": 1.927,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 1.927,
+        "end": 3.39,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 3.39,
+        "end": 3.762,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 3.762,
+        "end": 4.11,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 4.11,
+        "end": 4.481,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 4.481,
+        "end": 4.853,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 4.853,
+        "end": 5.224,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 5.224,
+        "end": 5.944,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 5.944,
+        "end": 6.316,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 6.316,
+        "end": 8.87,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 8.87,
+        "end": 9.242,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 9.242,
+        "end": 9.613,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 9.613,
+        "end": 11.796,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 11.796,
+        "end": 12.167,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 12.167,
+        "end": 12.539,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 12.539,
+        "end": 15.464,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 15.464,
+        "end": 15.836,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 15.836,
+        "end": 16.208,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 16.208,
+        "end": 16.556,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 16.556,
+        "end": 17.299,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 17.299,
+        "end": 18.019,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 18.019,
+        "end": 18.39,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 18.39,
+        "end": 18.762,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 18.762,
+        "end": 19.482,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 19.482,
+        "end": 19.853,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 19.853,
+        "end": 21.316,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 21.316,
+        "end": 23.15,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 23.15,
+        "end": 23.499,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 23.499,
+        "end": 24.242,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 24.242,
+        "end": 24.961,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 24.961,
+        "end": 27.191,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 27.191,
+        "end": 29.722,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 29.722,
+        "end": 30.093,
+        "name": "C#m",
+        "degree": ""
+      },
+      {
+        "start": 30.093,
+        "end": 30.813,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 30.813,
+        "end": 31.184,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 31.184,
+        "end": 31.556,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 31.556,
+        "end": 33.019,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 33.019,
+        "end": 33.39,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 33.39,
+        "end": 35.225,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 35.225,
+        "end": 35.968,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 35.968,
+        "end": 38.522,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 38.522,
+        "end": 38.87,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 38.87,
+        "end": 39.242,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 39.242,
+        "end": 39.613,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 39.613,
+        "end": 41.076,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 41.076,
+        "end": 41.424,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 41.424,
+        "end": 41.819,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 41.819,
+        "end": 42.191,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 42.191,
+        "end": 42.91,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 42.91,
+        "end": 43.979,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 43.979,
+        "end": 44.35,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 44.35,
+        "end": 44.722,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 44.722,
+        "end": 45.093,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 45.093,
+        "end": 45.465,
+        "name": "C#m",
+        "degree": ""
+      },
+      {
+        "start": 45.465,
+        "end": 45.836,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 45.836,
+        "end": 46.208,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 46.208,
+        "end": 47.671,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 47.671,
+        "end": 48.042,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 48.042,
+        "end": 51.316,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 51.316,
+        "end": 52.036,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 52.036,
+        "end": 52.779,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 52.779,
+        "end": 54.242,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 54.242,
+        "end": 55.333,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 55.333,
+        "end": 55.705,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 55.705,
+        "end": 57.168,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 57.168,
+        "end": 59.722,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 59.722,
+        "end": 60.093,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 60.093,
+        "end": 61.556,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 61.556,
+        "end": 63.019,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 63.019,
+        "end": 63.739,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 63.739,
+        "end": 64.482,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 64.482,
+        "end": 65.225,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 65.225,
+        "end": 65.945,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 65.945,
+        "end": 67.059,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 67.059,
+        "end": 67.408,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 67.408,
+        "end": 68.499,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 68.499,
+        "end": 68.87,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 68.87,
+        "end": 69.613,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 69.613,
+        "end": 70.333,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 70.333,
+        "end": 70.705,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 70.705,
+        "end": 71.076,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 71.076,
+        "end": 71.819,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 71.819,
+        "end": 72.539,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 72.539,
+        "end": 73.282,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 73.282,
+        "end": 74.745,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 74.745,
+        "end": 75.465,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 75.465,
+        "end": 76.185,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 76.185,
+        "end": 77.671,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 77.671,
+        "end": 78.391,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 78.391,
+        "end": 78.762,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 78.762,
+        "end": 79.134,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 79.134,
+        "end": 80.596,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 80.596,
+        "end": 80.968,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 80.968,
+        "end": 81.316,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 81.316,
+        "end": 81.688,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 81.688,
+        "end": 82.059,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 82.059,
+        "end": 88.0,
+        "name": "Am",
+        "degree": ""
+      }
+    ]
+  },
+  "timeline": {
+    "lines": [
+      {
+        "id": "l01",
+        "start": 12.11,
+        "end": 17.07,
+        "text": "沙沙，沙沙，大海的沙"
+      },
+      {
+        "id": "l02",
+        "start": 18.03,
+        "end": 24.35,
+        "text": "沙漠的沙，沙漠的沙，数不尽它"
+      },
+      {
+        "id": "l03",
+        "start": 25.25,
+        "end": 30.19,
+        "text": "你牵着我，沿着浪花"
+      },
+      {
+        "id": "l04",
+        "start": 30.19,
+        "end": 40.81,
+        "text": "风吹到千叶海边，轻指楼兰姑娘面庞"
+      },
+      {
+        "id": "l05",
+        "start": 40.81,
+        "end": 44.05,
+        "text": "你笑着说，世界很大"
+      },
+      {
+        "id": "l06",
+        "start": 44.05,
+        "end": 48.41,
+        "text": "可此刻只装得下，我们俩"
+      },
+      {
+        "id": "l07",
+        "start": 55.99,
+        "end": 58.47,
+        "text": "夕阳落在肩上"
+      },
+      {
+        "id": "l08",
+        "start": 58.47,
+        "end": 64.57,
+        "text": "沙沙，沙沙，海浪说悄悄话"
+      },
+      {
+        "id": "l09",
+        "start": 64.57,
+        "end": 70.37,
+        "text": "沙沙，沙沙，太阳慢慢落下"
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "zh-vocal",
+      "label": "中文 vocal",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "active-vocal"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "artifacts": {
+    "project": "data/creative_projects/sha-sha-20260705",
+    "selectedWav": "data/creative_projects/sha-sha-20260705/selected/sha-sha-zh-ace-xl-turbo-seed750531.wav",
+    "selectedMp3": "data/creative_projects/sha-sha-20260705/selected/sha-sha-zh-ace-xl-turbo-seed750531.mp3",
+    "analysisRun": "data/runs/sha-sha-f641-balanced-analysis",
+    "stems": {
+      "vocals": "data/runs/sha-sha-f641-balanced-analysis/stems/vocals.wav",
+      "drums": "data/runs/sha-sha-f641-balanced-analysis/stems/drums.wav",
+      "bass": "data/runs/sha-sha-f641-balanced-analysis/stems/bass.wav",
+      "other": "data/runs/sha-sha-f641-balanced-analysis/stems/other.wav",
+      "instrumental": "data/runs/sha-sha-f641-balanced-analysis/stems/instrumental.wav"
+    },
+    "beats": "data/runs/sha-sha-f641-balanced-analysis/analysis/beats.csv",
+    "chords": "data/runs/sha-sha-f641-balanced-analysis/analysis/chords.csv",
+    "asr": "data/runs/sha-sha-f641-balanced-analysis/analysis/lyrics.json"
+  }
+}

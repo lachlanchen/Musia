@@ -1,0 +1,35 @@
+{
+  "run_name": "sha-sha-f641-balanced-analysis",
+  "created_at": "2026-07-05T13:35:43.253296+00:00",
+  "input": "data/creative_projects/sha-sha-20260705/ace_outputs/xl_turbo_front_vocal_balanced/f641b2bc-3eae-5b72-2ba4-929ea2d71b1c.wav",
+  "max_duration": 110.0,
+  "music_analysis_audio": "stems/instrumental.wav",
+  "vocal_analysis_audio": "stems/vocals.wav",
+  "tempo_bpm": 161.4990234375,
+  "beat_count": 223,
+  "chord_segment_count": 98,
+  "lyrics_status": "ok",
+  "steps": {
+    "separation": {
+      "status": "ok",
+      "engine": "demucs"
+    }
+  },
+  "artifacts": {
+    "input_wav": "source/input.wav",
+    "stem_vocals": "stems/vocals.wav",
+    "stem_drums": "stems/drums.wav",
+    "stem_bass": "stems/bass.wav",
+    "stem_other": "stems/other.wav",
+    "stem_human_sound": "stems/human_sound.wav",
+    "stem_instrumental": "stems/instrumental.wav",
+    "beats_json": "analysis/beats.json",
+    "beats_csv": "analysis/beats.csv",
+    "chords_json": "analysis/chords.json",
+    "chords_csv": "analysis/chords.csv",
+    "lyrics_json": "analysis/lyrics.json",
+    "lyrics_txt": "analysis/lyrics.txt",
+    "manifest": "manifest.json",
+    "report": "REPORT.md"
+  }
+}

@@ -1,0 +1,22 @@
+# Compact second pass after the first sweep skipped too many planned lines.
+project_root = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5"
+checkpoint_dir = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5/checkpoints"
+save_dir = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/ace_outputs/xl_turbo_compact_clean"
+config_path = "acestep-v15-xl-turbo"
+task_type = "text2music"
+caption = "Soft Mandarin Chinese beach love song. Warm sunset, two people walking on the sand, quiet ocean, gentle romance, beautiful memorable 沙沙 hook. Clear upfront tender female Mandarin vocal, smooth connected melody, acoustic guitar, warm piano, soft strings, light ocean percussion, gentle bass, spacious golden reverb. Sing the provided Chinese lyric naturally as a complete song with breath and held vowels. F major, 76 BPM, 4/4."
+lyrics = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/lyrics/zh-ace-compact.txt"
+duration = 76
+bpm = 76
+keyscale = "F major"
+timesignature = "4"
+vocal_language = "zh"
+thinking = false
+use_cot_lyrics = false
+use_cot_caption = false
+inference_steps = 8
+guidance_scale = 1.0
+use_random_seed = false
+seeds = [750521, 750522, 750523, 750524]
+batch_size = 4
+audio_format = "wav"

@@ -1,0 +1,517 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "sha-sha",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 12.11,
+      "end": 17.07,
+      "text": "Sha sha, sha sha, the sand of the sea",
+      "singableText": "Sha sha, sha sha, the sand of the sea",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Sha",
+          "start": 12.11,
+          "end": 12.561
+        },
+        {
+          "text": "sha",
+          "start": 12.561,
+          "end": 13.012
+        },
+        {
+          "text": ",",
+          "start": 13.012,
+          "end": 13.463
+        },
+        {
+          "text": "sha",
+          "start": 13.463,
+          "end": 13.914
+        },
+        {
+          "text": "sha",
+          "start": 13.914,
+          "end": 14.365
+        },
+        {
+          "text": ",",
+          "start": 14.365,
+          "end": 14.815
+        },
+        {
+          "text": "the",
+          "start": 14.815,
+          "end": 15.266
+        },
+        {
+          "text": "sand",
+          "start": 15.266,
+          "end": 15.717
+        },
+        {
+          "text": "of",
+          "start": 15.717,
+          "end": 16.168
+        },
+        {
+          "text": "the",
+          "start": 16.168,
+          "end": 16.619
+        },
+        {
+          "text": "sea",
+          "start": 16.619,
+          "end": 17.07
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 18.03,
+      "end": 24.35,
+      "text": "Desert sand, desert sand, too many grains to count",
+      "singableText": "Desert sand, desert sand, too many grains to count",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Desert",
+          "start": 18.03,
+          "end": 18.605
+        },
+        {
+          "text": "sand",
+          "start": 18.605,
+          "end": 19.179
+        },
+        {
+          "text": ",",
+          "start": 19.179,
+          "end": 19.754
+        },
+        {
+          "text": "desert",
+          "start": 19.754,
+          "end": 20.328
+        },
+        {
+          "text": "sand",
+          "start": 20.328,
+          "end": 20.903
+        },
+        {
+          "text": ",",
+          "start": 20.903,
+          "end": 21.477
+        },
+        {
+          "text": "too",
+          "start": 21.477,
+          "end": 22.052
+        },
+        {
+          "text": "many",
+          "start": 22.052,
+          "end": 22.626
+        },
+        {
+          "text": "grains",
+          "start": 22.626,
+          "end": 23.201
+        },
+        {
+          "text": "to",
+          "start": 23.201,
+          "end": 23.775
+        },
+        {
+          "text": "count",
+          "start": 23.775,
+          "end": 24.35
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 25.25,
+      "end": 30.19,
+      "text": "You hold my hand along the waves",
+      "singableText": "You hold my hand along the waves",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 25.25,
+          "end": 25.956
+        },
+        {
+          "text": "hold",
+          "start": 25.956,
+          "end": 26.661
+        },
+        {
+          "text": "my",
+          "start": 26.661,
+          "end": 27.367
+        },
+        {
+          "text": "hand",
+          "start": 27.367,
+          "end": 28.073
+        },
+        {
+          "text": "along",
+          "start": 28.073,
+          "end": 28.779
+        },
+        {
+          "text": "the",
+          "start": 28.779,
+          "end": 29.484
+        },
+        {
+          "text": "waves",
+          "start": 29.484,
+          "end": 30.19
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.19,
+      "end": 40.81,
+      "text": "The wind blows from Chiba's shore and brushes Loulan's girl's face",
+      "singableText": "The wind blows from Chiba's shore and brushes Loulan's girl's face",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 30.19,
+          "end": 31.155
+        },
+        {
+          "text": "wind",
+          "start": 31.155,
+          "end": 32.121
+        },
+        {
+          "text": "blows",
+          "start": 32.121,
+          "end": 33.086
+        },
+        {
+          "text": "from",
+          "start": 33.086,
+          "end": 34.052
+        },
+        {
+          "text": "Chiba's",
+          "start": 34.052,
+          "end": 35.017
+        },
+        {
+          "text": "shore",
+          "start": 35.017,
+          "end": 35.983
+        },
+        {
+          "text": "and",
+          "start": 35.983,
+          "end": 36.948
+        },
+        {
+          "text": "brushes",
+          "start": 36.948,
+          "end": 37.914
+        },
+        {
+          "text": "Loulan's",
+          "start": 37.914,
+          "end": 38.879
+        },
+        {
+          "text": "girl's",
+          "start": 38.879,
+          "end": 39.845
+        },
+        {
+          "text": "face",
+          "start": 39.845,
+          "end": 40.81
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 40.81,
+      "end": 44.05,
+      "text": "You smile and say the world is wide",
+      "singableText": "You smile and say the world is wide",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 40.81,
+          "end": 41.215
+        },
+        {
+          "text": "smile",
+          "start": 41.215,
+          "end": 41.62
+        },
+        {
+          "text": "and",
+          "start": 41.62,
+          "end": 42.025
+        },
+        {
+          "text": "say",
+          "start": 42.025,
+          "end": 42.43
+        },
+        {
+          "text": "the",
+          "start": 42.43,
+          "end": 42.835
+        },
+        {
+          "text": "world",
+          "start": 42.835,
+          "end": 43.24
+        },
+        {
+          "text": "is",
+          "start": 43.24,
+          "end": 43.645
+        },
+        {
+          "text": "wide",
+          "start": 43.645,
+          "end": 44.05
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 44.05,
+      "end": 48.41,
+      "text": "But this moment only holds the two of us",
+      "singableText": "But this moment only holds the two of us",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "But",
+          "start": 44.05,
+          "end": 44.534
+        },
+        {
+          "text": "this",
+          "start": 44.534,
+          "end": 45.019
+        },
+        {
+          "text": "moment",
+          "start": 45.019,
+          "end": 45.503
+        },
+        {
+          "text": "only",
+          "start": 45.503,
+          "end": 45.988
+        },
+        {
+          "text": "holds",
+          "start": 45.988,
+          "end": 46.472
+        },
+        {
+          "text": "the",
+          "start": 46.472,
+          "end": 46.957
+        },
+        {
+          "text": "two",
+          "start": 46.957,
+          "end": 47.441
+        },
+        {
+          "text": "of",
+          "start": 47.441,
+          "end": 47.926
+        },
+        {
+          "text": "us",
+          "start": 47.926,
+          "end": 48.41
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 55.99,
+      "end": 58.47,
+      "text": "Sunset rests on our shoulders",
+      "singableText": "Sunset rests on our shoulders",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Sunset",
+          "start": 55.99,
+          "end": 56.486
+        },
+        {
+          "text": "rests",
+          "start": 56.486,
+          "end": 56.982
+        },
+        {
+          "text": "on",
+          "start": 56.982,
+          "end": 57.478
+        },
+        {
+          "text": "our",
+          "start": 57.478,
+          "end": 57.974
+        },
+        {
+          "text": "shoulders",
+          "start": 57.974,
+          "end": 58.47
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 58.47,
+      "end": 64.57,
+      "text": "Sha sha, sha sha, the waves whisper",
+      "singableText": "Sha sha, sha sha, the waves whisper",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Sha",
+          "start": 58.47,
+          "end": 59.148
+        },
+        {
+          "text": "sha",
+          "start": 59.148,
+          "end": 59.826
+        },
+        {
+          "text": ",",
+          "start": 59.826,
+          "end": 60.503
+        },
+        {
+          "text": "sha",
+          "start": 60.503,
+          "end": 61.181
+        },
+        {
+          "text": "sha",
+          "start": 61.181,
+          "end": 61.859
+        },
+        {
+          "text": ",",
+          "start": 61.859,
+          "end": 62.537
+        },
+        {
+          "text": "the",
+          "start": 62.537,
+          "end": 63.214
+        },
+        {
+          "text": "waves",
+          "start": 63.214,
+          "end": 63.892
+        },
+        {
+          "text": "whisper",
+          "start": 63.892,
+          "end": 64.57
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 64.57,
+      "end": 70.37,
+      "text": "Sha sha, sha sha, the sun slowly goes down",
+      "singableText": "Sha sha, sha sha, the sun slowly goes down",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Sha",
+          "start": 64.57,
+          "end": 65.097
+        },
+        {
+          "text": "sha",
+          "start": 65.097,
+          "end": 65.625
+        },
+        {
+          "text": ",",
+          "start": 65.625,
+          "end": 66.152
+        },
+        {
+          "text": "sha",
+          "start": 66.152,
+          "end": 66.679
+        },
+        {
+          "text": "sha",
+          "start": 66.679,
+          "end": 67.206
+        },
+        {
+          "text": ",",
+          "start": 67.206,
+          "end": 67.734
+        },
+        {
+          "text": "the",
+          "start": 67.734,
+          "end": 68.261
+        },
+        {
+          "text": "sun",
+          "start": 68.261,
+          "end": 68.788
+        },
+        {
+          "text": "slowly",
+          "start": 68.788,
+          "end": 69.315
+        },
+        {
+          "text": "goes",
+          "start": 69.315,
+          "end": 69.843
+        },
+        {
+          "text": "down",
+          "start": 69.843,
+          "end": 70.37
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽, 楼栏->楼兰 were restored to the more beautiful planned text."
+  }
+}

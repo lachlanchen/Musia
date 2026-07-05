@@ -1,0 +1,866 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "sha-sha",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 12.11,
+      "end": 17.07,
+      "text": "さらさら、さらさら、海の砂",
+      "singableText": "さらさら、さらさら、海の砂",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "さ",
+          "start": 12.11,
+          "end": 12.492
+        },
+        {
+          "text": "ら",
+          "start": 12.492,
+          "end": 12.873
+        },
+        {
+          "text": "さ",
+          "start": 12.873,
+          "end": 13.255
+        },
+        {
+          "text": "ら",
+          "start": 13.255,
+          "end": 13.636
+        },
+        {
+          "text": "、",
+          "start": 13.636,
+          "end": 14.018
+        },
+        {
+          "text": "さ",
+          "start": 14.018,
+          "end": 14.399
+        },
+        {
+          "text": "ら",
+          "start": 14.399,
+          "end": 14.781
+        },
+        {
+          "text": "さ",
+          "start": 14.781,
+          "end": 15.162
+        },
+        {
+          "text": "ら",
+          "start": 15.162,
+          "end": 15.544
+        },
+        {
+          "text": "、",
+          "start": 15.544,
+          "end": 15.925
+        },
+        {
+          "text": "海",
+          "start": 15.925,
+          "end": 16.307,
+          "reading": "うみ"
+        },
+        {
+          "text": "の",
+          "start": 16.307,
+          "end": 16.688
+        },
+        {
+          "text": "砂",
+          "start": 16.688,
+          "end": 17.07,
+          "reading": "すな"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 18.03,
+      "end": 24.35,
+      "text": "砂漠の砂、砂漠の砂、数えきれない",
+      "singableText": "砂漠の砂、砂漠の砂、数えきれない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "砂",
+          "start": 18.03,
+          "end": 18.425,
+          "reading": "すな"
+        },
+        {
+          "text": "漠",
+          "start": 18.425,
+          "end": 18.82,
+          "reading": "ばく"
+        },
+        {
+          "text": "の",
+          "start": 18.82,
+          "end": 19.215
+        },
+        {
+          "text": "砂",
+          "start": 19.215,
+          "end": 19.61,
+          "reading": "すな"
+        },
+        {
+          "text": "、",
+          "start": 19.61,
+          "end": 20.005
+        },
+        {
+          "text": "砂",
+          "start": 20.005,
+          "end": 20.4,
+          "reading": "すな"
+        },
+        {
+          "text": "漠",
+          "start": 20.4,
+          "end": 20.795,
+          "reading": "ばく"
+        },
+        {
+          "text": "の",
+          "start": 20.795,
+          "end": 21.19
+        },
+        {
+          "text": "砂",
+          "start": 21.19,
+          "end": 21.585,
+          "reading": "すな"
+        },
+        {
+          "text": "、",
+          "start": 21.585,
+          "end": 21.98
+        },
+        {
+          "text": "数",
+          "start": 21.98,
+          "end": 22.375,
+          "reading": "かず"
+        },
+        {
+          "text": "え",
+          "start": 22.375,
+          "end": 22.77
+        },
+        {
+          "text": "き",
+          "start": 22.77,
+          "end": 23.165
+        },
+        {
+          "text": "れ",
+          "start": 23.165,
+          "end": 23.56
+        },
+        {
+          "text": "な",
+          "start": 23.56,
+          "end": 23.955
+        },
+        {
+          "text": "い",
+          "start": 23.955,
+          "end": 24.35
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 25.25,
+      "end": 30.19,
+      "text": "君が手を取り、波のそばを歩く",
+      "singableText": "君が手を取り、波のそばを歩く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 25.25,
+          "end": 25.603,
+          "reading": "くん"
+        },
+        {
+          "text": "が",
+          "start": 25.603,
+          "end": 25.956
+        },
+        {
+          "text": "手",
+          "start": 25.956,
+          "end": 26.309,
+          "reading": "て"
+        },
+        {
+          "text": "を",
+          "start": 26.309,
+          "end": 26.661
+        },
+        {
+          "text": "取",
+          "start": 26.661,
+          "end": 27.014,
+          "reading": "しゅ"
+        },
+        {
+          "text": "り",
+          "start": 27.014,
+          "end": 27.367
+        },
+        {
+          "text": "、",
+          "start": 27.367,
+          "end": 27.72
+        },
+        {
+          "text": "波",
+          "start": 27.72,
+          "end": 28.073,
+          "reading": "なみ"
+        },
+        {
+          "text": "の",
+          "start": 28.073,
+          "end": 28.426
+        },
+        {
+          "text": "そ",
+          "start": 28.426,
+          "end": 28.779
+        },
+        {
+          "text": "ば",
+          "start": 28.779,
+          "end": 29.131
+        },
+        {
+          "text": "を",
+          "start": 29.131,
+          "end": 29.484
+        },
+        {
+          "text": "歩",
+          "start": 29.484,
+          "end": 29.837,
+          "reading": "ほ"
+        },
+        {
+          "text": "く",
+          "start": 29.837,
+          "end": 30.19
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.19,
+      "end": 40.81,
+      "text": "千葉の海辺から風が吹き、楼蘭の少女の頬に触れる",
+      "singableText": "千葉の海辺から風が吹き、楼蘭の少女の頬に触れる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "千",
+          "start": 30.19,
+          "end": 30.652,
+          "reading": "せん"
+        },
+        {
+          "text": "葉",
+          "start": 30.652,
+          "end": 31.113,
+          "reading": "は"
+        },
+        {
+          "text": "の",
+          "start": 31.113,
+          "end": 31.575
+        },
+        {
+          "text": "海",
+          "start": 31.575,
+          "end": 32.037,
+          "reading": "うみ"
+        },
+        {
+          "text": "辺",
+          "start": 32.037,
+          "end": 32.499,
+          "reading": "へん"
+        },
+        {
+          "text": "か",
+          "start": 32.499,
+          "end": 32.96
+        },
+        {
+          "text": "ら",
+          "start": 32.96,
+          "end": 33.422
+        },
+        {
+          "text": "風",
+          "start": 33.422,
+          "end": 33.884,
+          "reading": "かぜ"
+        },
+        {
+          "text": "が",
+          "start": 33.884,
+          "end": 34.346
+        },
+        {
+          "text": "吹",
+          "start": 34.346,
+          "end": 34.807,
+          "reading": "すい"
+        },
+        {
+          "text": "き",
+          "start": 34.807,
+          "end": 35.269
+        },
+        {
+          "text": "、",
+          "start": 35.269,
+          "end": 35.731
+        },
+        {
+          "text": "楼",
+          "start": 35.731,
+          "end": 36.193,
+          "reading": "ろう"
+        },
+        {
+          "text": "蘭",
+          "start": 36.193,
+          "end": 36.654,
+          "reading": "らん"
+        },
+        {
+          "text": "の",
+          "start": 36.654,
+          "end": 37.116
+        },
+        {
+          "text": "少",
+          "start": 37.116,
+          "end": 37.578,
+          "reading": "しょう"
+        },
+        {
+          "text": "女",
+          "start": 37.578,
+          "end": 38.04,
+          "reading": "おんな"
+        },
+        {
+          "text": "の",
+          "start": 38.04,
+          "end": 38.501
+        },
+        {
+          "text": "頬",
+          "start": 38.501,
+          "end": 38.963,
+          "reading": "ほお"
+        },
+        {
+          "text": "に",
+          "start": 38.963,
+          "end": 39.425
+        },
+        {
+          "text": "触",
+          "start": 39.425,
+          "end": 39.887,
+          "reading": "しょく"
+        },
+        {
+          "text": "れ",
+          "start": 39.887,
+          "end": 40.348
+        },
+        {
+          "text": "る",
+          "start": 40.348,
+          "end": 40.81
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 40.81,
+      "end": 44.05,
+      "text": "君は笑って言う、世界は広いね",
+      "singableText": "君は笑って言う、世界は広いね",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 40.81,
+          "end": 41.041,
+          "reading": "くん"
+        },
+        {
+          "text": "は",
+          "start": 41.041,
+          "end": 41.273
+        },
+        {
+          "text": "笑",
+          "start": 41.273,
+          "end": 41.504,
+          "reading": "わらい"
+        },
+        {
+          "text": "っ",
+          "start": 41.504,
+          "end": 41.736
+        },
+        {
+          "text": "て",
+          "start": 41.736,
+          "end": 41.967
+        },
+        {
+          "text": "言",
+          "start": 41.967,
+          "end": 42.199,
+          "reading": "げん"
+        },
+        {
+          "text": "う",
+          "start": 42.199,
+          "end": 42.43
+        },
+        {
+          "text": "、",
+          "start": 42.43,
+          "end": 42.661
+        },
+        {
+          "text": "世",
+          "start": 42.661,
+          "end": 42.893,
+          "reading": "よ"
+        },
+        {
+          "text": "界",
+          "start": 42.893,
+          "end": 43.124,
+          "reading": "かい"
+        },
+        {
+          "text": "は",
+          "start": 43.124,
+          "end": 43.356
+        },
+        {
+          "text": "広",
+          "start": 43.356,
+          "end": 43.587,
+          "reading": "こう"
+        },
+        {
+          "text": "い",
+          "start": 43.587,
+          "end": 43.819
+        },
+        {
+          "text": "ね",
+          "start": 43.819,
+          "end": 44.05
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 44.05,
+      "end": 48.41,
+      "text": "でも今は、僕ら二人だけで満ちている",
+      "singableText": "でも今は、僕ら二人だけで満ちている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "で",
+          "start": 44.05,
+          "end": 44.306
+        },
+        {
+          "text": "も",
+          "start": 44.306,
+          "end": 44.563
+        },
+        {
+          "text": "今",
+          "start": 44.563,
+          "end": 44.819,
+          "reading": "いま"
+        },
+        {
+          "text": "は",
+          "start": 44.819,
+          "end": 45.076
+        },
+        {
+          "text": "、",
+          "start": 45.076,
+          "end": 45.332
+        },
+        {
+          "text": "僕",
+          "start": 45.332,
+          "end": 45.589,
+          "reading": "ぼく"
+        },
+        {
+          "text": "ら",
+          "start": 45.589,
+          "end": 45.845
+        },
+        {
+          "text": "二",
+          "start": 45.845,
+          "end": 46.102,
+          "reading": "に"
+        },
+        {
+          "text": "人",
+          "start": 46.102,
+          "end": 46.358,
+          "reading": "にん"
+        },
+        {
+          "text": "だ",
+          "start": 46.358,
+          "end": 46.615
+        },
+        {
+          "text": "け",
+          "start": 46.615,
+          "end": 46.871
+        },
+        {
+          "text": "で",
+          "start": 46.871,
+          "end": 47.128
+        },
+        {
+          "text": "満",
+          "start": 47.128,
+          "end": 47.384,
+          "reading": "まん"
+        },
+        {
+          "text": "ち",
+          "start": 47.384,
+          "end": 47.641
+        },
+        {
+          "text": "て",
+          "start": 47.641,
+          "end": 47.897
+        },
+        {
+          "text": "い",
+          "start": 47.897,
+          "end": 48.154
+        },
+        {
+          "text": "る",
+          "start": 48.154,
+          "end": 48.41
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 55.99,
+      "end": 58.47,
+      "text": "夕日が肩に落ちる",
+      "singableText": "夕日が肩に落ちる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "夕",
+          "start": 55.99,
+          "end": 56.3,
+          "reading": "ゆう"
+        },
+        {
+          "text": "日",
+          "start": 56.3,
+          "end": 56.61,
+          "reading": "にち"
+        },
+        {
+          "text": "が",
+          "start": 56.61,
+          "end": 56.92
+        },
+        {
+          "text": "肩",
+          "start": 56.92,
+          "end": 57.23,
+          "reading": "かた"
+        },
+        {
+          "text": "に",
+          "start": 57.23,
+          "end": 57.54
+        },
+        {
+          "text": "落",
+          "start": 57.54,
+          "end": 57.85,
+          "reading": "らく"
+        },
+        {
+          "text": "ち",
+          "start": 57.85,
+          "end": 58.16
+        },
+        {
+          "text": "る",
+          "start": 58.16,
+          "end": 58.47
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 58.47,
+      "end": 64.57,
+      "text": "さらさら、さらさら、波が内緒話をする",
+      "singableText": "さらさら、さらさら、波が内緒話をする",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "さ",
+          "start": 58.47,
+          "end": 58.809
+        },
+        {
+          "text": "ら",
+          "start": 58.809,
+          "end": 59.148
+        },
+        {
+          "text": "さ",
+          "start": 59.148,
+          "end": 59.487
+        },
+        {
+          "text": "ら",
+          "start": 59.487,
+          "end": 59.826
+        },
+        {
+          "text": "、",
+          "start": 59.826,
+          "end": 60.164
+        },
+        {
+          "text": "さ",
+          "start": 60.164,
+          "end": 60.503
+        },
+        {
+          "text": "ら",
+          "start": 60.503,
+          "end": 60.842
+        },
+        {
+          "text": "さ",
+          "start": 60.842,
+          "end": 61.181
+        },
+        {
+          "text": "ら",
+          "start": 61.181,
+          "end": 61.52
+        },
+        {
+          "text": "、",
+          "start": 61.52,
+          "end": 61.859
+        },
+        {
+          "text": "波",
+          "start": 61.859,
+          "end": 62.198,
+          "reading": "なみ"
+        },
+        {
+          "text": "が",
+          "start": 62.198,
+          "end": 62.537
+        },
+        {
+          "text": "内",
+          "start": 62.537,
+          "end": 62.876,
+          "reading": "ない"
+        },
+        {
+          "text": "緒",
+          "start": 62.876,
+          "end": 63.214,
+          "reading": "お"
+        },
+        {
+          "text": "話",
+          "start": 63.214,
+          "end": 63.553,
+          "reading": "はなし"
+        },
+        {
+          "text": "を",
+          "start": 63.553,
+          "end": 63.892
+        },
+        {
+          "text": "す",
+          "start": 63.892,
+          "end": 64.231
+        },
+        {
+          "text": "る",
+          "start": 64.231,
+          "end": 64.57
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 64.57,
+      "end": 70.37,
+      "text": "さらさら、さらさら、太陽がゆっくり沈む",
+      "singableText": "さらさら、さらさら、太陽がゆっくり沈む",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "さ",
+          "start": 64.57,
+          "end": 64.875
+        },
+        {
+          "text": "ら",
+          "start": 64.875,
+          "end": 65.181
+        },
+        {
+          "text": "さ",
+          "start": 65.181,
+          "end": 65.486
+        },
+        {
+          "text": "ら",
+          "start": 65.486,
+          "end": 65.791
+        },
+        {
+          "text": "、",
+          "start": 65.791,
+          "end": 66.096
+        },
+        {
+          "text": "さ",
+          "start": 66.096,
+          "end": 66.402
+        },
+        {
+          "text": "ら",
+          "start": 66.402,
+          "end": 66.707
+        },
+        {
+          "text": "さ",
+          "start": 66.707,
+          "end": 67.012
+        },
+        {
+          "text": "ら",
+          "start": 67.012,
+          "end": 67.317
+        },
+        {
+          "text": "、",
+          "start": 67.317,
+          "end": 67.623
+        },
+        {
+          "text": "太",
+          "start": 67.623,
+          "end": 67.928,
+          "reading": "た"
+        },
+        {
+          "text": "陽",
+          "start": 67.928,
+          "end": 68.233,
+          "reading": "よう"
+        },
+        {
+          "text": "が",
+          "start": 68.233,
+          "end": 68.538
+        },
+        {
+          "text": "ゆ",
+          "start": 68.538,
+          "end": 68.844
+        },
+        {
+          "text": "っ",
+          "start": 68.844,
+          "end": 69.149
+        },
+        {
+          "text": "く",
+          "start": 69.149,
+          "end": 69.454
+        },
+        {
+          "text": "り",
+          "start": 69.454,
+          "end": 69.759
+        },
+        {
+          "text": "沈",
+          "start": 69.759,
+          "end": 70.065,
+          "reading": "ちん"
+        },
+        {
+          "text": "む",
+          "start": 70.065,
+          "end": 70.37
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽, 楼栏->楼兰 were restored to the more beautiful planned text."
+  }
+}

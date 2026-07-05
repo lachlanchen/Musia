@@ -1,0 +1,22 @@
+# Optional slower SFT quality pass if the turbo sweep is not good enough.
+project_root = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5"
+checkpoint_dir = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5/checkpoints"
+save_dir = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/ace_outputs/xl_sft_soft_single"
+config_path = "acestep-v15-xl-sft"
+task_type = "text2music"
+caption = "Beautiful soft Mandarin Chinese beach ballad named 沙沙. Tender female vocal, clear Mandarin, romantic sunset, two people walking by the sea, sea sand and desert sand, warm piano, acoustic guitar, soft strings, light ocean percussion. Natural full-song melody, intimate and touching, leave space, no clipped endings, no spoken notes, no credits, no rap. F major, 76 BPM, 4/4."
+lyrics = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/lyrics/zh-ace.txt"
+duration = 96
+bpm = 76
+keyscale = "F major"
+timesignature = "4"
+vocal_language = "zh"
+thinking = false
+use_cot_lyrics = false
+use_cot_caption = false
+inference_steps = 50
+guidance_scale = 1.0
+use_random_seed = false
+seeds = [750511]
+batch_size = 1
+audio_format = "wav"

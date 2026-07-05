@@ -1,0 +1,22 @@
+# Third pass: front-vocal pop ballad, based on the prompt shape that worked for previous Musia songs.
+project_root = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5"
+checkpoint_dir = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5/checkpoints"
+save_dir = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/ace_outputs/xl_turbo_front_vocal_balanced"
+config_path = "acestep-v15-xl-turbo"
+task_type = "text2music"
+caption = "Mandarin Chinese soft cinematic pop ballad named 沙沙. Romantic beach sunset, two people walking by the waves and watching the sun, sea sand and desert sand, gentle Chiba sea wind, Loulan dream image. Beautiful clear upfront expressive Mandarin female vocal starts early, smooth full-song melody, memorable 沙沙 chorus hook, intimate and warm, tender but not weak. Acoustic guitar fingerpicking, warm piano, soft strings, gentle bass, light drums, ocean shimmer percussion, polished modern C-pop production. Sing one connected full song with natural phrasing, held vowels, strong chorus, clear words, no clipped endings, no buried vocal. F major, 82 BPM, 4/4."
+lyrics = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/lyrics/zh-ace-balanced.txt"
+duration = 88
+bpm = 82
+keyscale = "F major"
+timesignature = "4"
+vocal_language = "zh"
+thinking = false
+use_cot_lyrics = false
+use_cot_caption = false
+inference_steps = 12
+guidance_scale = 1.05
+use_random_seed = false
+seeds = [731231, 750531, 750532, 750533]
+batch_size = 4
+audio_format = "wav"

@@ -1,0 +1,22 @@
+# Soft Mandarin beach-ballad candidate sweep.
+project_root = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5"
+checkpoint_dir = "/home/lachlan/ProjectsLFS/Musia/third_party/ACE-Step-1.5/checkpoints"
+save_dir = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/ace_outputs/xl_turbo_soft_sweep"
+config_path = "acestep-v15-xl-turbo"
+task_type = "text2music"
+caption = "Soft Mandarin Chinese cinematic beach ballad named 沙沙. Two people walk along the sea at sunset and watch the sun together. Gentle intimate romantic feeling, sea sand and desert sand, Chiba sea wind, Loulan dream image, warm hope, beautiful soft melody through the whole song. Clear upfront expressive female Mandarin vocal, airy tender backing harmony allowed, natural pronunciation, connected phrases, no clipped final words, no buried vocal, no rap, no spoken recitation, no credits, no title notes. Leave musical space with held vowels on 沙沙, 浪花, 晚霞, 回家. Acoustic guitar fingerpicking, warm piano, soft strings, light ocean percussion, gentle bass, spacious golden sunset reverb. F major, 76 BPM, 4/4."
+lyrics = "/home/lachlan/ProjectsLFS/Musia/data/creative_projects/sha-sha-20260705/lyrics/zh-ace.txt"
+duration = 96
+bpm = 76
+keyscale = "F major"
+timesignature = "4"
+vocal_language = "zh"
+thinking = false
+use_cot_lyrics = false
+use_cot_caption = false
+inference_steps = 8
+guidance_scale = 1.0
+use_random_seed = false
+seeds = [750501, 750502, 750503, 750504]
+batch_size = 4
+audio_format = "wav"

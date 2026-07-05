@@ -9,6 +9,29 @@
   "defaultMedia": "yun-hai-zhi-lian-haifeng-duange",
   "items": [
     {
+      "id": "sha-sha",
+      "kind": "song",
+      "title": "沙沙",
+      "artist": "Musia",
+      "summary": "A soft Mandarin beach-sunset song about sea sand, desert sand, Chiba wind, Loulan dream, and two people walking home.",
+      "manifest": "data/songs/sha-sha/manifest.json",
+      "cover": "assets/covers/sha-sha-16x9.png",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "Mandarin",
+        "beach",
+        "sunset",
+        "ACE-Step",
+        "pinyin",
+        "furigana"
+      ]
+    },
+    {
       "id": "one-sky-three-lights-mixed",
       "kind": "song",
       "title": "One Sky, Three Lights",

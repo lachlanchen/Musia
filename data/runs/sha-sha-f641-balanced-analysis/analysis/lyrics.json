@@ -1,0 +1,593 @@
+{
+  "status": "ok",
+  "engine": "faster-whisper",
+  "model": "large-v3",
+  "language": "zh",
+  "language_probability": 1.0,
+  "duration": 88.0,
+  "text": "傻傻 傻傻 到海的沙 沙漠的沙 沙漠的沙 入不尽它 你牵着我 沿着浪花 风吹到千叶海边 倾着楼栏姑娘面旁 你笑着说 世界很大 可此刻只装得下 我们俩 夕阳落在肩上 傻傻 傻傻 海浪说悄悄话 傻傻 傻傻 太阳慢慢落下",
+  "segments": [
+    {
+      "id": 1,
+      "start": 12.11,
+      "end": 17.07,
+      "text": "傻傻 傻傻 到海的沙",
+      "words": [
+        {
+          "start": 12.11,
+          "end": 12.59,
+          "word": "傻",
+          "probability": 0.686279296875
+        },
+        {
+          "start": 12.59,
+          "end": 13.09,
+          "word": "傻",
+          "probability": 0.98779296875
+        },
+        {
+          "start": 13.13,
+          "end": 13.69,
+          "word": " 傻",
+          "probability": 0.9990234375
+        },
+        {
+          "start": 13.69,
+          "end": 14.17,
+          "word": "傻",
+          "probability": 0.99755859375
+        },
+        {
+          "start": 14.31,
+          "end": 15.75,
+          "word": " 到",
+          "probability": 0.230712890625
+        },
+        {
+          "start": 15.75,
+          "end": 16.23,
+          "word": "海",
+          "probability": 0.99755859375
+        },
+        {
+          "start": 16.23,
+          "end": 16.63,
+          "word": "的",
+          "probability": 0.99072265625
+        },
+        {
+          "start": 16.63,
+          "end": 17.07,
+          "word": "沙",
+          "probability": 0.970947265625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 18.03,
+      "end": 24.35,
+      "text": "沙漠的沙 沙漠的沙 入不尽它",
+      "words": [
+        {
+          "start": 18.03,
+          "end": 18.81,
+          "word": "沙",
+          "probability": 0.97119140625
+        },
+        {
+          "start": 18.81,
+          "end": 19.13,
+          "word": "漠",
+          "probability": 0.9970703125
+        },
+        {
+          "start": 19.13,
+          "end": 19.55,
+          "word": "的",
+          "probability": 0.98876953125
+        },
+        {
+          "start": 19.55,
+          "end": 20.11,
+          "word": "沙",
+          "probability": 0.991455078125
+        },
+        {
+          "start": 20.13,
+          "end": 20.73,
+          "word": " 沙",
+          "probability": 0.5247802734375
+        },
+        {
+          "start": 22.27,
+          "end": 22.27,
+          "word": "漠",
+          "probability": 0.917724609375
+        },
+        {
+          "start": 22.27,
+          "end": 22.49,
+          "word": "的",
+          "probability": 0.9912109375
+        },
+        {
+          "start": 22.49,
+          "end": 22.91,
+          "word": "沙",
+          "probability": 0.99658203125
+        },
+        {
+          "start": 23.03,
+          "end": 23.33,
+          "word": " 入",
+          "probability": 0.428955078125
+        },
+        {
+          "start": 23.33,
+          "end": 23.67,
+          "word": "不",
+          "probability": 0.99658203125
+        },
+        {
+          "start": 23.67,
+          "end": 23.99,
+          "word": "尽",
+          "probability": 0.904541015625
+        },
+        {
+          "start": 23.99,
+          "end": 24.35,
+          "word": "它",
+          "probability": 0.279052734375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 25.25,
+      "end": 30.19,
+      "text": "你牵着我 沿着浪花",
+      "words": [
+        {
+          "start": 25.25,
+          "end": 26.03,
+          "word": "你",
+          "probability": 0.91357421875
+        },
+        {
+          "start": 26.03,
+          "end": 26.55,
+          "word": "牵",
+          "probability": 0.994873046875
+        },
+        {
+          "start": 26.55,
+          "end": 26.83,
+          "word": "着",
+          "probability": 0.986328125
+        },
+        {
+          "start": 26.83,
+          "end": 27.27,
+          "word": "我",
+          "probability": 0.96435546875
+        },
+        {
+          "start": 27.79,
+          "end": 29.07,
+          "word": " 沿",
+          "probability": 0.58837890625
+        },
+        {
+          "start": 29.07,
+          "end": 29.41,
+          "word": "着",
+          "probability": 0.9892578125
+        },
+        {
+          "start": 29.41,
+          "end": 29.71,
+          "word": "浪",
+          "probability": 0.98876953125
+        },
+        {
+          "start": 29.71,
+          "end": 30.19,
+          "word": "花",
+          "probability": 0.99462890625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 30.19,
+      "end": 40.81,
+      "text": "风吹到千叶海边 倾着楼栏姑娘面旁",
+      "words": [
+        {
+          "start": 30.19,
+          "end": 31.39,
+          "word": "风",
+          "probability": 0.90625
+        },
+        {
+          "start": 35.87,
+          "end": 36.35,
+          "word": "吹",
+          "probability": 0.99853515625
+        },
+        {
+          "start": 36.35,
+          "end": 36.49,
+          "word": "到",
+          "probability": 0.9716796875
+        },
+        {
+          "start": 36.49,
+          "end": 36.67,
+          "word": "千",
+          "probability": 0.79296875
+        },
+        {
+          "start": 36.67,
+          "end": 37.05,
+          "word": "叶",
+          "probability": 0.8515625
+        },
+        {
+          "start": 37.05,
+          "end": 37.45,
+          "word": "海",
+          "probability": 0.9990234375
+        },
+        {
+          "start": 37.45,
+          "end": 37.85,
+          "word": "边",
+          "probability": 0.99755859375
+        },
+        {
+          "start": 38.21,
+          "end": 38.53,
+          "word": " 倾",
+          "probability": 0.8564453125
+        },
+        {
+          "start": 38.53,
+          "end": 38.73,
+          "word": "着",
+          "probability": 0.81494140625
+        },
+        {
+          "start": 38.73,
+          "end": 38.97,
+          "word": "楼",
+          "probability": 0.58990478515625
+        },
+        {
+          "start": 38.97,
+          "end": 39.29,
+          "word": "栏",
+          "probability": 0.784912109375
+        },
+        {
+          "start": 39.29,
+          "end": 39.65,
+          "word": "姑",
+          "probability": 0.91748046875
+        },
+        {
+          "start": 39.65,
+          "end": 40.07,
+          "word": "娘",
+          "probability": 1.0
+        },
+        {
+          "start": 40.07,
+          "end": 40.35,
+          "word": "面",
+          "probability": 0.97412109375
+        },
+        {
+          "start": 40.35,
+          "end": 40.81,
+          "word": "旁",
+          "probability": 0.981689453125
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 40.81,
+      "end": 44.05,
+      "text": "你笑着说 世界很大",
+      "words": [
+        {
+          "start": 40.81,
+          "end": 41.77,
+          "word": "你",
+          "probability": 0.9951171875
+        },
+        {
+          "start": 41.77,
+          "end": 42.15,
+          "word": "笑",
+          "probability": 0.99853515625
+        },
+        {
+          "start": 42.15,
+          "end": 42.27,
+          "word": "着",
+          "probability": 0.99853515625
+        },
+        {
+          "start": 42.27,
+          "end": 42.55,
+          "word": "说",
+          "probability": 0.9990234375
+        },
+        {
+          "start": 42.77,
+          "end": 43.35,
+          "word": " 世界",
+          "probability": 0.99267578125
+        },
+        {
+          "start": 43.35,
+          "end": 43.61,
+          "word": "很",
+          "probability": 0.99560546875
+        },
+        {
+          "start": 43.61,
+          "end": 44.05,
+          "word": "大",
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 44.05,
+      "end": 48.41,
+      "text": "可此刻只装得下 我们俩",
+      "words": [
+        {
+          "start": 44.05,
+          "end": 44.77,
+          "word": "可",
+          "probability": 0.37255859375
+        },
+        {
+          "start": 44.77,
+          "end": 45.09,
+          "word": "此",
+          "probability": 0.984375
+        },
+        {
+          "start": 45.09,
+          "end": 45.35,
+          "word": "刻",
+          "probability": 0.70849609375
+        },
+        {
+          "start": 45.35,
+          "end": 45.81,
+          "word": "只",
+          "probability": 0.8505859375
+        },
+        {
+          "start": 45.81,
+          "end": 46.41,
+          "word": "装",
+          "probability": 0.860107421875
+        },
+        {
+          "start": 46.41,
+          "end": 46.49,
+          "word": "得",
+          "probability": 0.9267578125
+        },
+        {
+          "start": 46.49,
+          "end": 46.75,
+          "word": "下",
+          "probability": 0.99609375
+        },
+        {
+          "start": 46.75,
+          "end": 47.19,
+          "word": " 我",
+          "probability": 0.047454833984375
+        },
+        {
+          "start": 47.19,
+          "end": 47.75,
+          "word": "们",
+          "probability": 0.99951171875
+        },
+        {
+          "start": 47.75,
+          "end": 48.41,
+          "word": "俩",
+          "probability": 0.989013671875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 55.99,
+      "end": 58.47,
+      "text": "夕阳落在肩上",
+      "words": [
+        {
+          "start": 55.99,
+          "end": 56.45,
+          "word": "夕",
+          "probability": 0.7379150390625
+        },
+        {
+          "start": 56.45,
+          "end": 56.65,
+          "word": "阳",
+          "probability": 0.998046875
+        },
+        {
+          "start": 56.65,
+          "end": 56.81,
+          "word": "落",
+          "probability": 0.99609375
+        },
+        {
+          "start": 56.81,
+          "end": 57.15,
+          "word": "在",
+          "probability": 0.998046875
+        },
+        {
+          "start": 57.15,
+          "end": 57.97,
+          "word": "肩",
+          "probability": 0.9814453125
+        },
+        {
+          "start": 57.97,
+          "end": 58.47,
+          "word": "上",
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 58.47,
+      "end": 64.57,
+      "text": "傻傻 傻傻 海浪说悄悄话",
+      "words": [
+        {
+          "start": 58.47,
+          "end": 60.15,
+          "word": "傻",
+          "probability": 0.80078125
+        },
+        {
+          "start": 60.15,
+          "end": 60.69,
+          "word": "傻",
+          "probability": 0.999755859375
+        },
+        {
+          "start": 60.69,
+          "end": 61.25,
+          "word": " 傻",
+          "probability": 0.998779296875
+        },
+        {
+          "start": 61.25,
+          "end": 61.65,
+          "word": "傻",
+          "probability": 0.999755859375
+        },
+        {
+          "start": 61.95,
+          "end": 62.95,
+          "word": " 海",
+          "probability": 0.9599609375
+        },
+        {
+          "start": 62.95,
+          "end": 63.29,
+          "word": "浪",
+          "probability": 0.990234375
+        },
+        {
+          "start": 63.29,
+          "end": 63.53,
+          "word": "说",
+          "probability": 0.99267578125
+        },
+        {
+          "start": 63.53,
+          "end": 63.81,
+          "word": "悄",
+          "probability": 0.9951171875
+        },
+        {
+          "start": 63.81,
+          "end": 64.19,
+          "word": "悄",
+          "probability": 0.999755859375
+        },
+        {
+          "start": 64.19,
+          "end": 64.57,
+          "word": "话",
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 64.57,
+      "end": 70.37,
+      "text": "傻傻 傻傻 太阳慢慢落下",
+      "words": [
+        {
+          "start": 64.57,
+          "end": 66.03,
+          "word": "傻",
+          "probability": 0.9970703125
+        },
+        {
+          "start": 66.03,
+          "end": 66.55,
+          "word": "傻",
+          "probability": 0.99951171875
+        },
+        {
+          "start": 66.57,
+          "end": 67.11,
+          "word": " 傻",
+          "probability": 0.999755859375
+        },
+        {
+          "start": 67.11,
+          "end": 67.51,
+          "word": "傻",
+          "probability": 0.999755859375
+        },
+        {
+          "start": 67.95,
+          "end": 68.45,
+          "word": " 太",
+          "probability": 0.91064453125
+        },
+        {
+          "start": 68.45,
+          "end": 68.73,
+          "word": "阳",
+          "probability": 1.0
+        },
+        {
+          "start": 68.73,
+          "end": 69.31,
+          "word": "慢慢",
+          "probability": 0.986328125
+        },
+        {
+          "start": 69.31,
+          "end": 69.93,
+          "word": "落",
+          "probability": 0.98876953125
+        },
+        {
+          "start": 69.93,
+          "end": 70.37,
+          "word": "下",
+          "probability": 0.98583984375
+        }
+      ]
+    }
+  ]
+}
