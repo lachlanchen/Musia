@@ -1,0 +1,1314 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "wei-ji-fen",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 16.02,
+      "end": 19.96,
+      "text": "離れないで、心にはまだ君がいる",
+      "singableText": "離れないで、心にはまだ君がいる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "離",
+          "start": 16.02,
+          "end": 16.283,
+          "reading": "り"
+        },
+        {
+          "text": "れ",
+          "start": 16.283,
+          "end": 16.545
+        },
+        {
+          "text": "な",
+          "start": 16.545,
+          "end": 16.808
+        },
+        {
+          "text": "い",
+          "start": 16.808,
+          "end": 17.071
+        },
+        {
+          "text": "で",
+          "start": 17.071,
+          "end": 17.333
+        },
+        {
+          "text": "、",
+          "start": 17.333,
+          "end": 17.596
+        },
+        {
+          "text": "心",
+          "start": 17.596,
+          "end": 17.859,
+          "reading": "こころ"
+        },
+        {
+          "text": "に",
+          "start": 17.859,
+          "end": 18.121
+        },
+        {
+          "text": "は",
+          "start": 18.121,
+          "end": 18.384
+        },
+        {
+          "text": "ま",
+          "start": 18.384,
+          "end": 18.647
+        },
+        {
+          "text": "だ",
+          "start": 18.647,
+          "end": 18.909
+        },
+        {
+          "text": "君",
+          "start": 18.909,
+          "end": 19.172,
+          "reading": "くん"
+        },
+        {
+          "text": "が",
+          "start": 19.172,
+          "end": 19.435
+        },
+        {
+          "text": "い",
+          "start": 19.435,
+          "end": 19.697
+        },
+        {
+          "text": "る",
+          "start": 19.697,
+          "end": 19.96
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 20.32,
+      "end": 23.1,
+      "text": "小さな出来事が心の海へ落ちる",
+      "singableText": "小さな出来事が心の海へ落ちる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 20.32,
+          "end": 20.519,
+          "reading": "しょう"
+        },
+        {
+          "text": "さ",
+          "start": 20.519,
+          "end": 20.717
+        },
+        {
+          "text": "な",
+          "start": 20.717,
+          "end": 20.916
+        },
+        {
+          "text": "出",
+          "start": 20.916,
+          "end": 21.114,
+          "reading": "しゅつ"
+        },
+        {
+          "text": "来",
+          "start": 21.114,
+          "end": 21.313,
+          "reading": "らい"
+        },
+        {
+          "text": "事",
+          "start": 21.313,
+          "end": 21.511,
+          "reading": "こと"
+        },
+        {
+          "text": "が",
+          "start": 21.511,
+          "end": 21.71
+        },
+        {
+          "text": "心",
+          "start": 21.71,
+          "end": 21.909,
+          "reading": "こころ"
+        },
+        {
+          "text": "の",
+          "start": 21.909,
+          "end": 22.107
+        },
+        {
+          "text": "海",
+          "start": 22.107,
+          "end": 22.306,
+          "reading": "うみ"
+        },
+        {
+          "text": "へ",
+          "start": 22.306,
+          "end": 22.504
+        },
+        {
+          "text": "落",
+          "start": 22.504,
+          "end": 22.703,
+          "reading": "らく"
+        },
+        {
+          "text": "ち",
+          "start": 22.703,
+          "end": 22.901
+        },
+        {
+          "text": "る",
+          "start": 22.901,
+          "end": 23.1
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 23.1,
+      "end": 26.26,
+      "text": "少しずつ、僕らを遠ざける",
+      "singableText": "少しずつ、僕らを遠ざける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "少",
+          "start": 23.1,
+          "end": 23.363,
+          "reading": "しょう"
+        },
+        {
+          "text": "し",
+          "start": 23.363,
+          "end": 23.627
+        },
+        {
+          "text": "ず",
+          "start": 23.627,
+          "end": 23.89
+        },
+        {
+          "text": "つ",
+          "start": 23.89,
+          "end": 24.153
+        },
+        {
+          "text": "、",
+          "start": 24.153,
+          "end": 24.417
+        },
+        {
+          "text": "僕",
+          "start": 24.417,
+          "end": 24.68,
+          "reading": "ぼく"
+        },
+        {
+          "text": "ら",
+          "start": 24.68,
+          "end": 24.943
+        },
+        {
+          "text": "を",
+          "start": 24.943,
+          "end": 25.207
+        },
+        {
+          "text": "遠",
+          "start": 25.207,
+          "end": 25.47,
+          "reading": "えん"
+        },
+        {
+          "text": "ざ",
+          "start": 25.47,
+          "end": 25.733
+        },
+        {
+          "text": "け",
+          "start": 25.733,
+          "end": 25.997
+        },
+        {
+          "text": "る",
+          "start": 25.997,
+          "end": 26.26
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 29.02,
+      "end": 32.18,
+      "text": "愛はまだある、ただ疲れすぎたと君は言う",
+      "singableText": "愛はまだある、ただ疲れすぎたと君は言う",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "愛",
+          "start": 29.02,
+          "end": 29.186,
+          "reading": "あい"
+        },
+        {
+          "text": "は",
+          "start": 29.186,
+          "end": 29.353
+        },
+        {
+          "text": "ま",
+          "start": 29.353,
+          "end": 29.519
+        },
+        {
+          "text": "だ",
+          "start": 29.519,
+          "end": 29.685
+        },
+        {
+          "text": "あ",
+          "start": 29.685,
+          "end": 29.852
+        },
+        {
+          "text": "る",
+          "start": 29.852,
+          "end": 30.018
+        },
+        {
+          "text": "、",
+          "start": 30.018,
+          "end": 30.184
+        },
+        {
+          "text": "た",
+          "start": 30.184,
+          "end": 30.351
+        },
+        {
+          "text": "だ",
+          "start": 30.351,
+          "end": 30.517
+        },
+        {
+          "text": "疲",
+          "start": 30.517,
+          "end": 30.683,
+          "reading": "ひ"
+        },
+        {
+          "text": "れ",
+          "start": 30.683,
+          "end": 30.849
+        },
+        {
+          "text": "す",
+          "start": 30.849,
+          "end": 31.016
+        },
+        {
+          "text": "ぎ",
+          "start": 31.016,
+          "end": 31.182
+        },
+        {
+          "text": "た",
+          "start": 31.182,
+          "end": 31.348
+        },
+        {
+          "text": "と",
+          "start": 31.348,
+          "end": 31.515
+        },
+        {
+          "text": "君",
+          "start": 31.515,
+          "end": 31.681,
+          "reading": "くん"
+        },
+        {
+          "text": "は",
+          "start": 31.681,
+          "end": 31.847
+        },
+        {
+          "text": "言",
+          "start": 31.847,
+          "end": 32.014,
+          "reading": "げん"
+        },
+        {
+          "text": "う",
+          "start": 32.014,
+          "end": 32.18
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 32.18,
+      "end": 35.1,
+      "text": "黙らないで、もう一度抱きしめてと言う",
+      "singableText": "黙らないで、もう一度抱きしめてと言う",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "黙",
+          "start": 32.18,
+          "end": 32.342,
+          "reading": "もく"
+        },
+        {
+          "text": "ら",
+          "start": 32.342,
+          "end": 32.504
+        },
+        {
+          "text": "な",
+          "start": 32.504,
+          "end": 32.667
+        },
+        {
+          "text": "い",
+          "start": 32.667,
+          "end": 32.829
+        },
+        {
+          "text": "で",
+          "start": 32.829,
+          "end": 32.991
+        },
+        {
+          "text": "、",
+          "start": 32.991,
+          "end": 33.153
+        },
+        {
+          "text": "も",
+          "start": 33.153,
+          "end": 33.316
+        },
+        {
+          "text": "う",
+          "start": 33.316,
+          "end": 33.478
+        },
+        {
+          "text": "一",
+          "start": 33.478,
+          "end": 33.64,
+          "reading": "いち"
+        },
+        {
+          "text": "度",
+          "start": 33.64,
+          "end": 33.802,
+          "reading": "ど"
+        },
+        {
+          "text": "抱",
+          "start": 33.802,
+          "end": 33.964,
+          "reading": "ほう"
+        },
+        {
+          "text": "き",
+          "start": 33.964,
+          "end": 34.127
+        },
+        {
+          "text": "し",
+          "start": 34.127,
+          "end": 34.289
+        },
+        {
+          "text": "め",
+          "start": 34.289,
+          "end": 34.451
+        },
+        {
+          "text": "て",
+          "start": 34.451,
+          "end": 34.613
+        },
+        {
+          "text": "と",
+          "start": 34.613,
+          "end": 34.776
+        },
+        {
+          "text": "言",
+          "start": 34.776,
+          "end": 34.938,
+          "reading": "げん"
+        },
+        {
+          "text": "う",
+          "start": 34.938,
+          "end": 35.1
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 36.52,
+      "end": 38.92,
+      "text": "少しはよくなるかな",
+      "singableText": "少しはよくなるかな",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "少",
+          "start": 36.52,
+          "end": 36.787,
+          "reading": "しょう"
+        },
+        {
+          "text": "し",
+          "start": 36.787,
+          "end": 37.053
+        },
+        {
+          "text": "は",
+          "start": 37.053,
+          "end": 37.32
+        },
+        {
+          "text": "よ",
+          "start": 37.32,
+          "end": 37.587
+        },
+        {
+          "text": "く",
+          "start": 37.587,
+          "end": 37.853
+        },
+        {
+          "text": "な",
+          "start": 37.853,
+          "end": 38.12
+        },
+        {
+          "text": "る",
+          "start": 38.12,
+          "end": 38.387
+        },
+        {
+          "text": "か",
+          "start": 38.387,
+          "end": 38.653
+        },
+        {
+          "text": "な",
+          "start": 38.653,
+          "end": 38.92
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 40.94,
+      "end": 42.02,
+      "text": "少しずつ、少しずつ",
+      "singableText": "少しずつ、少しずつ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "少",
+          "start": 40.94,
+          "end": 41.06,
+          "reading": "しょう"
+        },
+        {
+          "text": "し",
+          "start": 41.06,
+          "end": 41.18
+        },
+        {
+          "text": "ず",
+          "start": 41.18,
+          "end": 41.3
+        },
+        {
+          "text": "つ",
+          "start": 41.3,
+          "end": 41.42
+        },
+        {
+          "text": "、",
+          "start": 41.42,
+          "end": 41.54
+        },
+        {
+          "text": "少",
+          "start": 41.54,
+          "end": 41.66,
+          "reading": "しょう"
+        },
+        {
+          "text": "し",
+          "start": 41.66,
+          "end": 41.78
+        },
+        {
+          "text": "ず",
+          "start": 41.78,
+          "end": 41.9
+        },
+        {
+          "text": "つ",
+          "start": 41.9,
+          "end": 42.02
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 42.96,
+      "end": 45.32,
+      "text": "君のまわりを回り続ける",
+      "singableText": "君のまわりを回り続ける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 42.96,
+          "end": 43.175,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 43.175,
+          "end": 43.389
+        },
+        {
+          "text": "ま",
+          "start": 43.389,
+          "end": 43.604
+        },
+        {
+          "text": "わ",
+          "start": 43.604,
+          "end": 43.818
+        },
+        {
+          "text": "り",
+          "start": 43.818,
+          "end": 44.033
+        },
+        {
+          "text": "を",
+          "start": 44.033,
+          "end": 44.247
+        },
+        {
+          "text": "回",
+          "start": 44.247,
+          "end": 44.462,
+          "reading": "かい"
+        },
+        {
+          "text": "り",
+          "start": 44.462,
+          "end": 44.676
+        },
+        {
+          "text": "続",
+          "start": 44.676,
+          "end": 44.891,
+          "reading": "ぞく"
+        },
+        {
+          "text": "け",
+          "start": 44.891,
+          "end": 45.105
+        },
+        {
+          "text": "る",
+          "start": 45.105,
+          "end": 45.32
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 45.32,
+      "end": 48.3,
+      "text": "半径はどんどん遠くなる",
+      "singableText": "半径はどんどん遠くなる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "半",
+          "start": 45.32,
+          "end": 45.591,
+          "reading": "はん"
+        },
+        {
+          "text": "径",
+          "start": 45.591,
+          "end": 45.862,
+          "reading": "けい"
+        },
+        {
+          "text": "は",
+          "start": 45.862,
+          "end": 46.133
+        },
+        {
+          "text": "ど",
+          "start": 46.133,
+          "end": 46.404
+        },
+        {
+          "text": "ん",
+          "start": 46.404,
+          "end": 46.675
+        },
+        {
+          "text": "ど",
+          "start": 46.675,
+          "end": 46.945
+        },
+        {
+          "text": "ん",
+          "start": 46.945,
+          "end": 47.216
+        },
+        {
+          "text": "遠",
+          "start": 47.216,
+          "end": 47.487,
+          "reading": "えん"
+        },
+        {
+          "text": "く",
+          "start": 47.487,
+          "end": 47.758
+        },
+        {
+          "text": "な",
+          "start": 47.758,
+          "end": 48.029
+        },
+        {
+          "text": "る",
+          "start": 48.029,
+          "end": 48.3
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 48.3,
+      "end": 51.18,
+      "text": "角度はまだ離れようとしない",
+      "singableText": "角度はまだ離れようとしない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "角",
+          "start": 48.3,
+          "end": 48.522,
+          "reading": "かく"
+        },
+        {
+          "text": "度",
+          "start": 48.522,
+          "end": 48.743,
+          "reading": "ど"
+        },
+        {
+          "text": "は",
+          "start": 48.743,
+          "end": 48.965
+        },
+        {
+          "text": "ま",
+          "start": 48.965,
+          "end": 49.186
+        },
+        {
+          "text": "だ",
+          "start": 49.186,
+          "end": 49.408
+        },
+        {
+          "text": "離",
+          "start": 49.408,
+          "end": 49.629,
+          "reading": "り"
+        },
+        {
+          "text": "れ",
+          "start": 49.629,
+          "end": 49.851
+        },
+        {
+          "text": "よ",
+          "start": 49.851,
+          "end": 50.072
+        },
+        {
+          "text": "う",
+          "start": 50.072,
+          "end": 50.294
+        },
+        {
+          "text": "と",
+          "start": 50.294,
+          "end": 50.515
+        },
+        {
+          "text": "し",
+          "start": 50.515,
+          "end": 50.737
+        },
+        {
+          "text": "な",
+          "start": 50.737,
+          "end": 50.958
+        },
+        {
+          "text": "い",
+          "start": 50.958,
+          "end": 51.18
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 51.18,
+      "end": 52.7,
+      "text": "フーリエ変換",
+      "singableText": "フーリエ変換",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "フ",
+          "start": 51.18,
+          "end": 51.433
+        },
+        {
+          "text": "ー",
+          "start": 51.433,
+          "end": 51.687
+        },
+        {
+          "text": "リ",
+          "start": 51.687,
+          "end": 51.94
+        },
+        {
+          "text": "エ",
+          "start": 51.94,
+          "end": 52.193
+        },
+        {
+          "text": "変",
+          "start": 52.193,
+          "end": 52.447,
+          "reading": "へん"
+        },
+        {
+          "text": "換",
+          "start": 52.447,
+          "end": 52.7,
+          "reading": "かん"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 52.7,
+      "end": 53.44,
+      "text": "想いをほどいてしまう",
+      "singableText": "想いをほどいてしまう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "想",
+          "start": 52.7,
+          "end": 52.774,
+          "reading": "そう"
+        },
+        {
+          "text": "い",
+          "start": 52.774,
+          "end": 52.848
+        },
+        {
+          "text": "を",
+          "start": 52.848,
+          "end": 52.922
+        },
+        {
+          "text": "ほ",
+          "start": 52.922,
+          "end": 52.996
+        },
+        {
+          "text": "ど",
+          "start": 52.996,
+          "end": 53.07
+        },
+        {
+          "text": "い",
+          "start": 53.07,
+          "end": 53.144
+        },
+        {
+          "text": "て",
+          "start": 53.144,
+          "end": 53.218
+        },
+        {
+          "text": "し",
+          "start": 53.218,
+          "end": 53.292
+        },
+        {
+          "text": "ま",
+          "start": 53.292,
+          "end": 53.366
+        },
+        {
+          "text": "う",
+          "start": 53.366,
+          "end": 53.44
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 53.44,
+      "end": 57.02,
+      "text": "すべての周波数が君を一度呼ぶ",
+      "singableText": "すべての周波数が君を一度呼ぶ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "す",
+          "start": 53.44,
+          "end": 53.696
+        },
+        {
+          "text": "べ",
+          "start": 53.696,
+          "end": 53.951
+        },
+        {
+          "text": "て",
+          "start": 53.951,
+          "end": 54.207
+        },
+        {
+          "text": "の",
+          "start": 54.207,
+          "end": 54.463
+        },
+        {
+          "text": "周",
+          "start": 54.463,
+          "end": 54.719,
+          "reading": "しゅう"
+        },
+        {
+          "text": "波",
+          "start": 54.719,
+          "end": 54.974,
+          "reading": "なみ"
+        },
+        {
+          "text": "数",
+          "start": 54.974,
+          "end": 55.23,
+          "reading": "かず"
+        },
+        {
+          "text": "が",
+          "start": 55.23,
+          "end": 55.486
+        },
+        {
+          "text": "君",
+          "start": 55.486,
+          "end": 55.741,
+          "reading": "くん"
+        },
+        {
+          "text": "を",
+          "start": 55.741,
+          "end": 55.997
+        },
+        {
+          "text": "一",
+          "start": 55.997,
+          "end": 56.253,
+          "reading": "いち"
+        },
+        {
+          "text": "度",
+          "start": 56.253,
+          "end": 56.509,
+          "reading": "ど"
+        },
+        {
+          "text": "呼",
+          "start": 56.509,
+          "end": 56.764,
+          "reading": "こ"
+        },
+        {
+          "text": "ぶ",
+          "start": 56.764,
+          "end": 57.02
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 57.02,
+      "end": 57.92,
+      "text": "少しずつ、少しずつ",
+      "singableText": "少しずつ、少しずつ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "少",
+          "start": 57.02,
+          "end": 57.12,
+          "reading": "しょう"
+        },
+        {
+          "text": "し",
+          "start": 57.12,
+          "end": 57.22
+        },
+        {
+          "text": "ず",
+          "start": 57.22,
+          "end": 57.32
+        },
+        {
+          "text": "つ",
+          "start": 57.32,
+          "end": 57.42
+        },
+        {
+          "text": "、",
+          "start": 57.42,
+          "end": 57.52
+        },
+        {
+          "text": "少",
+          "start": 57.52,
+          "end": 57.62,
+          "reading": "しょう"
+        },
+        {
+          "text": "し",
+          "start": 57.62,
+          "end": 57.72
+        },
+        {
+          "text": "ず",
+          "start": 57.72,
+          "end": 57.82
+        },
+        {
+          "text": "つ",
+          "start": 57.82,
+          "end": 57.92
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 61.78,
+      "end": 67.29,
+      "text": "いちばん小さな痛みも海になる",
+      "singableText": "いちばん小さな痛みも海になる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "い",
+          "start": 61.78,
+          "end": 62.174
+        },
+        {
+          "text": "ち",
+          "start": 62.174,
+          "end": 62.567
+        },
+        {
+          "text": "ば",
+          "start": 62.567,
+          "end": 62.961
+        },
+        {
+          "text": "ん",
+          "start": 62.961,
+          "end": 63.354
+        },
+        {
+          "text": "小",
+          "start": 63.354,
+          "end": 63.748,
+          "reading": "しょう"
+        },
+        {
+          "text": "さ",
+          "start": 63.748,
+          "end": 64.141
+        },
+        {
+          "text": "な",
+          "start": 64.141,
+          "end": 64.535
+        },
+        {
+          "text": "痛",
+          "start": 64.535,
+          "end": 64.929,
+          "reading": "つう"
+        },
+        {
+          "text": "み",
+          "start": 64.929,
+          "end": 65.322
+        },
+        {
+          "text": "も",
+          "start": 65.322,
+          "end": 65.716
+        },
+        {
+          "text": "海",
+          "start": 65.716,
+          "end": 66.109,
+          "reading": "うみ"
+        },
+        {
+          "text": "に",
+          "start": 66.109,
+          "end": 66.503
+        },
+        {
+          "text": "な",
+          "start": 66.503,
+          "end": 66.896
+        },
+        {
+          "text": "る",
+          "start": 66.896,
+          "end": 67.29
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 69.69,
+      "end": 74.23,
+      "text": "愛はまだある、でも離れたいと君は言う",
+      "singableText": "愛はまだある、でも離れたいと君は言う",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "愛",
+          "start": 69.69,
+          "end": 69.942,
+          "reading": "あい"
+        },
+        {
+          "text": "は",
+          "start": 69.942,
+          "end": 70.194
+        },
+        {
+          "text": "ま",
+          "start": 70.194,
+          "end": 70.447
+        },
+        {
+          "text": "だ",
+          "start": 70.447,
+          "end": 70.699
+        },
+        {
+          "text": "あ",
+          "start": 70.699,
+          "end": 70.951
+        },
+        {
+          "text": "る",
+          "start": 70.951,
+          "end": 71.203
+        },
+        {
+          "text": "、",
+          "start": 71.203,
+          "end": 71.456
+        },
+        {
+          "text": "で",
+          "start": 71.456,
+          "end": 71.708
+        },
+        {
+          "text": "も",
+          "start": 71.708,
+          "end": 71.96
+        },
+        {
+          "text": "離",
+          "start": 71.96,
+          "end": 72.212,
+          "reading": "り"
+        },
+        {
+          "text": "れ",
+          "start": 72.212,
+          "end": 72.464
+        },
+        {
+          "text": "た",
+          "start": 72.464,
+          "end": 72.717
+        },
+        {
+          "text": "い",
+          "start": 72.717,
+          "end": 72.969
+        },
+        {
+          "text": "と",
+          "start": 72.969,
+          "end": 73.221
+        },
+        {
+          "text": "君",
+          "start": 73.221,
+          "end": 73.473,
+          "reading": "くん"
+        },
+        {
+          "text": "は",
+          "start": 73.473,
+          "end": 73.726
+        },
+        {
+          "text": "言",
+          "start": 73.726,
+          "end": 73.978,
+          "reading": "げん"
+        },
+        {
+          "text": "う",
+          "start": 73.978,
+          "end": 74.23
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 75.17,
+      "end": 79.47,
+      "text": "僕の心には、まだ君がいる",
+      "singableText": "僕の心には、まだ君がいる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "start": 75.17,
+          "end": 75.528,
+          "reading": "ぼく"
+        },
+        {
+          "text": "の",
+          "start": 75.528,
+          "end": 75.887
+        },
+        {
+          "text": "心",
+          "start": 75.887,
+          "end": 76.245,
+          "reading": "こころ"
+        },
+        {
+          "text": "に",
+          "start": 76.245,
+          "end": 76.603
+        },
+        {
+          "text": "は",
+          "start": 76.603,
+          "end": 76.962
+        },
+        {
+          "text": "、",
+          "start": 76.962,
+          "end": 77.32
+        },
+        {
+          "text": "ま",
+          "start": 77.32,
+          "end": 77.678
+        },
+        {
+          "text": "だ",
+          "start": 77.678,
+          "end": 78.037
+        },
+        {
+          "text": "君",
+          "start": 78.037,
+          "end": 78.395,
+          "reading": "くん"
+        },
+        {
+          "text": "が",
+          "start": 78.395,
+          "end": 78.753
+        },
+        {
+          "text": "い",
+          "start": 78.753,
+          "end": 79.112
+        },
+        {
+          "text": "る",
+          "start": 79.112,
+          "end": 79.47
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ASR-corrected from ACE XL Turbo seed 760622. The active Mandarin track follows the actual sung structure and preserves the planned lyric only where the ASR phrase is sound-close and less musical."
+  }
+}

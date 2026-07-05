@@ -9,6 +9,29 @@
   "defaultMedia": "yun-hai-zhi-lian-haifeng-duange",
   "items": [
     {
+      "id": "wei-ji-fen",
+      "kind": "song",
+      "title": "微积分",
+      "artist": "Musia",
+      "summary": "A Mandarin breakup ballad where tiny accumulated hurts become calculus, orbit, frequency, and distance.",
+      "manifest": "data/songs/wei-ji-fen/manifest.json",
+      "cover": "assets/covers/wei-ji-fen-16x9.png",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "Mandarin",
+        "breakup",
+        "calculus",
+        "ACE-Step",
+        "pinyin",
+        "furigana"
+      ]
+    },
+    {
       "id": "sha-sha",
       "kind": "song",
       "title": "沙沙",
