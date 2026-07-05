@@ -144,9 +144,9 @@ Active public lyric:
 
 ```text
 沙沙，沙沙，大海的沙
-沙漠的沙，沙漠的沙，数不尽它
+沙漠的沙，好多的沙，数不尽它
 你牵着我，沿着浪花
-风吹到千叶海边，亲着楼兰姑娘面庞
+风吹到千叶海边，轻指楼兰姑娘面庞
 你笑着说，世界很大
 可此刻只装得下，我们俩
 夕阳落在肩上
@@ -159,28 +159,26 @@ Correction decisions:
 - Restored `沙沙` from ASR `傻傻` because the title/hook is sound-close and more
   beautiful.
 - Restored `大海的沙` from ASR `到海的沙`.
-- Followed the actual sung repetition `沙漠的沙，沙漠的沙` instead of keeping the
-  planned `好多的沙`, because that structure changed materially.
-- Corrected the previously published `轻指楼兰姑娘面庞` to
-  `亲着楼兰姑娘面庞` after a second audit. Medium ASR on the separated vocal
-  heard `亲着柔然姑娘面旁`; large-v3 heard `倾着楼栏姑娘面旁`. The published
-  line keeps the user's intended `楼兰` image because it is sound-close to both
-  ASR readings, but changes `轻指` to the more audible `亲着`.
+- Kept `好多的沙` for the second phrase after user listening review. The ASR
+  repetition `沙漠的沙，沙漠的沙` is close enough that the intended lyric should
+  win.
+- Kept `轻指楼兰姑娘面庞` instead of the nearby ASR guesses `亲着/倾着楼栏姑娘面旁`.
+  `楼兰` and `轻指` are sound-close to the generated vocal and preserve the
+  intended image: a gentle pointing/touching gesture, not a kiss.
 - Omitted planned lines not recovered in the selected render.
 
-## 2026-07-05 Website Correction
+## 2026-07-05 User Listening Correction
 
-After user review, line `l04` was patched from:
+The user rechecked the selected song and confirmed two close-ASR corrections:
 
-```text
-风吹到千叶海边，轻指楼兰姑娘面庞
-```
+- line `l02`: publish `沙漠的沙，好多的沙，数不尽它`, not the repeated
+  `沙漠的沙，沙漠的沙，数不尽它`;
+- line `l04`: restore `轻指楼兰姑娘面庞`; `轻指` is the intended gentle pointing
+  image and should not be corrected to `亲着`.
 
-to:
-
-```text
-风吹到千叶海边，亲着楼兰姑娘面庞
-```
+This follows the Musia correction policy: when ASR and listening are close, and
+the source lyric is more beautiful and semantically intended, preserve the
+source lyric.
 
 The English and Japanese translation tracks were regenerated from
 `scripts/prepare_sha_sha_fun_item.py`, and `node bin/musia.js fun-validate`

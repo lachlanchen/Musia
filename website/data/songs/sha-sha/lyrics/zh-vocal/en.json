@@ -78,63 +78,68 @@
       "id": "l02",
       "start": 18.03,
       "end": 24.35,
-      "text": "Desert sand, desert sand, too many grains to count",
-      "singableText": "Desert sand, desert sand, too many grains to count",
+      "text": "Desert sand, so much sand, too many grains to count",
+      "singableText": "Desert sand, so much sand, too many grains to count",
       "role": "lyric",
       "tokens": [
         {
           "text": "Desert",
           "start": 18.03,
-          "end": 18.605
+          "end": 18.557
         },
         {
           "text": "sand",
-          "start": 18.605,
-          "end": 19.179
+          "start": 18.557,
+          "end": 19.083
         },
         {
           "text": ",",
-          "start": 19.179,
-          "end": 19.754
+          "start": 19.083,
+          "end": 19.61
         },
         {
-          "text": "desert",
-          "start": 19.754,
-          "end": 20.328
+          "text": "so",
+          "start": 19.61,
+          "end": 20.137
+        },
+        {
+          "text": "much",
+          "start": 20.137,
+          "end": 20.663
         },
         {
           "text": "sand",
-          "start": 20.328,
-          "end": 20.903
+          "start": 20.663,
+          "end": 21.19
         },
         {
           "text": ",",
-          "start": 20.903,
-          "end": 21.477
+          "start": 21.19,
+          "end": 21.717
         },
         {
           "text": "too",
-          "start": 21.477,
-          "end": 22.052
+          "start": 21.717,
+          "end": 22.243
         },
         {
           "text": "many",
-          "start": 22.052,
-          "end": 22.626
+          "start": 22.243,
+          "end": 22.77
         },
         {
           "text": "grains",
-          "start": 22.626,
-          "end": 23.201
+          "start": 22.77,
+          "end": 23.297
         },
         {
           "text": "to",
-          "start": 23.201,
-          "end": 23.775
+          "start": 23.297,
+          "end": 23.823
         },
         {
           "text": "count",
-          "start": 23.775,
+          "start": 23.823,
           "end": 24.35
         }
       ]
@@ -188,68 +193,78 @@
       "id": "l04",
       "start": 30.19,
       "end": 40.81,
-      "text": "The wind blows to Chiba's shore and kisses a Loulan girl's face",
-      "singableText": "The wind blows to Chiba's shore and kisses a Loulan girl's face",
+      "text": "The wind blows to Chiba's shore and gently points to a Loulan girl's face",
+      "singableText": "The wind blows to Chiba's shore and gently points to a Loulan girl's face",
       "role": "lyric",
       "tokens": [
         {
           "text": "The",
           "start": 30.19,
-          "end": 31.075
+          "end": 30.949
         },
         {
           "text": "wind",
-          "start": 31.075,
-          "end": 31.96
+          "start": 30.949,
+          "end": 31.707
         },
         {
           "text": "blows",
-          "start": 31.96,
-          "end": 32.845
+          "start": 31.707,
+          "end": 32.466
         },
         {
           "text": "to",
-          "start": 32.845,
-          "end": 33.73
+          "start": 32.466,
+          "end": 33.224
         },
         {
           "text": "Chiba's",
-          "start": 33.73,
-          "end": 34.615
+          "start": 33.224,
+          "end": 33.983
         },
         {
           "text": "shore",
-          "start": 34.615,
-          "end": 35.5
+          "start": 33.983,
+          "end": 34.741
         },
         {
           "text": "and",
-          "start": 35.5,
-          "end": 36.385
+          "start": 34.741,
+          "end": 35.5
         },
         {
-          "text": "kisses",
-          "start": 36.385,
-          "end": 37.27
+          "text": "gently",
+          "start": 35.5,
+          "end": 36.259
+        },
+        {
+          "text": "points",
+          "start": 36.259,
+          "end": 37.017
+        },
+        {
+          "text": "to",
+          "start": 37.017,
+          "end": 37.776
         },
         {
           "text": "a",
-          "start": 37.27,
-          "end": 38.155
+          "start": 37.776,
+          "end": 38.534
         },
         {
           "text": "Loulan",
-          "start": 38.155,
-          "end": 39.04
+          "start": 38.534,
+          "end": 39.293
         },
         {
           "text": "girl's",
-          "start": 39.04,
-          "end": 39.925
+          "start": 39.293,
+          "end": 40.051
         },
         {
           "text": "face",
-          "start": 39.925,
+          "start": 40.051,
           "end": 40.81
         }
       ]
@@ -517,6 +532,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. The line originally published as 轻指楼兰姑娘面庞 was corrected to 亲着楼兰姑娘面庞 after a medium vocal-stem ASR cross-check heard 亲着/柔然 and large-v3 heard 倾着/楼栏; 楼兰 is preserved from the user source because the sound is close."
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. User review confirmed the second 沙漠的沙 is the intended/sound-close 好多的沙, and 轻指楼兰姑娘面庞 should be preserved over the nearby ASR guesses 亲着/倾着 because it means gently pointing rather than kissing."
   }
 }

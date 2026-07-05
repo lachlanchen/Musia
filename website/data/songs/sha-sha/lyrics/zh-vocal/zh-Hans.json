@@ -82,8 +82,8 @@
       "id": "l02",
       "start": 18.03,
       "end": 24.35,
-      "text": "沙漠的沙，沙漠的沙，数不尽它",
-      "singableText": "沙漠的沙，沙漠的沙，数不尽它",
+      "text": "沙漠的沙，好多的沙，数不尽它",
+      "singableText": "沙漠的沙，好多的沙，数不尽它",
       "role": "lyric",
       "tokens": [
         {
@@ -116,16 +116,16 @@
           "end": 20.287
         },
         {
-          "text": "沙",
+          "text": "好",
           "start": 20.287,
           "end": 20.739,
-          "pinyin": "sha1"
+          "pinyin": "hao3"
         },
         {
-          "text": "漠",
+          "text": "多",
           "start": 20.739,
           "end": 21.19,
-          "pinyin": "mo4"
+          "pinyin": "duo1"
         },
         {
           "text": "的",
@@ -237,8 +237,8 @@
       "id": "l04",
       "start": 30.19,
       "end": 40.81,
-      "text": "风吹到千叶海边，亲着楼兰姑娘面庞",
-      "singableText": "风吹到千叶海边，亲着楼兰姑娘面庞",
+      "text": "风吹到千叶海边，轻指楼兰姑娘面庞",
+      "singableText": "风吹到千叶海边，轻指楼兰姑娘面庞",
       "role": "lyric",
       "tokens": [
         {
@@ -289,16 +289,16 @@
           "end": 35.5
         },
         {
-          "text": "亲",
+          "text": "轻",
           "start": 35.5,
           "end": 36.164,
-          "pinyin": "qin1"
+          "pinyin": "qing1"
         },
         {
-          "text": "着",
+          "text": "指",
           "start": 36.164,
           "end": 36.828,
-          "pinyin": "zhe5"
+          "pinyin": "zhi3"
         },
         {
           "text": "楼",
@@ -685,6 +685,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. The line originally published as 轻指楼兰姑娘面庞 was corrected to 亲着楼兰姑娘面庞 after a medium vocal-stem ASR cross-check heard 亲着/柔然 and large-v3 heard 倾着/楼栏; 楼兰 is preserved from the user source because the sound is close."
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. User review confirmed the second 沙漠的沙 is the intended/sound-close 好多的沙, and 轻指楼兰姑娘面庞 should be preserved over the nearby ASR guesses 亲着/倾着 because it means gently pointing rather than kissing."
   }
 }
