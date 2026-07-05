@@ -188,63 +188,68 @@
       "id": "l04",
       "start": 30.19,
       "end": 40.81,
-      "text": "The wind blows from Chiba's shore and brushes Loulan's girl's face",
-      "singableText": "The wind blows from Chiba's shore and brushes Loulan's girl's face",
+      "text": "The wind blows to Chiba's shore and kisses a Loulan girl's face",
+      "singableText": "The wind blows to Chiba's shore and kisses a Loulan girl's face",
       "role": "lyric",
       "tokens": [
         {
           "text": "The",
           "start": 30.19,
-          "end": 31.155
+          "end": 31.075
         },
         {
           "text": "wind",
-          "start": 31.155,
-          "end": 32.121
+          "start": 31.075,
+          "end": 31.96
         },
         {
           "text": "blows",
-          "start": 32.121,
-          "end": 33.086
+          "start": 31.96,
+          "end": 32.845
         },
         {
-          "text": "from",
-          "start": 33.086,
-          "end": 34.052
+          "text": "to",
+          "start": 32.845,
+          "end": 33.73
         },
         {
           "text": "Chiba's",
-          "start": 34.052,
-          "end": 35.017
+          "start": 33.73,
+          "end": 34.615
         },
         {
           "text": "shore",
-          "start": 35.017,
-          "end": 35.983
+          "start": 34.615,
+          "end": 35.5
         },
         {
           "text": "and",
-          "start": 35.983,
-          "end": 36.948
+          "start": 35.5,
+          "end": 36.385
         },
         {
-          "text": "brushes",
-          "start": 36.948,
-          "end": 37.914
+          "text": "kisses",
+          "start": 36.385,
+          "end": 37.27
         },
         {
-          "text": "Loulan's",
-          "start": 37.914,
-          "end": 38.879
+          "text": "a",
+          "start": 37.27,
+          "end": 38.155
+        },
+        {
+          "text": "Loulan",
+          "start": 38.155,
+          "end": 39.04
         },
         {
           "text": "girl's",
-          "start": 38.879,
-          "end": 39.845
+          "start": 39.04,
+          "end": 39.925
         },
         {
           "text": "face",
-          "start": 39.845,
+          "start": 39.925,
           "end": 40.81
         }
       ]
@@ -512,6 +517,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽, 楼栏->楼兰 were restored to the more beautiful planned text."
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. The line originally published as 轻指楼兰姑娘面庞 was corrected to 亲着楼兰姑娘面庞 after a medium vocal-stem ASR cross-check heard 亲着/柔然 and large-v3 heard 倾着/楼栏; 楼兰 is preserved from the user source because the sound is close."
   }
 }

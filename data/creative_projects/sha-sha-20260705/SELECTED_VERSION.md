@@ -16,5 +16,5 @@ Main public lyric changes:
 - Keep `沙沙` instead of ASR `傻傻` because the sound is close and `沙沙` is the title/hook.
 - Keep `大海的沙` instead of ASR `到海的沙`.
 - Follow audio repetition: `沙漠的沙，沙漠的沙，数不尽它` instead of the planned `好多的沙` line.
-- Keep `轻指楼兰姑娘面庞` instead of ASR `倾着楼栏姑娘面旁` because the sound is close and the planned phrase is more beautiful.
+- Updated after user review: publish `亲着楼兰姑娘面庞` instead of the first correction `轻指楼兰姑娘面庞`. Medium vocal-stem ASR heard `亲着柔然姑娘面旁`, while large-v3 heard `倾着楼栏姑娘面旁`; `楼兰` remains from the user source because the sound is close and the image is intended.
 - Omitted planned lines that were not recovered by ASR/listening evidence are not shown on the public website lyric track.

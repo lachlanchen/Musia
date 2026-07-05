@@ -145,9 +145,9 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
             "l04",
             30.19,
             40.81,
-            "风吹到千叶海边，轻指楼兰姑娘面庞",
-            "The wind blows from Chiba's shore and brushes Loulan's girl's face",
-            "千葉の海辺から風が吹き、楼蘭の少女の頬に触れる",
+            "风吹到千叶海边，亲着楼兰姑娘面庞",
+            "The wind blows to Chiba's shore and kisses a Loulan girl's face",
+            "千葉の海辺へ風が吹き、楼蘭の少女の頬にそっと口づける",
         ),
         ("l05", 40.81, 44.05, "你笑着说，世界很大", "You smile and say the world is wide", "君は笑って言う、世界は広いね"),
         ("l06", 44.05, 48.41, "可此刻只装得下，我们俩", "But this moment only holds the two of us", "でも今は、僕ら二人だけで満ちている"),
@@ -179,8 +179,11 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
                 "ASR/listening-corrected from ACE XL Turbo seed 750531. "
                 "The prompt was treated as intent, while the active lyric follows "
                 "the actual sung structure. Sound-close ASR substitutions such as "
-                "傻傻->沙沙, 到海->大海, 入不尽->数不尽, 楼栏->楼兰 were restored "
-                "to the more beautiful planned text."
+                "傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored "
+                "to the more beautiful planned text. The line originally published as "
+                "轻指楼兰姑娘面庞 was corrected to 亲着楼兰姑娘面庞 after a "
+                "medium vocal-stem ASR cross-check heard 亲着/柔然 and large-v3 heard "
+                "倾着/楼栏; 楼兰 is preserved from the user source because the sound is close."
             ),
         },
     }

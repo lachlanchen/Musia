@@ -146,7 +146,7 @@ Active public lyric:
 沙沙，沙沙，大海的沙
 沙漠的沙，沙漠的沙，数不尽它
 你牵着我，沿着浪花
-风吹到千叶海边，轻指楼兰姑娘面庞
+风吹到千叶海边，亲着楼兰姑娘面庞
 你笑着说，世界很大
 可此刻只装得下，我们俩
 夕阳落在肩上
@@ -161,6 +161,27 @@ Correction decisions:
 - Restored `大海的沙` from ASR `到海的沙`.
 - Followed the actual sung repetition `沙漠的沙，沙漠的沙` instead of keeping the
   planned `好多的沙`, because that structure changed materially.
-- Restored `轻指楼兰姑娘面庞` from ASR `倾着楼栏姑娘面旁`, because the sound is
-  close and the planned phrase is the intended poetic image.
+- Corrected the previously published `轻指楼兰姑娘面庞` to
+  `亲着楼兰姑娘面庞` after a second audit. Medium ASR on the separated vocal
+  heard `亲着柔然姑娘面旁`; large-v3 heard `倾着楼栏姑娘面旁`. The published
+  line keeps the user's intended `楼兰` image because it is sound-close to both
+  ASR readings, but changes `轻指` to the more audible `亲着`.
 - Omitted planned lines not recovered in the selected render.
+
+## 2026-07-05 Website Correction
+
+After user review, line `l04` was patched from:
+
+```text
+风吹到千叶海边，轻指楼兰姑娘面庞
+```
+
+to:
+
+```text
+风吹到千叶海边，亲着楼兰姑娘面庞
+```
+
+The English and Japanese translation tracks were regenerated from
+`scripts/prepare_sha_sha_fun_item.py`, and `node bin/musia.js fun-validate`
+passed.

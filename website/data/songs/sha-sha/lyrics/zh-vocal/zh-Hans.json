@@ -237,8 +237,8 @@
       "id": "l04",
       "start": 30.19,
       "end": 40.81,
-      "text": "风吹到千叶海边，轻指楼兰姑娘面庞",
-      "singableText": "风吹到千叶海边，轻指楼兰姑娘面庞",
+      "text": "风吹到千叶海边，亲着楼兰姑娘面庞",
+      "singableText": "风吹到千叶海边，亲着楼兰姑娘面庞",
       "role": "lyric",
       "tokens": [
         {
@@ -289,16 +289,16 @@
           "end": 35.5
         },
         {
-          "text": "轻",
+          "text": "亲",
           "start": 35.5,
           "end": 36.164,
-          "pinyin": "qing1"
+          "pinyin": "qin1"
         },
         {
-          "text": "指",
+          "text": "着",
           "start": 36.164,
           "end": 36.828,
-          "pinyin": "zhi3"
+          "pinyin": "zhe5"
         },
         {
           "text": "楼",
@@ -685,6 +685,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽, 楼栏->楼兰 were restored to the more beautiful planned text."
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. The line originally published as 轻指楼兰姑娘面庞 was corrected to 亲着楼兰姑娘面庞 after a medium vocal-stem ASR cross-check heard 亲着/柔然 and large-v3 heard 倾着/楼栏; 楼兰 is preserved from the user source because the sound is close."
   }
 }
