@@ -141,9 +141,10 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
         ("l01", 12.11, 17.07, "沙沙，沙沙，大海的沙", "Sha sha, sha sha, the sand of the sea", "さらさら、さらさら、海の砂"),
         ("l02", 18.03, 24.35, "沙漠的沙，好多的沙，数不尽它", "Desert sand, so much sand, too many grains to count", "砂漠の砂、たくさんの砂、数えきれない"),
         ("l03", 25.25, 30.19, "你牵着我，沿着浪花", "You hold my hand along the waves", "君が手を取り、波のそばを歩く"),
+        ("l03a", 30.19, 35.87, "啦——", "La...", "ラ——"),
         (
             "l04",
-            30.19,
+            35.87,
             40.81,
             "风吹到千叶海边，轻指楼兰姑娘面庞",
             "The wind blows to Chiba's shore and gently points to a Loulan girl's face",
@@ -183,7 +184,8 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
                 "to the more beautiful planned text. User review confirmed the second "
                 "沙漠的沙 is the intended/sound-close 好多的沙, and 轻指楼兰姑娘面庞 "
                 "should be preserved over the nearby ASR guesses 亲着/倾着 because it "
-                "means gently pointing rather than kissing."
+                "means gently pointing rather than kissing. Word timing shows a long "
+                "non-lexical held vocal from 30.19-35.87 after 沿着浪花, published as 啦——."
             ),
         },
     }
@@ -451,6 +453,7 @@ def write_note() -> None:
                 "- Keep `大海的沙` instead of ASR `到海的沙`.",
                 "- Keep `好多的沙` for the second phrase instead of the earlier ASR-style repetition `沙漠的沙`.",
                 "- Keep `轻指楼兰姑娘面庞` instead of nearby ASR guesses such as `亲着/倾着楼栏姑娘面旁` because the sound is close and the intended meaning is gently pointing, not kissing.",
+                "- Add the sustained `啦——` line from `30.19-35.87` between `沿着浪花` and `风吹到千叶海边` because word timing leaves a long held vocal before the next recognized lyric.",
                 "- Omitted planned lines that were not recovered by ASR/listening evidence are not shown on the public website lyric track.",
                 "",
             ]

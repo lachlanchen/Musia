@@ -190,8 +190,38 @@
       ]
     },
     {
-      "id": "l04",
+      "id": "l03a",
       "start": 30.19,
+      "end": 35.87,
+      "text": "La...",
+      "singableText": "La...",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "La",
+          "start": 30.19,
+          "end": 31.61
+        },
+        {
+          "text": ".",
+          "start": 31.61,
+          "end": 33.03
+        },
+        {
+          "text": ".",
+          "start": 33.03,
+          "end": 34.45
+        },
+        {
+          "text": ".",
+          "start": 34.45,
+          "end": 35.87
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 35.87,
       "end": 40.81,
       "text": "The wind blows to Chiba's shore and gently points to a Loulan girl's face",
       "singableText": "The wind blows to Chiba's shore and gently points to a Loulan girl's face",
@@ -199,72 +229,72 @@
       "tokens": [
         {
           "text": "The",
-          "start": 30.19,
-          "end": 30.949
+          "start": 35.87,
+          "end": 36.223
         },
         {
           "text": "wind",
-          "start": 30.949,
-          "end": 31.707
+          "start": 36.223,
+          "end": 36.576
         },
         {
           "text": "blows",
-          "start": 31.707,
-          "end": 32.466
+          "start": 36.576,
+          "end": 36.929
         },
         {
           "text": "to",
-          "start": 32.466,
-          "end": 33.224
+          "start": 36.929,
+          "end": 37.281
         },
         {
           "text": "Chiba's",
-          "start": 33.224,
-          "end": 33.983
+          "start": 37.281,
+          "end": 37.634
         },
         {
           "text": "shore",
-          "start": 33.983,
-          "end": 34.741
+          "start": 37.634,
+          "end": 37.987
         },
         {
           "text": "and",
-          "start": 34.741,
-          "end": 35.5
+          "start": 37.987,
+          "end": 38.34
         },
         {
           "text": "gently",
-          "start": 35.5,
-          "end": 36.259
+          "start": 38.34,
+          "end": 38.693
         },
         {
           "text": "points",
-          "start": 36.259,
-          "end": 37.017
+          "start": 38.693,
+          "end": 39.046
         },
         {
           "text": "to",
-          "start": 37.017,
-          "end": 37.776
+          "start": 39.046,
+          "end": 39.399
         },
         {
           "text": "a",
-          "start": 37.776,
-          "end": 38.534
+          "start": 39.399,
+          "end": 39.751
         },
         {
           "text": "Loulan",
-          "start": 38.534,
-          "end": 39.293
+          "start": 39.751,
+          "end": 40.104
         },
         {
           "text": "girl's",
-          "start": 39.293,
-          "end": 40.051
+          "start": 40.104,
+          "end": 40.457
         },
         {
           "text": "face",
-          "start": 40.051,
+          "start": 40.457,
           "end": 40.81
         }
       ]
@@ -532,6 +562,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. User review confirmed the second 沙漠的沙 is the intended/sound-close 好多的沙, and 轻指楼兰姑娘面庞 should be preserved over the nearby ASR guesses 亲着/倾着 because it means gently pointing rather than kissing."
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. User review confirmed the second 沙漠的沙 is the intended/sound-close 好多的沙, and 轻指楼兰姑娘面庞 should be preserved over the nearby ASR guesses 亲着/倾着 because it means gently pointing rather than kissing. Word timing shows a long non-lexical held vocal from 30.19-35.87 after 沿着浪花, published as 啦——."
   }
 }

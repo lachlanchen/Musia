@@ -17,4 +17,5 @@ Main public lyric changes:
 - Keep `大海的沙` instead of ASR `到海的沙`.
 - Keep `好多的沙` for the second phrase instead of the earlier ASR-style repetition `沙漠的沙`.
 - Keep `轻指楼兰姑娘面庞` instead of nearby ASR guesses such as `亲着/倾着楼栏姑娘面旁` because the sound is close and the intended meaning is gently pointing, not kissing.
+- Add the sustained `啦——` line from `30.19-35.87` between `沿着浪花` and `风吹到千叶海边` because word timing leaves a long held vocal before the next recognized lyric.
 - Omitted planned lines that were not recovered by ASR/listening evidence are not shown on the public website lyric track.

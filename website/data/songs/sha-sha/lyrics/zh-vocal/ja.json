@@ -278,8 +278,33 @@
       ]
     },
     {
-      "id": "l04",
+      "id": "l03a",
       "start": 30.19,
+      "end": 35.87,
+      "text": "ラ——",
+      "singableText": "ラ——",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ラ",
+          "start": 30.19,
+          "end": 32.083
+        },
+        {
+          "text": "—",
+          "start": 32.083,
+          "end": 33.977
+        },
+        {
+          "text": "—",
+          "start": 33.977,
+          "end": 35.87
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 35.87,
       "end": 40.81,
       "text": "千葉の海辺へ風が吹き、楼蘭の少女の頬をそっと指さす",
       "singableText": "千葉の海辺へ風が吹き、楼蘭の少女の頬をそっと指さす",
@@ -287,139 +312,139 @@
       "tokens": [
         {
           "text": "千",
-          "start": 30.19,
-          "end": 30.615,
+          "start": 35.87,
+          "end": 36.068,
           "reading": "せん"
         },
         {
           "text": "葉",
-          "start": 30.615,
-          "end": 31.04,
+          "start": 36.068,
+          "end": 36.265,
           "reading": "は"
         },
         {
           "text": "の",
-          "start": 31.04,
-          "end": 31.464
+          "start": 36.265,
+          "end": 36.463
         },
         {
           "text": "海",
-          "start": 31.464,
-          "end": 31.889,
+          "start": 36.463,
+          "end": 36.66,
           "reading": "うみ"
         },
         {
           "text": "辺",
-          "start": 31.889,
-          "end": 32.314,
+          "start": 36.66,
+          "end": 36.858,
           "reading": "へん"
         },
         {
           "text": "へ",
-          "start": 32.314,
-          "end": 32.739
+          "start": 36.858,
+          "end": 37.056
         },
         {
           "text": "風",
-          "start": 32.739,
-          "end": 33.164,
+          "start": 37.056,
+          "end": 37.253,
           "reading": "かぜ"
         },
         {
           "text": "が",
-          "start": 33.164,
-          "end": 33.588
+          "start": 37.253,
+          "end": 37.451
         },
         {
           "text": "吹",
-          "start": 33.588,
-          "end": 34.013,
+          "start": 37.451,
+          "end": 37.648,
           "reading": "すい"
         },
         {
           "text": "き",
-          "start": 34.013,
-          "end": 34.438
+          "start": 37.648,
+          "end": 37.846
         },
         {
           "text": "、",
-          "start": 34.438,
-          "end": 34.863
+          "start": 37.846,
+          "end": 38.044
         },
         {
           "text": "楼",
-          "start": 34.863,
-          "end": 35.288,
+          "start": 38.044,
+          "end": 38.241,
           "reading": "ろう"
         },
         {
           "text": "蘭",
-          "start": 35.288,
-          "end": 35.712,
+          "start": 38.241,
+          "end": 38.439,
           "reading": "らん"
         },
         {
           "text": "の",
-          "start": 35.712,
-          "end": 36.137
+          "start": 38.439,
+          "end": 38.636
         },
         {
           "text": "少",
-          "start": 36.137,
-          "end": 36.562,
+          "start": 38.636,
+          "end": 38.834,
           "reading": "しょう"
         },
         {
           "text": "女",
-          "start": 36.562,
-          "end": 36.987,
+          "start": 38.834,
+          "end": 39.032,
           "reading": "おんな"
         },
         {
           "text": "の",
-          "start": 36.987,
-          "end": 37.412
+          "start": 39.032,
+          "end": 39.229
         },
         {
           "text": "頬",
-          "start": 37.412,
-          "end": 37.836,
+          "start": 39.229,
+          "end": 39.427,
           "reading": "ほお"
         },
         {
           "text": "を",
-          "start": 37.836,
-          "end": 38.261
+          "start": 39.427,
+          "end": 39.624
         },
         {
           "text": "そ",
-          "start": 38.261,
-          "end": 38.686
+          "start": 39.624,
+          "end": 39.822
         },
         {
           "text": "っ",
-          "start": 38.686,
-          "end": 39.111
+          "start": 39.822,
+          "end": 40.02
         },
         {
           "text": "と",
-          "start": 39.111,
-          "end": 39.536
+          "start": 40.02,
+          "end": 40.217
         },
         {
           "text": "指",
-          "start": 39.536,
-          "end": 39.96,
+          "start": 40.217,
+          "end": 40.415,
           "reading": "ゆび"
         },
         {
           "text": "さ",
-          "start": 39.96,
-          "end": 40.385
+          "start": 40.415,
+          "end": 40.612
         },
         {
           "text": "す",
-          "start": 40.385,
+          "start": 40.612,
           "end": 40.81
         }
       ]
@@ -879,6 +904,6 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. User review confirmed the second 沙漠的沙 is the intended/sound-close 好多的沙, and 轻指楼兰姑娘面庞 should be preserved over the nearby ASR guesses 亲着/倾着 because it means gently pointing rather than kissing."
+    "correction": "ASR/listening-corrected from ACE XL Turbo seed 750531. The prompt was treated as intent, while the active lyric follows the actual sung structure. Sound-close ASR substitutions such as 傻傻->沙沙, 到海->大海, 入不尽->数不尽 were restored to the more beautiful planned text. User review confirmed the second 沙漠的沙 is the intended/sound-close 好多的沙, and 轻指楼兰姑娘面庞 should be preserved over the nearby ASR guesses 亲着/倾着 because it means gently pointing rather than kissing. Word timing shows a long non-lexical held vocal from 30.19-35.87 after 沿着浪花, published as 啦——."
   }
 }

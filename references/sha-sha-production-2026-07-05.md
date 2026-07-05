@@ -146,6 +146,7 @@ Active public lyric:
 沙沙，沙沙，大海的沙
 沙漠的沙，好多的沙，数不尽它
 你牵着我，沿着浪花
+啦——
 风吹到千叶海边，轻指楼兰姑娘面庞
 你笑着说，世界很大
 可此刻只装得下，我们俩
@@ -165,6 +166,10 @@ Correction decisions:
 - Kept `轻指楼兰姑娘面庞` instead of the nearby ASR guesses `亲着/倾着楼栏姑娘面旁`.
   `楼兰` and `轻指` are sound-close to the generated vocal and preserve the
   intended image: a gentle pointing/touching gesture, not a kiss.
+- Added a sustained `啦——` line from `30.19-35.87` after `沿着浪花`. The
+  word-level ASR segment has a recognized anchor at `30.19`, then a long gap
+  until `吹` at `35.87`; user listening confirmed this is a long vocalization
+  before `风吹到千叶海边`.
 - Omitted planned lines not recovered in the selected render.
 
 ## 2026-07-05 User Listening Correction
@@ -175,6 +180,11 @@ The user rechecked the selected song and confirmed two close-ASR corrections:
   `沙漠的沙，沙漠的沙，数不尽它`;
 - line `l04`: restore `轻指楼兰姑娘面庞`; `轻指` is the intended gentle pointing
   image and should not be corrected to `亲着`.
+
+The user also noted a long `la`-like vocal after `沿着浪花` and before
+`风吹到千叶海边`. Word-level timing supports this: segment 4 starts at `30.19`,
+but the next lexical anchor `吹` starts at `35.87`. The public lyric was split
+into `l03a: 啦——` at `30.19-35.87`, then `l04` starts at `35.87`.
 
 This follows the Musia correction policy: when ASR and listening are close, and
 the source lyric is more beautiful and semantically intended, preserve the
