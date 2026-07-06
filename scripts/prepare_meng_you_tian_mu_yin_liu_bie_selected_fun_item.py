@@ -289,9 +289,9 @@ def update_catalog() -> None:
     item = {
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "梦游天姥吟留别",
+        "title": "梦游天姥吟留别 · 青云梯改编版",
         "artist": "Musia",
-        "summary": "A hook-focused ACE-Step Mandarin art-pop adaptation of Li Bai's dream journey to Tianmu, with corrected trilingual lyric timing and chords.",
+        "summary": "A hook-focused ACE-Step Mandarin art-pop adaptation inspired by Li Bai's dream journey to Tianmu; it is not the original-poem version.",
         "manifest": f"data/songs/{MEDIA_ID}/manifest.json",
         "cover": COVER,
         "languages": ["zh-Hans", "en", "ja"],
@@ -320,20 +320,20 @@ def write_media_item() -> None:
         "version": 1,
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "梦游天姥吟留别",
+        "title": "梦游天姥吟留别 · 青云梯改编版",
         "localizedTitles": {
-            "zh-Hans": "梦游天姥吟留别",
-            "en": "Dreaming of Tianmu",
-            "ja": "夢遊天姥吟留別",
+            "zh-Hans": "梦游天姥吟留别 · 青云梯改编版",
+            "en": "Dreaming of Tianmu · Blue Cloud Ladder Adaptation",
+            "ja": "夢遊天姥吟留別・青雲梯改編版",
         },
         "artist": "Musia",
-        "description": "A hook-focused Mandarin ACE-Step art-pop adaptation of Li Bai's dream journey to Mount Tianmu, with corrected trilingual lyrics, pinyin, furigana, chords, beats, and stems.",
+        "description": "A hook-focused Mandarin ACE-Step art-pop adaptation inspired by Li Bai's dream journey to Mount Tianmu. This is the Qingyun Ladder adaptation, not the original-poem version.",
         "caption": "Sea mist, moon flight, Tianmu, blue clouds, and ten thousand mountains opening in a dream.",
         "duration": round(duration(SELECTED_WAV), 3),
         "canonicalUrl": f"https://fun.lazying.art/#{MEDIA_ID}",
         "share": {
-            "title": "梦游天姥吟留别 - Fun Lazying Art",
-            "description": "Musia hook-focused Mandarin song inspired by Li Bai's dream journey to Tianmu.",
+            "title": "梦游天姥吟留别 · 青云梯改编版 - Fun Lazying Art",
+            "description": "Musia hook-focused Mandarin adaptation inspired by Li Bai's dream journey to Tianmu.",
             "url": f"https://fun.lazying.art/#{MEDIA_ID}",
             "image": COVER,
             "siteName": "Fun Lazying Art",
@@ -341,7 +341,7 @@ def write_media_item() -> None:
         "assets": {
             "cover": {
                 "id": "cover",
-                "label": "梦游天姥吟留别 cover",
+                "label": "梦游天姥吟留别 青云梯改编版 cover",
                 "role": "cover",
                 "src": COVER,
                 "mime": "image/png",
@@ -448,9 +448,10 @@ def write_note() -> None:
     note.write_text(
         "\n".join(
             [
-                "# 梦游天姥吟留别 Website Item",
+                "# 梦游天姥吟留别 · 青云梯改编版 Website Item",
                 "",
                 "- Media id: `meng-you-tian-mu-yin-liu-bie`.",
+                "- Visible title is marked as `青云梯改编版` because this selected audio is a hook-focused adaptation, not the original-poem version.",
                 "- Public audio: `https://lazyingart.github.io/MusiaSongs/audio/meng-you-tian-mu-yin-liu-bie-zh-Hans-ace-xl-turbo-hook-seed741402-20260706.mp3`.",
                 "- Website manifest: `website/data/songs/meng-you-tian-mu-yin-liu-bie/manifest.json`.",
                 "- Active lyric source: selected audio ASR anchors plus listening/intended-lyric correction.",

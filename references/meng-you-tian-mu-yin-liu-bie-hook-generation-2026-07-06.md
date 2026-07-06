@@ -115,6 +115,15 @@ against the selected render.
 The Fun website item was prepared after user request with the corrected audible
 structure rather than the full prompt lyric:
 
+Visible website title:
+
+```text
+梦游天姥吟留别 · 青云梯改编版
+```
+
+This selected render is a hook-focused adaptation, not the original-poem
+version, so it must not use the pure poem title on the public website.
+
 ```text
 website/data/songs/meng-you-tian-mu-yin-liu-bie/manifest.json
 website/data/songs/meng-you-tian-mu-yin-liu-bie/lyrics/zh-vocal/zh-Hans.json
