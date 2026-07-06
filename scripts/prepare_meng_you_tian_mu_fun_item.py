@@ -238,26 +238,26 @@ def write_media_item() -> None:
         "version": 1,
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "梦游天姥",
+        "title": "梦游天姥吟留别 · 旧梦版",
         "localizedTitles": {
-            "zh-Hans": "梦游天姥",
-            "en": "Dreaming of Tianmu",
-            "ja": "夢遊天姥",
+            "zh-Hans": "梦游天姥吟留别 · 旧梦版",
+            "en": "Dreaming of Tianmu · Legacy Adaptation",
+            "ja": "夢遊天姥吟留別・旧夢版",
         },
         "artist": "Musia",
-        "description": "An ACE-Step Mandarin normal-song adaptation inspired by Li Bai's 梦游天姥吟留别, with ASR-corrected trilingual lyrics.",
+        "description": "A legacy ACE-Step Mandarin normal-song adaptation inspired by Li Bai's 梦游天姥吟留别, with ASR-corrected trilingual lyrics.",
         "caption": "A moonlit dream mountain opens into thunder, immortals, and the freedom to never bow.",
         "duration": round(duration(SELECTED_WAV), 3),
         "canonicalUrl": f"https://fun.lazying.art/#{MEDIA_ID}",
         "share": {
-            "title": "梦游天姥 - Fun Lazying Art",
-            "description": "A Musia Mandarin normal-song adaptation of Li Bai's dream journey to Mount Tianmu.",
+            "title": "梦游天姥吟留别 · 旧梦版 - Fun Lazying Art",
+            "description": "A legacy Musia Mandarin normal-song adaptation of Li Bai's dream journey to Mount Tianmu.",
             "url": f"https://fun.lazying.art/#{MEDIA_ID}",
             "image": COVER,
             "siteName": "Fun Lazying Art",
         },
         "assets": {
-            "cover": {"id": "cover", "label": "梦游天姥 cover", "role": "cover", "src": COVER, "mime": "image/png", "width": 1600, "height": 900},
+            "cover": {"id": "cover", "label": "梦游天姥吟留别 旧梦版 cover", "role": "cover", "src": COVER, "mime": "image/png", "width": 1600, "height": 900},
             "poster": {"id": "poster", "label": "16:9 Poster", "role": "poster", "src": COVER, "mime": "image/png", "width": 1600, "height": 900},
             "primaryAudio": {
                 "id": "meng-you-tian-mu-zh",
@@ -313,13 +313,13 @@ def update_catalog() -> None:
     new_item = {
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "梦游天姥",
+        "title": "梦游天姥吟留别 · 旧梦版",
         "artist": "Musia",
-        "summary": "A cinematic ACE-Step Mandarin normal-song adaptation of Li Bai's dream journey to Mount Tianmu, with corrected trilingual lyrics, pinyin, furigana, and chord timing.",
+        "summary": "A legacy cinematic ACE-Step Mandarin normal-song adaptation of Li Bai's dream journey to Mount Tianmu, with corrected trilingual lyrics, pinyin, furigana, and chord timing.",
         "manifest": f"data/songs/{MEDIA_ID}/manifest.json",
         "cover": COVER,
         "languages": ["zh-Hans", "en", "ja"],
-        "tags": ["music", "Li Bai", "Tang poetry", "Mandarin", "ACE-Step", "xianxia", "pinyin", "furigana"],
+        "tags": ["music", "Li Bai", "Tang poetry", "Mandarin", "ACE-Step", "legacy", "xianxia", "pinyin", "furigana"],
     }
     items = [item for item in catalog["items"] if item.get("id") != MEDIA_ID]
     insert_at = next((index for index, item in enumerate(items) if item.get("id") == "qiang-jin-jiu-normal-song"), 3)
