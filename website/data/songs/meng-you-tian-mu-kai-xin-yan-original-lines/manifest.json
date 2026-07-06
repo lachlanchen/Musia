@@ -1,0 +1,881 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "meng-you-tian-mu-kai-xin-yan-original-lines",
+  "kind": "song",
+  "title": "梦游天姥吟留别 · 开心颜原文段",
+  "localizedTitles": {
+    "zh-Hans": "梦游天姥吟留别 · 开心颜原文段",
+    "en": "Dreaming of Tianmu · Kaixinyan Original-Text Excerpt",
+    "ja": "夢遊天姥吟留別・開心顔原文段"
+  },
+  "artist": "Musia",
+  "description": "An ACE-Step Mandarin original-text excerpt song from the ending of Li Bai's 梦游天姥吟留别, using only source poem wording and ASR-corrected timing.",
+  "caption": "Awakening from cloud-mist splendor, letting the white deer roam, and refusing to bow to power.",
+  "duration": 126.0,
+  "canonicalUrl": "https://fun.lazying.art/#meng-you-tian-mu-kai-xin-yan-original-lines",
+  "share": {
+    "title": "梦游天姥吟留别 · 开心颜原文段 - Fun Lazying Art",
+    "description": "Musia ACE-Step original-text excerpt song from Li Bai's 梦游天姥吟留别.",
+    "url": "https://fun.lazying.art/#meng-you-tian-mu-kai-xin-yan-original-lines",
+    "image": "assets/covers/meng-you-tian-mu-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "梦游天姥吟留别 开心颜原文段 cover",
+      "role": "cover",
+      "src": "assets/covers/meng-you-tian-mu-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/meng-you-tian-mu-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "meng-you-tian-mu-kai-xin-yan-original-lines-zh",
+      "label": "中文",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
+      "lyricSetId": "zh-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/meng-you-tian-mu-kai-xin-yan-original-lines-zh-Hans-ace-turbo-seed746204-20260706.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "musical": {
+    "key": "D minor requested; detected Dm/F/Bb cinematic progression",
+    "bpm": 161.499,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 1.161,
+        "name": "C#",
+        "degree": ""
+      },
+      {
+        "start": 1.161,
+        "end": 1.486,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 1.486,
+        "end": 2.136,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 2.136,
+        "end": 2.508,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 2.508,
+        "end": 2.856,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 2.856,
+        "end": 3.228,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 3.228,
+        "end": 3.599,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 3.599,
+        "end": 3.971,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 3.971,
+        "end": 4.76,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 4.76,
+        "end": 6.641,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 6.641,
+        "end": 8.127,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 8.127,
+        "end": 9.636,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 9.636,
+        "end": 11.192,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 11.192,
+        "end": 12.33,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 12.33,
+        "end": 12.678,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 12.678,
+        "end": 13.375,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 13.375,
+        "end": 15.511,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 15.511,
+        "end": 17.322,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 17.322,
+        "end": 18.39,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 18.39,
+        "end": 19.853,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 19.853,
+        "end": 21.339,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 21.339,
+        "end": 23.94,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 23.94,
+        "end": 24.335,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 24.335,
+        "end": 24.706,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 24.706,
+        "end": 25.078,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 25.078,
+        "end": 26.958,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 26.958,
+        "end": 27.33,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 27.33,
+        "end": 28.096,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 28.096,
+        "end": 28.444,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 28.444,
+        "end": 30.302,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 30.302,
+        "end": 31.045,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 31.045,
+        "end": 31.417,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 31.417,
+        "end": 31.811,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 31.811,
+        "end": 32.183,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 32.183,
+        "end": 33.297,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 33.297,
+        "end": 34.412,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 34.412,
+        "end": 35.132,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 35.132,
+        "end": 35.503,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 35.503,
+        "end": 35.875,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 35.875,
+        "end": 36.246,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 36.246,
+        "end": 39.172,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 39.172,
+        "end": 40.751,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 40.751,
+        "end": 41.123,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 41.123,
+        "end": 42.167,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 42.167,
+        "end": 42.934,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 42.934,
+        "end": 43.305,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 43.305,
+        "end": 43.7,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 43.7,
+        "end": 44.815,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 44.815,
+        "end": 45.186,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 45.186,
+        "end": 48.181,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 48.181,
+        "end": 49.691,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 49.691,
+        "end": 51.2,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 51.2,
+        "end": 53.429,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 53.429,
+        "end": 53.801,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 53.801,
+        "end": 54.149,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 54.149,
+        "end": 55.658,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 55.658,
+        "end": 56.03,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 56.03,
+        "end": 56.401,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 56.401,
+        "end": 57.144,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 57.144,
+        "end": 58.259,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 58.259,
+        "end": 58.63,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 58.63,
+        "end": 59.025,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 59.025,
+        "end": 59.42,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 59.42,
+        "end": 59.768,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 59.768,
+        "end": 61.603,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 61.603,
+        "end": 62.74,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 62.74,
+        "end": 63.112,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 63.112,
+        "end": 65.318,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 65.318,
+        "end": 66.084,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 66.084,
+        "end": 68.569,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 68.569,
+        "end": 68.94,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 68.94,
+        "end": 71.935,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 71.935,
+        "end": 74.954,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 74.954,
+        "end": 77.88,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 77.88,
+        "end": 80.875,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 80.875,
+        "end": 82.361,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 82.361,
+        "end": 83.917,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 83.917,
+        "end": 86.889,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 86.889,
+        "end": 87.261,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 87.261,
+        "end": 89.095,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 89.095,
+        "end": 89.466,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 89.466,
+        "end": 90.21,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 90.21,
+        "end": 93.228,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 93.228,
+        "end": 94.737,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 94.737,
+        "end": 95.109,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 95.109,
+        "end": 95.504,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 95.504,
+        "end": 98.522,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 98.522,
+        "end": 98.894,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 98.894,
+        "end": 99.289,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 99.289,
+        "end": 102.284,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 102.284,
+        "end": 102.655,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 102.655,
+        "end": 103.77,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 103.77,
+        "end": 104.536,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 104.536,
+        "end": 105.279,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 105.279,
+        "end": 108.251,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 108.251,
+        "end": 109.389,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 109.389,
+        "end": 109.807,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 109.807,
+        "end": 110.179,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 110.179,
+        "end": 112.408,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 112.408,
+        "end": 112.779,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 112.779,
+        "end": 114.614,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 114.614,
+        "end": 118.677,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 118.677,
+        "end": 119.025,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 119.025,
+        "end": 119.374,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 119.374,
+        "end": 119.722,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 119.722,
+        "end": 126.0,
+        "name": "Dm",
+        "degree": ""
+      }
+    ]
+  },
+  "lyricSets": [
+    {
+      "id": "zh-vocal",
+      "label": "中文 vocal",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "active-vocal"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "textTracks": [],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 23.54,
+        "end": 26.1,
+        "text": "忽魂悸以魄动"
+      },
+      {
+        "id": "l02",
+        "start": 26.1,
+        "end": 28.9,
+        "text": "恍惊起而长嗟"
+      },
+      {
+        "id": "l03",
+        "start": 28.9,
+        "end": 33.42,
+        "text": "惟觉时之枕席，失向来之烟霞"
+      },
+      {
+        "id": "l04",
+        "start": 34.7,
+        "end": 40.38,
+        "text": "世间行乐亦如此，古来万事"
+      },
+      {
+        "id": "l05",
+        "start": 40.38,
+        "end": 43.82,
+        "text": "东流水，别君去兮"
+      },
+      {
+        "id": "l06",
+        "start": 43.82,
+        "end": 45.92,
+        "text": "何时还"
+      },
+      {
+        "id": "l07",
+        "start": 47.26,
+        "end": 51.18,
+        "text": "且放白鹿青崖间"
+      },
+      {
+        "id": "l08",
+        "start": 51.18,
+        "end": 55.76,
+        "text": "须行即骑访名山"
+      },
+      {
+        "id": "l09",
+        "start": 55.76,
+        "end": 60.24,
+        "text": "安能摧眉折腰事权贵"
+      },
+      {
+        "id": "l10",
+        "start": 60.24,
+        "end": 63.2,
+        "text": "使我不得开心颜"
+      },
+      {
+        "id": "l11",
+        "start": 65.22,
+        "end": 73.01,
+        "text": "世间行乐亦如此，古来万事"
+      },
+      {
+        "id": "l12",
+        "start": 73.01,
+        "end": 81.72,
+        "text": "安能摧眉折腰事权贵"
+      },
+      {
+        "id": "l13",
+        "start": 81.72,
+        "end": 85.78,
+        "text": "使我不得开心颜"
+      },
+      {
+        "id": "l14",
+        "start": 86.44,
+        "end": 89.54,
+        "text": "惟觉时之枕席，失向来"
+      },
+      {
+        "id": "l15",
+        "start": 89.54,
+        "end": 93.16,
+        "text": "之烟霞，别君去兮何时还"
+      },
+      {
+        "id": "l16",
+        "start": 93.16,
+        "end": 98.35,
+        "text": "且放白鹿青崖间"
+      },
+      {
+        "id": "l17",
+        "start": 98.35,
+        "end": 101.07,
+        "text": "须行即骑访名山"
+      },
+      {
+        "id": "l18",
+        "start": 101.07,
+        "end": 107.04,
+        "text": "安能摧眉折腰事权贵"
+      },
+      {
+        "id": "l19",
+        "start": 107.04,
+        "end": 109.84,
+        "text": "使我不得开心颜"
+      }
+    ]
+  },
+  "artifacts": [],
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/meng-you-tian-mu-kai-xin-yan-original-lines-20260706",
+    "audioSource": "ACE-Step 1.5 XL Turbo, short-line source-text sweep, selected seed 746204.",
+    "analysisRun": "data/runs/meng-you-tian-mu-kai-xin-yan-original-lines-20260706-selected-analysis",
+    "quality": {
+      "selectedSmallAsrOverlap": 0.21333333333333335,
+      "gate": "experimental-original-text-excerpt"
+    },
+    "lyricCorrection": "Corrected 2026-07-06 from large-v3 ASR on the selected full mix and the intended original-text excerpt. The song preserves source poem wording and fragments only; no modern adaptation lyric is added. Dense opening diction remains imperfect, so the item is explicitly named 原文段 rather than using the pure poem title.",
+    "pronunciationGuide": "data/creative_projects/meng-you-tian-mu-kai-xin-yan-original-lines-20260706/source/pronunciation-guide.md",
+    "cover": {
+      "src": "assets/covers/meng-you-tian-mu-16x9.png",
+      "source": "Reused the existing no-text 16:9 Tianmu dream-mountain cover for this related poem-excerpt item."
+    },
+    "publicAudio": "meng-you-tian-mu-kai-xin-yan-original-lines-zh-Hans-ace-turbo-seed746204-20260706.mp3"
+  }
+}
