@@ -1,0 +1,789 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "meng-you-tian-mu-yin-liu-bie",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 13.3,
+      "end": 18.56,
+      "text": "海の煙る波、遠き道は求めがたい",
+      "singableText": "海の煙る波、遠き道は求めがたい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "海",
+          "start": 13.3,
+          "end": 13.651,
+          "reading": "うみ"
+        },
+        {
+          "text": "の",
+          "start": 13.651,
+          "end": 14.001
+        },
+        {
+          "text": "煙",
+          "start": 14.001,
+          "end": 14.352,
+          "reading": "けむり"
+        },
+        {
+          "text": "る",
+          "start": 14.352,
+          "end": 14.703
+        },
+        {
+          "text": "波",
+          "start": 14.703,
+          "end": 15.053,
+          "reading": "なみ"
+        },
+        {
+          "text": "、",
+          "start": 15.053,
+          "end": 15.404
+        },
+        {
+          "text": "遠",
+          "start": 15.404,
+          "end": 15.755,
+          "reading": "えん"
+        },
+        {
+          "text": "き",
+          "start": 15.755,
+          "end": 16.105
+        },
+        {
+          "text": "道",
+          "start": 16.105,
+          "end": 16.456,
+          "reading": "みち"
+        },
+        {
+          "text": "は",
+          "start": 16.456,
+          "end": 16.807
+        },
+        {
+          "text": "求",
+          "start": 16.807,
+          "end": 17.157,
+          "reading": "きゅう"
+        },
+        {
+          "text": "め",
+          "start": 17.157,
+          "end": 17.508
+        },
+        {
+          "text": "が",
+          "start": 17.508,
+          "end": 17.859
+        },
+        {
+          "text": "た",
+          "start": 17.859,
+          "end": 18.209
+        },
+        {
+          "text": "い",
+          "start": 18.209,
+          "end": 18.56
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 19.22,
+      "end": 24.7,
+      "text": "人は天姥山を語り、雲霞は果てにある",
+      "singableText": "人は天姥山を語り、雲霞は果てにある",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "人",
+          "start": 19.22,
+          "end": 19.542,
+          "reading": "にん"
+        },
+        {
+          "text": "は",
+          "start": 19.542,
+          "end": 19.865
+        },
+        {
+          "text": "天",
+          "start": 19.865,
+          "end": 20.187,
+          "reading": "てん"
+        },
+        {
+          "text": "姥",
+          "start": 20.187,
+          "end": 20.509,
+          "reading": "うば"
+        },
+        {
+          "text": "山",
+          "start": 20.509,
+          "end": 20.832,
+          "reading": "やま"
+        },
+        {
+          "text": "を",
+          "start": 20.832,
+          "end": 21.154
+        },
+        {
+          "text": "語",
+          "start": 21.154,
+          "end": 21.476,
+          "reading": "ご"
+        },
+        {
+          "text": "り",
+          "start": 21.476,
+          "end": 21.799
+        },
+        {
+          "text": "、",
+          "start": 21.799,
+          "end": 22.121
+        },
+        {
+          "text": "雲",
+          "start": 22.121,
+          "end": 22.444,
+          "reading": "くも"
+        },
+        {
+          "text": "霞",
+          "start": 22.444,
+          "end": 22.766,
+          "reading": "かすみ"
+        },
+        {
+          "text": "は",
+          "start": 22.766,
+          "end": 23.088
+        },
+        {
+          "text": "果",
+          "start": 23.088,
+          "end": 23.411,
+          "reading": "か"
+        },
+        {
+          "text": "て",
+          "start": 23.411,
+          "end": 23.733
+        },
+        {
+          "text": "に",
+          "start": 23.733,
+          "end": 24.055
+        },
+        {
+          "text": "あ",
+          "start": 24.055,
+          "end": 24.378
+        },
+        {
+          "text": "る",
+          "start": 24.378,
+          "end": 24.7
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 24.7,
+      "end": 30.28,
+      "text": "一夜の月に乗り、鏡湖の秋を飛び越える",
+      "singableText": "一夜の月に乗り、鏡湖の秋を飛び越える",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 24.7,
+          "end": 25.01,
+          "reading": "いち"
+        },
+        {
+          "text": "夜",
+          "start": 25.01,
+          "end": 25.32,
+          "reading": "よる"
+        },
+        {
+          "text": "の",
+          "start": 25.32,
+          "end": 25.63
+        },
+        {
+          "text": "月",
+          "start": 25.63,
+          "end": 25.94,
+          "reading": "がつ"
+        },
+        {
+          "text": "に",
+          "start": 25.94,
+          "end": 26.25
+        },
+        {
+          "text": "乗",
+          "start": 26.25,
+          "end": 26.56,
+          "reading": "じょう"
+        },
+        {
+          "text": "り",
+          "start": 26.56,
+          "end": 26.87
+        },
+        {
+          "text": "、",
+          "start": 26.87,
+          "end": 27.18
+        },
+        {
+          "text": "鏡",
+          "start": 27.18,
+          "end": 27.49,
+          "reading": "かがみ"
+        },
+        {
+          "text": "湖",
+          "start": 27.49,
+          "end": 27.8,
+          "reading": "みずうみ"
+        },
+        {
+          "text": "の",
+          "start": 27.8,
+          "end": 28.11
+        },
+        {
+          "text": "秋",
+          "start": 28.11,
+          "end": 28.42,
+          "reading": "あき"
+        },
+        {
+          "text": "を",
+          "start": 28.42,
+          "end": 28.73
+        },
+        {
+          "text": "飛",
+          "start": 28.73,
+          "end": 29.04,
+          "reading": "ひ"
+        },
+        {
+          "text": "び",
+          "start": 29.04,
+          "end": 29.35
+        },
+        {
+          "text": "越",
+          "start": 29.35,
+          "end": 29.66,
+          "reading": "えつ"
+        },
+        {
+          "text": "え",
+          "start": 29.66,
+          "end": 29.97
+        },
+        {
+          "text": "る",
+          "start": 29.97,
+          "end": 30.28
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.82,
+      "end": 36.26,
+      "text": "月光が私を照らし、山の流れへ送る",
+      "singableText": "月光が私を照らし、山の流れへ送る",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 30.82,
+          "end": 31.16,
+          "reading": "がつ"
+        },
+        {
+          "text": "光",
+          "start": 31.16,
+          "end": 31.5,
+          "reading": "ひかり"
+        },
+        {
+          "text": "が",
+          "start": 31.5,
+          "end": 31.84
+        },
+        {
+          "text": "私",
+          "start": 31.84,
+          "end": 32.18,
+          "reading": "わたし"
+        },
+        {
+          "text": "を",
+          "start": 32.18,
+          "end": 32.52
+        },
+        {
+          "text": "照",
+          "start": 32.52,
+          "end": 32.86,
+          "reading": "しょう"
+        },
+        {
+          "text": "ら",
+          "start": 32.86,
+          "end": 33.2
+        },
+        {
+          "text": "し",
+          "start": 33.2,
+          "end": 33.54
+        },
+        {
+          "text": "、",
+          "start": 33.54,
+          "end": 33.88
+        },
+        {
+          "text": "山",
+          "start": 33.88,
+          "end": 34.22,
+          "reading": "やま"
+        },
+        {
+          "text": "の",
+          "start": 34.22,
+          "end": 34.56
+        },
+        {
+          "text": "流",
+          "start": 34.56,
+          "end": 34.9,
+          "reading": "りゅう"
+        },
+        {
+          "text": "れ",
+          "start": 34.9,
+          "end": 35.24
+        },
+        {
+          "text": "へ",
+          "start": 35.24,
+          "end": 35.58
+        },
+        {
+          "text": "送",
+          "start": 35.58,
+          "end": 35.92,
+          "reading": "そう"
+        },
+        {
+          "text": "る",
+          "start": 35.92,
+          "end": 36.26
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 36.26,
+      "end": 41.14,
+      "text": "天姥山を夢に遊ぶ",
+      "singableText": "天姥山を夢に遊ぶ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "天",
+          "start": 36.26,
+          "end": 36.87,
+          "reading": "てん"
+        },
+        {
+          "text": "姥",
+          "start": 36.87,
+          "end": 37.48,
+          "reading": "うば"
+        },
+        {
+          "text": "山",
+          "start": 37.48,
+          "end": 38.09,
+          "reading": "やま"
+        },
+        {
+          "text": "を",
+          "start": 38.09,
+          "end": 38.7
+        },
+        {
+          "text": "夢",
+          "start": 38.7,
+          "end": 39.31,
+          "reading": "ゆめ"
+        },
+        {
+          "text": "に",
+          "start": 39.31,
+          "end": 39.92
+        },
+        {
+          "text": "遊",
+          "start": 39.92,
+          "end": 40.53,
+          "reading": "ゆう"
+        },
+        {
+          "text": "ぶ",
+          "start": 40.53,
+          "end": 41.14
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 41.14,
+      "end": 43.56,
+      "text": "雲天の外まで夢見る",
+      "singableText": "雲天の外まで夢見る",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "雲",
+          "start": 41.14,
+          "end": 41.409,
+          "reading": "くも"
+        },
+        {
+          "text": "天",
+          "start": 41.409,
+          "end": 41.678,
+          "reading": "てん"
+        },
+        {
+          "text": "の",
+          "start": 41.678,
+          "end": 41.947
+        },
+        {
+          "text": "外",
+          "start": 41.947,
+          "end": 42.216,
+          "reading": "そと"
+        },
+        {
+          "text": "ま",
+          "start": 42.216,
+          "end": 42.484
+        },
+        {
+          "text": "で",
+          "start": 42.484,
+          "end": 42.753
+        },
+        {
+          "text": "夢",
+          "start": 42.753,
+          "end": 43.022,
+          "reading": "ゆめ"
+        },
+        {
+          "text": "見",
+          "start": 43.022,
+          "end": 43.291,
+          "reading": "けん"
+        },
+        {
+          "text": "る",
+          "start": 43.291,
+          "end": 43.56
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 44.2,
+      "end": 47.53,
+      "text": "万の山が私のために開く",
+      "singableText": "万の山が私のために開く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "万",
+          "start": 44.2,
+          "end": 44.503,
+          "reading": "まん"
+        },
+        {
+          "text": "の",
+          "start": 44.503,
+          "end": 44.805
+        },
+        {
+          "text": "山",
+          "start": 44.805,
+          "end": 45.108,
+          "reading": "やま"
+        },
+        {
+          "text": "が",
+          "start": 45.108,
+          "end": 45.411
+        },
+        {
+          "text": "私",
+          "start": 45.411,
+          "end": 45.714,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 45.714,
+          "end": 46.016
+        },
+        {
+          "text": "た",
+          "start": 46.016,
+          "end": 46.319
+        },
+        {
+          "text": "め",
+          "start": 46.319,
+          "end": 46.622
+        },
+        {
+          "text": "に",
+          "start": 46.622,
+          "end": 46.925
+        },
+        {
+          "text": "開",
+          "start": 46.925,
+          "end": 47.227,
+          "reading": "かい"
+        },
+        {
+          "text": "く",
+          "start": 47.227,
+          "end": 47.53
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 47.53,
+      "end": 50.71,
+      "text": "我が心は塵にならない",
+      "singableText": "我が心は塵にならない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 47.53,
+          "end": 47.848,
+          "reading": "われ"
+        },
+        {
+          "text": "が",
+          "start": 47.848,
+          "end": 48.166
+        },
+        {
+          "text": "心",
+          "start": 48.166,
+          "end": 48.484,
+          "reading": "こころ"
+        },
+        {
+          "text": "は",
+          "start": 48.484,
+          "end": 48.802
+        },
+        {
+          "text": "塵",
+          "start": 48.802,
+          "end": 49.12,
+          "reading": "ちり"
+        },
+        {
+          "text": "に",
+          "start": 49.12,
+          "end": 49.438
+        },
+        {
+          "text": "な",
+          "start": 49.438,
+          "end": 49.756
+        },
+        {
+          "text": "ら",
+          "start": 49.756,
+          "end": 50.074
+        },
+        {
+          "text": "な",
+          "start": 50.074,
+          "end": 50.392
+        },
+        {
+          "text": "い",
+          "start": 50.392,
+          "end": 50.71
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 53.56,
+      "end": 55.82,
+      "text": "天姥山を夢に遊ぶ",
+      "singableText": "天姥山を夢に遊ぶ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "天",
+          "start": 53.56,
+          "end": 53.843,
+          "reading": "てん"
+        },
+        {
+          "text": "姥",
+          "start": 53.843,
+          "end": 54.125,
+          "reading": "うば"
+        },
+        {
+          "text": "山",
+          "start": 54.125,
+          "end": 54.407,
+          "reading": "やま"
+        },
+        {
+          "text": "を",
+          "start": 54.407,
+          "end": 54.69
+        },
+        {
+          "text": "夢",
+          "start": 54.69,
+          "end": 54.973,
+          "reading": "ゆめ"
+        },
+        {
+          "text": "に",
+          "start": 54.973,
+          "end": 55.255
+        },
+        {
+          "text": "遊",
+          "start": 55.255,
+          "end": 55.538,
+          "reading": "ゆう"
+        },
+        {
+          "text": "ぶ",
+          "start": 55.538,
+          "end": 55.82
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 59.56,
+      "end": 61.14,
+      "text": "万の山が私のために開く",
+      "singableText": "万の山が私のために開く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "万",
+          "start": 59.56,
+          "end": 59.704,
+          "reading": "まん"
+        },
+        {
+          "text": "の",
+          "start": 59.704,
+          "end": 59.847
+        },
+        {
+          "text": "山",
+          "start": 59.847,
+          "end": 59.991,
+          "reading": "やま"
+        },
+        {
+          "text": "が",
+          "start": 59.991,
+          "end": 60.135
+        },
+        {
+          "text": "私",
+          "start": 60.135,
+          "end": 60.278,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 60.278,
+          "end": 60.422
+        },
+        {
+          "text": "た",
+          "start": 60.422,
+          "end": 60.565
+        },
+        {
+          "text": "め",
+          "start": 60.565,
+          "end": 60.709
+        },
+        {
+          "text": "に",
+          "start": 60.709,
+          "end": 60.853
+        },
+        {
+          "text": "開",
+          "start": 60.853,
+          "end": 60.996,
+          "reading": "かい"
+        },
+        {
+          "text": "く",
+          "start": 60.996,
+          "end": 61.14
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "Corrected from the selected ACE XL Turbo hook render, using the selected-audio tiny ASR word anchors plus the planned lyric as reference. The published lyric follows the actual audible structure: opening image, Tianmu/cloud line, moon-flight line, moonlight/stream line, and the repeated Tianmu/mountain hook. Prompt lines after the hook are omitted because this render did not recover them clearly enough for truthful publication. The public text keeps 天姥山 with pinyin mu3; the model-facing prompt used 天母山 only to control pronunciation."
+  }
+}

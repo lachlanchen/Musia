@@ -1,0 +1,552 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "meng-you-tian-mu-yin-liu-bie",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 13.3,
+      "end": 18.56,
+      "text": "Sea mist and waves; the far path is hard to seek.",
+      "singableText": "Sea mist and waves; the far path is hard to seek.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Sea",
+          "start": 13.3,
+          "end": 13.705
+        },
+        {
+          "text": "mist",
+          "start": 13.705,
+          "end": 14.109
+        },
+        {
+          "text": "and",
+          "start": 14.109,
+          "end": 14.514
+        },
+        {
+          "text": "waves",
+          "start": 14.514,
+          "end": 14.918
+        },
+        {
+          "text": ";",
+          "start": 14.918,
+          "end": 15.323
+        },
+        {
+          "text": "the",
+          "start": 15.323,
+          "end": 15.728
+        },
+        {
+          "text": "far",
+          "start": 15.728,
+          "end": 16.132
+        },
+        {
+          "text": "path",
+          "start": 16.132,
+          "end": 16.537
+        },
+        {
+          "text": "is",
+          "start": 16.537,
+          "end": 16.942
+        },
+        {
+          "text": "hard",
+          "start": 16.942,
+          "end": 17.346
+        },
+        {
+          "text": "to",
+          "start": 17.346,
+          "end": 17.751
+        },
+        {
+          "text": "seek",
+          "start": 17.751,
+          "end": 18.155
+        },
+        {
+          "text": ".",
+          "start": 18.155,
+          "end": 18.56
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 19.22,
+      "end": 24.7,
+      "text": "Someone speaks of Mount Tianmu; clouds glow at the horizon.",
+      "singableText": "Someone speaks of Mount Tianmu; clouds glow at the horizon.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Someone",
+          "start": 19.22,
+          "end": 19.677
+        },
+        {
+          "text": "speaks",
+          "start": 19.677,
+          "end": 20.133
+        },
+        {
+          "text": "of",
+          "start": 20.133,
+          "end": 20.59
+        },
+        {
+          "text": "Mount",
+          "start": 20.59,
+          "end": 21.047
+        },
+        {
+          "text": "Tianmu",
+          "start": 21.047,
+          "end": 21.503
+        },
+        {
+          "text": ";",
+          "start": 21.503,
+          "end": 21.96
+        },
+        {
+          "text": "clouds",
+          "start": 21.96,
+          "end": 22.417
+        },
+        {
+          "text": "glow",
+          "start": 22.417,
+          "end": 22.873
+        },
+        {
+          "text": "at",
+          "start": 22.873,
+          "end": 23.33
+        },
+        {
+          "text": "the",
+          "start": 23.33,
+          "end": 23.787
+        },
+        {
+          "text": "horizon",
+          "start": 23.787,
+          "end": 24.243
+        },
+        {
+          "text": ".",
+          "start": 24.243,
+          "end": 24.7
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 24.7,
+      "end": 30.28,
+      "text": "I ride one night of moonlight, flying across Mirror Lake autumn.",
+      "singableText": "I ride one night of moonlight, flying across Mirror Lake autumn.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 24.7,
+          "end": 25.129
+        },
+        {
+          "text": "ride",
+          "start": 25.129,
+          "end": 25.558
+        },
+        {
+          "text": "one",
+          "start": 25.558,
+          "end": 25.988
+        },
+        {
+          "text": "night",
+          "start": 25.988,
+          "end": 26.417
+        },
+        {
+          "text": "of",
+          "start": 26.417,
+          "end": 26.846
+        },
+        {
+          "text": "moonlight",
+          "start": 26.846,
+          "end": 27.275
+        },
+        {
+          "text": ",",
+          "start": 27.275,
+          "end": 27.705
+        },
+        {
+          "text": "flying",
+          "start": 27.705,
+          "end": 28.134
+        },
+        {
+          "text": "across",
+          "start": 28.134,
+          "end": 28.563
+        },
+        {
+          "text": "Mirror",
+          "start": 28.563,
+          "end": 28.992
+        },
+        {
+          "text": "Lake",
+          "start": 28.992,
+          "end": 29.422
+        },
+        {
+          "text": "autumn",
+          "start": 29.422,
+          "end": 29.851
+        },
+        {
+          "text": ".",
+          "start": 29.851,
+          "end": 30.28
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.82,
+      "end": 36.26,
+      "text": "Moonlight shines on me and sends me toward the mountain stream.",
+      "singableText": "Moonlight shines on me and sends me toward the mountain stream.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Moonlight",
+          "start": 30.82,
+          "end": 31.273
+        },
+        {
+          "text": "shines",
+          "start": 31.273,
+          "end": 31.727
+        },
+        {
+          "text": "on",
+          "start": 31.727,
+          "end": 32.18
+        },
+        {
+          "text": "me",
+          "start": 32.18,
+          "end": 32.633
+        },
+        {
+          "text": "and",
+          "start": 32.633,
+          "end": 33.087
+        },
+        {
+          "text": "sends",
+          "start": 33.087,
+          "end": 33.54
+        },
+        {
+          "text": "me",
+          "start": 33.54,
+          "end": 33.993
+        },
+        {
+          "text": "toward",
+          "start": 33.993,
+          "end": 34.447
+        },
+        {
+          "text": "the",
+          "start": 34.447,
+          "end": 34.9
+        },
+        {
+          "text": "mountain",
+          "start": 34.9,
+          "end": 35.353
+        },
+        {
+          "text": "stream",
+          "start": 35.353,
+          "end": 35.807
+        },
+        {
+          "text": ".",
+          "start": 35.807,
+          "end": 36.26
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 36.26,
+      "end": 41.14,
+      "text": "Dreaming through Mount Tianmu.",
+      "singableText": "Dreaming through Mount Tianmu.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Dreaming",
+          "start": 36.26,
+          "end": 37.236
+        },
+        {
+          "text": "through",
+          "start": 37.236,
+          "end": 38.212
+        },
+        {
+          "text": "Mount",
+          "start": 38.212,
+          "end": 39.188
+        },
+        {
+          "text": "Tianmu",
+          "start": 39.188,
+          "end": 40.164
+        },
+        {
+          "text": ".",
+          "start": 40.164,
+          "end": 41.14
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 41.14,
+      "end": 43.56,
+      "text": "Dreaming beyond the clouded sky.",
+      "singableText": "Dreaming beyond the clouded sky.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Dreaming",
+          "start": 41.14,
+          "end": 41.543
+        },
+        {
+          "text": "beyond",
+          "start": 41.543,
+          "end": 41.947
+        },
+        {
+          "text": "the",
+          "start": 41.947,
+          "end": 42.35
+        },
+        {
+          "text": "clouded",
+          "start": 42.35,
+          "end": 42.753
+        },
+        {
+          "text": "sky",
+          "start": 42.753,
+          "end": 43.157
+        },
+        {
+          "text": ".",
+          "start": 43.157,
+          "end": 43.56
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 44.2,
+      "end": 47.53,
+      "text": "Ten thousand mountains open for me.",
+      "singableText": "Ten thousand mountains open for me.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ten",
+          "start": 44.2,
+          "end": 44.676
+        },
+        {
+          "text": "thousand",
+          "start": 44.676,
+          "end": 45.151
+        },
+        {
+          "text": "mountains",
+          "start": 45.151,
+          "end": 45.627
+        },
+        {
+          "text": "open",
+          "start": 45.627,
+          "end": 46.103
+        },
+        {
+          "text": "for",
+          "start": 46.103,
+          "end": 46.579
+        },
+        {
+          "text": "me",
+          "start": 46.579,
+          "end": 47.054
+        },
+        {
+          "text": ".",
+          "start": 47.054,
+          "end": 47.53
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 47.53,
+      "end": 50.71,
+      "text": "My heart will not become dust.",
+      "singableText": "My heart will not become dust.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 47.53,
+          "end": 47.984
+        },
+        {
+          "text": "heart",
+          "start": 47.984,
+          "end": 48.439
+        },
+        {
+          "text": "will",
+          "start": 48.439,
+          "end": 48.893
+        },
+        {
+          "text": "not",
+          "start": 48.893,
+          "end": 49.347
+        },
+        {
+          "text": "become",
+          "start": 49.347,
+          "end": 49.801
+        },
+        {
+          "text": "dust",
+          "start": 49.801,
+          "end": 50.256
+        },
+        {
+          "text": ".",
+          "start": 50.256,
+          "end": 50.71
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 53.56,
+      "end": 55.82,
+      "text": "Dreaming through Mount Tianmu.",
+      "singableText": "Dreaming through Mount Tianmu.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Dreaming",
+          "start": 53.56,
+          "end": 54.012
+        },
+        {
+          "text": "through",
+          "start": 54.012,
+          "end": 54.464
+        },
+        {
+          "text": "Mount",
+          "start": 54.464,
+          "end": 54.916
+        },
+        {
+          "text": "Tianmu",
+          "start": 54.916,
+          "end": 55.368
+        },
+        {
+          "text": ".",
+          "start": 55.368,
+          "end": 55.82
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 59.56,
+      "end": 61.14,
+      "text": "Ten thousand mountains open for me.",
+      "singableText": "Ten thousand mountains open for me.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ten",
+          "start": 59.56,
+          "end": 59.786
+        },
+        {
+          "text": "thousand",
+          "start": 59.786,
+          "end": 60.011
+        },
+        {
+          "text": "mountains",
+          "start": 60.011,
+          "end": 60.237
+        },
+        {
+          "text": "open",
+          "start": 60.237,
+          "end": 60.463
+        },
+        {
+          "text": "for",
+          "start": 60.463,
+          "end": 60.689
+        },
+        {
+          "text": "me",
+          "start": 60.689,
+          "end": 60.914
+        },
+        {
+          "text": ".",
+          "start": 60.914,
+          "end": 61.14
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "Corrected from the selected ACE XL Turbo hook render, using the selected-audio tiny ASR word anchors plus the planned lyric as reference. The published lyric follows the actual audible structure: opening image, Tianmu/cloud line, moon-flight line, moonlight/stream line, and the repeated Tianmu/mountain hook. Prompt lines after the hook are omitted because this render did not recover them clearly enough for truthful publication. The public text keeps 天姥山 with pinyin mu3; the model-facing prompt used 天母山 only to control pronunciation."
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "meng-you-tian-mu-yin-liu-bie",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 13.3,
+      "end": 18.56,
+      "text": "海上烟涛，远到难求",
+      "singableText": "海上烟涛，远到难求",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "海",
+          "start": 13.3,
+          "end": 13.884,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "上",
+          "start": 13.884,
+          "end": 14.469,
+          "pinyin": "shang4"
+        },
+        {
+          "text": "烟",
+          "start": 14.469,
+          "end": 15.053,
+          "pinyin": "yan1"
+        },
+        {
+          "text": "涛",
+          "start": 15.053,
+          "end": 15.638,
+          "pinyin": "tao1"
+        },
+        {
+          "text": "，",
+          "start": 15.638,
+          "end": 16.222
+        },
+        {
+          "text": "远",
+          "start": 16.222,
+          "end": 16.807,
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "到",
+          "start": 16.807,
+          "end": 17.391,
+          "pinyin": "dao4"
+        },
+        {
+          "text": "难",
+          "start": 17.391,
+          "end": 17.976,
+          "pinyin": "nan2"
+        },
+        {
+          "text": "求",
+          "start": 17.976,
+          "end": 18.56,
+          "pinyin": "qiu2"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 19.22,
+      "end": 24.7,
+      "text": "有人说天姥山，云霞在尽头",
+      "singableText": "有人说天姥山，云霞在尽头",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "有",
+          "start": 19.22,
+          "end": 19.677,
+          "pinyin": "you3"
+        },
+        {
+          "text": "人",
+          "start": 19.677,
+          "end": 20.133,
+          "pinyin": "ren2"
+        },
+        {
+          "text": "说",
+          "start": 20.133,
+          "end": 20.59,
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "天",
+          "start": 20.59,
+          "end": 21.047,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "姥",
+          "start": 21.047,
+          "end": 21.503,
+          "pinyin": "mu3"
+        },
+        {
+          "text": "山",
+          "start": 21.503,
+          "end": 21.96,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "，",
+          "start": 21.96,
+          "end": 22.417
+        },
+        {
+          "text": "云",
+          "start": 22.417,
+          "end": 22.873,
+          "pinyin": "yun2"
+        },
+        {
+          "text": "霞",
+          "start": 22.873,
+          "end": 23.33,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "在",
+          "start": 23.33,
+          "end": 23.787,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "尽",
+          "start": 23.787,
+          "end": 24.243,
+          "pinyin": "jin3"
+        },
+        {
+          "text": "头",
+          "start": 24.243,
+          "end": 24.7,
+          "pinyin": "tou2"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 24.7,
+      "end": 30.28,
+      "text": "我乘一夜月，飞过镜湖秋",
+      "singableText": "我乘一夜月，飞过镜湖秋",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 24.7,
+          "end": 25.207,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "乘",
+          "start": 25.207,
+          "end": 25.715,
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "一",
+          "start": 25.715,
+          "end": 26.222,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "夜",
+          "start": 26.222,
+          "end": 26.729,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "月",
+          "start": 26.729,
+          "end": 27.236,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "，",
+          "start": 27.236,
+          "end": 27.744
+        },
+        {
+          "text": "飞",
+          "start": 27.744,
+          "end": 28.251,
+          "pinyin": "fei1"
+        },
+        {
+          "text": "过",
+          "start": 28.251,
+          "end": 28.758,
+          "pinyin": "guo4"
+        },
+        {
+          "text": "镜",
+          "start": 28.758,
+          "end": 29.265,
+          "pinyin": "jing4"
+        },
+        {
+          "text": "湖",
+          "start": 29.265,
+          "end": 29.773,
+          "pinyin": "hu2"
+        },
+        {
+          "text": "秋",
+          "start": 29.773,
+          "end": 30.28,
+          "pinyin": "qiu1"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.82,
+      "end": 36.26,
+      "text": "月光照着我，送我向山流",
+      "singableText": "月光照着我，送我向山流",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 30.82,
+          "end": 31.315,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "光",
+          "start": 31.315,
+          "end": 31.809,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "照",
+          "start": 31.809,
+          "end": 32.304,
+          "pinyin": "zhao4"
+        },
+        {
+          "text": "着",
+          "start": 32.304,
+          "end": 32.798,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "我",
+          "start": 32.798,
+          "end": 33.293,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "，",
+          "start": 33.293,
+          "end": 33.787
+        },
+        {
+          "text": "送",
+          "start": 33.787,
+          "end": 34.282,
+          "pinyin": "song4"
+        },
+        {
+          "text": "我",
+          "start": 34.282,
+          "end": 34.776,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "向",
+          "start": 34.776,
+          "end": 35.271,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "山",
+          "start": 35.271,
+          "end": 35.765,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "流",
+          "start": 35.765,
+          "end": 36.26,
+          "pinyin": "liu2"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 36.26,
+      "end": 41.14,
+      "text": "梦游天姥山",
+      "singableText": "梦游天姥山",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "梦",
+          "start": 36.26,
+          "end": 37.236,
+          "pinyin": "meng4"
+        },
+        {
+          "text": "游",
+          "start": 37.236,
+          "end": 38.212,
+          "pinyin": "you2"
+        },
+        {
+          "text": "天",
+          "start": 38.212,
+          "end": 39.188,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "姥",
+          "start": 39.188,
+          "end": 40.164,
+          "pinyin": "mu3"
+        },
+        {
+          "text": "山",
+          "start": 40.164,
+          "end": 41.14,
+          "pinyin": "shan1"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 41.14,
+      "end": 43.56,
+      "text": "梦到云天外",
+      "singableText": "梦到云天外",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "梦",
+          "start": 41.14,
+          "end": 41.624,
+          "pinyin": "meng4"
+        },
+        {
+          "text": "到",
+          "start": 41.624,
+          "end": 42.108,
+          "pinyin": "dao4"
+        },
+        {
+          "text": "云",
+          "start": 42.108,
+          "end": 42.592,
+          "pinyin": "yun2"
+        },
+        {
+          "text": "天",
+          "start": 42.592,
+          "end": 43.076,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "外",
+          "start": 43.076,
+          "end": 43.56,
+          "pinyin": "wai4"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 44.2,
+      "end": 47.53,
+      "text": "万山为我开",
+      "singableText": "万山为我开",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "万",
+          "start": 44.2,
+          "end": 44.866,
+          "pinyin": "wan4"
+        },
+        {
+          "text": "山",
+          "start": 44.866,
+          "end": 45.532,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "为",
+          "start": 45.532,
+          "end": 46.198,
+          "pinyin": "wei4"
+        },
+        {
+          "text": "我",
+          "start": 46.198,
+          "end": 46.864,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "开",
+          "start": 46.864,
+          "end": 47.53,
+          "pinyin": "kai1"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 47.53,
+      "end": 50.71,
+      "text": "我心不尘埃",
+      "singableText": "我心不尘埃",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 47.53,
+          "end": 48.166,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "心",
+          "start": 48.166,
+          "end": 48.802,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "不",
+          "start": 48.802,
+          "end": 49.438,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "尘",
+          "start": 49.438,
+          "end": 50.074,
+          "pinyin": "chen2"
+        },
+        {
+          "text": "埃",
+          "start": 50.074,
+          "end": 50.71,
+          "pinyin": "ai1"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 53.56,
+      "end": 55.82,
+      "text": "梦游天姥山",
+      "singableText": "梦游天姥山",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "梦",
+          "start": 53.56,
+          "end": 54.012,
+          "pinyin": "meng4"
+        },
+        {
+          "text": "游",
+          "start": 54.012,
+          "end": 54.464,
+          "pinyin": "you2"
+        },
+        {
+          "text": "天",
+          "start": 54.464,
+          "end": 54.916,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "姥",
+          "start": 54.916,
+          "end": 55.368,
+          "pinyin": "mu3"
+        },
+        {
+          "text": "山",
+          "start": 55.368,
+          "end": 55.82,
+          "pinyin": "shan1"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 59.56,
+      "end": 61.14,
+      "text": "万山为我开",
+      "singableText": "万山为我开",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "万",
+          "start": 59.56,
+          "end": 59.876,
+          "pinyin": "wan4"
+        },
+        {
+          "text": "山",
+          "start": 59.876,
+          "end": 60.192,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "为",
+          "start": 60.192,
+          "end": 60.508,
+          "pinyin": "wei4"
+        },
+        {
+          "text": "我",
+          "start": 60.508,
+          "end": 60.824,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "开",
+          "start": 60.824,
+          "end": 61.14,
+          "pinyin": "kai1"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "Corrected from the selected ACE XL Turbo hook render, using the selected-audio tiny ASR word anchors plus the planned lyric as reference. The published lyric follows the actual audible structure: opening image, Tianmu/cloud line, moon-flight line, moonlight/stream line, and the repeated Tianmu/mountain hook. Prompt lines after the hook are omitted because this render did not recover them clearly enough for truthful publication. The public text keeps 天姥山 with pinyin mu3; the model-facing prompt used 天母山 only to control pronunciation."
+  }
+}
