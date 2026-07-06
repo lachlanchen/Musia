@@ -1,0 +1,527 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "chi-le-ge-original-poem",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.5,
+      "end": 3.1,
+      "text": "The Chile plain lies beneath Yinshan Mountain.",
+      "singableText": "The Chile plain lies beneath Yinshan Mountain.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 0.5,
+          "end": 0.825
+        },
+        {
+          "text": "Chile",
+          "start": 0.825,
+          "end": 1.15
+        },
+        {
+          "text": "plain",
+          "start": 1.15,
+          "end": 1.475
+        },
+        {
+          "text": "lies",
+          "start": 1.475,
+          "end": 1.8
+        },
+        {
+          "text": "beneath",
+          "start": 1.8,
+          "end": 2.125
+        },
+        {
+          "text": "Yinshan",
+          "start": 2.125,
+          "end": 2.45
+        },
+        {
+          "text": "Mountain",
+          "start": 2.45,
+          "end": 2.775
+        },
+        {
+          "text": ".",
+          "start": 2.775,
+          "end": 3.1
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.4,
+      "end": 7.56,
+      "text": "The sky is like a round felt tent, covering the four fields.",
+      "singableText": "The sky is like a round felt tent, covering the four fields.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 3.4,
+          "end": 3.697
+        },
+        {
+          "text": "sky",
+          "start": 3.697,
+          "end": 3.994
+        },
+        {
+          "text": "is",
+          "start": 3.994,
+          "end": 4.291
+        },
+        {
+          "text": "like",
+          "start": 4.291,
+          "end": 4.589
+        },
+        {
+          "text": "a",
+          "start": 4.589,
+          "end": 4.886
+        },
+        {
+          "text": "round",
+          "start": 4.886,
+          "end": 5.183
+        },
+        {
+          "text": "felt",
+          "start": 5.183,
+          "end": 5.48
+        },
+        {
+          "text": "tent",
+          "start": 5.48,
+          "end": 5.777
+        },
+        {
+          "text": ",",
+          "start": 5.777,
+          "end": 6.074
+        },
+        {
+          "text": "covering",
+          "start": 6.074,
+          "end": 6.371
+        },
+        {
+          "text": "the",
+          "start": 6.371,
+          "end": 6.669
+        },
+        {
+          "text": "four",
+          "start": 6.669,
+          "end": 6.966
+        },
+        {
+          "text": "fields",
+          "start": 6.966,
+          "end": 7.263
+        },
+        {
+          "text": ".",
+          "start": 7.263,
+          "end": 7.56
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 14.63,
+      "end": 19.91,
+      "text": "The Chile plain lies beneath Yinshan Mountain.",
+      "singableText": "The Chile plain lies beneath Yinshan Mountain.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 14.63,
+          "end": 15.29
+        },
+        {
+          "text": "Chile",
+          "start": 15.29,
+          "end": 15.95
+        },
+        {
+          "text": "plain",
+          "start": 15.95,
+          "end": 16.61
+        },
+        {
+          "text": "lies",
+          "start": 16.61,
+          "end": 17.27
+        },
+        {
+          "text": "beneath",
+          "start": 17.27,
+          "end": 17.93
+        },
+        {
+          "text": "Yinshan",
+          "start": 17.93,
+          "end": 18.59
+        },
+        {
+          "text": "Mountain",
+          "start": 18.59,
+          "end": 19.25
+        },
+        {
+          "text": ".",
+          "start": 19.25,
+          "end": 19.91
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 21.37,
+      "end": 26.83,
+      "text": "The sky is like a round felt tent, covering the four fields.",
+      "singableText": "The sky is like a round felt tent, covering the four fields.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 21.37,
+          "end": 21.76
+        },
+        {
+          "text": "sky",
+          "start": 21.76,
+          "end": 22.15
+        },
+        {
+          "text": "is",
+          "start": 22.15,
+          "end": 22.54
+        },
+        {
+          "text": "like",
+          "start": 22.54,
+          "end": 22.93
+        },
+        {
+          "text": "a",
+          "start": 22.93,
+          "end": 23.32
+        },
+        {
+          "text": "round",
+          "start": 23.32,
+          "end": 23.71
+        },
+        {
+          "text": "felt",
+          "start": 23.71,
+          "end": 24.1
+        },
+        {
+          "text": "tent",
+          "start": 24.1,
+          "end": 24.49
+        },
+        {
+          "text": ",",
+          "start": 24.49,
+          "end": 24.88
+        },
+        {
+          "text": "covering",
+          "start": 24.88,
+          "end": 25.27
+        },
+        {
+          "text": "the",
+          "start": 25.27,
+          "end": 25.66
+        },
+        {
+          "text": "four",
+          "start": 25.66,
+          "end": 26.05
+        },
+        {
+          "text": "fields",
+          "start": 26.05,
+          "end": 26.44
+        },
+        {
+          "text": ".",
+          "start": 26.44,
+          "end": 26.83
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 27.45,
+      "end": 30.17,
+      "text": "The sky is vast; the wilds are boundless.",
+      "singableText": "The sky is vast; the wilds are boundless.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 27.45,
+          "end": 27.722
+        },
+        {
+          "text": "sky",
+          "start": 27.722,
+          "end": 27.994
+        },
+        {
+          "text": "is",
+          "start": 27.994,
+          "end": 28.266
+        },
+        {
+          "text": "vast",
+          "start": 28.266,
+          "end": 28.538
+        },
+        {
+          "text": ";",
+          "start": 28.538,
+          "end": 28.81
+        },
+        {
+          "text": "the",
+          "start": 28.81,
+          "end": 29.082
+        },
+        {
+          "text": "wilds",
+          "start": 29.082,
+          "end": 29.354
+        },
+        {
+          "text": "are",
+          "start": 29.354,
+          "end": 29.626
+        },
+        {
+          "text": "boundless",
+          "start": 29.626,
+          "end": 29.898
+        },
+        {
+          "text": ".",
+          "start": 29.898,
+          "end": 30.17
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 30.27,
+      "end": 33.63,
+      "text": "Wind bends the grass low, revealing cattle and sheep.",
+      "singableText": "Wind bends the grass low, revealing cattle and sheep.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Wind",
+          "start": 30.27,
+          "end": 30.575
+        },
+        {
+          "text": "bends",
+          "start": 30.575,
+          "end": 30.881
+        },
+        {
+          "text": "the",
+          "start": 30.881,
+          "end": 31.186
+        },
+        {
+          "text": "grass",
+          "start": 31.186,
+          "end": 31.492
+        },
+        {
+          "text": "low",
+          "start": 31.492,
+          "end": 31.797
+        },
+        {
+          "text": ",",
+          "start": 31.797,
+          "end": 32.103
+        },
+        {
+          "text": "revealing",
+          "start": 32.103,
+          "end": 32.408
+        },
+        {
+          "text": "cattle",
+          "start": 32.408,
+          "end": 32.714
+        },
+        {
+          "text": "and",
+          "start": 32.714,
+          "end": 33.019
+        },
+        {
+          "text": "sheep",
+          "start": 33.019,
+          "end": 33.325
+        },
+        {
+          "text": ".",
+          "start": 33.325,
+          "end": 33.63
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 55.66,
+      "end": 58.7,
+      "text": "The sky is vast; the wilds are boundless.",
+      "singableText": "The sky is vast; the wilds are boundless.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 55.66,
+          "end": 55.964
+        },
+        {
+          "text": "sky",
+          "start": 55.964,
+          "end": 56.268
+        },
+        {
+          "text": "is",
+          "start": 56.268,
+          "end": 56.572
+        },
+        {
+          "text": "vast",
+          "start": 56.572,
+          "end": 56.876
+        },
+        {
+          "text": ";",
+          "start": 56.876,
+          "end": 57.18
+        },
+        {
+          "text": "the",
+          "start": 57.18,
+          "end": 57.484
+        },
+        {
+          "text": "wilds",
+          "start": 57.484,
+          "end": 57.788
+        },
+        {
+          "text": "are",
+          "start": 57.788,
+          "end": 58.092
+        },
+        {
+          "text": "boundless",
+          "start": 58.092,
+          "end": 58.396
+        },
+        {
+          "text": ".",
+          "start": 58.396,
+          "end": 58.7
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 58.72,
+      "end": 65.54,
+      "text": "Wind bends the grass low, revealing cattle and sheep.",
+      "singableText": "Wind bends the grass low, revealing cattle and sheep.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Wind",
+          "start": 58.72,
+          "end": 59.34
+        },
+        {
+          "text": "bends",
+          "start": 59.34,
+          "end": 59.96
+        },
+        {
+          "text": "the",
+          "start": 59.96,
+          "end": 60.58
+        },
+        {
+          "text": "grass",
+          "start": 60.58,
+          "end": 61.2
+        },
+        {
+          "text": "low",
+          "start": 61.2,
+          "end": 61.82
+        },
+        {
+          "text": ",",
+          "start": 61.82,
+          "end": 62.44
+        },
+        {
+          "text": "revealing",
+          "start": 62.44,
+          "end": 63.06
+        },
+        {
+          "text": "cattle",
+          "start": 63.06,
+          "end": 63.68
+        },
+        {
+          "text": "and",
+          "start": 63.68,
+          "end": 64.3
+        },
+        {
+          "text": "sheep",
+          "start": 64.3,
+          "end": 64.92
+        },
+        {
+          "text": ".",
+          "start": 64.92,
+          "end": 65.54
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ACE-Step seed 748143. Timings use large-v3 ASR on the selected vocal. Public Mandarin preserves the original poem wording where the sound is close; the later hook is clearer than the opening couplets."
+  }
+}

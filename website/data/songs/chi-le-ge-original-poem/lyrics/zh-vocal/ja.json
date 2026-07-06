@@ -1,0 +1,750 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "chi-le-ge-original-poem",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.5,
+      "end": 3.1,
+      "text": "敕勒の川は陰山の下に広がる",
+      "singableText": "敕勒の川は陰山の下に広がる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "敕",
+          "start": 0.5,
+          "end": 0.7,
+          "reading": "ちょく"
+        },
+        {
+          "text": "勒",
+          "start": 0.7,
+          "end": 0.9,
+          "reading": "ろく"
+        },
+        {
+          "text": "の",
+          "start": 0.9,
+          "end": 1.1
+        },
+        {
+          "text": "川",
+          "start": 1.1,
+          "end": 1.3,
+          "reading": "かわ"
+        },
+        {
+          "text": "は",
+          "start": 1.3,
+          "end": 1.5
+        },
+        {
+          "text": "陰",
+          "start": 1.5,
+          "end": 1.7,
+          "reading": "いん"
+        },
+        {
+          "text": "山",
+          "start": 1.7,
+          "end": 1.9,
+          "reading": "やま"
+        },
+        {
+          "text": "の",
+          "start": 1.9,
+          "end": 2.1
+        },
+        {
+          "text": "下",
+          "start": 2.1,
+          "end": 2.3,
+          "reading": "した"
+        },
+        {
+          "text": "に",
+          "start": 2.3,
+          "end": 2.5
+        },
+        {
+          "text": "広",
+          "start": 2.5,
+          "end": 2.7,
+          "reading": "こう"
+        },
+        {
+          "text": "が",
+          "start": 2.7,
+          "end": 2.9
+        },
+        {
+          "text": "る",
+          "start": 2.9,
+          "end": 3.1
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.4,
+      "end": 7.56,
+      "text": "空は丸い天幕のように四方の野を覆う",
+      "singableText": "空は丸い天幕のように四方の野を覆う",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "空",
+          "start": 3.4,
+          "end": 3.645,
+          "reading": "そら"
+        },
+        {
+          "text": "は",
+          "start": 3.645,
+          "end": 3.889
+        },
+        {
+          "text": "丸",
+          "start": 3.889,
+          "end": 4.134,
+          "reading": "まる"
+        },
+        {
+          "text": "い",
+          "start": 4.134,
+          "end": 4.379
+        },
+        {
+          "text": "天",
+          "start": 4.379,
+          "end": 4.624,
+          "reading": "てん"
+        },
+        {
+          "text": "幕",
+          "start": 4.624,
+          "end": 4.868,
+          "reading": "まく"
+        },
+        {
+          "text": "の",
+          "start": 4.868,
+          "end": 5.113
+        },
+        {
+          "text": "よ",
+          "start": 5.113,
+          "end": 5.358
+        },
+        {
+          "text": "う",
+          "start": 5.358,
+          "end": 5.602
+        },
+        {
+          "text": "に",
+          "start": 5.602,
+          "end": 5.847
+        },
+        {
+          "text": "四",
+          "start": 5.847,
+          "end": 6.092,
+          "reading": "し"
+        },
+        {
+          "text": "方",
+          "start": 6.092,
+          "end": 6.336,
+          "reading": "ほう"
+        },
+        {
+          "text": "の",
+          "start": 6.336,
+          "end": 6.581
+        },
+        {
+          "text": "野",
+          "start": 6.581,
+          "end": 6.826,
+          "reading": "の"
+        },
+        {
+          "text": "を",
+          "start": 6.826,
+          "end": 7.071
+        },
+        {
+          "text": "覆",
+          "start": 7.071,
+          "end": 7.315,
+          "reading": "ふく"
+        },
+        {
+          "text": "う",
+          "start": 7.315,
+          "end": 7.56
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 14.63,
+      "end": 19.91,
+      "text": "敕勒の川は陰山の下に広がる",
+      "singableText": "敕勒の川は陰山の下に広がる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "敕",
+          "start": 14.63,
+          "end": 15.036,
+          "reading": "ちょく"
+        },
+        {
+          "text": "勒",
+          "start": 15.036,
+          "end": 15.442,
+          "reading": "ろく"
+        },
+        {
+          "text": "の",
+          "start": 15.442,
+          "end": 15.848
+        },
+        {
+          "text": "川",
+          "start": 15.848,
+          "end": 16.255,
+          "reading": "かわ"
+        },
+        {
+          "text": "は",
+          "start": 16.255,
+          "end": 16.661
+        },
+        {
+          "text": "陰",
+          "start": 16.661,
+          "end": 17.067,
+          "reading": "いん"
+        },
+        {
+          "text": "山",
+          "start": 17.067,
+          "end": 17.473,
+          "reading": "やま"
+        },
+        {
+          "text": "の",
+          "start": 17.473,
+          "end": 17.879
+        },
+        {
+          "text": "下",
+          "start": 17.879,
+          "end": 18.285,
+          "reading": "した"
+        },
+        {
+          "text": "に",
+          "start": 18.285,
+          "end": 18.692
+        },
+        {
+          "text": "広",
+          "start": 18.692,
+          "end": 19.098,
+          "reading": "こう"
+        },
+        {
+          "text": "が",
+          "start": 19.098,
+          "end": 19.504
+        },
+        {
+          "text": "る",
+          "start": 19.504,
+          "end": 19.91
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 21.37,
+      "end": 26.83,
+      "text": "空は丸い天幕のように四方の野を覆う",
+      "singableText": "空は丸い天幕のように四方の野を覆う",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "空",
+          "start": 21.37,
+          "end": 21.691,
+          "reading": "そら"
+        },
+        {
+          "text": "は",
+          "start": 21.691,
+          "end": 22.012
+        },
+        {
+          "text": "丸",
+          "start": 22.012,
+          "end": 22.334,
+          "reading": "まる"
+        },
+        {
+          "text": "い",
+          "start": 22.334,
+          "end": 22.655
+        },
+        {
+          "text": "天",
+          "start": 22.655,
+          "end": 22.976,
+          "reading": "てん"
+        },
+        {
+          "text": "幕",
+          "start": 22.976,
+          "end": 23.297,
+          "reading": "まく"
+        },
+        {
+          "text": "の",
+          "start": 23.297,
+          "end": 23.618
+        },
+        {
+          "text": "よ",
+          "start": 23.618,
+          "end": 23.939
+        },
+        {
+          "text": "う",
+          "start": 23.939,
+          "end": 24.261
+        },
+        {
+          "text": "に",
+          "start": 24.261,
+          "end": 24.582
+        },
+        {
+          "text": "四",
+          "start": 24.582,
+          "end": 24.903,
+          "reading": "し"
+        },
+        {
+          "text": "方",
+          "start": 24.903,
+          "end": 25.224,
+          "reading": "ほう"
+        },
+        {
+          "text": "の",
+          "start": 25.224,
+          "end": 25.545
+        },
+        {
+          "text": "野",
+          "start": 25.545,
+          "end": 25.866,
+          "reading": "の"
+        },
+        {
+          "text": "を",
+          "start": 25.866,
+          "end": 26.188
+        },
+        {
+          "text": "覆",
+          "start": 26.188,
+          "end": 26.509,
+          "reading": "ふく"
+        },
+        {
+          "text": "う",
+          "start": 26.509,
+          "end": 26.83
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 27.45,
+      "end": 30.17,
+      "text": "空は蒼く、野は茫々としている",
+      "singableText": "空は蒼く、野は茫々としている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "空",
+          "start": 27.45,
+          "end": 27.644,
+          "reading": "そら"
+        },
+        {
+          "text": "は",
+          "start": 27.644,
+          "end": 27.839
+        },
+        {
+          "text": "蒼",
+          "start": 27.839,
+          "end": 28.033,
+          "reading": "あお"
+        },
+        {
+          "text": "く",
+          "start": 28.033,
+          "end": 28.227
+        },
+        {
+          "text": "、",
+          "start": 28.227,
+          "end": 28.421
+        },
+        {
+          "text": "野",
+          "start": 28.421,
+          "end": 28.616,
+          "reading": "の"
+        },
+        {
+          "text": "は",
+          "start": 28.616,
+          "end": 28.81
+        },
+        {
+          "text": "茫",
+          "start": 28.81,
+          "end": 29.004,
+          "reading": "ぼう"
+        },
+        {
+          "text": "々",
+          "start": 29.004,
+          "end": 29.199
+        },
+        {
+          "text": "と",
+          "start": 29.199,
+          "end": 29.393
+        },
+        {
+          "text": "し",
+          "start": 29.393,
+          "end": 29.587
+        },
+        {
+          "text": "て",
+          "start": 29.587,
+          "end": 29.781
+        },
+        {
+          "text": "い",
+          "start": 29.781,
+          "end": 29.976
+        },
+        {
+          "text": "る",
+          "start": 29.976,
+          "end": 30.17
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 30.27,
+      "end": 33.63,
+      "text": "風が草を低く吹き、牛と羊が見える",
+      "singableText": "風が草を低く吹き、牛と羊が見える",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 30.27,
+          "end": 30.48,
+          "reading": "かぜ"
+        },
+        {
+          "text": "が",
+          "start": 30.48,
+          "end": 30.69
+        },
+        {
+          "text": "草",
+          "start": 30.69,
+          "end": 30.9,
+          "reading": "くさ"
+        },
+        {
+          "text": "を",
+          "start": 30.9,
+          "end": 31.11
+        },
+        {
+          "text": "低",
+          "start": 31.11,
+          "end": 31.32,
+          "reading": "てい"
+        },
+        {
+          "text": "く",
+          "start": 31.32,
+          "end": 31.53
+        },
+        {
+          "text": "吹",
+          "start": 31.53,
+          "end": 31.74,
+          "reading": "すい"
+        },
+        {
+          "text": "き",
+          "start": 31.74,
+          "end": 31.95
+        },
+        {
+          "text": "、",
+          "start": 31.95,
+          "end": 32.16
+        },
+        {
+          "text": "牛",
+          "start": 32.16,
+          "end": 32.37,
+          "reading": "うし"
+        },
+        {
+          "text": "と",
+          "start": 32.37,
+          "end": 32.58
+        },
+        {
+          "text": "羊",
+          "start": 32.58,
+          "end": 32.79,
+          "reading": "ひつじ"
+        },
+        {
+          "text": "が",
+          "start": 32.79,
+          "end": 33.0
+        },
+        {
+          "text": "見",
+          "start": 33.0,
+          "end": 33.21,
+          "reading": "けん"
+        },
+        {
+          "text": "え",
+          "start": 33.21,
+          "end": 33.42
+        },
+        {
+          "text": "る",
+          "start": 33.42,
+          "end": 33.63
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 55.66,
+      "end": 58.7,
+      "text": "空は蒼く、野は茫々としている",
+      "singableText": "空は蒼く、野は茫々としている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "空",
+          "start": 55.66,
+          "end": 55.877,
+          "reading": "そら"
+        },
+        {
+          "text": "は",
+          "start": 55.877,
+          "end": 56.094
+        },
+        {
+          "text": "蒼",
+          "start": 56.094,
+          "end": 56.311,
+          "reading": "あお"
+        },
+        {
+          "text": "く",
+          "start": 56.311,
+          "end": 56.529
+        },
+        {
+          "text": "、",
+          "start": 56.529,
+          "end": 56.746
+        },
+        {
+          "text": "野",
+          "start": 56.746,
+          "end": 56.963,
+          "reading": "の"
+        },
+        {
+          "text": "は",
+          "start": 56.963,
+          "end": 57.18
+        },
+        {
+          "text": "茫",
+          "start": 57.18,
+          "end": 57.397,
+          "reading": "ぼう"
+        },
+        {
+          "text": "々",
+          "start": 57.397,
+          "end": 57.614
+        },
+        {
+          "text": "と",
+          "start": 57.614,
+          "end": 57.831
+        },
+        {
+          "text": "し",
+          "start": 57.831,
+          "end": 58.049
+        },
+        {
+          "text": "て",
+          "start": 58.049,
+          "end": 58.266
+        },
+        {
+          "text": "い",
+          "start": 58.266,
+          "end": 58.483
+        },
+        {
+          "text": "る",
+          "start": 58.483,
+          "end": 58.7
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 58.72,
+      "end": 65.54,
+      "text": "風が草を低く吹き、牛と羊が見える",
+      "singableText": "風が草を低く吹き、牛と羊が見える",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "風",
+          "start": 58.72,
+          "end": 59.146,
+          "reading": "かぜ"
+        },
+        {
+          "text": "が",
+          "start": 59.146,
+          "end": 59.572
+        },
+        {
+          "text": "草",
+          "start": 59.572,
+          "end": 59.999,
+          "reading": "くさ"
+        },
+        {
+          "text": "を",
+          "start": 59.999,
+          "end": 60.425
+        },
+        {
+          "text": "低",
+          "start": 60.425,
+          "end": 60.851,
+          "reading": "てい"
+        },
+        {
+          "text": "く",
+          "start": 60.851,
+          "end": 61.278
+        },
+        {
+          "text": "吹",
+          "start": 61.278,
+          "end": 61.704,
+          "reading": "すい"
+        },
+        {
+          "text": "き",
+          "start": 61.704,
+          "end": 62.13
+        },
+        {
+          "text": "、",
+          "start": 62.13,
+          "end": 62.556
+        },
+        {
+          "text": "牛",
+          "start": 62.556,
+          "end": 62.983,
+          "reading": "うし"
+        },
+        {
+          "text": "と",
+          "start": 62.983,
+          "end": 63.409
+        },
+        {
+          "text": "羊",
+          "start": 63.409,
+          "end": 63.835,
+          "reading": "ひつじ"
+        },
+        {
+          "text": "が",
+          "start": 63.835,
+          "end": 64.261
+        },
+        {
+          "text": "見",
+          "start": 64.261,
+          "end": 64.688,
+          "reading": "けん"
+        },
+        {
+          "text": "え",
+          "start": 64.688,
+          "end": 65.114
+        },
+        {
+          "text": "る",
+          "start": 65.114,
+          "end": 65.54
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ACE-Step seed 748143. Timings use large-v3 ASR on the selected vocal. Public Mandarin preserves the original poem wording where the sound is close; the later hook is clearer than the opening couplets."
+  }
+}

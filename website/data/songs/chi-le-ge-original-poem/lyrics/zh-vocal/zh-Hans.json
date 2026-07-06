@@ -1,0 +1,462 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "chi-le-ge-original-poem",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.5,
+      "end": 3.1,
+      "text": "敕勒川，阴山下",
+      "singableText": "敕勒川，阴山下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "敕",
+          "start": 0.5,
+          "end": 0.871,
+          "pinyin": "chi4"
+        },
+        {
+          "text": "勒",
+          "start": 0.871,
+          "end": 1.243,
+          "pinyin": "le4"
+        },
+        {
+          "text": "川",
+          "start": 1.243,
+          "end": 1.614,
+          "pinyin": "chuan1"
+        },
+        {
+          "text": "，",
+          "start": 1.614,
+          "end": 1.986
+        },
+        {
+          "text": "阴",
+          "start": 1.986,
+          "end": 2.357,
+          "pinyin": "yin1"
+        },
+        {
+          "text": "山",
+          "start": 2.357,
+          "end": 2.729,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "下",
+          "start": 2.729,
+          "end": 3.1,
+          "pinyin": "xia4"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.4,
+      "end": 7.56,
+      "text": "天似穹庐，笼盖四野",
+      "singableText": "天似穹庐，笼盖四野",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "天",
+          "start": 3.4,
+          "end": 3.862,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "似",
+          "start": 3.862,
+          "end": 4.324,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "穹",
+          "start": 4.324,
+          "end": 4.787,
+          "pinyin": "qiong2"
+        },
+        {
+          "text": "庐",
+          "start": 4.787,
+          "end": 5.249,
+          "pinyin": "lu2"
+        },
+        {
+          "text": "，",
+          "start": 5.249,
+          "end": 5.711
+        },
+        {
+          "text": "笼",
+          "start": 5.711,
+          "end": 6.173,
+          "pinyin": "long3"
+        },
+        {
+          "text": "盖",
+          "start": 6.173,
+          "end": 6.636,
+          "pinyin": "gai4"
+        },
+        {
+          "text": "四",
+          "start": 6.636,
+          "end": 7.098,
+          "pinyin": "si4"
+        },
+        {
+          "text": "野",
+          "start": 7.098,
+          "end": 7.56,
+          "pinyin": "ye3"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 14.63,
+      "end": 19.91,
+      "text": "敕勒川，阴山下",
+      "singableText": "敕勒川，阴山下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "敕",
+          "start": 14.63,
+          "end": 15.384,
+          "pinyin": "chi4"
+        },
+        {
+          "text": "勒",
+          "start": 15.384,
+          "end": 16.139,
+          "pinyin": "le4"
+        },
+        {
+          "text": "川",
+          "start": 16.139,
+          "end": 16.893,
+          "pinyin": "chuan1"
+        },
+        {
+          "text": "，",
+          "start": 16.893,
+          "end": 17.647
+        },
+        {
+          "text": "阴",
+          "start": 17.647,
+          "end": 18.401,
+          "pinyin": "yin1"
+        },
+        {
+          "text": "山",
+          "start": 18.401,
+          "end": 19.156,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "下",
+          "start": 19.156,
+          "end": 19.91,
+          "pinyin": "xia4"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 21.37,
+      "end": 26.83,
+      "text": "天似穹庐，笼盖四野",
+      "singableText": "天似穹庐，笼盖四野",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "天",
+          "start": 21.37,
+          "end": 21.977,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "似",
+          "start": 21.977,
+          "end": 22.583,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "穹",
+          "start": 22.583,
+          "end": 23.19,
+          "pinyin": "qiong2"
+        },
+        {
+          "text": "庐",
+          "start": 23.19,
+          "end": 23.797,
+          "pinyin": "lu2"
+        },
+        {
+          "text": "，",
+          "start": 23.797,
+          "end": 24.403
+        },
+        {
+          "text": "笼",
+          "start": 24.403,
+          "end": 25.01,
+          "pinyin": "long3"
+        },
+        {
+          "text": "盖",
+          "start": 25.01,
+          "end": 25.617,
+          "pinyin": "gai4"
+        },
+        {
+          "text": "四",
+          "start": 25.617,
+          "end": 26.223,
+          "pinyin": "si4"
+        },
+        {
+          "text": "野",
+          "start": 26.223,
+          "end": 26.83,
+          "pinyin": "ye3"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 27.45,
+      "end": 30.17,
+      "text": "天苍苍，野茫茫",
+      "singableText": "天苍苍，野茫茫",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "天",
+          "start": 27.45,
+          "end": 27.839,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "苍",
+          "start": 27.839,
+          "end": 28.227,
+          "pinyin": "cang1"
+        },
+        {
+          "text": "苍",
+          "start": 28.227,
+          "end": 28.616,
+          "pinyin": "cang1"
+        },
+        {
+          "text": "，",
+          "start": 28.616,
+          "end": 29.004
+        },
+        {
+          "text": "野",
+          "start": 29.004,
+          "end": 29.393,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "茫",
+          "start": 29.393,
+          "end": 29.781,
+          "pinyin": "mang2"
+        },
+        {
+          "text": "茫",
+          "start": 29.781,
+          "end": 30.17,
+          "pinyin": "mang2"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 30.27,
+      "end": 33.63,
+      "text": "风吹草低，见牛羊",
+      "singableText": "风吹草低，见牛羊",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 30.27,
+          "end": 30.69,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "吹",
+          "start": 30.69,
+          "end": 31.11,
+          "pinyin": "chui1"
+        },
+        {
+          "text": "草",
+          "start": 31.11,
+          "end": 31.53,
+          "pinyin": "cao3"
+        },
+        {
+          "text": "低",
+          "start": 31.53,
+          "end": 31.95,
+          "pinyin": "di1"
+        },
+        {
+          "text": "，",
+          "start": 31.95,
+          "end": 32.37
+        },
+        {
+          "text": "见",
+          "start": 32.37,
+          "end": 32.79,
+          "pinyin": "xian4"
+        },
+        {
+          "text": "牛",
+          "start": 32.79,
+          "end": 33.21,
+          "pinyin": "niu2"
+        },
+        {
+          "text": "羊",
+          "start": 33.21,
+          "end": 33.63,
+          "pinyin": "yang2"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 55.66,
+      "end": 58.7,
+      "text": "天苍苍，野茫茫",
+      "singableText": "天苍苍，野茫茫",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "天",
+          "start": 55.66,
+          "end": 56.094,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "苍",
+          "start": 56.094,
+          "end": 56.529,
+          "pinyin": "cang1"
+        },
+        {
+          "text": "苍",
+          "start": 56.529,
+          "end": 56.963,
+          "pinyin": "cang1"
+        },
+        {
+          "text": "，",
+          "start": 56.963,
+          "end": 57.397
+        },
+        {
+          "text": "野",
+          "start": 57.397,
+          "end": 57.831,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "茫",
+          "start": 57.831,
+          "end": 58.266,
+          "pinyin": "mang2"
+        },
+        {
+          "text": "茫",
+          "start": 58.266,
+          "end": 58.7,
+          "pinyin": "mang2"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 58.72,
+      "end": 65.54,
+      "text": "风吹草低，见牛羊",
+      "singableText": "风吹草低，见牛羊",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 58.72,
+          "end": 59.572,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "吹",
+          "start": 59.572,
+          "end": 60.425,
+          "pinyin": "chui1"
+        },
+        {
+          "text": "草",
+          "start": 60.425,
+          "end": 61.278,
+          "pinyin": "cao3"
+        },
+        {
+          "text": "低",
+          "start": 61.278,
+          "end": 62.13,
+          "pinyin": "di1"
+        },
+        {
+          "text": "，",
+          "start": 62.13,
+          "end": 62.983
+        },
+        {
+          "text": "见",
+          "start": 62.983,
+          "end": 63.835,
+          "pinyin": "xian4"
+        },
+        {
+          "text": "牛",
+          "start": 63.835,
+          "end": 64.688,
+          "pinyin": "niu2"
+        },
+        {
+          "text": "羊",
+          "start": 64.688,
+          "end": 65.54,
+          "pinyin": "yang2"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "ACE-Step seed 748143. Timings use large-v3 ASR on the selected vocal. Public Mandarin preserves the original poem wording where the sound is close; the later hook is clearer than the opening couplets."
+  }
+}
