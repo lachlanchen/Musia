@@ -21,8 +21,9 @@ Date: 2026-07-06
 The balanced and compact ACE sweeps had healthy audio levels but poor lyric
 recovery beyond the opening. The selected hook-first render recovered a usable
 song structure. Website lyrics are corrected against the selected render's
-large-v3 ASR and preserve planned words only when they are sound-close and more
-musical.
+large-v3 ASR plus a medium/large-v3 no-VAD correction packet on the full mix
+and separated vocal stem. Planned words are preserved only when they are
+sound-close and more musical.
 
 Important corrections:
 
@@ -31,6 +32,8 @@ Important corrections:
 - `角度还不肯散` is kept over ASR `脚都还不肯散`.
 - `傅立叶变换 / 拆开了思念` is kept over a garbled ASR bridge because the
   syllable shape is close and the math image is central.
+- The opening `微微，微微` and later `不要分开` are restored because no-VAD
+  ASR showed normal VAD had swallowed these soft/repeated hook phrases.
 - Unsupported planned lines such as `微积分那么难` and `二重积分好奇怪` are
   omitted from the public active lyric track for this selected audio.
 

@@ -136,27 +136,33 @@ def make_line(line_id: str, start: float, end: float, text: str, code: str) -> d
 
 def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
     # Timings come from the selected ACE XL Turbo seed 760622 large-v3 ASR on
-    # the Demucs-separated vocal. Text keeps the intended lyric when ASR is
-    # sound-close and the planned word is stronger: 微微琐事 over 微微松弛,
-    # 转 over 穿, 角度 over 脚都, and 傅立叶变换 over the garbled ASR phrase.
+    # the Demucs-separated vocal plus the selected-audio/vocal-stem no-VAD
+    # correction packet. Text keeps the intended lyric when ASR is sound-close
+    # and the planned word is stronger: 微微琐事 over 微微松弛, 转 over 穿,
+    # 角度 over 脚都, and 傅立叶变换 over the garbled ASR phrase. No-VAD ASR
+    # restored the soft opening 微微 hook and the later 不要分开 line that
+    # normal VAD swallowed.
     return [
-        ("l01", 16.02, 19.96, "不要分开，我的心里你还在", "Don't leave; you are still in my heart", "離れないで、心にはまだ君がいる"),
-        ("l02", 20.32, 23.10, "微微琐事，落进心海", "Tiny little things fall into the sea of the heart", "小さな出来事が心の海へ落ちる"),
-        ("l03", 23.10, 26.26, "一点一点，把我们推开", "Bit by bit, they push us apart", "少しずつ、僕らを遠ざける"),
-        ("l04", 29.02, 32.18, "你说爱还在，只是太疲惫", "You say love is still here, just too tired", "愛はまだある、ただ疲れすぎたと君は言う"),
-        ("l05", 32.18, 35.10, "我说别沉默，抱紧我一回", "I say don't go silent; hold me once", "黙らないで、もう一度抱きしめてと言う"),
-        ("l06", 36.52, 38.92, "会不会好点", "Would it be a little better?", "少しはよくなるかな"),
-        ("l07", 40.94, 42.02, "微微，微微", "Tiny by tiny", "少しずつ、少しずつ"),
-        ("l08", 42.96, 45.32, "我绕着你转", "I keep orbiting you", "君のまわりを回り続ける"),
-        ("l09", 45.32, 48.30, "半径越来越远", "The radius grows farther and farther", "半径はどんどん遠くなる"),
-        ("l10", 48.30, 51.18, "角度还不肯散", "The angle still refuses to scatter", "角度はまだ離れようとしない"),
-        ("l11", 51.18, 52.70, "傅立叶变换", "A Fourier transform", "フーリエ変換"),
-        ("l12", 52.70, 53.44, "拆开了思念", "breaks longing apart", "想いをほどいてしまう"),
-        ("l13", 53.44, 57.02, "每一个频率，都喊你一遍", "Every frequency calls your name once", "すべての周波数が君を一度呼ぶ"),
-        ("l14", 57.02, 57.92, "微微，微微", "Tiny by tiny", "少しずつ、少しずつ"),
-        ("l15", 61.78, 67.29, "最小的痛，也会成海", "Even the smallest pain can become a sea", "いちばん小さな痛みも海になる"),
-        ("l16", 69.69, 74.23, "你说爱还在，可是想分开", "You say love is still here, but you want to leave", "愛はまだある、でも離れたいと君は言う"),
-        ("l17", 75.17, 79.47, "我的心里，你还在", "In my heart, you are still here", "僕の心には、まだ君がいる"),
+        ("l01", 13.04, 15.05, "微微，微微", "Tiny by tiny", "少しずつ、少しずつ"),
+        ("l02", 15.05, 17.26, "不要分开", "Don't leave", "離れないで"),
+        ("l03", 17.80, 19.96, "我的心里，你还在", "In my heart, you are still here", "僕の心には、まだ君がいる"),
+        ("l04", 19.96, 23.12, "微微琐事，落进心海", "Tiny little things fall into the sea of the heart", "小さな出来事が心の海へ落ちる"),
+        ("l05", 23.12, 26.32, "一点一点，把我们推开", "Bit by bit, they push us apart", "少しずつ、僕らを遠ざける"),
+        ("l06", 28.64, 32.20, "你说爱还在，只是太疲惫", "You say love is still here, just too tired", "愛はまだある、ただ疲れすぎたと君は言う"),
+        ("l07", 32.20, 35.10, "我说别沉默，抱紧我一回", "I say don't go silent; hold me once", "黙らないで、もう一度抱きしめてと言う"),
+        ("l08", 35.10, 38.98, "会不会好点", "Would it be a little better?", "少しはよくなるかな"),
+        ("l09", 40.58, 42.00, "微微，微微", "Tiny by tiny", "少しずつ、少しずつ"),
+        ("l10", 42.96, 45.30, "我绕着你转", "I keep orbiting you", "君のまわりを回り続ける"),
+        ("l11", 45.30, 48.28, "半径越来越远", "The radius grows farther and farther", "半径はどんどん遠くなる"),
+        ("l12", 48.28, 51.18, "角度还不肯散", "The angle still refuses to scatter", "角度はまだ離れようとしない"),
+        ("l13", 51.18, 52.66, "傅立叶变换", "A Fourier transform", "フーリエ変換"),
+        ("l14", 52.66, 54.70, "拆开了思念", "breaks longing apart", "想いをほどいてしまう"),
+        ("l15", 54.70, 56.94, "每一个频率，都喊你一遍", "Every frequency calls your name once", "すべての周波数が君を一度呼ぶ"),
+        ("l16", 56.94, 58.12, "微微，微微", "Tiny by tiny", "少しずつ、少しずつ"),
+        ("l17", 59.14, 61.50, "不要分开", "Don't leave", "離れないで"),
+        ("l18", 61.50, 67.42, "最小的痛，也会成海", "Even the smallest pain can become a sea", "いちばん小さな痛みも海になる"),
+        ("l19", 69.16, 74.24, "你说爱还在，可是想分开", "You say love is still here, but you want to leave", "愛はまだある、でも離れたいと君は言う"),
+        ("l20", 74.24, 79.50, "我的心里，你还在", "In my heart, you are still here", "僕の心には、まだ君がいる"),
     ]
 
 
@@ -437,7 +443,7 @@ def write_note() -> None:
                 "",
                 "## Lyric Correction",
                 "",
-                "The balanced and compact ACE sweeps had healthy levels but weak lyric recovery beyond the opening. The selected hook-first render recovers the chorus, tiny-accumulation verse, math bridge, and final breakup line. Public lyrics are corrected against large-v3 ASR from the selected render and preserve planned words only when the sound is close and the planned word is more musical.",
+                "The balanced and compact ACE sweeps had healthy levels but weak lyric recovery beyond the opening. The selected hook-first render recovers the chorus, tiny-accumulation verse, math bridge, and final breakup line. Public lyrics are corrected against large-v3 ASR plus a medium/large-v3 no-VAD correction packet from the selected render and separated vocal. Planned words are preserved only when the sound is close and the planned word is more musical.",
                 "",
                 "Main public lyric decisions:",
                 "",
@@ -445,6 +451,7 @@ def write_note() -> None:
                 "- Keep `我绕着你转` over ASR `我绕着你穿`.",
                 "- Keep `角度还不肯散` over ASR `脚都还不肯散`.",
                 "- Publish `傅立叶变换 / 拆开了思念` over the garbled ASR bridge because the syllable structure and sound are close enough and the intended math image is clearer.",
+                "- Add the opening `微微，微微` and the later `不要分开` from the no-VAD correction packet. Normal VAD ASR swallowed these soft/repeated hook phrases.",
                 "- Omit unsupported planned lines such as `微积分那么难` and `二重积分好奇怪` from the public active track because this selected render did not clearly sing them.",
                 "",
             ]
