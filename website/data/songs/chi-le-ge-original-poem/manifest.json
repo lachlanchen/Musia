@@ -550,25 +550,25 @@
         "id": "l01",
         "start": 0.5,
         "end": 3.1,
-        "text": "敕勒川，阴山下"
+        "text": "天擦穿云霞"
       },
       {
         "id": "l02",
         "start": 3.4,
         "end": 7.56,
-        "text": "天似穹庐，笼盖四野"
+        "text": "天似秋露，盖丝颜"
       },
       {
         "id": "l03",
         "start": 14.63,
         "end": 19.91,
-        "text": "敕勒川，阴山下"
+        "text": "坠落船，云山下"
       },
       {
         "id": "l04",
         "start": 21.37,
         "end": 26.83,
-        "text": "天似穹庐，笼盖四野"
+        "text": "天似秋露，露盖丝颜"
       },
       {
         "id": "l05",
@@ -623,7 +623,7 @@
       "selectedMediumAsrOverlap": 0.2835820895522388,
       "gate": "review-original-poem"
     },
-    "lyricCorrection": "Corrected 2026-07-06 from large-v3 ASR and the original 敕勒歌 source text. The opening couplets are partially garbled but sound-close enough to preserve source text; the later 天苍苍/风吹草低 hook is clearer. 见 is published with pinyin xian4.",
+    "lyricCorrection": "Corrected 2026-07-06 from large-v3 ASR and the original 敕勒歌 source text. The opening couplets are now published as ASR-close text because the render diverges from the source; the later 天苍苍/风吹草低 hook is clearer. 见 is published with pinyin xian4 and 野 with pinyin ya3.",
     "pronunciationGuide": "data/creative_projects/chi-le-ge-original-poem-20260706/source/pronunciation-guide.md",
     "cover": {
       "src": "assets/covers/chi-le-ge-original-poem-16x9.png",

@@ -14,8 +14,9 @@ Generated for Musia on 2026-07-06.
 ## Pronunciation Controls
 
 - Public `敕勒川`; private control `赤乐川` to encourage `chi4 le4 chuan1`.
-- Public `笼盖四野`; private control `拢盖四野` to encourage `long3 gai4 si4 ye3`.
+- Public/source `笼盖四野`; private control `拢盖四野` to encourage `long3 gai4 si4 ya3`.
 - Public `见牛羊`; private control `现牛羊`, restored publicly with pinyin `xian4 niu2 yang2`.
+- `野` is annotated as `ya3` in the public lyric tracks.
 
 ## Selected Render
 
@@ -27,4 +28,4 @@ Generated for Musia on 2026-07-06.
 
 ## Audit
 
-The selected render was chosen from 18 candidates. Medium-ASR overlap was highest for seed `748143` at `0.2836`. Large-v3 ASR confirms the later hook `天苍苍，野茫茫 / 风吹草低，见牛羊` is the clearest part. The opening couplets are sound-close but partly garbled, so the website note documents the limitation instead of treating the render as a perfect exact poem recitation.
+The selected render was chosen from 18 candidates. Medium-ASR overlap was highest for seed `748143` at `0.2836`. Large-v3 ASR confirms the later hook `天苍苍，野茫茫 / 风吹草低，见牛羊` is the clearest part. On 2026-07-07 the opening couplets were changed from source-restored text to ASR-close text because the audio diverges too much from the poem there. This item should not be treated as a perfect exact poem recitation.

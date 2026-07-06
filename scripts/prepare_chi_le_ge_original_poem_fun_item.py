@@ -75,8 +75,8 @@ def zh_pinyin_for(line_text: str, char: str) -> str:
         ("穹庐", "穹"): "qiong2",
         ("穹庐", "庐"): "lu2",
         ("笼盖", "笼"): "long3",
-        ("四野", "野"): "ye3",
-        ("野茫茫", "野"): "ye3",
+        ("四野", "野"): "ya3",
+        ("野茫茫", "野"): "ya3",
         ("见牛羊", "见"): "xian4",
     }
     for (needle, target), reading in overrides.items():
@@ -144,41 +144,41 @@ def make_line(line_id: str, start: float, end: float, text: str, code: str) -> d
 
 def corrected_rows() -> list[tuple[str, float, float, str, str, str]]:
     # Timings come from large-v3 ASR on the selected seed 748143 render.
-    # Public Chinese preserves source poem text where the generated sound is
-    # close. The first two couplets are less clear than the later hook, so this
-    # item is named 原文版 rather than claimed as a perfect exact-recitation.
+    # The opening couplets diverged from the source poem, so the public active
+    # vocal lyric uses ASR-close text there. The clearer later hook preserves
+    # the original poem wording, with 野 annotated as ya3 per user correction.
     return [
         (
             "l01",
             0.50,
             3.10,
-            "敕勒川，阴山下",
-            "The Chile plain lies beneath Yinshan Mountain.",
-            "敕勒の川は陰山の下に広がる",
+            "天擦穿云霞",
+            "The sky brushes through cloud and rosy haze.",
+            "空が雲霞をかすめて抜ける",
         ),
         (
             "l02",
             3.40,
             7.56,
-            "天似穹庐，笼盖四野",
-            "The sky is like a round felt tent, covering the four fields.",
-            "空は丸い天幕のように四方の野を覆う",
+            "天似秋露，盖丝颜",
+            "The sky seems like autumn dew, veiling a silk-bright color.",
+            "空は秋の露のように、絹めいた色を覆う",
         ),
         (
             "l03",
             14.63,
             19.91,
-            "敕勒川，阴山下",
-            "The Chile plain lies beneath Yinshan Mountain.",
-            "敕勒の川は陰山の下に広がる",
+            "坠落船，云山下",
+            "A falling boat under clouded mountains.",
+            "落ちゆく舟が雲の山の下にある",
         ),
         (
             "l04",
             21.37,
             26.83,
-            "天似穹庐，笼盖四野",
-            "The sky is like a round felt tent, covering the four fields.",
-            "空は丸い天幕のように四方の野を覆う",
+            "天似秋露，露盖丝颜",
+            "The sky seems like autumn dew; dew veils a silk-bright color.",
+            "空は秋の露のように、露が絹めいた色を覆う",
         ),
         (
             "l05",
@@ -354,8 +354,8 @@ def write_media_item() -> None:
             },
             "lyricCorrection": (
                 "Corrected 2026-07-06 from large-v3 ASR and the original 敕勒歌 source text. "
-                "The opening couplets are partially garbled but sound-close enough to preserve source text; "
-                "the later 天苍苍/风吹草低 hook is clearer. 见 is published with pinyin xian4."
+                "The opening couplets are now published as ASR-close text because the render diverges from the source; "
+                "the later 天苍苍/风吹草低 hook is clearer. 见 is published with pinyin xian4 and 野 with pinyin ya3."
             ),
             "pronunciationGuide": str((PROJECT / "source/pronunciation-guide.md").relative_to(ROOT)),
             "cover": {
@@ -414,9 +414,10 @@ def write_project_notes() -> None:
                 "",
                 "Lyric correction policy:",
                 "",
-                "- Public text restores original poem wording when sound-close.",
+                "- Opening couplets use ASR-close text because the render diverged from the source.",
                 "- `见牛羊` is published with pinyin `xian4 niu2 yang2`.",
-                "- The opening couplets remain imperfect; the later hook is clearer.",
+                "- `野` is published with pinyin `ya3` per the corrected reading.",
+                "- The later hook remains the clearest source-poem section.",
                 "",
             ]
         ),
@@ -443,8 +444,9 @@ def write_project_notes() -> None:
                 "## Pronunciation Controls",
                 "",
                 "- Public `敕勒川`; private control `赤乐川` to encourage `chi4 le4 chuan1`.",
-                "- Public `笼盖四野`; private control `拢盖四野` to encourage `long3 gai4 si4 ye3`.",
+                "- Public/source `笼盖四野`; private control `拢盖四野` to encourage `long3 gai4 si4 ya3`.",
                 "- Public `见牛羊`; private control `现牛羊`, restored publicly with pinyin `xian4 niu2 yang2`.",
+                "- `野` is annotated as `ya3` in the public lyric tracks.",
                 "",
                 "## Selected Render",
                 "",
@@ -456,7 +458,7 @@ def write_project_notes() -> None:
                 "",
                 "## Audit",
                 "",
-                "The selected render was chosen from 18 candidates. Medium-ASR overlap was highest for seed `748143` at `0.2836`. Large-v3 ASR confirms the later hook `天苍苍，野茫茫 / 风吹草低，见牛羊` is the clearest part. The opening couplets are sound-close but partly garbled, so the website note documents the limitation instead of treating the render as a perfect exact poem recitation.",
+                "The selected render was chosen from 18 candidates. Medium-ASR overlap was highest for seed `748143` at `0.2836`. Large-v3 ASR confirms the later hook `天苍苍，野茫茫 / 风吹草低，见牛羊` is the clearest part. On 2026-07-07 the opening couplets were changed from source-restored text to ASR-close text because the audio diverges too much from the poem there. This item should not be treated as a perfect exact poem recitation.",
                 "",
             ]
         ),
