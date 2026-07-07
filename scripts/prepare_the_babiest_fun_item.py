@@ -157,40 +157,46 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str]]:
 
     The model follows the opening, verse, pre-chorus, and first chorus well,
     then ends before the planned bridge/final chorus. The public track omits
-    unsung planned lines. Sound-close intended forms are preserved for phrases
-    such as `Wo shi baby`, `tiny tonight`, `Man man bao jin wo`, and
-    `Chiisana heart`; clear model-language changes are published as sung.
+    unsung planned lines.
+
+    The active `mul` layer is the performance layer, not an English gloss:
+    English lines stay English, Mandarin lines stay pinyin, and Japanese lines
+    stay romaji. ASR English guesses such as "I want to cry a little" are used
+    as evidence for meaning/timing, but are restored to `Chotto dake nakitai
+    na` in the mixed line because that was the intended Japanese performance
+    phrase and is sound-close. Clear model-language changes are still published
+    as sung.
     """
 
     return [
         ("l01", 0.27, 2.31, "Tell a secret", "Tell a secret", "秘密を教えるね", "告诉你一个秘密"),
-        ("l02", 2.31, 5.49, "I am a baby", "I am a baby", "私はベイビー", "我是 baby"),
-        ("l03", 5.49, 8.49, "Wo shi baby", "I am a baby", "私はベイビー", "我是 baby"),
-        ("l04", 8.49, 10.77, "Call me baby", "Call me baby", "ベイビーって呼んで", "叫我 baby"),
+        ("l02", 2.31, 5.49, "I am a baby", "I am a baby", "私はベイビー", "我是宝宝"),
+        ("l03", 5.49, 8.49, "Wo shi baby", "I am a baby", "私はベイビー", "我是宝宝"),
+        ("l04", 8.49, 10.77, "Call me baby", "Call me baby", "ベイビーって呼んで", "叫我宝贝"),
         ("l05", 10.77, 15.93, "I try to be brave, but I am tiny tonight", "I try to be brave, but I am tiny tonight", "強がるけれど 今夜は小さい私", "我努力勇敢，可今晚我很小很小"),
         ("l06", 15.93, 18.45, "Man man bao jin wo", "Hold me slowly and close", "ゆっくり強く抱きしめて", "慢慢抱紧我"),
         ("l07", 18.45, 20.97, "Say it is all right", "Say it is all right", "大丈夫だと言って", "告诉我没关系"),
         ("l08", 20.97, 25.35, "I hide in your light", "I hide in your light", "あなたの光に隠れる", "我躲进你的光里"),
-        ("l09", 25.35, 27.15, "I want to cry a little", "I want to cry a little", "ちょっとだけ泣きたい", "我有点想哭"),
-        ("l10", 27.15, 31.11, "I want to cry a little", "I want to cry a little", "ちょっとだけ泣きたい", "我有点想哭"),
+        ("l09", 25.35, 27.15, "Chotto dake nakitai na", "I want to cry a little", "ちょっとだけ泣きたい", "我有点想哭"),
+        ("l10", 27.15, 31.11, "Chotto dake nakitai na", "I want to cry a little", "ちょっとだけ泣きたい", "我有点想哭"),
         ("l11", 31.11, 34.51, "Hold me one more time", "Hold me one more time", "もう一度抱きしめて", "再抱我一次"),
-        ("l12", 34.51, 37.47, "Baby, baby, don't let go", "Baby, baby, don't let go", "ベイビー 離さないで", "Baby，baby，别放手"),
-        ("l13", 37.47, 38.57, "It's alright", "It's alright", "大丈夫", "没关系"),
+        ("l12", 34.51, 37.47, "Baby, baby, don't let go", "Baby, baby, don't let go", "ベイビー 離さないで", "宝贝，宝贝，别放手"),
+        ("l13", 37.47, 38.57, "Daijoubu", "It's alright", "大丈夫", "没关系"),
         ("l14", 38.57, 40.17, "Tell me so", "Tell me so", "そう言って", "这样告诉我"),
-        ("l15", 40.17, 42.59, "Don't smile, just love me", "Don't smile, just love me", "笑わずに ただ愛して", "别笑我，只爱我"),
+        ("l15", 40.17, 42.59, "Bie xiao wo, just love me", "Don't smile, just love me", "笑わずに ただ愛して", "别笑我，只爱我"),
         ("l16", 42.59, 43.69, "Soft and low", "Soft and low", "やさしく低く", "轻轻地，低低地"),
-        ("l17", 45.05, 47.63, "I am a baby", "I am a baby", "私はベイビー", "我是 baby"),
-        ("l18", 47.63, 49.17, "The babiest baby", "The babiest baby", "いちばんベイビー", "最 baby 的 baby"),
-        ("l19", 49.17, 50.35, "Call me baby", "Call me baby", "ベイビーって呼んで", "叫我 baby"),
+        ("l17", 45.05, 47.63, "I am a baby", "I am a baby", "私はベイビー", "我是宝宝"),
+        ("l18", 47.63, 49.17, "The babiest baby", "The babiest baby", "いちばんベイビー", "最宝宝的宝宝"),
+        ("l19", 49.17, 50.35, "Call me baby", "Call me baby", "ベイビーって呼んで", "叫我宝贝"),
         ("l20", 50.35, 51.49, "Call me maybe", "Call me maybe", "たぶん呼んで", "也许就这样叫我"),
         ("l21", 53.65, 56.49, "In your arms I can breathe", "In your arms I can breathe", "あなたの腕で息ができる", "在你怀里我能呼吸"),
-        ("l22", 56.49, 57.95, "I am a baby", "I am a baby", "私はベイビー", "我是 baby"),
-        ("l23", 57.95, 59.47, "The babiest baby", "The babiest baby", "いちばんベイビー", "最 baby 的 baby"),
+        ("l22", 56.49, 57.95, "I am a baby", "I am a baby", "私はベイビー", "我是宝宝"),
+        ("l23", 57.95, 59.47, "The babiest baby", "The babiest baby", "いちばんベイビー", "最宝宝的宝宝"),
         ("l24", 59.47, 61.89, "Chiisana heart", "Tiny little heart", "ちいさな heart", "小小的心"),
-        ("l25", 61.89, 62.89, "Still crazy", "Still crazy", "まだ crazy", "仍然 crazy"),
+        ("l25", 61.89, 62.89, "Still crazy", "Still crazy", "まだ crazy", "仍然有点疯"),
         ("l26", 62.89, 64.19, "Tell a secret", "Tell a secret", "秘密を教えるね", "告诉你一个秘密"),
         ("l27", 64.19, 65.39, "I am safe", "I am safe", "私は安全だよ", "我很安全"),
-        ("l28", 65.39, 66.87, "When you call me baby", "When you call me baby", "あなたがベイビーと呼ぶ時", "当你叫我 baby"),
+        ("l28", 65.39, 66.87, "When you call me baby", "When you call me baby", "あなたがベイビーと呼ぶ時", "当你叫我宝贝"),
     ]
 
 
@@ -282,7 +288,7 @@ def write_media_item() -> None:
         "id": MEDIA_ID,
         "kind": "song",
         "title": "The Babiest",
-        "localizedTitles": {"en": "The Babiest", "zh-Hans": "最 Baby 的 Baby", "ja": "ザ・ベイビエスト"},
+        "localizedTitles": {"en": "The Babiest", "zh-Hans": "最宝宝的宝宝", "ja": "ザ・ベイビエスト"},
         "artist": "Musia",
         "description": "A cute mixed English, Mandarin, and Japanese ACE-Step bedroom-pop song about admitting you still want to be called baby.",
         "caption": "A tiny brave heart asks to be held, named gently, and allowed to rest.",
@@ -334,7 +340,7 @@ def write_media_item() -> None:
             "audioSource": "ACE-Step XL Turbo mixed-language hook route, seed 770711, selected after rejecting the long first sweep for weak lyric recovery.",
             "analysisRun": str(ANALYSIS.relative_to(ROOT)),
             "quality": {"gate": "public-candidate", "note": "Mixed-language ACE render has clear vocal and chorus; lyrics are corrected to the actual sung structure."},
-            "lyricCorrection": "Medium ASR on selected render plus planned lyric. Unsung planned lines are omitted.",
+            "lyricCorrection": "Medium ASR on selected render plus planned lyric. The active mul track uses the real mixed performance layer: English, Mandarin pinyin, and Japanese romaji. Unsung planned lines are omitted.",
             "coverSource": str(COVER_SOURCE),
             "publicAudio": PUBLIC_AUDIO_NAME,
         },
@@ -387,7 +393,7 @@ def write_reference() -> None:
                 "",
                 "The long first sweep was rejected because ASR only recovered fragments. The hook-led sweep was selected because it recovered the opening, verse, pre-chorus, and chorus with a clear vocal. The website lyric track is corrected from the selected render's medium ASR plus the planned lyric. Unsung bridge/final-chorus prompt lines are omitted instead of being forced into subtitles.",
                 "",
-                "Sound-close intended forms are preserved where the recognizer guessed awkward text: `Wo shi baby`, `tiny tonight`, `Man man bao jin wo`, `Bie xiao wo` / `Don't smile`, and `Chiisana heart`.",
+                "The active `mul` track is the performance layer. English lines stay English; Mandarin lines stay pinyin; Japanese lines stay romaji. Sound-close intended forms are preserved where the recognizer guessed English glosses or awkward text: `Wo shi baby`, `tiny tonight`, `Man man bao jin wo`, `Chotto dake nakitai na`, `Daijoubu`, `Bie xiao wo`, and `Chiisana heart`.",
                 "",
                 "## Website",
                 "",

@@ -12,7 +12,7 @@
 
 The long first sweep was rejected because ASR only recovered fragments. The hook-led sweep was selected because it recovered the opening, verse, pre-chorus, and chorus with a clear vocal. The website lyric track is corrected from the selected render's medium ASR plus the planned lyric. Unsung bridge/final-chorus prompt lines are omitted instead of being forced into subtitles.
 
-Sound-close intended forms are preserved where the recognizer guessed awkward text: `Wo shi baby`, `tiny tonight`, `Man man bao jin wo`, `Bie xiao wo` / `Don't smile`, and `Chiisana heart`.
+The active `mul` track is the performance layer. English lines stay English; Mandarin lines stay pinyin; Japanese lines stay romaji. Sound-close intended forms are preserved where the recognizer guessed English glosses or awkward text: `Wo shi baby`, `tiny tonight`, `Man man bao jin wo`, `Chotto dake nakitai na`, `Daijoubu`, `Bie xiao wo`, and `Chiisana heart`.
 
 ## Website
 

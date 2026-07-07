@@ -6,7 +6,7 @@
   "title": "The Babiest",
   "localizedTitles": {
     "en": "The Babiest",
-    "zh-Hans": "最 Baby 的 Baby",
+    "zh-Hans": "最宝宝的宝宝",
     "ja": "ザ・ベイビエスト"
   },
   "artist": "Musia",
@@ -467,13 +467,13 @@
         "id": "l09",
         "start": 25.35,
         "end": 27.15,
-        "text": "I want to cry a little"
+        "text": "Chotto dake nakitai na"
       },
       {
         "id": "l10",
         "start": 27.15,
         "end": 31.11,
-        "text": "I want to cry a little"
+        "text": "Chotto dake nakitai na"
       },
       {
         "id": "l11",
@@ -491,7 +491,7 @@
         "id": "l13",
         "start": 37.47,
         "end": 38.57,
-        "text": "It's alright"
+        "text": "Daijoubu"
       },
       {
         "id": "l14",
@@ -503,7 +503,7 @@
         "id": "l15",
         "start": 40.17,
         "end": 42.59,
-        "text": "Don't smile, just love me"
+        "text": "Bie xiao wo, just love me"
       },
       {
         "id": "l16",
@@ -597,7 +597,7 @@
       "gate": "public-candidate",
       "note": "Mixed-language ACE render has clear vocal and chorus; lyrics are corrected to the actual sung structure."
     },
-    "lyricCorrection": "Medium ASR on selected render plus planned lyric. Unsung planned lines are omitted.",
+    "lyricCorrection": "Medium ASR on selected render plus planned lyric. The active mul track uses the real mixed performance layer: English, Mandarin pinyin, and Japanese romaji. Unsung planned lines are omitted.",
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0392de60964c20f7016a4d0484a0548191a1ff63e71e693dd0.png",
     "publicAudio": "the-babiest-mixed-ace-xl-turbo-seed770711-20260707.mp3"
   },
