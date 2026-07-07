@@ -9,6 +9,30 @@
   "defaultMedia": "yun-hai-zhi-lian-haifeng-duange",
   "items": [
     {
+      "id": "the-babiest",
+      "kind": "song",
+      "title": "The Babiest",
+      "artist": "Musia",
+      "summary": "A cute mixed English, Mandarin, and Japanese bedroom-pop song with corrected synced lyrics and chord timing.",
+      "manifest": "data/songs/the-babiest/manifest.json",
+      "cover": "assets/covers/the-babiest-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "multilingual",
+        "ACE-Step",
+        "bedroom-pop",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "wei-ji-fen",
       "kind": "song",
       "title": "微积分",

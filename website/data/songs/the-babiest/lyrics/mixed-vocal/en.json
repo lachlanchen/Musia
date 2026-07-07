@@ -1,0 +1,897 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "the-babiest",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.27,
+      "end": 2.31,
+      "text": "Tell a secret",
+      "singableText": "Tell a secret",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Tell",
+          "start": 0.27,
+          "end": 0.95
+        },
+        {
+          "text": "a",
+          "start": 0.95,
+          "end": 1.63
+        },
+        {
+          "text": "secret",
+          "start": 1.63,
+          "end": 2.31
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 2.31,
+      "end": 5.49,
+      "text": "I am a baby",
+      "singableText": "I am a baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 2.31,
+          "end": 3.105
+        },
+        {
+          "text": "am",
+          "start": 3.105,
+          "end": 3.9
+        },
+        {
+          "text": "a",
+          "start": 3.9,
+          "end": 4.695
+        },
+        {
+          "text": "baby",
+          "start": 4.695,
+          "end": 5.49
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 5.49,
+      "end": 8.49,
+      "text": "I am a baby",
+      "singableText": "I am a baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 5.49,
+          "end": 6.24
+        },
+        {
+          "text": "am",
+          "start": 6.24,
+          "end": 6.99
+        },
+        {
+          "text": "a",
+          "start": 6.99,
+          "end": 7.74
+        },
+        {
+          "text": "baby",
+          "start": 7.74,
+          "end": 8.49
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 8.49,
+      "end": 10.77,
+      "text": "Call me baby",
+      "singableText": "Call me baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Call",
+          "start": 8.49,
+          "end": 9.25
+        },
+        {
+          "text": "me",
+          "start": 9.25,
+          "end": 10.01
+        },
+        {
+          "text": "baby",
+          "start": 10.01,
+          "end": 10.77
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 10.77,
+      "end": 15.93,
+      "text": "I try to be brave, but I am tiny tonight",
+      "singableText": "I try to be brave, but I am tiny tonight",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 10.77,
+          "end": 11.239
+        },
+        {
+          "text": "try",
+          "start": 11.239,
+          "end": 11.708
+        },
+        {
+          "text": "to",
+          "start": 11.708,
+          "end": 12.177
+        },
+        {
+          "text": "be",
+          "start": 12.177,
+          "end": 12.646
+        },
+        {
+          "text": "brave",
+          "start": 12.646,
+          "end": 13.115
+        },
+        {
+          "text": ",",
+          "start": 13.115,
+          "end": 13.585
+        },
+        {
+          "text": "but",
+          "start": 13.585,
+          "end": 14.054
+        },
+        {
+          "text": "I",
+          "start": 14.054,
+          "end": 14.523
+        },
+        {
+          "text": "am",
+          "start": 14.523,
+          "end": 14.992
+        },
+        {
+          "text": "tiny",
+          "start": 14.992,
+          "end": 15.461
+        },
+        {
+          "text": "tonight",
+          "start": 15.461,
+          "end": 15.93
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 15.93,
+      "end": 18.45,
+      "text": "Hold me slowly and close",
+      "singableText": "Hold me slowly and close",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hold",
+          "start": 15.93,
+          "end": 16.434
+        },
+        {
+          "text": "me",
+          "start": 16.434,
+          "end": 16.938
+        },
+        {
+          "text": "slowly",
+          "start": 16.938,
+          "end": 17.442
+        },
+        {
+          "text": "and",
+          "start": 17.442,
+          "end": 17.946
+        },
+        {
+          "text": "close",
+          "start": 17.946,
+          "end": 18.45
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 18.45,
+      "end": 20.97,
+      "text": "Say it is all right",
+      "singableText": "Say it is all right",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Say",
+          "start": 18.45,
+          "end": 18.954
+        },
+        {
+          "text": "it",
+          "start": 18.954,
+          "end": 19.458
+        },
+        {
+          "text": "is",
+          "start": 19.458,
+          "end": 19.962
+        },
+        {
+          "text": "all",
+          "start": 19.962,
+          "end": 20.466
+        },
+        {
+          "text": "right",
+          "start": 20.466,
+          "end": 20.97
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 20.97,
+      "end": 25.35,
+      "text": "I hide in your light",
+      "singableText": "I hide in your light",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 20.97,
+          "end": 21.846
+        },
+        {
+          "text": "hide",
+          "start": 21.846,
+          "end": 22.722
+        },
+        {
+          "text": "in",
+          "start": 22.722,
+          "end": 23.598
+        },
+        {
+          "text": "your",
+          "start": 23.598,
+          "end": 24.474
+        },
+        {
+          "text": "light",
+          "start": 24.474,
+          "end": 25.35
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 25.35,
+      "end": 27.15,
+      "text": "I want to cry a little",
+      "singableText": "I want to cry a little",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 25.35,
+          "end": 25.65
+        },
+        {
+          "text": "want",
+          "start": 25.65,
+          "end": 25.95
+        },
+        {
+          "text": "to",
+          "start": 25.95,
+          "end": 26.25
+        },
+        {
+          "text": "cry",
+          "start": 26.25,
+          "end": 26.55
+        },
+        {
+          "text": "a",
+          "start": 26.55,
+          "end": 26.85
+        },
+        {
+          "text": "little",
+          "start": 26.85,
+          "end": 27.15
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 27.15,
+      "end": 31.11,
+      "text": "I want to cry a little",
+      "singableText": "I want to cry a little",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 27.15,
+          "end": 27.81
+        },
+        {
+          "text": "want",
+          "start": 27.81,
+          "end": 28.47
+        },
+        {
+          "text": "to",
+          "start": 28.47,
+          "end": 29.13
+        },
+        {
+          "text": "cry",
+          "start": 29.13,
+          "end": 29.79
+        },
+        {
+          "text": "a",
+          "start": 29.79,
+          "end": 30.45
+        },
+        {
+          "text": "little",
+          "start": 30.45,
+          "end": 31.11
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 31.11,
+      "end": 34.51,
+      "text": "Hold me one more time",
+      "singableText": "Hold me one more time",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hold",
+          "start": 31.11,
+          "end": 31.79
+        },
+        {
+          "text": "me",
+          "start": 31.79,
+          "end": 32.47
+        },
+        {
+          "text": "one",
+          "start": 32.47,
+          "end": 33.15
+        },
+        {
+          "text": "more",
+          "start": 33.15,
+          "end": 33.83
+        },
+        {
+          "text": "time",
+          "start": 33.83,
+          "end": 34.51
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 34.51,
+      "end": 37.47,
+      "text": "Baby, baby, don't let go",
+      "singableText": "Baby, baby, don't let go",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Baby",
+          "start": 34.51,
+          "end": 34.933
+        },
+        {
+          "text": ",",
+          "start": 34.933,
+          "end": 35.356
+        },
+        {
+          "text": "baby",
+          "start": 35.356,
+          "end": 35.779
+        },
+        {
+          "text": ",",
+          "start": 35.779,
+          "end": 36.201
+        },
+        {
+          "text": "don't",
+          "start": 36.201,
+          "end": 36.624
+        },
+        {
+          "text": "let",
+          "start": 36.624,
+          "end": 37.047
+        },
+        {
+          "text": "go",
+          "start": 37.047,
+          "end": 37.47
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 37.47,
+      "end": 38.57,
+      "text": "It's alright",
+      "singableText": "It's alright",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "It's",
+          "start": 37.47,
+          "end": 38.02
+        },
+        {
+          "text": "alright",
+          "start": 38.02,
+          "end": 38.57
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 38.57,
+      "end": 40.17,
+      "text": "Tell me so",
+      "singableText": "Tell me so",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Tell",
+          "start": 38.57,
+          "end": 39.103
+        },
+        {
+          "text": "me",
+          "start": 39.103,
+          "end": 39.637
+        },
+        {
+          "text": "so",
+          "start": 39.637,
+          "end": 40.17
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 40.17,
+      "end": 42.59,
+      "text": "Don't smile, just love me",
+      "singableText": "Don't smile, just love me",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Don't",
+          "start": 40.17,
+          "end": 40.573
+        },
+        {
+          "text": "smile",
+          "start": 40.573,
+          "end": 40.977
+        },
+        {
+          "text": ",",
+          "start": 40.977,
+          "end": 41.38
+        },
+        {
+          "text": "just",
+          "start": 41.38,
+          "end": 41.783
+        },
+        {
+          "text": "love",
+          "start": 41.783,
+          "end": 42.187
+        },
+        {
+          "text": "me",
+          "start": 42.187,
+          "end": 42.59
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 42.59,
+      "end": 43.69,
+      "text": "Soft and low",
+      "singableText": "Soft and low",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Soft",
+          "start": 42.59,
+          "end": 42.957
+        },
+        {
+          "text": "and",
+          "start": 42.957,
+          "end": 43.323
+        },
+        {
+          "text": "low",
+          "start": 43.323,
+          "end": 43.69
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 45.05,
+      "end": 47.63,
+      "text": "I am a baby",
+      "singableText": "I am a baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 45.05,
+          "end": 45.695
+        },
+        {
+          "text": "am",
+          "start": 45.695,
+          "end": 46.34
+        },
+        {
+          "text": "a",
+          "start": 46.34,
+          "end": 46.985
+        },
+        {
+          "text": "baby",
+          "start": 46.985,
+          "end": 47.63
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 47.63,
+      "end": 49.17,
+      "text": "The babiest baby",
+      "singableText": "The babiest baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 47.63,
+          "end": 48.143
+        },
+        {
+          "text": "babiest",
+          "start": 48.143,
+          "end": 48.657
+        },
+        {
+          "text": "baby",
+          "start": 48.657,
+          "end": 49.17
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 49.17,
+      "end": 50.35,
+      "text": "Call me baby",
+      "singableText": "Call me baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Call",
+          "start": 49.17,
+          "end": 49.563
+        },
+        {
+          "text": "me",
+          "start": 49.563,
+          "end": 49.957
+        },
+        {
+          "text": "baby",
+          "start": 49.957,
+          "end": 50.35
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 50.35,
+      "end": 51.49,
+      "text": "Call me maybe",
+      "singableText": "Call me maybe",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Call",
+          "start": 50.35,
+          "end": 50.73
+        },
+        {
+          "text": "me",
+          "start": 50.73,
+          "end": 51.11
+        },
+        {
+          "text": "maybe",
+          "start": 51.11,
+          "end": 51.49
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 53.65,
+      "end": 56.49,
+      "text": "In your arms I can breathe",
+      "singableText": "In your arms I can breathe",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "In",
+          "start": 53.65,
+          "end": 54.123
+        },
+        {
+          "text": "your",
+          "start": 54.123,
+          "end": 54.597
+        },
+        {
+          "text": "arms",
+          "start": 54.597,
+          "end": 55.07
+        },
+        {
+          "text": "I",
+          "start": 55.07,
+          "end": 55.543
+        },
+        {
+          "text": "can",
+          "start": 55.543,
+          "end": 56.017
+        },
+        {
+          "text": "breathe",
+          "start": 56.017,
+          "end": 56.49
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 56.49,
+      "end": 57.95,
+      "text": "I am a baby",
+      "singableText": "I am a baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 56.49,
+          "end": 56.855
+        },
+        {
+          "text": "am",
+          "start": 56.855,
+          "end": 57.22
+        },
+        {
+          "text": "a",
+          "start": 57.22,
+          "end": 57.585
+        },
+        {
+          "text": "baby",
+          "start": 57.585,
+          "end": 57.95
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 57.95,
+      "end": 59.47,
+      "text": "The babiest baby",
+      "singableText": "The babiest baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 57.95,
+          "end": 58.457
+        },
+        {
+          "text": "babiest",
+          "start": 58.457,
+          "end": 58.963
+        },
+        {
+          "text": "baby",
+          "start": 58.963,
+          "end": 59.47
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 59.47,
+      "end": 61.89,
+      "text": "Tiny little heart",
+      "singableText": "Tiny little heart",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Tiny",
+          "start": 59.47,
+          "end": 60.277
+        },
+        {
+          "text": "little",
+          "start": 60.277,
+          "end": 61.083
+        },
+        {
+          "text": "heart",
+          "start": 61.083,
+          "end": 61.89
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 61.89,
+      "end": 62.89,
+      "text": "Still crazy",
+      "singableText": "Still crazy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Still",
+          "start": 61.89,
+          "end": 62.39
+        },
+        {
+          "text": "crazy",
+          "start": 62.39,
+          "end": 62.89
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 62.89,
+      "end": 64.19,
+      "text": "Tell a secret",
+      "singableText": "Tell a secret",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Tell",
+          "start": 62.89,
+          "end": 63.323
+        },
+        {
+          "text": "a",
+          "start": 63.323,
+          "end": 63.757
+        },
+        {
+          "text": "secret",
+          "start": 63.757,
+          "end": 64.19
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 64.19,
+      "end": 65.39,
+      "text": "I am safe",
+      "singableText": "I am safe",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 64.19,
+          "end": 64.59
+        },
+        {
+          "text": "am",
+          "start": 64.59,
+          "end": 64.99
+        },
+        {
+          "text": "safe",
+          "start": 64.99,
+          "end": 65.39
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 65.39,
+      "end": 66.87,
+      "text": "When you call me baby",
+      "singableText": "When you call me baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "When",
+          "start": 65.39,
+          "end": 65.686
+        },
+        {
+          "text": "you",
+          "start": 65.686,
+          "end": 65.982
+        },
+        {
+          "text": "call",
+          "start": 65.982,
+          "end": 66.278
+        },
+        {
+          "text": "me",
+          "start": 66.278,
+          "end": 66.574
+        },
+        {
+          "text": "baby",
+          "start": 66.574,
+          "end": 66.87
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from the selected ACE XL Turbo seed 770711 vocal using same-render medium ASR, the planned mixed-language lyric, and sound-close correction. Unsung planned bridge/final-chorus lines are intentionally omitted from the public timing."
+  }
+}

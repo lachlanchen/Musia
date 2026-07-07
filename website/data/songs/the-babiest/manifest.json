@@ -1,0 +1,622 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "the-babiest",
+  "kind": "song",
+  "title": "The Babiest",
+  "localizedTitles": {
+    "en": "The Babiest",
+    "zh-Hans": "最 Baby 的 Baby",
+    "ja": "ザ・ベイビエスト"
+  },
+  "artist": "Musia",
+  "description": "A cute mixed English, Mandarin, and Japanese ACE-Step bedroom-pop song about admitting you still want to be called baby.",
+  "caption": "A tiny brave heart asks to be held, named gently, and allowed to rest.",
+  "duration": 72.0,
+  "canonicalUrl": "https://fun.lazying.art/#the-babiest",
+  "share": {
+    "title": "The Babiest - Fun Lazying Art",
+    "description": "A Musia mixed-language bedroom-pop song with corrected synced lyrics, translations, pinyin, furigana, chords, and stems.",
+    "url": "https://fun.lazying.art/#the-babiest",
+    "image": "assets/covers/the-babiest-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "The Babiest cover",
+      "role": "cover",
+      "src": "assets/covers/the-babiest-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/the-babiest-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "the-babiest-mixed",
+      "label": "Mixed",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "mul",
+      "languageLabel": "Mixed",
+      "lyricSetId": "mixed-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/the-babiest-mixed-ace-xl-turbo-seed770711-20260707.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "detected D major / pop modal center",
+    "bpm": 92.28515625,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 2.345,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 2.345,
+        "end": 4.923,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 4.923,
+        "end": 7.5,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 7.5,
+        "end": 8.15,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 8.15,
+        "end": 8.8,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 8.8,
+        "end": 10.101,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 10.101,
+        "end": 10.751,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 10.751,
+        "end": 12.005,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 12.005,
+        "end": 12.655,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 12.655,
+        "end": 14.605,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 14.605,
+        "end": 15.256,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 15.256,
+        "end": 17.833,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 17.833,
+        "end": 20.41,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 20.41,
+        "end": 21.711,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 21.711,
+        "end": 22.988,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 22.988,
+        "end": 24.915,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 24.915,
+        "end": 25.565,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 25.565,
+        "end": 28.143,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 28.143,
+        "end": 28.793,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 28.793,
+        "end": 29.443,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 29.443,
+        "end": 30.743,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 30.743,
+        "end": 32.044,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 32.044,
+        "end": 32.81,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 32.81,
+        "end": 34.273,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 34.273,
+        "end": 34.923,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 34.923,
+        "end": 35.573,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 35.573,
+        "end": 37.523,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 37.523,
+        "end": 38.15,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 38.15,
+        "end": 40.751,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 40.751,
+        "end": 42.028,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 42.028,
+        "end": 43.328,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 43.328,
+        "end": 43.955,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 43.955,
+        "end": 44.606,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 44.606,
+        "end": 45.256,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 45.256,
+        "end": 46.556,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 46.556,
+        "end": 47.183,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 47.183,
+        "end": 49.133,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 49.133,
+        "end": 49.76,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 49.76,
+        "end": 52.361,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 52.361,
+        "end": 53.661,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 53.661,
+        "end": 54.938,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 54.938,
+        "end": 57.516,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 57.516,
+        "end": 59.443,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 59.443,
+        "end": 60.093,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 60.093,
+        "end": 61.394,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 61.394,
+        "end": 62.02,
+        "name": "F#",
+        "degree": ""
+      },
+      {
+        "start": 62.02,
+        "end": 62.671,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 62.671,
+        "end": 63.971,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 63.971,
+        "end": 64.598,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 64.598,
+        "end": 72.0,
+        "name": "Am",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "mixed-vocal",
+      "label": "Mixed vocal",
+      "languageCode": "mul",
+      "tracks": [
+        {
+          "code": "mul",
+          "label": "Mixed",
+          "nativeLabel": "Mixed",
+          "script": "Latn+Hans+Jpan",
+          "features": [
+            "active-vocal"
+          ],
+          "path": "lyrics/mixed-vocal/mul.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 0.27,
+        "end": 2.31,
+        "text": "Tell a secret"
+      },
+      {
+        "id": "l02",
+        "start": 2.31,
+        "end": 5.49,
+        "text": "I am a baby"
+      },
+      {
+        "id": "l03",
+        "start": 5.49,
+        "end": 8.49,
+        "text": "Wo shi baby"
+      },
+      {
+        "id": "l04",
+        "start": 8.49,
+        "end": 10.77,
+        "text": "Call me baby"
+      },
+      {
+        "id": "l05",
+        "start": 10.77,
+        "end": 15.93,
+        "text": "I try to be brave, but I am tiny tonight"
+      },
+      {
+        "id": "l06",
+        "start": 15.93,
+        "end": 18.45,
+        "text": "Man man bao jin wo"
+      },
+      {
+        "id": "l07",
+        "start": 18.45,
+        "end": 20.97,
+        "text": "Say it is all right"
+      },
+      {
+        "id": "l08",
+        "start": 20.97,
+        "end": 25.35,
+        "text": "I hide in your light"
+      },
+      {
+        "id": "l09",
+        "start": 25.35,
+        "end": 27.15,
+        "text": "I want to cry a little"
+      },
+      {
+        "id": "l10",
+        "start": 27.15,
+        "end": 31.11,
+        "text": "I want to cry a little"
+      },
+      {
+        "id": "l11",
+        "start": 31.11,
+        "end": 34.51,
+        "text": "Hold me one more time"
+      },
+      {
+        "id": "l12",
+        "start": 34.51,
+        "end": 37.47,
+        "text": "Baby, baby, don't let go"
+      },
+      {
+        "id": "l13",
+        "start": 37.47,
+        "end": 38.57,
+        "text": "It's alright"
+      },
+      {
+        "id": "l14",
+        "start": 38.57,
+        "end": 40.17,
+        "text": "Tell me so"
+      },
+      {
+        "id": "l15",
+        "start": 40.17,
+        "end": 42.59,
+        "text": "Don't smile, just love me"
+      },
+      {
+        "id": "l16",
+        "start": 42.59,
+        "end": 43.69,
+        "text": "Soft and low"
+      },
+      {
+        "id": "l17",
+        "start": 45.05,
+        "end": 47.63,
+        "text": "I am a baby"
+      },
+      {
+        "id": "l18",
+        "start": 47.63,
+        "end": 49.17,
+        "text": "The babiest baby"
+      },
+      {
+        "id": "l19",
+        "start": 49.17,
+        "end": 50.35,
+        "text": "Call me baby"
+      },
+      {
+        "id": "l20",
+        "start": 50.35,
+        "end": 51.49,
+        "text": "Call me maybe"
+      },
+      {
+        "id": "l21",
+        "start": 53.65,
+        "end": 56.49,
+        "text": "In your arms I can breathe"
+      },
+      {
+        "id": "l22",
+        "start": 56.49,
+        "end": 57.95,
+        "text": "I am a baby"
+      },
+      {
+        "id": "l23",
+        "start": 57.95,
+        "end": 59.47,
+        "text": "The babiest baby"
+      },
+      {
+        "id": "l24",
+        "start": 59.47,
+        "end": 61.89,
+        "text": "Chiisana heart"
+      },
+      {
+        "id": "l25",
+        "start": 61.89,
+        "end": 62.89,
+        "text": "Still crazy"
+      },
+      {
+        "id": "l26",
+        "start": 62.89,
+        "end": 64.19,
+        "text": "Tell a secret"
+      },
+      {
+        "id": "l27",
+        "start": 64.19,
+        "end": 65.39,
+        "text": "I am safe"
+      },
+      {
+        "id": "l28",
+        "start": 65.39,
+        "end": 66.87,
+        "text": "When you call me baby"
+      }
+    ]
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/the-babiest-20260707",
+    "audioSource": "ACE-Step XL Turbo mixed-language hook route, seed 770711, selected after rejecting the long first sweep for weak lyric recovery.",
+    "analysisRun": "data/runs/the-babiest-20260707-seed770711-analysis",
+    "quality": {
+      "gate": "public-candidate",
+      "note": "Mixed-language ACE render has clear vocal and chorus; lyrics are corrected to the actual sung structure."
+    },
+    "lyricCorrection": "Medium ASR on selected render plus planned lyric. Unsung planned lines are omitted.",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0392de60964c20f7016a4d0484a0548191a1ff63e71e693dd0.png",
+    "publicAudio": "the-babiest-mixed-ace-xl-turbo-seed770711-20260707.mp3"
+  },
+  "artifacts": [
+    {
+      "label": "Analysis report",
+      "path": "data/runs/the-babiest-20260707-seed770711-analysis/REPORT.md"
+    },
+    {
+      "label": "Chords",
+      "path": "data/runs/the-babiest-20260707-seed770711-analysis/analysis/chords.csv"
+    },
+    {
+      "label": "Beats",
+      "path": "data/runs/the-babiest-20260707-seed770711-analysis/analysis/beats.csv"
+    },
+    {
+      "label": "Stems",
+      "path": "data/runs/the-babiest-20260707-seed770711-analysis/stems"
+    }
+  ]
+}

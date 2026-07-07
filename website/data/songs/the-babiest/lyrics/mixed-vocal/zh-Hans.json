@@ -1,0 +1,1376 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "the-babiest",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.27,
+      "end": 2.31,
+      "text": "告诉你一个秘密",
+      "singableText": "告诉你一个秘密",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "告",
+          "start": 0.27,
+          "end": 0.561,
+          "pinyin": "gao4"
+        },
+        {
+          "text": "诉",
+          "start": 0.561,
+          "end": 0.853,
+          "pinyin": "su4"
+        },
+        {
+          "text": "你",
+          "start": 0.853,
+          "end": 1.144,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "一",
+          "start": 1.144,
+          "end": 1.436,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "个",
+          "start": 1.436,
+          "end": 1.727,
+          "pinyin": "ge4"
+        },
+        {
+          "text": "秘",
+          "start": 1.727,
+          "end": 2.019,
+          "pinyin": "mi4"
+        },
+        {
+          "text": "密",
+          "start": 2.019,
+          "end": 2.31,
+          "pinyin": "mi4"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 2.31,
+      "end": 5.49,
+      "text": "我是 baby",
+      "singableText": "我是 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 2.31,
+          "end": 2.84,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 2.84,
+          "end": 3.37,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "b",
+          "start": 3.37,
+          "end": 3.9
+        },
+        {
+          "text": "a",
+          "start": 3.9,
+          "end": 4.43
+        },
+        {
+          "text": "b",
+          "start": 4.43,
+          "end": 4.96
+        },
+        {
+          "text": "y",
+          "start": 4.96,
+          "end": 5.49
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 5.49,
+      "end": 8.49,
+      "text": "我是 baby",
+      "singableText": "我是 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 5.49,
+          "end": 5.99,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 5.99,
+          "end": 6.49,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "b",
+          "start": 6.49,
+          "end": 6.99
+        },
+        {
+          "text": "a",
+          "start": 6.99,
+          "end": 7.49
+        },
+        {
+          "text": "b",
+          "start": 7.49,
+          "end": 7.99
+        },
+        {
+          "text": "y",
+          "start": 7.99,
+          "end": 8.49
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 8.49,
+      "end": 10.77,
+      "text": "叫我 baby",
+      "singableText": "叫我 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "叫",
+          "start": 8.49,
+          "end": 8.87,
+          "pinyin": "jiao4"
+        },
+        {
+          "text": "我",
+          "start": 8.87,
+          "end": 9.25,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "b",
+          "start": 9.25,
+          "end": 9.63
+        },
+        {
+          "text": "a",
+          "start": 9.63,
+          "end": 10.01
+        },
+        {
+          "text": "b",
+          "start": 10.01,
+          "end": 10.39
+        },
+        {
+          "text": "y",
+          "start": 10.39,
+          "end": 10.77
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 10.77,
+      "end": 15.93,
+      "text": "我努力勇敢，可今晚我很小很小",
+      "singableText": "我努力勇敢，可今晚我很小很小",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 10.77,
+          "end": 11.139,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "努",
+          "start": 11.139,
+          "end": 11.507,
+          "pinyin": "nu3"
+        },
+        {
+          "text": "力",
+          "start": 11.507,
+          "end": 11.876,
+          "pinyin": "li4"
+        },
+        {
+          "text": "勇",
+          "start": 11.876,
+          "end": 12.244,
+          "pinyin": "yong3"
+        },
+        {
+          "text": "敢",
+          "start": 12.244,
+          "end": 12.613,
+          "pinyin": "gan3"
+        },
+        {
+          "text": "，",
+          "start": 12.613,
+          "end": 12.981
+        },
+        {
+          "text": "可",
+          "start": 12.981,
+          "end": 13.35,
+          "pinyin": "ke3"
+        },
+        {
+          "text": "今",
+          "start": 13.35,
+          "end": 13.719,
+          "pinyin": "jin1"
+        },
+        {
+          "text": "晚",
+          "start": 13.719,
+          "end": 14.087,
+          "pinyin": "wan3"
+        },
+        {
+          "text": "我",
+          "start": 14.087,
+          "end": 14.456,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "很",
+          "start": 14.456,
+          "end": 14.824,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "小",
+          "start": 14.824,
+          "end": 15.193,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "很",
+          "start": 15.193,
+          "end": 15.561,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "小",
+          "start": 15.561,
+          "end": 15.93,
+          "pinyin": "xiao3"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 15.93,
+      "end": 18.45,
+      "text": "慢慢抱紧我",
+      "singableText": "慢慢抱紧我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "慢",
+          "start": 15.93,
+          "end": 16.434,
+          "pinyin": "man4"
+        },
+        {
+          "text": "慢",
+          "start": 16.434,
+          "end": 16.938,
+          "pinyin": "man4"
+        },
+        {
+          "text": "抱",
+          "start": 16.938,
+          "end": 17.442,
+          "pinyin": "bao4"
+        },
+        {
+          "text": "紧",
+          "start": 17.442,
+          "end": 17.946,
+          "pinyin": "jin3"
+        },
+        {
+          "text": "我",
+          "start": 17.946,
+          "end": 18.45,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 18.45,
+      "end": 20.97,
+      "text": "告诉我没关系",
+      "singableText": "告诉我没关系",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "告",
+          "start": 18.45,
+          "end": 18.87,
+          "pinyin": "gao4"
+        },
+        {
+          "text": "诉",
+          "start": 18.87,
+          "end": 19.29,
+          "pinyin": "su4"
+        },
+        {
+          "text": "我",
+          "start": 19.29,
+          "end": 19.71,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "没",
+          "start": 19.71,
+          "end": 20.13,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "关",
+          "start": 20.13,
+          "end": 20.55,
+          "pinyin": "guan1"
+        },
+        {
+          "text": "系",
+          "start": 20.55,
+          "end": 20.97,
+          "pinyin": "xi4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 20.97,
+      "end": 25.35,
+      "text": "我躲进你的光里",
+      "singableText": "我躲进你的光里",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 20.97,
+          "end": 21.596,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "躲",
+          "start": 21.596,
+          "end": 22.221,
+          "pinyin": "duo3"
+        },
+        {
+          "text": "进",
+          "start": 22.221,
+          "end": 22.847,
+          "pinyin": "jin4"
+        },
+        {
+          "text": "你",
+          "start": 22.847,
+          "end": 23.473,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "的",
+          "start": 23.473,
+          "end": 24.099,
+          "pinyin": "de5"
+        },
+        {
+          "text": "光",
+          "start": 24.099,
+          "end": 24.724,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "里",
+          "start": 24.724,
+          "end": 25.35,
+          "pinyin": "li3"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 25.35,
+      "end": 27.15,
+      "text": "我有点想哭",
+      "singableText": "我有点想哭",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 25.35,
+          "end": 25.71,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "有",
+          "start": 25.71,
+          "end": 26.07,
+          "pinyin": "you3"
+        },
+        {
+          "text": "点",
+          "start": 26.07,
+          "end": 26.43,
+          "pinyin": "dian3"
+        },
+        {
+          "text": "想",
+          "start": 26.43,
+          "end": 26.79,
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "哭",
+          "start": 26.79,
+          "end": 27.15,
+          "pinyin": "ku1"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 27.15,
+      "end": 31.11,
+      "text": "我有点想哭",
+      "singableText": "我有点想哭",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 27.15,
+          "end": 27.942,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "有",
+          "start": 27.942,
+          "end": 28.734,
+          "pinyin": "you3"
+        },
+        {
+          "text": "点",
+          "start": 28.734,
+          "end": 29.526,
+          "pinyin": "dian3"
+        },
+        {
+          "text": "想",
+          "start": 29.526,
+          "end": 30.318,
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "哭",
+          "start": 30.318,
+          "end": 31.11,
+          "pinyin": "ku1"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 31.11,
+      "end": 34.51,
+      "text": "再抱我一次",
+      "singableText": "再抱我一次",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "再",
+          "start": 31.11,
+          "end": 31.79,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "抱",
+          "start": 31.79,
+          "end": 32.47,
+          "pinyin": "bao4"
+        },
+        {
+          "text": "我",
+          "start": 32.47,
+          "end": 33.15,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "一",
+          "start": 33.15,
+          "end": 33.83,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "次",
+          "start": 33.83,
+          "end": 34.51,
+          "pinyin": "ci4"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 34.51,
+      "end": 37.47,
+      "text": "Baby，baby，别放手",
+      "singableText": "Baby，baby，别放手",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "B",
+          "start": 34.51,
+          "end": 34.738
+        },
+        {
+          "text": "a",
+          "start": 34.738,
+          "end": 34.965
+        },
+        {
+          "text": "b",
+          "start": 34.965,
+          "end": 35.193
+        },
+        {
+          "text": "y",
+          "start": 35.193,
+          "end": 35.421
+        },
+        {
+          "text": "，",
+          "start": 35.421,
+          "end": 35.648
+        },
+        {
+          "text": "b",
+          "start": 35.648,
+          "end": 35.876
+        },
+        {
+          "text": "a",
+          "start": 35.876,
+          "end": 36.104
+        },
+        {
+          "text": "b",
+          "start": 36.104,
+          "end": 36.332
+        },
+        {
+          "text": "y",
+          "start": 36.332,
+          "end": 36.559
+        },
+        {
+          "text": "，",
+          "start": 36.559,
+          "end": 36.787
+        },
+        {
+          "text": "别",
+          "start": 36.787,
+          "end": 37.015,
+          "pinyin": "bie2"
+        },
+        {
+          "text": "放",
+          "start": 37.015,
+          "end": 37.242,
+          "pinyin": "fang4"
+        },
+        {
+          "text": "手",
+          "start": 37.242,
+          "end": 37.47,
+          "pinyin": "shou3"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 37.47,
+      "end": 38.57,
+      "text": "没关系",
+      "singableText": "没关系",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "没",
+          "start": 37.47,
+          "end": 37.837,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "关",
+          "start": 37.837,
+          "end": 38.203,
+          "pinyin": "guan1"
+        },
+        {
+          "text": "系",
+          "start": 38.203,
+          "end": 38.57,
+          "pinyin": "xi4"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 38.57,
+      "end": 40.17,
+      "text": "这样告诉我",
+      "singableText": "这样告诉我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "这",
+          "start": 38.57,
+          "end": 38.89,
+          "pinyin": "zhe4"
+        },
+        {
+          "text": "样",
+          "start": 38.89,
+          "end": 39.21,
+          "pinyin": "yang4"
+        },
+        {
+          "text": "告",
+          "start": 39.21,
+          "end": 39.53,
+          "pinyin": "gao4"
+        },
+        {
+          "text": "诉",
+          "start": 39.53,
+          "end": 39.85,
+          "pinyin": "su4"
+        },
+        {
+          "text": "我",
+          "start": 39.85,
+          "end": 40.17,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 40.17,
+      "end": 42.59,
+      "text": "别笑我，只爱我",
+      "singableText": "别笑我，只爱我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "别",
+          "start": 40.17,
+          "end": 40.516,
+          "pinyin": "bie2"
+        },
+        {
+          "text": "笑",
+          "start": 40.516,
+          "end": 40.861,
+          "pinyin": "xiao4"
+        },
+        {
+          "text": "我",
+          "start": 40.861,
+          "end": 41.207,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "，",
+          "start": 41.207,
+          "end": 41.553
+        },
+        {
+          "text": "只",
+          "start": 41.553,
+          "end": 41.899,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "爱",
+          "start": 41.899,
+          "end": 42.244,
+          "pinyin": "ai4"
+        },
+        {
+          "text": "我",
+          "start": 42.244,
+          "end": 42.59,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 42.59,
+      "end": 43.69,
+      "text": "轻轻地，低低地",
+      "singableText": "轻轻地，低低地",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "轻",
+          "start": 42.59,
+          "end": 42.747,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "轻",
+          "start": 42.747,
+          "end": 42.904,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "地",
+          "start": 42.904,
+          "end": 43.061,
+          "pinyin": "di4"
+        },
+        {
+          "text": "，",
+          "start": 43.061,
+          "end": 43.219
+        },
+        {
+          "text": "低",
+          "start": 43.219,
+          "end": 43.376,
+          "pinyin": "di1"
+        },
+        {
+          "text": "低",
+          "start": 43.376,
+          "end": 43.533,
+          "pinyin": "di1"
+        },
+        {
+          "text": "地",
+          "start": 43.533,
+          "end": 43.69,
+          "pinyin": "di4"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 45.05,
+      "end": 47.63,
+      "text": "我是 baby",
+      "singableText": "我是 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 45.05,
+          "end": 45.48,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 45.48,
+          "end": 45.91,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "b",
+          "start": 45.91,
+          "end": 46.34
+        },
+        {
+          "text": "a",
+          "start": 46.34,
+          "end": 46.77
+        },
+        {
+          "text": "b",
+          "start": 46.77,
+          "end": 47.2
+        },
+        {
+          "text": "y",
+          "start": 47.2,
+          "end": 47.63
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 47.63,
+      "end": 49.17,
+      "text": "最 baby 的 baby",
+      "singableText": "最 baby 的 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "最",
+          "start": 47.63,
+          "end": 47.784,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "b",
+          "start": 47.784,
+          "end": 47.938
+        },
+        {
+          "text": "a",
+          "start": 47.938,
+          "end": 48.092
+        },
+        {
+          "text": "b",
+          "start": 48.092,
+          "end": 48.246
+        },
+        {
+          "text": "y",
+          "start": 48.246,
+          "end": 48.4
+        },
+        {
+          "text": "的",
+          "start": 48.4,
+          "end": 48.554,
+          "pinyin": "de5"
+        },
+        {
+          "text": "b",
+          "start": 48.554,
+          "end": 48.708
+        },
+        {
+          "text": "a",
+          "start": 48.708,
+          "end": 48.862
+        },
+        {
+          "text": "b",
+          "start": 48.862,
+          "end": 49.016
+        },
+        {
+          "text": "y",
+          "start": 49.016,
+          "end": 49.17
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 49.17,
+      "end": 50.35,
+      "text": "叫我 baby",
+      "singableText": "叫我 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "叫",
+          "start": 49.17,
+          "end": 49.367,
+          "pinyin": "jiao4"
+        },
+        {
+          "text": "我",
+          "start": 49.367,
+          "end": 49.563,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "b",
+          "start": 49.563,
+          "end": 49.76
+        },
+        {
+          "text": "a",
+          "start": 49.76,
+          "end": 49.957
+        },
+        {
+          "text": "b",
+          "start": 49.957,
+          "end": 50.153
+        },
+        {
+          "text": "y",
+          "start": 50.153,
+          "end": 50.35
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 50.35,
+      "end": 51.49,
+      "text": "也许就这样叫我",
+      "singableText": "也许就这样叫我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "也",
+          "start": 50.35,
+          "end": 50.513,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "许",
+          "start": 50.513,
+          "end": 50.676,
+          "pinyin": "xu3"
+        },
+        {
+          "text": "就",
+          "start": 50.676,
+          "end": 50.839,
+          "pinyin": "jiu4"
+        },
+        {
+          "text": "这",
+          "start": 50.839,
+          "end": 51.001,
+          "pinyin": "zhe4"
+        },
+        {
+          "text": "样",
+          "start": 51.001,
+          "end": 51.164,
+          "pinyin": "yang4"
+        },
+        {
+          "text": "叫",
+          "start": 51.164,
+          "end": 51.327,
+          "pinyin": "jiao4"
+        },
+        {
+          "text": "我",
+          "start": 51.327,
+          "end": 51.49,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 53.65,
+      "end": 56.49,
+      "text": "在你怀里我能呼吸",
+      "singableText": "在你怀里我能呼吸",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "在",
+          "start": 53.65,
+          "end": 54.005,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "你",
+          "start": 54.005,
+          "end": 54.36,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "怀",
+          "start": 54.36,
+          "end": 54.715,
+          "pinyin": "huai2"
+        },
+        {
+          "text": "里",
+          "start": 54.715,
+          "end": 55.07,
+          "pinyin": "li3"
+        },
+        {
+          "text": "我",
+          "start": 55.07,
+          "end": 55.425,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "能",
+          "start": 55.425,
+          "end": 55.78,
+          "pinyin": "neng2"
+        },
+        {
+          "text": "呼",
+          "start": 55.78,
+          "end": 56.135,
+          "pinyin": "hu1"
+        },
+        {
+          "text": "吸",
+          "start": 56.135,
+          "end": 56.49,
+          "pinyin": "xi1"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 56.49,
+      "end": 57.95,
+      "text": "我是 baby",
+      "singableText": "我是 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 56.49,
+          "end": 56.733,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 56.733,
+          "end": 56.977,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "b",
+          "start": 56.977,
+          "end": 57.22
+        },
+        {
+          "text": "a",
+          "start": 57.22,
+          "end": 57.463
+        },
+        {
+          "text": "b",
+          "start": 57.463,
+          "end": 57.707
+        },
+        {
+          "text": "y",
+          "start": 57.707,
+          "end": 57.95
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 57.95,
+      "end": 59.47,
+      "text": "最 baby 的 baby",
+      "singableText": "最 baby 的 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "最",
+          "start": 57.95,
+          "end": 58.102,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "b",
+          "start": 58.102,
+          "end": 58.254
+        },
+        {
+          "text": "a",
+          "start": 58.254,
+          "end": 58.406
+        },
+        {
+          "text": "b",
+          "start": 58.406,
+          "end": 58.558
+        },
+        {
+          "text": "y",
+          "start": 58.558,
+          "end": 58.71
+        },
+        {
+          "text": "的",
+          "start": 58.71,
+          "end": 58.862,
+          "pinyin": "de5"
+        },
+        {
+          "text": "b",
+          "start": 58.862,
+          "end": 59.014
+        },
+        {
+          "text": "a",
+          "start": 59.014,
+          "end": 59.166
+        },
+        {
+          "text": "b",
+          "start": 59.166,
+          "end": 59.318
+        },
+        {
+          "text": "y",
+          "start": 59.318,
+          "end": 59.47
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 59.47,
+      "end": 61.89,
+      "text": "小小的心",
+      "singableText": "小小的心",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "小",
+          "start": 59.47,
+          "end": 60.075,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "小",
+          "start": 60.075,
+          "end": 60.68,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "的",
+          "start": 60.68,
+          "end": 61.285,
+          "pinyin": "de5"
+        },
+        {
+          "text": "心",
+          "start": 61.285,
+          "end": 61.89,
+          "pinyin": "xin1"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 61.89,
+      "end": 62.89,
+      "text": "仍然 crazy",
+      "singableText": "仍然 crazy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "仍",
+          "start": 61.89,
+          "end": 62.033,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "然",
+          "start": 62.033,
+          "end": 62.176,
+          "pinyin": "ran2"
+        },
+        {
+          "text": "c",
+          "start": 62.176,
+          "end": 62.319
+        },
+        {
+          "text": "r",
+          "start": 62.319,
+          "end": 62.461
+        },
+        {
+          "text": "a",
+          "start": 62.461,
+          "end": 62.604
+        },
+        {
+          "text": "z",
+          "start": 62.604,
+          "end": 62.747
+        },
+        {
+          "text": "y",
+          "start": 62.747,
+          "end": 62.89
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 62.89,
+      "end": 64.19,
+      "text": "告诉你一个秘密",
+      "singableText": "告诉你一个秘密",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "告",
+          "start": 62.89,
+          "end": 63.076,
+          "pinyin": "gao4"
+        },
+        {
+          "text": "诉",
+          "start": 63.076,
+          "end": 63.261,
+          "pinyin": "su4"
+        },
+        {
+          "text": "你",
+          "start": 63.261,
+          "end": 63.447,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "一",
+          "start": 63.447,
+          "end": 63.633,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "个",
+          "start": 63.633,
+          "end": 63.819,
+          "pinyin": "ge4"
+        },
+        {
+          "text": "秘",
+          "start": 63.819,
+          "end": 64.004,
+          "pinyin": "mi4"
+        },
+        {
+          "text": "密",
+          "start": 64.004,
+          "end": 64.19,
+          "pinyin": "mi4"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 64.19,
+      "end": 65.39,
+      "text": "我很安全",
+      "singableText": "我很安全",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 64.19,
+          "end": 64.49,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "很",
+          "start": 64.49,
+          "end": 64.79,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "安",
+          "start": 64.79,
+          "end": 65.09,
+          "pinyin": "an1"
+        },
+        {
+          "text": "全",
+          "start": 65.09,
+          "end": 65.39,
+          "pinyin": "quan2"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 65.39,
+      "end": 66.87,
+      "text": "当你叫我 baby",
+      "singableText": "当你叫我 baby",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "当",
+          "start": 65.39,
+          "end": 65.575,
+          "pinyin": "dang1"
+        },
+        {
+          "text": "你",
+          "start": 65.575,
+          "end": 65.76,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "叫",
+          "start": 65.76,
+          "end": 65.945,
+          "pinyin": "jiao4"
+        },
+        {
+          "text": "我",
+          "start": 65.945,
+          "end": 66.13,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "b",
+          "start": 66.13,
+          "end": 66.315
+        },
+        {
+          "text": "a",
+          "start": 66.315,
+          "end": 66.5
+        },
+        {
+          "text": "b",
+          "start": 66.5,
+          "end": 66.685
+        },
+        {
+          "text": "y",
+          "start": 66.685,
+          "end": 66.87
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from the selected ACE XL Turbo seed 770711 vocal using same-render medium ASR, the planned mixed-language lyric, and sound-close correction. Unsung planned bridge/final-chorus lines are intentionally omitted from the public timing."
+  }
+}

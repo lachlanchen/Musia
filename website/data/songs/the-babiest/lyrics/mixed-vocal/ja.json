@@ -1,0 +1,805 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "the-babiest",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.27,
+      "end": 2.31,
+      "text": "秘密を教えるね",
+      "singableText": "秘密を教えるね",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "秘密",
+          "start": 0.27,
+          "end": 0.78,
+          "reading": "ひみつ"
+        },
+        {
+          "text": "を",
+          "start": 0.78,
+          "end": 1.29
+        },
+        {
+          "text": "教え",
+          "start": 1.29,
+          "end": 1.8,
+          "reading": "おしえ"
+        },
+        {
+          "text": "るね",
+          "start": 1.8,
+          "end": 2.31
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 2.31,
+      "end": 5.49,
+      "text": "私はベイビー",
+      "singableText": "私はベイビー",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 2.31,
+          "end": 3.37,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 3.37,
+          "end": 4.43
+        },
+        {
+          "text": "ベイビー",
+          "start": 4.43,
+          "end": 5.49
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 5.49,
+      "end": 8.49,
+      "text": "私はベイビー",
+      "singableText": "私はベイビー",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 5.49,
+          "end": 6.49,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 6.49,
+          "end": 7.49
+        },
+        {
+          "text": "ベイビー",
+          "start": 7.49,
+          "end": 8.49
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 8.49,
+      "end": 10.77,
+      "text": "ベイビーって呼んで",
+      "singableText": "ベイビーって呼んで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ベイビー",
+          "start": 8.49,
+          "end": 9.06
+        },
+        {
+          "text": "って",
+          "start": 9.06,
+          "end": 9.63
+        },
+        {
+          "text": "呼ん",
+          "start": 9.63,
+          "end": 10.2,
+          "reading": "よん"
+        },
+        {
+          "text": "で",
+          "start": 10.2,
+          "end": 10.77
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 10.77,
+      "end": 15.93,
+      "text": "強がるけれど 今夜は小さい私",
+      "singableText": "強がるけれど 今夜は小さい私",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "強が",
+          "start": 10.77,
+          "end": 11.63,
+          "reading": "つよが"
+        },
+        {
+          "text": "るけれど",
+          "start": 11.63,
+          "end": 12.49
+        },
+        {
+          "text": "今夜",
+          "start": 12.49,
+          "end": 13.35,
+          "reading": "こんや"
+        },
+        {
+          "text": "は",
+          "start": 13.35,
+          "end": 14.21
+        },
+        {
+          "text": "小さい",
+          "start": 14.21,
+          "end": 15.07,
+          "reading": "ちーさい"
+        },
+        {
+          "text": "私",
+          "start": 15.07,
+          "end": 15.93,
+          "reading": "わたし"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 15.93,
+      "end": 18.45,
+      "text": "ゆっくり強く抱きしめて",
+      "singableText": "ゆっくり強く抱きしめて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ゆっくり",
+          "start": 15.93,
+          "end": 16.56
+        },
+        {
+          "text": "強く",
+          "start": 16.56,
+          "end": 17.19,
+          "reading": "つよく"
+        },
+        {
+          "text": "抱き",
+          "start": 17.19,
+          "end": 17.82,
+          "reading": "だき"
+        },
+        {
+          "text": "しめて",
+          "start": 17.82,
+          "end": 18.45
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 18.45,
+      "end": 20.97,
+      "text": "大丈夫だと言って",
+      "singableText": "大丈夫だと言って",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "大丈夫",
+          "start": 18.45,
+          "end": 19.29,
+          "reading": "だいじょうぶ"
+        },
+        {
+          "text": "だと",
+          "start": 19.29,
+          "end": 20.13
+        },
+        {
+          "text": "言って",
+          "start": 20.13,
+          "end": 20.97,
+          "reading": "いって"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 20.97,
+      "end": 25.35,
+      "text": "あなたの光に隠れる",
+      "singableText": "あなたの光に隠れる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "あなたの",
+          "start": 20.97,
+          "end": 21.846
+        },
+        {
+          "text": "光",
+          "start": 21.846,
+          "end": 22.722,
+          "reading": "ひかり"
+        },
+        {
+          "text": "に",
+          "start": 22.722,
+          "end": 23.598
+        },
+        {
+          "text": "隠れ",
+          "start": 23.598,
+          "end": 24.474,
+          "reading": "かくれ"
+        },
+        {
+          "text": "る",
+          "start": 24.474,
+          "end": 25.35
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 25.35,
+      "end": 27.15,
+      "text": "ちょっとだけ泣きたい",
+      "singableText": "ちょっとだけ泣きたい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ちょっとだけ",
+          "start": 25.35,
+          "end": 25.95
+        },
+        {
+          "text": "泣き",
+          "start": 25.95,
+          "end": 26.55,
+          "reading": "なき"
+        },
+        {
+          "text": "たい",
+          "start": 26.55,
+          "end": 27.15
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 27.15,
+      "end": 31.11,
+      "text": "ちょっとだけ泣きたい",
+      "singableText": "ちょっとだけ泣きたい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ちょっとだけ",
+          "start": 27.15,
+          "end": 28.47
+        },
+        {
+          "text": "泣き",
+          "start": 28.47,
+          "end": 29.79,
+          "reading": "なき"
+        },
+        {
+          "text": "たい",
+          "start": 29.79,
+          "end": 31.11
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 31.11,
+      "end": 34.51,
+      "text": "もう一度抱きしめて",
+      "singableText": "もう一度抱きしめて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "もう",
+          "start": 31.11,
+          "end": 31.96
+        },
+        {
+          "text": "一度",
+          "start": 31.96,
+          "end": 32.81,
+          "reading": "いちど"
+        },
+        {
+          "text": "抱き",
+          "start": 32.81,
+          "end": 33.66,
+          "reading": "だき"
+        },
+        {
+          "text": "しめて",
+          "start": 33.66,
+          "end": 34.51
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 34.51,
+      "end": 37.47,
+      "text": "ベイビー 離さないで",
+      "singableText": "ベイビー 離さないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ベイビー",
+          "start": 34.51,
+          "end": 35.497
+        },
+        {
+          "text": "離さ",
+          "start": 35.497,
+          "end": 36.483,
+          "reading": "はなさ"
+        },
+        {
+          "text": "ないで",
+          "start": 36.483,
+          "end": 37.47
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 37.47,
+      "end": 38.57,
+      "text": "大丈夫",
+      "singableText": "大丈夫",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "大丈夫",
+          "start": 37.47,
+          "end": 38.57,
+          "reading": "だいじょうぶ"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 38.57,
+      "end": 40.17,
+      "text": "そう言って",
+      "singableText": "そう言って",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "そう",
+          "start": 38.57,
+          "end": 39.37
+        },
+        {
+          "text": "言って",
+          "start": 39.37,
+          "end": 40.17,
+          "reading": "いって"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 40.17,
+      "end": 42.59,
+      "text": "笑わずに ただ愛して",
+      "singableText": "笑わずに ただ愛して",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "笑わ",
+          "start": 40.17,
+          "end": 40.654,
+          "reading": "わらわ"
+        },
+        {
+          "text": "ずに",
+          "start": 40.654,
+          "end": 41.138
+        },
+        {
+          "text": "ただ",
+          "start": 41.138,
+          "end": 41.622
+        },
+        {
+          "text": "愛し",
+          "start": 41.622,
+          "end": 42.106,
+          "reading": "いとし"
+        },
+        {
+          "text": "て",
+          "start": 42.106,
+          "end": 42.59
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 42.59,
+      "end": 43.69,
+      "text": "やさしく低く",
+      "singableText": "やさしく低く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "やさしく",
+          "start": 42.59,
+          "end": 43.14
+        },
+        {
+          "text": "低く",
+          "start": 43.14,
+          "end": 43.69,
+          "reading": "ひくく"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 45.05,
+      "end": 47.63,
+      "text": "私はベイビー",
+      "singableText": "私はベイビー",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 45.05,
+          "end": 45.91,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 45.91,
+          "end": 46.77
+        },
+        {
+          "text": "ベイビー",
+          "start": 46.77,
+          "end": 47.63
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 47.63,
+      "end": 49.17,
+      "text": "いちばんベイビー",
+      "singableText": "いちばんベイビー",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "いちばん",
+          "start": 47.63,
+          "end": 48.4
+        },
+        {
+          "text": "ベイビー",
+          "start": 48.4,
+          "end": 49.17
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 49.17,
+      "end": 50.35,
+      "text": "ベイビーって呼んで",
+      "singableText": "ベイビーって呼んで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ベイビー",
+          "start": 49.17,
+          "end": 49.465
+        },
+        {
+          "text": "って",
+          "start": 49.465,
+          "end": 49.76
+        },
+        {
+          "text": "呼ん",
+          "start": 49.76,
+          "end": 50.055,
+          "reading": "よん"
+        },
+        {
+          "text": "で",
+          "start": 50.055,
+          "end": 50.35
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 50.35,
+      "end": 51.49,
+      "text": "たぶん呼んで",
+      "singableText": "たぶん呼んで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "たぶん",
+          "start": 50.35,
+          "end": 50.73
+        },
+        {
+          "text": "呼ん",
+          "start": 50.73,
+          "end": 51.11,
+          "reading": "よん"
+        },
+        {
+          "text": "で",
+          "start": 51.11,
+          "end": 51.49
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 53.65,
+      "end": 56.49,
+      "text": "あなたの腕で息ができる",
+      "singableText": "あなたの腕で息ができる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "あなたの",
+          "start": 53.65,
+          "end": 54.218
+        },
+        {
+          "text": "腕",
+          "start": 54.218,
+          "end": 54.786,
+          "reading": "うで"
+        },
+        {
+          "text": "で",
+          "start": 54.786,
+          "end": 55.354
+        },
+        {
+          "text": "息",
+          "start": 55.354,
+          "end": 55.922,
+          "reading": "いき"
+        },
+        {
+          "text": "ができる",
+          "start": 55.922,
+          "end": 56.49
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 56.49,
+      "end": 57.95,
+      "text": "私はベイビー",
+      "singableText": "私はベイビー",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 56.49,
+          "end": 56.977,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 56.977,
+          "end": 57.463
+        },
+        {
+          "text": "ベイビー",
+          "start": 57.463,
+          "end": 57.95
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 57.95,
+      "end": 59.47,
+      "text": "いちばんベイビー",
+      "singableText": "いちばんベイビー",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "いちばん",
+          "start": 57.95,
+          "end": 58.71
+        },
+        {
+          "text": "ベイビー",
+          "start": 58.71,
+          "end": 59.47
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 59.47,
+      "end": 61.89,
+      "text": "ちいさな heart",
+      "singableText": "ちいさな heart",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ちいさな",
+          "start": 59.47,
+          "end": 60.68
+        },
+        {
+          "text": "heart",
+          "start": 60.68,
+          "end": 61.89
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 61.89,
+      "end": 62.89,
+      "text": "まだ crazy",
+      "singableText": "まだ crazy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "まだ",
+          "start": 61.89,
+          "end": 62.39
+        },
+        {
+          "text": "crazy",
+          "start": 62.39,
+          "end": 62.89
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 62.89,
+      "end": 64.19,
+      "text": "秘密を教えるね",
+      "singableText": "秘密を教えるね",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "秘密",
+          "start": 62.89,
+          "end": 63.215,
+          "reading": "ひみつ"
+        },
+        {
+          "text": "を",
+          "start": 63.215,
+          "end": 63.54
+        },
+        {
+          "text": "教え",
+          "start": 63.54,
+          "end": 63.865,
+          "reading": "おしえ"
+        },
+        {
+          "text": "るね",
+          "start": 63.865,
+          "end": 64.19
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 64.19,
+      "end": 65.39,
+      "text": "私は安全だよ",
+      "singableText": "私は安全だよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 64.19,
+          "end": 64.49,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 64.49,
+          "end": 64.79
+        },
+        {
+          "text": "安全",
+          "start": 64.79,
+          "end": 65.09,
+          "reading": "あんぜん"
+        },
+        {
+          "text": "だよ",
+          "start": 65.09,
+          "end": 65.39
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 65.39,
+      "end": 66.87,
+      "text": "あなたがベイビーと呼ぶ時",
+      "singableText": "あなたがベイビーと呼ぶ時",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "あなたが",
+          "start": 65.39,
+          "end": 65.686
+        },
+        {
+          "text": "ベイビー",
+          "start": 65.686,
+          "end": 65.982
+        },
+        {
+          "text": "と",
+          "start": 65.982,
+          "end": 66.278
+        },
+        {
+          "text": "呼ぶ",
+          "start": 66.278,
+          "end": 66.574,
+          "reading": "よぶ"
+        },
+        {
+          "text": "時",
+          "start": 66.574,
+          "end": 66.87,
+          "reading": "とき"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from the selected ACE XL Turbo seed 770711 vocal using same-render medium ASR, the planned mixed-language lyric, and sound-close correction. Unsung planned bridge/final-chorus lines are intentionally omitted from the public timing."
+  }
+}
