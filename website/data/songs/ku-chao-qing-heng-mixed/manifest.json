@@ -1,0 +1,634 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "ku-chao-qing-heng-mixed",
+  "kind": "song",
+  "title": "哭晁卿衡 · Moon Over The Blue Sea",
+  "localizedTitles": {
+    "zh-Hans": "哭晁卿衡 · 碧海明月",
+    "en": "Moon Over The Blue Sea",
+    "ja": "碧海の月"
+  },
+  "artist": "Musia",
+  "description": "A mixed English, Japanese romaji, and Mandarin pinyin ACE-Step ocean elegy from Li Bai's original poem 哭晁卿衡.",
+  "caption": "One sail leaves the Tang capital; the moon sinks into the blue sea and white clouds carry sorrow.",
+  "duration": 74.0,
+  "canonicalUrl": "https://fun.lazying.art/#ku-chao-qing-heng-mixed",
+  "share": {
+    "title": "哭晁卿衡 · Moon Over The Blue Sea - Fun Lazying Art",
+    "description": "A Musia mixed-language Li Bai ocean elegy with corrected synced lyrics, pinyin, furigana, chords, and stems.",
+    "url": "https://fun.lazying.art/#ku-chao-qing-heng-mixed",
+    "image": "assets/covers/ku-chao-qing-heng-mixed-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Moonlit sea cover",
+      "role": "cover",
+      "src": "assets/covers/ku-chao-qing-heng-mixed-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/ku-chao-qing-heng-mixed-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "ku-chao-qing-heng-mixed",
+      "label": "Mixed",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "mul",
+      "languageLabel": "Mixed",
+      "lyricSetId": "mixed-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/ku-chao-qing-heng-mixed-ace-xl-turbo-seed780824-20260708.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "detected A minor / modal ocean elegy",
+    "bpm": 143.555,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 1.393,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 1.393,
+        "end": 1.811,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 1.811,
+        "end": 2.206,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 2.206,
+        "end": 2.624,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 2.624,
+        "end": 3.019,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 3.019,
+        "end": 3.831,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 3.831,
+        "end": 4.226,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 4.226,
+        "end": 6.269,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 6.269,
+        "end": 7.5,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 7.5,
+        "end": 7.895,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 7.895,
+        "end": 9.497,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 9.497,
+        "end": 11.146,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 11.146,
+        "end": 14.35,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 14.35,
+        "end": 15.581,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 15.581,
+        "end": 15.975,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 15.975,
+        "end": 17.601,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 17.601,
+        "end": 18.39,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 18.39,
+        "end": 18.808,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 18.808,
+        "end": 19.226,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 19.226,
+        "end": 20.016,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 20.016,
+        "end": 20.434,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 20.434,
+        "end": 20.828,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 20.828,
+        "end": 22.454,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 22.454,
+        "end": 23.29,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 23.29,
+        "end": 24.102,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 24.102,
+        "end": 25.31,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 25.31,
+        "end": 27.33,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 27.33,
+        "end": 28.955,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 28.955,
+        "end": 29.768,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 29.768,
+        "end": 30.163,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 30.163,
+        "end": 30.557,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 30.557,
+        "end": 32.183,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 32.183,
+        "end": 33.437,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 33.437,
+        "end": 35.039,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 35.039,
+        "end": 35.434,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 35.434,
+        "end": 37.036,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 37.036,
+        "end": 39.892,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 39.892,
+        "end": 40.287,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 40.287,
+        "end": 41.912,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 41.912,
+        "end": 43.537,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 43.537,
+        "end": 45.163,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 45.163,
+        "end": 46.765,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 46.765,
+        "end": 47.16,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 47.16,
+        "end": 47.578,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 47.578,
+        "end": 48.39,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 48.39,
+        "end": 49.621,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 49.621,
+        "end": 50.434,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 50.434,
+        "end": 52.013,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 52.013,
+        "end": 54.497,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 54.497,
+        "end": 54.892,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 54.892,
+        "end": 56.099,
+        "name": "Cm",
+        "degree": ""
+      },
+      {
+        "start": 56.099,
+        "end": 56.889,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 56.889,
+        "end": 59.745,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 59.745,
+        "end": 61.37,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 61.37,
+        "end": 62.996,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 62.996,
+        "end": 64.598,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 64.598,
+        "end": 66.223,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 66.223,
+        "end": 67.849,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 67.849,
+        "end": 69.056,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 69.056,
+        "end": 69.474,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 69.474,
+        "end": 71.1,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 71.1,
+        "end": 74.0,
+        "name": "Am",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "mixed-vocal",
+      "label": "Mixed vocal",
+      "languageCode": "mul",
+      "tracks": [
+        {
+          "code": "mul",
+          "label": "Mixed",
+          "nativeLabel": "Mixed",
+          "script": "Latn",
+          "features": [
+            "active-vocal"
+          ],
+          "path": "lyrics/mixed-vocal/mul.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "source-anchor"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 6.32,
+        "end": 8.38,
+        "text": "Haruka umi e"
+      },
+      {
+        "id": "l02",
+        "start": 9.06,
+        "end": 11.52,
+        "text": "One sail fades into blue"
+      },
+      {
+        "id": "l03",
+        "start": 12.94,
+        "end": 15.88,
+        "text": "Ri ben Chao Qing ci di du"
+      },
+      {
+        "id": "l04",
+        "start": 16.32,
+        "end": 18.98,
+        "text": "Zheng fan yi pian rao Peng Hu"
+      },
+      {
+        "id": "l05",
+        "start": 19.48,
+        "end": 21.7,
+        "text": "Haruka umi e"
+      },
+      {
+        "id": "l06",
+        "start": 22.42,
+        "end": 24.88,
+        "text": "Sail away, my friend"
+      },
+      {
+        "id": "l07",
+        "start": 27.54,
+        "end": 30.16,
+        "text": "Ming yue bu gui chen bi hai"
+      },
+      {
+        "id": "l08",
+        "start": 31.0,
+        "end": 31.28,
+        "text": "Moon"
+      },
+      {
+        "id": "l09",
+        "start": 35.24,
+        "end": 37.18,
+        "text": "Tsuki wa kaeranu"
+      },
+      {
+        "id": "l10",
+        "start": 39.28,
+        "end": 41.56,
+        "text": "Ming yue bu gui chen bi hai"
+      },
+      {
+        "id": "l11",
+        "start": 43.06,
+        "end": 44.98,
+        "text": "Bai yun chou se man Cang Wu"
+      },
+      {
+        "id": "l12",
+        "start": 46.06,
+        "end": 48.5,
+        "text": "Moon over the blue sea"
+      },
+      {
+        "id": "l13",
+        "start": 48.84,
+        "end": 50.2,
+        "text": "Shiroi kumo"
+      },
+      {
+        "id": "l14",
+        "start": 50.78,
+        "end": 53.78,
+        "text": "Kanashimi no iro"
+      },
+      {
+        "id": "l15",
+        "start": 57.72,
+        "end": 60.2,
+        "text": "Zheng fan yi pian rao Peng Hu"
+      },
+      {
+        "id": "l16",
+        "start": 62.15,
+        "end": 64.39,
+        "text": "Ri ben Chao Qing ci di du"
+      },
+      {
+        "id": "l17",
+        "start": 64.89,
+        "end": 66.81,
+        "text": "Far beyond the waves"
+      },
+      {
+        "id": "l18",
+        "start": 67.59,
+        "end": 69.73,
+        "text": "I still call your name"
+      }
+    ]
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/ku-chao-qing-heng-mixed-20260708",
+    "audioSource": "ACE-Step 1.5 XL Turbo hook-led phonetic mixed route, seed 780824. Original-character and SFT sweeps were rejected for weak lyric recovery.",
+    "analysisRun": "data/runs/ku-chao-qing-heng-mixed-20260708-seed780824-analysis",
+    "quality": {
+      "gate": "public-candidate",
+      "note": "Phonetic mixed-language render. Usable melody/vocal structure; public Chinese track preserves Li Bai original lines only."
+    },
+    "lyricCorrection": "Same-render small ASR plus medium ASR cross-check and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing.",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0f31e2965e443d1d016a4e6fd187448191ae9596707e9bf706.png",
+    "publicAudio": "ku-chao-qing-heng-mixed-ace-xl-turbo-seed780824-20260708.mp3"
+  },
+  "artifacts": [
+    {
+      "label": "Analysis report",
+      "path": "data/runs/ku-chao-qing-heng-mixed-20260708-seed780824-analysis/REPORT.md"
+    },
+    {
+      "label": "Chords",
+      "path": "data/runs/ku-chao-qing-heng-mixed-20260708-seed780824-analysis/analysis/chords.csv"
+    },
+    {
+      "label": "Beats",
+      "path": "data/runs/ku-chao-qing-heng-mixed-20260708-seed780824-analysis/analysis/beats.csv"
+    },
+    {
+      "label": "Stems",
+      "path": "data/runs/ku-chao-qing-heng-mixed-20260708-seed780824-analysis/stems"
+    }
+  ]
+}

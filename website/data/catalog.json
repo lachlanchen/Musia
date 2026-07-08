@@ -9,6 +9,31 @@
   "defaultMedia": "yun-hai-zhi-lian-haifeng-duange",
   "items": [
     {
+      "id": "ku-chao-qing-heng-mixed",
+      "kind": "song",
+      "title": "哭晁卿衡 · Moon Over The Blue Sea",
+      "artist": "Musia",
+      "summary": "A mixed English, Japanese romaji, and Mandarin pinyin Li Bai ocean elegy with source-only Chinese poem anchors.",
+      "manifest": "data/songs/ku-chao-qing-heng-mixed/manifest.json",
+      "cover": "assets/covers/ku-chao-qing-heng-mixed-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "multilingual",
+        "Tang poetry",
+        "Li Bai",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "the-babiest",
       "kind": "song",
       "title": "The Babiest",

@@ -1,0 +1,709 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "ku-chao-qing-heng-mixed",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 6.32,
+      "end": 8.38,
+      "text": "遥か海へ",
+      "singableText": "遥か海へ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "遥か",
+          "start": 6.32,
+          "end": 7.007,
+          "reading": "はるか"
+        },
+        {
+          "text": "海",
+          "start": 7.007,
+          "end": 7.693,
+          "reading": "うみ"
+        },
+        {
+          "text": "へ",
+          "start": 7.693,
+          "end": 8.38
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 9.06,
+      "end": 11.52,
+      "text": "一つの帆が青へ消える",
+      "singableText": "一つの帆が青へ消える",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一つ",
+          "start": 9.06,
+          "end": 9.367,
+          "reading": "ひとつ"
+        },
+        {
+          "text": "の",
+          "start": 9.367,
+          "end": 9.675
+        },
+        {
+          "text": "帆",
+          "start": 9.675,
+          "end": 9.982,
+          "reading": "ほ"
+        },
+        {
+          "text": "が",
+          "start": 9.982,
+          "end": 10.29
+        },
+        {
+          "text": "青",
+          "start": 10.29,
+          "end": 10.598,
+          "reading": "あお"
+        },
+        {
+          "text": "へ",
+          "start": 10.598,
+          "end": 10.905
+        },
+        {
+          "text": "消え",
+          "start": 10.905,
+          "end": 11.212,
+          "reading": "きえ"
+        },
+        {
+          "text": "る",
+          "start": 11.212,
+          "end": 11.52
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 12.94,
+      "end": 15.88,
+      "text": "晁卿衡は帝都を辞す",
+      "singableText": "晁卿衡は帝都を辞す",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "晁",
+          "start": 12.94,
+          "end": 13.36,
+          "reading": "ちょう"
+        },
+        {
+          "text": "卿",
+          "start": 13.36,
+          "end": 13.78,
+          "reading": "きょう"
+        },
+        {
+          "text": "衡",
+          "start": 13.78,
+          "end": 14.2,
+          "reading": "こう"
+        },
+        {
+          "text": "は",
+          "start": 14.2,
+          "end": 14.62
+        },
+        {
+          "text": "帝都",
+          "start": 14.62,
+          "end": 15.04,
+          "reading": "ていと"
+        },
+        {
+          "text": "を",
+          "start": 15.04,
+          "end": 15.46
+        },
+        {
+          "text": "辞す",
+          "start": 15.46,
+          "end": 15.88,
+          "reading": "じす"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 16.32,
+      "end": 18.98,
+      "text": "征帆一片、蓬壺をめぐる",
+      "singableText": "征帆一片、蓬壺をめぐる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "征",
+          "start": 16.32,
+          "end": 16.7,
+          "reading": "せい"
+        },
+        {
+          "text": "帆",
+          "start": 16.7,
+          "end": 17.08,
+          "reading": "ほ"
+        },
+        {
+          "text": "一片",
+          "start": 17.08,
+          "end": 17.46,
+          "reading": "いっぺん"
+        },
+        {
+          "text": "、",
+          "start": 17.46,
+          "end": 17.84
+        },
+        {
+          "text": "蓬",
+          "start": 17.84,
+          "end": 18.22,
+          "reading": "よもぎ"
+        },
+        {
+          "text": "壺",
+          "start": 18.22,
+          "end": 18.6,
+          "reading": "つぼ"
+        },
+        {
+          "text": "をめぐる",
+          "start": 18.6,
+          "end": 18.98
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 19.48,
+      "end": 21.7,
+      "text": "遥か海へ",
+      "singableText": "遥か海へ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "遥か",
+          "start": 19.48,
+          "end": 20.22,
+          "reading": "はるか"
+        },
+        {
+          "text": "海",
+          "start": 20.22,
+          "end": 20.96,
+          "reading": "うみ"
+        },
+        {
+          "text": "へ",
+          "start": 20.96,
+          "end": 21.7
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 22.42,
+      "end": 24.88,
+      "text": "さらば、友よ",
+      "singableText": "さらば、友よ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "さらば",
+          "start": 22.42,
+          "end": 23.035
+        },
+        {
+          "text": "、",
+          "start": 23.035,
+          "end": 23.65
+        },
+        {
+          "text": "友",
+          "start": 23.65,
+          "end": 24.265,
+          "reading": "とも"
+        },
+        {
+          "text": "よ",
+          "start": 24.265,
+          "end": 24.88
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 27.54,
+      "end": 30.16,
+      "text": "明月は帰らず碧海に沈む",
+      "singableText": "明月は帰らず碧海に沈む",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "明月",
+          "start": 27.54,
+          "end": 27.914,
+          "reading": "めいげつ"
+        },
+        {
+          "text": "は",
+          "start": 27.914,
+          "end": 28.289
+        },
+        {
+          "text": "帰ら",
+          "start": 28.289,
+          "end": 28.663,
+          "reading": "かえら"
+        },
+        {
+          "text": "ず",
+          "start": 28.663,
+          "end": 29.037
+        },
+        {
+          "text": "碧海",
+          "start": 29.037,
+          "end": 29.411,
+          "reading": "へきかい"
+        },
+        {
+          "text": "に",
+          "start": 29.411,
+          "end": 29.786
+        },
+        {
+          "text": "沈む",
+          "start": 29.786,
+          "end": 30.16,
+          "reading": "しずむ"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 31.0,
+      "end": 31.28,
+      "text": "月",
+      "singableText": "月",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 31.0,
+          "end": 31.28,
+          "reading": "がつ"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 35.24,
+      "end": 37.18,
+      "text": "月は帰らない",
+      "singableText": "月は帰らない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 35.24,
+          "end": 35.725,
+          "reading": "がつ"
+        },
+        {
+          "text": "は",
+          "start": 35.725,
+          "end": 36.21
+        },
+        {
+          "text": "帰ら",
+          "start": 36.21,
+          "end": 36.695,
+          "reading": "かえら"
+        },
+        {
+          "text": "ない",
+          "start": 36.695,
+          "end": 37.18
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 39.28,
+      "end": 41.56,
+      "text": "明月は帰らず碧海に沈む",
+      "singableText": "明月は帰らず碧海に沈む",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "明月",
+          "start": 39.28,
+          "end": 39.606,
+          "reading": "めいげつ"
+        },
+        {
+          "text": "は",
+          "start": 39.606,
+          "end": 39.931
+        },
+        {
+          "text": "帰ら",
+          "start": 39.931,
+          "end": 40.257,
+          "reading": "かえら"
+        },
+        {
+          "text": "ず",
+          "start": 40.257,
+          "end": 40.583
+        },
+        {
+          "text": "碧海",
+          "start": 40.583,
+          "end": 40.909,
+          "reading": "へきかい"
+        },
+        {
+          "text": "に",
+          "start": 40.909,
+          "end": 41.234
+        },
+        {
+          "text": "沈む",
+          "start": 41.234,
+          "end": 41.56,
+          "reading": "しずむ"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 43.06,
+      "end": 44.98,
+      "text": "白雲の愁色、蒼梧に満つ",
+      "singableText": "白雲の愁色、蒼梧に満つ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "白雲",
+          "start": 43.06,
+          "end": 43.334,
+          "reading": "はくうん"
+        },
+        {
+          "text": "の",
+          "start": 43.334,
+          "end": 43.609
+        },
+        {
+          "text": "愁色",
+          "start": 43.609,
+          "end": 43.883,
+          "reading": "しゅうしょく"
+        },
+        {
+          "text": "、",
+          "start": 43.883,
+          "end": 44.157
+        },
+        {
+          "text": "蒼梧",
+          "start": 44.157,
+          "end": 44.431,
+          "reading": "そうご"
+        },
+        {
+          "text": "に",
+          "start": 44.431,
+          "end": 44.706
+        },
+        {
+          "text": "満つ",
+          "start": 44.706,
+          "end": 44.98,
+          "reading": "みつ"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 46.06,
+      "end": 48.5,
+      "text": "青い海の月",
+      "singableText": "青い海の月",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "青い",
+          "start": 46.06,
+          "end": 46.67,
+          "reading": "あおい"
+        },
+        {
+          "text": "海",
+          "start": 46.67,
+          "end": 47.28,
+          "reading": "うみ"
+        },
+        {
+          "text": "の",
+          "start": 47.28,
+          "end": 47.89
+        },
+        {
+          "text": "月",
+          "start": 47.89,
+          "end": 48.5,
+          "reading": "がつ"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 48.84,
+      "end": 50.2,
+      "text": "白い雲",
+      "singableText": "白い雲",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "白い",
+          "start": 48.84,
+          "end": 49.52,
+          "reading": "しろい"
+        },
+        {
+          "text": "雲",
+          "start": 49.52,
+          "end": 50.2,
+          "reading": "くも"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 50.78,
+      "end": 53.78,
+      "text": "悲しみの色",
+      "singableText": "悲しみの色",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "悲しみ",
+          "start": 50.78,
+          "end": 51.78,
+          "reading": "かなしみ"
+        },
+        {
+          "text": "の",
+          "start": 51.78,
+          "end": 52.78
+        },
+        {
+          "text": "色",
+          "start": 52.78,
+          "end": 53.78,
+          "reading": "いろ"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 57.72,
+      "end": 60.2,
+      "text": "征帆一片、蓬壺をめぐる",
+      "singableText": "征帆一片、蓬壺をめぐる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "征",
+          "start": 57.72,
+          "end": 58.074,
+          "reading": "せい"
+        },
+        {
+          "text": "帆",
+          "start": 58.074,
+          "end": 58.429,
+          "reading": "ほ"
+        },
+        {
+          "text": "一片",
+          "start": 58.429,
+          "end": 58.783,
+          "reading": "いっぺん"
+        },
+        {
+          "text": "、",
+          "start": 58.783,
+          "end": 59.137
+        },
+        {
+          "text": "蓬",
+          "start": 59.137,
+          "end": 59.491,
+          "reading": "よもぎ"
+        },
+        {
+          "text": "壺",
+          "start": 59.491,
+          "end": 59.846,
+          "reading": "つぼ"
+        },
+        {
+          "text": "をめぐる",
+          "start": 59.846,
+          "end": 60.2
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 62.15,
+      "end": 64.39,
+      "text": "晁卿衡は帝都を辞す",
+      "singableText": "晁卿衡は帝都を辞す",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "晁",
+          "start": 62.15,
+          "end": 62.47,
+          "reading": "ちょう"
+        },
+        {
+          "text": "卿",
+          "start": 62.47,
+          "end": 62.79,
+          "reading": "きょう"
+        },
+        {
+          "text": "衡",
+          "start": 62.79,
+          "end": 63.11,
+          "reading": "こう"
+        },
+        {
+          "text": "は",
+          "start": 63.11,
+          "end": 63.43
+        },
+        {
+          "text": "帝都",
+          "start": 63.43,
+          "end": 63.75,
+          "reading": "ていと"
+        },
+        {
+          "text": "を",
+          "start": 63.75,
+          "end": 64.07
+        },
+        {
+          "text": "辞す",
+          "start": 64.07,
+          "end": 64.39,
+          "reading": "じす"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 64.89,
+      "end": 66.81,
+      "text": "波の彼方へ",
+      "singableText": "波の彼方へ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "波",
+          "start": 64.89,
+          "end": 65.37,
+          "reading": "なみ"
+        },
+        {
+          "text": "の",
+          "start": 65.37,
+          "end": 65.85
+        },
+        {
+          "text": "彼方",
+          "start": 65.85,
+          "end": 66.33,
+          "reading": "かなた"
+        },
+        {
+          "text": "へ",
+          "start": 66.33,
+          "end": 66.81
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 67.59,
+      "end": 69.73,
+      "text": "なお君の名を呼ぶ",
+      "singableText": "なお君の名を呼ぶ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "なお",
+          "start": 67.59,
+          "end": 67.947
+        },
+        {
+          "text": "君",
+          "start": 67.947,
+          "end": 68.303,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 68.303,
+          "end": 68.66
+        },
+        {
+          "text": "名",
+          "start": 68.66,
+          "end": 69.017,
+          "reading": "めい"
+        },
+        {
+          "text": "を",
+          "start": 69.017,
+          "end": 69.373
+        },
+        {
+          "text": "呼ぶ",
+          "start": 69.373,
+          "end": 69.73,
+          "reading": "よぶ"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 780824 using same-render small ASR, medium ASR cross-check, and the compact hook prompt. The active mul track is a phonetic performance layer; zh-Hans uses only original Li Bai source lines as requested."
+  }
+}
