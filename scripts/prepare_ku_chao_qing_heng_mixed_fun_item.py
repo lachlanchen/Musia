@@ -205,7 +205,7 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str]]:
         ("l08", 31.00, 31.28, "Moon", "Moon", "月", "明月不归沉碧海"),
         ("l09", 35.24, 37.18, "Tsuki wa kaeranu", "The moon will not return", "月は帰らない", "明月不归沉碧海"),
         ("l10", 39.28, 41.56, "Ming yue bu gui chen bi hai", "The bright moon will not return, sunk in the blue sea", "明月は帰らず碧海に沈む", "明月不归沉碧海"),
-        ("l11", 43.06, 44.98, "Bai yun chou se man Cang Wu", "White clouds fill Cangwu with sorrow", "白雲の愁色、蒼梧に満つ", "白云愁色满苍梧"),
+        ("l11", 43.06, 44.98, "Yun chou se man Cang Wu", "Clouds fill Cangwu with sorrow", "雲の愁色、蒼梧に満つ", "白云愁色满苍梧"),
         ("l12", 46.06, 48.50, "Moon over the blue sea", "Moon over the blue sea", "青い海の月", "明月不归沉碧海"),
         ("l13", 48.84, 50.20, "Shiroi kumo", "White clouds", "白い雲", "白云愁色满苍梧"),
         ("l14", 50.78, 53.78, "Kanashimi no iro", "The color of grief", "悲しみの色", "白云愁色满苍梧"),
@@ -227,8 +227,8 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
             "vocalSet": "mixed-vocal",
             "correction": (
                 "Corrected from selected ACE XL Turbo seed 780824 using same-render small ASR, "
-                "medium ASR cross-check, and the compact hook prompt. The active mul track is a "
-                "phonetic performance layer; zh-Hans uses only original Li Bai source lines as requested."
+                "large-v3 full-mix/vocal-stem ASR cross-checks, and the compact hook prompt. The active "
+                "mul track is a phonetic performance layer; zh-Hans uses only original Li Bai source lines as requested."
             ),
         },
     }
@@ -411,7 +411,7 @@ def write_media_item() -> None:
                 "gate": "public-candidate",
                 "note": "Phonetic mixed-language render. Usable melody/vocal structure; public Chinese track preserves Li Bai original lines only.",
             },
-            "lyricCorrection": "Same-render small ASR plus medium ASR cross-check and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing.",
+            "lyricCorrection": "Same-render small ASR plus large-v3 full-mix/vocal-stem ASR cross-checks and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing. Source-close Li Bai pinyin is preserved where ASR drifts; l11 is corrected to the actually recovered Yun chou se line while the zh-Hans source anchor remains 白云愁色满苍梧.",
             "coverSource": str(COVER_SOURCE),
             "publicAudio": PUBLIC_AUDIO_NAME,
         },

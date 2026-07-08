@@ -353,43 +353,38 @@
       "id": "l11",
       "start": 43.06,
       "end": 44.98,
-      "text": "Bai yun chou se man Cang Wu",
-      "singableText": "Bai yun chou se man Cang Wu",
+      "text": "Yun chou se man Cang Wu",
+      "singableText": "Yun chou se man Cang Wu",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Bai",
+          "text": "Yun",
           "start": 43.06,
-          "end": 43.334
-        },
-        {
-          "text": "yun",
-          "start": 43.334,
-          "end": 43.609
+          "end": 43.38
         },
         {
           "text": "chou",
-          "start": 43.609,
-          "end": 43.883
+          "start": 43.38,
+          "end": 43.7
         },
         {
           "text": "se",
-          "start": 43.883,
-          "end": 44.157
+          "start": 43.7,
+          "end": 44.02
         },
         {
           "text": "man",
-          "start": 44.157,
-          "end": 44.431
+          "start": 44.02,
+          "end": 44.34
         },
         {
           "text": "Cang",
-          "start": 44.431,
-          "end": 44.706
+          "start": 44.34,
+          "end": 44.66
         },
         {
           "text": "Wu",
-          "start": 44.706,
+          "start": 44.66,
           "end": 44.98
         }
       ]
@@ -632,6 +627,6 @@
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from selected ACE XL Turbo seed 780824 using same-render small ASR, medium ASR cross-check, and the compact hook prompt. The active mul track is a phonetic performance layer; zh-Hans uses only original Li Bai source lines as requested."
+    "correction": "Corrected from selected ACE XL Turbo seed 780824 using same-render small ASR, large-v3 full-mix/vocal-stem ASR cross-checks, and the compact hook prompt. The active mul track is a phonetic performance layer; zh-Hans uses only original Li Bai source lines as requested."
   }
 }

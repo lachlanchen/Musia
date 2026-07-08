@@ -408,38 +408,33 @@
       "id": "l11",
       "start": 43.06,
       "end": 44.98,
-      "text": "White clouds fill Cangwu with sorrow",
-      "singableText": "White clouds fill Cangwu with sorrow",
+      "text": "Clouds fill Cangwu with sorrow",
+      "singableText": "Clouds fill Cangwu with sorrow",
       "role": "lyric",
       "tokens": [
         {
-          "text": "White",
+          "text": "Clouds",
           "start": 43.06,
-          "end": 43.38
-        },
-        {
-          "text": "clouds",
-          "start": 43.38,
-          "end": 43.7
+          "end": 43.444
         },
         {
           "text": "fill",
-          "start": 43.7,
-          "end": 44.02
+          "start": 43.444,
+          "end": 43.828
         },
         {
           "text": "Cangwu",
-          "start": 44.02,
-          "end": 44.34
+          "start": 43.828,
+          "end": 44.212
         },
         {
           "text": "with",
-          "start": 44.34,
-          "end": 44.66
+          "start": 44.212,
+          "end": 44.596
         },
         {
           "text": "sorrow",
-          "start": 44.66,
+          "start": 44.596,
           "end": 44.98
         }
       ]
@@ -662,6 +657,6 @@
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from selected ACE XL Turbo seed 780824 using same-render small ASR, medium ASR cross-check, and the compact hook prompt. The active mul track is a phonetic performance layer; zh-Hans uses only original Li Bai source lines as requested."
+    "correction": "Corrected from selected ACE XL Turbo seed 780824 using same-render small ASR, large-v3 full-mix/vocal-stem ASR cross-checks, and the compact hook prompt. The active mul track is a phonetic performance layer; zh-Hans uses only original Li Bai source lines as requested."
   }
 }

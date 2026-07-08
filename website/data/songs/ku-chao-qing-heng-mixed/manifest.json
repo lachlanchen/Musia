@@ -551,7 +551,7 @@
         "id": "l11",
         "start": 43.06,
         "end": 44.98,
-        "text": "Bai yun chou se man Cang Wu"
+        "text": "Yun chou se man Cang Wu"
       },
       {
         "id": "l12",
@@ -609,7 +609,7 @@
       "gate": "public-candidate",
       "note": "Phonetic mixed-language render. Usable melody/vocal structure; public Chinese track preserves Li Bai original lines only."
     },
-    "lyricCorrection": "Same-render small ASR plus medium ASR cross-check and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing.",
+    "lyricCorrection": "Same-render small ASR plus large-v3 full-mix/vocal-stem ASR cross-checks and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing. Source-close Li Bai pinyin is preserved where ASR drifts; l11 is corrected to the actually recovered Yun chou se line while the zh-Hans source anchor remains 白云愁色满苍梧.",
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0f31e2965e443d1d016a4e6fd187448191ae9596707e9bf706.png",
     "publicAudio": "ku-chao-qing-heng-mixed-ace-xl-turbo-seed780824-20260708.mp3"
   },
