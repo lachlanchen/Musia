@@ -537,60 +537,66 @@
       },
       {
         "id": "l09",
+        "start": 31.28,
+        "end": 35.24,
+        "text": "Moonlight will not return to me"
+      },
+      {
+        "id": "l10",
         "start": 35.24,
         "end": 37.18,
         "text": "Tsuki wa kaeranu"
       },
       {
-        "id": "l10",
+        "id": "l11",
         "start": 39.28,
         "end": 41.56,
         "text": "Ming yue bu gui chen bi hai"
       },
       {
-        "id": "l11",
+        "id": "l12",
         "start": 43.06,
         "end": 44.98,
         "text": "Bai yun chou se man Cang Wu"
       },
       {
-        "id": "l12",
+        "id": "l13",
         "start": 46.06,
         "end": 48.5,
         "text": "Moon over the blue sea"
       },
       {
-        "id": "l13",
+        "id": "l14",
         "start": 48.84,
         "end": 50.2,
         "text": "Shiroi kumo"
       },
       {
-        "id": "l14",
+        "id": "l15",
         "start": 50.78,
         "end": 53.78,
         "text": "Kanashimi no iro"
       },
       {
-        "id": "l15",
+        "id": "l16",
         "start": 57.72,
         "end": 60.2,
-        "text": "Zheng fan yi pian rao"
+        "text": "Zheng fan yi pian rao Peng Hu"
       },
       {
-        "id": "l16",
+        "id": "l17",
         "start": 62.15,
         "end": 64.39,
         "text": "Ri ben Chao Qing ci di du"
       },
       {
-        "id": "l17",
+        "id": "l18",
         "start": 64.89,
         "end": 66.81,
         "text": "Far beyond the waves"
       },
       {
-        "id": "l18",
+        "id": "l19",
         "start": 67.59,
         "end": 69.73,
         "text": "I still call your name"
@@ -609,7 +615,7 @@
       "gate": "public-candidate",
       "note": "Phonetic mixed-language render. Usable melody/vocal structure; Chinese companion track translates the active mixed line and preserves original poem text where poem pinyin is sung."
     },
-    "lyricCorrection": "Same-render small ASR plus large-v3 full-mix/vocal-stem ASR cross-checks and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing. The active mul track preserves intended pinyin/romaji/English where ASR is only a close phonetic drift, and only shortens l15 where the selected vocal structurally drops Peng Hu. zh-Hans translates each active line; original Li Bai text is used only for lines whose active vocal is poem pinyin.",
+    "lyricCorrection": "Same-render small ASR plus large-v3 full-mix/vocal-stem ASR cross-checks, user listening notes, and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing. The active mul track preserves intended pinyin/romaji/English where ASR is only a close phonetic drift. The English moonlight phrase after `Moon` is restored from the source lyric/listening gap, and all `Zheng fan yi pian rao Peng Hu` poem-pinyin lines keep the original Chinese poem translation.",
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0f31e2965e443d1d016a4e6fd187448191ae9596707e9bf706.png",
     "publicAudio": "ku-chao-qing-heng-mixed-ace-xl-turbo-seed780824-20260708.mp3"
   },

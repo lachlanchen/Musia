@@ -30,7 +30,17 @@ experimental and leave it out of the public/final path. Regenerate with the
 best full-song model instead, even if EN/JP/ZH end up as independent high-quality
 versions rather than one perfectly shared melody.
 
-Planned lyrics are intent, not truth. After generation, use listening and ASR/STT evidence to decide what the render actually sang. If the rendered vocal differs from the planned lyric, document the mismatch and publish lyrics/timing that match the audio.
+Planned lyrics are intent, not blind truth. After generation, use listening and ASR/STT evidence to decide what the render actually sang. If the rendered vocal differs from the planned lyric, document the mismatch and publish lyrics/timing that match the audio. If ASR only substitutes a nearby word and the planned lyric is phonetically close, grammatically stronger, and supported by listening, keep the planned lyric.
+
+Before calling lyric correction complete, run a word-by-word planned-line
+coverage audit. Compare every planned/reference line against the corrected
+active vocal and mark it as kept, sound-close corrected, split, merged,
+omitted-not-audible, or translation-only. Mixed-language ASR can miss a whole
+English or Japanese line inside a timing gap between recognized segments, so
+inspect gaps manually and restore sound-supported planned lines with real
+timing. Do not record, publish, or package Shipinhao Music until every planned
+line is accounted for and companion EN/JA/ZH tracks translate the actual active
+line.
 
 Avoid real singer imitation or voice cloning unless the user owns or has explicit consent.
 

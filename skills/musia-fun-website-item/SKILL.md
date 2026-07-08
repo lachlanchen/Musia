@@ -41,6 +41,23 @@ Use this priority:
 audio truth > ASR text > input/reference lyric > translation draft
 ```
 
+Do not treat ASR as a complete transcript for mixed-language vocals. Before any
+recording, LazyEdit publish, or Shipinhao Music package, print a side-by-side
+coverage table of `planned/reference line -> corrected active line/timing ->
+EN/JA/ZH companion lines`. Every planned line must be accounted for as `kept`,
+`sound-close corrected`, `split`, `merged`, `omitted-not-audible`, or
+`translation-only`.
+
+Audit timing gaps between recognized ASR segments. A real English or Japanese
+line can be swallowed by ASR and live entirely in the gap between two recognized
+lines, such as an English line after `Moon` and before a Japanese line. If the
+line is plausibly audible and supported by the planned lyric/listening, add it
+as its own timed line and translate it in every companion track.
+
+For poem-pinyin active lines, keep the source poem in the Chinese companion
+track. For English/Japanese active lines, translate the actual active line; do
+not repeat poem anchors as a generic Chinese translation.
+
 Normalize model-facing language codes before ASR/model calls: use `zh` for
 Mandarin when the website track is `zh-Hans` / `zh-Hant`, and use `yue` for
 Cantonese when the website track is `yue-Hant` / `yue-Hans`. Keep the public
@@ -143,6 +160,8 @@ Before calling an item public-demo quality:
 - confirm translation highlighting stays within the current line ID;
 - confirm the visible text language matches the track code, especially for
   Japanese/Chinese/Cantonese tracks;
+- confirm every planned/reference line has been accounted for in the corrected
+  active track, including lines hidden in ASR timing gaps;
 - confirm pinyin/furigana/Jyutping display once and cleanly;
 - confirm the chord row has a current highlighted chord when chord data exists;
 - confirm title, artist `Musia`, cover, social image, and localized titles are present;
