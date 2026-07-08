@@ -92,4 +92,4 @@ document the compromise here.
 
 Original-character route notes: the native CJK mixed sweep produced very weak lyric recovery. SFT hook comparison produced generic outro chatter. The selected Turbo hook route recovered the main pinyin/romaji/English shape best.
 
-Correction compromise: active `mul` lyrics are phonetic because that is what the selected audio sings. The `zh-Hans` track uses only original Li Bai poem lines as source anchors, not modern Chinese paraphrase.
+Correction compromise: active `mul` lyrics are phonetic because that is what the selected audio sings. The `zh-Hans` track translates each active line, preserving original Li Bai lines where the active vocal sings poem pinyin.

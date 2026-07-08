@@ -408,33 +408,38 @@
       "id": "l11",
       "start": 43.06,
       "end": 44.98,
-      "text": "Clouds fill Cangwu with sorrow",
-      "singableText": "Clouds fill Cangwu with sorrow",
+      "text": "White clouds fill Cangwu with sorrow",
+      "singableText": "White clouds fill Cangwu with sorrow",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Clouds",
+          "text": "White",
           "start": 43.06,
-          "end": 43.444
+          "end": 43.38
+        },
+        {
+          "text": "clouds",
+          "start": 43.38,
+          "end": 43.7
         },
         {
           "text": "fill",
-          "start": 43.444,
-          "end": 43.828
+          "start": 43.7,
+          "end": 44.02
         },
         {
           "text": "Cangwu",
-          "start": 43.828,
-          "end": 44.212
+          "start": 44.02,
+          "end": 44.34
         },
         {
           "text": "with",
-          "start": 44.212,
-          "end": 44.596
+          "start": 44.34,
+          "end": 44.66
         },
         {
           "text": "sorrow",
-          "start": 44.596,
+          "start": 44.66,
           "end": 44.98
         }
       ]
@@ -528,28 +533,38 @@
       "id": "l15",
       "start": 57.72,
       "end": 60.2,
-      "text": "One sail circles Penghu",
-      "singableText": "One sail circles Penghu",
+      "text": "One sail circles beyond the waves",
+      "singableText": "One sail circles beyond the waves",
       "role": "lyric",
       "tokens": [
         {
           "text": "One",
           "start": 57.72,
-          "end": 58.34
+          "end": 58.133
         },
         {
           "text": "sail",
-          "start": 58.34,
-          "end": 58.96
+          "start": 58.133,
+          "end": 58.547
         },
         {
           "text": "circles",
-          "start": 58.96,
-          "end": 59.58
+          "start": 58.547,
+          "end": 58.96
         },
         {
-          "text": "Penghu",
-          "start": 59.58,
+          "text": "beyond",
+          "start": 58.96,
+          "end": 59.373
+        },
+        {
+          "text": "the",
+          "start": 59.373,
+          "end": 59.787
+        },
+        {
+          "text": "waves",
+          "start": 59.787,
           "end": 60.2
         }
       ]

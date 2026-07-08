@@ -353,38 +353,43 @@
       "id": "l11",
       "start": 43.06,
       "end": 44.98,
-      "text": "Yun chou se man Cang Wu",
-      "singableText": "Yun chou se man Cang Wu",
+      "text": "Bai yun chou se man Cang Wu",
+      "singableText": "Bai yun chou se man Cang Wu",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Yun",
+          "text": "Bai",
           "start": 43.06,
-          "end": 43.38
+          "end": 43.334
+        },
+        {
+          "text": "yun",
+          "start": 43.334,
+          "end": 43.609
         },
         {
           "text": "chou",
-          "start": 43.38,
-          "end": 43.7
+          "start": 43.609,
+          "end": 43.883
         },
         {
           "text": "se",
-          "start": 43.7,
-          "end": 44.02
+          "start": 43.883,
+          "end": 44.157
         },
         {
           "text": "man",
-          "start": 44.02,
-          "end": 44.34
+          "start": 44.157,
+          "end": 44.431
         },
         {
           "text": "Cang",
-          "start": 44.34,
-          "end": 44.66
+          "start": 44.431,
+          "end": 44.706
         },
         {
           "text": "Wu",
-          "start": 44.66,
+          "start": 44.706,
           "end": 44.98
         }
       ]
@@ -473,43 +478,33 @@
       "id": "l15",
       "start": 57.72,
       "end": 60.2,
-      "text": "Zheng fan yi pian rao Peng Hu",
-      "singableText": "Zheng fan yi pian rao Peng Hu",
+      "text": "Zheng fan yi pian rao",
+      "singableText": "Zheng fan yi pian rao",
       "role": "lyric",
       "tokens": [
         {
           "text": "Zheng",
           "start": 57.72,
-          "end": 58.074
+          "end": 58.216
         },
         {
           "text": "fan",
-          "start": 58.074,
-          "end": 58.429
+          "start": 58.216,
+          "end": 58.712
         },
         {
           "text": "yi",
-          "start": 58.429,
-          "end": 58.783
+          "start": 58.712,
+          "end": 59.208
         },
         {
           "text": "pian",
-          "start": 58.783,
-          "end": 59.137
+          "start": 59.208,
+          "end": 59.704
         },
         {
           "text": "rao",
-          "start": 59.137,
-          "end": 59.491
-        },
-        {
-          "text": "Peng",
-          "start": 59.491,
-          "end": 59.846
-        },
-        {
-          "text": "Hu",
-          "start": 59.846,
+          "start": 59.704,
           "end": 60.2
         }
       ]

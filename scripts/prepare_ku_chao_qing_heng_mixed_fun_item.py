@@ -189,30 +189,30 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str]]:
     - Intended compact hook lyric in `lyrics/mixed-hook-phonetic.txt`.
 
     The selected audio is a phonetic mixed render. The active `mul` track keeps
-    pinyin/romaji/English where ACE sang them. The Chinese public track is not
-    a literal translation of every companion line; it is a source-poem anchor
-    that uses only Li Bai's original lines, per the user's constraint.
+    pinyin/romaji/English where ACE sang them. Companion tracks translate the
+    audible active line; source-poem Chinese is used only when that line is
+    actually the poem pinyin.
     """
 
     return [
-        ("l01", 6.32, 8.38, "Haruka umi e", "To the distant sea", "遥か海へ", "征帆一片绕蓬壶"),
-        ("l02", 9.06, 11.52, "One sail fades into blue", "One sail fades into blue", "一つの帆が青へ消える", "征帆一片绕蓬壶"),
+        ("l01", 6.32, 8.38, "Haruka umi e", "To the distant sea", "遥か海へ", "遥向大海"),
+        ("l02", 9.06, 11.52, "One sail fades into blue", "One sail fades into blue", "一つの帆が青へ消える", "一叶帆影淡入蓝海"),
         ("l03", 12.94, 15.88, "Ri ben Chao Qing ci di du", "Chao Qingheng leaves the imperial city", "晁卿衡は帝都を辞す", "日本晁卿辞帝都"),
         ("l04", 16.32, 18.98, "Zheng fan yi pian rao Peng Hu", "One expedition sail circles Penghu", "征帆一片、蓬壺をめぐる", "征帆一片绕蓬壶"),
-        ("l05", 19.48, 21.70, "Haruka umi e", "To the distant sea", "遥か海へ", "征帆一片绕蓬壶"),
-        ("l06", 22.42, 24.88, "Sail away, my friend", "Sail away, my friend", "さらば、友よ", "日本晁卿辞帝都"),
+        ("l05", 19.48, 21.70, "Haruka umi e", "To the distant sea", "遥か海へ", "遥向大海"),
+        ("l06", 22.42, 24.88, "Sail away, my friend", "Sail away, my friend", "さらば、友よ", "远航吧，我的朋友"),
         ("l07", 27.54, 30.16, "Ming yue bu gui chen bi hai", "The bright moon will not return, sunk in the blue sea", "明月は帰らず碧海に沈む", "明月不归沉碧海"),
-        ("l08", 31.00, 31.28, "Moon", "Moon", "月", "明月不归沉碧海"),
-        ("l09", 35.24, 37.18, "Tsuki wa kaeranu", "The moon will not return", "月は帰らない", "明月不归沉碧海"),
+        ("l08", 31.00, 31.28, "Moon", "Moon", "月", "明月"),
+        ("l09", 35.24, 37.18, "Tsuki wa kaeranu", "The moon will not return", "月は帰らない", "月不归来"),
         ("l10", 39.28, 41.56, "Ming yue bu gui chen bi hai", "The bright moon will not return, sunk in the blue sea", "明月は帰らず碧海に沈む", "明月不归沉碧海"),
-        ("l11", 43.06, 44.98, "Yun chou se man Cang Wu", "Clouds fill Cangwu with sorrow", "雲の愁色、蒼梧に満つ", "白云愁色满苍梧"),
-        ("l12", 46.06, 48.50, "Moon over the blue sea", "Moon over the blue sea", "青い海の月", "明月不归沉碧海"),
-        ("l13", 48.84, 50.20, "Shiroi kumo", "White clouds", "白い雲", "白云愁色满苍梧"),
-        ("l14", 50.78, 53.78, "Kanashimi no iro", "The color of grief", "悲しみの色", "白云愁色满苍梧"),
-        ("l15", 57.72, 60.20, "Zheng fan yi pian rao Peng Hu", "One sail circles Penghu", "征帆一片、蓬壺をめぐる", "征帆一片绕蓬壶"),
+        ("l11", 43.06, 44.98, "Bai yun chou se man Cang Wu", "White clouds fill Cangwu with sorrow", "白雲の愁色、蒼梧に満つ", "白云愁色满苍梧"),
+        ("l12", 46.06, 48.50, "Moon over the blue sea", "Moon over the blue sea", "青い海の月", "碧海上的明月"),
+        ("l13", 48.84, 50.20, "Shiroi kumo", "White clouds", "白い雲", "白云"),
+        ("l14", 50.78, 53.78, "Kanashimi no iro", "The color of grief", "悲しみの色", "悲伤的颜色"),
+        ("l15", 57.72, 60.20, "Zheng fan yi pian rao", "One sail circles beyond the waves", "征帆一片、波をめぐる", "征帆一片绕过波涛"),
         ("l16", 62.15, 64.39, "Ri ben Chao Qing ci di du", "Chao Qingheng leaves the city", "晁卿衡は帝都を辞す", "日本晁卿辞帝都"),
-        ("l17", 64.89, 66.81, "Far beyond the waves", "Far beyond the waves", "波の彼方へ", "征帆一片绕蓬壶"),
-        ("l18", 67.59, 69.73, "I still call your name", "I still call your name", "なお君の名を呼ぶ", "日本晁卿辞帝都"),
+        ("l17", 64.89, 66.81, "Far beyond the waves", "Far beyond the waves", "波の彼方へ", "远在浪涛之外"),
+        ("l18", 67.59, 69.73, "I still call your name", "I still call your name", "なお君の名を呼ぶ", "我仍呼唤你的名字"),
     ]
 
 
@@ -409,9 +409,9 @@ def write_media_item() -> None:
             "analysisRun": str(ANALYSIS.relative_to(ROOT)),
             "quality": {
                 "gate": "public-candidate",
-                "note": "Phonetic mixed-language render. Usable melody/vocal structure; public Chinese track preserves Li Bai original lines only.",
+                "note": "Phonetic mixed-language render. Usable melody/vocal structure; Chinese companion track translates the active mixed line and preserves original poem text where poem pinyin is sung.",
             },
-            "lyricCorrection": "Same-render small ASR plus large-v3 full-mix/vocal-stem ASR cross-checks and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing. Source-close Li Bai pinyin is preserved where ASR drifts; l11 is corrected to the actually recovered Yun chou se line while the zh-Hans source anchor remains 白云愁色满苍梧.",
+            "lyricCorrection": "Same-render small ASR plus large-v3 full-mix/vocal-stem ASR cross-checks and prompt lyric. Unsung final hook lines after 69.73s are omitted from active timing. The active mul track preserves intended pinyin/romaji/English where ASR is only a close phonetic drift, and only shortens l15 where the selected vocal structurally drops Peng Hu. zh-Hans translates each active line; original Li Bai text is used only for lines whose active vocal is poem pinyin.",
             "coverSource": str(COVER_SOURCE),
             "publicAudio": PUBLIC_AUDIO_NAME,
         },
@@ -462,7 +462,7 @@ def update_reference() -> None:
             "",
             "Original-character route notes: the native CJK mixed sweep produced very weak lyric recovery. SFT hook comparison produced generic outro chatter. The selected Turbo hook route recovered the main pinyin/romaji/English shape best.",
             "",
-            "Correction compromise: active `mul` lyrics are phonetic because that is what the selected audio sings. The `zh-Hans` track uses only original Li Bai poem lines as source anchors, not modern Chinese paraphrase.",
+            "Correction compromise: active `mul` lyrics are phonetic because that is what the selected audio sings. The `zh-Hans` track translates each active line, preserving original Li Bai lines where the active vocal sings poem pinyin.",
             "",
         ]
     )
