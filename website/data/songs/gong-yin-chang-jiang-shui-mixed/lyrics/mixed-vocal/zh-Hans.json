@@ -1,0 +1,717 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "gong-yin-chang-jiang-shui-mixed",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.3,
+      "end": 3.16,
+      "text": "我住长江头",
+      "singableText": "我住长江头",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 0.3,
+          "end": 0.872,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "住",
+          "start": 0.872,
+          "end": 1.444,
+          "pinyin": "zhu4"
+        },
+        {
+          "text": "长",
+          "start": 1.444,
+          "end": 2.016,
+          "pinyin": "zhang3"
+        },
+        {
+          "text": "江",
+          "start": 2.016,
+          "end": 2.588,
+          "pinyin": "jiang1"
+        },
+        {
+          "text": "头",
+          "start": 2.588,
+          "end": 3.16,
+          "pinyin": "tou2"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.16,
+      "end": 6.94,
+      "text": "你住在江水尽头",
+      "singableText": "你住在江水尽头",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 3.16,
+          "end": 3.7,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "住",
+          "start": 3.7,
+          "end": 4.24,
+          "pinyin": "zhu4"
+        },
+        {
+          "text": "在",
+          "start": 4.24,
+          "end": 4.78,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "江",
+          "start": 4.78,
+          "end": 5.32,
+          "pinyin": "jiang1"
+        },
+        {
+          "text": "水",
+          "start": 5.32,
+          "end": 5.86,
+          "pinyin": "shui3"
+        },
+        {
+          "text": "尽",
+          "start": 5.86,
+          "end": 6.4,
+          "pinyin": "jin3"
+        },
+        {
+          "text": "头",
+          "start": 6.4,
+          "end": 6.94,
+          "pinyin": "tou2"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 13.86,
+      "end": 17.12,
+      "text": "日日思君不见君",
+      "singableText": "日日思君不见君",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "日",
+          "start": 13.86,
+          "end": 14.326,
+          "pinyin": "ri4"
+        },
+        {
+          "text": "日",
+          "start": 14.326,
+          "end": 14.791,
+          "pinyin": "ri4"
+        },
+        {
+          "text": "思",
+          "start": 14.791,
+          "end": 15.257,
+          "pinyin": "si1"
+        },
+        {
+          "text": "君",
+          "start": 15.257,
+          "end": 15.723,
+          "pinyin": "jun1"
+        },
+        {
+          "text": "不",
+          "start": 15.723,
+          "end": 16.189,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "见",
+          "start": 16.189,
+          "end": 16.654,
+          "pinyin": "jian4"
+        },
+        {
+          "text": "君",
+          "start": 16.654,
+          "end": 17.12,
+          "pinyin": "jun1"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 17.12,
+      "end": 20.66,
+      "text": "我们仍共饮一江水",
+      "singableText": "我们仍共饮一江水",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 17.12,
+          "end": 17.562,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "们",
+          "start": 17.562,
+          "end": 18.005,
+          "pinyin": "men5"
+        },
+        {
+          "text": "仍",
+          "start": 18.005,
+          "end": 18.448,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "共",
+          "start": 18.448,
+          "end": 18.89,
+          "pinyin": "gong4"
+        },
+        {
+          "text": "饮",
+          "start": 18.89,
+          "end": 19.332,
+          "pinyin": "yin3"
+        },
+        {
+          "text": "一",
+          "start": 19.332,
+          "end": 19.775,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "江",
+          "start": 19.775,
+          "end": 20.218,
+          "pinyin": "jiang1"
+        },
+        {
+          "text": "水",
+          "start": 20.218,
+          "end": 20.66,
+          "pinyin": "shui3"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 22.24,
+      "end": 25.4,
+      "text": "同一条河的水",
+      "singableText": "同一条河的水",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同",
+          "start": 22.24,
+          "end": 22.767,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "一",
+          "start": 22.767,
+          "end": 23.293,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "条",
+          "start": 23.293,
+          "end": 23.82,
+          "pinyin": "tiao2"
+        },
+        {
+          "text": "河",
+          "start": 23.82,
+          "end": 24.347,
+          "pinyin": "he2"
+        },
+        {
+          "text": "的",
+          "start": 24.347,
+          "end": 24.873,
+          "pinyin": "de5"
+        },
+        {
+          "text": "水",
+          "start": 24.873,
+          "end": 25.4,
+          "pinyin": "shui3"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 28.16,
+      "end": 30.7,
+      "text": "共饮长江水",
+      "singableText": "共饮长江水",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "共",
+          "start": 28.16,
+          "end": 28.668,
+          "pinyin": "gong4"
+        },
+        {
+          "text": "饮",
+          "start": 28.668,
+          "end": 29.176,
+          "pinyin": "yin3"
+        },
+        {
+          "text": "长",
+          "start": 29.176,
+          "end": 29.684,
+          "pinyin": "zhang3"
+        },
+        {
+          "text": "江",
+          "start": 29.684,
+          "end": 30.192,
+          "pinyin": "jiang1"
+        },
+        {
+          "text": "水",
+          "start": 30.192,
+          "end": 30.7,
+          "pinyin": "shui3"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 30.7,
+      "end": 33.92,
+      "text": "同一条河，同一片月光",
+      "singableText": "同一条河，同一片月光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同",
+          "start": 30.7,
+          "end": 31.022,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "一",
+          "start": 31.022,
+          "end": 31.344,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "条",
+          "start": 31.344,
+          "end": 31.666,
+          "pinyin": "tiao2"
+        },
+        {
+          "text": "河",
+          "start": 31.666,
+          "end": 31.988,
+          "pinyin": "he2"
+        },
+        {
+          "text": "，",
+          "start": 31.988,
+          "end": 32.31
+        },
+        {
+          "text": "同",
+          "start": 32.31,
+          "end": 32.632,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "一",
+          "start": 32.632,
+          "end": 32.954,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "片",
+          "start": 32.954,
+          "end": 33.276,
+          "pinyin": "pian4"
+        },
+        {
+          "text": "月",
+          "start": 33.276,
+          "end": 33.598,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "光",
+          "start": 33.598,
+          "end": 33.92,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 33.92,
+      "end": 36.84,
+      "text": "心与你相连",
+      "singableText": "心与你相连",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "心",
+          "start": 33.92,
+          "end": 34.504,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "与",
+          "start": 34.504,
+          "end": 35.088,
+          "pinyin": "yu3"
+        },
+        {
+          "text": "你",
+          "start": 35.088,
+          "end": 35.672,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "相",
+          "start": 35.672,
+          "end": 36.256,
+          "pinyin": "xiang1"
+        },
+        {
+          "text": "连",
+          "start": 36.256,
+          "end": 36.84,
+          "pinyin": "lian2"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 36.84,
+      "end": 41.22,
+      "text": "只愿君心似我心",
+      "singableText": "只愿君心似我心",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "只",
+          "start": 36.84,
+          "end": 37.466,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "愿",
+          "start": 37.466,
+          "end": 38.091,
+          "pinyin": "yuan4"
+        },
+        {
+          "text": "君",
+          "start": 38.091,
+          "end": 38.717,
+          "pinyin": "jun1"
+        },
+        {
+          "text": "心",
+          "start": 38.717,
+          "end": 39.343,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "似",
+          "start": 39.343,
+          "end": 39.969,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "我",
+          "start": 39.969,
+          "end": 40.594,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "心",
+          "start": 40.594,
+          "end": 41.22,
+          "pinyin": "xin1"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 41.22,
+      "end": 44.26,
+      "text": "此水几时休",
+      "singableText": "此水几时休",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "此",
+          "start": 41.22,
+          "end": 41.828,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "水",
+          "start": 41.828,
+          "end": 42.436,
+          "pinyin": "shui3"
+        },
+        {
+          "text": "几",
+          "start": 42.436,
+          "end": 43.044,
+          "pinyin": "ji3"
+        },
+        {
+          "text": "时",
+          "start": 43.044,
+          "end": 43.652,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "休",
+          "start": 43.652,
+          "end": 44.26,
+          "pinyin": "xiu1"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.26,
+      "end": 47.08,
+      "text": "此恨何时已",
+      "singableText": "此恨何时已",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "此",
+          "start": 44.26,
+          "end": 44.824,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "恨",
+          "start": 44.824,
+          "end": 45.388,
+          "pinyin": "hen4"
+        },
+        {
+          "text": "何",
+          "start": 45.388,
+          "end": 45.952,
+          "pinyin": "he2"
+        },
+        {
+          "text": "时",
+          "start": 45.952,
+          "end": 46.516,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "已",
+          "start": 46.516,
+          "end": 47.08,
+          "pinyin": "yi3"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 47.08,
+      "end": 54.06,
+      "text": "此水何时休，此恨何时已",
+      "singableText": "此水何时休，此恨何时已",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "此",
+          "start": 47.08,
+          "end": 47.715,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "水",
+          "start": 47.715,
+          "end": 48.349,
+          "pinyin": "shui3"
+        },
+        {
+          "text": "何",
+          "start": 48.349,
+          "end": 48.984,
+          "pinyin": "he2"
+        },
+        {
+          "text": "时",
+          "start": 48.984,
+          "end": 49.618,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "休",
+          "start": 49.618,
+          "end": 50.253,
+          "pinyin": "xiu1"
+        },
+        {
+          "text": "，",
+          "start": 50.253,
+          "end": 50.887
+        },
+        {
+          "text": "此",
+          "start": 50.887,
+          "end": 51.522,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "恨",
+          "start": 51.522,
+          "end": 52.156,
+          "pinyin": "hen4"
+        },
+        {
+          "text": "何",
+          "start": 52.156,
+          "end": 52.791,
+          "pinyin": "he2"
+        },
+        {
+          "text": "时",
+          "start": 52.791,
+          "end": 53.425,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "已",
+          "start": 53.425,
+          "end": 54.06,
+          "pinyin": "yi3"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 54.06,
+      "end": 57.82,
+      "text": "只愿君心似我心",
+      "singableText": "只愿君心似我心",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "只",
+          "start": 54.06,
+          "end": 54.597,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "愿",
+          "start": 54.597,
+          "end": 55.134,
+          "pinyin": "yuan4"
+        },
+        {
+          "text": "君",
+          "start": 55.134,
+          "end": 55.671,
+          "pinyin": "jun1"
+        },
+        {
+          "text": "心",
+          "start": 55.671,
+          "end": 56.209,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "似",
+          "start": 56.209,
+          "end": 56.746,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "我",
+          "start": 56.746,
+          "end": 57.283,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "心",
+          "start": 57.283,
+          "end": 57.82,
+          "pinyin": "xin1"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 57.82,
+      "end": 61.12,
+      "text": "我相信",
+      "singableText": "我相信",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 57.82,
+          "end": 58.92,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "相",
+          "start": 58.92,
+          "end": 60.02,
+          "pinyin": "xiang1"
+        },
+        {
+          "text": "信",
+          "start": 60.02,
+          "end": 61.12,
+          "pinyin": "xin4"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 61.12,
+      "end": 74.04,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 61.12,
+          "end": 74.04
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 790904 using segment-level large-v3 English ASR on the vocal stem, full-render small ASR, large-v3 Mandarin ASR cross-check, and the compact planned mixed lyric. Prompt lines not audibly recovered by the selected render are omitted."
+  }
+}

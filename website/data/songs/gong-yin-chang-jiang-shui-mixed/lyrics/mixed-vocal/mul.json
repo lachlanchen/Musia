@@ -1,0 +1,562 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "gong-yin-chang-jiang-shui-mixed",
+  "language": {
+    "code": "mul",
+    "label": "Mixed",
+    "nativeLabel": "Mixed",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.3,
+      "end": 3.16,
+      "text": "Wo zhu Chang Jiang tou",
+      "singableText": "Wo zhu Chang Jiang tou",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Wo",
+          "start": 0.3,
+          "end": 0.872
+        },
+        {
+          "text": "zhu",
+          "start": 0.872,
+          "end": 1.444
+        },
+        {
+          "text": "Chang",
+          "start": 1.444,
+          "end": 2.016
+        },
+        {
+          "text": "Jiang",
+          "start": 2.016,
+          "end": 2.588
+        },
+        {
+          "text": "tou",
+          "start": 2.588,
+          "end": 3.16
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.16,
+      "end": 6.94,
+      "text": "You live where the river ends",
+      "singableText": "You live where the river ends",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 3.16,
+          "end": 3.79
+        },
+        {
+          "text": "live",
+          "start": 3.79,
+          "end": 4.42
+        },
+        {
+          "text": "where",
+          "start": 4.42,
+          "end": 5.05
+        },
+        {
+          "text": "the",
+          "start": 5.05,
+          "end": 5.68
+        },
+        {
+          "text": "river",
+          "start": 5.68,
+          "end": 6.31
+        },
+        {
+          "text": "ends",
+          "start": 6.31,
+          "end": 6.94
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 13.86,
+      "end": 17.12,
+      "text": "Ri ri si jun bu jian jun",
+      "singableText": "Ri ri si jun bu jian jun",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ri",
+          "start": 13.86,
+          "end": 14.326
+        },
+        {
+          "text": "ri",
+          "start": 14.326,
+          "end": 14.791
+        },
+        {
+          "text": "si",
+          "start": 14.791,
+          "end": 15.257
+        },
+        {
+          "text": "jun",
+          "start": 15.257,
+          "end": 15.723
+        },
+        {
+          "text": "bu",
+          "start": 15.723,
+          "end": 16.189
+        },
+        {
+          "text": "jian",
+          "start": 16.189,
+          "end": 16.654
+        },
+        {
+          "text": "jun",
+          "start": 16.654,
+          "end": 17.12
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 17.12,
+      "end": 20.66,
+      "text": "Still we drink the same water",
+      "singableText": "Still we drink the same water",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Still",
+          "start": 17.12,
+          "end": 17.71
+        },
+        {
+          "text": "we",
+          "start": 17.71,
+          "end": 18.3
+        },
+        {
+          "text": "drink",
+          "start": 18.3,
+          "end": 18.89
+        },
+        {
+          "text": "the",
+          "start": 18.89,
+          "end": 19.48
+        },
+        {
+          "text": "same",
+          "start": 19.48,
+          "end": 20.07
+        },
+        {
+          "text": "water",
+          "start": 20.07,
+          "end": 20.66
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 22.24,
+      "end": 25.4,
+      "text": "Onaji kawa no mizu",
+      "singableText": "Onaji kawa no mizu",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Onaji",
+          "start": 22.24,
+          "end": 23.03
+        },
+        {
+          "text": "kawa",
+          "start": 23.03,
+          "end": 23.82
+        },
+        {
+          "text": "no",
+          "start": 23.82,
+          "end": 24.61
+        },
+        {
+          "text": "mizu",
+          "start": 24.61,
+          "end": 25.4
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 28.16,
+      "end": 30.7,
+      "text": "Gong yin Chang Jiang shui",
+      "singableText": "Gong yin Chang Jiang shui",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Gong",
+          "start": 28.16,
+          "end": 28.668
+        },
+        {
+          "text": "yin",
+          "start": 28.668,
+          "end": 29.176
+        },
+        {
+          "text": "Chang",
+          "start": 29.176,
+          "end": 29.684
+        },
+        {
+          "text": "Jiang",
+          "start": 29.684,
+          "end": 30.192
+        },
+        {
+          "text": "shui",
+          "start": 30.192,
+          "end": 30.7
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 30.7,
+      "end": 33.92,
+      "text": "Same river, same moonlight",
+      "singableText": "Same river, same moonlight",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Same",
+          "start": 30.7,
+          "end": 31.344
+        },
+        {
+          "text": "river",
+          "start": 31.344,
+          "end": 31.988
+        },
+        {
+          "text": ",",
+          "start": 31.988,
+          "end": 32.632
+        },
+        {
+          "text": "same",
+          "start": 32.632,
+          "end": 33.276
+        },
+        {
+          "text": "moonlight",
+          "start": 33.276,
+          "end": 33.92
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 33.92,
+      "end": 36.84,
+      "text": "Kokoro wa kimi e",
+      "singableText": "Kokoro wa kimi e",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Kokoro",
+          "start": 33.92,
+          "end": 34.65
+        },
+        {
+          "text": "wa",
+          "start": 34.65,
+          "end": 35.38
+        },
+        {
+          "text": "kimi",
+          "start": 35.38,
+          "end": 36.11
+        },
+        {
+          "text": "e",
+          "start": 36.11,
+          "end": 36.84
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 36.84,
+      "end": 41.22,
+      "text": "Zhi yuan jun xin si wo xin",
+      "singableText": "Zhi yuan jun xin si wo xin",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Zhi",
+          "start": 36.84,
+          "end": 37.466
+        },
+        {
+          "text": "yuan",
+          "start": 37.466,
+          "end": 38.091
+        },
+        {
+          "text": "jun",
+          "start": 38.091,
+          "end": 38.717
+        },
+        {
+          "text": "xin",
+          "start": 38.717,
+          "end": 39.343
+        },
+        {
+          "text": "si",
+          "start": 39.343,
+          "end": 39.969
+        },
+        {
+          "text": "wo",
+          "start": 39.969,
+          "end": 40.594
+        },
+        {
+          "text": "xin",
+          "start": 40.594,
+          "end": 41.22
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 41.22,
+      "end": 44.26,
+      "text": "Ci shui ji shi xiu",
+      "singableText": "Ci shui ji shi xiu",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ci",
+          "start": 41.22,
+          "end": 41.828
+        },
+        {
+          "text": "shui",
+          "start": 41.828,
+          "end": 42.436
+        },
+        {
+          "text": "ji",
+          "start": 42.436,
+          "end": 43.044
+        },
+        {
+          "text": "shi",
+          "start": 43.044,
+          "end": 43.652
+        },
+        {
+          "text": "xiu",
+          "start": 43.652,
+          "end": 44.26
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.26,
+      "end": 47.08,
+      "text": "Ci hen he shi yi",
+      "singableText": "Ci hen he shi yi",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ci",
+          "start": 44.26,
+          "end": 44.824
+        },
+        {
+          "text": "hen",
+          "start": 44.824,
+          "end": 45.388
+        },
+        {
+          "text": "he",
+          "start": 45.388,
+          "end": 45.952
+        },
+        {
+          "text": "shi",
+          "start": 45.952,
+          "end": 46.516
+        },
+        {
+          "text": "yi",
+          "start": 46.516,
+          "end": 47.08
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 47.08,
+      "end": 54.06,
+      "text": "When will this river rest, this longing sleep",
+      "singableText": "When will this river rest, this longing sleep",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "When",
+          "start": 47.08,
+          "end": 47.856
+        },
+        {
+          "text": "will",
+          "start": 47.856,
+          "end": 48.631
+        },
+        {
+          "text": "this",
+          "start": 48.631,
+          "end": 49.407
+        },
+        {
+          "text": "river",
+          "start": 49.407,
+          "end": 50.182
+        },
+        {
+          "text": "rest",
+          "start": 50.182,
+          "end": 50.958
+        },
+        {
+          "text": ",",
+          "start": 50.958,
+          "end": 51.733
+        },
+        {
+          "text": "this",
+          "start": 51.733,
+          "end": 52.509
+        },
+        {
+          "text": "longing",
+          "start": 52.509,
+          "end": 53.284
+        },
+        {
+          "text": "sleep",
+          "start": 53.284,
+          "end": 54.06
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 54.06,
+      "end": 57.82,
+      "text": "Zhi yuan jun xin si wo xin",
+      "singableText": "Zhi yuan jun xin si wo xin",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Zhi",
+          "start": 54.06,
+          "end": 54.597
+        },
+        {
+          "text": "yuan",
+          "start": 54.597,
+          "end": 55.134
+        },
+        {
+          "text": "jun",
+          "start": 55.134,
+          "end": 55.671
+        },
+        {
+          "text": "xin",
+          "start": 55.671,
+          "end": 56.209
+        },
+        {
+          "text": "si",
+          "start": 56.209,
+          "end": 56.746
+        },
+        {
+          "text": "wo",
+          "start": 56.746,
+          "end": 57.283
+        },
+        {
+          "text": "xin",
+          "start": 57.283,
+          "end": 57.82
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 57.82,
+      "end": 61.12,
+      "text": "Wo xiang xin",
+      "singableText": "Wo xiang xin",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Wo",
+          "start": 57.82,
+          "end": 58.92
+        },
+        {
+          "text": "xiang",
+          "start": 58.92,
+          "end": 60.02
+        },
+        {
+          "text": "xin",
+          "start": 60.02,
+          "end": 61.12
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 61.12,
+      "end": 74.04,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 61.12,
+          "end": 74.04
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 790904 using segment-level large-v3 English ASR on the vocal stem, full-render small ASR, large-v3 Mandarin ASR cross-check, and the compact planned mixed lyric. Prompt lines not audibly recovered by the selected render are omitted."
+  }
+}

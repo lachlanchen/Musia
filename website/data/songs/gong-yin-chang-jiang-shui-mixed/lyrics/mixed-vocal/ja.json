@@ -1,0 +1,649 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "gong-yin-chang-jiang-shui-mixed",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.3,
+      "end": 3.16,
+      "text": "私は長江の上流に住む",
+      "singableText": "私は長江の上流に住む",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 0.3,
+          "end": 0.709,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 0.709,
+          "end": 1.117
+        },
+        {
+          "text": "長江",
+          "start": 1.117,
+          "end": 1.526,
+          "reading": "ちょうこう"
+        },
+        {
+          "text": "の",
+          "start": 1.526,
+          "end": 1.934
+        },
+        {
+          "text": "上流",
+          "start": 1.934,
+          "end": 2.343,
+          "reading": "じょうりゅう"
+        },
+        {
+          "text": "に",
+          "start": 2.343,
+          "end": 2.751
+        },
+        {
+          "text": "住む",
+          "start": 2.751,
+          "end": 3.16,
+          "reading": "すむ"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.16,
+      "end": 6.94,
+      "text": "君は川の果てにいる",
+      "singableText": "君は川の果てにいる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 3.16,
+          "end": 3.79,
+          "reading": "くん"
+        },
+        {
+          "text": "は",
+          "start": 3.79,
+          "end": 4.42
+        },
+        {
+          "text": "川",
+          "start": 4.42,
+          "end": 5.05,
+          "reading": "かわ"
+        },
+        {
+          "text": "の",
+          "start": 5.05,
+          "end": 5.68
+        },
+        {
+          "text": "果て",
+          "start": 5.68,
+          "end": 6.31,
+          "reading": "はて"
+        },
+        {
+          "text": "にいる",
+          "start": 6.31,
+          "end": 6.94
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 13.86,
+      "end": 17.12,
+      "text": "日々君を思えど会えない",
+      "singableText": "日々君を思えど会えない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "日々",
+          "start": 13.86,
+          "end": 14.326,
+          "reading": "ひび"
+        },
+        {
+          "text": "君",
+          "start": 14.326,
+          "end": 14.791,
+          "reading": "くん"
+        },
+        {
+          "text": "を",
+          "start": 14.791,
+          "end": 15.257
+        },
+        {
+          "text": "思え",
+          "start": 15.257,
+          "end": 15.723,
+          "reading": "おもえ"
+        },
+        {
+          "text": "ど",
+          "start": 15.723,
+          "end": 16.189
+        },
+        {
+          "text": "会え",
+          "start": 16.189,
+          "end": 16.654,
+          "reading": "あえ"
+        },
+        {
+          "text": "ない",
+          "start": 16.654,
+          "end": 17.12
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 17.12,
+      "end": 20.66,
+      "text": "それでも同じ水を飲む",
+      "singableText": "それでも同じ水を飲む",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "それでも",
+          "start": 17.12,
+          "end": 17.828
+        },
+        {
+          "text": "同じ",
+          "start": 17.828,
+          "end": 18.536,
+          "reading": "おなじ"
+        },
+        {
+          "text": "水",
+          "start": 18.536,
+          "end": 19.244,
+          "reading": "みず"
+        },
+        {
+          "text": "を",
+          "start": 19.244,
+          "end": 19.952
+        },
+        {
+          "text": "飲む",
+          "start": 19.952,
+          "end": 20.66,
+          "reading": "のむ"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 22.24,
+      "end": 25.4,
+      "text": "同じ川の水",
+      "singableText": "同じ川の水",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同じ",
+          "start": 22.24,
+          "end": 23.03,
+          "reading": "おなじ"
+        },
+        {
+          "text": "川",
+          "start": 23.03,
+          "end": 23.82,
+          "reading": "かわ"
+        },
+        {
+          "text": "の",
+          "start": 23.82,
+          "end": 24.61
+        },
+        {
+          "text": "水",
+          "start": 24.61,
+          "end": 25.4,
+          "reading": "みず"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 28.16,
+      "end": 30.7,
+      "text": "長江の水を共に飲む",
+      "singableText": "長江の水を共に飲む",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "長江",
+          "start": 28.16,
+          "end": 28.583,
+          "reading": "ちょうこう"
+        },
+        {
+          "text": "の",
+          "start": 28.583,
+          "end": 29.007
+        },
+        {
+          "text": "水",
+          "start": 29.007,
+          "end": 29.43,
+          "reading": "みず"
+        },
+        {
+          "text": "を",
+          "start": 29.43,
+          "end": 29.853
+        },
+        {
+          "text": "共に",
+          "start": 29.853,
+          "end": 30.277,
+          "reading": "ともに"
+        },
+        {
+          "text": "飲む",
+          "start": 30.277,
+          "end": 30.7,
+          "reading": "のむ"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 30.7,
+      "end": 33.92,
+      "text": "同じ川、同じ月明かり",
+      "singableText": "同じ川、同じ月明かり",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同じ",
+          "start": 30.7,
+          "end": 31.237,
+          "reading": "おなじ"
+        },
+        {
+          "text": "川",
+          "start": 31.237,
+          "end": 31.773,
+          "reading": "かわ"
+        },
+        {
+          "text": "、",
+          "start": 31.773,
+          "end": 32.31
+        },
+        {
+          "text": "同じ",
+          "start": 32.31,
+          "end": 32.847,
+          "reading": "おなじ"
+        },
+        {
+          "text": "月明",
+          "start": 32.847,
+          "end": 33.383,
+          "reading": "げつめい"
+        },
+        {
+          "text": "かり",
+          "start": 33.383,
+          "end": 33.92
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 33.92,
+      "end": 36.84,
+      "text": "心は君へ向かう",
+      "singableText": "心は君へ向かう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "心は",
+          "start": 33.92,
+          "end": 34.504,
+          "reading": "こころは"
+        },
+        {
+          "text": "君",
+          "start": 34.504,
+          "end": 35.088,
+          "reading": "くん"
+        },
+        {
+          "text": "へ",
+          "start": 35.088,
+          "end": 35.672
+        },
+        {
+          "text": "向か",
+          "start": 35.672,
+          "end": 36.256,
+          "reading": "むか"
+        },
+        {
+          "text": "う",
+          "start": 36.256,
+          "end": 36.84
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 36.84,
+      "end": 41.22,
+      "text": "君の心が私の心のようでありますように",
+      "singableText": "君の心が私の心のようでありますように",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 36.84,
+          "end": 37.388,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 37.388,
+          "end": 37.935
+        },
+        {
+          "text": "心",
+          "start": 37.935,
+          "end": 38.483,
+          "reading": "こころ"
+        },
+        {
+          "text": "が",
+          "start": 38.483,
+          "end": 39.03
+        },
+        {
+          "text": "私",
+          "start": 39.03,
+          "end": 39.578,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 39.578,
+          "end": 40.125
+        },
+        {
+          "text": "心",
+          "start": 40.125,
+          "end": 40.672,
+          "reading": "こころ"
+        },
+        {
+          "text": "のようでありますように",
+          "start": 40.672,
+          "end": 41.22
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 41.22,
+      "end": 44.26,
+      "text": "この水はいつ休むのか",
+      "singableText": "この水はいつ休むのか",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 41.22,
+          "end": 41.828
+        },
+        {
+          "text": "水",
+          "start": 41.828,
+          "end": 42.436,
+          "reading": "みず"
+        },
+        {
+          "text": "はいつ",
+          "start": 42.436,
+          "end": 43.044
+        },
+        {
+          "text": "休む",
+          "start": 43.044,
+          "end": 43.652,
+          "reading": "やすむ"
+        },
+        {
+          "text": "のか",
+          "start": 43.652,
+          "end": 44.26
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.26,
+      "end": 47.08,
+      "text": "この思いはいつ終わるのか",
+      "singableText": "この思いはいつ終わるのか",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 44.26,
+          "end": 44.824
+        },
+        {
+          "text": "思い",
+          "start": 44.824,
+          "end": 45.388,
+          "reading": "おもい"
+        },
+        {
+          "text": "はいつ",
+          "start": 45.388,
+          "end": 45.952
+        },
+        {
+          "text": "終わ",
+          "start": 45.952,
+          "end": 46.516,
+          "reading": "おわ"
+        },
+        {
+          "text": "るのか",
+          "start": 46.516,
+          "end": 47.08
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 47.08,
+      "end": 54.06,
+      "text": "この川はいつ休み、この思いはいつ眠るのか",
+      "singableText": "この川はいつ休み、この思いはいつ眠るのか",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 47.08,
+          "end": 47.778
+        },
+        {
+          "text": "川",
+          "start": 47.778,
+          "end": 48.476,
+          "reading": "かわ"
+        },
+        {
+          "text": "はいつ",
+          "start": 48.476,
+          "end": 49.174
+        },
+        {
+          "text": "休み",
+          "start": 49.174,
+          "end": 49.872,
+          "reading": "やすみ"
+        },
+        {
+          "text": "、",
+          "start": 49.872,
+          "end": 50.57
+        },
+        {
+          "text": "この",
+          "start": 50.57,
+          "end": 51.268
+        },
+        {
+          "text": "思い",
+          "start": 51.268,
+          "end": 51.966,
+          "reading": "おもい"
+        },
+        {
+          "text": "はいつ",
+          "start": 51.966,
+          "end": 52.664
+        },
+        {
+          "text": "眠る",
+          "start": 52.664,
+          "end": 53.362,
+          "reading": "ねむる"
+        },
+        {
+          "text": "のか",
+          "start": 53.362,
+          "end": 54.06
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 54.06,
+      "end": 57.82,
+      "text": "君の心が私の心のようでありますように",
+      "singableText": "君の心が私の心のようでありますように",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 54.06,
+          "end": 54.53,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 54.53,
+          "end": 55.0
+        },
+        {
+          "text": "心",
+          "start": 55.0,
+          "end": 55.47,
+          "reading": "こころ"
+        },
+        {
+          "text": "が",
+          "start": 55.47,
+          "end": 55.94
+        },
+        {
+          "text": "私",
+          "start": 55.94,
+          "end": 56.41,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 56.41,
+          "end": 56.88
+        },
+        {
+          "text": "心",
+          "start": 56.88,
+          "end": 57.35,
+          "reading": "こころ"
+        },
+        {
+          "text": "のようでありますように",
+          "start": 57.35,
+          "end": 57.82
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 57.82,
+      "end": 61.12,
+      "text": "私はまだ信じている",
+      "singableText": "私はまだ信じている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 57.82,
+          "end": 58.645,
+          "reading": "わたし"
+        },
+        {
+          "text": "はまだ",
+          "start": 58.645,
+          "end": 59.47
+        },
+        {
+          "text": "信じ",
+          "start": 59.47,
+          "end": 60.295,
+          "reading": "しんじ"
+        },
+        {
+          "text": "ている",
+          "start": 60.295,
+          "end": 61.12
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 61.12,
+      "end": 74.04,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 61.12,
+          "end": 74.04
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 790904 using segment-level large-v3 English ASR on the vocal stem, full-render small ASR, large-v3 Mandarin ASR cross-check, and the compact planned mixed lyric. Prompt lines not audibly recovered by the selected render are omitted."
+  }
+}

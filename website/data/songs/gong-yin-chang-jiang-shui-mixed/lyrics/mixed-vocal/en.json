@@ -1,0 +1,662 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "gong-yin-chang-jiang-shui-mixed",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.3,
+      "end": 3.16,
+      "text": "I live at the head of the Yangtze.",
+      "singableText": "I live at the head of the Yangtze.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 0.3,
+          "end": 0.618
+        },
+        {
+          "text": "live",
+          "start": 0.618,
+          "end": 0.936
+        },
+        {
+          "text": "at",
+          "start": 0.936,
+          "end": 1.253
+        },
+        {
+          "text": "the",
+          "start": 1.253,
+          "end": 1.571
+        },
+        {
+          "text": "head",
+          "start": 1.571,
+          "end": 1.889
+        },
+        {
+          "text": "of",
+          "start": 1.889,
+          "end": 2.207
+        },
+        {
+          "text": "the",
+          "start": 2.207,
+          "end": 2.524
+        },
+        {
+          "text": "Yangtze",
+          "start": 2.524,
+          "end": 2.842
+        },
+        {
+          "text": ".",
+          "start": 2.842,
+          "end": 3.16
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 3.16,
+      "end": 6.94,
+      "text": "You live where the river ends.",
+      "singableText": "You live where the river ends.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 3.16,
+          "end": 3.7
+        },
+        {
+          "text": "live",
+          "start": 3.7,
+          "end": 4.24
+        },
+        {
+          "text": "where",
+          "start": 4.24,
+          "end": 4.78
+        },
+        {
+          "text": "the",
+          "start": 4.78,
+          "end": 5.32
+        },
+        {
+          "text": "river",
+          "start": 5.32,
+          "end": 5.86
+        },
+        {
+          "text": "ends",
+          "start": 5.86,
+          "end": 6.4
+        },
+        {
+          "text": ".",
+          "start": 6.4,
+          "end": 6.94
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 13.86,
+      "end": 17.12,
+      "text": "Day after day I miss you but cannot see you.",
+      "singableText": "Day after day I miss you but cannot see you.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Day",
+          "start": 13.86,
+          "end": 14.156
+        },
+        {
+          "text": "after",
+          "start": 14.156,
+          "end": 14.453
+        },
+        {
+          "text": "day",
+          "start": 14.453,
+          "end": 14.749
+        },
+        {
+          "text": "I",
+          "start": 14.749,
+          "end": 15.045
+        },
+        {
+          "text": "miss",
+          "start": 15.045,
+          "end": 15.342
+        },
+        {
+          "text": "you",
+          "start": 15.342,
+          "end": 15.638
+        },
+        {
+          "text": "but",
+          "start": 15.638,
+          "end": 15.935
+        },
+        {
+          "text": "cannot",
+          "start": 15.935,
+          "end": 16.231
+        },
+        {
+          "text": "see",
+          "start": 16.231,
+          "end": 16.527
+        },
+        {
+          "text": "you",
+          "start": 16.527,
+          "end": 16.824
+        },
+        {
+          "text": ".",
+          "start": 16.824,
+          "end": 17.12
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 17.12,
+      "end": 20.66,
+      "text": "Still we drink the same water.",
+      "singableText": "Still we drink the same water.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Still",
+          "start": 17.12,
+          "end": 17.626
+        },
+        {
+          "text": "we",
+          "start": 17.626,
+          "end": 18.131
+        },
+        {
+          "text": "drink",
+          "start": 18.131,
+          "end": 18.637
+        },
+        {
+          "text": "the",
+          "start": 18.637,
+          "end": 19.143
+        },
+        {
+          "text": "same",
+          "start": 19.143,
+          "end": 19.649
+        },
+        {
+          "text": "water",
+          "start": 19.649,
+          "end": 20.154
+        },
+        {
+          "text": ".",
+          "start": 20.154,
+          "end": 20.66
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 22.24,
+      "end": 25.4,
+      "text": "The same river water.",
+      "singableText": "The same river water.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 22.24,
+          "end": 22.872
+        },
+        {
+          "text": "same",
+          "start": 22.872,
+          "end": 23.504
+        },
+        {
+          "text": "river",
+          "start": 23.504,
+          "end": 24.136
+        },
+        {
+          "text": "water",
+          "start": 24.136,
+          "end": 24.768
+        },
+        {
+          "text": ".",
+          "start": 24.768,
+          "end": 25.4
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 28.16,
+      "end": 30.7,
+      "text": "We drink the Yangtze water together.",
+      "singableText": "We drink the Yangtze water together.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "We",
+          "start": 28.16,
+          "end": 28.523
+        },
+        {
+          "text": "drink",
+          "start": 28.523,
+          "end": 28.886
+        },
+        {
+          "text": "the",
+          "start": 28.886,
+          "end": 29.249
+        },
+        {
+          "text": "Yangtze",
+          "start": 29.249,
+          "end": 29.611
+        },
+        {
+          "text": "water",
+          "start": 29.611,
+          "end": 29.974
+        },
+        {
+          "text": "together",
+          "start": 29.974,
+          "end": 30.337
+        },
+        {
+          "text": ".",
+          "start": 30.337,
+          "end": 30.7
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 30.7,
+      "end": 33.92,
+      "text": "Same river, same moonlight.",
+      "singableText": "Same river, same moonlight.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Same",
+          "start": 30.7,
+          "end": 31.237
+        },
+        {
+          "text": "river",
+          "start": 31.237,
+          "end": 31.773
+        },
+        {
+          "text": ",",
+          "start": 31.773,
+          "end": 32.31
+        },
+        {
+          "text": "same",
+          "start": 32.31,
+          "end": 32.847
+        },
+        {
+          "text": "moonlight",
+          "start": 32.847,
+          "end": 33.383
+        },
+        {
+          "text": ".",
+          "start": 33.383,
+          "end": 33.92
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 33.92,
+      "end": 36.84,
+      "text": "My heart goes to you.",
+      "singableText": "My heart goes to you.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 33.92,
+          "end": 34.407
+        },
+        {
+          "text": "heart",
+          "start": 34.407,
+          "end": 34.893
+        },
+        {
+          "text": "goes",
+          "start": 34.893,
+          "end": 35.38
+        },
+        {
+          "text": "to",
+          "start": 35.38,
+          "end": 35.867
+        },
+        {
+          "text": "you",
+          "start": 35.867,
+          "end": 36.353
+        },
+        {
+          "text": ".",
+          "start": 36.353,
+          "end": 36.84
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 36.84,
+      "end": 41.22,
+      "text": "May your heart be like mine.",
+      "singableText": "May your heart be like mine.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "May",
+          "start": 36.84,
+          "end": 37.466
+        },
+        {
+          "text": "your",
+          "start": 37.466,
+          "end": 38.091
+        },
+        {
+          "text": "heart",
+          "start": 38.091,
+          "end": 38.717
+        },
+        {
+          "text": "be",
+          "start": 38.717,
+          "end": 39.343
+        },
+        {
+          "text": "like",
+          "start": 39.343,
+          "end": 39.969
+        },
+        {
+          "text": "mine",
+          "start": 39.969,
+          "end": 40.594
+        },
+        {
+          "text": ".",
+          "start": 40.594,
+          "end": 41.22
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 41.22,
+      "end": 44.26,
+      "text": "When will this water rest?",
+      "singableText": "When will this water rest?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "When",
+          "start": 41.22,
+          "end": 41.727
+        },
+        {
+          "text": "will",
+          "start": 41.727,
+          "end": 42.233
+        },
+        {
+          "text": "this",
+          "start": 42.233,
+          "end": 42.74
+        },
+        {
+          "text": "water",
+          "start": 42.74,
+          "end": 43.247
+        },
+        {
+          "text": "rest",
+          "start": 43.247,
+          "end": 43.753
+        },
+        {
+          "text": "?",
+          "start": 43.753,
+          "end": 44.26
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.26,
+      "end": 47.08,
+      "text": "When will this longing end?",
+      "singableText": "When will this longing end?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "When",
+          "start": 44.26,
+          "end": 44.73
+        },
+        {
+          "text": "will",
+          "start": 44.73,
+          "end": 45.2
+        },
+        {
+          "text": "this",
+          "start": 45.2,
+          "end": 45.67
+        },
+        {
+          "text": "longing",
+          "start": 45.67,
+          "end": 46.14
+        },
+        {
+          "text": "end",
+          "start": 46.14,
+          "end": 46.61
+        },
+        {
+          "text": "?",
+          "start": 46.61,
+          "end": 47.08
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 47.08,
+      "end": 54.06,
+      "text": "When will this river rest, this longing sleep?",
+      "singableText": "When will this river rest, this longing sleep?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "When",
+          "start": 47.08,
+          "end": 47.778
+        },
+        {
+          "text": "will",
+          "start": 47.778,
+          "end": 48.476
+        },
+        {
+          "text": "this",
+          "start": 48.476,
+          "end": 49.174
+        },
+        {
+          "text": "river",
+          "start": 49.174,
+          "end": 49.872
+        },
+        {
+          "text": "rest",
+          "start": 49.872,
+          "end": 50.57
+        },
+        {
+          "text": ",",
+          "start": 50.57,
+          "end": 51.268
+        },
+        {
+          "text": "this",
+          "start": 51.268,
+          "end": 51.966
+        },
+        {
+          "text": "longing",
+          "start": 51.966,
+          "end": 52.664
+        },
+        {
+          "text": "sleep",
+          "start": 52.664,
+          "end": 53.362
+        },
+        {
+          "text": "?",
+          "start": 53.362,
+          "end": 54.06
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 54.06,
+      "end": 57.82,
+      "text": "May your heart be like mine.",
+      "singableText": "May your heart be like mine.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "May",
+          "start": 54.06,
+          "end": 54.597
+        },
+        {
+          "text": "your",
+          "start": 54.597,
+          "end": 55.134
+        },
+        {
+          "text": "heart",
+          "start": 55.134,
+          "end": 55.671
+        },
+        {
+          "text": "be",
+          "start": 55.671,
+          "end": 56.209
+        },
+        {
+          "text": "like",
+          "start": 56.209,
+          "end": 56.746
+        },
+        {
+          "text": "mine",
+          "start": 56.746,
+          "end": 57.283
+        },
+        {
+          "text": ".",
+          "start": 57.283,
+          "end": 57.82
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 57.82,
+      "end": 61.12,
+      "text": "I still believe.",
+      "singableText": "I still believe.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 57.82,
+          "end": 58.645
+        },
+        {
+          "text": "still",
+          "start": 58.645,
+          "end": 59.47
+        },
+        {
+          "text": "believe",
+          "start": 59.47,
+          "end": 60.295
+        },
+        {
+          "text": ".",
+          "start": 60.295,
+          "end": 61.12
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 61.12,
+      "end": 74.04,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 61.12,
+          "end": 74.04
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 790904 using segment-level large-v3 English ASR on the vocal stem, full-render small ASR, large-v3 Mandarin ASR cross-check, and the compact planned mixed lyric. Prompt lines not audibly recovered by the selected render are omitted."
+  }
+}

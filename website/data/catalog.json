@@ -9,6 +9,31 @@
   "defaultMedia": "yun-hai-zhi-lian-haifeng-duange",
   "items": [
     {
+      "id": "gong-yin-chang-jiang-shui-mixed",
+      "kind": "song",
+      "title": "共饮长江水 · Same River",
+      "artist": "Musia",
+      "summary": "A mixed English, Japanese romaji, and Mandarin pinyin river elegy inspired by Li Zhiyi's 我住长江头.",
+      "manifest": "data/songs/gong-yin-chang-jiang-shui-mixed/manifest.json",
+      "cover": "assets/covers/gong-yin-chang-jiang-shui-mixed-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "multilingual",
+        "Song poetry",
+        "Li Zhiyi",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "ku-chao-qing-heng-mixed",
       "kind": "song",
       "title": "哭晁卿衡 · Moon Over The Blue Sea",

@@ -1,0 +1,544 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "gong-yin-chang-jiang-shui-mixed",
+  "kind": "song",
+  "title": "共饮长江水 · Same River",
+  "localizedTitles": {
+    "zh-Hans": "共饮长江水",
+    "en": "Same River",
+    "ja": "同じ川の水"
+  },
+  "artist": "Musia",
+  "description": "A mixed English, Mandarin pinyin, and Japanese romaji river elegy inspired by Li Zhiyi's 我住长江头.",
+  "caption": "Two distant banks share one river, one moon, and one faithful longing.",
+  "duration": 74.0,
+  "canonicalUrl": "https://fun.lazying.art/#gong-yin-chang-jiang-shui-mixed",
+  "share": {
+    "title": "共饮长江水 · Same River - Fun Lazying Art",
+    "description": "A Musia mixed-language river elegy with corrected synced lyrics, translations, pinyin, furigana, chords, and stems.",
+    "url": "https://fun.lazying.art/#gong-yin-chang-jiang-shui-mixed",
+    "image": "assets/covers/gong-yin-chang-jiang-shui-mixed-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Moonlit Yangtze cover",
+      "role": "cover",
+      "src": "assets/covers/gong-yin-chang-jiang-shui-mixed-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/gong-yin-chang-jiang-shui-mixed-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "gong-yin-chang-jiang-shui-mixed",
+      "label": "Mixed",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "mul",
+      "languageLabel": "Mixed",
+      "lyricSetId": "mixed-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/gong-yin-chang-jiang-shui-mixed-ace-xl-turbo-seed790904-20260709.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "A minor / moonlit river elegy",
+    "bpm": 143.555,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 2.67,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 2.67,
+        "end": 3.111,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 3.111,
+        "end": 3.529,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 3.529,
+        "end": 3.947,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 3.947,
+        "end": 4.365,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 4.365,
+        "end": 4.783,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 4.783,
+        "end": 5.201,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 5.201,
+        "end": 8.173,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 8.173,
+        "end": 8.591,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 8.591,
+        "end": 10.286,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 10.286,
+        "end": 10.728,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 10.728,
+        "end": 11.146,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 11.146,
+        "end": 11.564,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 11.564,
+        "end": 11.981,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 11.981,
+        "end": 12.423,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 12.423,
+        "end": 12.864,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 12.864,
+        "end": 15.372,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 15.372,
+        "end": 17.043,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 17.043,
+        "end": 18.739,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 18.739,
+        "end": 20.434,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 20.434,
+        "end": 22.105,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 22.105,
+        "end": 23.8,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 23.8,
+        "end": 25.472,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 25.472,
+        "end": 25.89,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 25.89,
+        "end": 26.308,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 26.308,
+        "end": 28.816,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 28.816,
+        "end": 29.652,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 29.652,
+        "end": 32.206,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 32.206,
+        "end": 34.714,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 34.714,
+        "end": 35.155,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 35.155,
+        "end": 37.268,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 37.268,
+        "end": 38.081,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 38.081,
+        "end": 38.94,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 38.94,
+        "end": 45.697,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 45.697,
+        "end": 49.017,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 49.017,
+        "end": 50.341,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 50.341,
+        "end": 50.759,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 50.759,
+        "end": 52.454,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 52.454,
+        "end": 52.895,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 52.895,
+        "end": 54.219,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 54.219,
+        "end": 54.637,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 54.637,
+        "end": 55.426,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 55.426,
+        "end": 58.77,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 58.77,
+        "end": 59.188,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 59.188,
+        "end": 62.555,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 62.555,
+        "end": 64.25,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 64.25,
+        "end": 65.945,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 65.945,
+        "end": 67.199,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 67.199,
+        "end": 67.617,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 67.617,
+        "end": 74.0,
+        "name": "Am",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "mixed-vocal",
+      "label": "Mixed vocal",
+      "languageCode": "mul",
+      "tracks": [
+        {
+          "code": "mul",
+          "label": "Mixed",
+          "nativeLabel": "Mixed",
+          "script": "Latn",
+          "features": [
+            "active-vocal"
+          ],
+          "path": "lyrics/mixed-vocal/mul.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 0.3,
+        "end": 3.16,
+        "text": "Wo zhu Chang Jiang tou"
+      },
+      {
+        "id": "l02",
+        "start": 3.16,
+        "end": 6.94,
+        "text": "You live where the river ends"
+      },
+      {
+        "id": "l03",
+        "start": 13.86,
+        "end": 17.12,
+        "text": "Ri ri si jun bu jian jun"
+      },
+      {
+        "id": "l04",
+        "start": 17.12,
+        "end": 20.66,
+        "text": "Still we drink the same water"
+      },
+      {
+        "id": "l05",
+        "start": 22.24,
+        "end": 25.4,
+        "text": "Onaji kawa no mizu"
+      },
+      {
+        "id": "l06",
+        "start": 28.16,
+        "end": 30.7,
+        "text": "Gong yin Chang Jiang shui"
+      },
+      {
+        "id": "l07",
+        "start": 30.7,
+        "end": 33.92,
+        "text": "Same river, same moonlight"
+      },
+      {
+        "id": "l08",
+        "start": 33.92,
+        "end": 36.84,
+        "text": "Kokoro wa kimi e"
+      },
+      {
+        "id": "l09",
+        "start": 36.84,
+        "end": 41.22,
+        "text": "Zhi yuan jun xin si wo xin"
+      },
+      {
+        "id": "l10",
+        "start": 41.22,
+        "end": 44.26,
+        "text": "Ci shui ji shi xiu"
+      },
+      {
+        "id": "l11",
+        "start": 44.26,
+        "end": 47.08,
+        "text": "Ci hen he shi yi"
+      },
+      {
+        "id": "l12",
+        "start": 47.08,
+        "end": 54.06,
+        "text": "When will this river rest, this longing sleep"
+      },
+      {
+        "id": "l13",
+        "start": 54.06,
+        "end": 57.82,
+        "text": "Zhi yuan jun xin si wo xin"
+      },
+      {
+        "id": "l14",
+        "start": 57.82,
+        "end": 61.12,
+        "text": "Wo xiang xin"
+      },
+      {
+        "id": "l15",
+        "start": 61.12,
+        "end": 74.04,
+        "text": "♪"
+      }
+    ]
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/gong-yin-chang-jiang-shui-mixed-20260709",
+    "audioSource": "ACE-Step 1.5 XL Turbo mixed-language hook route, seed 790904, selected from a four-seed sweep.",
+    "analysisRun": "data/runs/gong-yin-chang-jiang-shui-mixed-20260709-analysis",
+    "quality": {
+      "gate": "public-candidate",
+      "note": "Clear vocal and graceful river-ballad mood. The render compresses the prompt; public lyrics match audible structure."
+    },
+    "lyricCorrection": "Segment-level large-v3 English ASR on selected vocal stem plus full-render small ASR and large-v3 Mandarin cross-check. Close intended forms are preserved; missing prompt lines are documented rather than forced.",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0d24dd3630bca1cb016a4f2d7908d48191ae5abc734919075a.png",
+    "publicAudio": "gong-yin-chang-jiang-shui-mixed-ace-xl-turbo-seed790904-20260709.mp3"
+  },
+  "artifacts": [
+    {
+      "label": "Analysis report",
+      "path": "data/runs/gong-yin-chang-jiang-shui-mixed-20260709-analysis/REPORT.md"
+    },
+    {
+      "label": "Chords",
+      "path": "data/runs/gong-yin-chang-jiang-shui-mixed-20260709-analysis/analysis/chords.csv"
+    },
+    {
+      "label": "Beats",
+      "path": "data/runs/gong-yin-chang-jiang-shui-mixed-20260709-analysis/analysis/beats.csv"
+    },
+    {
+      "label": "Stems",
+      "path": "data/runs/gong-yin-chang-jiang-shui-mixed-20260709-analysis/stems"
+    }
+  ]
+}
