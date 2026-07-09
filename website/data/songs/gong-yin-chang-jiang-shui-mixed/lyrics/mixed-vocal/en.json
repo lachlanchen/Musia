@@ -658,33 +658,38 @@
       "id": "l15",
       "start": 61.2,
       "end": 65.95,
-      "text": "Same, same longing.",
-      "singableText": "Same, same longing.",
+      "text": "Same river, same longing.",
+      "singableText": "Same river, same longing.",
       "role": "lyric",
       "tokens": [
         {
           "text": "Same",
           "start": 61.2,
-          "end": 62.15
+          "end": 61.992
+        },
+        {
+          "text": "river",
+          "start": 61.992,
+          "end": 62.783
         },
         {
           "text": ",",
-          "start": 62.15,
-          "end": 63.1
+          "start": 62.783,
+          "end": 63.575
         },
         {
           "text": "same",
-          "start": 63.1,
-          "end": 64.05
+          "start": 63.575,
+          "end": 64.367
         },
         {
           "text": "longing",
-          "start": 64.05,
-          "end": 65.0
+          "start": 64.367,
+          "end": 65.158
         },
         {
           "text": ".",
-          "start": 65.0,
+          "start": 65.158,
           "end": 65.95
         }
       ]

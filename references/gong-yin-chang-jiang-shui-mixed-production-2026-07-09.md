@@ -91,7 +91,7 @@ The selected render compresses the planned prompt. Public lyrics use the actual 
 
 Close intended forms are preserved where ASR drifted phonetically: `Wo zhu Chang Jiang tou`, `Onaji kawa no mizu`, `Kokoro wa kimi e`, `Zhi yuan jun xin si wo xin`, and `Ci hen he shi yi`.
 
-2026-07-09 tail correction: user listening found that the earlier `Wo xiang xin` correction was wrong. The ending is `Ding bu fu xiang si yi`, followed by `Same, same longing`, then a soft English phrase close to `Give me all`. Focused large-v3 ASR on the soft tail hallucinated unrelated text, so the ending was corrected from manual listening plus VAD instead of ASR alone.
+2026-07-09 tail correction: user listening found that the earlier `Wo xiang xin` correction was wrong. The ending is `Ding bu fu xiang si yi`, followed by `Same river, same longing`, then a soft English phrase close to `Give me all`. Focused large-v3 ASR on the soft tail hallucinated unrelated text, so the ending was corrected from manual listening plus VAD instead of ASR alone.
 
 VAD evidence from the separated vocal stem:
 
@@ -107,7 +107,7 @@ Final public tail:
 
 ```text
 57.82-61.20 Ding bu fu xiang si yi
-61.20-65.95 Same, same longing
+61.20-65.95 Same river, same longing
 65.95-69.80 Give me all
 69.80-74.04 ♪
 ```
