@@ -51,7 +51,7 @@ The public website does not publish the whole planned prompt as if it were sung.
 74.52-76.54 Ye suan gong bai tou
 ```
 
-The instrumental gaps are explicitly represented with `♪` so the website does not advance to lyric text during silent/vocal-free sections.
+Public lyrics contain only sung lyric lines. Instrumental spans are inferred by the player from timing gaps and may show musical-note status in the player, but they are not song-level lyrics.
 
 ## Website
 

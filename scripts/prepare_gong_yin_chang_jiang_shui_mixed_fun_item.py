@@ -189,7 +189,6 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
         ("l14", 57.82, 61.20, "Ding bu fu xiang si yi", "I will not betray this longing.", "この相思いを裏切らない", "定不负相思意", "lyric"),
         ("l15", 61.20, 65.95, "Same river, same longing", "Same river, same longing.", "同じ川、同じ想い", "同一条河，同一份相思", "lyric"),
         ("l16", 65.95, 69.80, "Give me all", "Give me all.", "すべてをください", "把一切都给我", "lyric"),
-        ("l17", 69.80, 74.04, "♪", "♪", "♪", "♪", "instrumental"),
     ]
 
 
@@ -494,10 +493,9 @@ def write_reference() -> None:
                 "57.82-61.20 Ding bu fu xiang si yi",
                 "61.20-65.95 Same river, same longing",
                 "65.95-69.80 Give me all",
-                "69.80-74.04 ♪",
                 "```",
                 "",
-                "Before recording or publishing, use the corrected website active lyric JSON as the source of truth and do not use the original prompt lyric.",
+                "Before recording or publishing, use the corrected website active lyric JSON as the source of truth and do not use the original prompt lyric. Public lyric tracks contain only sung lyric lines; the final fade is an inferred instrumental span, not a song-level lyric.",
                 "",
                 "## Website",
                 "",

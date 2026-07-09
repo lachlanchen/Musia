@@ -49,7 +49,7 @@ Correction packets:
 - `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-20260709/CORRECTION_PACKET.md`
 - `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-zh-20260709/CORRECTION_PACKET.md`
 
-The render drops the drafted bridge/outro and some final source-line repeats. Public lyrics follow the actual selected audio, with instrumental spans represented as `♪`.
+The render drops the drafted bridge/outro and some final source-line repeats. Public lyrics contain only sung lyric lines. Instrumental spans are inferred by the player from timing gaps and may show musical-note status in the player, but they are not song-level lyrics.
 
 ## Cover Rule
 

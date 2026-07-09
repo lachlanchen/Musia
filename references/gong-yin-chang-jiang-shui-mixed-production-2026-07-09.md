@@ -109,10 +109,9 @@ Final public tail:
 57.82-61.20 Ding bu fu xiang si yi
 61.20-65.95 Same river, same longing
 65.95-69.80 Give me all
-69.80-74.04 ♪
 ```
 
-Before recording or publishing, use the corrected website active lyric JSON as the source of truth and do not use the original prompt lyric.
+Before recording or publishing, use the corrected website active lyric JSON as the source of truth and do not use the original prompt lyric. Public lyric tracks contain only sung lyric lines; the final fade is an inferred instrumental span, not a song-level lyric.
 
 ## Website
 

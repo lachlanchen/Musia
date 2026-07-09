@@ -230,6 +230,15 @@ function renderTrackLine(track, line, { compact = false } = {}) {
   return `<div class="plain-line">${escapeHtml(text)}</div>`;
 }
 
+function isInstrumentalLine(line) {
+  const text = String(line?.text || line?.singableText || "").trim();
+  return line?.role === "instrumental" || Boolean(text && /^[♪♫♬\s]+$/.test(text));
+}
+
+function lyricLinesOnly(lines = []) {
+  return lines.filter((line) => !isInstrumentalLine(line));
+}
+
 function manifestLines() {
   return state.manifest?.timeline?.lines || [];
 }
@@ -241,7 +250,8 @@ function activeTimingTrack() {
 
 function timingLines() {
   const track = activeTimingTrack();
-  return Array.isArray(track?.lines) && track.lines.length ? track.lines : manifestLines();
+  const lines = Array.isArray(track?.lines) && track.lines.length ? track.lines : manifestLines();
+  return lyricLinesOnly(lines);
 }
 
 function lineStartForDisplay(line) {
@@ -395,35 +405,7 @@ function lyricGapState(time) {
 }
 
 function fullLyricDisplayRows(lines) {
-  const rows = [];
-  const gapThreshold = 1.6;
-  const duration = Number(state.manifest?.duration) || 0;
-  lines.forEach((line, index) => {
-    rows.push({ type: "lyric", line });
-    const next = lines[index + 1];
-    if (next && next.start - line.end > gapThreshold) {
-      rows.push({
-        type: "instrumental",
-        id: `gap-${line.id}-${next.id}`,
-        start: line.end,
-        end: next.start,
-        label: "♪♪♪",
-        detail: `${index === 0 ? "[Instrumental intro]" : "[Instrumental break]"} no vocal lyric · next vocal ${formatTime(next.start)}`
-      });
-    }
-  });
-  const last = lines[lines.length - 1];
-  if (last && duration && duration - last.end > gapThreshold) {
-    rows.push({
-      type: "instrumental",
-      id: `gap-${last.id}-outro`,
-      start: last.end,
-      end: duration,
-      label: "♪♪♪",
-      detail: "[Instrumental outro] no vocal lyric"
-    });
-  }
-  return rows;
+  return lyricLinesOnly(lines).map((line) => ({ type: "lyric", line }));
 }
 
 function activeChordAt(time) {

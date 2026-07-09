@@ -174,10 +174,8 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
     """
 
     return [
-        ("i01", 0.00, 7.08, "♪", "♪", "♪", "♪", "instrumental"),
         ("l00a", 7.08, 11.24, "Moon over the gorge", "Moon over the gorge.", "峡谷の上の月", "月照峡谷", "lyric"),
         ("l00b", 12.00, 14.50, "Kawa no kaze", "River wind.", "川の風", "河上的风", "lyric"),
-        ("i01b", 14.50, 16.12, "♪", "♪", "♪", "♪", "instrumental"),
         ("l01", 16.12, 22.82, "I am small in the silver light", "I am small in the silver light.", "銀の光の中で、私は小さい", "我在银色月光里如此渺小", "lyric"),
         ("l02", 22.82, 25.60, "Yue zhao Wu Xia jian fang jing", "Moonlight shines on Wu Gorge; the peaks fade into stillness.", "月は巫峡を照らし、峰は静かな景色へ溶ける", "月照巫峡，千峰入静", "lyric"),
         ("l03", 25.60, 29.70, "I may fly under endless sky", "I may fly under the endless sky.", "果てない空の下を飛んでいく", "我在无尽天幕下飞翔", "lyric"),
@@ -188,11 +186,9 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
         ("l08", 41.62, 44.84, "Jiang feng qian fang guo", "River wind carries me past the far side.", "川風は遠い方へ私を運ぶ", "江风送我向前方", "lyric"),
         ("l09", 45.42, 47.92, "Hyakunen no yume", "A hundred-year dream.", "百年の夢", "百年之梦", "lyric"),
         ("l10", 47.92, 50.58, "Bai nian sui bo qu", "A hundred years drift away with the waves.", "百年は波へ流れていく", "百年随波去", "lyric"),
-        ("i02", 50.58, 52.92, "♪", "♪", "♪", "♪", "instrumental"),
         ("l11", 52.92, 55.86, "Moon over Wu Xia", "Moon over Wu Gorge.", "巫峡の上の月", "月照巫峡", "lyric"),
         ("l12", 55.86, 58.54, "Everything is still", "Everything is still.", "すべてが静まり返る", "万物俱寂", "lyric"),
         ("l13", 58.54, 66.72, "I am small, I am free, but my heart can't feel", "I am small, I am free, but my heart cannot feel.", "私は小さい、自由だ、それでも心は感じられない", "我很渺小，也很自由，可心像失去了感觉", "lyric"),
-        ("i03", 66.72, 76.00, "♪", "♪", "♪", "♪", "instrumental"),
     ]
 
 
@@ -442,7 +438,7 @@ def write_reference() -> None:
                 "- `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-20260709/CORRECTION_PACKET.md`",
                 "- `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-zh-20260709/CORRECTION_PACKET.md`",
                 "",
-                "The render drops the drafted bridge/outro and some final source-line repeats. Public lyrics follow the actual selected audio, with instrumental spans represented as `♪`.",
+                "The render drops the drafted bridge/outro and some final source-line repeats. Public lyrics contain only sung lyric lines. Instrumental spans are inferred by the player from timing gaps and may show musical-note status in the player, but they are not song-level lyrics.",
                 "",
                 "## Cover Rule",
                 "",

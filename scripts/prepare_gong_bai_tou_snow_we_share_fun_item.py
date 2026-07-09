@@ -171,7 +171,6 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
     """
 
     return [
-        ("i01", 0.00, 3.18, "♪", "♪", "♪", "♪", "instrumental"),
         ("l01", 3.18, 6.88, "Hu you gu ren xin shang guo", "An old friend crosses my heart.", "ふと故人が胸をよぎる", "忽有故人心上过", "lyric"),
         ("l02", 7.26, 13.53, "Lights fall soft in the snow", "Lights fall soft in the snow.", "雪の中で光がやわらかく降る", "雪光轻轻落下", "lyric"),
         ("l03", 15.60, 18.46, "Hui shou shan he yi ru dong", "I turn back; mountains and rivers have entered winter.", "振り向けば山河は冬に入る", "回首山河已入冬", "lyric"),
@@ -183,11 +182,9 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
         ("l09", 37.86, 41.02, "Ci sheng ye suan gong bai tou", "This life may count as growing old together.", "この一生も共白髪といえる", "此生也算共白头", "lyric"),
         ("l10", 41.02, 44.48, "Hu you gu ren xin shang guo", "An old friend crosses my heart again.", "ふたたび故人が胸をよぎる", "忽有故人心上过", "lyric"),
         ("l11", 44.48, 48.72, "Hui shou shan he yi ru dong", "I turn back; mountains and rivers have entered winter.", "振り向けば山河は冬に入る", "回首山河已入冬", "lyric"),
-        ("i02", 48.72, 64.40, "♪", "♪", "♪", "♪", "instrumental"),
         ("l12", 64.40, 67.00, "Onaji yuki no shita de", "Under the same snow.", "同じ雪の下で", "在同一场雪下", "lyric"),
         ("l13", 67.00, 72.73, "Shiroku nareru, ta zhao tong lin xue", "We may turn white, if we share the snow.", "白くなれる、同じ雪なら", "若同淋雪，也许能共白", "lyric"),
         ("l14", 74.52, 76.54, "Ye suan gong bai tou", "It still counts as white hair together.", "それも共白髪といえる", "也算共白头", "lyric"),
-        ("i03", 76.54, 82.00, "♪", "♪", "♪", "♪", "instrumental"),
     ]
 
 
@@ -433,7 +430,7 @@ def write_reference() -> None:
                 "74.52-76.54 Ye suan gong bai tou",
                 "```",
                 "",
-                "The instrumental gaps are explicitly represented with `♪` so the website does not advance to lyric text during silent/vocal-free sections.",
+                "Public lyrics contain only sung lyric lines. Instrumental spans are inferred by the player from timing gaps and may show musical-note status in the player, but they are not song-level lyrics.",
                 "",
                 "## Website",
                 "",
@@ -458,4 +455,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
