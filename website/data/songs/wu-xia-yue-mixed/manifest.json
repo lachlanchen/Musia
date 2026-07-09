@@ -424,90 +424,96 @@
       {
         "id": "i01",
         "start": 0.0,
-        "end": 15.02,
+        "end": 16.12,
         "text": "♪"
       },
       {
         "id": "l01",
-        "start": 15.02,
-        "end": 23.03,
+        "start": 16.12,
+        "end": 22.82,
         "text": "I am small in the silver light"
       },
       {
         "id": "l02",
-        "start": 23.03,
-        "end": 26.03,
-        "text": "Yue zhao Wu Xia qian feng ji"
+        "start": 22.82,
+        "end": 25.6,
+        "text": "Yue zhao Wu Xia qian feng jing"
       },
       {
         "id": "l03",
-        "start": 26.59,
-        "end": 30.51,
-        "text": "A mayfly under endless sky, shen si"
+        "start": 25.6,
+        "end": 29.7,
+        "text": "I may fly under endless sky"
       },
       {
         "id": "l04",
-        "start": 30.51,
-        "end": 32.33,
-        "text": "Fu you yi su qing"
+        "start": 29.7,
+        "end": 32.22,
+        "text": "Shen si fu you yi su qing"
       },
       {
         "id": "l05",
-        "start": 32.33,
-        "end": 37.11,
-        "text": "A mayfly under endless sky, shen si"
+        "start": 32.22,
+        "end": 36.04,
+        "text": "I may fly under endless sky"
       },
       {
         "id": "l06",
-        "start": 37.11,
-        "end": 39.17,
-        "text": "Fu you yi su qing"
+        "start": 36.04,
+        "end": 39.46,
+        "text": "Shen si fu you yi su qing"
       },
       {
         "id": "l07",
-        "start": 39.55,
-        "end": 41.79,
+        "start": 39.46,
+        "end": 41.62,
         "text": "River wind, carry me"
       },
       {
         "id": "l08",
-        "start": 41.79,
-        "end": 45.55,
+        "start": 41.62,
+        "end": 44.84,
         "text": "Jiang feng qian fan guo"
       },
       {
         "id": "l09",
-        "start": 45.55,
-        "end": 50.65,
-        "text": "Hyakunen no yume, bai nian sui bo qu"
-      },
-      {
-        "id": "i02",
-        "start": 50.65,
-        "end": 52.99,
-        "text": "♪"
+        "start": 45.42,
+        "end": 47.92,
+        "text": "Hyakunen no yume"
       },
       {
         "id": "l10",
-        "start": 52.99,
-        "end": 56.25,
-        "text": "Moon over Wu Xia"
+        "start": 47.92,
+        "end": 50.58,
+        "text": "Bai nian sui bo qu"
+      },
+      {
+        "id": "i02",
+        "start": 50.58,
+        "end": 52.92,
+        "text": "♪"
       },
       {
         "id": "l11",
-        "start": 56.25,
-        "end": 58.73,
-        "text": "Everything is still"
+        "start": 52.92,
+        "end": 55.86,
+        "text": "Moon over Wu Xia"
       },
       {
         "id": "l12",
-        "start": 58.73,
-        "end": 66.27,
-        "text": "I am small, but my heart carries"
+        "start": 55.86,
+        "end": 58.54,
+        "text": "Everything is still"
+      },
+      {
+        "id": "l13",
+        "start": 58.54,
+        "end": 66.72,
+        "text": "I am small, I am free, but my heart can feel"
       },
       {
         "id": "i03",
-        "start": 66.27,
+        "start": 66.72,
         "end": 76.0,
         "text": "♪"
       }
@@ -525,7 +531,11 @@
       "gate": "public-candidate",
       "note": "Selected for the clearest mixed-vocal recovery in the second sweep. Public lyrics follow the actual sung structure."
     },
-    "lyricCorrection": "Selected-render small ASR plus planned lyric/source couplet cross-check; source-close pinyin forms preserved.",
+    "lyricCorrection": "Selected-render small ASR plus selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, planned lyric, and source couplet cross-check. The previous poetic website line was tightened to the actual English-led mixed vocal structure.",
+    "correctionPackets": [
+      "data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-20260709/CORRECTION_PACKET.md",
+      "data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-zh-20260709/CORRECTION_PACKET.md"
+    ],
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0933499e24356a63016a4f8747a1dc8191a4073a32c1752405.png",
     "coverPrompt": "Moonlit Wu Gorge, silent peaks, Yangtze river, distant sails, tiny human figure, vast lonely hopeful Chinese art-pop cover.",
     "publicAudio": "wu-xia-yue-mixed-ace-xl-turbo-seed791111-20260709.mp3"

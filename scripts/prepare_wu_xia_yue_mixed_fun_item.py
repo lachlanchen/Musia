@@ -162,30 +162,34 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
 
     Evidence:
     - selected-render small ASR from `run_pipeline.py`;
+    - selected-render and separated-vocal large-v3 ASR/no-VAD correction packets;
     - v2 planned mixed lyric;
     - source couplet supplied by the user.
 
-    The render keeps the English smallness hook, approximates the Chinese poem
-    pinyin, repeats the mayfly line, and drops the drafted outro. Public lyrics
-    follow that actual structure.
+    The render is an English-led mixed vocal. It keeps the English smallness
+    hook, sings two repeated mayfly/pinyin phrases, includes the river-wind and
+    hundred-year water image, and drops the drafted bridge/outro. Public lyrics
+    follow that actual structure, preserving source-close pinyin only where the
+    ASR sound and planned lyric are close.
     """
 
     return [
-        ("i01", 0.00, 15.02, "♪", "♪", "♪", "♪", "instrumental"),
-        ("l01", 15.02, 23.03, "I am small in the silver light", "I am small in the silver light.", "銀の光の中で、私は小さい", "我在银色月光里如此渺小", "lyric"),
-        ("l02", 23.03, 26.03, "Yue zhao Wu Xia qian feng ji", "Moonlight shines on Wu Gorge; a thousand peaks are still.", "月は巫峡を照らし、千の峰は静まる", "月照巫峡千峰寂", "lyric"),
-        ("l03", 26.59, 30.51, "A mayfly under endless sky, shen si", "A mayfly under the endless sky; this body is like a mayfly.", "果てない空の下の蜉蝣、この身もまた蜉蝣のよう", "身似蜉蝣，在无尽天幕下", "lyric"),
-        ("l04", 30.51, 32.33, "Fu you yi su qing", "A mayfly, light as one grain.", "蜉蝣、一粒の粟ほど軽い", "蜉蝣一粟轻", "lyric"),
-        ("l05", 32.33, 37.11, "A mayfly under endless sky, shen si", "A mayfly under the endless sky; this body is like a mayfly.", "果てない空の下の蜉蝣、この身もまた蜉蝣のよう", "身似蜉蝣，在无尽天幕下", "lyric"),
-        ("l06", 37.11, 39.17, "Fu you yi su qing", "A mayfly, light as one grain.", "蜉蝣、一粒の粟ほど軽い", "蜉蝣一粟轻", "lyric"),
-        ("l07", 39.55, 41.79, "River wind, carry me", "River wind, carry me.", "川風よ、私を運んで", "江风啊，带我远去", "lyric"),
-        ("l08", 41.79, 45.55, "Jiang feng qian fan guo", "River wind sends a thousand sails past.", "川風は千の帆を送り過ぎる", "江风送尽千帆过", "lyric"),
-        ("l09", 45.55, 50.65, "Hyakunen no yume, bai nian sui bo qu", "A hundred-year dream drifts away with the waves.", "百年の夢は波へ流れていく", "百年浮沉随波去", "lyric"),
-        ("i02", 50.65, 52.99, "♪", "♪", "♪", "♪", "instrumental"),
-        ("l10", 52.99, 56.25, "Moon over Wu Xia", "Moon over Wu Gorge.", "巫峡の上の月", "月照巫峡", "lyric"),
-        ("l11", 56.25, 58.73, "Everything is still", "Everything is still.", "すべてが静まり返る", "万物俱寂", "lyric"),
-        ("l12", 58.73, 66.27, "I am small, but my heart carries", "I am small, but my heart carries on.", "私は小さい、それでも心は運んでいく", "我很渺小，但心仍向前", "lyric"),
-        ("i03", 66.27, 76.00, "♪", "♪", "♪", "♪", "instrumental"),
+        ("i01", 0.00, 16.12, "♪", "♪", "♪", "♪", "instrumental"),
+        ("l01", 16.12, 22.82, "I am small in the silver light", "I am small in the silver light.", "銀の光の中で、私は小さい", "我在银色月光里如此渺小", "lyric"),
+        ("l02", 22.82, 25.60, "Yue zhao Wu Xia qian feng jing", "Moonlight shines on Wu Gorge; a thousand peaks are still.", "月は巫峡を照らし、千の峰は静まる", "月照巫峡千峰静", "lyric"),
+        ("l03", 25.60, 29.70, "I may fly under endless sky", "I may fly under the endless sky.", "果てない空の下を飛んでいく", "我在无尽天幕下飞翔", "lyric"),
+        ("l04", 29.70, 32.22, "Shen si fu you yi su qing", "This body is like a mayfly, light as one grain.", "この身は蜉蝣、一粒の粟ほど軽い", "身似蜉蝣一粟轻", "lyric"),
+        ("l05", 32.22, 36.04, "I may fly under endless sky", "I may fly under the endless sky.", "果てない空の下を飛んでいく", "我在无尽天幕下飞翔", "lyric"),
+        ("l06", 36.04, 39.46, "Shen si fu you yi su qing", "This body is like a mayfly, light as one grain.", "この身は蜉蝣、一粒の粟ほど軽い", "身似蜉蝣一粟轻", "lyric"),
+        ("l07", 39.46, 41.62, "River wind, carry me", "River wind, carry me.", "川風よ、私を運んで", "江风啊，带我远去", "lyric"),
+        ("l08", 41.62, 44.84, "Jiang feng qian fan guo", "River wind sends a thousand sails past.", "川風は千の帆を送り過ぎる", "江风送尽千帆过", "lyric"),
+        ("l09", 45.42, 47.92, "Hyakunen no yume", "A hundred-year dream.", "百年の夢", "百年之梦", "lyric"),
+        ("l10", 47.92, 50.58, "Bai nian sui bo qu", "A hundred years drift away with the waves.", "百年は波へ流れていく", "百年随波去", "lyric"),
+        ("i02", 50.58, 52.92, "♪", "♪", "♪", "♪", "instrumental"),
+        ("l11", 52.92, 55.86, "Moon over Wu Xia", "Moon over Wu Gorge.", "巫峡の上の月", "月照巫峡", "lyric"),
+        ("l12", 55.86, 58.54, "Everything is still", "Everything is still.", "すべてが静まり返る", "万物俱寂", "lyric"),
+        ("l13", 58.54, 66.72, "I am small, I am free, but my heart can feel", "I am small, I am free, but my heart can feel.", "私は小さい、自由だ、それでも心は感じている", "我很渺小，也很自由，但心仍能感受", "lyric"),
+        ("i03", 66.72, 76.00, "♪", "♪", "♪", "♪", "instrumental"),
     ]
 
 
@@ -199,8 +203,9 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
         "provenance": {
             "vocalSet": "mixed-vocal",
             "correction": (
-                "Corrected from selected ACE XL Turbo seed 791111 using selected-render ASR and the planned "
-                "mixed phonetic lyric. Source-close Chinese pinyin forms are preserved where ASR is phonetically close."
+                "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, "
+                "selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, and the planned "
+                "mixed phonetic lyric. Source-close pinyin forms are preserved only where ASR/listening evidence is close."
             ),
         },
     }
@@ -339,7 +344,11 @@ def write_media_item() -> None:
                 "gate": "public-candidate",
                 "note": "Selected for the clearest mixed-vocal recovery in the second sweep. Public lyrics follow the actual sung structure.",
             },
-            "lyricCorrection": "Selected-render small ASR plus planned lyric/source couplet cross-check; source-close pinyin forms preserved.",
+            "lyricCorrection": "Selected-render small ASR plus selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, planned lyric, and source couplet cross-check. The previous poetic website line was tightened to the actual English-led mixed vocal structure.",
+            "correctionPackets": [
+                "data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-20260709/CORRECTION_PACKET.md",
+                "data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-zh-20260709/CORRECTION_PACKET.md",
+            ],
             "coverSource": str(COVER_SOURCE),
             "coverPrompt": "Moonlit Wu Gorge, silent peaks, Yangtze river, distant sails, tiny human figure, vast lonely hopeful Chinese art-pop cover.",
             "publicAudio": PUBLIC_AUDIO_NAME,
@@ -406,21 +415,29 @@ def write_reference() -> None:
                 "## Corrected Active Vocal",
                 "",
                 "```text",
-                "15.02-23.03 I am small in the silver light",
-                "23.03-26.03 Yue zhao Wu Xia qian feng ji",
-                "26.59-30.51 A mayfly under endless sky, shen si",
-                "30.51-32.33 Fu you yi su qing",
-                "32.33-37.11 A mayfly under endless sky, shen si",
-                "37.11-39.17 Fu you yi su qing",
-                "39.55-41.79 River wind, carry me",
-                "41.79-45.55 Jiang feng qian fan guo",
-                "45.55-50.65 Hyakunen no yume, bai nian sui bo qu",
-                "52.99-56.25 Moon over Wu Xia",
-                "56.25-58.73 Everything is still",
-                "58.73-66.27 I am small, but my heart carries",
+                "16.12-22.82 I am small in the silver light",
+                "22.82-25.60 Yue zhao Wu Xia qian feng jing",
+                "25.60-29.70 I may fly under endless sky",
+                "29.70-32.22 Shen si fu you yi su qing",
+                "32.22-36.04 I may fly under endless sky",
+                "36.04-39.46 Shen si fu you yi su qing",
+                "39.46-41.62 River wind, carry me",
+                "41.62-44.84 Jiang feng qian fan guo",
+                "45.42-47.92 Hyakunen no yume",
+                "47.92-50.58 Bai nian sui bo qu",
+                "52.92-55.86 Moon over Wu Xia",
+                "55.86-58.54 Everything is still",
+                "58.54-66.72 I am small, I am free, but my heart can feel",
                 "```",
                 "",
-                "The render dropped the planned outro and some final source-line repeats. Public lyrics follow the actual selected audio, with instrumental spans represented as `♪`.",
+                "The first public draft was too poetic in several rows. On 2026-07-09 it was corrected again using selected-render small ASR, selected/vocal-stem large-v3 English ASR, and Mandarin large-v3 cross-check packets. The result follows the English-led mixed vocal more tightly, while preserving source-close pinyin where the sound is close.",
+                "",
+                "Correction packets:",
+                "",
+                "- `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-20260709/CORRECTION_PACKET.md`",
+                "- `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-zh-20260709/CORRECTION_PACKET.md`",
+                "",
+                "The render drops the drafted bridge/outro and some final source-line repeats. Public lyrics follow the actual selected audio, with instrumental spans represented as `♪`.",
                 "",
                 "## Cover Rule",
                 "",
@@ -450,4 +467,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -25,21 +25,29 @@
 ## Corrected Active Vocal
 
 ```text
-15.02-23.03 I am small in the silver light
-23.03-26.03 Yue zhao Wu Xia qian feng ji
-26.59-30.51 A mayfly under endless sky, shen si
-30.51-32.33 Fu you yi su qing
-32.33-37.11 A mayfly under endless sky, shen si
-37.11-39.17 Fu you yi su qing
-39.55-41.79 River wind, carry me
-41.79-45.55 Jiang feng qian fan guo
-45.55-50.65 Hyakunen no yume, bai nian sui bo qu
-52.99-56.25 Moon over Wu Xia
-56.25-58.73 Everything is still
-58.73-66.27 I am small, but my heart carries
+16.12-22.82 I am small in the silver light
+22.82-25.60 Yue zhao Wu Xia qian feng jing
+25.60-29.70 I may fly under endless sky
+29.70-32.22 Shen si fu you yi su qing
+32.22-36.04 I may fly under endless sky
+36.04-39.46 Shen si fu you yi su qing
+39.46-41.62 River wind, carry me
+41.62-44.84 Jiang feng qian fan guo
+45.42-47.92 Hyakunen no yume
+47.92-50.58 Bai nian sui bo qu
+52.92-55.86 Moon over Wu Xia
+55.86-58.54 Everything is still
+58.54-66.72 I am small, I am free, but my heart can feel
 ```
 
-The render dropped the planned outro and some final source-line repeats. Public lyrics follow the actual selected audio, with instrumental spans represented as `♪`.
+The first public draft was too poetic in several rows. On 2026-07-09 it was corrected again using selected-render small ASR, selected/vocal-stem large-v3 English ASR, and Mandarin large-v3 cross-check packets. The result follows the English-led mixed vocal more tightly, while preserving source-close pinyin where the sound is close.
+
+Correction packets:
+
+- `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-20260709/CORRECTION_PACKET.md`
+- `data/creative_projects/wu-xia-yue-mixed-20260709/correction_packets/selected-large-v3-zh-20260709/CORRECTION_PACKET.md`
+
+The render drops the drafted bridge/outro and some final source-line repeats. Public lyrics follow the actual selected audio, with instrumental spans represented as `♪`.
 
 ## Cover Rule
 
