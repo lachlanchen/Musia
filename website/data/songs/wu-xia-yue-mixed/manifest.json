@@ -1,0 +1,551 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "wu-xia-yue-mixed",
+  "kind": "song",
+  "title": "巫峡月 · Moon Over Wu Gorge",
+  "localizedTitles": {
+    "zh-Hans": "巫峡月",
+    "en": "Moon Over Wu Gorge",
+    "ja": "巫峡の月"
+  },
+  "artist": "Musia",
+  "description": "A mixed English, Mandarin pinyin, and Japanese moonlit river-gorge ballad about human smallness, passing sails, and a heart that keeps moving.",
+  "caption": "Moon over Wu Gorge, a thousand silent peaks, and one small life drifting with the river wind.",
+  "duration": 76.0,
+  "canonicalUrl": "https://fun.lazying.art/#wu-xia-yue-mixed",
+  "share": {
+    "title": "巫峡月 · Moon Over Wu Gorge - Fun Lazying Art",
+    "description": "A Musia mixed-language moonlit gorge ballad with corrected synced lyrics, translations, pinyin, furigana, chords, and stems.",
+    "url": "https://fun.lazying.art/#wu-xia-yue-mixed",
+    "image": "assets/covers/wu-xia-yue-mixed-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Moonlit Wu Gorge cover",
+      "role": "cover",
+      "src": "assets/covers/wu-xia-yue-mixed-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/wu-xia-yue-mixed-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "wu-xia-yue-mixed",
+      "label": "Mixed",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "mul",
+      "languageLabel": "Mixed",
+      "lyricSetId": "mixed-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/wu-xia-yue-mixed-ace-xl-turbo-seed791111-20260709.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "D minor planned / detected Dm-Bb-F modal colors",
+    "bpm": 151.999,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 0.836,
+        "name": "C#",
+        "degree": ""
+      },
+      {
+        "start": 0.836,
+        "end": 4.458,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 4.458,
+        "end": 4.853,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 4.853,
+        "end": 5.248,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 5.248,
+        "end": 5.642,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 5.642,
+        "end": 6.85,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 6.85,
+        "end": 7.639,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 7.639,
+        "end": 12.934,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 12.934,
+        "end": 13.351,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 13.351,
+        "end": 13.769,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 13.769,
+        "end": 14.954,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 14.954,
+        "end": 15.348,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 15.348,
+        "end": 16.997,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 16.997,
+        "end": 17.415,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 17.415,
+        "end": 23.917,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 23.917,
+        "end": 27.098,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 27.098,
+        "end": 30.395,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 30.395,
+        "end": 31.184,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 31.184,
+        "end": 32.02,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 32.02,
+        "end": 33.228,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 33.228,
+        "end": 33.646,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 33.646,
+        "end": 36.897,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 36.897,
+        "end": 39.706,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 39.706,
+        "end": 40.124,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 40.124,
+        "end": 41.773,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 41.773,
+        "end": 42.585,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 42.585,
+        "end": 43.421,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 43.421,
+        "end": 44.211,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 44.211,
+        "end": 45.023,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 45.023,
+        "end": 46.672,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 46.672,
+        "end": 47.903,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 47.903,
+        "end": 48.344,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 48.344,
+        "end": 49.946,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 49.946,
+        "end": 50.712,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 50.712,
+        "end": 53.499,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 53.499,
+        "end": 55.542,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 55.542,
+        "end": 55.937,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 55.937,
+        "end": 56.773,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 56.773,
+        "end": 59.977,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 59.977,
+        "end": 60.372,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 60.372,
+        "end": 63.228,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 63.228,
+        "end": 63.646,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 63.646,
+        "end": 64.041,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 64.041,
+        "end": 64.853,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 64.853,
+        "end": 66.479,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 66.479,
+        "end": 71.912,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 71.912,
+        "end": 72.284,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 72.284,
+        "end": 72.678,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 72.678,
+        "end": 73.12,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 73.12,
+        "end": 74.42,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 74.42,
+        "end": 76.0,
+        "name": "G",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "mixed-vocal",
+      "label": "Mixed vocal",
+      "languageCode": "mul",
+      "tracks": [
+        {
+          "code": "mul",
+          "label": "Mixed",
+          "nativeLabel": "Mixed",
+          "script": "Latn",
+          "features": [
+            "active-vocal"
+          ],
+          "path": "lyrics/mixed-vocal/mul.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "i01",
+        "start": 0.0,
+        "end": 15.02,
+        "text": "♪"
+      },
+      {
+        "id": "l01",
+        "start": 15.02,
+        "end": 23.03,
+        "text": "I am small in the silver light"
+      },
+      {
+        "id": "l02",
+        "start": 23.03,
+        "end": 26.03,
+        "text": "Yue zhao Wu Xia qian feng ji"
+      },
+      {
+        "id": "l03",
+        "start": 26.59,
+        "end": 30.51,
+        "text": "A mayfly under endless sky, shen si"
+      },
+      {
+        "id": "l04",
+        "start": 30.51,
+        "end": 32.33,
+        "text": "Fu you yi su qing"
+      },
+      {
+        "id": "l05",
+        "start": 32.33,
+        "end": 37.11,
+        "text": "A mayfly under endless sky, shen si"
+      },
+      {
+        "id": "l06",
+        "start": 37.11,
+        "end": 39.17,
+        "text": "Fu you yi su qing"
+      },
+      {
+        "id": "l07",
+        "start": 39.55,
+        "end": 41.79,
+        "text": "River wind, carry me"
+      },
+      {
+        "id": "l08",
+        "start": 41.79,
+        "end": 45.55,
+        "text": "Jiang feng qian fan guo"
+      },
+      {
+        "id": "l09",
+        "start": 45.55,
+        "end": 50.65,
+        "text": "Hyakunen no yume, bai nian sui bo qu"
+      },
+      {
+        "id": "i02",
+        "start": 50.65,
+        "end": 52.99,
+        "text": "♪"
+      },
+      {
+        "id": "l10",
+        "start": 52.99,
+        "end": 56.25,
+        "text": "Moon over Wu Xia"
+      },
+      {
+        "id": "l11",
+        "start": 56.25,
+        "end": 58.73,
+        "text": "Everything is still"
+      },
+      {
+        "id": "l12",
+        "start": 58.73,
+        "end": 66.27,
+        "text": "I am small, but my heart carries"
+      },
+      {
+        "id": "i03",
+        "start": 66.27,
+        "end": 76.0,
+        "text": "♪"
+      }
+    ]
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/wu-xia-yue-mixed-20260709",
+    "audioSource": "ACE-Step 1.5 XL Turbo mixed-language route, seed 791111, selected from two sweeps.",
+    "analysisRun": "data/runs/wu-xia-yue-mixed-20260709-analysis",
+    "quality": {
+      "gate": "public-candidate",
+      "note": "Selected for the clearest mixed-vocal recovery in the second sweep. Public lyrics follow the actual sung structure."
+    },
+    "lyricCorrection": "Selected-render small ASR plus planned lyric/source couplet cross-check; source-close pinyin forms preserved.",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0933499e24356a63016a4f8747a1dc8191a4073a32c1752405.png",
+    "coverPrompt": "Moonlit Wu Gorge, silent peaks, Yangtze river, distant sails, tiny human figure, vast lonely hopeful Chinese art-pop cover.",
+    "publicAudio": "wu-xia-yue-mixed-ace-xl-turbo-seed791111-20260709.mp3"
+  },
+  "artifacts": [
+    {
+      "label": "Analysis report",
+      "path": "data/runs/wu-xia-yue-mixed-20260709-analysis/REPORT.md"
+    },
+    {
+      "label": "Chords",
+      "path": "data/runs/wu-xia-yue-mixed-20260709-analysis/analysis/chords.csv"
+    },
+    {
+      "label": "Beats",
+      "path": "data/runs/wu-xia-yue-mixed-20260709-analysis/analysis/beats.csv"
+    },
+    {
+      "label": "Stems",
+      "path": "data/runs/wu-xia-yue-mixed-20260709-analysis/stems"
+    }
+  ]
+}

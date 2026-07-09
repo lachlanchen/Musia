@@ -1,0 +1,719 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "wu-xia-yue-mixed",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "i01",
+      "start": 0.0,
+      "end": 15.02,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 0.0,
+          "end": 15.02
+        }
+      ]
+    },
+    {
+      "id": "l01",
+      "start": 15.02,
+      "end": 23.03,
+      "text": "我在银色月光里如此渺小",
+      "singableText": "我在银色月光里如此渺小",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 15.02,
+          "end": 15.748,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "在",
+          "start": 15.748,
+          "end": 16.476,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "银",
+          "start": 16.476,
+          "end": 17.205,
+          "pinyin": "yin2"
+        },
+        {
+          "text": "色",
+          "start": 17.205,
+          "end": 17.933,
+          "pinyin": "se4"
+        },
+        {
+          "text": "月",
+          "start": 17.933,
+          "end": 18.661,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "光",
+          "start": 18.661,
+          "end": 19.389,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "里",
+          "start": 19.389,
+          "end": 20.117,
+          "pinyin": "li3"
+        },
+        {
+          "text": "如",
+          "start": 20.117,
+          "end": 20.845,
+          "pinyin": "ru2"
+        },
+        {
+          "text": "此",
+          "start": 20.845,
+          "end": 21.574,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "渺",
+          "start": 21.574,
+          "end": 22.302,
+          "pinyin": "miao3"
+        },
+        {
+          "text": "小",
+          "start": 22.302,
+          "end": 23.03,
+          "pinyin": "xiao3"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 23.03,
+      "end": 26.03,
+      "text": "月照巫峡千峰寂",
+      "singableText": "月照巫峡千峰寂",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 23.03,
+          "end": 23.459,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "照",
+          "start": 23.459,
+          "end": 23.887,
+          "pinyin": "zhao4"
+        },
+        {
+          "text": "巫",
+          "start": 23.887,
+          "end": 24.316,
+          "pinyin": "wu1"
+        },
+        {
+          "text": "峡",
+          "start": 24.316,
+          "end": 24.744,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "千",
+          "start": 24.744,
+          "end": 25.173,
+          "pinyin": "qian1"
+        },
+        {
+          "text": "峰",
+          "start": 25.173,
+          "end": 25.601,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "寂",
+          "start": 25.601,
+          "end": 26.03,
+          "pinyin": "ji4"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 26.59,
+      "end": 30.51,
+      "text": "身似蜉蝣，在无尽天幕下",
+      "singableText": "身似蜉蝣，在无尽天幕下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "身",
+          "start": 26.59,
+          "end": 26.946,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "似",
+          "start": 26.946,
+          "end": 27.303,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "蜉",
+          "start": 27.303,
+          "end": 27.659,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "蝣",
+          "start": 27.659,
+          "end": 28.015,
+          "pinyin": "you2"
+        },
+        {
+          "text": "，",
+          "start": 28.015,
+          "end": 28.372
+        },
+        {
+          "text": "在",
+          "start": 28.372,
+          "end": 28.728,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "无",
+          "start": 28.728,
+          "end": 29.085,
+          "pinyin": "wu2"
+        },
+        {
+          "text": "尽",
+          "start": 29.085,
+          "end": 29.441,
+          "pinyin": "jin3"
+        },
+        {
+          "text": "天",
+          "start": 29.441,
+          "end": 29.797,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "幕",
+          "start": 29.797,
+          "end": 30.154,
+          "pinyin": "mu4"
+        },
+        {
+          "text": "下",
+          "start": 30.154,
+          "end": 30.51,
+          "pinyin": "xia4"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.51,
+      "end": 32.33,
+      "text": "蜉蝣一粟轻",
+      "singableText": "蜉蝣一粟轻",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "蜉",
+          "start": 30.51,
+          "end": 30.874,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "蝣",
+          "start": 30.874,
+          "end": 31.238,
+          "pinyin": "you2"
+        },
+        {
+          "text": "一",
+          "start": 31.238,
+          "end": 31.602,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "粟",
+          "start": 31.602,
+          "end": 31.966,
+          "pinyin": "su4"
+        },
+        {
+          "text": "轻",
+          "start": 31.966,
+          "end": 32.33,
+          "pinyin": "qing1"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 32.33,
+      "end": 37.11,
+      "text": "身似蜉蝣，在无尽天幕下",
+      "singableText": "身似蜉蝣，在无尽天幕下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "身",
+          "start": 32.33,
+          "end": 32.765,
+          "pinyin": "shen1"
+        },
+        {
+          "text": "似",
+          "start": 32.765,
+          "end": 33.199,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "蜉",
+          "start": 33.199,
+          "end": 33.634,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "蝣",
+          "start": 33.634,
+          "end": 34.068,
+          "pinyin": "you2"
+        },
+        {
+          "text": "，",
+          "start": 34.068,
+          "end": 34.503
+        },
+        {
+          "text": "在",
+          "start": 34.503,
+          "end": 34.937,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "无",
+          "start": 34.937,
+          "end": 35.372,
+          "pinyin": "wu2"
+        },
+        {
+          "text": "尽",
+          "start": 35.372,
+          "end": 35.806,
+          "pinyin": "jin3"
+        },
+        {
+          "text": "天",
+          "start": 35.806,
+          "end": 36.241,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "幕",
+          "start": 36.241,
+          "end": 36.675,
+          "pinyin": "mu4"
+        },
+        {
+          "text": "下",
+          "start": 36.675,
+          "end": 37.11,
+          "pinyin": "xia4"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 37.11,
+      "end": 39.17,
+      "text": "蜉蝣一粟轻",
+      "singableText": "蜉蝣一粟轻",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "蜉",
+          "start": 37.11,
+          "end": 37.522,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "蝣",
+          "start": 37.522,
+          "end": 37.934,
+          "pinyin": "you2"
+        },
+        {
+          "text": "一",
+          "start": 37.934,
+          "end": 38.346,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "粟",
+          "start": 38.346,
+          "end": 38.758,
+          "pinyin": "su4"
+        },
+        {
+          "text": "轻",
+          "start": 38.758,
+          "end": 39.17,
+          "pinyin": "qing1"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 39.55,
+      "end": 41.79,
+      "text": "江风啊，带我远去",
+      "singableText": "江风啊，带我远去",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "江",
+          "start": 39.55,
+          "end": 39.83,
+          "pinyin": "jiang1"
+        },
+        {
+          "text": "风",
+          "start": 39.83,
+          "end": 40.11,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "啊",
+          "start": 40.11,
+          "end": 40.39,
+          "pinyin": "a5"
+        },
+        {
+          "text": "，",
+          "start": 40.39,
+          "end": 40.67
+        },
+        {
+          "text": "带",
+          "start": 40.67,
+          "end": 40.95,
+          "pinyin": "dai4"
+        },
+        {
+          "text": "我",
+          "start": 40.95,
+          "end": 41.23,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "远",
+          "start": 41.23,
+          "end": 41.51,
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "去",
+          "start": 41.51,
+          "end": 41.79,
+          "pinyin": "qu4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 41.79,
+      "end": 45.55,
+      "text": "江风送尽千帆过",
+      "singableText": "江风送尽千帆过",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "江",
+          "start": 41.79,
+          "end": 42.327,
+          "pinyin": "jiang1"
+        },
+        {
+          "text": "风",
+          "start": 42.327,
+          "end": 42.864,
+          "pinyin": "feng1"
+        },
+        {
+          "text": "送",
+          "start": 42.864,
+          "end": 43.401,
+          "pinyin": "song4"
+        },
+        {
+          "text": "尽",
+          "start": 43.401,
+          "end": 43.939,
+          "pinyin": "jin3"
+        },
+        {
+          "text": "千",
+          "start": 43.939,
+          "end": 44.476,
+          "pinyin": "qian1"
+        },
+        {
+          "text": "帆",
+          "start": 44.476,
+          "end": 45.013,
+          "pinyin": "fan1"
+        },
+        {
+          "text": "过",
+          "start": 45.013,
+          "end": 45.55,
+          "pinyin": "guo4"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 45.55,
+      "end": 50.65,
+      "text": "百年浮沉随波去",
+      "singableText": "百年浮沉随波去",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "百",
+          "start": 45.55,
+          "end": 46.279,
+          "pinyin": "bai3"
+        },
+        {
+          "text": "年",
+          "start": 46.279,
+          "end": 47.007,
+          "pinyin": "nian2"
+        },
+        {
+          "text": "浮",
+          "start": 47.007,
+          "end": 47.736,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "沉",
+          "start": 47.736,
+          "end": 48.464,
+          "pinyin": "chen2"
+        },
+        {
+          "text": "随",
+          "start": 48.464,
+          "end": 49.193,
+          "pinyin": "sui2"
+        },
+        {
+          "text": "波",
+          "start": 49.193,
+          "end": 49.921,
+          "pinyin": "bo1"
+        },
+        {
+          "text": "去",
+          "start": 49.921,
+          "end": 50.65,
+          "pinyin": "qu4"
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "start": 50.65,
+      "end": 52.99,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 50.65,
+          "end": 52.99
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 52.99,
+      "end": 56.25,
+      "text": "月照巫峡",
+      "singableText": "月照巫峡",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 52.99,
+          "end": 53.805,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "照",
+          "start": 53.805,
+          "end": 54.62,
+          "pinyin": "zhao4"
+        },
+        {
+          "text": "巫",
+          "start": 54.62,
+          "end": 55.435,
+          "pinyin": "wu1"
+        },
+        {
+          "text": "峡",
+          "start": 55.435,
+          "end": 56.25,
+          "pinyin": "xia2"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 56.25,
+      "end": 58.73,
+      "text": "万物俱寂",
+      "singableText": "万物俱寂",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "万",
+          "start": 56.25,
+          "end": 56.87,
+          "pinyin": "wan4"
+        },
+        {
+          "text": "物",
+          "start": 56.87,
+          "end": 57.49,
+          "pinyin": "wu4"
+        },
+        {
+          "text": "俱",
+          "start": 57.49,
+          "end": 58.11,
+          "pinyin": "ju4"
+        },
+        {
+          "text": "寂",
+          "start": 58.11,
+          "end": 58.73,
+          "pinyin": "ji4"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 58.73,
+      "end": 66.27,
+      "text": "我很渺小，但心仍向前",
+      "singableText": "我很渺小，但心仍向前",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 58.73,
+          "end": 59.484,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "很",
+          "start": 59.484,
+          "end": 60.238,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "渺",
+          "start": 60.238,
+          "end": 60.992,
+          "pinyin": "miao3"
+        },
+        {
+          "text": "小",
+          "start": 60.992,
+          "end": 61.746,
+          "pinyin": "xiao3"
+        },
+        {
+          "text": "，",
+          "start": 61.746,
+          "end": 62.5
+        },
+        {
+          "text": "但",
+          "start": 62.5,
+          "end": 63.254,
+          "pinyin": "dan4"
+        },
+        {
+          "text": "心",
+          "start": 63.254,
+          "end": 64.008,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "仍",
+          "start": 64.008,
+          "end": 64.762,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "向",
+          "start": 64.762,
+          "end": 65.516,
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "前",
+          "start": 65.516,
+          "end": 66.27,
+          "pinyin": "qian2"
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "start": 66.27,
+      "end": 76.0,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 66.27,
+          "end": 76.0
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render ASR and the planned mixed phonetic lyric. Source-close Chinese pinyin forms are preserved where ASR is phonetically close."
+  }
+}

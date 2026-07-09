@@ -9,6 +9,32 @@
   "defaultMedia": "yun-hai-zhi-lian-haifeng-duange",
   "items": [
     {
+      "id": "wu-xia-yue-mixed",
+      "kind": "song",
+      "title": "巫峡月 · Moon Over Wu Gorge",
+      "artist": "Musia",
+      "summary": "A mixed English, Japanese romaji, and Mandarin pinyin moonlit gorge ballad.",
+      "manifest": "data/songs/wu-xia-yue-mixed/manifest.json",
+      "cover": "assets/covers/wu-xia-yue-mixed-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "multilingual",
+        "Wu Gorge",
+        "moon",
+        "river",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "gong-bai-tou-snow-we-share",
       "kind": "song",
       "title": "共白头 · Snow We Share",

@@ -1,0 +1,552 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "wu-xia-yue-mixed",
+  "language": {
+    "code": "mul",
+    "label": "Mixed",
+    "nativeLabel": "Mixed",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "i01",
+      "start": 0.0,
+      "end": 15.02,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 0.0,
+          "end": 15.02
+        }
+      ]
+    },
+    {
+      "id": "l01",
+      "start": 15.02,
+      "end": 23.03,
+      "text": "I am small in the silver light",
+      "singableText": "I am small in the silver light",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 15.02,
+          "end": 16.164
+        },
+        {
+          "text": "am",
+          "start": 16.164,
+          "end": 17.309
+        },
+        {
+          "text": "small",
+          "start": 17.309,
+          "end": 18.453
+        },
+        {
+          "text": "in",
+          "start": 18.453,
+          "end": 19.597
+        },
+        {
+          "text": "the",
+          "start": 19.597,
+          "end": 20.741
+        },
+        {
+          "text": "silver",
+          "start": 20.741,
+          "end": 21.886
+        },
+        {
+          "text": "light",
+          "start": 21.886,
+          "end": 23.03
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 23.03,
+      "end": 26.03,
+      "text": "Yue zhao Wu Xia qian feng ji",
+      "singableText": "Yue zhao Wu Xia qian feng ji",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Yue",
+          "start": 23.03,
+          "end": 23.459
+        },
+        {
+          "text": "zhao",
+          "start": 23.459,
+          "end": 23.887
+        },
+        {
+          "text": "Wu",
+          "start": 23.887,
+          "end": 24.316
+        },
+        {
+          "text": "Xia",
+          "start": 24.316,
+          "end": 24.744
+        },
+        {
+          "text": "qian",
+          "start": 24.744,
+          "end": 25.173
+        },
+        {
+          "text": "feng",
+          "start": 25.173,
+          "end": 25.601
+        },
+        {
+          "text": "ji",
+          "start": 25.601,
+          "end": 26.03
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 26.59,
+      "end": 30.51,
+      "text": "A mayfly under endless sky, shen si",
+      "singableText": "A mayfly under endless sky, shen si",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 26.59,
+          "end": 27.08
+        },
+        {
+          "text": "mayfly",
+          "start": 27.08,
+          "end": 27.57
+        },
+        {
+          "text": "under",
+          "start": 27.57,
+          "end": 28.06
+        },
+        {
+          "text": "endless",
+          "start": 28.06,
+          "end": 28.55
+        },
+        {
+          "text": "sky",
+          "start": 28.55,
+          "end": 29.04
+        },
+        {
+          "text": ",",
+          "start": 29.04,
+          "end": 29.53
+        },
+        {
+          "text": "shen",
+          "start": 29.53,
+          "end": 30.02
+        },
+        {
+          "text": "si",
+          "start": 30.02,
+          "end": 30.51
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.51,
+      "end": 32.33,
+      "text": "Fu you yi su qing",
+      "singableText": "Fu you yi su qing",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Fu",
+          "start": 30.51,
+          "end": 30.874
+        },
+        {
+          "text": "you",
+          "start": 30.874,
+          "end": 31.238
+        },
+        {
+          "text": "yi",
+          "start": 31.238,
+          "end": 31.602
+        },
+        {
+          "text": "su",
+          "start": 31.602,
+          "end": 31.966
+        },
+        {
+          "text": "qing",
+          "start": 31.966,
+          "end": 32.33
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 32.33,
+      "end": 37.11,
+      "text": "A mayfly under endless sky, shen si",
+      "singableText": "A mayfly under endless sky, shen si",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 32.33,
+          "end": 32.927
+        },
+        {
+          "text": "mayfly",
+          "start": 32.927,
+          "end": 33.525
+        },
+        {
+          "text": "under",
+          "start": 33.525,
+          "end": 34.123
+        },
+        {
+          "text": "endless",
+          "start": 34.123,
+          "end": 34.72
+        },
+        {
+          "text": "sky",
+          "start": 34.72,
+          "end": 35.317
+        },
+        {
+          "text": ",",
+          "start": 35.317,
+          "end": 35.915
+        },
+        {
+          "text": "shen",
+          "start": 35.915,
+          "end": 36.513
+        },
+        {
+          "text": "si",
+          "start": 36.513,
+          "end": 37.11
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 37.11,
+      "end": 39.17,
+      "text": "Fu you yi su qing",
+      "singableText": "Fu you yi su qing",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Fu",
+          "start": 37.11,
+          "end": 37.522
+        },
+        {
+          "text": "you",
+          "start": 37.522,
+          "end": 37.934
+        },
+        {
+          "text": "yi",
+          "start": 37.934,
+          "end": 38.346
+        },
+        {
+          "text": "su",
+          "start": 38.346,
+          "end": 38.758
+        },
+        {
+          "text": "qing",
+          "start": 38.758,
+          "end": 39.17
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 39.55,
+      "end": 41.79,
+      "text": "River wind, carry me",
+      "singableText": "River wind, carry me",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "River",
+          "start": 39.55,
+          "end": 39.998
+        },
+        {
+          "text": "wind",
+          "start": 39.998,
+          "end": 40.446
+        },
+        {
+          "text": ",",
+          "start": 40.446,
+          "end": 40.894
+        },
+        {
+          "text": "carry",
+          "start": 40.894,
+          "end": 41.342
+        },
+        {
+          "text": "me",
+          "start": 41.342,
+          "end": 41.79
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 41.79,
+      "end": 45.55,
+      "text": "Jiang feng qian fan guo",
+      "singableText": "Jiang feng qian fan guo",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Jiang",
+          "start": 41.79,
+          "end": 42.542
+        },
+        {
+          "text": "feng",
+          "start": 42.542,
+          "end": 43.294
+        },
+        {
+          "text": "qian",
+          "start": 43.294,
+          "end": 44.046
+        },
+        {
+          "text": "fan",
+          "start": 44.046,
+          "end": 44.798
+        },
+        {
+          "text": "guo",
+          "start": 44.798,
+          "end": 45.55
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 45.55,
+      "end": 50.65,
+      "text": "Hyakunen no yume, bai nian sui bo qu",
+      "singableText": "Hyakunen no yume, bai nian sui bo qu",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hyakunen",
+          "start": 45.55,
+          "end": 46.117
+        },
+        {
+          "text": "no",
+          "start": 46.117,
+          "end": 46.683
+        },
+        {
+          "text": "yume",
+          "start": 46.683,
+          "end": 47.25
+        },
+        {
+          "text": ",",
+          "start": 47.25,
+          "end": 47.817
+        },
+        {
+          "text": "bai",
+          "start": 47.817,
+          "end": 48.383
+        },
+        {
+          "text": "nian",
+          "start": 48.383,
+          "end": 48.95
+        },
+        {
+          "text": "sui",
+          "start": 48.95,
+          "end": 49.517
+        },
+        {
+          "text": "bo",
+          "start": 49.517,
+          "end": 50.083
+        },
+        {
+          "text": "qu",
+          "start": 50.083,
+          "end": 50.65
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "start": 50.65,
+      "end": 52.99,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 50.65,
+          "end": 52.99
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 52.99,
+      "end": 56.25,
+      "text": "Moon over Wu Xia",
+      "singableText": "Moon over Wu Xia",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Moon",
+          "start": 52.99,
+          "end": 53.805
+        },
+        {
+          "text": "over",
+          "start": 53.805,
+          "end": 54.62
+        },
+        {
+          "text": "Wu",
+          "start": 54.62,
+          "end": 55.435
+        },
+        {
+          "text": "Xia",
+          "start": 55.435,
+          "end": 56.25
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 56.25,
+      "end": 58.73,
+      "text": "Everything is still",
+      "singableText": "Everything is still",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Everything",
+          "start": 56.25,
+          "end": 57.077
+        },
+        {
+          "text": "is",
+          "start": 57.077,
+          "end": 57.903
+        },
+        {
+          "text": "still",
+          "start": 57.903,
+          "end": 58.73
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 58.73,
+      "end": 66.27,
+      "text": "I am small, but my heart carries",
+      "singableText": "I am small, but my heart carries",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 58.73,
+          "end": 59.672
+        },
+        {
+          "text": "am",
+          "start": 59.672,
+          "end": 60.615
+        },
+        {
+          "text": "small",
+          "start": 60.615,
+          "end": 61.557
+        },
+        {
+          "text": ",",
+          "start": 61.557,
+          "end": 62.5
+        },
+        {
+          "text": "but",
+          "start": 62.5,
+          "end": 63.442
+        },
+        {
+          "text": "my",
+          "start": 63.442,
+          "end": 64.385
+        },
+        {
+          "text": "heart",
+          "start": 64.385,
+          "end": 65.328
+        },
+        {
+          "text": "carries",
+          "start": 65.328,
+          "end": 66.27
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "start": 66.27,
+      "end": 76.0,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 66.27,
+          "end": 76.0
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render ASR and the planned mixed phonetic lyric. Source-close Chinese pinyin forms are preserved where ASR is phonetically close."
+  }
+}

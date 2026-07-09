@@ -1,0 +1,740 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "wu-xia-yue-mixed",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "i01",
+      "start": 0.0,
+      "end": 15.02,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 0.0,
+          "end": 15.02
+        }
+      ]
+    },
+    {
+      "id": "l01",
+      "start": 15.02,
+      "end": 23.03,
+      "text": "銀の光の中で、私は小さい",
+      "singableText": "銀の光の中で、私は小さい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "銀",
+          "start": 15.02,
+          "end": 15.821,
+          "reading": "ぎん"
+        },
+        {
+          "text": "の",
+          "start": 15.821,
+          "end": 16.622
+        },
+        {
+          "text": "光",
+          "start": 16.622,
+          "end": 17.423,
+          "reading": "ひかり"
+        },
+        {
+          "text": "の",
+          "start": 17.423,
+          "end": 18.224
+        },
+        {
+          "text": "中",
+          "start": 18.224,
+          "end": 19.025,
+          "reading": "なか"
+        },
+        {
+          "text": "で",
+          "start": 19.025,
+          "end": 19.826
+        },
+        {
+          "text": "、",
+          "start": 19.826,
+          "end": 20.627
+        },
+        {
+          "text": "私",
+          "start": 20.627,
+          "end": 21.428,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 21.428,
+          "end": 22.229
+        },
+        {
+          "text": "小さい",
+          "start": 22.229,
+          "end": 23.03,
+          "reading": "ちーさい"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 23.03,
+      "end": 26.03,
+      "text": "月は巫峡を照らし、千の峰は静まる",
+      "singableText": "月は巫峡を照らし、千の峰は静まる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 23.03,
+          "end": 23.261,
+          "reading": "がつ"
+        },
+        {
+          "text": "は",
+          "start": 23.261,
+          "end": 23.492
+        },
+        {
+          "text": "巫峡",
+          "start": 23.492,
+          "end": 23.722,
+          "reading": "ふきょう"
+        },
+        {
+          "text": "を",
+          "start": 23.722,
+          "end": 23.953
+        },
+        {
+          "text": "照ら",
+          "start": 23.953,
+          "end": 24.184,
+          "reading": "てら"
+        },
+        {
+          "text": "し",
+          "start": 24.184,
+          "end": 24.415
+        },
+        {
+          "text": "、",
+          "start": 24.415,
+          "end": 24.645
+        },
+        {
+          "text": "千",
+          "start": 24.645,
+          "end": 24.876,
+          "reading": "せん"
+        },
+        {
+          "text": "の",
+          "start": 24.876,
+          "end": 25.107
+        },
+        {
+          "text": "峰",
+          "start": 25.107,
+          "end": 25.338,
+          "reading": "みね"
+        },
+        {
+          "text": "は",
+          "start": 25.338,
+          "end": 25.568
+        },
+        {
+          "text": "静ま",
+          "start": 25.568,
+          "end": 25.799,
+          "reading": "しずま"
+        },
+        {
+          "text": "る",
+          "start": 25.799,
+          "end": 26.03
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 26.59,
+      "end": 30.51,
+      "text": "果てない空の下の蜉蝣、この身もまた蜉蝣のよう",
+      "singableText": "果てない空の下の蜉蝣、この身もまた蜉蝣のよう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "果て",
+          "start": 26.59,
+          "end": 26.917,
+          "reading": "はて"
+        },
+        {
+          "text": "ない",
+          "start": 26.917,
+          "end": 27.243
+        },
+        {
+          "text": "空",
+          "start": 27.243,
+          "end": 27.57,
+          "reading": "そら"
+        },
+        {
+          "text": "の",
+          "start": 27.57,
+          "end": 27.897
+        },
+        {
+          "text": "下の",
+          "start": 27.897,
+          "end": 28.223,
+          "reading": "したの"
+        },
+        {
+          "text": "蜉蝣",
+          "start": 28.223,
+          "end": 28.55,
+          "reading": "かげろう"
+        },
+        {
+          "text": "、",
+          "start": 28.55,
+          "end": 28.877
+        },
+        {
+          "text": "この",
+          "start": 28.877,
+          "end": 29.203
+        },
+        {
+          "text": "身",
+          "start": 29.203,
+          "end": 29.53,
+          "reading": "み"
+        },
+        {
+          "text": "もまた",
+          "start": 29.53,
+          "end": 29.857
+        },
+        {
+          "text": "蜉蝣",
+          "start": 29.857,
+          "end": 30.183,
+          "reading": "かげろう"
+        },
+        {
+          "text": "のよう",
+          "start": 30.183,
+          "end": 30.51
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 30.51,
+      "end": 32.33,
+      "text": "蜉蝣、一粒の粟ほど軽い",
+      "singableText": "蜉蝣、一粒の粟ほど軽い",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "蜉蝣",
+          "start": 30.51,
+          "end": 30.77,
+          "reading": "かげろう"
+        },
+        {
+          "text": "、",
+          "start": 30.77,
+          "end": 31.03
+        },
+        {
+          "text": "一粒",
+          "start": 31.03,
+          "end": 31.29,
+          "reading": "ひとつぶ"
+        },
+        {
+          "text": "の",
+          "start": 31.29,
+          "end": 31.55
+        },
+        {
+          "text": "粟",
+          "start": 31.55,
+          "end": 31.81,
+          "reading": "あわ"
+        },
+        {
+          "text": "ほど",
+          "start": 31.81,
+          "end": 32.07
+        },
+        {
+          "text": "軽い",
+          "start": 32.07,
+          "end": 32.33,
+          "reading": "かるい"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 32.33,
+      "end": 37.11,
+      "text": "果てない空の下の蜉蝣、この身もまた蜉蝣のよう",
+      "singableText": "果てない空の下の蜉蝣、この身もまた蜉蝣のよう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "果て",
+          "start": 32.33,
+          "end": 32.728,
+          "reading": "はて"
+        },
+        {
+          "text": "ない",
+          "start": 32.728,
+          "end": 33.127
+        },
+        {
+          "text": "空",
+          "start": 33.127,
+          "end": 33.525,
+          "reading": "そら"
+        },
+        {
+          "text": "の",
+          "start": 33.525,
+          "end": 33.923
+        },
+        {
+          "text": "下の",
+          "start": 33.923,
+          "end": 34.322,
+          "reading": "したの"
+        },
+        {
+          "text": "蜉蝣",
+          "start": 34.322,
+          "end": 34.72,
+          "reading": "かげろう"
+        },
+        {
+          "text": "、",
+          "start": 34.72,
+          "end": 35.118
+        },
+        {
+          "text": "この",
+          "start": 35.118,
+          "end": 35.517
+        },
+        {
+          "text": "身",
+          "start": 35.517,
+          "end": 35.915,
+          "reading": "み"
+        },
+        {
+          "text": "もまた",
+          "start": 35.915,
+          "end": 36.313
+        },
+        {
+          "text": "蜉蝣",
+          "start": 36.313,
+          "end": 36.712,
+          "reading": "かげろう"
+        },
+        {
+          "text": "のよう",
+          "start": 36.712,
+          "end": 37.11
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 37.11,
+      "end": 39.17,
+      "text": "蜉蝣、一粒の粟ほど軽い",
+      "singableText": "蜉蝣、一粒の粟ほど軽い",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "蜉蝣",
+          "start": 37.11,
+          "end": 37.404,
+          "reading": "かげろう"
+        },
+        {
+          "text": "、",
+          "start": 37.404,
+          "end": 37.699
+        },
+        {
+          "text": "一粒",
+          "start": 37.699,
+          "end": 37.993,
+          "reading": "ひとつぶ"
+        },
+        {
+          "text": "の",
+          "start": 37.993,
+          "end": 38.287
+        },
+        {
+          "text": "粟",
+          "start": 38.287,
+          "end": 38.581,
+          "reading": "あわ"
+        },
+        {
+          "text": "ほど",
+          "start": 38.581,
+          "end": 38.876
+        },
+        {
+          "text": "軽い",
+          "start": 38.876,
+          "end": 39.17,
+          "reading": "かるい"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 39.55,
+      "end": 41.79,
+      "text": "川風よ、私を運んで",
+      "singableText": "川風よ、私を運んで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "川風",
+          "start": 39.55,
+          "end": 39.87,
+          "reading": "かわかぜ"
+        },
+        {
+          "text": "よ",
+          "start": 39.87,
+          "end": 40.19
+        },
+        {
+          "text": "、",
+          "start": 40.19,
+          "end": 40.51
+        },
+        {
+          "text": "私",
+          "start": 40.51,
+          "end": 40.83,
+          "reading": "わたし"
+        },
+        {
+          "text": "を",
+          "start": 40.83,
+          "end": 41.15
+        },
+        {
+          "text": "運ん",
+          "start": 41.15,
+          "end": 41.47,
+          "reading": "はこん"
+        },
+        {
+          "text": "で",
+          "start": 41.47,
+          "end": 41.79
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 41.79,
+      "end": 45.55,
+      "text": "川風は千の帆を送り過ぎる",
+      "singableText": "川風は千の帆を送り過ぎる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "川風",
+          "start": 41.79,
+          "end": 42.208,
+          "reading": "かわかぜ"
+        },
+        {
+          "text": "は",
+          "start": 42.208,
+          "end": 42.626
+        },
+        {
+          "text": "千",
+          "start": 42.626,
+          "end": 43.043,
+          "reading": "せん"
+        },
+        {
+          "text": "の",
+          "start": 43.043,
+          "end": 43.461
+        },
+        {
+          "text": "帆",
+          "start": 43.461,
+          "end": 43.879,
+          "reading": "ほ"
+        },
+        {
+          "text": "を",
+          "start": 43.879,
+          "end": 44.297
+        },
+        {
+          "text": "送り",
+          "start": 44.297,
+          "end": 44.714,
+          "reading": "おくり"
+        },
+        {
+          "text": "過ぎ",
+          "start": 44.714,
+          "end": 45.132,
+          "reading": "すぎ"
+        },
+        {
+          "text": "る",
+          "start": 45.132,
+          "end": 45.55
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 45.55,
+      "end": 50.65,
+      "text": "百年の夢は波へ流れていく",
+      "singableText": "百年の夢は波へ流れていく",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "百年",
+          "start": 45.55,
+          "end": 46.188,
+          "reading": "ひゃくねん"
+        },
+        {
+          "text": "の",
+          "start": 46.188,
+          "end": 46.825
+        },
+        {
+          "text": "夢",
+          "start": 46.825,
+          "end": 47.462,
+          "reading": "ゆめ"
+        },
+        {
+          "text": "は",
+          "start": 47.462,
+          "end": 48.1
+        },
+        {
+          "text": "波",
+          "start": 48.1,
+          "end": 48.737,
+          "reading": "なみ"
+        },
+        {
+          "text": "へ",
+          "start": 48.737,
+          "end": 49.375
+        },
+        {
+          "text": "流れ",
+          "start": 49.375,
+          "end": 50.012,
+          "reading": "ながれ"
+        },
+        {
+          "text": "ていく",
+          "start": 50.012,
+          "end": 50.65
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "start": 50.65,
+      "end": 52.99,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 50.65,
+          "end": 52.99
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 52.99,
+      "end": 56.25,
+      "text": "巫峡の上の月",
+      "singableText": "巫峡の上の月",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "巫峡",
+          "start": 52.99,
+          "end": 53.805,
+          "reading": "ふきょう"
+        },
+        {
+          "text": "の",
+          "start": 53.805,
+          "end": 54.62
+        },
+        {
+          "text": "上の",
+          "start": 54.62,
+          "end": 55.435,
+          "reading": "うえの"
+        },
+        {
+          "text": "月",
+          "start": 55.435,
+          "end": 56.25,
+          "reading": "がつ"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 56.25,
+      "end": 58.73,
+      "text": "すべてが静まり返る",
+      "singableText": "すべてが静まり返る",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "すべてが",
+          "start": 56.25,
+          "end": 56.87
+        },
+        {
+          "text": "静ま",
+          "start": 56.87,
+          "end": 57.49,
+          "reading": "しずま"
+        },
+        {
+          "text": "り",
+          "start": 57.49,
+          "end": 58.11
+        },
+        {
+          "text": "返る",
+          "start": 58.11,
+          "end": 58.73,
+          "reading": "かえる"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 58.73,
+      "end": 66.27,
+      "text": "私は小さい、それでも心は運んでいく",
+      "singableText": "私は小さい、それでも心は運んでいく",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 58.73,
+          "end": 59.672,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 59.672,
+          "end": 60.615
+        },
+        {
+          "text": "小さい",
+          "start": 60.615,
+          "end": 61.557,
+          "reading": "ちーさい"
+        },
+        {
+          "text": "、",
+          "start": 61.557,
+          "end": 62.5
+        },
+        {
+          "text": "それでも",
+          "start": 62.5,
+          "end": 63.442
+        },
+        {
+          "text": "心は",
+          "start": 63.442,
+          "end": 64.385,
+          "reading": "こころは"
+        },
+        {
+          "text": "運ん",
+          "start": 64.385,
+          "end": 65.328,
+          "reading": "はこん"
+        },
+        {
+          "text": "でいく",
+          "start": 65.328,
+          "end": 66.27
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "start": 66.27,
+      "end": 76.0,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 66.27,
+          "end": 76.0
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render ASR and the planned mixed phonetic lyric. Source-close Chinese pinyin forms are preserved where ASR is phonetically close."
+  }
+}
