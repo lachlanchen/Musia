@@ -1,0 +1,795 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "gong-bai-tou-snow-we-share",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "i01",
+      "start": 0.0,
+      "end": 3.18,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 0.0,
+          "end": 3.18
+        }
+      ]
+    },
+    {
+      "id": "l01",
+      "start": 3.18,
+      "end": 6.88,
+      "text": "忽有故人心上过",
+      "singableText": "忽有故人心上过",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "忽",
+          "start": 3.18,
+          "end": 3.709,
+          "pinyin": "hu1"
+        },
+        {
+          "text": "有",
+          "start": 3.709,
+          "end": 4.237,
+          "pinyin": "you3"
+        },
+        {
+          "text": "故",
+          "start": 4.237,
+          "end": 4.766,
+          "pinyin": "gu4"
+        },
+        {
+          "text": "人",
+          "start": 4.766,
+          "end": 5.294,
+          "pinyin": "ren2"
+        },
+        {
+          "text": "心",
+          "start": 5.294,
+          "end": 5.823,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "上",
+          "start": 5.823,
+          "end": 6.351,
+          "pinyin": "shang4"
+        },
+        {
+          "text": "过",
+          "start": 6.351,
+          "end": 6.88,
+          "pinyin": "guo4"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 7.26,
+      "end": 13.53,
+      "text": "雪光轻轻落下",
+      "singableText": "雪光轻轻落下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "雪",
+          "start": 7.26,
+          "end": 8.305,
+          "pinyin": "xue3"
+        },
+        {
+          "text": "光",
+          "start": 8.305,
+          "end": 9.35,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "轻",
+          "start": 9.35,
+          "end": 10.395,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "轻",
+          "start": 10.395,
+          "end": 11.44,
+          "pinyin": "qing1"
+        },
+        {
+          "text": "落",
+          "start": 11.44,
+          "end": 12.485,
+          "pinyin": "luo4"
+        },
+        {
+          "text": "下",
+          "start": 12.485,
+          "end": 13.53,
+          "pinyin": "xia4"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 15.6,
+      "end": 18.46,
+      "text": "回首山河已入冬",
+      "singableText": "回首山河已入冬",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "回",
+          "start": 15.6,
+          "end": 16.009,
+          "pinyin": "hui2"
+        },
+        {
+          "text": "首",
+          "start": 16.009,
+          "end": 16.417,
+          "pinyin": "shou3"
+        },
+        {
+          "text": "山",
+          "start": 16.417,
+          "end": 16.826,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "河",
+          "start": 16.826,
+          "end": 17.234,
+          "pinyin": "he2"
+        },
+        {
+          "text": "已",
+          "start": 17.234,
+          "end": 17.643,
+          "pinyin": "yi3"
+        },
+        {
+          "text": "入",
+          "start": 17.643,
+          "end": 18.051,
+          "pinyin": "ru4"
+        },
+        {
+          "text": "冬",
+          "start": 18.051,
+          "end": 18.46,
+          "pinyin": "dong1"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 18.46,
+      "end": 21.98,
+      "text": "你的名字仍在发光",
+      "singableText": "你的名字仍在发光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 18.46,
+          "end": 18.9,
+          "pinyin": "ni3"
+        },
+        {
+          "text": "的",
+          "start": 18.9,
+          "end": 19.34,
+          "pinyin": "de5"
+        },
+        {
+          "text": "名",
+          "start": 19.34,
+          "end": 19.78,
+          "pinyin": "ming2"
+        },
+        {
+          "text": "字",
+          "start": 19.78,
+          "end": 20.22,
+          "pinyin": "zi4"
+        },
+        {
+          "text": "仍",
+          "start": 20.22,
+          "end": 20.66,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "在",
+          "start": 20.66,
+          "end": 21.1,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "发",
+          "start": 21.1,
+          "end": 21.54,
+          "pinyin": "fa1"
+        },
+        {
+          "text": "光",
+          "start": 21.54,
+          "end": 21.98,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 21.98,
+      "end": 27.44,
+      "text": "远日的声音落进心里",
+      "singableText": "远日的声音落进心里",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "远",
+          "start": 21.98,
+          "end": 22.587,
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "日",
+          "start": 22.587,
+          "end": 23.193,
+          "pinyin": "ri4"
+        },
+        {
+          "text": "的",
+          "start": 23.193,
+          "end": 23.8,
+          "pinyin": "de5"
+        },
+        {
+          "text": "声",
+          "start": 23.8,
+          "end": 24.407,
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "音",
+          "start": 24.407,
+          "end": 25.013,
+          "pinyin": "yin1"
+        },
+        {
+          "text": "落",
+          "start": 25.013,
+          "end": 25.62,
+          "pinyin": "luo4"
+        },
+        {
+          "text": "进",
+          "start": 25.62,
+          "end": 26.227,
+          "pinyin": "jin4"
+        },
+        {
+          "text": "心",
+          "start": 26.227,
+          "end": 26.833,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "里",
+          "start": 26.833,
+          "end": 27.44,
+          "pinyin": "li3"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 28.4,
+      "end": 31.44,
+      "text": "回首时，世界已是",
+      "singableText": "回首时，世界已是",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "回",
+          "start": 28.4,
+          "end": 28.78,
+          "pinyin": "hui2"
+        },
+        {
+          "text": "首",
+          "start": 28.78,
+          "end": 29.16,
+          "pinyin": "shou3"
+        },
+        {
+          "text": "时",
+          "start": 29.16,
+          "end": 29.54,
+          "pinyin": "shi2"
+        },
+        {
+          "text": "，",
+          "start": 29.54,
+          "end": 29.92
+        },
+        {
+          "text": "世",
+          "start": 29.92,
+          "end": 30.3,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "界",
+          "start": 30.3,
+          "end": 30.68,
+          "pinyin": "jie4"
+        },
+        {
+          "text": "已",
+          "start": 30.68,
+          "end": 31.06,
+          "pinyin": "yi3"
+        },
+        {
+          "text": "是",
+          "start": 31.06,
+          "end": 31.44,
+          "pinyin": "shi4"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 31.44,
+      "end": 34.24,
+      "text": "冬天的颜色",
+      "singableText": "冬天的颜色",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "冬",
+          "start": 31.44,
+          "end": 32.0,
+          "pinyin": "dong1"
+        },
+        {
+          "text": "天",
+          "start": 32.0,
+          "end": 32.56,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "的",
+          "start": 32.56,
+          "end": 33.12,
+          "pinyin": "de5"
+        },
+        {
+          "text": "颜",
+          "start": 33.12,
+          "end": 33.68,
+          "pinyin": "yan2"
+        },
+        {
+          "text": "色",
+          "start": 33.68,
+          "end": 34.24,
+          "pinyin": "se4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 34.84,
+      "end": 37.86,
+      "text": "他朝若是同淋雪",
+      "singableText": "他朝若是同淋雪",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "他",
+          "start": 34.84,
+          "end": 35.271,
+          "pinyin": "ta1"
+        },
+        {
+          "text": "朝",
+          "start": 35.271,
+          "end": 35.703,
+          "pinyin": "chao2"
+        },
+        {
+          "text": "若",
+          "start": 35.703,
+          "end": 36.134,
+          "pinyin": "ruo4"
+        },
+        {
+          "text": "是",
+          "start": 36.134,
+          "end": 36.566,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "同",
+          "start": 36.566,
+          "end": 36.997,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "淋",
+          "start": 36.997,
+          "end": 37.429,
+          "pinyin": "lin2"
+        },
+        {
+          "text": "雪",
+          "start": 37.429,
+          "end": 37.86,
+          "pinyin": "xue3"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 37.86,
+      "end": 41.02,
+      "text": "此生也算共白头",
+      "singableText": "此生也算共白头",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "此",
+          "start": 37.86,
+          "end": 38.311,
+          "pinyin": "ci3"
+        },
+        {
+          "text": "生",
+          "start": 38.311,
+          "end": 38.763,
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "也",
+          "start": 38.763,
+          "end": 39.214,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "算",
+          "start": 39.214,
+          "end": 39.666,
+          "pinyin": "suan4"
+        },
+        {
+          "text": "共",
+          "start": 39.666,
+          "end": 40.117,
+          "pinyin": "gong4"
+        },
+        {
+          "text": "白",
+          "start": 40.117,
+          "end": 40.569,
+          "pinyin": "bai2"
+        },
+        {
+          "text": "头",
+          "start": 40.569,
+          "end": 41.02,
+          "pinyin": "tou2"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 41.02,
+      "end": 44.48,
+      "text": "忽有故人心上过",
+      "singableText": "忽有故人心上过",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "忽",
+          "start": 41.02,
+          "end": 41.514,
+          "pinyin": "hu1"
+        },
+        {
+          "text": "有",
+          "start": 41.514,
+          "end": 42.009,
+          "pinyin": "you3"
+        },
+        {
+          "text": "故",
+          "start": 42.009,
+          "end": 42.503,
+          "pinyin": "gu4"
+        },
+        {
+          "text": "人",
+          "start": 42.503,
+          "end": 42.997,
+          "pinyin": "ren2"
+        },
+        {
+          "text": "心",
+          "start": 42.997,
+          "end": 43.491,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "上",
+          "start": 43.491,
+          "end": 43.986,
+          "pinyin": "shang4"
+        },
+        {
+          "text": "过",
+          "start": 43.986,
+          "end": 44.48,
+          "pinyin": "guo4"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.48,
+      "end": 48.72,
+      "text": "回首山河已入冬",
+      "singableText": "回首山河已入冬",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "回",
+          "start": 44.48,
+          "end": 45.086,
+          "pinyin": "hui2"
+        },
+        {
+          "text": "首",
+          "start": 45.086,
+          "end": 45.691,
+          "pinyin": "shou3"
+        },
+        {
+          "text": "山",
+          "start": 45.691,
+          "end": 46.297,
+          "pinyin": "shan1"
+        },
+        {
+          "text": "河",
+          "start": 46.297,
+          "end": 46.903,
+          "pinyin": "he2"
+        },
+        {
+          "text": "已",
+          "start": 46.903,
+          "end": 47.509,
+          "pinyin": "yi3"
+        },
+        {
+          "text": "入",
+          "start": 47.509,
+          "end": 48.114,
+          "pinyin": "ru4"
+        },
+        {
+          "text": "冬",
+          "start": 48.114,
+          "end": 48.72,
+          "pinyin": "dong1"
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "start": 48.72,
+      "end": 64.4,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 48.72,
+          "end": 64.4
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 64.4,
+      "end": 67.0,
+      "text": "在同一场雪下",
+      "singableText": "在同一场雪下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "在",
+          "start": 64.4,
+          "end": 64.833,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "同",
+          "start": 64.833,
+          "end": 65.267,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "一",
+          "start": 65.267,
+          "end": 65.7,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "场",
+          "start": 65.7,
+          "end": 66.133,
+          "pinyin": "chang3"
+        },
+        {
+          "text": "雪",
+          "start": 66.133,
+          "end": 66.567,
+          "pinyin": "xue3"
+        },
+        {
+          "text": "下",
+          "start": 66.567,
+          "end": 67.0,
+          "pinyin": "xia4"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 67.0,
+      "end": 72.73,
+      "text": "若同淋雪，也许能共白",
+      "singableText": "若同淋雪，也许能共白",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "若",
+          "start": 67.0,
+          "end": 67.573,
+          "pinyin": "ruo4"
+        },
+        {
+          "text": "同",
+          "start": 67.573,
+          "end": 68.146,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "淋",
+          "start": 68.146,
+          "end": 68.719,
+          "pinyin": "lin2"
+        },
+        {
+          "text": "雪",
+          "start": 68.719,
+          "end": 69.292,
+          "pinyin": "xue3"
+        },
+        {
+          "text": "，",
+          "start": 69.292,
+          "end": 69.865
+        },
+        {
+          "text": "也",
+          "start": 69.865,
+          "end": 70.438,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "许",
+          "start": 70.438,
+          "end": 71.011,
+          "pinyin": "xu3"
+        },
+        {
+          "text": "能",
+          "start": 71.011,
+          "end": 71.584,
+          "pinyin": "neng2"
+        },
+        {
+          "text": "共",
+          "start": 71.584,
+          "end": 72.157,
+          "pinyin": "gong4"
+        },
+        {
+          "text": "白",
+          "start": 72.157,
+          "end": 72.73,
+          "pinyin": "bai2"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 74.52,
+      "end": 76.54,
+      "text": "也算共白头",
+      "singableText": "也算共白头",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "也",
+          "start": 74.52,
+          "end": 74.924,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "算",
+          "start": 74.924,
+          "end": 75.328,
+          "pinyin": "suan4"
+        },
+        {
+          "text": "共",
+          "start": 75.328,
+          "end": 75.732,
+          "pinyin": "gong4"
+        },
+        {
+          "text": "白",
+          "start": 75.732,
+          "end": 76.136,
+          "pinyin": "bai2"
+        },
+        {
+          "text": "头",
+          "start": 76.136,
+          "end": 76.54,
+          "pinyin": "tou2"
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "start": 76.54,
+      "end": 82.0,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 76.54,
+          "end": 82.0
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from ACE XL Turbo seed 790972 using selected-render ASR and the planned mixed phonetic lyric. Source-close phrases are preserved; prompt lines not audibly recovered are omitted."
+  }
+}

@@ -1,0 +1,632 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "gong-bai-tou-snow-we-share",
+  "language": {
+    "code": "mul",
+    "label": "Mixed",
+    "nativeLabel": "Mixed",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "i01",
+      "start": 0.0,
+      "end": 3.18,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 0.0,
+          "end": 3.18
+        }
+      ]
+    },
+    {
+      "id": "l01",
+      "start": 3.18,
+      "end": 6.88,
+      "text": "Hu you gu ren xin shang guo",
+      "singableText": "Hu you gu ren xin shang guo",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hu",
+          "start": 3.18,
+          "end": 3.709
+        },
+        {
+          "text": "you",
+          "start": 3.709,
+          "end": 4.237
+        },
+        {
+          "text": "gu",
+          "start": 4.237,
+          "end": 4.766
+        },
+        {
+          "text": "ren",
+          "start": 4.766,
+          "end": 5.294
+        },
+        {
+          "text": "xin",
+          "start": 5.294,
+          "end": 5.823
+        },
+        {
+          "text": "shang",
+          "start": 5.823,
+          "end": 6.351
+        },
+        {
+          "text": "guo",
+          "start": 6.351,
+          "end": 6.88
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 7.26,
+      "end": 13.53,
+      "text": "Lights fall soft in the snow",
+      "singableText": "Lights fall soft in the snow",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Lights",
+          "start": 7.26,
+          "end": 8.305
+        },
+        {
+          "text": "fall",
+          "start": 8.305,
+          "end": 9.35
+        },
+        {
+          "text": "soft",
+          "start": 9.35,
+          "end": 10.395
+        },
+        {
+          "text": "in",
+          "start": 10.395,
+          "end": 11.44
+        },
+        {
+          "text": "the",
+          "start": 11.44,
+          "end": 12.485
+        },
+        {
+          "text": "snow",
+          "start": 12.485,
+          "end": 13.53
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 15.6,
+      "end": 18.46,
+      "text": "Hui shou shan he yi ru dong",
+      "singableText": "Hui shou shan he yi ru dong",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hui",
+          "start": 15.6,
+          "end": 16.009
+        },
+        {
+          "text": "shou",
+          "start": 16.009,
+          "end": 16.417
+        },
+        {
+          "text": "shan",
+          "start": 16.417,
+          "end": 16.826
+        },
+        {
+          "text": "he",
+          "start": 16.826,
+          "end": 17.234
+        },
+        {
+          "text": "yi",
+          "start": 17.234,
+          "end": 17.643
+        },
+        {
+          "text": "ru",
+          "start": 17.643,
+          "end": 18.051
+        },
+        {
+          "text": "dong",
+          "start": 18.051,
+          "end": 18.46
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 18.46,
+      "end": 21.98,
+      "text": "Your name still glows",
+      "singableText": "Your name still glows",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Your",
+          "start": 18.46,
+          "end": 19.34
+        },
+        {
+          "text": "name",
+          "start": 19.34,
+          "end": 20.22
+        },
+        {
+          "text": "still",
+          "start": 20.22,
+          "end": 21.1
+        },
+        {
+          "text": "glows",
+          "start": 21.1,
+          "end": 21.98
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 21.98,
+      "end": 27.44,
+      "text": "Tooi hi no koe ga mune ni furu",
+      "singableText": "Tooi hi no koe ga mune ni furu",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Tooi",
+          "start": 21.98,
+          "end": 22.663
+        },
+        {
+          "text": "hi",
+          "start": 22.663,
+          "end": 23.345
+        },
+        {
+          "text": "no",
+          "start": 23.345,
+          "end": 24.027
+        },
+        {
+          "text": "koe",
+          "start": 24.027,
+          "end": 24.71
+        },
+        {
+          "text": "ga",
+          "start": 24.71,
+          "end": 25.393
+        },
+        {
+          "text": "mune",
+          "start": 25.393,
+          "end": 26.075
+        },
+        {
+          "text": "ni",
+          "start": 26.075,
+          "end": 26.758
+        },
+        {
+          "text": "furu",
+          "start": 26.758,
+          "end": 27.44
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 28.4,
+      "end": 31.44,
+      "text": "Furikaereba sekai wa",
+      "singableText": "Furikaereba sekai wa",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Furikaereba",
+          "start": 28.4,
+          "end": 29.413
+        },
+        {
+          "text": "sekai",
+          "start": 29.413,
+          "end": 30.427
+        },
+        {
+          "text": "wa",
+          "start": 30.427,
+          "end": 31.44
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 31.44,
+      "end": 34.24,
+      "text": "Fuyu no iro ni naru",
+      "singableText": "Fuyu no iro ni naru",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Fuyu",
+          "start": 31.44,
+          "end": 32.0
+        },
+        {
+          "text": "no",
+          "start": 32.0,
+          "end": 32.56
+        },
+        {
+          "text": "iro",
+          "start": 32.56,
+          "end": 33.12
+        },
+        {
+          "text": "ni",
+          "start": 33.12,
+          "end": 33.68
+        },
+        {
+          "text": "naru",
+          "start": 33.68,
+          "end": 34.24
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 34.84,
+      "end": 37.86,
+      "text": "Ta zhao ruo shi tong lin xue",
+      "singableText": "Ta zhao ruo shi tong lin xue",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ta",
+          "start": 34.84,
+          "end": 35.271
+        },
+        {
+          "text": "zhao",
+          "start": 35.271,
+          "end": 35.703
+        },
+        {
+          "text": "ruo",
+          "start": 35.703,
+          "end": 36.134
+        },
+        {
+          "text": "shi",
+          "start": 36.134,
+          "end": 36.566
+        },
+        {
+          "text": "tong",
+          "start": 36.566,
+          "end": 36.997
+        },
+        {
+          "text": "lin",
+          "start": 36.997,
+          "end": 37.429
+        },
+        {
+          "text": "xue",
+          "start": 37.429,
+          "end": 37.86
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 37.86,
+      "end": 41.02,
+      "text": "Ci sheng ye suan gong bai tou",
+      "singableText": "Ci sheng ye suan gong bai tou",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ci",
+          "start": 37.86,
+          "end": 38.311
+        },
+        {
+          "text": "sheng",
+          "start": 38.311,
+          "end": 38.763
+        },
+        {
+          "text": "ye",
+          "start": 38.763,
+          "end": 39.214
+        },
+        {
+          "text": "suan",
+          "start": 39.214,
+          "end": 39.666
+        },
+        {
+          "text": "gong",
+          "start": 39.666,
+          "end": 40.117
+        },
+        {
+          "text": "bai",
+          "start": 40.117,
+          "end": 40.569
+        },
+        {
+          "text": "tou",
+          "start": 40.569,
+          "end": 41.02
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 41.02,
+      "end": 44.48,
+      "text": "Hu you gu ren xin shang guo",
+      "singableText": "Hu you gu ren xin shang guo",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hu",
+          "start": 41.02,
+          "end": 41.514
+        },
+        {
+          "text": "you",
+          "start": 41.514,
+          "end": 42.009
+        },
+        {
+          "text": "gu",
+          "start": 42.009,
+          "end": 42.503
+        },
+        {
+          "text": "ren",
+          "start": 42.503,
+          "end": 42.997
+        },
+        {
+          "text": "xin",
+          "start": 42.997,
+          "end": 43.491
+        },
+        {
+          "text": "shang",
+          "start": 43.491,
+          "end": 43.986
+        },
+        {
+          "text": "guo",
+          "start": 43.986,
+          "end": 44.48
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.48,
+      "end": 48.72,
+      "text": "Hui shou shan he yi ru dong",
+      "singableText": "Hui shou shan he yi ru dong",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Hui",
+          "start": 44.48,
+          "end": 45.086
+        },
+        {
+          "text": "shou",
+          "start": 45.086,
+          "end": 45.691
+        },
+        {
+          "text": "shan",
+          "start": 45.691,
+          "end": 46.297
+        },
+        {
+          "text": "he",
+          "start": 46.297,
+          "end": 46.903
+        },
+        {
+          "text": "yi",
+          "start": 46.903,
+          "end": 47.509
+        },
+        {
+          "text": "ru",
+          "start": 47.509,
+          "end": 48.114
+        },
+        {
+          "text": "dong",
+          "start": 48.114,
+          "end": 48.72
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "start": 48.72,
+      "end": 64.4,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 48.72,
+          "end": 64.4
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 64.4,
+      "end": 67.0,
+      "text": "Onaji yuki no shita de",
+      "singableText": "Onaji yuki no shita de",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Onaji",
+          "start": 64.4,
+          "end": 64.92
+        },
+        {
+          "text": "yuki",
+          "start": 64.92,
+          "end": 65.44
+        },
+        {
+          "text": "no",
+          "start": 65.44,
+          "end": 65.96
+        },
+        {
+          "text": "shita",
+          "start": 65.96,
+          "end": 66.48
+        },
+        {
+          "text": "de",
+          "start": 66.48,
+          "end": 67.0
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 67.0,
+      "end": 72.73,
+      "text": "Shiroku nareru, ta zhao tong lin xue",
+      "singableText": "Shiroku nareru, ta zhao tong lin xue",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Shiroku",
+          "start": 67.0,
+          "end": 67.716
+        },
+        {
+          "text": "nareru",
+          "start": 67.716,
+          "end": 68.433
+        },
+        {
+          "text": ",",
+          "start": 68.433,
+          "end": 69.149
+        },
+        {
+          "text": "ta",
+          "start": 69.149,
+          "end": 69.865
+        },
+        {
+          "text": "zhao",
+          "start": 69.865,
+          "end": 70.581
+        },
+        {
+          "text": "tong",
+          "start": 70.581,
+          "end": 71.297
+        },
+        {
+          "text": "lin",
+          "start": 71.297,
+          "end": 72.014
+        },
+        {
+          "text": "xue",
+          "start": 72.014,
+          "end": 72.73
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 74.52,
+      "end": 76.54,
+      "text": "Ye suan gong bai tou",
+      "singableText": "Ye suan gong bai tou",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Ye",
+          "start": 74.52,
+          "end": 74.924
+        },
+        {
+          "text": "suan",
+          "start": 74.924,
+          "end": 75.328
+        },
+        {
+          "text": "gong",
+          "start": 75.328,
+          "end": 75.732
+        },
+        {
+          "text": "bai",
+          "start": 75.732,
+          "end": 76.136
+        },
+        {
+          "text": "tou",
+          "start": 76.136,
+          "end": 76.54
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "start": 76.54,
+      "end": 82.0,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 76.54,
+          "end": 82.0
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from ACE XL Turbo seed 790972 using selected-render ASR and the planned mixed phonetic lyric. Source-close phrases are preserved; prompt lines not audibly recovered are omitted."
+  }
+}
