@@ -60,6 +60,20 @@ For normal 4K portrait Musia player clips, use the realtime recorder with
 `--publication-layout --capture-clock`. The slower deterministic recorder is for
 debug/special visual renders, not the default fast publication path.
 
+Portrait Fun-player clips should be captured natively as portrait, not created
+by bg-filling a landscape master:
+
+```text
+record_fun_player_realtime.py
+  --width 2160 --height 3840
+  --css-width 1080 --css-height 1920
+  --device-scale-factor 2
+```
+
+When LazyEdit is used after that native portrait recording, pass
+`--no-portrait-blur-fill`. Use bg-fill only for horizontal or nonmatching-aspect
+source videos, and make its foreground geometry respect the source aspect ratio.
+
 For LazyEdit video CLI publishes, use full platform names:
 
 ```text
