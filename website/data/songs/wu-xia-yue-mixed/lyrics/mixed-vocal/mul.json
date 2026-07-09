@@ -12,7 +12,7 @@
     {
       "id": "i01",
       "start": 0.0,
-      "end": 16.12,
+      "end": 7.08,
       "text": "♪",
       "singableText": "♪",
       "role": "instrumental",
@@ -20,6 +20,76 @@
         {
           "text": "♪",
           "start": 0.0,
+          "end": 7.08
+        }
+      ]
+    },
+    {
+      "id": "l00a",
+      "start": 7.08,
+      "end": 11.24,
+      "text": "Moon over the gorge",
+      "singableText": "Moon over the gorge",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Moon",
+          "start": 7.08,
+          "end": 8.12
+        },
+        {
+          "text": "over",
+          "start": 8.12,
+          "end": 9.16
+        },
+        {
+          "text": "the",
+          "start": 9.16,
+          "end": 10.2
+        },
+        {
+          "text": "gorge",
+          "start": 10.2,
+          "end": 11.24
+        }
+      ]
+    },
+    {
+      "id": "l00b",
+      "start": 12.0,
+      "end": 14.5,
+      "text": "Kawa no kaze",
+      "singableText": "Kawa no kaze",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Kawa",
+          "start": 12.0,
+          "end": 12.833
+        },
+        {
+          "text": "no",
+          "start": 12.833,
+          "end": 13.667
+        },
+        {
+          "text": "kaze",
+          "start": 13.667,
+          "end": 14.5
+        }
+      ]
+    },
+    {
+      "id": "i01b",
+      "start": 14.5,
+      "end": 16.12,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 14.5,
           "end": 16.12
         }
       ]
@@ -73,8 +143,8 @@
       "id": "l02",
       "start": 22.82,
       "end": 25.6,
-      "text": "Yue zhao Wu Xia qian feng jing",
-      "singableText": "Yue zhao Wu Xia qian feng jing",
+      "text": "Yue zhao Wu Xia jian fang jing",
+      "singableText": "Yue zhao Wu Xia jian fang jing",
       "role": "lyric",
       "tokens": [
         {
@@ -98,12 +168,12 @@
           "end": 24.409
         },
         {
-          "text": "qian",
+          "text": "jian",
           "start": 24.409,
           "end": 24.806
         },
         {
-          "text": "feng",
+          "text": "fang",
           "start": 24.806,
           "end": 25.203
         },
@@ -158,12 +228,12 @@
       "id": "l04",
       "start": 29.7,
       "end": 32.22,
-      "text": "Shen si fu you yi su qing",
-      "singableText": "Shen si fu you yi su qing",
+      "text": "Shan si fu yu yi su jing",
+      "singableText": "Shan si fu yu yi su jing",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Shen",
+          "text": "Shan",
           "start": 29.7,
           "end": 30.06
         },
@@ -178,7 +248,7 @@
           "end": 30.78
         },
         {
-          "text": "you",
+          "text": "yu",
           "start": 30.78,
           "end": 31.14
         },
@@ -193,7 +263,7 @@
           "end": 31.86
         },
         {
-          "text": "qing",
+          "text": "jing",
           "start": 31.86,
           "end": 32.22
         }
@@ -243,12 +313,12 @@
       "id": "l06",
       "start": 36.04,
       "end": 39.46,
-      "text": "Shen si fu you yi su qing",
-      "singableText": "Shen si fu you yi su qing",
+      "text": "Shan si fu yu yi su jing",
+      "singableText": "Shan si fu yu yi su jing",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Shen",
+          "text": "Shan",
           "start": 36.04,
           "end": 36.529
         },
@@ -263,7 +333,7 @@
           "end": 37.506
         },
         {
-          "text": "you",
+          "text": "yu",
           "start": 37.506,
           "end": 37.994
         },
@@ -278,7 +348,7 @@
           "end": 38.971
         },
         {
-          "text": "qing",
+          "text": "jing",
           "start": 38.971,
           "end": 39.46
         }
@@ -323,8 +393,8 @@
       "id": "l08",
       "start": 41.62,
       "end": 44.84,
-      "text": "Jiang feng qian fan guo",
-      "singableText": "Jiang feng qian fan guo",
+      "text": "Jiang feng qian fang guo",
+      "singableText": "Jiang feng qian fang guo",
       "role": "lyric",
       "tokens": [
         {
@@ -343,7 +413,7 @@
           "end": 43.552
         },
         {
-          "text": "fan",
+          "text": "fang",
           "start": 43.552,
           "end": 44.196
         },
@@ -488,8 +558,8 @@
       "id": "l13",
       "start": 58.54,
       "end": 66.72,
-      "text": "I am small, I am free, but my heart can feel",
-      "singableText": "I am small, I am free, but my heart can feel",
+      "text": "I am small, I am free, but my heart can't feel",
+      "singableText": "I am small, I am free, but my heart can't feel",
       "role": "lyric",
       "tokens": [
         {
@@ -548,7 +618,7 @@
           "end": 65.462
         },
         {
-          "text": "can",
+          "text": "can't",
           "start": 65.462,
           "end": 66.091
         },

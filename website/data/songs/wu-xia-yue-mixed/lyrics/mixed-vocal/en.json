@@ -12,7 +12,7 @@
     {
       "id": "i01",
       "start": 0.0,
-      "end": 16.12,
+      "end": 7.08,
       "text": "♪",
       "singableText": "♪",
       "role": "instrumental",
@@ -20,6 +20,81 @@
         {
           "text": "♪",
           "start": 0.0,
+          "end": 7.08
+        }
+      ]
+    },
+    {
+      "id": "l00a",
+      "start": 7.08,
+      "end": 11.24,
+      "text": "Moon over the gorge.",
+      "singableText": "Moon over the gorge.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Moon",
+          "start": 7.08,
+          "end": 7.912
+        },
+        {
+          "text": "over",
+          "start": 7.912,
+          "end": 8.744
+        },
+        {
+          "text": "the",
+          "start": 8.744,
+          "end": 9.576
+        },
+        {
+          "text": "gorge",
+          "start": 9.576,
+          "end": 10.408
+        },
+        {
+          "text": ".",
+          "start": 10.408,
+          "end": 11.24
+        }
+      ]
+    },
+    {
+      "id": "l00b",
+      "start": 12.0,
+      "end": 14.5,
+      "text": "River wind.",
+      "singableText": "River wind.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "River",
+          "start": 12.0,
+          "end": 12.833
+        },
+        {
+          "text": "wind",
+          "start": 12.833,
+          "end": 13.667
+        },
+        {
+          "text": ".",
+          "start": 13.667,
+          "end": 14.5
+        }
+      ]
+    },
+    {
+      "id": "i01b",
+      "start": 14.5,
+      "end": 16.12,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 14.5,
           "end": 16.12
         }
       ]
@@ -78,8 +153,8 @@
       "id": "l02",
       "start": 22.82,
       "end": 25.6,
-      "text": "Moonlight shines on Wu Gorge; a thousand peaks are still.",
-      "singableText": "Moonlight shines on Wu Gorge; a thousand peaks are still.",
+      "text": "Moonlight shines on Wu Gorge; the peaks fade into stillness.",
+      "singableText": "Moonlight shines on Wu Gorge; the peaks fade into stillness.",
       "role": "lyric",
       "tokens": [
         {
@@ -113,27 +188,27 @@
           "end": 24.21
         },
         {
-          "text": "a",
+          "text": "the",
           "start": 24.21,
           "end": 24.442
         },
         {
-          "text": "thousand",
+          "text": "peaks",
           "start": 24.442,
           "end": 24.673
         },
         {
-          "text": "peaks",
+          "text": "fade",
           "start": 24.673,
           "end": 24.905
         },
         {
-          "text": "are",
+          "text": "into",
           "start": 24.905,
           "end": 25.137
         },
         {
-          "text": "still",
+          "text": "stillness",
           "start": 25.137,
           "end": 25.368
         },
@@ -198,8 +273,8 @@
       "id": "l04",
       "start": 29.7,
       "end": 32.22,
-      "text": "This body is like a mayfly, light as one grain.",
-      "singableText": "This body is like a mayfly, light as one grain.",
+      "text": "This body drifts like a mayfly, light as one grain.",
+      "singableText": "This body drifts like a mayfly, light as one grain.",
       "role": "lyric",
       "tokens": [
         {
@@ -213,7 +288,7 @@
           "end": 30.12
         },
         {
-          "text": "is",
+          "text": "drifts",
           "start": 30.12,
           "end": 30.33
         },
@@ -318,8 +393,8 @@
       "id": "l06",
       "start": 36.04,
       "end": 39.46,
-      "text": "This body is like a mayfly, light as one grain.",
-      "singableText": "This body is like a mayfly, light as one grain.",
+      "text": "This body drifts like a mayfly, light as one grain.",
+      "singableText": "This body drifts like a mayfly, light as one grain.",
       "role": "lyric",
       "tokens": [
         {
@@ -333,7 +408,7 @@
           "end": 36.61
         },
         {
-          "text": "is",
+          "text": "drifts",
           "start": 36.61,
           "end": 36.895
         },
@@ -428,48 +503,53 @@
       "id": "l08",
       "start": 41.62,
       "end": 44.84,
-      "text": "River wind sends a thousand sails past.",
-      "singableText": "River wind sends a thousand sails past.",
+      "text": "River wind carries me past the far side.",
+      "singableText": "River wind carries me past the far side.",
       "role": "lyric",
       "tokens": [
         {
           "text": "River",
           "start": 41.62,
-          "end": 42.023
+          "end": 41.978
         },
         {
           "text": "wind",
-          "start": 42.023,
-          "end": 42.425
+          "start": 41.978,
+          "end": 42.336
         },
         {
-          "text": "sends",
-          "start": 42.425,
-          "end": 42.828
+          "text": "carries",
+          "start": 42.336,
+          "end": 42.693
         },
         {
-          "text": "a",
-          "start": 42.828,
-          "end": 43.23
-        },
-        {
-          "text": "thousand",
-          "start": 43.23,
-          "end": 43.633
-        },
-        {
-          "text": "sails",
-          "start": 43.633,
-          "end": 44.035
+          "text": "me",
+          "start": 42.693,
+          "end": 43.051
         },
         {
           "text": "past",
-          "start": 44.035,
-          "end": 44.438
+          "start": 43.051,
+          "end": 43.409
+        },
+        {
+          "text": "the",
+          "start": 43.409,
+          "end": 43.767
+        },
+        {
+          "text": "far",
+          "start": 43.767,
+          "end": 44.124
+        },
+        {
+          "text": "side",
+          "start": 44.124,
+          "end": 44.482
         },
         {
           "text": ".",
-          "start": 44.438,
+          "start": 44.482,
           "end": 44.84
         }
       ]
@@ -643,8 +723,8 @@
       "id": "l13",
       "start": 58.54,
       "end": 66.72,
-      "text": "I am small, I am free, but my heart can feel.",
-      "singableText": "I am small, I am free, but my heart can feel.",
+      "text": "I am small, I am free, but my heart cannot feel.",
+      "singableText": "I am small, I am free, but my heart cannot feel.",
       "role": "lyric",
       "tokens": [
         {
@@ -703,7 +783,7 @@
           "end": 64.967
         },
         {
-          "text": "can",
+          "text": "cannot",
           "start": 64.967,
           "end": 65.551
         },

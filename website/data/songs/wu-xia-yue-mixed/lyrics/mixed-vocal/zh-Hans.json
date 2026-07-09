@@ -13,7 +13,7 @@
     {
       "id": "i01",
       "start": 0.0,
-      "end": 16.12,
+      "end": 7.08,
       "text": "♪",
       "singableText": "♪",
       "role": "instrumental",
@@ -21,6 +21,89 @@
         {
           "text": "♪",
           "start": 0.0,
+          "end": 7.08
+        }
+      ]
+    },
+    {
+      "id": "l00a",
+      "start": 7.08,
+      "end": 11.24,
+      "text": "月照峡谷",
+      "singableText": "月照峡谷",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "月",
+          "start": 7.08,
+          "end": 8.12,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "照",
+          "start": 8.12,
+          "end": 9.16,
+          "pinyin": "zhao4"
+        },
+        {
+          "text": "峡",
+          "start": 9.16,
+          "end": 10.2,
+          "pinyin": "xia2"
+        },
+        {
+          "text": "谷",
+          "start": 10.2,
+          "end": 11.24,
+          "pinyin": "gu3"
+        }
+      ]
+    },
+    {
+      "id": "l00b",
+      "start": 12.0,
+      "end": 14.5,
+      "text": "河上的风",
+      "singableText": "河上的风",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "河",
+          "start": 12.0,
+          "end": 12.625,
+          "pinyin": "he2"
+        },
+        {
+          "text": "上",
+          "start": 12.625,
+          "end": 13.25,
+          "pinyin": "shang4"
+        },
+        {
+          "text": "的",
+          "start": 13.25,
+          "end": 13.875,
+          "pinyin": "de5"
+        },
+        {
+          "text": "风",
+          "start": 13.875,
+          "end": 14.5,
+          "pinyin": "feng1"
+        }
+      ]
+    },
+    {
+      "id": "i01b",
+      "start": 14.5,
+      "end": 16.12,
+      "text": "♪",
+      "singableText": "♪",
+      "role": "instrumental",
+      "tokens": [
+        {
+          "text": "♪",
+          "start": 14.5,
           "end": 16.12
         }
       ]
@@ -105,49 +188,60 @@
       "id": "l02",
       "start": 22.82,
       "end": 25.6,
-      "text": "月照巫峡千峰静",
-      "singableText": "月照巫峡千峰静",
+      "text": "月照巫峡，千峰入静",
+      "singableText": "月照巫峡，千峰入静",
       "role": "lyric",
       "tokens": [
         {
           "text": "月",
           "start": 22.82,
-          "end": 23.217,
+          "end": 23.129,
           "pinyin": "yue4"
         },
         {
           "text": "照",
-          "start": 23.217,
-          "end": 23.614,
+          "start": 23.129,
+          "end": 23.438,
           "pinyin": "zhao4"
         },
         {
           "text": "巫",
-          "start": 23.614,
-          "end": 24.011,
+          "start": 23.438,
+          "end": 23.747,
           "pinyin": "wu1"
         },
         {
           "text": "峡",
-          "start": 24.011,
-          "end": 24.409,
+          "start": 23.747,
+          "end": 24.056,
           "pinyin": "xia2"
         },
         {
+          "text": "，",
+          "start": 24.056,
+          "end": 24.364
+        },
+        {
           "text": "千",
-          "start": 24.409,
-          "end": 24.806,
+          "start": 24.364,
+          "end": 24.673,
           "pinyin": "qian1"
         },
         {
           "text": "峰",
-          "start": 24.806,
-          "end": 25.203,
+          "start": 24.673,
+          "end": 24.982,
           "pinyin": "feng1"
         },
         {
+          "text": "入",
+          "start": 24.982,
+          "end": 25.291,
+          "pinyin": "ru4"
+        },
+        {
           "text": "静",
-          "start": 25.203,
+          "start": 25.291,
           "end": 25.6,
           "pinyin": "jing4"
         }
@@ -446,8 +540,8 @@
       "id": "l08",
       "start": 41.62,
       "end": 44.84,
-      "text": "江风送尽千帆过",
-      "singableText": "江风送尽千帆过",
+      "text": "江风送我向前方",
+      "singableText": "江风送我向前方",
       "role": "lyric",
       "tokens": [
         {
@@ -469,28 +563,28 @@
           "pinyin": "song4"
         },
         {
-          "text": "尽",
+          "text": "我",
           "start": 43.0,
           "end": 43.46,
-          "pinyin": "jin3"
+          "pinyin": "wo3"
         },
         {
-          "text": "千",
+          "text": "向",
           "start": 43.46,
           "end": 43.92,
-          "pinyin": "qian1"
+          "pinyin": "xiang4"
         },
         {
-          "text": "帆",
+          "text": "前",
           "start": 43.92,
           "end": 44.38,
-          "pinyin": "fan1"
+          "pinyin": "qian2"
         },
         {
-          "text": "过",
+          "text": "方",
           "start": 44.38,
           "end": 44.84,
-          "pinyin": "guo4"
+          "pinyin": "fang1"
         }
       ]
     },
@@ -655,103 +749,115 @@
       "id": "l13",
       "start": 58.54,
       "end": 66.72,
-      "text": "我很渺小，也很自由，但心仍能感受",
-      "singableText": "我很渺小，也很自由，但心仍能感受",
+      "text": "我很渺小，也很自由，可心像失去了感觉",
+      "singableText": "我很渺小，也很自由，可心像失去了感觉",
       "role": "lyric",
       "tokens": [
         {
           "text": "我",
           "start": 58.54,
-          "end": 59.051,
+          "end": 58.994,
           "pinyin": "wo3"
         },
         {
           "text": "很",
-          "start": 59.051,
-          "end": 59.562,
+          "start": 58.994,
+          "end": 59.449,
           "pinyin": "hen3"
         },
         {
           "text": "渺",
-          "start": 59.562,
-          "end": 60.074,
+          "start": 59.449,
+          "end": 59.903,
           "pinyin": "miao3"
         },
         {
           "text": "小",
-          "start": 60.074,
-          "end": 60.585,
+          "start": 59.903,
+          "end": 60.358,
           "pinyin": "xiao3"
         },
         {
           "text": "，",
-          "start": 60.585,
-          "end": 61.096
+          "start": 60.358,
+          "end": 60.812
         },
         {
           "text": "也",
-          "start": 61.096,
-          "end": 61.608,
+          "start": 60.812,
+          "end": 61.267,
           "pinyin": "ye3"
         },
         {
           "text": "很",
-          "start": 61.608,
-          "end": 62.119,
+          "start": 61.267,
+          "end": 61.721,
           "pinyin": "hen3"
         },
         {
           "text": "自",
-          "start": 62.119,
-          "end": 62.63,
+          "start": 61.721,
+          "end": 62.176,
           "pinyin": "zi4"
         },
         {
           "text": "由",
-          "start": 62.63,
-          "end": 63.141,
+          "start": 62.176,
+          "end": 62.63,
           "pinyin": "you2"
         },
         {
           "text": "，",
-          "start": 63.141,
-          "end": 63.652
+          "start": 62.63,
+          "end": 63.084
         },
         {
-          "text": "但",
-          "start": 63.652,
-          "end": 64.164,
-          "pinyin": "dan4"
+          "text": "可",
+          "start": 63.084,
+          "end": 63.539,
+          "pinyin": "ke3"
         },
         {
           "text": "心",
-          "start": 64.164,
-          "end": 64.675,
+          "start": 63.539,
+          "end": 63.993,
           "pinyin": "xin1"
         },
         {
-          "text": "仍",
-          "start": 64.675,
-          "end": 65.186,
-          "pinyin": "reng2"
+          "text": "像",
+          "start": 63.993,
+          "end": 64.448,
+          "pinyin": "xiang4"
         },
         {
-          "text": "能",
-          "start": 65.186,
-          "end": 65.698,
-          "pinyin": "neng2"
+          "text": "失",
+          "start": 64.448,
+          "end": 64.902,
+          "pinyin": "shi1"
+        },
+        {
+          "text": "去",
+          "start": 64.902,
+          "end": 65.357,
+          "pinyin": "qu4"
+        },
+        {
+          "text": "了",
+          "start": 65.357,
+          "end": 65.811,
+          "pinyin": "le5"
         },
         {
           "text": "感",
-          "start": 65.698,
-          "end": 66.209,
+          "start": 65.811,
+          "end": 66.266,
           "pinyin": "gan3"
         },
         {
-          "text": "受",
-          "start": 66.209,
+          "text": "觉",
+          "start": 66.266,
           "end": 66.72,
-          "pinyin": "shou4"
+          "pinyin": "jue2"
         }
       ]
     },
