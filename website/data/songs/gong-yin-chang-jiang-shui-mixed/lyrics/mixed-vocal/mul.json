@@ -517,31 +517,101 @@
     {
       "id": "l14",
       "start": 57.82,
-      "end": 61.12,
-      "text": "Wo xiang xin",
-      "singableText": "Wo xiang xin",
+      "end": 61.2,
+      "text": "Ding bu fu xiang si yi",
+      "singableText": "Ding bu fu xiang si yi",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Wo",
+          "text": "Ding",
           "start": 57.82,
-          "end": 58.92
+          "end": 58.383
+        },
+        {
+          "text": "bu",
+          "start": 58.383,
+          "end": 58.947
+        },
+        {
+          "text": "fu",
+          "start": 58.947,
+          "end": 59.51
         },
         {
           "text": "xiang",
-          "start": 58.92,
-          "end": 60.02
+          "start": 59.51,
+          "end": 60.073
         },
         {
-          "text": "xin",
-          "start": 60.02,
-          "end": 61.12
+          "text": "si",
+          "start": 60.073,
+          "end": 60.637
+        },
+        {
+          "text": "yi",
+          "start": 60.637,
+          "end": 61.2
         }
       ]
     },
     {
       "id": "l15",
-      "start": 61.12,
+      "start": 61.2,
+      "end": 65.95,
+      "text": "Same, same longing",
+      "singableText": "Same, same longing",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Same",
+          "start": 61.2,
+          "end": 62.388
+        },
+        {
+          "text": ",",
+          "start": 62.388,
+          "end": 63.575
+        },
+        {
+          "text": "same",
+          "start": 63.575,
+          "end": 64.763
+        },
+        {
+          "text": "longing",
+          "start": 64.763,
+          "end": 65.95
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 65.95,
+      "end": 69.8,
+      "text": "Give me all",
+      "singableText": "Give me all",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Give",
+          "start": 65.95,
+          "end": 67.233
+        },
+        {
+          "text": "me",
+          "start": 67.233,
+          "end": 68.517
+        },
+        {
+          "text": "all",
+          "start": 68.517,
+          "end": 69.8
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 69.8,
       "end": 74.04,
       "text": "♪",
       "singableText": "♪",
@@ -549,7 +619,7 @@
       "tokens": [
         {
           "text": "♪",
-          "start": 61.12,
+          "start": 69.8,
           "end": 74.04
         }
       ]

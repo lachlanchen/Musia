@@ -669,34 +669,155 @@
     {
       "id": "l14",
       "start": 57.82,
-      "end": 61.12,
-      "text": "我相信",
-      "singableText": "我相信",
+      "end": 61.2,
+      "text": "定不负相思意",
+      "singableText": "定不负相思意",
       "role": "lyric",
       "tokens": [
         {
-          "text": "我",
+          "text": "定",
           "start": 57.82,
-          "end": 58.92,
-          "pinyin": "wo3"
+          "end": 58.383,
+          "pinyin": "ding4"
+        },
+        {
+          "text": "不",
+          "start": 58.383,
+          "end": 58.947,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "负",
+          "start": 58.947,
+          "end": 59.51,
+          "pinyin": "fu4"
         },
         {
           "text": "相",
-          "start": 58.92,
-          "end": 60.02,
+          "start": 59.51,
+          "end": 60.073,
           "pinyin": "xiang1"
         },
         {
-          "text": "信",
-          "start": 60.02,
-          "end": 61.12,
-          "pinyin": "xin4"
+          "text": "思",
+          "start": 60.073,
+          "end": 60.637,
+          "pinyin": "si1"
+        },
+        {
+          "text": "意",
+          "start": 60.637,
+          "end": 61.2,
+          "pinyin": "yi4"
         }
       ]
     },
     {
       "id": "l15",
-      "start": 61.12,
+      "start": 61.2,
+      "end": 65.95,
+      "text": "同样，同样的相思",
+      "singableText": "同样，同样的相思",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同",
+          "start": 61.2,
+          "end": 61.794,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "样",
+          "start": 61.794,
+          "end": 62.388,
+          "pinyin": "yang4"
+        },
+        {
+          "text": "，",
+          "start": 62.388,
+          "end": 62.981
+        },
+        {
+          "text": "同",
+          "start": 62.981,
+          "end": 63.575,
+          "pinyin": "tong2"
+        },
+        {
+          "text": "样",
+          "start": 63.575,
+          "end": 64.169,
+          "pinyin": "yang4"
+        },
+        {
+          "text": "的",
+          "start": 64.169,
+          "end": 64.763,
+          "pinyin": "de5"
+        },
+        {
+          "text": "相",
+          "start": 64.763,
+          "end": 65.356,
+          "pinyin": "xiang1"
+        },
+        {
+          "text": "思",
+          "start": 65.356,
+          "end": 65.95,
+          "pinyin": "si1"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 65.95,
+      "end": 69.8,
+      "text": "把一切都给我",
+      "singableText": "把一切都给我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "把",
+          "start": 65.95,
+          "end": 66.592,
+          "pinyin": "ba3"
+        },
+        {
+          "text": "一",
+          "start": 66.592,
+          "end": 67.233,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "切",
+          "start": 67.233,
+          "end": 67.875,
+          "pinyin": "qie4"
+        },
+        {
+          "text": "都",
+          "start": 67.875,
+          "end": 68.517,
+          "pinyin": "dou1"
+        },
+        {
+          "text": "给",
+          "start": 68.517,
+          "end": 69.158,
+          "pinyin": "gei3"
+        },
+        {
+          "text": "我",
+          "start": 69.158,
+          "end": 69.8,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 69.8,
       "end": 74.04,
       "text": "♪",
       "singableText": "♪",
@@ -704,7 +825,7 @@
       "tokens": [
         {
           "text": "♪",
-          "start": 61.12,
+          "start": 69.8,
           "end": 74.04
         }
       ]

@@ -597,38 +597,91 @@
     {
       "id": "l14",
       "start": 57.82,
-      "end": 61.12,
-      "text": "私はまだ信じている",
-      "singableText": "私はまだ信じている",
+      "end": 61.2,
+      "text": "この相思いを裏切らない",
+      "singableText": "この相思いを裏切らない",
       "role": "lyric",
       "tokens": [
         {
-          "text": "私",
+          "text": "この",
           "start": 57.82,
-          "end": 58.645,
-          "reading": "わたし"
+          "end": 58.496
         },
         {
-          "text": "はまだ",
-          "start": 58.645,
-          "end": 59.47
+          "text": "相思",
+          "start": 58.496,
+          "end": 59.172,
+          "reading": "そうし"
         },
         {
-          "text": "信じ",
-          "start": 59.47,
-          "end": 60.295,
-          "reading": "しんじ"
+          "text": "いを",
+          "start": 59.172,
+          "end": 59.848
         },
         {
-          "text": "ている",
-          "start": 60.295,
-          "end": 61.12
+          "text": "裏切ら",
+          "start": 59.848,
+          "end": 60.524,
+          "reading": "うらぎら"
+        },
+        {
+          "text": "ない",
+          "start": 60.524,
+          "end": 61.2
         }
       ]
     },
     {
       "id": "l15",
-      "start": 61.12,
+      "start": 61.2,
+      "end": 65.95,
+      "text": "同じ、同じ想い",
+      "singableText": "同じ、同じ想い",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同じ",
+          "start": 61.2,
+          "end": 62.388,
+          "reading": "おなじ"
+        },
+        {
+          "text": "、",
+          "start": 62.388,
+          "end": 63.575
+        },
+        {
+          "text": "同じ",
+          "start": 63.575,
+          "end": 64.763,
+          "reading": "おなじ"
+        },
+        {
+          "text": "想い",
+          "start": 64.763,
+          "end": 65.95,
+          "reading": "おもい"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 65.95,
+      "end": 69.8,
+      "text": "すべてをください",
+      "singableText": "すべてをください",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "すべてをください",
+          "start": 65.95,
+          "end": 69.8
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 69.8,
       "end": 74.04,
       "text": "♪",
       "singableText": "♪",
@@ -636,7 +689,7 @@
       "tokens": [
         {
           "text": "♪",
-          "start": 61.12,
+          "start": 69.8,
           "end": 74.04
         }
       ]

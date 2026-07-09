@@ -612,36 +612,116 @@
     {
       "id": "l14",
       "start": 57.82,
-      "end": 61.12,
-      "text": "I still believe.",
-      "singableText": "I still believe.",
+      "end": 61.2,
+      "text": "I will not betray this longing.",
+      "singableText": "I will not betray this longing.",
       "role": "lyric",
       "tokens": [
         {
           "text": "I",
           "start": 57.82,
-          "end": 58.645
+          "end": 58.303
         },
         {
-          "text": "still",
-          "start": 58.645,
-          "end": 59.47
+          "text": "will",
+          "start": 58.303,
+          "end": 58.786
         },
         {
-          "text": "believe",
-          "start": 59.47,
-          "end": 60.295
+          "text": "not",
+          "start": 58.786,
+          "end": 59.269
+        },
+        {
+          "text": "betray",
+          "start": 59.269,
+          "end": 59.751
+        },
+        {
+          "text": "this",
+          "start": 59.751,
+          "end": 60.234
+        },
+        {
+          "text": "longing",
+          "start": 60.234,
+          "end": 60.717
         },
         {
           "text": ".",
-          "start": 60.295,
-          "end": 61.12
+          "start": 60.717,
+          "end": 61.2
         }
       ]
     },
     {
       "id": "l15",
-      "start": 61.12,
+      "start": 61.2,
+      "end": 65.95,
+      "text": "Same, same longing.",
+      "singableText": "Same, same longing.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Same",
+          "start": 61.2,
+          "end": 62.15
+        },
+        {
+          "text": ",",
+          "start": 62.15,
+          "end": 63.1
+        },
+        {
+          "text": "same",
+          "start": 63.1,
+          "end": 64.05
+        },
+        {
+          "text": "longing",
+          "start": 64.05,
+          "end": 65.0
+        },
+        {
+          "text": ".",
+          "start": 65.0,
+          "end": 65.95
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 65.95,
+      "end": 69.8,
+      "text": "Give me all.",
+      "singableText": "Give me all.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Give",
+          "start": 65.95,
+          "end": 66.912
+        },
+        {
+          "text": "me",
+          "start": 66.912,
+          "end": 67.875
+        },
+        {
+          "text": "all",
+          "start": 67.875,
+          "end": 68.838
+        },
+        {
+          "text": ".",
+          "start": 68.838,
+          "end": 69.8
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 69.8,
       "end": 74.04,
       "text": "♪",
       "singableText": "♪",
@@ -649,7 +729,7 @@
       "tokens": [
         {
           "text": "♪",
-          "start": 61.12,
+          "start": 69.8,
           "end": 74.04
         }
       ]
