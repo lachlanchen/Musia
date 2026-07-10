@@ -1,0 +1,502 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "gong-bai-tou-snow-we-share-native",
+  "kind": "song",
+  "title": "共白头 · Snow We Share",
+  "localizedTitles": {
+    "zh-Hans": "共白头",
+    "en": "Snow We Share",
+    "ja": "同じ雪の下で"
+  },
+  "artist": "Musia",
+  "description": "A source-line Mandarin autumn-and-snow ballad using only the poem lines: 忽有故人心上过，回首山河已入秋，他朝若是同淋雪，此生也算共白头。",
+  "caption": "If one day we share the same snow, this life may still count as growing old together.",
+  "duration": 92.0,
+  "canonicalUrl": "https://fun.lazying.art/#gong-bai-tou-snow-we-share-native",
+  "share": {
+    "title": "共白头 · Snow We Share - Fun Lazying Art",
+    "description": "A Musia source-line Mandarin autumn-and-snow ballad with synced lyrics, translations, pinyin, furigana, chords, and stems.",
+    "url": "https://fun.lazying.art/#gong-bai-tou-snow-we-share-native",
+    "image": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Snow We Share cover",
+      "role": "cover",
+      "src": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "gong-bai-tou-snow-we-share-native-zh",
+      "label": "中文",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
+      "lyricSetId": "zh-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/gong-bai-tou-snow-we-share-native-zh-yuerenge-style-seed791401-20260710.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "B minor planned / detected A major with modal shifts",
+    "bpm": 151.999,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 22.523,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 22.523,
+        "end": 23.336,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 23.336,
+        "end": 26.215,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 26.215,
+        "end": 26.61,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 26.61,
+        "end": 27.794,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 27.794,
+        "end": 28.189,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 28.189,
+        "end": 28.584,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 28.584,
+        "end": 29.373,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 29.373,
+        "end": 29.791,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 29.791,
+        "end": 31.37,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 31.37,
+        "end": 32.16,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 32.16,
+        "end": 32.554,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 32.554,
+        "end": 35.689,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 35.689,
+        "end": 37.268,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 37.268,
+        "end": 38.847,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 38.847,
+        "end": 41.61,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 41.61,
+        "end": 42.005,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 42.005,
+        "end": 44.791,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 44.791,
+        "end": 45.186,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 45.186,
+        "end": 47.949,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 47.949,
+        "end": 49.11,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 49.11,
+        "end": 54.242,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 54.242,
+        "end": 54.637,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 54.637,
+        "end": 55.031,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 55.031,
+        "end": 55.798,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 55.798,
+        "end": 56.192,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 56.192,
+        "end": 57.794,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 57.794,
+        "end": 60.163,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 60.163,
+        "end": 60.558,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 60.558,
+        "end": 60.952,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 60.952,
+        "end": 62.137,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 62.137,
+        "end": 62.508,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 62.508,
+        "end": 64.11,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 64.11,
+        "end": 65.689,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 65.689,
+        "end": 66.084,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 66.084,
+        "end": 66.873,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 66.873,
+        "end": 67.268,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 67.268,
+        "end": 70.031,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 70.031,
+        "end": 70.426,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 70.426,
+        "end": 73.584,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 73.584,
+        "end": 76.696,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 76.696,
+        "end": 77.926,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 77.926,
+        "end": 78.716,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 78.716,
+        "end": 79.9,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 79.9,
+        "end": 80.689,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 80.689,
+        "end": 81.084,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 81.084,
+        "end": 81.479,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 81.479,
+        "end": 82.663,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 82.663,
+        "end": 83.453,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 83.453,
+        "end": 86.912,
+        "name": "F#",
+        "degree": ""
+      },
+      {
+        "start": 86.912,
+        "end": 92.0,
+        "name": "F#m",
+        "degree": ""
+      }
+    ]
+  },
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 16.27,
+        "end": 21.18,
+        "text": "忽有故人心上过"
+      },
+      {
+        "id": "l02",
+        "start": 22.18,
+        "end": 26.4,
+        "text": "回首山河已入秋"
+      },
+      {
+        "id": "l03",
+        "start": 27.88,
+        "end": 33.12,
+        "text": "他朝若是同淋雪"
+      },
+      {
+        "id": "l04",
+        "start": 34.56,
+        "end": 39.1,
+        "text": "此生也算共白头"
+      },
+      {
+        "id": "l05",
+        "start": 40.4,
+        "end": 45.74,
+        "text": "此生也算共白头"
+      },
+      {
+        "id": "l06",
+        "start": 59.73,
+        "end": 64.31,
+        "text": "回首山河已入秋"
+      },
+      {
+        "id": "l07",
+        "start": 65.19,
+        "end": 71.01,
+        "text": "他朝若是同淋雪"
+      },
+      {
+        "id": "l08",
+        "start": 72.29,
+        "end": 77.13,
+        "text": "此生也算共白头"
+      },
+      {
+        "id": "l09",
+        "start": 77.13,
+        "end": 84.16,
+        "text": "此生也算共白头"
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "zh-vocal",
+      "label": "中文 vocal",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "active-vocal"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/zh-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "playback": {
+    "defaultMode": "single"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/gong-bai-tou-snow-we-share-native-20260710",
+    "audioSource": "ACE-Step 1.5 XL Turbo Yuerenge-style Chinese source-line route, seed 791401.",
+    "analysisRun": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis",
+    "quality": {
+      "gate": "public-candidate",
+      "note": "Same-audio ASR passed the automated gate but produced source-close substitutions. Public lyrics restore the original source lines where phrase count and sound are close."
+    },
+    "lyricCorrection": "Faster-whisper small ASR on the selected render plus source-line cross-check. Instrumental gaps are not encoded as lyric rows.",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_020334d34d5a6efa016a50f64653748191a03f213e5438eca2.png",
+    "publicAudio": "gong-bai-tou-snow-we-share-native-zh-yuerenge-style-seed791401-20260710.mp3"
+  },
+  "artifacts": {
+    "project": "data/creative_projects/gong-bai-tou-snow-we-share-native-20260710",
+    "selectedWav": "data/creative_projects/gong-bai-tou-snow-we-share-native-20260710/selected/gong-bai-tou-snow-we-share-zh-yuerenge-style-seed791401.wav",
+    "selectedMp3": "data/creative_projects/gong-bai-tou-snow-we-share-native-20260710/selected/gong-bai-tou-snow-we-share-zh-yuerenge-style-seed791401.mp3",
+    "analysisRun": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis",
+    "stems": {
+      "vocals": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/stems/vocals.wav",
+      "drums": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/stems/drums.wav",
+      "bass": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/stems/bass.wav",
+      "other": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/stems/other.wav",
+      "instrumental": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/stems/instrumental.wav"
+    },
+    "beats": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/analysis/beats.csv",
+    "chords": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/analysis/chords.csv",
+    "asr": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/analysis/lyrics.json"
+  }
+}

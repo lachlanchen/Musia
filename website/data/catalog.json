@@ -6,8 +6,32 @@
     "url": "https://fun.lazying.art",
     "protocol": "fun.lazying.media.v1"
   },
-  "defaultMedia": "yun-hai-zhi-lian-haifeng-duange",
+  "defaultMedia": "gong-bai-tou-snow-we-share-native",
   "items": [
+    {
+      "id": "gong-bai-tou-snow-we-share-native",
+      "kind": "song",
+      "title": "共白头 · Snow We Share",
+      "artist": "Musia",
+      "summary": "A source-line Mandarin autumn-and-snow ballad using only the poem lines: 忽有故人心上过，回首山河已入秋，他朝若是同淋雪，此生也算共白头。",
+      "manifest": "data/songs/gong-bai-tou-snow-we-share-native/manifest.json",
+      "cover": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "Mandarin",
+        "autumn",
+        "snow",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
     {
       "id": "wu-xia-yue-mixed",
       "kind": "song",

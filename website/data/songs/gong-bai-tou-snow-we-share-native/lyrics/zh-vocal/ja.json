@@ -1,0 +1,432 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "gong-bai-tou-snow-we-share-native",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 16.27,
+      "end": 21.18,
+      "text": "ふと故人が胸をよぎる。",
+      "singableText": "ふと故人が胸をよぎる。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ふと",
+          "start": 16.27,
+          "end": 17.088
+        },
+        {
+          "text": "故人",
+          "start": 17.088,
+          "end": 17.907,
+          "reading": "こじん"
+        },
+        {
+          "text": "が",
+          "start": 17.907,
+          "end": 18.725
+        },
+        {
+          "text": "胸",
+          "start": 18.725,
+          "end": 19.543,
+          "reading": "むね"
+        },
+        {
+          "text": "をよぎる",
+          "start": 19.543,
+          "end": 20.362
+        },
+        {
+          "text": "。",
+          "start": 20.362,
+          "end": 21.18
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 22.18,
+      "end": 26.4,
+      "text": "振り向けば山河は秋に入る。",
+      "singableText": "振り向けば山河は秋に入る。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "振り向け",
+          "start": 22.18,
+          "end": 22.707,
+          "reading": "ふりむけ"
+        },
+        {
+          "text": "ば",
+          "start": 22.707,
+          "end": 23.235
+        },
+        {
+          "text": "山河",
+          "start": 23.235,
+          "end": 23.762,
+          "reading": "さんが"
+        },
+        {
+          "text": "は",
+          "start": 23.762,
+          "end": 24.29
+        },
+        {
+          "text": "秋",
+          "start": 24.29,
+          "end": 24.817,
+          "reading": "あき"
+        },
+        {
+          "text": "に",
+          "start": 24.817,
+          "end": 25.345
+        },
+        {
+          "text": "入る",
+          "start": 25.345,
+          "end": 25.872,
+          "reading": "いる"
+        },
+        {
+          "text": "。",
+          "start": 25.872,
+          "end": 26.4
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 27.88,
+      "end": 33.12,
+      "text": "いつか同じ雪に濡れるなら。",
+      "singableText": "いつか同じ雪に濡れるなら。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "いつか",
+          "start": 27.88,
+          "end": 28.629
+        },
+        {
+          "text": "同じ",
+          "start": 28.629,
+          "end": 29.377,
+          "reading": "おなじ"
+        },
+        {
+          "text": "雪",
+          "start": 29.377,
+          "end": 30.126,
+          "reading": "ゆき"
+        },
+        {
+          "text": "に",
+          "start": 30.126,
+          "end": 30.874
+        },
+        {
+          "text": "濡れ",
+          "start": 30.874,
+          "end": 31.623,
+          "reading": "ぬれ"
+        },
+        {
+          "text": "るなら",
+          "start": 31.623,
+          "end": 32.371
+        },
+        {
+          "text": "。",
+          "start": 32.371,
+          "end": 33.12
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 34.56,
+      "end": 39.1,
+      "text": "この一生も共白髪といえる。",
+      "singableText": "この一生も共白髪といえる。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 34.56,
+          "end": 35.317
+        },
+        {
+          "text": "一生",
+          "start": 35.317,
+          "end": 36.073,
+          "reading": "いっしょう"
+        },
+        {
+          "text": "も",
+          "start": 36.073,
+          "end": 36.83
+        },
+        {
+          "text": "共白髪",
+          "start": 36.83,
+          "end": 37.587,
+          "reading": "ともしらが"
+        },
+        {
+          "text": "といえる",
+          "start": 37.587,
+          "end": 38.343
+        },
+        {
+          "text": "。",
+          "start": 38.343,
+          "end": 39.1
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 40.4,
+      "end": 45.74,
+      "text": "この一生も共白髪といえる。",
+      "singableText": "この一生も共白髪といえる。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 40.4,
+          "end": 41.29
+        },
+        {
+          "text": "一生",
+          "start": 41.29,
+          "end": 42.18,
+          "reading": "いっしょう"
+        },
+        {
+          "text": "も",
+          "start": 42.18,
+          "end": 43.07
+        },
+        {
+          "text": "共白髪",
+          "start": 43.07,
+          "end": 43.96,
+          "reading": "ともしらが"
+        },
+        {
+          "text": "といえる",
+          "start": 43.96,
+          "end": 44.85
+        },
+        {
+          "text": "。",
+          "start": 44.85,
+          "end": 45.74
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 59.73,
+      "end": 64.31,
+      "text": "振り向けば山河は秋に入る。",
+      "singableText": "振り向けば山河は秋に入る。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "振り向け",
+          "start": 59.73,
+          "end": 60.302,
+          "reading": "ふりむけ"
+        },
+        {
+          "text": "ば",
+          "start": 60.302,
+          "end": 60.875
+        },
+        {
+          "text": "山河",
+          "start": 60.875,
+          "end": 61.447,
+          "reading": "さんが"
+        },
+        {
+          "text": "は",
+          "start": 61.447,
+          "end": 62.02
+        },
+        {
+          "text": "秋",
+          "start": 62.02,
+          "end": 62.593,
+          "reading": "あき"
+        },
+        {
+          "text": "に",
+          "start": 62.593,
+          "end": 63.165
+        },
+        {
+          "text": "入る",
+          "start": 63.165,
+          "end": 63.738,
+          "reading": "いる"
+        },
+        {
+          "text": "。",
+          "start": 63.738,
+          "end": 64.31
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 65.19,
+      "end": 71.01,
+      "text": "いつか同じ雪に濡れるなら。",
+      "singableText": "いつか同じ雪に濡れるなら。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "いつか",
+          "start": 65.19,
+          "end": 66.021
+        },
+        {
+          "text": "同じ",
+          "start": 66.021,
+          "end": 66.853,
+          "reading": "おなじ"
+        },
+        {
+          "text": "雪",
+          "start": 66.853,
+          "end": 67.684,
+          "reading": "ゆき"
+        },
+        {
+          "text": "に",
+          "start": 67.684,
+          "end": 68.516
+        },
+        {
+          "text": "濡れ",
+          "start": 68.516,
+          "end": 69.347,
+          "reading": "ぬれ"
+        },
+        {
+          "text": "るなら",
+          "start": 69.347,
+          "end": 70.179
+        },
+        {
+          "text": "。",
+          "start": 70.179,
+          "end": 71.01
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 72.29,
+      "end": 77.13,
+      "text": "この一生も共白髪といえる。",
+      "singableText": "この一生も共白髪といえる。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 72.29,
+          "end": 73.097
+        },
+        {
+          "text": "一生",
+          "start": 73.097,
+          "end": 73.903,
+          "reading": "いっしょう"
+        },
+        {
+          "text": "も",
+          "start": 73.903,
+          "end": 74.71
+        },
+        {
+          "text": "共白髪",
+          "start": 74.71,
+          "end": 75.517,
+          "reading": "ともしらが"
+        },
+        {
+          "text": "といえる",
+          "start": 75.517,
+          "end": 76.323
+        },
+        {
+          "text": "。",
+          "start": 76.323,
+          "end": 77.13
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 77.13,
+      "end": 84.16,
+      "text": "この一生も共白髪といえる。",
+      "singableText": "この一生も共白髪といえる。",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 77.13,
+          "end": 78.302
+        },
+        {
+          "text": "一生",
+          "start": 78.302,
+          "end": 79.473,
+          "reading": "いっしょう"
+        },
+        {
+          "text": "も",
+          "start": 79.473,
+          "end": 80.645
+        },
+        {
+          "text": "共白髪",
+          "start": 80.645,
+          "end": 81.817,
+          "reading": "ともしらが"
+        },
+        {
+          "text": "といえる",
+          "start": 81.817,
+          "end": 82.988
+        },
+        {
+          "text": "。",
+          "start": 82.988,
+          "end": 84.16
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "correction": "Corrected from the selected Chinese render using same-audio ASR, the source poem, and the Musia source-close policy. No instrumental placeholder rows are stored as lyrics."
+  }
+}
