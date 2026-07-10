@@ -123,8 +123,8 @@
       "id": "l02",
       "start": 22.82,
       "end": 25.6,
-      "text": "Moonlight shines on Wu Gorge; the peaks fade into stillness.",
-      "singableText": "Moonlight shines on Wu Gorge; the peaks fade into stillness.",
+      "text": "Moonlight shines on Wu Gorge; a thousand peaks fall silent.",
+      "singableText": "Moonlight shines on Wu Gorge; a thousand peaks fall silent.",
       "role": "lyric",
       "tokens": [
         {
@@ -158,27 +158,27 @@
           "end": 24.21
         },
         {
-          "text": "the",
+          "text": "a",
           "start": 24.21,
           "end": 24.442
         },
         {
-          "text": "peaks",
+          "text": "thousand",
           "start": 24.442,
           "end": 24.673
         },
         {
-          "text": "fade",
+          "text": "peaks",
           "start": 24.673,
           "end": 24.905
         },
         {
-          "text": "into",
+          "text": "fall",
           "start": 24.905,
           "end": 25.137
         },
         {
-          "text": "stillness",
+          "text": "silent",
           "start": 25.137,
           "end": 25.368
         },
@@ -243,8 +243,8 @@
       "id": "l04",
       "start": 29.7,
       "end": 32.22,
-      "text": "This body drifts like a mayfly, light as one grain.",
-      "singableText": "This body drifts like a mayfly, light as one grain.",
+      "text": "This body is like a mayfly, light as one grain.",
+      "singableText": "This body is like a mayfly, light as one grain.",
       "role": "lyric",
       "tokens": [
         {
@@ -258,7 +258,7 @@
           "end": 30.12
         },
         {
-          "text": "drifts",
+          "text": "is",
           "start": 30.12,
           "end": 30.33
         },
@@ -363,8 +363,8 @@
       "id": "l06",
       "start": 36.04,
       "end": 39.46,
-      "text": "This body drifts like a mayfly, light as one grain.",
-      "singableText": "This body drifts like a mayfly, light as one grain.",
+      "text": "This body is like a mayfly, light as one grain.",
+      "singableText": "This body is like a mayfly, light as one grain.",
       "role": "lyric",
       "tokens": [
         {
@@ -378,7 +378,7 @@
           "end": 36.61
         },
         {
-          "text": "drifts",
+          "text": "is",
           "start": 36.61,
           "end": 36.895
         },
@@ -473,53 +473,43 @@
       "id": "l08",
       "start": 41.62,
       "end": 44.84,
-      "text": "River wind carries me past the far side.",
-      "singableText": "River wind carries me past the far side.",
+      "text": "River wind passes a thousand sails.",
+      "singableText": "River wind passes a thousand sails.",
       "role": "lyric",
       "tokens": [
         {
           "text": "River",
           "start": 41.62,
-          "end": 41.978
+          "end": 42.08
         },
         {
           "text": "wind",
-          "start": 41.978,
-          "end": 42.336
+          "start": 42.08,
+          "end": 42.54
         },
         {
-          "text": "carries",
-          "start": 42.336,
-          "end": 42.693
+          "text": "passes",
+          "start": 42.54,
+          "end": 43.0
         },
         {
-          "text": "me",
-          "start": 42.693,
-          "end": 43.051
+          "text": "a",
+          "start": 43.0,
+          "end": 43.46
         },
         {
-          "text": "past",
-          "start": 43.051,
-          "end": 43.409
+          "text": "thousand",
+          "start": 43.46,
+          "end": 43.92
         },
         {
-          "text": "the",
-          "start": 43.409,
-          "end": 43.767
-        },
-        {
-          "text": "far",
-          "start": 43.767,
-          "end": 44.124
-        },
-        {
-          "text": "side",
-          "start": 44.124,
-          "end": 44.482
+          "text": "sails",
+          "start": 43.92,
+          "end": 44.38
         },
         {
           "text": ".",
-          "start": 44.482,
+          "start": 44.38,
           "end": 44.84
         }
       ]
@@ -757,6 +747,6 @@
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, and the planned mixed phonetic lyric. Source-close pinyin forms are preserved only where ASR/listening evidence is close."
+    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, the planned mixed phonetic lyric, and source-line review. Close Mandarin source forms are preserved when the ASR variant is only a noisy guess."
   }
 }

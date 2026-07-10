@@ -169,21 +169,22 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
     The render is an English-led mixed vocal. It keeps the English smallness
     hook, sings two repeated mayfly/pinyin phrases, includes the river-wind and
     hundred-year water image, and drops the drafted bridge/outro. Public lyrics
-    follow that actual structure, preserving source-close pinyin only where the
-    ASR sound and planned lyric are close.
+    follow that actual structure. Source-close Mandarin is preserved when the
+    sound, syllable count, and context support the source better than a noisy
+    ASR guess.
     """
 
     return [
         ("l00a", 7.08, 11.24, "Moon over the gorge", "Moon over the gorge.", "峡谷の上の月", "月照峡谷", "lyric"),
         ("l00b", 12.00, 14.50, "Kawa no kaze", "River wind.", "川の風", "河上的风", "lyric"),
         ("l01", 16.12, 22.82, "I am small in the silver light", "I am small in the silver light.", "銀の光の中で、私は小さい", "我在银色月光里如此渺小", "lyric"),
-        ("l02", 22.82, 25.60, "Yue zhao Wu Xia jian fang jing", "Moonlight shines on Wu Gorge; the peaks fade into stillness.", "月は巫峡を照らし、峰は静かな景色へ溶ける", "月照巫峡，千峰入静", "lyric"),
+        ("l02", 22.82, 25.60, "Yue zhao Wu Xia qian feng ji", "Moonlight shines on Wu Gorge; a thousand peaks fall silent.", "月は巫峡を照らし、千の峰は静まる", "月照巫峡千峰寂", "lyric"),
         ("l03", 25.60, 29.70, "I may fly under endless sky", "I may fly under the endless sky.", "果てない空の下を飛んでいく", "我在无尽天幕下飞翔", "lyric"),
-        ("l04", 29.70, 32.22, "Shan si fu yu yi su jing", "This body drifts like a mayfly, light as one grain.", "この身は蜉蝣のように漂い、一粒の粟ほど軽い", "身似蜉蝣一粟轻", "lyric"),
+        ("l04", 29.70, 32.22, "Shen si fu you yi su qing", "This body is like a mayfly, light as one grain.", "この身は蜉蝣のように、一粒の粟ほど軽い", "身似蜉蝣一粟轻", "lyric"),
         ("l05", 32.22, 36.04, "I may fly under endless sky", "I may fly under the endless sky.", "果てない空の下を飛んでいく", "我在无尽天幕下飞翔", "lyric"),
-        ("l06", 36.04, 39.46, "Shan si fu yu yi su jing", "This body drifts like a mayfly, light as one grain.", "この身は蜉蝣のように漂い、一粒の粟ほど軽い", "身似蜉蝣一粟轻", "lyric"),
+        ("l06", 36.04, 39.46, "Shen si fu you yi su qing", "This body is like a mayfly, light as one grain.", "この身は蜉蝣のように、一粒の粟ほど軽い", "身似蜉蝣一粟轻", "lyric"),
         ("l07", 39.46, 41.62, "River wind, carry me", "River wind, carry me.", "川風よ、私を運んで", "江风啊，带我远去", "lyric"),
-        ("l08", 41.62, 44.84, "Jiang feng qian fang guo", "River wind carries me past the far side.", "川風は遠い方へ私を運ぶ", "江风送我向前方", "lyric"),
+        ("l08", 41.62, 44.84, "Jiang feng qian fan guo", "River wind passes a thousand sails.", "川風に千の帆が過ぎる", "江风千帆过", "lyric"),
         ("l09", 45.42, 47.92, "Hyakunen no yume", "A hundred-year dream.", "百年の夢", "百年之梦", "lyric"),
         ("l10", 47.92, 50.58, "Bai nian sui bo qu", "A hundred years drift away with the waves.", "百年は波へ流れていく", "百年随波去", "lyric"),
         ("l11", 52.92, 55.86, "Moon over Wu Xia", "Moon over Wu Gorge.", "巫峡の上の月", "月照巫峡", "lyric"),
@@ -203,8 +204,9 @@ def track(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
             "vocalSet": "mixed-vocal",
             "correction": (
                 "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, "
-                "selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, and the planned "
-                "mixed phonetic lyric. Source-close pinyin forms are preserved only where ASR/listening evidence is close."
+                "selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, the planned "
+                "mixed phonetic lyric, and source-line review. Close Mandarin source forms are preserved "
+                "when the ASR variant is only a noisy guess."
             ),
         },
     }
@@ -417,13 +419,13 @@ def write_reference() -> None:
                 "07.08-11.24 Moon over the gorge",
                 "12.00-14.50 Kawa no kaze",
                 "16.12-22.82 I am small in the silver light",
-                "22.82-25.60 Yue zhao Wu Xia jian fang jing",
+                "22.82-25.60 Yue zhao Wu Xia qian feng ji",
                 "25.60-29.70 I may fly under endless sky",
-                "29.70-32.22 Shan si fu yu yi su jing",
+                "29.70-32.22 Shen si fu you yi su qing",
                 "32.22-36.04 I may fly under endless sky",
-                "36.04-39.46 Shan si fu yu yi su jing",
+                "36.04-39.46 Shen si fu you yi su qing",
                 "39.46-41.62 River wind, carry me",
-                "41.62-44.84 Jiang feng qian fang guo",
+                "41.62-44.84 Jiang feng qian fan guo",
                 "45.42-47.92 Hyakunen no yume",
                 "47.92-50.58 Bai nian sui bo qu",
                 "52.92-55.86 Moon over Wu Xia",
@@ -431,7 +433,7 @@ def write_reference() -> None:
                 "58.54-66.72 I am small, I am free, but my heart can't feel",
                 "```",
                 "",
-                "The first public draft was too poetic in several rows. On 2026-07-09 it was corrected again using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check packets, and user review. The active mixed track now follows the heard phonetic surface more tightly: the opening `Moon over the gorge` and `Kawa no kaze` are restored, `qian feng` became `jian fang`, `shen si fu you yi su qing` became `shan si fu yu yi su jing`, `qian fan` became `qian fang`, and the final line follows the ASR-supported `can't feel` rather than the planned `can feel`.",
+                "The first public draft was too poetic in several rows. On 2026-07-09 it was corrected using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check packets, and user review. On 2026-07-11 the Chinese pinyin rows were restored where the ASR variants were sound-close but uglier/noisier: `Yue zhao Wu Xia qian feng ji`, `Shen si fu you yi su qing`, and `Jiang feng qian fan guo`. The active mixed track still follows the heard structure: the opening `Moon over the gorge` and `Kawa no kaze` are kept, the shortened `Bai nian sui bo qu` remains because the render does not clearly sing the full source phrase, and the final line follows the ASR-supported `can't feel` rather than the planned `can feel`.",
                 "",
                 "Correction packets:",
                 "",

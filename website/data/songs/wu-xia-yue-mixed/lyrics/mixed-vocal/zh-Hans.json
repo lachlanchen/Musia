@@ -158,62 +158,51 @@
       "id": "l02",
       "start": 22.82,
       "end": 25.6,
-      "text": "月照巫峡，千峰入静",
-      "singableText": "月照巫峡，千峰入静",
+      "text": "月照巫峡千峰寂",
+      "singableText": "月照巫峡千峰寂",
       "role": "lyric",
       "tokens": [
         {
           "text": "月",
           "start": 22.82,
-          "end": 23.129,
+          "end": 23.217,
           "pinyin": "yue4"
         },
         {
           "text": "照",
-          "start": 23.129,
-          "end": 23.438,
+          "start": 23.217,
+          "end": 23.614,
           "pinyin": "zhao4"
         },
         {
           "text": "巫",
-          "start": 23.438,
-          "end": 23.747,
+          "start": 23.614,
+          "end": 24.011,
           "pinyin": "wu1"
         },
         {
           "text": "峡",
-          "start": 23.747,
-          "end": 24.056,
+          "start": 24.011,
+          "end": 24.409,
           "pinyin": "xia2"
         },
         {
-          "text": "，",
-          "start": 24.056,
-          "end": 24.364
-        },
-        {
           "text": "千",
-          "start": 24.364,
-          "end": 24.673,
+          "start": 24.409,
+          "end": 24.806,
           "pinyin": "qian1"
         },
         {
           "text": "峰",
-          "start": 24.673,
-          "end": 24.982,
+          "start": 24.806,
+          "end": 25.203,
           "pinyin": "feng1"
         },
         {
-          "text": "入",
-          "start": 24.982,
-          "end": 25.291,
-          "pinyin": "ru4"
-        },
-        {
-          "text": "静",
-          "start": 25.291,
+          "text": "寂",
+          "start": 25.203,
           "end": 25.6,
-          "pinyin": "jing4"
+          "pinyin": "ji4"
         }
       ]
     },
@@ -510,51 +499,39 @@
       "id": "l08",
       "start": 41.62,
       "end": 44.84,
-      "text": "江风送我向前方",
-      "singableText": "江风送我向前方",
+      "text": "江风千帆过",
+      "singableText": "江风千帆过",
       "role": "lyric",
       "tokens": [
         {
           "text": "江",
           "start": 41.62,
-          "end": 42.08,
+          "end": 42.264,
           "pinyin": "jiang1"
         },
         {
           "text": "风",
-          "start": 42.08,
-          "end": 42.54,
+          "start": 42.264,
+          "end": 42.908,
           "pinyin": "feng1"
         },
         {
-          "text": "送",
-          "start": 42.54,
-          "end": 43.0,
-          "pinyin": "song4"
+          "text": "千",
+          "start": 42.908,
+          "end": 43.552,
+          "pinyin": "qian1"
         },
         {
-          "text": "我",
-          "start": 43.0,
-          "end": 43.46,
-          "pinyin": "wo3"
+          "text": "帆",
+          "start": 43.552,
+          "end": 44.196,
+          "pinyin": "fan1"
         },
         {
-          "text": "向",
-          "start": 43.46,
-          "end": 43.92,
-          "pinyin": "xiang4"
-        },
-        {
-          "text": "前",
-          "start": 43.92,
-          "end": 44.38,
-          "pinyin": "qian2"
-        },
-        {
-          "text": "方",
-          "start": 44.38,
+          "text": "过",
+          "start": 44.196,
           "end": 44.84,
-          "pinyin": "fang1"
+          "pinyin": "guo4"
         }
       ]
     },
@@ -819,6 +796,6 @@
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, and the planned mixed phonetic lyric. Source-close pinyin forms are preserved only where ASR/listening evidence is close."
+    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, the planned mixed phonetic lyric, and source-line review. Close Mandarin source forms are preserved when the ASR variant is only a noisy guess."
   }
 }

@@ -139,90 +139,79 @@
       "id": "l02",
       "start": 22.82,
       "end": 25.6,
-      "text": "月は巫峡を照らし、峰は静かな景色へ溶ける",
-      "singableText": "月は巫峡を照らし、峰は静かな景色へ溶ける",
+      "text": "月は巫峡を照らし、千の峰は静まる",
+      "singableText": "月は巫峡を照らし、千の峰は静まる",
       "role": "lyric",
       "tokens": [
         {
           "text": "月",
           "start": 22.82,
-          "end": 23.005,
+          "end": 23.034,
           "reading": "がつ"
         },
         {
           "text": "は",
-          "start": 23.005,
-          "end": 23.191
+          "start": 23.034,
+          "end": 23.248
         },
         {
           "text": "巫峡",
-          "start": 23.191,
-          "end": 23.376,
+          "start": 23.248,
+          "end": 23.462,
           "reading": "ふきょう"
         },
         {
           "text": "を",
-          "start": 23.376,
-          "end": 23.561
+          "start": 23.462,
+          "end": 23.675
         },
         {
           "text": "照ら",
-          "start": 23.561,
-          "end": 23.747,
+          "start": 23.675,
+          "end": 23.889,
           "reading": "てら"
         },
         {
           "text": "し",
-          "start": 23.747,
-          "end": 23.932
+          "start": 23.889,
+          "end": 24.103
         },
         {
           "text": "、",
-          "start": 23.932,
-          "end": 24.117
+          "start": 24.103,
+          "end": 24.317
+        },
+        {
+          "text": "千",
+          "start": 24.317,
+          "end": 24.531,
+          "reading": "せん"
+        },
+        {
+          "text": "の",
+          "start": 24.531,
+          "end": 24.745
         },
         {
           "text": "峰",
-          "start": 24.117,
-          "end": 24.303,
+          "start": 24.745,
+          "end": 24.958,
           "reading": "みね"
         },
         {
           "text": "は",
-          "start": 24.303,
-          "end": 24.488
+          "start": 24.958,
+          "end": 25.172
         },
         {
-          "text": "静か",
-          "start": 24.488,
-          "end": 24.673,
-          "reading": "しずか"
-        },
-        {
-          "text": "な",
-          "start": 24.673,
-          "end": 24.859
-        },
-        {
-          "text": "景色",
-          "start": 24.859,
-          "end": 25.044,
-          "reading": "けしき"
-        },
-        {
-          "text": "へ",
-          "start": 25.044,
-          "end": 25.229
-        },
-        {
-          "text": "溶け",
-          "start": 25.229,
-          "end": 25.415,
-          "reading": "とけ"
+          "text": "静ま",
+          "start": 25.172,
+          "end": 25.386,
+          "reading": "しずま"
         },
         {
           "text": "る",
-          "start": 25.415,
+          "start": 25.386,
           "end": 25.6
         }
       ]
@@ -285,78 +274,67 @@
       "id": "l04",
       "start": 29.7,
       "end": 32.22,
-      "text": "この身は蜉蝣のように漂い、一粒の粟ほど軽い",
-      "singableText": "この身は蜉蝣のように漂い、一粒の粟ほど軽い",
+      "text": "この身は蜉蝣のように、一粒の粟ほど軽い",
+      "singableText": "この身は蜉蝣のように、一粒の粟ほど軽い",
       "role": "lyric",
       "tokens": [
         {
           "text": "この",
           "start": 29.7,
-          "end": 29.894
+          "end": 29.929
         },
         {
           "text": "身",
-          "start": 29.894,
-          "end": 30.088,
+          "start": 29.929,
+          "end": 30.158,
           "reading": "み"
         },
         {
           "text": "は",
-          "start": 30.088,
-          "end": 30.282
+          "start": 30.158,
+          "end": 30.387
         },
         {
           "text": "蜉蝣",
-          "start": 30.282,
-          "end": 30.475,
+          "start": 30.387,
+          "end": 30.616,
           "reading": "かげろう"
         },
         {
           "text": "のように",
-          "start": 30.475,
-          "end": 30.669
-        },
-        {
-          "text": "漂",
-          "start": 30.669,
-          "end": 30.863,
-          "reading": "ひょう"
-        },
-        {
-          "text": "い",
-          "start": 30.863,
-          "end": 31.057
+          "start": 30.616,
+          "end": 30.845
         },
         {
           "text": "、",
-          "start": 31.057,
-          "end": 31.251
+          "start": 30.845,
+          "end": 31.075
         },
         {
           "text": "一粒",
-          "start": 31.251,
-          "end": 31.445,
+          "start": 31.075,
+          "end": 31.304,
           "reading": "ひとつぶ"
         },
         {
           "text": "の",
-          "start": 31.445,
-          "end": 31.638
+          "start": 31.304,
+          "end": 31.533
         },
         {
           "text": "粟",
-          "start": 31.638,
-          "end": 31.832,
+          "start": 31.533,
+          "end": 31.762,
           "reading": "あわ"
         },
         {
           "text": "ほど",
-          "start": 31.832,
-          "end": 32.026
+          "start": 31.762,
+          "end": 31.991
         },
         {
           "text": "軽い",
-          "start": 32.026,
+          "start": 31.991,
           "end": 32.22,
           "reading": "かるい"
         }
@@ -420,78 +398,67 @@
       "id": "l06",
       "start": 36.04,
       "end": 39.46,
-      "text": "この身は蜉蝣のように漂い、一粒の粟ほど軽い",
-      "singableText": "この身は蜉蝣のように漂い、一粒の粟ほど軽い",
+      "text": "この身は蜉蝣のように、一粒の粟ほど軽い",
+      "singableText": "この身は蜉蝣のように、一粒の粟ほど軽い",
       "role": "lyric",
       "tokens": [
         {
           "text": "この",
           "start": 36.04,
-          "end": 36.303
+          "end": 36.351
         },
         {
           "text": "身",
-          "start": 36.303,
-          "end": 36.566,
+          "start": 36.351,
+          "end": 36.662,
           "reading": "み"
         },
         {
           "text": "は",
-          "start": 36.566,
-          "end": 36.829
+          "start": 36.662,
+          "end": 36.973
         },
         {
           "text": "蜉蝣",
-          "start": 36.829,
-          "end": 37.092,
+          "start": 36.973,
+          "end": 37.284,
           "reading": "かげろう"
         },
         {
           "text": "のように",
-          "start": 37.092,
-          "end": 37.355
-        },
-        {
-          "text": "漂",
-          "start": 37.355,
-          "end": 37.618,
-          "reading": "ひょう"
-        },
-        {
-          "text": "い",
-          "start": 37.618,
-          "end": 37.882
+          "start": 37.284,
+          "end": 37.595
         },
         {
           "text": "、",
-          "start": 37.882,
-          "end": 38.145
+          "start": 37.595,
+          "end": 37.905
         },
         {
           "text": "一粒",
-          "start": 38.145,
-          "end": 38.408,
+          "start": 37.905,
+          "end": 38.216,
           "reading": "ひとつぶ"
         },
         {
           "text": "の",
-          "start": 38.408,
-          "end": 38.671
+          "start": 38.216,
+          "end": 38.527
         },
         {
           "text": "粟",
-          "start": 38.671,
-          "end": 38.934,
+          "start": 38.527,
+          "end": 38.838,
           "reading": "あわ"
         },
         {
           "text": "ほど",
-          "start": 38.934,
-          "end": 39.197
+          "start": 38.838,
+          "end": 39.149
         },
         {
           "text": "軽い",
-          "start": 39.197,
+          "start": 39.149,
           "end": 39.46,
           "reading": "かるい"
         }
@@ -549,8 +516,8 @@
       "id": "l08",
       "start": 41.62,
       "end": 44.84,
-      "text": "川風は遠い方へ私を運ぶ",
-      "singableText": "川風は遠い方へ私を運ぶ",
+      "text": "川風に千の帆が過ぎる",
+      "singableText": "川風に千の帆が過ぎる",
       "role": "lyric",
       "tokens": [
         {
@@ -560,43 +527,42 @@
           "reading": "かわかぜ"
         },
         {
-          "text": "は",
+          "text": "に",
           "start": 42.023,
           "end": 42.425
         },
         {
-          "text": "遠い",
+          "text": "千",
           "start": 42.425,
           "end": 42.828,
-          "reading": "とおい"
+          "reading": "せん"
         },
         {
-          "text": "方",
+          "text": "の",
           "start": 42.828,
-          "end": 43.23,
-          "reading": "ほう"
+          "end": 43.23
         },
         {
-          "text": "へ",
+          "text": "帆",
           "start": 43.23,
-          "end": 43.633
+          "end": 43.633,
+          "reading": "ほ"
         },
         {
-          "text": "私",
+          "text": "が",
           "start": 43.633,
-          "end": 44.035,
-          "reading": "わたし"
+          "end": 44.035
         },
         {
-          "text": "を",
+          "text": "過ぎ",
           "start": 44.035,
-          "end": 44.438
+          "end": 44.438,
+          "reading": "すぎ"
         },
         {
-          "text": "運ぶ",
+          "text": "る",
           "start": 44.438,
-          "end": 44.84,
-          "reading": "はこぶ"
+          "end": 44.84
         }
       ]
     },
@@ -808,6 +774,6 @@
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, and the planned mixed phonetic lyric. Source-close pinyin forms are preserved only where ASR/listening evidence is close."
+    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, the planned mixed phonetic lyric, and source-line review. Close Mandarin source forms are preserved when the ASR variant is only a noisy guess."
   }
 }

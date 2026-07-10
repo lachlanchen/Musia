@@ -113,8 +113,8 @@
       "id": "l02",
       "start": 22.82,
       "end": 25.6,
-      "text": "Yue zhao Wu Xia jian fang jing",
-      "singableText": "Yue zhao Wu Xia jian fang jing",
+      "text": "Yue zhao Wu Xia qian feng ji",
+      "singableText": "Yue zhao Wu Xia qian feng ji",
       "role": "lyric",
       "tokens": [
         {
@@ -138,17 +138,17 @@
           "end": 24.409
         },
         {
-          "text": "jian",
+          "text": "qian",
           "start": 24.409,
           "end": 24.806
         },
         {
-          "text": "fang",
+          "text": "feng",
           "start": 24.806,
           "end": 25.203
         },
         {
-          "text": "jing",
+          "text": "ji",
           "start": 25.203,
           "end": 25.6
         }
@@ -198,12 +198,12 @@
       "id": "l04",
       "start": 29.7,
       "end": 32.22,
-      "text": "Shan si fu yu yi su jing",
-      "singableText": "Shan si fu yu yi su jing",
+      "text": "Shen si fu you yi su qing",
+      "singableText": "Shen si fu you yi su qing",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Shan",
+          "text": "Shen",
           "start": 29.7,
           "end": 30.06
         },
@@ -218,7 +218,7 @@
           "end": 30.78
         },
         {
-          "text": "yu",
+          "text": "you",
           "start": 30.78,
           "end": 31.14
         },
@@ -233,7 +233,7 @@
           "end": 31.86
         },
         {
-          "text": "jing",
+          "text": "qing",
           "start": 31.86,
           "end": 32.22
         }
@@ -283,12 +283,12 @@
       "id": "l06",
       "start": 36.04,
       "end": 39.46,
-      "text": "Shan si fu yu yi su jing",
-      "singableText": "Shan si fu yu yi su jing",
+      "text": "Shen si fu you yi su qing",
+      "singableText": "Shen si fu you yi su qing",
       "role": "lyric",
       "tokens": [
         {
-          "text": "Shan",
+          "text": "Shen",
           "start": 36.04,
           "end": 36.529
         },
@@ -303,7 +303,7 @@
           "end": 37.506
         },
         {
-          "text": "yu",
+          "text": "you",
           "start": 37.506,
           "end": 37.994
         },
@@ -318,7 +318,7 @@
           "end": 38.971
         },
         {
-          "text": "jing",
+          "text": "qing",
           "start": 38.971,
           "end": 39.46
         }
@@ -363,8 +363,8 @@
       "id": "l08",
       "start": 41.62,
       "end": 44.84,
-      "text": "Jiang feng qian fang guo",
-      "singableText": "Jiang feng qian fang guo",
+      "text": "Jiang feng qian fan guo",
+      "singableText": "Jiang feng qian fan guo",
       "role": "lyric",
       "tokens": [
         {
@@ -383,7 +383,7 @@
           "end": 43.552
         },
         {
-          "text": "fang",
+          "text": "fan",
           "start": 43.552,
           "end": 44.196
         },
@@ -587,6 +587,6 @@
   ],
   "provenance": {
     "vocalSet": "mixed-vocal",
-    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, and the planned mixed phonetic lyric. Source-close pinyin forms are preserved only where ASR/listening evidence is close."
+    "correction": "Corrected from selected ACE XL Turbo seed 791111 using selected-render small ASR, selected/vocal-stem large-v3 English ASR, Mandarin large-v3 cross-check, the planned mixed phonetic lyric, and source-line review. Close Mandarin source forms are preserved when the ASR variant is only a noisy guess."
   }
 }
