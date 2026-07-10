@@ -22,6 +22,13 @@ ANALYSIS = ROOT / "data/runs/gong-bai-tou-snow-we-share-20260709-analysis"
 PUBLIC_AUDIO_NAME = "gong-bai-tou-snow-we-share-ace-xl-turbo-seed790972-20260709.mp3"
 PUBLIC_AUDIO = f"https://lazyingart.github.io/MusiaSongs/audio/{PUBLIC_AUDIO_NAME}"
 COVER = "assets/covers/gong-bai-tou-snow-we-share-16x9.png"
+DISPLAY_TITLE = "共白头 · Snow We Share · 雪中回声"
+LOCALIZED_TITLES = {
+    "zh-Hans": "共白头 · 雪中回声",
+    "en": "Snow We Share · Snow Echo",
+    "ja": "同じ雪の下で · 雪のこだま",
+}
+SUMMARY = "A mixed English, Japanese romaji, and Mandarin pinyin snow-memory ballad about shared snow, old longing, and the wish to grow white-haired together."
 COVER_SOURCE = Path(
     "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/"
     "ig_0933499e24356a63016a4f714160088191a5eecb88515843e5.png"
@@ -273,20 +280,16 @@ def write_media_item() -> None:
         "version": 1,
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "共白头 · Snow We Share",
-        "localizedTitles": {
-            "zh-Hans": "共白头",
-            "en": "Snow We Share",
-            "ja": "同じ雪の下で",
-        },
+        "title": DISPLAY_TITLE,
+        "localizedTitles": LOCALIZED_TITLES,
         "artist": "Musia",
-        "description": "A mixed English, Mandarin pinyin, and Japanese winter ballad about an old friend, falling snow, and the wish to grow white-haired together.",
+        "description": SUMMARY,
         "caption": "If we can share one snowfall, maybe this life still counts as growing old together.",
         "duration": round(duration(SELECTED_AUDIO), 3),
         "canonicalUrl": f"https://fun.lazying.art/#{MEDIA_ID}",
         "share": {
-            "title": "共白头 · Snow We Share - Fun Lazying Art",
-            "description": "A Musia mixed-language winter ballad with synced lyrics, translations, pinyin, furigana, chords, and stems.",
+            "title": f"{DISPLAY_TITLE} - Fun Lazying Art",
+            "description": "A Musia mixed-language snow-memory ballad with synced lyrics, translations, pinyin, furigana, chords, and stems.",
             "url": f"https://fun.lazying.art/#{MEDIA_ID}",
             "image": COVER,
             "siteName": "Fun Lazying Art",
@@ -358,9 +361,9 @@ def update_catalog() -> None:
     item = {
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "共白头 · Snow We Share",
+        "title": DISPLAY_TITLE,
         "artist": "Musia",
-        "summary": "A mixed English, Japanese romaji, and Mandarin pinyin winter ballad about shared snow and remembered love.",
+        "summary": SUMMARY,
         "manifest": f"data/songs/{MEDIA_ID}/manifest.json",
         "cover": COVER,
         "languages": ["mul", "en", "zh-Hans", "ja"],
@@ -377,7 +380,7 @@ def write_reference() -> None:
     reference.write_text(
         "\n".join(
             [
-                "# 共白头 · Snow We Share Production Note",
+                "# 共白头 · Snow We Share · 雪中回声 Production Note",
                 "",
                 "## Source",
                 "",
@@ -408,6 +411,10 @@ def write_reference() -> None:
                 "## Model-Facing Lyric Strategy",
                 "",
                 "The first selected route used Mandarin pinyin and Japanese romaji inside an English-language ACE lyric block. The planned lyric was intentionally sparse, but the selected render still compressed the latter half.",
+                "",
+                "This public version is now titled with the meaningful suffix `雪中回声 / Snow Echo` so it remains distinguishable from future no-pinyin remakes.",
+                "",
+                "Future remake rule from the July 10 review: do not feed Mandarin pinyin as the sung lyric for the new version. Use Chinese characters directly, and change `回首山河已入冬` to `回首山河已入秋` only in a newly generated render that actually sings `秋`.",
                 "",
                 "The public website does not publish the whole planned prompt as if it were sung. It publishes the selected render's audible structure, corrected with source-close forms where ASR was phonetically close.",
                 "",

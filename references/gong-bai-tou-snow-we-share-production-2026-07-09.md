@@ -1,4 +1,4 @@
-# 共白头 · Snow We Share Production Note
+# 共白头 · Snow We Share · 雪中回声 Production Note
 
 ## Source
 
@@ -29,6 +29,10 @@ This follows the Musia rule that SFT is tried when quality matters, but Turbo is
 ## Model-Facing Lyric Strategy
 
 The first selected route used Mandarin pinyin and Japanese romaji inside an English-language ACE lyric block. The planned lyric was intentionally sparse, but the selected render still compressed the latter half.
+
+This public version is now titled with the meaningful suffix `雪中回声 / Snow Echo` so it remains distinguishable from future no-pinyin remakes.
+
+Future remake rule from the July 10 review: do not feed Mandarin pinyin as the sung lyric for the new version. Use Chinese characters directly, and change `回首山河已入冬` to `回首山河已入秋` only in a newly generated render that actually sings `秋`.
 
 The public website does not publish the whole planned prompt as if it were sung. It publishes the selected render's audible structure, corrected with source-close forms where ASR was phonetically close.
 
