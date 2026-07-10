@@ -173,8 +173,10 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
     - source couplet meaning from the user.
 
     Policy: preserve source/planned text when ASR is sound-close, but publish
-    only the audible structure. The render compressed the latter half heavily,
-    so several planned lines are not included as active lyrics.
+    only the audible structure. A 2026-07-10 no-VAD medium cross-check recovered
+    a soft chorus continuation around 50.7s and clarified that the final
+    `Onaji yuki` / `Shiroku nareru kana` / `Ta zhao...` phrases should be
+    separate lines rather than one merged mixed-language line.
     """
 
     return [
@@ -189,9 +191,12 @@ def corrected_rows() -> list[tuple[str, float, float, str, str, str, str, str]]:
         ("l09", 37.86, 41.02, "Ci sheng ye suan gong bai tou", "This life may count as growing old together.", "この一生も共白髪といえる", "此生也算共白头", "lyric"),
         ("l10", 41.02, 44.48, "Hu you gu ren xin shang guo", "An old friend crosses my heart again.", "ふたたび故人が胸をよぎる", "忽有故人心上过", "lyric"),
         ("l11", 44.48, 48.72, "Hui shou shan he yi ru dong", "I turn back; mountains and rivers have entered winter.", "振り向けば山河は冬に入る", "回首山河已入冬", "lyric"),
-        ("l12", 64.40, 67.00, "Onaji yuki no shita de", "Under the same snow.", "同じ雪の下で", "在同一场雪下", "lyric"),
-        ("l13", 67.00, 72.73, "Shiroku nareru, ta zhao tong lin xue", "We may turn white, if we share the snow.", "白くなれる、同じ雪なら", "若同淋雪，也许能共白", "lyric"),
-        ("l14", 74.52, 76.54, "Ye suan gong bai tou", "It still counts as white hair together.", "それも共白髪といえる", "也算共白头", "lyric"),
+        ("l12", 50.67, 56.13, "Let our hearts be less alone", "Let our hearts be less alone.", "心を少しだけ孤独でなくして", "愿心不再那么孤单", "lyric"),
+        ("l13", 56.13, 63.73, "Ah ah ah ah ah ah", "Ah ah ah.", "ああ、ああ", "啊，啊", "lyric"),
+        ("l14", 64.36, 67.00, "Onaji yuki no shita de", "Under the same snow.", "同じ雪の下で", "在同一场雪下", "lyric"),
+        ("l15", 67.00, 70.42, "Shiroku nareru kana", "Could we turn white together?", "白くなれるかな", "是否能一起白头", "lyric"),
+        ("l16", 70.42, 73.58, "Ta zhao ruo shi tong lin xue", "If one day we share the same snow.", "いつか同じ雪に降られるなら", "他朝若是同淋雪", "lyric"),
+        ("l17", 74.42, 78.12, "Ye suan gong bai tou", "It still counts as white hair together.", "それも共白髪といえる", "也算共白头", "lyric"),
     ]
 
 
@@ -341,7 +346,11 @@ def write_media_item() -> None:
                 "gate": "public-candidate",
                 "note": "Selected for usable winter-ballad vocal and recovered mixed hook. The render compresses the prompt; public lyrics match audible structure.",
             },
-            "lyricCorrection": "Selected-render small ASR plus planned lyric cross-check. Close intended forms are preserved; missing prompt lines are not forced into public subtitles.",
+            "lyricCorrection": (
+                "Selected-render small ASR plus 2026-07-10 no-VAD medium ASR on the full mix and vocal stem, "
+                "then planned lyric/source cross-check. Close intended forms are preserved; a soft chorus continuation "
+                "and split final snow phrases recovered by no-VAD are included in public lyrics."
+            ),
             "coverSource": str(COVER_SOURCE),
             "publicAudio": PUBLIC_AUDIO_NAME,
         },
@@ -372,6 +381,7 @@ def update_catalog() -> None:
     items = [existing for existing in catalog["items"] if existing.get("id") != MEDIA_ID]
     items.insert(0, item)
     catalog["items"] = items
+    catalog["defaultMedia"] = MEDIA_ID
     write_json(path, catalog)
 
 
@@ -418,6 +428,8 @@ def write_reference() -> None:
                 "",
                 "The public website does not publish the whole planned prompt as if it were sung. It publishes the selected render's audible structure, corrected with source-close forms where ASR was phonetically close.",
                 "",
+                "2026-07-10 correction: a no-VAD medium ASR pass on both the selected full mix and separated vocal stem recovered a soft chorus continuation after the second `Hui shou shan he yi ru dong`. The previous website lyric jumped from 48.72s to 64.40s and therefore missed audible text. The final snow section was also split more carefully into Japanese and Mandarin-pinyin phrases instead of one merged line.",
+                "",
                 "## Corrected Active Vocal",
                 "",
                 "```text",
@@ -432,12 +444,21 @@ def write_reference() -> None:
                 "37.86-41.02 Ci sheng ye suan gong bai tou",
                 "41.02-44.48 Hu you gu ren xin shang guo",
                 "44.48-48.72 Hui shou shan he yi ru dong",
-                "64.40-67.00 Onaji yuki no shita de",
-                "67.00-72.73 Shiroku nareru, ta zhao tong lin xue",
-                "74.52-76.54 Ye suan gong bai tou",
+                "50.67-56.13 Let our hearts be less alone",
+                "56.13-63.73 Ah ah ah ah ah ah",
+                "64.36-67.00 Onaji yuki no shita de",
+                "67.00-70.42 Shiroku nareru kana",
+                "70.42-73.58 Ta zhao ruo shi tong lin xue",
+                "74.42-78.12 Ye suan gong bai tou",
                 "```",
                 "",
                 "Public lyrics contain only sung lyric lines. Instrumental spans are inferred by the player from timing gaps and may show musical-note status in the player, but they are not song-level lyrics.",
+                "",
+                "Correction packet:",
+                "",
+                "```text",
+                "data/creative_projects/gong-bai-tou-snow-we-share-20260709/correction_packets/old-public-medium-20260710/CORRECTION_PACKET.md",
+                "```",
                 "",
                 "## Website",
                 "",

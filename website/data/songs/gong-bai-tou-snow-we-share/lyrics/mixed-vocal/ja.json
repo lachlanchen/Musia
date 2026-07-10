@@ -470,7 +470,75 @@
     },
     {
       "id": "l12",
-      "start": 64.4,
+      "start": 50.67,
+      "end": 56.13,
+      "text": "心を少しだけ孤独でなくして",
+      "singableText": "心を少しだけ孤独でなくして",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "心",
+          "start": 50.67,
+          "end": 51.58,
+          "reading": "こころ"
+        },
+        {
+          "text": "を",
+          "start": 51.58,
+          "end": 52.49
+        },
+        {
+          "text": "少し",
+          "start": 52.49,
+          "end": 53.4,
+          "reading": "すこし"
+        },
+        {
+          "text": "だけ",
+          "start": 53.4,
+          "end": 54.31
+        },
+        {
+          "text": "孤独",
+          "start": 54.31,
+          "end": 55.22,
+          "reading": "こどく"
+        },
+        {
+          "text": "でなくして",
+          "start": 55.22,
+          "end": 56.13
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 56.13,
+      "end": 63.73,
+      "text": "ああ、ああ",
+      "singableText": "ああ、ああ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ああ",
+          "start": 56.13,
+          "end": 58.663
+        },
+        {
+          "text": "、",
+          "start": 58.663,
+          "end": 61.197
+        },
+        {
+          "text": "ああ",
+          "start": 61.197,
+          "end": 63.73
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 64.36,
       "end": 67.0,
       "text": "同じ雪の下で",
       "singableText": "同じ雪の下で",
@@ -478,100 +546,121 @@
       "tokens": [
         {
           "text": "同じ",
-          "start": 64.4,
-          "end": 64.92,
+          "start": 64.36,
+          "end": 64.888,
           "reading": "おなじ"
         },
         {
           "text": "雪",
-          "start": 64.92,
-          "end": 65.44,
+          "start": 64.888,
+          "end": 65.416,
           "reading": "ゆき"
         },
         {
           "text": "の",
-          "start": 65.44,
-          "end": 65.96
+          "start": 65.416,
+          "end": 65.944
         },
         {
           "text": "下",
-          "start": 65.96,
-          "end": 66.48,
+          "start": 65.944,
+          "end": 66.472,
           "reading": "した"
         },
         {
           "text": "で",
-          "start": 66.48,
+          "start": 66.472,
           "end": 67.0
         }
       ]
     },
     {
-      "id": "l13",
+      "id": "l15",
       "start": 67.0,
-      "end": 72.73,
-      "text": "白くなれる、同じ雪なら",
-      "singableText": "白くなれる、同じ雪なら",
+      "end": 70.42,
+      "text": "白くなれるかな",
+      "singableText": "白くなれるかな",
       "role": "lyric",
       "tokens": [
         {
           "text": "白く",
           "start": 67.0,
-          "end": 67.955,
+          "end": 68.71,
           "reading": "しろく"
         },
         {
-          "text": "なれる",
-          "start": 67.955,
-          "end": 68.91
-        },
-        {
-          "text": "、",
-          "start": 68.91,
-          "end": 69.865
-        },
-        {
-          "text": "同じ",
-          "start": 69.865,
-          "end": 70.82,
-          "reading": "おなじ"
-        },
-        {
-          "text": "雪",
-          "start": 70.82,
-          "end": 71.775,
-          "reading": "ゆき"
-        },
-        {
-          "text": "なら",
-          "start": 71.775,
-          "end": 72.73
+          "text": "なれるかな",
+          "start": 68.71,
+          "end": 70.42
         }
       ]
     },
     {
-      "id": "l14",
-      "start": 74.52,
-      "end": 76.54,
+      "id": "l16",
+      "start": 70.42,
+      "end": 73.58,
+      "text": "いつか同じ雪に降られるなら",
+      "singableText": "いつか同じ雪に降られるなら",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "いつか",
+          "start": 70.42,
+          "end": 70.947
+        },
+        {
+          "text": "同じ",
+          "start": 70.947,
+          "end": 71.473,
+          "reading": "おなじ"
+        },
+        {
+          "text": "雪",
+          "start": 71.473,
+          "end": 72.0,
+          "reading": "ゆき"
+        },
+        {
+          "text": "に",
+          "start": 72.0,
+          "end": 72.527
+        },
+        {
+          "text": "降ら",
+          "start": 72.527,
+          "end": 73.053,
+          "reading": "ふら"
+        },
+        {
+          "text": "れるなら",
+          "start": 73.053,
+          "end": 73.58
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 74.42,
+      "end": 78.12,
       "text": "それも共白髪といえる",
       "singableText": "それも共白髪といえる",
       "role": "lyric",
       "tokens": [
         {
           "text": "それも",
-          "start": 74.52,
-          "end": 75.193
+          "start": 74.42,
+          "end": 75.653
         },
         {
           "text": "共白髪",
-          "start": 75.193,
-          "end": 75.867,
+          "start": 75.653,
+          "end": 76.887,
           "reading": "ともしらが"
         },
         {
           "text": "といえる",
-          "start": 75.867,
-          "end": 76.54
+          "start": 76.887,
+          "end": 78.12
         }
       ]
     }

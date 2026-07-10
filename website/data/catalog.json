@@ -6,58 +6,8 @@
     "url": "https://fun.lazying.art",
     "protocol": "fun.lazying.media.v1"
   },
-  "defaultMedia": "gong-bai-tou-snow-we-share-native",
+  "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
-    {
-      "id": "gong-bai-tou-snow-we-share-native",
-      "kind": "song",
-      "title": "共白头 · Snow We Share",
-      "artist": "Musia",
-      "summary": "A source-line Mandarin autumn-and-snow ballad using only the poem lines: 忽有故人心上过，回首山河已入秋，他朝若是同淋雪，此生也算共白头。",
-      "manifest": "data/songs/gong-bai-tou-snow-we-share-native/manifest.json",
-      "cover": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
-      "languages": [
-        "zh-Hans",
-        "en",
-        "ja"
-      ],
-      "tags": [
-        "music",
-        "Mandarin",
-        "autumn",
-        "snow",
-        "ACE-Step",
-        "pinyin",
-        "furigana",
-        "chords"
-      ]
-    },
-    {
-      "id": "wu-xia-yue-mixed",
-      "kind": "song",
-      "title": "巫峡月 · Moon Over Wu Gorge",
-      "artist": "Musia",
-      "summary": "A mixed English, Japanese romaji, and Mandarin pinyin moonlit gorge ballad.",
-      "manifest": "data/songs/wu-xia-yue-mixed/manifest.json",
-      "cover": "assets/covers/wu-xia-yue-mixed-16x9.png",
-      "languages": [
-        "mul",
-        "en",
-        "zh-Hans",
-        "ja"
-      ],
-      "tags": [
-        "music",
-        "multilingual",
-        "Wu Gorge",
-        "moon",
-        "river",
-        "ACE-Step",
-        "pinyin",
-        "furigana",
-        "chords"
-      ]
-    },
     {
       "id": "gong-bai-tou-snow-we-share",
       "kind": "song",
@@ -84,6 +34,30 @@
       ]
     },
     {
+      "id": "gong-bai-tou-snow-we-share-native",
+      "kind": "song",
+      "title": "共白头 · Snow We Share",
+      "artist": "Musia",
+      "summary": "A source-line Mandarin autumn-and-snow ballad using only the poem lines: 忽有故人心上过，回首山河已入秋，他朝若是同淋雪，此生也算共白头。",
+      "manifest": "data/songs/gong-bai-tou-snow-we-share-native/manifest.json",
+      "cover": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "Mandarin",
+        "autumn",
+        "snow",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "gong-yin-chang-jiang-shui-mixed",
       "kind": "song",
       "title": "共饮长江水 · Same River",
@@ -102,6 +76,32 @@
         "multilingual",
         "Song poetry",
         "Li Zhiyi",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
+      "id": "wu-xia-yue-mixed",
+      "kind": "song",
+      "title": "巫峡月 · Moon Over Wu Gorge",
+      "artist": "Musia",
+      "summary": "A mixed English, Japanese romaji, and Mandarin pinyin moonlit gorge ballad.",
+      "manifest": "data/songs/wu-xia-yue-mixed/manifest.json",
+      "cover": "assets/covers/wu-xia-yue-mixed-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "multilingual",
+        "Wu Gorge",
+        "moon",
+        "river",
         "ACE-Step",
         "pinyin",
         "furigana",

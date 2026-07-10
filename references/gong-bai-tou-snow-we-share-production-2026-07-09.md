@@ -36,6 +36,8 @@ Future remake rule from the July 10 review: do not feed Mandarin pinyin as the s
 
 The public website does not publish the whole planned prompt as if it were sung. It publishes the selected render's audible structure, corrected with source-close forms where ASR was phonetically close.
 
+2026-07-10 correction: a no-VAD medium ASR pass on both the selected full mix and separated vocal stem recovered a soft chorus continuation after the second `Hui shou shan he yi ru dong`. The previous website lyric jumped from 48.72s to 64.40s and therefore missed audible text. The final snow section was also split more carefully into Japanese and Mandarin-pinyin phrases instead of one merged line.
+
 ## Corrected Active Vocal
 
 ```text
@@ -50,12 +52,21 @@ The public website does not publish the whole planned prompt as if it were sung.
 37.86-41.02 Ci sheng ye suan gong bai tou
 41.02-44.48 Hu you gu ren xin shang guo
 44.48-48.72 Hui shou shan he yi ru dong
-64.40-67.00 Onaji yuki no shita de
-67.00-72.73 Shiroku nareru, ta zhao tong lin xue
-74.52-76.54 Ye suan gong bai tou
+50.67-56.13 Let our hearts be less alone
+56.13-63.73 Ah ah ah ah ah ah
+64.36-67.00 Onaji yuki no shita de
+67.00-70.42 Shiroku nareru kana
+70.42-73.58 Ta zhao ruo shi tong lin xue
+74.42-78.12 Ye suan gong bai tou
 ```
 
 Public lyrics contain only sung lyric lines. Instrumental spans are inferred by the player from timing gaps and may show musical-note status in the player, but they are not song-level lyrics.
+
+Correction packet:
+
+```text
+data/creative_projects/gong-bai-tou-snow-we-share-20260709/correction_packets/old-public-medium-20260710/CORRECTION_PACKET.md
+```
 
 ## Website
 

@@ -465,20 +465,38 @@
       },
       {
         "id": "l12",
-        "start": 64.4,
+        "start": 50.67,
+        "end": 56.13,
+        "text": "Let our hearts be less alone"
+      },
+      {
+        "id": "l13",
+        "start": 56.13,
+        "end": 63.73,
+        "text": "Ah ah ah ah ah ah"
+      },
+      {
+        "id": "l14",
+        "start": 64.36,
         "end": 67.0,
         "text": "Onaji yuki no shita de"
       },
       {
-        "id": "l13",
+        "id": "l15",
         "start": 67.0,
-        "end": 72.73,
-        "text": "Shiroku nareru, ta zhao tong lin xue"
+        "end": 70.42,
+        "text": "Shiroku nareru kana"
       },
       {
-        "id": "l14",
-        "start": 74.52,
-        "end": 76.54,
+        "id": "l16",
+        "start": 70.42,
+        "end": 73.58,
+        "text": "Ta zhao ruo shi tong lin xue"
+      },
+      {
+        "id": "l17",
+        "start": 74.42,
+        "end": 78.12,
         "text": "Ye suan gong bai tou"
       }
     ]
@@ -495,7 +513,7 @@
       "gate": "public-candidate",
       "note": "Selected for usable winter-ballad vocal and recovered mixed hook. The render compresses the prompt; public lyrics match audible structure."
     },
-    "lyricCorrection": "Selected-render small ASR plus planned lyric cross-check. Close intended forms are preserved; missing prompt lines are not forced into public subtitles.",
+    "lyricCorrection": "Selected-render small ASR plus 2026-07-10 no-VAD medium ASR on the full mix and vocal stem, then planned lyric/source cross-check. Close intended forms are preserved; a soft chorus continuation and split final snow phrases recovered by no-VAD are included in public lyrics.",
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0933499e24356a63016a4f714160088191a5eecb88515843e5.png",
     "publicAudio": "gong-bai-tou-snow-we-share-ace-xl-turbo-seed790972-20260709.mp3"
   },
