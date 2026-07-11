@@ -113,6 +113,19 @@ The script writes:
 
 The validator requires `manifest.timeline.lines`, not `manifest.timeline.lyrics`.
 
+## Cover
+
+The first procedural moonlit boat cover was replaced with a selected
+image-generation cover candidate:
+
+- Candidate: `website/assets/cover-candidates/one-boat-megastructure-cover-candidate-20260711.png`
+- Live 16:9 cover: `website/assets/covers/one-boat-moonlight-one-lamp-16x9.png`
+
+Prompt direction: moonlit ocean, tiny boat with a warm lamp, and an immense
+graceful ring-gate/lighthouse-city megastructure rising from the water. This
+matches the song's scale: one human lamp against the far sea and the return
+toward Fusang.
+
 ## Reuse Note
 
 For mixed classical-poem songs, use pinyin or romaji as private sound-control

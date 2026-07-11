@@ -23,6 +23,7 @@ ANALYSIS = ROOT / "data/runs/one-boat-moonlight-one-lamp-20260711-analysis"
 PUBLIC_AUDIO_NAME = "one-boat-moonlight-one-lamp-ace-xl-turbo-seed780826-20260711.mp3"
 PUBLIC_AUDIO = f"https://lazyingart.github.io/MusiaSongs/audio/{PUBLIC_AUDIO_NAME}"
 COVER = "assets/covers/one-boat-moonlight-one-lamp-16x9.png"
+SELECTED_COVER_SOURCE = ROOT / "website/assets/cover-candidates/one-boat-megastructure-cover-candidate-20260711.png"
 
 KAKASI = pykakasi.kakasi()
 
@@ -222,6 +223,22 @@ def make_cover() -> None:
     target = ROOT / "website" / COVER
     target.parent.mkdir(parents=True, exist_ok=True)
     width, height = 1600, 900
+    if SELECTED_COVER_SOURCE.exists():
+        source = Image.open(SELECTED_COVER_SOURCE).convert("RGB")
+        source_ratio = source.width / source.height
+        target_ratio = width / height
+        if source_ratio > target_ratio:
+            new_width = int(source.height * target_ratio)
+            left = (source.width - new_width) // 2
+            source = source.crop((left, 0, left + new_width, source.height))
+        elif source_ratio < target_ratio:
+            new_height = int(source.width / target_ratio)
+            top = (source.height - new_height) // 2
+            source = source.crop((0, top, source.width, top + new_height))
+        source = source.resize((width, height), Image.Resampling.LANCZOS)
+        source.save(target, "PNG")
+        return
+
     image = Image.new("RGB", (width, height), "#081527")
     pix = image.load()
     for y in range(height):
@@ -367,6 +384,12 @@ def write_manifest(tracks: dict[str, list[dict[str, Any]]]) -> None:
             "selectedSeed": 780826,
             "analysisRun": str(ANALYSIS.relative_to(ROOT)),
             "publicAudio": PUBLIC_AUDIO_NAME,
+            "coverSource": str(SELECTED_COVER_SOURCE.relative_to(ROOT)),
+            "coverPrompt": (
+                "Moonlit ocean, tiny boat with one warm golden lamp, and an immense graceful "
+                "ring-gate/lighthouse-city megastructure rising from the water; vast, elegant, "
+                "emotional, cover-ready, no text."
+            ),
             "correctionPolicy": "Actual audible structure > close intended lyric > ASR guess > translation draft.",
         },
         "artifacts": [
