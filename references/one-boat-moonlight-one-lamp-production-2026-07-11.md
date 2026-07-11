@@ -87,9 +87,12 @@ Important correction decisions:
 - The final soft phrase `Haruka umi e` is included because multiple ASR passes
   and listening support a tail at the end.
 - The Chinese companion line for pinyin phrases restores original poem anchors
-  only where sound-close, for example `上国随缘住`, `来途若梦行`,
-  `浮天沧海远`, `去世法舟轻`, `水月通禅寂`, `鱼龙听梵声`,
-  `惟怜一灯影`, `万里眼中明`, `扶桑已在渺茫中`,
+  only where sound-close and phrase length is compatible. After user review,
+  `Fa zhou qing` is published as `法舟轻`, not `去世法舟轻`, because the
+  selected vocal does not sing `去世`. Likewise `Fu sang miao mang zhong` is
+  published as `扶桑渺茫中`, not `扶桑已在渺茫中`, because the selected vocal
+  omits `已在`. Other sound-close anchors include `上国随缘住`, `来途若梦行`,
+  `浮天沧海远`, `水月通禅寂`, `鱼龙听梵声`, `惟怜一灯影`, `万里眼中明`,
   `家在扶桑东更东`, and `一船明月一帆风`.
 
 ## Website Protocol Output
