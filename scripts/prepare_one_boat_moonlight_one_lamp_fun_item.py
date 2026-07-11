@@ -22,7 +22,7 @@ SELECTED_AUDIO = PROJECT / "selected/one-boat-moonlight-one-lamp-ace-xl-turbo-se
 ANALYSIS = ROOT / "data/runs/one-boat-moonlight-one-lamp-20260711-analysis"
 PUBLIC_AUDIO_NAME = "one-boat-moonlight-one-lamp-ace-xl-turbo-seed780826-20260711.mp3"
 PUBLIC_AUDIO = f"https://lazyingart.github.io/MusiaSongs/audio/{PUBLIC_AUDIO_NAME}"
-COVER = "assets/covers/one-boat-moonlight-one-lamp-16x9.png"
+COVER = "assets/covers/one-boat-moonlight-one-lamp-megastructure-20260711-16x9.png"
 SELECTED_COVER_SOURCE = ROOT / "website/assets/cover-candidates/one-boat-megastructure-cover-candidate-20260711.png"
 
 KAKASI = pykakasi.kakasi()
