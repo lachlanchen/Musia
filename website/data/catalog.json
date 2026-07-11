@@ -9,6 +9,32 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "one-boat-moonlight-one-lamp",
+      "kind": "song",
+      "title": "一船明月一灯影 · One Boat of Moonlight",
+      "artist": "Musia",
+      "summary": "A mixed English, Japanese romaji, and Mandarin pinyin Tang ocean farewell ballad about one lamp, one boat of moonlight, and a Japanese monk returning east.",
+      "manifest": "data/songs/one-boat-moonlight-one-lamp/manifest.json",
+      "cover": "assets/covers/one-boat-moonlight-one-lamp-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "multilingual",
+        "Tang poetry",
+        "farewell",
+        "ocean",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "gong-bai-tou-snow-we-share",
       "kind": "song",
       "title": "共白头 · Snow We Share · 雪中回声",

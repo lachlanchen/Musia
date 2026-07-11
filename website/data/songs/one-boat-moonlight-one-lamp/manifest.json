@@ -1,0 +1,1363 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "one-boat-moonlight-one-lamp",
+  "kind": "song",
+  "title": "一船明月一灯影 · One Boat of Moonlight",
+  "localizedTitles": {
+    "zh-Hans": "一船明月一灯影",
+    "en": "One Boat of Moonlight",
+    "ja": "一船の明月、一つの灯影"
+  },
+  "artist": "Musia",
+  "description": "A mixed English, Japanese romaji, and Mandarin pinyin ocean farewell ballad from two Tang poems about a Japanese monk returning east.",
+  "caption": "One lamp in the eyes, one boat of moonlight, and one sail of wind returning toward Fusang.",
+  "duration": 74.0,
+  "canonicalUrl": "https://fun.lazying.art/#one-boat-moonlight-one-lamp",
+  "share": {
+    "title": "一船明月一灯影 · One Boat of Moonlight - Fun Lazying Art",
+    "description": "A Musia mixed-language Tang farewell song with corrected synced lyrics, original Chinese poem anchors, translations, pinyin, furigana, and chords.",
+    "url": "https://fun.lazying.art/#one-boat-moonlight-one-lamp",
+    "image": "assets/covers/one-boat-moonlight-one-lamp-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Moonlit sea cover",
+      "role": "cover",
+      "src": "assets/covers/one-boat-moonlight-one-lamp-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/one-boat-moonlight-one-lamp-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "one-boat-moonlight-one-lamp",
+      "label": "Mixed",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "mul",
+      "languageLabel": "Mixed",
+      "lyricSetId": "mixed-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/one-boat-moonlight-one-lamp-ace-xl-turbo-seed780826-20260711.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "D minor planned / detected F major centered with Dm-Bb colors",
+    "bpm": 143.555,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 1.788,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 1.788,
+        "end": 2.206,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 2.206,
+        "end": 3.46,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 3.46,
+        "end": 3.878,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 3.878,
+        "end": 4.272,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 4.272,
+        "end": 5.526,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 5.526,
+        "end": 5.944,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 5.944,
+        "end": 6.362,
+        "name": "Cm",
+        "degree": ""
+      },
+      {
+        "start": 6.362,
+        "end": 7.221,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 7.221,
+        "end": 7.639,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 7.639,
+        "end": 8.057,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 8.057,
+        "end": 8.475,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 8.475,
+        "end": 9.288,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 9.288,
+        "end": 9.706,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 9.706,
+        "end": 10.96,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 10.96,
+        "end": 11.796,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 11.796,
+        "end": 16.788,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 16.788,
+        "end": 18.042,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 18.042,
+        "end": 18.46,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 18.46,
+        "end": 18.878,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 18.878,
+        "end": 20.944,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 20.944,
+        "end": 21.362,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 21.362,
+        "end": 23.034,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 23.034,
+        "end": 23.452,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 23.452,
+        "end": 25.124,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 25.124,
+        "end": 26.773,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 26.773,
+        "end": 29.675,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 29.675,
+        "end": 30.116,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 30.116,
+        "end": 30.929,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 30.929,
+        "end": 31.347,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 31.347,
+        "end": 31.765,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 31.765,
+        "end": 33.019,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 33.019,
+        "end": 33.437,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 33.437,
+        "end": 35.109,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 35.109,
+        "end": 36.78,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 36.78,
+        "end": 38.429,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 38.429,
+        "end": 39.706,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 39.706,
+        "end": 40.124,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 40.124,
+        "end": 41.773,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 41.773,
+        "end": 44.698,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 44.698,
+        "end": 45.093,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 45.093,
+        "end": 46.788,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 46.788,
+        "end": 47.206,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 47.206,
+        "end": 48.019,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 48.019,
+        "end": 48.437,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 48.437,
+        "end": 49.273,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 49.273,
+        "end": 49.691,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 49.691,
+        "end": 51.363,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 51.363,
+        "end": 51.78,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 51.78,
+        "end": 53.429,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 53.429,
+        "end": 55.101,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 55.101,
+        "end": 58.027,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 58.027,
+        "end": 58.445,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 58.445,
+        "end": 60.116,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 60.116,
+        "end": 60.534,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 60.534,
+        "end": 60.929,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 60.929,
+        "end": 61.347,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 61.347,
+        "end": 61.765,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 61.765,
+        "end": 65.109,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 65.109,
+        "end": 66.363,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 66.363,
+        "end": 68.034,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 68.034,
+        "end": 74.0,
+        "name": "F",
+        "degree": ""
+      }
+    ]
+  },
+  "lyricSets": [
+    {
+      "id": "mixed-vocal",
+      "label": "Mixed vocal",
+      "languageCode": "mul",
+      "tracks": [
+        {
+          "code": "mul",
+          "label": "Mixed",
+          "nativeLabel": "Mixed",
+          "script": "Latn",
+          "features": [
+            "active-vocal"
+          ],
+          "path": "lyrics/mixed-vocal/mul.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "textTracks": [
+    {
+      "code": "mul",
+      "label": "Mixed",
+      "path": "lyrics/mixed-vocal/mul.json",
+      "default": true
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "path": "lyrics/mixed-vocal/en.json"
+    },
+    {
+      "code": "ja",
+      "label": "日本語",
+      "path": "lyrics/mixed-vocal/ja.json"
+    },
+    {
+      "code": "zh-Hans",
+      "label": "中文",
+      "path": "lyrics/mixed-vocal/zh-Hans.json"
+    }
+  ],
+  "timeline": {
+    "lines": [
+      {
+        "id": "l01",
+        "start": 6.1,
+        "end": 11.9,
+        "text": "When love shines across the sea",
+        "singableText": "When love shines across the sea",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "When",
+            "start": 6.1,
+            "end": 7.067
+          },
+          {
+            "text": "love",
+            "start": 7.067,
+            "end": 8.033
+          },
+          {
+            "text": "shines",
+            "start": 8.033,
+            "end": 9.0
+          },
+          {
+            "text": "across",
+            "start": 9.0,
+            "end": 9.967
+          },
+          {
+            "text": "the",
+            "start": 9.967,
+            "end": 10.933
+          },
+          {
+            "text": "sea",
+            "start": 10.933,
+            "end": 11.9
+          }
+        ]
+      },
+      {
+        "id": "l02",
+        "start": 13.88,
+        "end": 16.95,
+        "text": "Shang guo sui yuan zhu",
+        "singableText": "Shang guo sui yuan zhu",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Shang",
+            "start": 13.88,
+            "end": 14.494
+          },
+          {
+            "text": "guo",
+            "start": 14.494,
+            "end": 15.108
+          },
+          {
+            "text": "sui",
+            "start": 15.108,
+            "end": 15.722
+          },
+          {
+            "text": "yuan",
+            "start": 15.722,
+            "end": 16.336
+          },
+          {
+            "text": "zhu",
+            "start": 16.336,
+            "end": 16.95
+          }
+        ]
+      },
+      {
+        "id": "l03",
+        "start": 17.0,
+        "end": 20.08,
+        "text": "Lai tu ruo meng xing",
+        "singableText": "Lai tu ruo meng xing",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Lai",
+            "start": 17.0,
+            "end": 17.616
+          },
+          {
+            "text": "tu",
+            "start": 17.616,
+            "end": 18.232
+          },
+          {
+            "text": "ruo",
+            "start": 18.232,
+            "end": 18.848
+          },
+          {
+            "text": "meng",
+            "start": 18.848,
+            "end": 19.464
+          },
+          {
+            "text": "xing",
+            "start": 19.464,
+            "end": 20.08
+          }
+        ]
+      },
+      {
+        "id": "l04",
+        "start": 20.08,
+        "end": 23.8,
+        "text": "Fu tian cang hai yuan",
+        "singableText": "Fu tian cang hai yuan",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Fu",
+            "start": 20.08,
+            "end": 20.824
+          },
+          {
+            "text": "tian",
+            "start": 20.824,
+            "end": 21.568
+          },
+          {
+            "text": "cang",
+            "start": 21.568,
+            "end": 22.312
+          },
+          {
+            "text": "hai",
+            "start": 22.312,
+            "end": 23.056
+          },
+          {
+            "text": "yuan",
+            "start": 23.056,
+            "end": 23.8
+          }
+        ]
+      },
+      {
+        "id": "l05",
+        "start": 23.8,
+        "end": 26.56,
+        "text": "Fa zhou qing",
+        "singableText": "Fa zhou qing",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Fa",
+            "start": 23.8,
+            "end": 24.72
+          },
+          {
+            "text": "zhou",
+            "start": 24.72,
+            "end": 25.64
+          },
+          {
+            "text": "qing",
+            "start": 25.64,
+            "end": 26.56
+          }
+        ]
+      },
+      {
+        "id": "l06",
+        "start": 26.56,
+        "end": 30.62,
+        "text": "Shui yue tong chan ji",
+        "singableText": "Shui yue tong chan ji",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Shui",
+            "start": 26.56,
+            "end": 27.372
+          },
+          {
+            "text": "yue",
+            "start": 27.372,
+            "end": 28.184
+          },
+          {
+            "text": "tong",
+            "start": 28.184,
+            "end": 28.996
+          },
+          {
+            "text": "chan",
+            "start": 28.996,
+            "end": 29.808
+          },
+          {
+            "text": "ji",
+            "start": 29.808,
+            "end": 30.62
+          }
+        ]
+      },
+      {
+        "id": "l07",
+        "start": 30.62,
+        "end": 32.98,
+        "text": "Moon in the water",
+        "singableText": "Moon in the water",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Moon",
+            "start": 30.62,
+            "end": 31.21
+          },
+          {
+            "text": "in",
+            "start": 31.21,
+            "end": 31.8
+          },
+          {
+            "text": "the",
+            "start": 31.8,
+            "end": 32.39
+          },
+          {
+            "text": "water",
+            "start": 32.39,
+            "end": 32.98
+          }
+        ]
+      },
+      {
+        "id": "l08",
+        "start": 33.66,
+        "end": 36.86,
+        "text": "Yu long ting fan sheng",
+        "singableText": "Yu long ting fan sheng",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Yu",
+            "start": 33.66,
+            "end": 34.3
+          },
+          {
+            "text": "long",
+            "start": 34.3,
+            "end": 34.94
+          },
+          {
+            "text": "ting",
+            "start": 34.94,
+            "end": 35.58
+          },
+          {
+            "text": "fan",
+            "start": 35.58,
+            "end": 36.22
+          },
+          {
+            "text": "sheng",
+            "start": 36.22,
+            "end": 36.86
+          }
+        ]
+      },
+      {
+        "id": "l09",
+        "start": 36.86,
+        "end": 40.46,
+        "text": "Haruka Haruka",
+        "singableText": "Haruka Haruka",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Haruka",
+            "start": 36.86,
+            "end": 38.66
+          },
+          {
+            "text": "Haruka",
+            "start": 38.66,
+            "end": 40.46
+          }
+        ]
+      },
+      {
+        "id": "l10",
+        "start": 40.46,
+        "end": 44.38,
+        "text": "Wei lian yi deng ying",
+        "singableText": "Wei lian yi deng ying",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Wei",
+            "start": 40.46,
+            "end": 41.244
+          },
+          {
+            "text": "lian",
+            "start": 41.244,
+            "end": 42.028
+          },
+          {
+            "text": "yi",
+            "start": 42.028,
+            "end": 42.812
+          },
+          {
+            "text": "deng",
+            "start": 42.812,
+            "end": 43.596
+          },
+          {
+            "text": "ying",
+            "start": 43.596,
+            "end": 44.38
+          }
+        ]
+      },
+      {
+        "id": "l11",
+        "start": 44.38,
+        "end": 47.76,
+        "text": "Wan li yan zhong ming",
+        "singableText": "Wan li yan zhong ming",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Wan",
+            "start": 44.38,
+            "end": 45.056
+          },
+          {
+            "text": "li",
+            "start": 45.056,
+            "end": 45.732
+          },
+          {
+            "text": "yan",
+            "start": 45.732,
+            "end": 46.408
+          },
+          {
+            "text": "zhong",
+            "start": 46.408,
+            "end": 47.084
+          },
+          {
+            "text": "ming",
+            "start": 47.084,
+            "end": 47.76
+          }
+        ]
+      },
+      {
+        "id": "l12",
+        "start": 48.44,
+        "end": 51.1,
+        "text": "Fu sang miao mang zhong",
+        "singableText": "Fu sang miao mang zhong",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Fu",
+            "start": 48.44,
+            "end": 48.972
+          },
+          {
+            "text": "sang",
+            "start": 48.972,
+            "end": 49.504
+          },
+          {
+            "text": "miao",
+            "start": 49.504,
+            "end": 50.036
+          },
+          {
+            "text": "mang",
+            "start": 50.036,
+            "end": 50.568
+          },
+          {
+            "text": "zhong",
+            "start": 50.568,
+            "end": 51.1
+          }
+        ]
+      },
+      {
+        "id": "l13",
+        "start": 51.1,
+        "end": 54.96,
+        "text": "Higashi no higashi e",
+        "singableText": "Higashi no higashi e",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Higashi",
+            "start": 51.1,
+            "end": 52.065
+          },
+          {
+            "text": "no",
+            "start": 52.065,
+            "end": 53.03
+          },
+          {
+            "text": "higashi",
+            "start": 53.03,
+            "end": 53.995
+          },
+          {
+            "text": "e",
+            "start": 53.995,
+            "end": 54.96
+          }
+        ]
+      },
+      {
+        "id": "l14",
+        "start": 68.46,
+        "end": 71.02,
+        "text": "Haruka umi e",
+        "singableText": "Haruka umi e",
+        "role": "lyric",
+        "tokens": [
+          {
+            "text": "Haruka",
+            "start": 68.46,
+            "end": 69.313
+          },
+          {
+            "text": "umi",
+            "start": 69.313,
+            "end": 70.167
+          },
+          {
+            "text": "e",
+            "start": 70.167,
+            "end": 71.02
+          }
+        ]
+      }
+    ],
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 1.788,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 1.788,
+        "end": 2.206,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 2.206,
+        "end": 3.46,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 3.46,
+        "end": 3.878,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 3.878,
+        "end": 4.272,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 4.272,
+        "end": 5.526,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 5.526,
+        "end": 5.944,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 5.944,
+        "end": 6.362,
+        "name": "Cm",
+        "degree": ""
+      },
+      {
+        "start": 6.362,
+        "end": 7.221,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 7.221,
+        "end": 7.639,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 7.639,
+        "end": 8.057,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 8.057,
+        "end": 8.475,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 8.475,
+        "end": 9.288,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 9.288,
+        "end": 9.706,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 9.706,
+        "end": 10.96,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 10.96,
+        "end": 11.796,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 11.796,
+        "end": 16.788,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 16.788,
+        "end": 18.042,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 18.042,
+        "end": 18.46,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 18.46,
+        "end": 18.878,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 18.878,
+        "end": 20.944,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 20.944,
+        "end": 21.362,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 21.362,
+        "end": 23.034,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 23.034,
+        "end": 23.452,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 23.452,
+        "end": 25.124,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 25.124,
+        "end": 26.773,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 26.773,
+        "end": 29.675,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 29.675,
+        "end": 30.116,
+        "name": "Fm",
+        "degree": ""
+      },
+      {
+        "start": 30.116,
+        "end": 30.929,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 30.929,
+        "end": 31.347,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 31.347,
+        "end": 31.765,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 31.765,
+        "end": 33.019,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 33.019,
+        "end": 33.437,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 33.437,
+        "end": 35.109,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 35.109,
+        "end": 36.78,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 36.78,
+        "end": 38.429,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 38.429,
+        "end": 39.706,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 39.706,
+        "end": 40.124,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 40.124,
+        "end": 41.773,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 41.773,
+        "end": 44.698,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 44.698,
+        "end": 45.093,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 45.093,
+        "end": 46.788,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 46.788,
+        "end": 47.206,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 47.206,
+        "end": 48.019,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 48.019,
+        "end": 48.437,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 48.437,
+        "end": 49.273,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 49.273,
+        "end": 49.691,
+        "name": "Bbm",
+        "degree": ""
+      },
+      {
+        "start": 49.691,
+        "end": 51.363,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 51.363,
+        "end": 51.78,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 51.78,
+        "end": 53.429,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 53.429,
+        "end": 55.101,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 55.101,
+        "end": 58.027,
+        "name": "F",
+        "degree": ""
+      },
+      {
+        "start": 58.027,
+        "end": 58.445,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 58.445,
+        "end": 60.116,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 60.116,
+        "end": 60.534,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 60.534,
+        "end": 60.929,
+        "name": "Dm",
+        "degree": ""
+      },
+      {
+        "start": 60.929,
+        "end": 61.347,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 61.347,
+        "end": 61.765,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 61.765,
+        "end": 65.109,
+        "name": "Bb",
+        "degree": ""
+      },
+      {
+        "start": 65.109,
+        "end": 66.363,
+        "name": "Gm",
+        "degree": ""
+      },
+      {
+        "start": 66.363,
+        "end": 68.034,
+        "name": "C",
+        "degree": ""
+      },
+      {
+        "start": 68.034,
+        "end": 74.0,
+        "name": "F",
+        "degree": ""
+      }
+    ]
+  },
+  "provenance": {
+    "generator": "ACE-Step 1.5 XL Turbo",
+    "generationProject": "data/creative_projects/one-boat-moonlight-one-lamp-20260711",
+    "selectedSeed": 780826,
+    "analysisRun": "data/runs/one-boat-moonlight-one-lamp-20260711-analysis",
+    "publicAudio": "one-boat-moonlight-one-lamp-ace-xl-turbo-seed780826-20260711.mp3",
+    "correctionPolicy": "Actual audible structure > close intended lyric > ASR guess > translation draft."
+  },
+  "artifacts": [
+    {
+      "label": "Analysis report",
+      "path": "data/runs/one-boat-moonlight-one-lamp-20260711-analysis/REPORT.md"
+    },
+    {
+      "label": "Chords CSV",
+      "path": "data/runs/one-boat-moonlight-one-lamp-20260711-analysis/analysis/chords.csv"
+    },
+    {
+      "label": "Beats CSV",
+      "path": "data/runs/one-boat-moonlight-one-lamp-20260711-analysis/analysis/beats.csv"
+    },
+    {
+      "label": "Stems",
+      "path": "data/runs/one-boat-moonlight-one-lamp-20260711-analysis/stems"
+    }
+  ]
+}

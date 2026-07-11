@@ -1,0 +1,656 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "one-boat-moonlight-one-lamp",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 6.1,
+      "end": 11.9,
+      "text": "惟怜一灯影，万里眼中明",
+      "singableText": "惟怜一灯影，万里眼中明",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "惟",
+          "start": 6.1,
+          "end": 6.68,
+          "pinyin": "wei2"
+        },
+        {
+          "text": "怜",
+          "start": 6.68,
+          "end": 7.26,
+          "pinyin": "lian2"
+        },
+        {
+          "text": "一",
+          "start": 7.26,
+          "end": 7.84,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "灯",
+          "start": 7.84,
+          "end": 8.42,
+          "pinyin": "deng1"
+        },
+        {
+          "text": "影",
+          "start": 8.42,
+          "end": 9.0,
+          "pinyin": "ying3"
+        },
+        {
+          "text": "万",
+          "start": 9.0,
+          "end": 9.58,
+          "pinyin": "wan4"
+        },
+        {
+          "text": "里",
+          "start": 9.58,
+          "end": 10.16,
+          "pinyin": "li3"
+        },
+        {
+          "text": "眼",
+          "start": 10.16,
+          "end": 10.74,
+          "pinyin": "yan3"
+        },
+        {
+          "text": "中",
+          "start": 10.74,
+          "end": 11.32,
+          "pinyin": "zhong1"
+        },
+        {
+          "text": "明",
+          "start": 11.32,
+          "end": 11.9,
+          "pinyin": "ming2"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 13.88,
+      "end": 16.95,
+      "text": "上国随缘住",
+      "singableText": "上国随缘住",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "上",
+          "start": 13.88,
+          "end": 14.494,
+          "pinyin": "shang4"
+        },
+        {
+          "text": "国",
+          "start": 14.494,
+          "end": 15.108,
+          "pinyin": "guo2"
+        },
+        {
+          "text": "随",
+          "start": 15.108,
+          "end": 15.722,
+          "pinyin": "sui2"
+        },
+        {
+          "text": "缘",
+          "start": 15.722,
+          "end": 16.336,
+          "pinyin": "yuan2"
+        },
+        {
+          "text": "住",
+          "start": 16.336,
+          "end": 16.95,
+          "pinyin": "zhu4"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 17.0,
+      "end": 20.08,
+      "text": "来途若梦行",
+      "singableText": "来途若梦行",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "来",
+          "start": 17.0,
+          "end": 17.616,
+          "pinyin": "lai2"
+        },
+        {
+          "text": "途",
+          "start": 17.616,
+          "end": 18.232,
+          "pinyin": "tu2"
+        },
+        {
+          "text": "若",
+          "start": 18.232,
+          "end": 18.848,
+          "pinyin": "ruo4"
+        },
+        {
+          "text": "梦",
+          "start": 18.848,
+          "end": 19.464,
+          "pinyin": "meng4"
+        },
+        {
+          "text": "行",
+          "start": 19.464,
+          "end": 20.08,
+          "pinyin": "xing2"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 20.08,
+      "end": 23.8,
+      "text": "浮天沧海远",
+      "singableText": "浮天沧海远",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "浮",
+          "start": 20.08,
+          "end": 20.824,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "天",
+          "start": 20.824,
+          "end": 21.568,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "沧",
+          "start": 21.568,
+          "end": 22.312,
+          "pinyin": "cang1"
+        },
+        {
+          "text": "海",
+          "start": 22.312,
+          "end": 23.056,
+          "pinyin": "hai3"
+        },
+        {
+          "text": "远",
+          "start": 23.056,
+          "end": 23.8,
+          "pinyin": "yuan3"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 23.8,
+      "end": 26.56,
+      "text": "去世法舟轻",
+      "singableText": "去世法舟轻",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "去",
+          "start": 23.8,
+          "end": 24.352,
+          "pinyin": "qu4"
+        },
+        {
+          "text": "世",
+          "start": 24.352,
+          "end": 24.904,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "法",
+          "start": 24.904,
+          "end": 25.456,
+          "pinyin": "fa3"
+        },
+        {
+          "text": "舟",
+          "start": 25.456,
+          "end": 26.008,
+          "pinyin": "zhou1"
+        },
+        {
+          "text": "轻",
+          "start": 26.008,
+          "end": 26.56,
+          "pinyin": "qing1"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 26.56,
+      "end": 30.62,
+      "text": "水月通禅寂",
+      "singableText": "水月通禅寂",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "水",
+          "start": 26.56,
+          "end": 27.372,
+          "pinyin": "shui3"
+        },
+        {
+          "text": "月",
+          "start": 27.372,
+          "end": 28.184,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "通",
+          "start": 28.184,
+          "end": 28.996,
+          "pinyin": "tong1"
+        },
+        {
+          "text": "禅",
+          "start": 28.996,
+          "end": 29.808,
+          "pinyin": "chan2"
+        },
+        {
+          "text": "寂",
+          "start": 29.808,
+          "end": 30.62,
+          "pinyin": "ji4"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 30.62,
+      "end": 32.98,
+      "text": "水月通禅寂",
+      "singableText": "水月通禅寂",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "水",
+          "start": 30.62,
+          "end": 31.092,
+          "pinyin": "shui3"
+        },
+        {
+          "text": "月",
+          "start": 31.092,
+          "end": 31.564,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "通",
+          "start": 31.564,
+          "end": 32.036,
+          "pinyin": "tong1"
+        },
+        {
+          "text": "禅",
+          "start": 32.036,
+          "end": 32.508,
+          "pinyin": "chan2"
+        },
+        {
+          "text": "寂",
+          "start": 32.508,
+          "end": 32.98,
+          "pinyin": "ji4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 33.66,
+      "end": 36.86,
+      "text": "鱼龙听梵声",
+      "singableText": "鱼龙听梵声",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "鱼",
+          "start": 33.66,
+          "end": 34.3,
+          "pinyin": "yu2"
+        },
+        {
+          "text": "龙",
+          "start": 34.3,
+          "end": 34.94,
+          "pinyin": "long2"
+        },
+        {
+          "text": "听",
+          "start": 34.94,
+          "end": 35.58,
+          "pinyin": "ting1"
+        },
+        {
+          "text": "梵",
+          "start": 35.58,
+          "end": 36.22,
+          "pinyin": "fan4"
+        },
+        {
+          "text": "声",
+          "start": 36.22,
+          "end": 36.86,
+          "pinyin": "sheng1"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 36.86,
+      "end": 40.46,
+      "text": "扶桑已在渺茫中",
+      "singableText": "扶桑已在渺茫中",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "扶",
+          "start": 36.86,
+          "end": 37.374,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "桑",
+          "start": 37.374,
+          "end": 37.889,
+          "pinyin": "sang1"
+        },
+        {
+          "text": "已",
+          "start": 37.889,
+          "end": 38.403,
+          "pinyin": "yi3"
+        },
+        {
+          "text": "在",
+          "start": 38.403,
+          "end": 38.917,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "渺",
+          "start": 38.917,
+          "end": 39.431,
+          "pinyin": "miao3"
+        },
+        {
+          "text": "茫",
+          "start": 39.431,
+          "end": 39.946,
+          "pinyin": "mang2"
+        },
+        {
+          "text": "中",
+          "start": 39.946,
+          "end": 40.46,
+          "pinyin": "zhong1"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 40.46,
+      "end": 44.38,
+      "text": "惟怜一灯影",
+      "singableText": "惟怜一灯影",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "惟",
+          "start": 40.46,
+          "end": 41.244,
+          "pinyin": "wei2"
+        },
+        {
+          "text": "怜",
+          "start": 41.244,
+          "end": 42.028,
+          "pinyin": "lian2"
+        },
+        {
+          "text": "一",
+          "start": 42.028,
+          "end": 42.812,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "灯",
+          "start": 42.812,
+          "end": 43.596,
+          "pinyin": "deng1"
+        },
+        {
+          "text": "影",
+          "start": 43.596,
+          "end": 44.38,
+          "pinyin": "ying3"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.38,
+      "end": 47.76,
+      "text": "万里眼中明",
+      "singableText": "万里眼中明",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "万",
+          "start": 44.38,
+          "end": 45.056,
+          "pinyin": "wan4"
+        },
+        {
+          "text": "里",
+          "start": 45.056,
+          "end": 45.732,
+          "pinyin": "li3"
+        },
+        {
+          "text": "眼",
+          "start": 45.732,
+          "end": 46.408,
+          "pinyin": "yan3"
+        },
+        {
+          "text": "中",
+          "start": 46.408,
+          "end": 47.084,
+          "pinyin": "zhong1"
+        },
+        {
+          "text": "明",
+          "start": 47.084,
+          "end": 47.76,
+          "pinyin": "ming2"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 48.44,
+      "end": 51.1,
+      "text": "扶桑已在渺茫中",
+      "singableText": "扶桑已在渺茫中",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "扶",
+          "start": 48.44,
+          "end": 48.82,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "桑",
+          "start": 48.82,
+          "end": 49.2,
+          "pinyin": "sang1"
+        },
+        {
+          "text": "已",
+          "start": 49.2,
+          "end": 49.58,
+          "pinyin": "yi3"
+        },
+        {
+          "text": "在",
+          "start": 49.58,
+          "end": 49.96,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "渺",
+          "start": 49.96,
+          "end": 50.34,
+          "pinyin": "miao3"
+        },
+        {
+          "text": "茫",
+          "start": 50.34,
+          "end": 50.72,
+          "pinyin": "mang2"
+        },
+        {
+          "text": "中",
+          "start": 50.72,
+          "end": 51.1,
+          "pinyin": "zhong1"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 51.1,
+      "end": 54.96,
+      "text": "家在扶桑东更东",
+      "singableText": "家在扶桑东更东",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "家",
+          "start": 51.1,
+          "end": 51.651,
+          "pinyin": "jia1"
+        },
+        {
+          "text": "在",
+          "start": 51.651,
+          "end": 52.203,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "扶",
+          "start": 52.203,
+          "end": 52.754,
+          "pinyin": "fu2"
+        },
+        {
+          "text": "桑",
+          "start": 52.754,
+          "end": 53.306,
+          "pinyin": "sang1"
+        },
+        {
+          "text": "东",
+          "start": 53.306,
+          "end": 53.857,
+          "pinyin": "dong1"
+        },
+        {
+          "text": "更",
+          "start": 53.857,
+          "end": 54.409,
+          "pinyin": "geng4"
+        },
+        {
+          "text": "东",
+          "start": 54.409,
+          "end": 54.96,
+          "pinyin": "dong1"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 68.46,
+      "end": 71.02,
+      "text": "一船明月一帆风",
+      "singableText": "一船明月一帆风",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 68.46,
+          "end": 68.826,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "船",
+          "start": 68.826,
+          "end": 69.191,
+          "pinyin": "chuan2"
+        },
+        {
+          "text": "明",
+          "start": 69.191,
+          "end": 69.557,
+          "pinyin": "ming2"
+        },
+        {
+          "text": "月",
+          "start": 69.557,
+          "end": 69.923,
+          "pinyin": "yue4"
+        },
+        {
+          "text": "一",
+          "start": 69.923,
+          "end": 70.289,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "帆",
+          "start": 70.289,
+          "end": 70.654,
+          "pinyin": "fan1"
+        },
+        {
+          "text": "风",
+          "start": 70.654,
+          "end": 71.02,
+          "pinyin": "feng1"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 780826 using full-render small ASR, large-v3 full-mix ASR, large-v3 separated-vocal ASR without VAD, and the planned phonetic hook lyric. Lines not audibly recovered are omitted."
+  }
+}

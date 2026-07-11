@@ -1,0 +1,631 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "one-boat-moonlight-one-lamp",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 6.1,
+      "end": 11.9,
+      "text": "海を越えて愛が光る",
+      "singableText": "海を越えて愛が光る",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "海",
+          "start": 6.1,
+          "end": 6.929,
+          "reading": "うみ"
+        },
+        {
+          "text": "を",
+          "start": 6.929,
+          "end": 7.757
+        },
+        {
+          "text": "越え",
+          "start": 7.757,
+          "end": 8.586,
+          "reading": "こえ"
+        },
+        {
+          "text": "て",
+          "start": 8.586,
+          "end": 9.414
+        },
+        {
+          "text": "愛",
+          "start": 9.414,
+          "end": 10.243,
+          "reading": "あい"
+        },
+        {
+          "text": "が",
+          "start": 10.243,
+          "end": 11.071
+        },
+        {
+          "text": "光る",
+          "start": 11.071,
+          "end": 11.9,
+          "reading": "ひかる"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 13.88,
+      "end": 16.95,
+      "text": "上国に縁のまま住む",
+      "singableText": "上国に縁のまま住む",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "上",
+          "start": 13.88,
+          "end": 14.392,
+          "reading": "うえ"
+        },
+        {
+          "text": "国",
+          "start": 14.392,
+          "end": 14.903,
+          "reading": "くに"
+        },
+        {
+          "text": "に",
+          "start": 14.903,
+          "end": 15.415
+        },
+        {
+          "text": "縁",
+          "start": 15.415,
+          "end": 15.927,
+          "reading": "へり"
+        },
+        {
+          "text": "のまま",
+          "start": 15.927,
+          "end": 16.438
+        },
+        {
+          "text": "住む",
+          "start": 16.438,
+          "end": 16.95,
+          "reading": "すむ"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 17.0,
+      "end": 20.08,
+      "text": "来た道は夢のよう",
+      "singableText": "来た道は夢のよう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "来た",
+          "start": 17.0,
+          "end": 17.616,
+          "reading": "きた"
+        },
+        {
+          "text": "道",
+          "start": 17.616,
+          "end": 18.232,
+          "reading": "みち"
+        },
+        {
+          "text": "は",
+          "start": 18.232,
+          "end": 18.848
+        },
+        {
+          "text": "夢",
+          "start": 18.848,
+          "end": 19.464,
+          "reading": "ゆめ"
+        },
+        {
+          "text": "のよう",
+          "start": 19.464,
+          "end": 20.08
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 20.08,
+      "end": 23.8,
+      "text": "天に浮かぶ蒼い海は遠い",
+      "singableText": "天に浮かぶ蒼い海は遠い",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "天",
+          "start": 20.08,
+          "end": 20.545,
+          "reading": "てん"
+        },
+        {
+          "text": "に",
+          "start": 20.545,
+          "end": 21.01
+        },
+        {
+          "text": "浮か",
+          "start": 21.01,
+          "end": 21.475,
+          "reading": "うか"
+        },
+        {
+          "text": "ぶ",
+          "start": 21.475,
+          "end": 21.94
+        },
+        {
+          "text": "蒼い",
+          "start": 21.94,
+          "end": 22.405,
+          "reading": "あおい"
+        },
+        {
+          "text": "海",
+          "start": 22.405,
+          "end": 22.87,
+          "reading": "うみ"
+        },
+        {
+          "text": "は",
+          "start": 22.87,
+          "end": 23.335
+        },
+        {
+          "text": "遠い",
+          "start": 23.335,
+          "end": 23.8,
+          "reading": "とおい"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 23.8,
+      "end": 26.56,
+      "text": "法の舟は軽い",
+      "singableText": "法の舟は軽い",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "法",
+          "start": 23.8,
+          "end": 24.352,
+          "reading": "ほう"
+        },
+        {
+          "text": "の",
+          "start": 24.352,
+          "end": 24.904
+        },
+        {
+          "text": "舟",
+          "start": 24.904,
+          "end": 25.456,
+          "reading": "ふね"
+        },
+        {
+          "text": "は",
+          "start": 25.456,
+          "end": 26.008
+        },
+        {
+          "text": "軽い",
+          "start": 26.008,
+          "end": 26.56,
+          "reading": "かるい"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 26.56,
+      "end": 30.62,
+      "text": "水の月は禅の静けさへ通じる",
+      "singableText": "水の月は禅の静けさへ通じる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "水",
+          "start": 26.56,
+          "end": 26.966,
+          "reading": "みず"
+        },
+        {
+          "text": "の",
+          "start": 26.966,
+          "end": 27.372
+        },
+        {
+          "text": "月",
+          "start": 27.372,
+          "end": 27.778,
+          "reading": "がつ"
+        },
+        {
+          "text": "は",
+          "start": 27.778,
+          "end": 28.184
+        },
+        {
+          "text": "禅",
+          "start": 28.184,
+          "end": 28.59,
+          "reading": "ぜん"
+        },
+        {
+          "text": "の",
+          "start": 28.59,
+          "end": 28.996
+        },
+        {
+          "text": "静けさ",
+          "start": 28.996,
+          "end": 29.402,
+          "reading": "しずけさ"
+        },
+        {
+          "text": "へ",
+          "start": 29.402,
+          "end": 29.808
+        },
+        {
+          "text": "通じ",
+          "start": 29.808,
+          "end": 30.214,
+          "reading": "つうじ"
+        },
+        {
+          "text": "る",
+          "start": 30.214,
+          "end": 30.62
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 30.62,
+      "end": 32.98,
+      "text": "水に映る月",
+      "singableText": "水に映る月",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "水",
+          "start": 30.62,
+          "end": 31.21,
+          "reading": "みず"
+        },
+        {
+          "text": "に",
+          "start": 31.21,
+          "end": 31.8
+        },
+        {
+          "text": "映る",
+          "start": 31.8,
+          "end": 32.39,
+          "reading": "うつる"
+        },
+        {
+          "text": "月",
+          "start": 32.39,
+          "end": 32.98,
+          "reading": "がつ"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 33.66,
+      "end": 36.86,
+      "text": "魚も龍も梵の声を聞く",
+      "singableText": "魚も龍も梵の声を聞く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "魚",
+          "start": 33.66,
+          "end": 34.016,
+          "reading": "さかな"
+        },
+        {
+          "text": "も",
+          "start": 34.016,
+          "end": 34.371
+        },
+        {
+          "text": "龍",
+          "start": 34.371,
+          "end": 34.727,
+          "reading": "りゅう"
+        },
+        {
+          "text": "も",
+          "start": 34.727,
+          "end": 35.082
+        },
+        {
+          "text": "梵",
+          "start": 35.082,
+          "end": 35.438,
+          "reading": "ぼん"
+        },
+        {
+          "text": "の",
+          "start": 35.438,
+          "end": 35.793
+        },
+        {
+          "text": "声",
+          "start": 35.793,
+          "end": 36.149,
+          "reading": "こえ"
+        },
+        {
+          "text": "を",
+          "start": 36.149,
+          "end": 36.504
+        },
+        {
+          "text": "聞く",
+          "start": 36.504,
+          "end": 36.86,
+          "reading": "きく"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 36.86,
+      "end": 40.46,
+      "text": "はるか、はるか",
+      "singableText": "はるか、はるか",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "はるか",
+          "start": 36.86,
+          "end": 38.06
+        },
+        {
+          "text": "、",
+          "start": 38.06,
+          "end": 39.26
+        },
+        {
+          "text": "はるか",
+          "start": 39.26,
+          "end": 40.46
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 40.46,
+      "end": 44.38,
+      "text": "ただ一つの灯影を惜しむ",
+      "singableText": "ただ一つの灯影を惜しむ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ただ",
+          "start": 40.46,
+          "end": 41.02
+        },
+        {
+          "text": "一つ",
+          "start": 41.02,
+          "end": 41.58,
+          "reading": "ひとつ"
+        },
+        {
+          "text": "の",
+          "start": 41.58,
+          "end": 42.14
+        },
+        {
+          "text": "灯影",
+          "start": 42.14,
+          "end": 42.7,
+          "reading": "とうえい"
+        },
+        {
+          "text": "を",
+          "start": 42.7,
+          "end": 43.26
+        },
+        {
+          "text": "惜し",
+          "start": 43.26,
+          "end": 43.82,
+          "reading": "おし"
+        },
+        {
+          "text": "む",
+          "start": 43.82,
+          "end": 44.38
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.38,
+      "end": 47.76,
+      "text": "万里の彼方にも目の中で明るい",
+      "singableText": "万里の彼方にも目の中で明るい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "万里",
+          "start": 44.38,
+          "end": 44.803,
+          "reading": "ばんり"
+        },
+        {
+          "text": "の",
+          "start": 44.803,
+          "end": 45.225
+        },
+        {
+          "text": "彼方",
+          "start": 45.225,
+          "end": 45.648,
+          "reading": "かなた"
+        },
+        {
+          "text": "にも",
+          "start": 45.648,
+          "end": 46.07
+        },
+        {
+          "text": "目の",
+          "start": 46.07,
+          "end": 46.492,
+          "reading": "めの"
+        },
+        {
+          "text": "中",
+          "start": 46.492,
+          "end": 46.915,
+          "reading": "なか"
+        },
+        {
+          "text": "で",
+          "start": 46.915,
+          "end": 47.337
+        },
+        {
+          "text": "明るい",
+          "start": 47.337,
+          "end": 47.76,
+          "reading": "あかるい"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 48.44,
+      "end": 51.1,
+      "text": "扶桑は渺茫の中",
+      "singableText": "扶桑は渺茫の中",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "扶桑",
+          "start": 48.44,
+          "end": 48.883,
+          "reading": "ふそう"
+        },
+        {
+          "text": "は",
+          "start": 48.883,
+          "end": 49.327
+        },
+        {
+          "text": "渺",
+          "start": 49.327,
+          "end": 49.77,
+          "reading": "びょう"
+        },
+        {
+          "text": "茫",
+          "start": 49.77,
+          "end": 50.213,
+          "reading": "ぼう"
+        },
+        {
+          "text": "の",
+          "start": 50.213,
+          "end": 50.657
+        },
+        {
+          "text": "中",
+          "start": 50.657,
+          "end": 51.1,
+          "reading": "なか"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 51.1,
+      "end": 54.96,
+      "text": "東のさらに東へ",
+      "singableText": "東のさらに東へ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "東",
+          "start": 51.1,
+          "end": 52.065,
+          "reading": "ひがし"
+        },
+        {
+          "text": "のさらに",
+          "start": 52.065,
+          "end": 53.03
+        },
+        {
+          "text": "東",
+          "start": 53.03,
+          "end": 53.995,
+          "reading": "ひがし"
+        },
+        {
+          "text": "へ",
+          "start": 53.995,
+          "end": 54.96
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 68.46,
+      "end": 71.02,
+      "text": "遥か海へ",
+      "singableText": "遥か海へ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "遥か",
+          "start": 68.46,
+          "end": 69.313,
+          "reading": "はるか"
+        },
+        {
+          "text": "海",
+          "start": 69.313,
+          "end": 70.167,
+          "reading": "うみ"
+        },
+        {
+          "text": "へ",
+          "start": 70.167,
+          "end": 71.02
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 780826 using full-render small ASR, large-v3 full-mix ASR, large-v3 separated-vocal ASR without VAD, and the planned phonetic hook lyric. Lines not audibly recovered are omitted."
+  }
+}
