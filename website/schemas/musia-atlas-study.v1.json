@@ -61,6 +61,12 @@
           "chordSource": {
             "type": "string"
           },
+          "melodyConfidence": {
+            "enum": ["verified", "analysis", "estimated", "unavailable"]
+          },
+          "melodySource": {
+            "type": "string"
+          },
           "beats": {
             "type": "array",
             "items": {

@@ -1192,11 +1192,103 @@ rt {
     var(--paper-strong);
 }
 
-.study-now p {
+.study-line-text {
   margin-bottom: 14px;
   font-size: clamp(22px, 3.2vw, 34px);
   line-height: 1.18;
   font-weight: 850;
+}
+
+.study-line-text .ruby-line,
+.study-line-text .token-line {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.study-line-text .plain-line {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.study-line-notes {
+  margin: 0 0 14px;
+}
+
+.study-note-lane {
+  display: grid;
+  gap: 9px;
+  border: 1px solid rgba(45,143,131,.16);
+  border-radius: 16px;
+  background: rgba(255,255,255,.66);
+  padding: 10px;
+}
+
+.study-note-lane.empty {
+  color: var(--muted);
+}
+
+.study-note-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.study-note-head span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.study-note-head em {
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.study-note-chips {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.study-note-chip {
+  flex: 0 0 auto;
+  min-width: 48px;
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  border: 1px solid rgba(185,133,36,.18);
+  border-radius: 13px;
+  background: rgba(255,253,248,.86);
+  padding: 6px 8px;
+}
+
+.study-note-chip small {
+  max-width: 54px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.study-note-chip strong {
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1;
+}
+
+.study-note-chip em {
+  color: var(--gold);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
 }
 
 .study-metrics {

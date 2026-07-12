@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/qiang-jin-jiu-original-poem-zh-Hans-ace-20260701.mp3",
       "bpm": 123.047,
+      "key": "Requested D minor; detected Ab/Eb/Cm/Fm/Gm movement in analysis",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/qiang-jin-jiu-original-poem-20260701-20260701-073706-analysis/analysis/beats.json",
@@ -2442,6 +2443,15 @@
           "name": "Am"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "Requested D minor; detected Ab/Eb/Cm/Fm/Gm movement in analysis",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

@@ -18,6 +18,7 @@
       "languageCode": "mul",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/ku-chao-qing-heng-mixed-ace-xl-turbo-seed780824-20260708.mp3",
       "bpm": 143.555,
+      "key": "detected A minor / modal ocean elegy",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/ku-chao-qing-heng-mixed-20260708-seed780824-analysis/analysis/beats.json",
@@ -1029,6 +1030,15 @@
           "name": "Am"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "detected A minor / modal ocean elegy",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "mixed-vocal",
         "activeLanguageCode": "mul",

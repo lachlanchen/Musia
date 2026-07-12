@@ -219,15 +219,41 @@ rhythm/study cards appear higher on the page. The normal homepage player remains
 unchanged; Atlas moves the existing chord and fingering DOM into the middle card
 only in `study-mode`.
 
+The current phrase card must use the same ruby-aware lyric renderer as the main
+player. Chinese lines should show pinyin when the corrected lyric JSON contains
+`token.pinyin`; Japanese kanji should show furigana when the corrected lyric JSON
+contains `token.reading`. If a line has no token ruby, Atlas must not invent it
+client-side; fix or enrich the lyric JSON first.
+
+Atlas can also display simple numbered notes / jianpu when an analysis run has a
+matching `melody_f0.csv`. The current implementation computes median vocal F0
+inside each lyric token, converts it to a Western note name and a key-relative
+jianpu degree, and shows that beside the current phrase. This is labeled
+`analysis`, not a verified lead sheet. It is useful for seeing the relationship
+between sung pitch and the active chord, but a human-audited score should use
+confidence `verified`.
+
 Playback speed is display/practice behavior only. It does not rewrite audio,
 lyrics, chords, or Atlas source data. The page tries to preserve pitch when the
 browser supports it.
+
+Catalog curation rule:
+
+```text
+hidden: true        -> hidden from normal catalog and playback queue
+?showall or showAll -> include hidden songs again for review/debug
+```
+
+Use hiding rather than deleting when a song is low quality, a superseded suffix
+variant, or a demo that should remain linkable for audit history. Standard
+published versions, especially songs already uploaded to Shipinhao Music, should
+normally stay visible unless the user explicitly asks to hide them.
 
 Future deep-analysis work can add:
 
 - downbeat detection confidence;
 - section-specific strumming suggestions;
-- melody-entry cues from F0/MIDI;
+- more reliable melody-entry cues from F0/MIDI;
 - GPU-assisted rhythm/chord/melody reanalysis;
 - optional symbolic notation or tab rendering when Musia has reliable data.
 

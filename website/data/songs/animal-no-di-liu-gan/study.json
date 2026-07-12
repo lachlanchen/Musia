@@ -18,6 +18,7 @@
       "languageCode": "mul",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/animal-no-di-liu-gan-mixed-ace-turbo-seed-747304-20260703.mp3",
       "bpm": 92.285,
+      "key": "detected A minor / modal pop center",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/animal-no-di-liu-gan-mixed-seed-747304-analysis/analysis/beats.json",
@@ -1091,6 +1092,15 @@
           "name": "Am"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "detected A minor / modal pop center",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "mixed-vocal",
         "activeLanguageCode": "mul",

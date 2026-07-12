@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-haifeng-duange-zh-Hans-ace-20260630.mp3",
       "bpm": 76.0,
+      "key": "D major / detected A-centered cadence",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/yun-hai-zhi-lian-haifeng-duange-20260630-analysis/analysis/beats.json",
@@ -537,6 +538,15 @@
           "name": "A"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "D major / detected A-centered cadence",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

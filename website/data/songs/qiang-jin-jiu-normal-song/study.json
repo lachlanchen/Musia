@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/qiang-jin-jiu-normal-song-zh-Hans-ace-20260701.mp3",
       "bpm": 151.999,
+      "key": "D minor requested / detected Dm-F-Am centered progression",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/qiang-jin-jiu-normal-song-20260701-20260701-005130-analysis/analysis/beats.json",
@@ -725,6 +726,15 @@
           "name": "Bm"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "D minor requested / detected Dm-F-Am centered progression",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

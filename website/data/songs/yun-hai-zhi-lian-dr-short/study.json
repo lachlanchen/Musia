@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-main-zh-Hans-20260630.mp3",
       "bpm": 117.45,
+      "key": "detected Eb/Bb center",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/yun-hai-zhi-lian-main-20260630-20260630-182732-analysis/analysis/beats.json",
@@ -1044,6 +1045,15 @@
           "name": "Eb"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "detected Eb/Bb center",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

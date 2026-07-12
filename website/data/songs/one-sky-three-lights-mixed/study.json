@@ -18,6 +18,7 @@
       "languageCode": "mul",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/one-sky-three-lights-mixed.mp3",
       "bpm": 86.13,
+      "key": "D major",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/one-sky-three-lights-mixed-analysis/analysis/beats.json",
@@ -643,6 +644,920 @@
           "name": "A"
         }
       ],
+      "melodyConfidence": "analysis",
+      "melodySource": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+      "melody": {
+        "confidence": "analysis",
+        "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+        "key": "D major",
+        "notation": "jianpu/simple numbered notes",
+        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "lines": [
+          {
+            "lineId": "line-001",
+            "start": 13.17,
+            "end": 18.93,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "7 b7 6 5, 5, 7, 1 6, 6, 7,",
+            "tokens": [
+              {
+                "text": "In",
+                "start": 13.17,
+                "end": 13.49,
+                "midi": 72.9,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "A"
+              },
+              {
+                "text": "the",
+                "start": 13.49,
+                "end": 13.71,
+                "midi": 72.3,
+                "note": "C5",
+                "jianpu": "b7",
+                "chord": "A"
+              },
+              {
+                "text": "hush",
+                "start": 13.71,
+                "end": 14.25,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "6",
+                "chord": "A"
+              },
+              {
+                "text": "before",
+                "start": 14.25,
+                "end": 14.55,
+                "midi": 57.0,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "D"
+              },
+              {
+                "text": "morning",
+                "start": 14.55,
+                "end": 14.87,
+                "midi": 57.1,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "D"
+              },
+              {
+                "text": "I",
+                "start": 15.91,
+                "end": 16.29,
+                "midi": 61.1,
+                "note": "C#4",
+                "jianpu": "7,",
+                "chord": "D"
+              },
+              {
+                "text": "hear",
+                "start": 16.29,
+                "end": 16.87,
+                "midi": 61.9,
+                "note": "D4",
+                "jianpu": "1",
+                "chord": "D"
+              },
+              {
+                "text": "the",
+                "start": 16.87,
+                "end": 17.29,
+                "midi": 59.1,
+                "note": "B3",
+                "jianpu": "6,",
+                "chord": "F#m"
+              },
+              {
+                "text": "city",
+                "start": 17.29,
+                "end": 17.69,
+                "midi": 59.2,
+                "note": "B3",
+                "jianpu": "6,",
+                "chord": "F#m"
+              },
+              {
+                "text": "breathe",
+                "start": 17.69,
+                "end": 18.93,
+                "midi": 61.2,
+                "note": "C#4",
+                "jianpu": "7,",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "line-002",
+            "start": 18.93,
+            "end": 23.99,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "1 2 2 6 5 5 6, 6, 5,",
+            "tokens": [
+              {
+                "text": "Hoshi",
+                "start": 18.93,
+                "end": 19.492,
+                "midi": 62.0,
+                "note": "D4",
+                "jianpu": "1",
+                "chord": "F#m"
+              },
+              {
+                "text": "no",
+                "start": 19.492,
+                "end": 20.054,
+                "midi": 63.8,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "G"
+              },
+              {
+                "text": "shita",
+                "start": 20.054,
+                "end": 20.617,
+                "midi": 64.5,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "G"
+              },
+              {
+                "text": "de,",
+                "start": 20.617,
+                "end": 21.179,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "6",
+                "chord": "G"
+              },
+              {
+                "text": "kimi",
+                "start": 21.179,
+                "end": 21.741,
+                "midi": 69.1,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "G"
+              },
+              {
+                "text": "to",
+                "start": 21.741,
+                "end": 22.303,
+                "midi": 69.1,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "G"
+              },
+              {
+                "text": "warau,",
+                "start": 22.303,
+                "end": 22.866,
+                "midi": 58.8,
+                "note": "B3",
+                "jianpu": "6,",
+                "chord": "Em"
+              },
+              {
+                "text": "sora",
+                "start": 22.866,
+                "end": 23.428,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "6,",
+                "chord": "Em"
+              },
+              {
+                "text": "e",
+                "start": 23.428,
+                "end": 23.99,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "line-003",
+            "start": 23.99,
+            "end": 26.93,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "5, 7, 6, 6, 5, 5, 5,",
+            "tokens": [
+              {
+                "text": "Yuan",
+                "start": 23.99,
+                "end": 24.41,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "A"
+              },
+              {
+                "text": "fang",
+                "start": 24.41,
+                "end": 24.83,
+                "midi": 60.9,
+                "note": "C#4",
+                "jianpu": "7,",
+                "chord": "A"
+              },
+              {
+                "text": "de",
+                "start": 24.83,
+                "end": 25.25,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "6,",
+                "chord": "D"
+              },
+              {
+                "text": "feng",
+                "start": 25.25,
+                "end": 25.67,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "6,",
+                "chord": "D"
+              },
+              {
+                "text": "shuo",
+                "start": 25.67,
+                "end": 26.09,
+                "midi": 56.9,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "D"
+              },
+              {
+                "text": "bie",
+                "start": 26.09,
+                "end": 26.51,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "D"
+              },
+              {
+                "text": "pa",
+                "start": 26.51,
+                "end": 26.93,
+                "midi": 57.1,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "line-004",
+            "start": 26.93,
+            "end": 29.47,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "7, #4 5 6 6 2",
+            "tokens": [
+              {
+                "text": "Xin",
+                "start": 26.93,
+                "end": 27.51,
+                "midi": 61.0,
+                "note": "C#4",
+                "jianpu": "7,",
+                "chord": "A"
+              },
+              {
+                "text": "li",
+                "start": 27.51,
+                "end": 27.93,
+                "midi": 68.0,
+                "note": "G#4",
+                "jianpu": "#4",
+                "chord": "A"
+              },
+              {
+                "text": "de",
+                "start": 27.93,
+                "end": 28.21,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "F#m"
+              },
+              {
+                "text": "guang",
+                "start": 28.21,
+                "end": 28.55,
+                "midi": 70.9,
+                "note": "B4",
+                "jianpu": "6",
+                "chord": "F#m"
+              },
+              {
+                "text": "hui",
+                "start": 28.55,
+                "end": 29.03,
+                "midi": 71.3,
+                "note": "B4",
+                "jianpu": "6",
+                "chord": "F#m"
+              },
+              {
+                "text": "lai",
+                "start": 29.03,
+                "end": 29.47,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-005",
+            "start": 30.19,
+            "end": 32.69,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "#4 5 2 2",
+            "tokens": [
+              {
+                "text": "Across",
+                "start": 30.19,
+                "end": 30.59,
+                "midi": 67.9,
+                "note": "G#4",
+                "jianpu": "#4",
+                "chord": "Bm"
+              },
+              {
+                "text": "the",
+                "start": 30.59,
+                "end": 31.41,
+                "midi": 69.1,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "Em"
+              },
+              {
+                "text": "quiet",
+                "start": 31.41,
+                "end": 32.19,
+                "midi": 64.4,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Em"
+              },
+              {
+                "text": "sea",
+                "start": 32.19,
+                "end": 32.69,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-006",
+            "start": 32.69,
+            "end": 34.93,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "#1 #4 6 7 3",
+            "tokens": [
+              {
+                "text": "Three",
+                "start": 32.69,
+                "end": 33.11,
+                "midi": 63.1,
+                "note": "D#4",
+                "jianpu": "#1",
+                "chord": "Em"
+              },
+              {
+                "text": "voices",
+                "start": 33.11,
+                "end": 33.69,
+                "midi": 68.1,
+                "note": "G#4",
+                "jianpu": "#4",
+                "chord": "A"
+              },
+              {
+                "text": "find",
+                "start": 33.69,
+                "end": 34.25,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "6",
+                "chord": "A"
+              },
+              {
+                "text": "a",
+                "start": 34.25,
+                "end": 34.51,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "A"
+              },
+              {
+                "text": "home",
+                "start": 34.51,
+                "end": 34.93,
+                "midi": 65.6,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "line-007",
+            "start": 34.93,
+            "end": 36.81,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "2 2 2 3 5",
+            "tokens": [
+              {
+                "text": "We",
+                "start": 34.93,
+                "end": 35.21,
+                "midi": 64.2,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "A"
+              },
+              {
+                "text": "sing",
+                "start": 35.21,
+                "end": 35.67,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "D"
+              },
+              {
+                "text": "under",
+                "start": 35.67,
+                "end": 35.97,
+                "midi": 64.5,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "D"
+              },
+              {
+                "text": "one",
+                "start": 35.97,
+                "end": 36.25,
+                "midi": 66.1,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "D"
+              },
+              {
+                "text": "sky",
+                "start": 36.25,
+                "end": 36.81,
+                "midi": 69.1,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "D"
+              }
+            ]
+          },
+          {
+            "lineId": "line-008",
+            "start": 36.81,
+            "end": 39.89,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "b7 7 7 7",
+            "tokens": [
+              {
+                "text": "One",
+                "start": 36.81,
+                "end": 37.58,
+                "midi": 71.5,
+                "note": "C5",
+                "jianpu": "b7",
+                "chord": "D"
+              },
+              {
+                "text": "sky,",
+                "start": 37.58,
+                "end": 38.35,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "D"
+              },
+              {
+                "text": "one",
+                "start": 38.35,
+                "end": 39.12,
+                "midi": 73.1,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "D"
+              },
+              {
+                "text": "sky",
+                "start": 39.12,
+                "end": 39.89,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "line-009",
+            "start": 39.89,
+            "end": 43.27,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "3 3 3 5 #4 2 2",
+            "tokens": [
+              {
+                "text": "Rang",
+                "start": 39.89,
+                "end": 40.83,
+                "midi": 66.5,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "F#m"
+              },
+              {
+                "text": "guang",
+                "start": 40.83,
+                "end": 41.17,
+                "midi": 66.2,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "F#m"
+              },
+              {
+                "text": "ba",
+                "start": 41.17,
+                "end": 41.47,
+                "midi": 66.2,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "F#m"
+              },
+              {
+                "text": "hei",
+                "start": 41.47,
+                "end": 42.21,
+                "midi": 68.6,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "B"
+              },
+              {
+                "text": "ye",
+                "start": 42.21,
+                "end": 42.43,
+                "midi": 68.1,
+                "note": "G#4",
+                "jianpu": "#4",
+                "chord": "Bm"
+              },
+              {
+                "text": "da",
+                "start": 42.43,
+                "end": 42.63,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Bm"
+              },
+              {
+                "text": "kai",
+                "start": 42.63,
+                "end": 43.27,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-010",
+            "start": 43.27,
+            "end": 46.31,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "2 6 #4 #4",
+            "tokens": [
+              {
+                "text": "We",
+                "start": 43.27,
+                "end": 44.03,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Bm"
+              },
+              {
+                "text": "rise,",
+                "start": 44.03,
+                "end": 44.79,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "6",
+                "chord": "F#m"
+              },
+              {
+                "text": "we",
+                "start": 44.79,
+                "end": 45.55,
+                "midi": 68.0,
+                "note": "G#4",
+                "jianpu": "#4",
+                "chord": "F#m"
+              },
+              {
+                "text": "rise",
+                "start": 45.55,
+                "end": 46.31,
+                "midi": 67.9,
+                "note": "G#4",
+                "jianpu": "#4",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "line-011",
+            "start": 46.31,
+            "end": 49.42,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "3 2 2 3",
+            "tokens": [
+              {
+                "text": "Kimi",
+                "start": 46.31,
+                "end": 46.83,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "F#m"
+              },
+              {
+                "text": "to",
+                "start": 46.83,
+                "end": 46.99,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "F#m"
+              },
+              {
+                "text": "nara",
+                "start": 46.99,
+                "end": 47.33,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "G"
+              },
+              {
+                "text": "mayowanai",
+                "start": 48.8,
+                "end": 49.42,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "G"
+              }
+            ]
+          },
+          {
+            "lineId": "line-012",
+            "start": 49.42,
+            "end": 51.24,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "3 3 2 1",
+            "tokens": [
+              {
+                "text": "The",
+                "start": 49.42,
+                "end": 49.62,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "G"
+              },
+              {
+                "text": "road",
+                "start": 49.62,
+                "end": 50.24,
+                "midi": 66.1,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "Am"
+              },
+              {
+                "text": "is",
+                "start": 50.24,
+                "end": 50.62,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Am"
+              },
+              {
+                "text": "shining",
+                "start": 50.62,
+                "end": 51.24,
+                "midi": 62.3,
+                "note": "D4",
+                "jianpu": "1",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "line-013",
+            "start": 51.96,
+            "end": 54.48,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "2 3 6 7",
+            "tokens": [
+              {
+                "text": "One",
+                "start": 51.96,
+                "end": 52.59,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Am"
+              },
+              {
+                "text": "sky,",
+                "start": 52.59,
+                "end": 53.22,
+                "midi": 66.1,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "Em"
+              },
+              {
+                "text": "three",
+                "start": 53.22,
+                "end": 53.85,
+                "midi": 70.8,
+                "note": "B4",
+                "jianpu": "6",
+                "chord": "Em"
+              },
+              {
+                "text": "lights",
+                "start": 53.85,
+                "end": 54.48,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "Am"
+              }
+            ]
+          },
+          {
+            "lineId": "line-014",
+            "start": 54.48,
+            "end": 57.92,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "7 7 1' 5",
+            "tokens": [
+              {
+                "text": "One",
+                "start": 54.48,
+                "end": 55.34,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "A"
+              },
+              {
+                "text": "road,",
+                "start": 55.34,
+                "end": 56.2,
+                "midi": 73.1,
+                "note": "C#5",
+                "jianpu": "7",
+                "chord": "Bm"
+              },
+              {
+                "text": "one",
+                "start": 56.2,
+                "end": 57.06,
+                "midi": 74.2,
+                "note": "D5",
+                "jianpu": "1'",
+                "chord": "C#m"
+              },
+              {
+                "text": "sky",
+                "start": 57.06,
+                "end": 57.92,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "Am"
+              }
+            ]
+          },
+          {
+            "lineId": "line-015",
+            "start": 58.5,
+            "end": 60.94,
+            "key": "D major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "4 #4 3 3 3",
+            "tokens": [
+              {
+                "text": "Three",
+                "start": 58.5,
+                "end": 58.88,
+                "midi": 66.9,
+                "note": "G4",
+                "jianpu": "4",
+                "chord": "G"
+              },
+              {
+                "text": "lights",
+                "start": 58.88,
+                "end": 59.54,
+                "midi": 67.5,
+                "note": "G#4",
+                "jianpu": "#4",
+                "chord": "G"
+              },
+              {
+                "text": "one",
+                "start": 59.98,
+                "end": 60.34,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "A"
+              },
+              {
+                "text": "dream",
+                "start": 60.46,
+                "end": 60.62,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "A"
+              },
+              {
+                "text": "alive",
+                "start": 60.62,
+                "end": 60.94,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "3",
+                "chord": "A"
+              }
+            ]
+          }
+        ]
+      },
       "lyricEvidence": {
         "lyricSetId": "mixed-vocal",
         "activeLanguageCode": "mul",
@@ -707,6 +1622,7 @@
       "languageCode": "yue-Hant",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/one-sky-three-lights-yue-Hant.mp3",
       "bpm": 86.133,
+      "key": "C major",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/one-sky-three-lights-mixed-analysis/analysis/beats.json",
@@ -1474,6 +2390,1046 @@
           "confidence": 0.8044
         }
       ],
+      "melodyConfidence": "analysis",
+      "melodySource": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+      "melody": {
+        "confidence": "analysis",
+        "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+        "key": "C major",
+        "notation": "jianpu/simple numbered notes",
+        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "lines": [
+          {
+            "lineId": "line-001",
+            "start": 13.17,
+            "end": 18.93,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "1' b7, 6, #1 #1 #1 7, #1 2",
+            "tokens": [
+              {
+                "text": "清",
+                "start": 13.17,
+                "end": 13.81,
+                "midi": 71.9,
+                "note": "C5",
+                "jianpu": "1'",
+                "chord": "D"
+              },
+              {
+                "text": "晨",
+                "start": 13.81,
+                "end": 14.45,
+                "midi": 57.6,
+                "note": "A#3",
+                "jianpu": "b7,",
+                "chord": "D"
+              },
+              {
+                "text": "靜",
+                "start": 14.45,
+                "end": 15.09,
+                "midi": 57.1,
+                "note": "A3",
+                "jianpu": "6,",
+                "chord": "D"
+              },
+              {
+                "text": "到",
+                "start": 15.09,
+                "end": 15.73,
+                "midi": 60.9,
+                "note": "C#4",
+                "jianpu": "#1",
+                "chord": "A"
+              },
+              {
+                "text": "聽",
+                "start": 15.73,
+                "end": 16.37,
+                "midi": 61.3,
+                "note": "C#4",
+                "jianpu": "#1",
+                "chord": "Am"
+              },
+              {
+                "text": "見",
+                "start": 16.37,
+                "end": 17.01,
+                "midi": 60.9,
+                "note": "C#4",
+                "jianpu": "#1",
+                "chord": "F#m"
+              },
+              {
+                "text": "城",
+                "start": 17.01,
+                "end": 17.65,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "7,",
+                "chord": "F#m"
+              },
+              {
+                "text": "呼",
+                "start": 17.65,
+                "end": 18.29,
+                "midi": 61.0,
+                "note": "C#4",
+                "jianpu": "#1",
+                "chord": "F#m"
+              },
+              {
+                "text": "吸",
+                "start": 18.29,
+                "end": 18.93,
+                "midi": 61.8,
+                "note": "D4",
+                "jianpu": "2",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-002",
+            "start": 18.93,
+            "end": 23.99,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "2 3 3 7 6 6 7, 7, 6,",
+            "tokens": [
+              {
+                "text": "星",
+                "start": 18.93,
+                "end": 19.492,
+                "midi": 62.0,
+                "note": "D4",
+                "jianpu": "2",
+                "chord": "B"
+              },
+              {
+                "text": "下",
+                "start": 19.492,
+                "end": 20.054,
+                "midi": 63.8,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "E"
+              },
+              {
+                "text": "面",
+                "start": 20.054,
+                "end": 20.617,
+                "midi": 64.5,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "Em"
+              },
+              {
+                "text": "同",
+                "start": 20.617,
+                "end": 21.179,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "Em"
+              },
+              {
+                "text": "你",
+                "start": 21.179,
+                "end": 21.741,
+                "midi": 69.1,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "F#m"
+              },
+              {
+                "text": "笑",
+                "start": 21.741,
+                "end": 22.303,
+                "midi": 69.1,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "F#m"
+              },
+              {
+                "text": "向",
+                "start": 22.303,
+                "end": 22.866,
+                "midi": 58.8,
+                "note": "B3",
+                "jianpu": "7,",
+                "chord": "F#m"
+              },
+              {
+                "text": "天",
+                "start": 22.866,
+                "end": 23.428,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "7,",
+                "chord": "F#m"
+              },
+              {
+                "text": "空",
+                "start": 23.428,
+                "end": 23.99,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "6,",
+                "chord": "G"
+              }
+            ]
+          },
+          {
+            "lineId": "line-003",
+            "start": 23.99,
+            "end": 26.93,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "6, #1 7, 7, 6, 6, 6,",
+            "tokens": [
+              {
+                "text": "遠",
+                "start": 23.99,
+                "end": 24.41,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "6,",
+                "chord": "G"
+              },
+              {
+                "text": "方",
+                "start": 24.41,
+                "end": 24.83,
+                "midi": 60.9,
+                "note": "C#4",
+                "jianpu": "#1",
+                "chord": "Gm"
+              },
+              {
+                "text": "風",
+                "start": 24.83,
+                "end": 25.25,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "7,",
+                "chord": "C#m"
+              },
+              {
+                "text": "話",
+                "start": 25.25,
+                "end": 25.67,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "7,",
+                "chord": "C#m"
+              },
+              {
+                "text": "唔",
+                "start": 25.67,
+                "end": 26.09,
+                "midi": 56.9,
+                "note": "A3",
+                "jianpu": "6,",
+                "chord": "A"
+              },
+              {
+                "text": "使",
+                "start": 26.09,
+                "end": 26.51,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "6,",
+                "chord": "D"
+              },
+              {
+                "text": "怕",
+                "start": 26.51,
+                "end": 26.93,
+                "midi": 57.1,
+                "note": "A3",
+                "jianpu": "6,",
+                "chord": "D"
+              }
+            ]
+          },
+          {
+            "lineId": "line-004",
+            "start": 26.93,
+            "end": 29.47,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "6, #1 6 6 7 7 3",
+            "tokens": [
+              {
+                "text": "心",
+                "start": 26.93,
+                "end": 27.293,
+                "midi": 56.9,
+                "note": "A3",
+                "jianpu": "6,",
+                "chord": "D"
+              },
+              {
+                "text": "入",
+                "start": 27.293,
+                "end": 27.656,
+                "midi": 61.0,
+                "note": "C#4",
+                "jianpu": "#1",
+                "chord": "D"
+              },
+              {
+                "text": "面",
+                "start": 27.656,
+                "end": 28.019,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "Dm"
+              },
+              {
+                "text": "光",
+                "start": 28.019,
+                "end": 28.381,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "Dm"
+              },
+              {
+                "text": "會",
+                "start": 28.381,
+                "end": 28.744,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "Em"
+              },
+              {
+                "text": "返",
+                "start": 28.744,
+                "end": 29.107,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "Em"
+              },
+              {
+                "text": "嚟",
+                "start": 29.107,
+                "end": 29.47,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "D"
+              }
+            ]
+          },
+          {
+            "lineId": "line-005",
+            "start": 30.19,
+            "end": 32.69,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "b6 6 7 3 3",
+            "tokens": [
+              {
+                "text": "飄",
+                "start": 30.19,
+                "end": 30.69,
+                "midi": 68.0,
+                "note": "G#4",
+                "jianpu": "b6",
+                "chord": "D"
+              },
+              {
+                "text": "過",
+                "start": 30.69,
+                "end": 31.19,
+                "midi": 69.1,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "D"
+              },
+              {
+                "text": "安",
+                "start": 31.19,
+                "end": 31.69,
+                "midi": 71.1,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "E"
+              },
+              {
+                "text": "靜",
+                "start": 31.69,
+                "end": 32.19,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "F#m"
+              },
+              {
+                "text": "海",
+                "start": 32.19,
+                "end": 32.69,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "line-006",
+            "start": 32.69,
+            "end": 34.93,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "b3 5 6 7 #1' #4",
+            "tokens": [
+              {
+                "text": "三",
+                "start": 32.69,
+                "end": 33.063,
+                "midi": 63.1,
+                "note": "D#4",
+                "jianpu": "b3",
+                "chord": "F#m"
+              },
+              {
+                "text": "把",
+                "start": 33.063,
+                "end": 33.437,
+                "midi": 66.7,
+                "note": "G4",
+                "jianpu": "5",
+                "chord": "F#m"
+              },
+              {
+                "text": "聲",
+                "start": 33.437,
+                "end": 33.81,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "F#m"
+              },
+              {
+                "text": "搵",
+                "start": 33.81,
+                "end": 34.183,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "F#m"
+              },
+              {
+                "text": "到",
+                "start": 34.183,
+                "end": 34.557,
+                "midi": 72.9,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "F#m"
+              },
+              {
+                "text": "家",
+                "start": 34.557,
+                "end": 34.93,
+                "midi": 65.6,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              }
+            ]
+          },
+          {
+            "lineId": "line-007",
+            "start": 34.93,
+            "end": 36.81,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "3 3 3 b6 7",
+            "tokens": [
+              {
+                "text": "同",
+                "start": 34.93,
+                "end": 35.306,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "D"
+              },
+              {
+                "text": "一",
+                "start": 35.306,
+                "end": 35.682,
+                "midi": 64.2,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "D"
+              },
+              {
+                "text": "天",
+                "start": 35.682,
+                "end": 36.058,
+                "midi": 64.4,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "D"
+              },
+              {
+                "text": "空",
+                "start": 36.058,
+                "end": 36.434,
+                "midi": 68.2,
+                "note": "G#4",
+                "jianpu": "b6",
+                "chord": "D"
+              },
+              {
+                "text": "唱",
+                "start": 36.434,
+                "end": 36.81,
+                "midi": 70.8,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "E"
+              }
+            ]
+          },
+          {
+            "lineId": "line-008",
+            "start": 36.81,
+            "end": 39.89,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "7 #1' #1' #1' #1' #1'",
+            "tokens": [
+              {
+                "text": "一",
+                "start": 36.81,
+                "end": 37.323,
+                "midi": 71.2,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "E"
+              },
+              {
+                "text": "片",
+                "start": 37.323,
+                "end": 37.837,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              },
+              {
+                "text": "天",
+                "start": 37.837,
+                "end": 38.35,
+                "midi": 73.1,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              },
+              {
+                "text": "一",
+                "start": 38.35,
+                "end": 38.863,
+                "midi": 73.1,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              },
+              {
+                "text": "片",
+                "start": 38.863,
+                "end": 39.377,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              },
+              {
+                "text": "天",
+                "start": 39.377,
+                "end": 39.89,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "line-009",
+            "start": 39.89,
+            "end": 43.27,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "#1 6 #4 6 3 3",
+            "tokens": [
+              {
+                "text": "讓",
+                "start": 39.89,
+                "end": 40.453,
+                "midi": 61.1,
+                "note": "C#4",
+                "jianpu": "#1",
+                "chord": "D"
+              },
+              {
+                "text": "光",
+                "start": 40.453,
+                "end": 41.017,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "D"
+              },
+              {
+                "text": "打",
+                "start": 41.017,
+                "end": 41.58,
+                "midi": 66.2,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              },
+              {
+                "text": "開",
+                "start": 41.58,
+                "end": 42.143,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "Em"
+              },
+              {
+                "text": "黑",
+                "start": 42.143,
+                "end": 42.707,
+                "midi": 64.3,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "E"
+              },
+              {
+                "text": "夜",
+                "start": 42.707,
+                "end": 43.27,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "line-010",
+            "start": 43.27,
+            "end": 46.31,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "3 1' 7 b6 b6 5",
+            "tokens": [
+              {
+                "text": "我",
+                "start": 43.27,
+                "end": 43.777,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "F#m"
+              },
+              {
+                "text": "哋",
+                "start": 43.777,
+                "end": 44.283,
+                "midi": 71.6,
+                "note": "C5",
+                "jianpu": "1'",
+                "chord": "F#m"
+              },
+              {
+                "text": "升",
+                "start": 44.283,
+                "end": 44.79,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "F#m"
+              },
+              {
+                "text": "起",
+                "start": 44.79,
+                "end": 45.297,
+                "midi": 67.8,
+                "note": "G#4",
+                "jianpu": "b6",
+                "chord": "F#m"
+              },
+              {
+                "text": "升",
+                "start": 45.297,
+                "end": 45.803,
+                "midi": 68.1,
+                "note": "G#4",
+                "jianpu": "b6",
+                "chord": "F#m"
+              },
+              {
+                "text": "起",
+                "start": 45.803,
+                "end": 46.31,
+                "midi": 67.4,
+                "note": "G4",
+                "jianpu": "5",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-011",
+            "start": 46.31,
+            "end": 49.42,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "#4 3 #4 5 5 #4 #4",
+            "tokens": [
+              {
+                "text": "同",
+                "start": 46.31,
+                "end": 46.754,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "Bm"
+              },
+              {
+                "text": "你",
+                "start": 46.754,
+                "end": 47.199,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "C#m"
+              },
+              {
+                "text": "就",
+                "start": 47.199,
+                "end": 47.643,
+                "midi": 66.1,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "C#m"
+              },
+              {
+                "text": "唔",
+                "start": 47.643,
+                "end": 48.087,
+                "midi": 66.8,
+                "note": "G4",
+                "jianpu": "5",
+                "chord": "C#m"
+              },
+              {
+                "text": "會",
+                "start": 48.087,
+                "end": 48.531,
+                "midi": 66.9,
+                "note": "G4",
+                "jianpu": "5",
+                "chord": "C#m"
+              },
+              {
+                "text": "迷",
+                "start": 48.531,
+                "end": 48.976,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              },
+              {
+                "text": "路",
+                "start": 48.976,
+                "end": 49.42,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              }
+            ]
+          },
+          {
+            "lineId": "line-012",
+            "start": 49.42,
+            "end": 51.24,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "#4 #4 3 2",
+            "tokens": [
+              {
+                "text": "條",
+                "start": 49.42,
+                "end": 49.875,
+                "midi": 66.1,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              },
+              {
+                "text": "路",
+                "start": 49.875,
+                "end": 50.33,
+                "midi": 66.1,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              },
+              {
+                "text": "發",
+                "start": 50.33,
+                "end": 50.785,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "A"
+              },
+              {
+                "text": "光",
+                "start": 50.785,
+                "end": 51.24,
+                "midi": 62.2,
+                "note": "D4",
+                "jianpu": "2",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "line-013",
+            "start": 51.96,
+            "end": 54.48,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "3 #4 #4 6 #1' #1'",
+            "tokens": [
+              {
+                "text": "一",
+                "start": 51.96,
+                "end": 52.38,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "3",
+                "chord": "D"
+              },
+              {
+                "text": "片",
+                "start": 52.38,
+                "end": 52.8,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              },
+              {
+                "text": "天",
+                "start": 52.8,
+                "end": 53.22,
+                "midi": 66.1,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "D"
+              },
+              {
+                "text": "三",
+                "start": 53.22,
+                "end": 53.64,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "Em"
+              },
+              {
+                "text": "盞",
+                "start": 53.64,
+                "end": 54.06,
+                "midi": 72.9,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "Em"
+              },
+              {
+                "text": "燈",
+                "start": 54.06,
+                "end": 54.48,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "line-014",
+            "start": 54.48,
+            "end": 57.92,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "#1' #1' #1' 3' 7 b6",
+            "tokens": [
+              {
+                "text": "一",
+                "start": 54.48,
+                "end": 55.053,
+                "midi": 73.0,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              },
+              {
+                "text": "條",
+                "start": 55.053,
+                "end": 55.627,
+                "midi": 73.1,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              },
+              {
+                "text": "路",
+                "start": 55.627,
+                "end": 56.2,
+                "midi": 73.2,
+                "note": "C#5",
+                "jianpu": "#1'",
+                "chord": "A"
+              },
+              {
+                "text": "一",
+                "start": 56.2,
+                "end": 56.773,
+                "midi": 76.0,
+                "note": "E5",
+                "jianpu": "3'",
+                "chord": "A"
+              },
+              {
+                "text": "片",
+                "start": 56.773,
+                "end": 57.347,
+                "midi": 71.1,
+                "note": "B4",
+                "jianpu": "7",
+                "chord": "Bm"
+              },
+              {
+                "text": "天",
+                "start": 57.347,
+                "end": 57.92,
+                "midi": 67.7,
+                "note": "G#4",
+                "jianpu": "b6",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-015",
+            "start": 58.5,
+            "end": 60.94,
+            "key": "C major",
+            "confidence": "analysis",
+            "source": "data/runs/one-sky-three-lights-mixed-analysis/analysis/melody_f0.csv",
+            "summary": "5 6 #4 #4 #4 #4 #4",
+            "tokens": [
+              {
+                "text": "三",
+                "start": 58.5,
+                "end": 58.849,
+                "midi": 66.9,
+                "note": "G4",
+                "jianpu": "5",
+                "chord": "Bm"
+              },
+              {
+                "text": "盞",
+                "start": 58.849,
+                "end": 59.197,
+                "midi": 69.0,
+                "note": "A4",
+                "jianpu": "6",
+                "chord": "Em"
+              },
+              {
+                "text": "燈",
+                "start": 59.197,
+                "end": 59.546,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "Em"
+              },
+              {
+                "text": "一",
+                "start": 59.546,
+                "end": 59.894,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "F#m"
+              },
+              {
+                "text": "個",
+                "start": 59.894,
+                "end": 60.243,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "F#m"
+              },
+              {
+                "text": "夢",
+                "start": 60.243,
+                "end": 60.591,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "F#m"
+              },
+              {
+                "text": "醒",
+                "start": 60.591,
+                "end": 60.94,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "#4",
+                "chord": "F#m"
+              }
+            ]
+          }
+        ]
+      },
       "lyricEvidence": {
         "lyricSetId": "yue-vocal",
         "activeLanguageCode": "yue-Hant",

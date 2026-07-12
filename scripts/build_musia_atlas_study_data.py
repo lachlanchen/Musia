@@ -9,6 +9,7 @@ already marked differently in the source manifest.
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 from pathlib import Path
@@ -67,6 +68,40 @@ GENERIC_MATCH_TOKENS = {
     "hans",
     "hant",
 }
+NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+KEY_ROOTS = {
+    "C": 0,
+    "C#": 1,
+    "Db": 1,
+    "D": 2,
+    "D#": 3,
+    "Eb": 3,
+    "E": 4,
+    "F": 5,
+    "F#": 6,
+    "Gb": 6,
+    "G": 7,
+    "G#": 8,
+    "Ab": 8,
+    "A": 9,
+    "A#": 10,
+    "Bb": 10,
+    "B": 11,
+}
+MAJOR_JIANPU = {
+    0: "1",
+    1: "#1",
+    2: "2",
+    3: "b3",
+    4: "3",
+    5: "4",
+    6: "#4",
+    7: "5",
+    8: "b6",
+    9: "6",
+    10: "b7",
+    11: "7",
+}
 
 
 def slug_tokens(value: str) -> set[str]:
@@ -88,6 +123,54 @@ def read_json(path: Path) -> dict[str, Any]:
 def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def median(values: list[float]) -> float:
+    if not values:
+        return 0.0
+    ordered = sorted(values)
+    mid = len(ordered) // 2
+    if len(ordered) % 2:
+        return ordered[mid]
+    return (ordered[mid - 1] + ordered[mid]) / 2.0
+
+
+def midi_note_name(midi: float) -> str:
+    value = int(round(midi))
+    return f"{NOTE_NAMES[value % 12]}{value // 12 - 1}"
+
+
+def key_root_pc(key: str) -> int:
+    match = re.search(r"\b([A-G](?:#|b|♯|♭)?)", str(key or ""))
+    if not match:
+        return 0
+    root = match.group(1).replace("♯", "#").replace("♭", "b")
+    return KEY_ROOTS.get(root, 0)
+
+
+def jianpu_for_midi(midi: float, key: str) -> str:
+    value = int(round(midi))
+    root = key_root_pc(key)
+    degree = MAJOR_JIANPU[(value - root) % 12]
+    root_reference = 60 + root
+    while root_reference - value > 6:
+        root_reference -= 12
+    while value - root_reference > 17:
+        root_reference += 12
+    octave_delta = int((value - root_reference) // 12)
+    if octave_delta > 0:
+        degree += "'" * min(2, octave_delta)
+    elif octave_delta < 0:
+        degree += "," * min(2, abs(octave_delta))
+    return degree
+
+
+def parse_float(value: Any) -> float | None:
+    try:
+        result = float(value)
+    except (TypeError, ValueError):
+        return None
+    return result if result == result else None
 
 
 def public_audio_assets(manifest: dict[str, Any]) -> list[tuple[str, dict[str, Any], str]]:
@@ -158,6 +241,152 @@ def lyric_summary(manifest_dir: Path, manifest: dict[str, Any], asset: dict[str,
     }
 
 
+def active_track_data(manifest_dir: Path, manifest: dict[str, Any], asset: dict[str, Any]) -> dict[str, Any] | None:
+    infos = manifest_track_infos(manifest, asset)
+    if not infos:
+        return None
+    language_code = asset.get("languageCode")
+    chosen = None
+    for info in infos:
+        if info.get("code") == language_code:
+            chosen = info
+            break
+    chosen = chosen or infos[0]
+    path_text = chosen.get("path")
+    if not path_text:
+        return None
+    path = manifest_dir / path_text
+    if not path.exists():
+        return None
+    data = read_json(path)
+    data["__path"] = str(path.relative_to(ROOT))
+    return data
+
+
+def sung_tokens(line: dict[str, Any]) -> list[dict[str, Any]]:
+    tokens = line.get("tokens") if isinstance(line.get("tokens"), list) else []
+    result = []
+    for token in tokens:
+        text = str(token.get("text") or "")
+        if not text.strip() or re.fullmatch(r"[,，、。.!?？；;：:\s]+", text):
+            continue
+        start = parse_float(token.get("start"))
+        end = parse_float(token.get("end"))
+        if start is None or end is None or end <= start:
+            continue
+        result.append({"text": text, "start": start, "end": end})
+    if result:
+        return result
+
+    text = str(line.get("singableText") or line.get("text") or "").strip()
+    start = parse_float(line.get("start"))
+    end = parse_float(line.get("end"))
+    if not text or start is None or end is None or end <= start:
+        return []
+    parts = [part for part in re.split(r"\s+", text) if part]
+    if len(parts) <= 1:
+        parts = [char for char in text if not re.fullmatch(r"[,，、。.!?？；;：:\s]+", char)]
+    if not parts:
+        return []
+    slot = (end - start) / len(parts)
+    return [
+        {"text": part, "start": start + slot * index, "end": start + slot * (index + 1)}
+        for index, part in enumerate(parts)
+    ]
+
+
+def load_run_melody(record: dict[str, Any] | None) -> tuple[list[dict[str, Any]], str]:
+    if not record or not record.get("melody"):
+        return [], ""
+    path = record["melody"]
+    rows: list[dict[str, Any]] = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            time = parse_float(row.get("time"))
+            midi = parse_float(row.get("midi"))
+            f0 = parse_float(row.get("f0_hz"))
+            voiced = str(row.get("voiced") or "").lower() == "true"
+            if time is None or midi is None or not voiced:
+                continue
+            rows.append({
+                "time": time,
+                "midi": midi,
+                "f0": f0 or 0.0,
+                "note": row.get("note") or midi_note_name(midi),
+            })
+    return rows, str(path.relative_to(ROOT))
+
+
+def active_chord_name(chords: list[dict[str, Any]], time: float) -> str:
+    for chord in chords:
+        if float(chord.get("start", -1)) <= time < float(chord.get("end", -1)):
+            return str(chord.get("name") or "")
+    previous = [chord for chord in chords if float(chord.get("end", -1)) <= time]
+    return str(previous[-1].get("name") or "") if previous else ""
+
+
+def build_melody_map(
+    record: dict[str, Any] | None,
+    manifest_dir: Path,
+    manifest: dict[str, Any],
+    asset: dict[str, Any],
+    key: str,
+    chords: list[dict[str, Any]],
+) -> dict[str, Any]:
+    samples, source = load_run_melody(record)
+    track = active_track_data(manifest_dir, manifest, asset)
+    if not samples or not track:
+        return {
+            "confidence": "unavailable",
+            "source": source,
+            "key": key,
+            "notation": "jianpu/simple numbered notes",
+            "lines": [],
+        }
+
+    lines = []
+    for line in track.get("lines") or []:
+        if line.get("role", "lyric") == "instrumental":
+            continue
+        line_notes = []
+        for token in sung_tokens(line):
+            values = [sample["midi"] for sample in samples if token["start"] <= sample["time"] < token["end"]]
+            if len(values) < 2:
+                continue
+            midi = round(median(values), 1)
+            midpoint = (token["start"] + token["end"]) / 2.0
+            line_notes.append({
+                "text": token["text"],
+                "start": round(token["start"], 3),
+                "end": round(token["end"], 3),
+                "midi": midi,
+                "note": midi_note_name(midi),
+                "jianpu": jianpu_for_midi(midi, key),
+                "chord": active_chord_name(chords, midpoint),
+            })
+        if line_notes:
+            lines.append({
+                "lineId": line.get("id"),
+                "start": round(float(line.get("start", line_notes[0]["start"])), 3),
+                "end": round(float(line.get("end", line_notes[-1]["end"])), 3),
+                "key": key,
+                "confidence": "analysis",
+                "source": source,
+                "summary": " ".join(note["jianpu"] for note in line_notes),
+                "tokens": line_notes,
+            })
+
+    return {
+        "confidence": "analysis" if lines else "unavailable",
+        "source": source,
+        "key": key,
+        "notation": "jianpu/simple numbered notes",
+        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "lines": lines,
+    }
+
+
 def normalize_chords(chords: list[dict[str, Any]]) -> list[dict[str, Any]]:
     result = []
     for item in chords or []:
@@ -212,14 +441,16 @@ def run_index() -> list[dict[str, Any]]:
         run_dir = analysis_dir.parent
         beats = analysis_dir / "beats.json"
         chords = analysis_dir / "chords.json"
-        if not beats.exists() and not chords.exists():
+        melody = analysis_dir / "melody_f0.csv"
+        if not beats.exists() and not chords.exists() and not melody.exists():
             continue
         records.append({
             "run": run_dir.name,
             "runPath": str(run_dir.relative_to(ROOT)),
             "tokens": slug_tokens(run_dir.name),
             "beats": beats if beats.exists() else None,
-            "chords": chords if chords.exists() else None
+            "chords": chords if chords.exists() else None,
+            "melody": melody if melody.exists() else None
         })
     return records
 
@@ -357,11 +588,19 @@ def build_study_for_item(item: dict[str, Any], index: list[dict[str, Any]]) -> t
             beat_source = run_beat_source
 
         bpm = asset_bpm or manifest_bpm or run_bpm or infer_bpm_from_beats(beats)
+        key = (
+            asset_musical.get("key")
+            or manifest_musical.get("key")
+            or manifest.get("key")
+            or "C major"
+        )
+        melody = build_melody_map(selected_run, manifest_dir, manifest, asset, key, chords)
         assets[asset_id] = {
             "label": asset.get("label") or asset.get("languageLabel") or asset_id,
             "languageCode": asset.get("languageCode") or "",
             "src": asset.get("src") or "",
             "bpm": round(float(bpm), 3) if bpm else 0,
+            "key": key,
             "timeSignature": asset_musical.get("timeSignature") or manifest_musical.get("timeSignature") or "4/4",
             "beatConfidence": "analysis" if beats else "estimated",
             "beatSource": beat_source or ("estimated from BPM" if bpm else ""),
@@ -369,6 +608,9 @@ def build_study_for_item(item: dict[str, Any], index: list[dict[str, Any]]) -> t
             "chordConfidence": "analysis" if chords else "estimated",
             "chordSource": chord_source or "",
             "chords": chords,
+            "melodyConfidence": melody.get("confidence", "unavailable"),
+            "melodySource": melody.get("source", ""),
+            "melody": melody,
             "lyricEvidence": lyric_summary(manifest_dir, manifest, asset),
             "practice": {
                 "beginnerFocus": unique_chords(chords),

@@ -18,6 +18,7 @@
       "languageCode": "ja",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/kagirohi-to-hana-ja-ace-20260701.mp3",
       "bpm": 83.354,
+      "key": "G major requested / detected G-centered progression",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/kagirohi-to-hana-20260701-selected-analysis/analysis/beats.json",
@@ -741,6 +742,15 @@
           "name": "G"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "G major requested / detected G-centered progression",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "ja-vocal",
         "activeLanguageCode": "ja",

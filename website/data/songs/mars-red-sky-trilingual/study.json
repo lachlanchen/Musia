@@ -18,6 +18,7 @@
       "languageCode": "en",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/mars-red-sky-en.mp3",
       "bpm": 80.75,
+      "key": "E minor",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/mars-red-sky-en-analysis/analysis/beats.json",
@@ -317,6 +318,999 @@
           "name": "Em"
         }
       ],
+      "melodyConfidence": "analysis",
+      "melodySource": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+      "melody": {
+        "confidence": "analysis",
+        "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+        "key": "E minor",
+        "notation": "jianpu/simple numbered notes",
+        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "lines": [
+          {
+            "lineId": "line-001",
+            "start": 13.1,
+            "end": 16.06,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "b3 b3 #1 4 #4,",
+            "tokens": [
+              {
+                "text": "Red",
+                "start": 13.1,
+                "end": 13.692,
+                "midi": 55.1,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "sand",
+                "start": 13.692,
+                "end": 14.284,
+                "midi": 55.1,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "over",
+                "start": 14.284,
+                "end": 14.876,
+                "midi": 53.4,
+                "note": "F3",
+                "jianpu": "#1",
+                "chord": "Em"
+              },
+              {
+                "text": "my",
+                "start": 14.876,
+                "end": 15.468,
+                "midi": 56.7,
+                "note": "A3",
+                "jianpu": "4",
+                "chord": "Em"
+              },
+              {
+                "text": "boots",
+                "start": 15.468,
+                "end": 16.06,
+                "midi": 58.4,
+                "note": "A#3",
+                "jianpu": "#4,",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-002",
+            "start": 16.06,
+            "end": 18.2,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "b3 b3 b3 b3 b3 4",
+            "tokens": [
+              {
+                "text": "A",
+                "start": 16.06,
+                "end": 16.417,
+                "midi": 54.7,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "blue",
+                "start": 16.417,
+                "end": 16.773,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "sun",
+                "start": 16.773,
+                "end": 17.13,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "falls",
+                "start": 17.13,
+                "end": 17.487,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "through",
+                "start": 17.487,
+                "end": 17.843,
+                "midi": 55.1,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "dust",
+                "start": 17.843,
+                "end": 18.2,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "4",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-003",
+            "start": 18.2,
+            "end": 20.52,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "5, b6, 5, 5, b6, b6, 4",
+            "tokens": [
+              {
+                "text": "I",
+                "start": 18.2,
+                "end": 18.531,
+                "midi": 58.9,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "am",
+                "start": 18.531,
+                "end": 18.863,
+                "midi": 60.1,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Em"
+              },
+              {
+                "text": "a",
+                "start": 18.863,
+                "end": 19.194,
+                "midi": 59.2,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "breath",
+                "start": 19.194,
+                "end": 19.526,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "beside",
+                "start": 19.526,
+                "end": 19.857,
+                "midi": 60.0,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Em"
+              },
+              {
+                "text": "the",
+                "start": 19.857,
+                "end": 20.189,
+                "midi": 60.3,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Em"
+              },
+              {
+                "text": "canyon",
+                "start": 20.189,
+                "end": 20.52,
+                "midi": 57.1,
+                "note": "A3",
+                "jianpu": "4",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-004",
+            "start": 20.52,
+            "end": 23.66,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "3 2 1 1 #1 1 1",
+            "tokens": [
+              {
+                "text": "But",
+                "start": 20.52,
+                "end": 20.969,
+                "midi": 56.2,
+                "note": "G#3",
+                "jianpu": "3",
+                "chord": "Em"
+              },
+              {
+                "text": "still",
+                "start": 20.969,
+                "end": 21.417,
+                "midi": 53.5,
+                "note": "F#3",
+                "jianpu": "2",
+                "chord": "Em"
+              },
+              {
+                "text": "I",
+                "start": 21.417,
+                "end": 21.866,
+                "midi": 52.2,
+                "note": "E3",
+                "jianpu": "1",
+                "chord": "Em"
+              },
+              {
+                "text": "rise",
+                "start": 21.866,
+                "end": 22.314,
+                "midi": 52.3,
+                "note": "E3",
+                "jianpu": "1",
+                "chord": "Em"
+              },
+              {
+                "text": "still",
+                "start": 22.314,
+                "end": 22.763,
+                "midi": 53.2,
+                "note": "F3",
+                "jianpu": "#1",
+                "chord": "Em"
+              },
+              {
+                "text": "I",
+                "start": 22.763,
+                "end": 23.211,
+                "midi": 52.0,
+                "note": "E3",
+                "jianpu": "1",
+                "chord": "Em"
+              },
+              {
+                "text": "trust",
+                "start": 23.211,
+                "end": 23.66,
+                "midi": 52.0,
+                "note": "E3",
+                "jianpu": "1",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-005",
+            "start": 23.66,
+            "end": 29.32,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "b7, b7, b6, b7, b7,",
+            "tokens": [
+              {
+                "text": "are",
+                "start": 24.603,
+                "end": 25.547,
+                "midi": 62.3,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Em"
+              },
+              {
+                "text": "silent",
+                "start": 25.547,
+                "end": 26.49,
+                "midi": 61.6,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Em"
+              },
+              {
+                "text": "wide",
+                "start": 26.49,
+                "end": 27.433,
+                "midi": 59.6,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Em"
+              },
+              {
+                "text": "and",
+                "start": 27.433,
+                "end": 28.377,
+                "midi": 61.6,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Em"
+              },
+              {
+                "text": "cold",
+                "start": 28.377,
+                "end": 29.32,
+                "midi": 62.0,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-006",
+            "start": 29.9,
+            "end": 35.48,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "#4, b6, 5, b3 4 6, 1",
+            "tokens": [
+              {
+                "text": "They",
+                "start": 29.9,
+                "end": 30.697,
+                "midi": 58.1,
+                "note": "A#3",
+                "jianpu": "#4,",
+                "chord": "Em"
+              },
+              {
+                "text": "do",
+                "start": 30.697,
+                "end": 31.494,
+                "midi": 59.6,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Em"
+              },
+              {
+                "text": "not",
+                "start": 31.494,
+                "end": 32.291,
+                "midi": 59.1,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "answer",
+                "start": 32.291,
+                "end": 33.089,
+                "midi": 55.2,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "they",
+                "start": 33.089,
+                "end": 33.886,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "4",
+                "chord": "Em"
+              },
+              {
+                "text": "make",
+                "start": 33.886,
+                "end": 34.683,
+                "midi": 61.4,
+                "note": "C#4",
+                "jianpu": "6,",
+                "chord": "Em"
+              },
+              {
+                "text": "room",
+                "start": 34.683,
+                "end": 35.48,
+                "midi": 63.8,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-007",
+            "start": 36.1,
+            "end": 40.22,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "1 b3 2 1 1 b3",
+            "tokens": [
+              {
+                "text": "Stars",
+                "start": 36.1,
+                "end": 36.787,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "E"
+              },
+              {
+                "text": "are",
+                "start": 36.787,
+                "end": 37.473,
+                "midi": 67.0,
+                "note": "G4",
+                "jianpu": "b3",
+                "chord": "E"
+              },
+              {
+                "text": "silent",
+                "start": 37.473,
+                "end": 38.16,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "2",
+                "chord": "Em"
+              },
+              {
+                "text": "wide",
+                "start": 38.16,
+                "end": 38.847,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Em"
+              },
+              {
+                "text": "and",
+                "start": 38.847,
+                "end": 39.533,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Em"
+              },
+              {
+                "text": "cold",
+                "start": 39.533,
+                "end": 40.22,
+                "midi": 67.0,
+                "note": "G4",
+                "jianpu": "b3",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-008",
+            "start": 42.65,
+            "end": 47.97,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "5, b7, b6, b6, 5, 4 b3",
+            "tokens": [
+              {
+                "text": "They",
+                "start": 42.65,
+                "end": 43.41,
+                "midi": 58.7,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Am"
+              },
+              {
+                "text": "do",
+                "start": 43.41,
+                "end": 44.17,
+                "midi": 61.7,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Am"
+              },
+              {
+                "text": "not",
+                "start": 44.17,
+                "end": 44.93,
+                "midi": 60.5,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Am"
+              },
+              {
+                "text": "answer",
+                "start": 44.93,
+                "end": 45.69,
+                "midi": 60.0,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Am"
+              },
+              {
+                "text": "they",
+                "start": 45.69,
+                "end": 46.45,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "make",
+                "start": 46.45,
+                "end": 47.21,
+                "midi": 57.0,
+                "note": "A3",
+                "jianpu": "4",
+                "chord": "Em"
+              },
+              {
+                "text": "room",
+                "start": 47.21,
+                "end": 47.97,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-009",
+            "start": 48.65,
+            "end": 51.55,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "b3 1 1 2 5",
+            "tokens": [
+              {
+                "text": "Small",
+                "start": 48.65,
+                "end": 49.23,
+                "midi": 54.9,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "E"
+              },
+              {
+                "text": "under",
+                "start": 49.23,
+                "end": 49.81,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "E"
+              },
+              {
+                "text": "the",
+                "start": 49.81,
+                "end": 50.39,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "E"
+              },
+              {
+                "text": "red",
+                "start": 50.39,
+                "end": 50.97,
+                "midi": 54.1,
+                "note": "F#3",
+                "jianpu": "2",
+                "chord": "E"
+              },
+              {
+                "text": "sky",
+                "start": 50.97,
+                "end": 51.55,
+                "midi": 70.8,
+                "note": "B4",
+                "jianpu": "5",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-010",
+            "start": 51.55,
+            "end": 54.81,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "5 b7 1 b7, b7, b6",
+            "tokens": [
+              {
+                "text": "I",
+                "start": 51.55,
+                "end": 52.093,
+                "midi": 70.9,
+                "note": "B4",
+                "jianpu": "5",
+                "chord": "Bm"
+              },
+              {
+                "text": "lift",
+                "start": 52.093,
+                "end": 52.637,
+                "midi": 74.0,
+                "note": "D5",
+                "jianpu": "b7",
+                "chord": "Bm"
+              },
+              {
+                "text": "my",
+                "start": 52.637,
+                "end": 53.18,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Bm"
+              },
+              {
+                "text": "heart",
+                "start": 53.18,
+                "end": 53.723,
+                "midi": 62.0,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Bm"
+              },
+              {
+                "text": "and",
+                "start": 53.723,
+                "end": 54.267,
+                "midi": 62.2,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Bm"
+              },
+              {
+                "text": "move",
+                "start": 54.267,
+                "end": 54.81,
+                "midi": 72.1,
+                "note": "C5",
+                "jianpu": "b6",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-011",
+            "start": 54.81,
+            "end": 60.63,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "b6 5, 5, b6, b6, 3 b3 b3 4 4 b3",
+            "tokens": [
+              {
+                "text": "Even",
+                "start": 54.81,
+                "end": 55.339,
+                "midi": 72.2,
+                "note": "C5",
+                "jianpu": "b6",
+                "chord": "Am"
+              },
+              {
+                "text": "when",
+                "start": 55.339,
+                "end": 55.868,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Am"
+              },
+              {
+                "text": "the",
+                "start": 55.868,
+                "end": 56.397,
+                "midi": 59.1,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Am"
+              },
+              {
+                "text": "dark",
+                "start": 56.397,
+                "end": 56.926,
+                "midi": 59.9,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Am"
+              },
+              {
+                "text": "is",
+                "start": 56.926,
+                "end": 57.455,
+                "midi": 60.0,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Am"
+              },
+              {
+                "text": "endless",
+                "start": 57.455,
+                "end": 57.985,
+                "midi": 55.9,
+                "note": "G#3",
+                "jianpu": "3",
+                "chord": "Am"
+              },
+              {
+                "text": "a",
+                "start": 57.985,
+                "end": 58.514,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "spark",
+                "start": 58.514,
+                "end": 59.043,
+                "midi": 55.1,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "becomes",
+                "start": 59.043,
+                "end": 59.572,
+                "midi": 57.0,
+                "note": "A3",
+                "jianpu": "4",
+                "chord": "Em"
+              },
+              {
+                "text": "a",
+                "start": 59.572,
+                "end": 60.101,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "4",
+                "chord": "Em"
+              },
+              {
+                "text": "road",
+                "start": 60.101,
+                "end": 60.63,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "line-012",
+            "start": 60.63,
+            "end": 63.81,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "b3 1 1 2 5",
+            "tokens": [
+              {
+                "text": "Small",
+                "start": 60.63,
+                "end": 61.266,
+                "midi": 55.2,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "Em"
+              },
+              {
+                "text": "under",
+                "start": 61.266,
+                "end": 61.902,
+                "midi": 64.0,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Em"
+              },
+              {
+                "text": "the",
+                "start": 61.902,
+                "end": 62.538,
+                "midi": 64.2,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Em"
+              },
+              {
+                "text": "red",
+                "start": 62.538,
+                "end": 63.174,
+                "midi": 66.0,
+                "note": "F#4",
+                "jianpu": "2",
+                "chord": "Em"
+              },
+              {
+                "text": "sky",
+                "start": 63.174,
+                "end": 63.81,
+                "midi": 71.0,
+                "note": "B4",
+                "jianpu": "5",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "line-013",
+            "start": 63.81,
+            "end": 67.05,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "4 b3 b3 1",
+            "tokens": [
+              {
+                "text": "I",
+                "start": 63.81,
+                "end": 64.62,
+                "midi": 69.4,
+                "note": "A4",
+                "jianpu": "4",
+                "chord": "Bm"
+              },
+              {
+                "text": "hear",
+                "start": 64.62,
+                "end": 65.43,
+                "midi": 67.1,
+                "note": "G4",
+                "jianpu": "b3",
+                "chord": "Bm"
+              },
+              {
+                "text": "tomorrow",
+                "start": 65.43,
+                "end": 66.24,
+                "midi": 67.3,
+                "note": "G4",
+                "jianpu": "b3",
+                "chord": "Bm"
+              },
+              {
+                "text": "call",
+                "start": 66.24,
+                "end": 67.05,
+                "midi": 64.4,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-014",
+            "start": 67.49,
+            "end": 72.73,
+            "key": "E minor",
+            "confidence": "analysis",
+            "source": "data/runs/mars-red-sky-en-analysis/analysis/melody_f0.csv",
+            "summary": "1 7, b7, 6, b6, 5, 5, 5, b3 b3 b3",
+            "tokens": [
+              {
+                "text": "If",
+                "start": 67.49,
+                "end": 67.966,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "1",
+                "chord": "Am"
+              },
+              {
+                "text": "the",
+                "start": 67.966,
+                "end": 68.443,
+                "midi": 63.1,
+                "note": "D#4",
+                "jianpu": "7,",
+                "chord": "Am"
+              },
+              {
+                "text": "universe",
+                "start": 68.443,
+                "end": 68.919,
+                "midi": 62.2,
+                "note": "D4",
+                "jianpu": "b7,",
+                "chord": "Am"
+              },
+              {
+                "text": "is",
+                "start": 68.919,
+                "end": 69.395,
+                "midi": 60.9,
+                "note": "C#4",
+                "jianpu": "6,",
+                "chord": "Am"
+              },
+              {
+                "text": "wider",
+                "start": 69.395,
+                "end": 69.872,
+                "midi": 60.0,
+                "note": "C4",
+                "jianpu": "b6,",
+                "chord": "Am"
+              },
+              {
+                "text": "then",
+                "start": 69.872,
+                "end": 70.348,
+                "midi": 59.4,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "my",
+                "start": 70.348,
+                "end": 70.825,
+                "midi": 59.2,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "courage",
+                "start": 70.825,
+                "end": 71.301,
+                "midi": 59.0,
+                "note": "B3",
+                "jianpu": "5,",
+                "chord": "Em"
+              },
+              {
+                "text": "must",
+                "start": 71.301,
+                "end": 71.777,
+                "midi": 55.1,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "F#m"
+              },
+              {
+                "text": "be",
+                "start": 71.777,
+                "end": 72.254,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "F#m"
+              },
+              {
+                "text": "tall",
+                "start": 72.254,
+                "end": 72.73,
+                "midi": 55.0,
+                "note": "G3",
+                "jianpu": "b3",
+                "chord": "F#m"
+              }
+            ]
+          }
+        ]
+      },
       "lyricEvidence": {
         "lyricSetId": "en-vocal",
         "activeLanguageCode": "en",
@@ -369,6 +1363,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/mars-red-sky-zh.mp3",
       "bpm": 80.75,
+      "key": "E minor",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/mars-red-sky-zh-analysis/analysis/beats.json",
@@ -793,6 +1788,15 @@
           "name": "Em"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "E minor",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",
@@ -848,6 +1852,7 @@
       "languageCode": "ja",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/mars-red-sky-ja.mp3",
       "bpm": 83.35,
+      "key": "E minor",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/mars-red-sky-ja-analysis/analysis/beats.json",
@@ -1510,6 +2515,15 @@
           "name": "Em"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "E minor",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "ja-vocal",
         "activeLanguageCode": "ja",
@@ -1565,6 +2579,7 @@
       "languageCode": "yue-Hant",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/mars-red-sky-yue-Hant.mp3",
       "bpm": 80.75,
+      "key": "E minor",
       "timeSignature": "4/4",
       "beatConfidence": "estimated",
       "beatSource": "estimated from BPM",
@@ -1663,6 +2678,15 @@
           "name": "Em"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "E minor",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "yue-vocal",
         "activeLanguageCode": "yue-Hant",

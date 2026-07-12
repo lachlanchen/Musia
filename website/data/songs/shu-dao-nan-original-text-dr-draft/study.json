@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/shu-dao-nan-original-text-dr-draft-zh-Hans-dr-20260701.mp3?v=20260701-dr",
       "bpm": 198.77,
+      "key": "detected from draft audio",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/shu-dao-nan-original-text-dr-hook-95-b-analysis/analysis/beats.json",
@@ -2051,6 +2052,15 @@
           "confidence": 0.588
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "detected from draft audio",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

@@ -29,6 +29,8 @@
           "summary": {"type": "string"},
           "manifest": {"type": "string"},
           "cover": {"type": "string"},
+          "hidden": {"type": "boolean"},
+          "hiddenReason": {"type": "string"},
           "languages": {"type": "array", "items": {"type": "string"}},
           "tags": {"type": "array", "items": {"type": "string"}}
         }

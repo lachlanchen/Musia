@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/meng-you-tian-mu-original-poem-zh-Hans-ace-20260701.mp3",
       "bpm": 172.266,
+      "key": "D minor requested; detected mixed cinematic progression",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/meng-you-tian-mu-original-poem-20260701-selected-trimmed-analysis/analysis/beats.json",
@@ -4715,6 +4716,15 @@
           "name": "F#m"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "D minor requested; detected mixed cinematic progression",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

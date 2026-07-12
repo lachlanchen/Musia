@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/chi-le-ge-original-poem-zh-Hans-ace-xl-turbo-seed748143-20260706.mp3",
       "bpm": 143.555,
+      "key": "D major requested; detected Am/Bm/D/A/Em movement",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/chi-le-ge-original-poem-20260706-selected-analysis/analysis/beats.json",
@@ -1004,6 +1005,15 @@
           "name": "D"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "D major requested; detected Am/Bm/D/A/Em movement",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

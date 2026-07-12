@@ -34,6 +34,7 @@ const state = {
   userPlaybackMode: false,
   advancingPlayback: false,
   advancedMode: false,
+  showAllMedia: false,
   advancedChordRenderKey: "",
   studyMode: false,
   studyData: null,
@@ -227,6 +228,15 @@ function isStudyMode(params = new URLSearchParams(window.location.search)) {
 
 function studyPathForMedia(id = state.activeMediaId) {
   return id ? `?mode=atlas&media=${encodeURIComponent(id)}` : "?mode=atlas";
+}
+
+function isHiddenCatalogItem(item) {
+  return Boolean(item?.hidden || item?.visibility === "hidden");
+}
+
+function catalogItems({ includeHidden = state.showAllMedia } = {}) {
+  const items = state.catalog?.items || [];
+  return includeHidden ? items : items.filter((item) => !isHiddenCatalogItem(item));
 }
 
 function pinyinTone(value) {
@@ -468,6 +478,44 @@ function renderStudyTrust() {
   `).join("");
 }
 
+function melodyLineFor(lineId) {
+  const lines = activeStudyAssetData()?.melody?.lines || [];
+  return lines.find((line) => line.lineId === lineId) || null;
+}
+
+function renderStudyMelodyNotes(line) {
+  if (!line) return "";
+  const melodyLine = melodyLineFor(line.id);
+  const notes = melodyLine?.tokens || [];
+  if (!notes.length) {
+    return `
+      <div class="study-note-lane empty">
+        <span>Number notes pending</span>
+        <em>Run Atlas build with melody/F0 data to show jianpu.</em>
+      </div>
+    `;
+  }
+  const compact = notes
+    .filter((note) => note.jianpu || note.note)
+    .slice(0, 18)
+    .map((note) => `
+      <span class="study-note-chip" title="${escapeHtml(note.note || "")}${note.chord ? ` over ${escapeHtml(note.chord)}` : ""}">
+        <small>${escapeHtml(note.text || "")}</small>
+        <strong>${escapeHtml(note.jianpu || "?")}</strong>
+        <em>${escapeHtml(note.note || "")}</em>
+      </span>
+    `).join("");
+  return `
+    <div class="study-note-lane" aria-label="Analysis-grade numbered melody notes">
+      <div class="study-note-head">
+        <span>Jianpu</span>
+        <em>${escapeHtml(melodyLine.key || "key unknown")} · ${escapeHtml(melodyLine.confidence || "analysis")}</em>
+      </div>
+      <div class="study-note-chips">${compact || "<span>No voiced notes in this phrase.</span>"}</div>
+    </div>
+  `;
+}
+
 function renderStudyControls() {
   const transpose = $("study-transpose");
   const capo = $("study-capo");
@@ -646,7 +694,10 @@ function renderStudyPanel(activeLine = null, activeChord = null, time = 0) {
   $("study-line-title").textContent = line
     ? `Line ${String(lineNumber).padStart(2, "0")} · ${formatTime(line.start)}-${formatTime(line.end)}`
     : "Instrumental or waiting for the first lyric";
-  $("study-line-text").textContent = line?.singableText || line?.text || "Tap the beat here. Lyrics begin when the vocal starts.";
+  $("study-line-text").innerHTML = line
+    ? renderTrackLine(activeTrack, line)
+    : `<div class="plain-line">Tap the beat here. Lyrics begin when the vocal starts.</div>`;
+  $("study-line-notes").innerHTML = renderStudyMelodyNotes(line);
   $("study-line-metrics").innerHTML = lineMetrics ? [
     `<span><strong>${lineMetrics.tokenCount}</strong> sung tokens</span>`,
     `<span><strong>${lineMetrics.beatCount || "?"}</strong> beats in phrase</span>`,
@@ -1031,7 +1082,7 @@ function activePlayableAsset() {
 }
 
 function playbackQueueItems() {
-  return (state.catalog?.items || []).filter((item) =>
+  return catalogItems().filter((item) =>
     (item.kind === "song" || item.kind === "localized-song") && item.manifest
   );
 }
@@ -1356,7 +1407,7 @@ function setMediaSource(asset, keepTime = false) {
 }
 
 function renderLibrary() {
-  const items = state.catalog.items || [];
+  const items = catalogItems();
   const query = state.searchQuery.trim().toLowerCase();
   const visibleItems = items.filter((item) => {
     const kindMatch = state.kindFilter === "all" || item.kind === state.kindFilter;
@@ -1372,7 +1423,7 @@ function renderLibrary() {
   });
   $("media-library").innerHTML = visibleItems.length ? visibleItems.map((item) => `
     <button class="media-chip ${item.id === state.activeMediaId ? "active" : ""}" type="button" data-media-id="${escapeHtml(item.id)}">
-      <span>${escapeHtml(labelKind(item.kind))}</span>
+      <span>${escapeHtml(isHiddenCatalogItem(item) ? `Hidden ${labelKind(item.kind)}` : labelKind(item.kind))}</span>
       <strong>${escapeHtml(item.title)}</strong>
     </button>
   `).join("") : `<div class="empty-chip">No matching media</div>`;
@@ -1391,7 +1442,7 @@ function renderLibrary() {
 }
 
 function libraryPreviewItems() {
-  return (state.catalog?.items || [])
+  return catalogItems()
     .filter((item) => item.kind === "song" || item.kind === "localized-song")
     .slice(0, 3);
 }
@@ -2033,6 +2084,7 @@ async function loadMediaItem(item, updateHash = false) {
 async function boot() {
   const params = new URLSearchParams(window.location.search);
   state.studyMode = isStudyMode(params);
+  state.showAllMedia = params.has("showall") || params.has("showAll");
   state.captureMode = params.get("capture") === "1" || params.get("record") === "1";
   state.skipIntroOnLoad = params.get("skipIntro") === "1" || params.get("skip") === "vocal";
   state.requestedAssetId = params.get("asset") || "";
@@ -2066,7 +2118,8 @@ async function boot() {
   const requestedId = atlasMediaIdFromPath() || params.get("media") || params.get("id") || window.location.hash.replace(/^#/, "");
   const hashId = decodeURIComponent(requestedId);
   const item = state.catalog.items.find((entry) => entry.id === hashId)
-    || state.catalog.items.find((entry) => entry.id === state.catalog.defaultMedia)
+    || catalogItems().find((entry) => entry.id === state.catalog.defaultMedia)
+    || catalogItems()[0]
     || state.catalog.items[0];
   await loadMediaItem(item);
   drawVisualizer();

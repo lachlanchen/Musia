@@ -18,6 +18,7 @@
       "languageCode": "mul",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/best-am-i-mixed-ace-xl-turbo-seed812401-20260712.mp3",
       "bpm": 117.454,
+      "key": "detected D major / pop modal center",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/best-am-i-20260712-analysis/analysis/beats.json",
@@ -684,6 +685,15 @@
           "name": "D"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "detected D major / pop modal center",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "mixed-vocal",
         "activeLanguageCode": "mul",

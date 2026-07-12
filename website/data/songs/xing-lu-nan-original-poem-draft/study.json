@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/xing-lu-nan-original-poem-draft-zh-Hans-dr-20260701.mp3?v=20260701-dr",
       "bpm": 172.27,
+      "key": "detected from draft audio",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/xing-lu-nan-original-poem-hope-first-draft-analysis/analysis/beats.json",
@@ -1685,6 +1686,15 @@
           "confidence": 0.838
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "detected from draft audio",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

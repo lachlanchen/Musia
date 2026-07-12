@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/wei-ji-fen-zh-Hans-ace-xl-turbo-seed760622-20260706.mp3",
       "bpm": 152.0,
+      "key": "E minor requested / analysis detects C-Am-G pop movement",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/wei-ji-fen-zh-ace-seed760622-analysis/analysis/beats.json",
@@ -1187,6 +1188,15 @@
           "name": "G"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "E minor requested / analysis detects C-Am-G pop movement",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",

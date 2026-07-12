@@ -18,6 +18,7 @@
       "languageCode": "zh-Hans",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/rain-day-full-song-zh.mp3",
       "bpm": 76.0,
+      "key": "D minor",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/generated-rain-day-full-zh-analysis/analysis/beats.json",
@@ -1040,6 +1041,15 @@
           "name": "Dm"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "D minor",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "zh-vocal",
         "activeLanguageCode": "zh-Hans",
@@ -1095,6 +1105,7 @@
       "languageCode": "en",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/rain-day-full-song-en.mp3",
       "bpm": 78.3,
+      "key": "D minor",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/generated-rain-day-full-en-analysis/analysis/beats.json",
@@ -1613,6 +1624,15 @@
           "name": "Dm"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "D minor",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "en-vocal",
         "activeLanguageCode": "en",
@@ -1668,6 +1688,7 @@
       "languageCode": "ja",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/rain-day-full-song-ja.mp3",
       "bpm": 76.0,
+      "key": "D minor",
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/generated-rain-day-full-ja-analysis/analysis/beats.json",
@@ -2249,6 +2270,249 @@
           "name": "Dm"
         }
       ],
+      "melodyConfidence": "analysis",
+      "melodySource": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+      "melody": {
+        "confidence": "analysis",
+        "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+        "key": "D minor",
+        "notation": "jianpu/simple numbered notes",
+        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "lines": [
+          {
+            "lineId": "line-001",
+            "start": 1.17,
+            "end": 11.24,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "b3 b3",
+            "tokens": [
+              {
+                "text": "雨が窓を鳴らし",
+                "start": 1.17,
+                "end": 6.205,
+                "midi": 65.2,
+                "note": "F4",
+                "jianpu": "b3",
+                "chord": "Dm"
+              },
+              {
+                "text": "部屋を起こす",
+                "start": 6.205,
+                "end": 11.24,
+                "midi": 65.3,
+                "note": "F4",
+                "jianpu": "b3",
+                "chord": "Gm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-002",
+            "start": 13.4,
+            "end": 19.34,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "5, 6,",
+            "tokens": [
+              {
+                "text": "ネオン咲く街を",
+                "start": 13.4,
+                "end": 16.37,
+                "midi": 57.2,
+                "note": "A3",
+                "jianpu": "5,",
+                "chord": "Dm"
+              },
+              {
+                "text": "ひとり歩く",
+                "start": 16.37,
+                "end": 19.34,
+                "midi": 59.2,
+                "note": "B3",
+                "jianpu": "6,",
+                "chord": "Bb"
+              }
+            ]
+          },
+          {
+            "lineId": "line-003",
+            "start": 22.1,
+            "end": 27.1,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "2 1",
+            "tokens": [
+              {
+                "text": "映る光ぜんぶ",
+                "start": 22.1,
+                "end": 24.6,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "Bbm"
+              },
+              {
+                "text": "君からの手紙",
+                "start": 24.6,
+                "end": 27.1,
+                "midi": 61.8,
+                "note": "D4",
+                "jianpu": "1",
+                "chord": "Am"
+              }
+            ]
+          },
+          {
+            "lineId": "line-004",
+            "start": 28.1,
+            "end": 40.28,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "5 b3",
+            "tokens": [
+              {
+                "text": "重い夜なら",
+                "start": 28.1,
+                "end": 34.19,
+                "midi": 68.7,
+                "note": "A4",
+                "jianpu": "5",
+                "chord": "Am"
+              },
+              {
+                "text": "この手に降らせて",
+                "start": 34.19,
+                "end": 40.28,
+                "midi": 65.1,
+                "note": "F4",
+                "jianpu": "b3",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "line-005",
+            "start": 40.28,
+            "end": 44.74,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "b3 b3",
+            "tokens": [
+              {
+                "text": "銀の雨の中",
+                "start": 40.28,
+                "end": 42.51,
+                "midi": 65.2,
+                "note": "F4",
+                "jianpu": "b3",
+                "chord": "F"
+              },
+              {
+                "text": "そばにいて",
+                "start": 42.51,
+                "end": 44.74,
+                "midi": 65.0,
+                "note": "F4",
+                "jianpu": "b3",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-006",
+            "start": 44.74,
+            "end": 48.78,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "1 4",
+            "tokens": [
+              {
+                "text": "割れた光を",
+                "start": 44.74,
+                "end": 46.76,
+                "midi": 62.0,
+                "note": "D4",
+                "jianpu": "1",
+                "chord": "G"
+              },
+              {
+                "text": "火に変えて",
+                "start": 46.76,
+                "end": 48.78,
+                "midi": 67.1,
+                "note": "G4",
+                "jianpu": "4",
+                "chord": "Gm"
+              }
+            ]
+          },
+          {
+            "lineId": "line-007",
+            "start": 51.8,
+            "end": 55.95,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "4 b6",
+            "tokens": [
+              {
+                "text": "太陽なしでも",
+                "start": 51.8,
+                "end": 53.875,
+                "midi": 66.9,
+                "note": "G4",
+                "jianpu": "4",
+                "chord": "Dm"
+              },
+              {
+                "text": "道は見える",
+                "start": 53.875,
+                "end": 55.95,
+                "midi": 70.1,
+                "note": "A#4",
+                "jianpu": "b6",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "line-008",
+            "start": 57.23,
+            "end": 63.33,
+            "key": "D minor",
+            "confidence": "analysis",
+            "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
+            "summary": "1 2",
+            "tokens": [
+              {
+                "text": "君の声が",
+                "start": 57.23,
+                "end": 60.28,
+                "midi": 62.1,
+                "note": "D4",
+                "jianpu": "1",
+                "chord": "Gm"
+              },
+              {
+                "text": "雨の日の帰る場所",
+                "start": 60.28,
+                "end": 63.33,
+                "midi": 64.1,
+                "note": "E4",
+                "jianpu": "2",
+                "chord": "A"
+              }
+            ]
+          }
+        ]
+      },
       "lyricEvidence": {
         "lyricSetId": "ja-vocal",
         "activeLanguageCode": "ja",
@@ -2304,6 +2568,7 @@
       "languageCode": "yue-Hant",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/rain-day-full-song-yue-Hant.mp3",
       "bpm": 78.0,
+      "key": "D minor",
       "timeSignature": "4/4",
       "beatConfidence": "estimated",
       "beatSource": "estimated from BPM",
@@ -2420,6 +2685,15 @@
           "degree": "i"
         }
       ],
+      "melodyConfidence": "unavailable",
+      "melodySource": "",
+      "melody": {
+        "confidence": "unavailable",
+        "source": "",
+        "key": "D minor",
+        "notation": "jianpu/simple numbered notes",
+        "lines": []
+      },
       "lyricEvidence": {
         "lyricSetId": "yue-vocal",
         "activeLanguageCode": "yue-Hant",
