@@ -1,0 +1,508 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "best-am-i",
+  "kind": "song",
+  "title": "Best Am I · 我是天下第一等",
+  "localizedTitles": {
+    "en": "Best Am I",
+    "zh-Hans": "我是天下第一等",
+    "ja": "Best Am I"
+  },
+  "artist": "Musia",
+  "description": "A mixed English, Mandarin pinyin, and Japanese romaji motivational art-pop anthem about self-belief without arrogance.",
+  "caption": "A small voice steps into the light and chooses to keep becoming.",
+  "duration": 64.0,
+  "canonicalUrl": "https://fun.lazying.art/#best-am-i",
+  "share": {
+    "title": "Best Am I · 我是天下第一等 - Fun Lazying Art",
+    "description": "A Musia mixed-language anthem with corrected synced lyrics, translations, pinyin, furigana, chords, and stems.",
+    "url": "https://fun.lazying.art/#best-am-i",
+    "image": "assets/covers/best-am-i-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "Best Am I cover",
+      "role": "cover",
+      "src": "assets/covers/best-am-i-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/best-am-i-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "best-am-i-mixed",
+      "label": "Mixed",
+      "roleLabel": "Vocal",
+      "role": "vocal",
+      "languageCode": "mul",
+      "languageLabel": "Mixed",
+      "lyricSetId": "mixed-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/best-am-i-mixed-ace-xl-turbo-seed812401-20260712.mp3",
+      "mime": "audio/mpeg"
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "detected D major / pop modal center",
+    "bpm": 117.45383522727273,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 2.995,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 2.995,
+        "end": 6.293,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 6.293,
+        "end": 6.85,
+        "name": "C#m",
+        "degree": ""
+      },
+      {
+        "start": 6.85,
+        "end": 7.895,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 7.895,
+        "end": 8.382,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 8.382,
+        "end": 9.358,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 9.358,
+        "end": 12.376,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 12.376,
+        "end": 13.421,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 13.421,
+        "end": 14.42,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 14.42,
+        "end": 14.907,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 14.907,
+        "end": 15.395,
+        "name": "C#m",
+        "degree": ""
+      },
+      {
+        "start": 15.395,
+        "end": 15.882,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 15.882,
+        "end": 17.879,
+        "name": "C#m",
+        "degree": ""
+      },
+      {
+        "start": 17.879,
+        "end": 19.482,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 19.482,
+        "end": 20.062,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 20.062,
+        "end": 20.619,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 20.619,
+        "end": 23.336,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 23.336,
+        "end": 23.87,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 23.87,
+        "end": 25.426,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 25.426,
+        "end": 26.099,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 26.099,
+        "end": 27.655,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 27.655,
+        "end": 28.166,
+        "name": "B",
+        "degree": ""
+      },
+      {
+        "start": 28.166,
+        "end": 28.677,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 28.677,
+        "end": 29.35,
+        "name": "Em",
+        "degree": ""
+      },
+      {
+        "start": 29.35,
+        "end": 31.417,
+        "name": "G",
+        "degree": ""
+      },
+      {
+        "start": 31.417,
+        "end": 31.835,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 31.835,
+        "end": 33.297,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 33.297,
+        "end": 34.342,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 34.342,
+        "end": 36.85,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 36.85,
+        "end": 39.845,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 39.845,
+        "end": 41.378,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 41.378,
+        "end": 42.794,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 42.794,
+        "end": 43.259,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 43.259,
+        "end": 45.395,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 45.395,
+        "end": 48.089,
+        "name": "D",
+        "degree": ""
+      },
+      {
+        "start": 48.089,
+        "end": 50.573,
+        "name": "F#m",
+        "degree": ""
+      },
+      {
+        "start": 50.573,
+        "end": 52.036,
+        "name": "Bm",
+        "degree": ""
+      },
+      {
+        "start": 52.036,
+        "end": 53.568,
+        "name": "E",
+        "degree": ""
+      },
+      {
+        "start": 53.568,
+        "end": 55.635,
+        "name": "A",
+        "degree": ""
+      },
+      {
+        "start": 55.635,
+        "end": 56.146,
+        "name": "Am",
+        "degree": ""
+      },
+      {
+        "start": 56.146,
+        "end": 64.0,
+        "name": "D",
+        "degree": ""
+      }
+    ]
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "mixed-vocal",
+      "label": "Mixed vocal",
+      "languageCode": "mul",
+      "tracks": [
+        {
+          "code": "mul",
+          "label": "Mixed",
+          "nativeLabel": "Mixed",
+          "script": "Latn+Hans+Jpan",
+          "features": [
+            "active-vocal"
+          ],
+          "path": "lyrics/mixed-vocal/mul.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "furigana",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/ja.json"
+        },
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "pinyin",
+            "translation"
+          ],
+          "path": "lyrics/mixed-vocal/zh-Hans.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 0.0,
+        "end": 5.08,
+        "text": "Best am I, I am still becoming"
+      },
+      {
+        "id": "l02",
+        "start": 5.08,
+        "end": 10.32,
+        "text": "Wo shi tian xia di yi deng"
+      },
+      {
+        "id": "l03",
+        "start": 11.0,
+        "end": 12.82,
+        "text": "Mada ikeru"
+      },
+      {
+        "id": "l04",
+        "start": 12.82,
+        "end": 16.32,
+        "text": "I was small under the sky"
+      },
+      {
+        "id": "l05",
+        "start": 16.32,
+        "end": 18.82,
+        "text": "Still I kept a little flame"
+      },
+      {
+        "id": "l06",
+        "start": 18.82,
+        "end": 21.0,
+        "text": "Dare ni mo mienai namida"
+      },
+      {
+        "id": "l07",
+        "start": 21.52,
+        "end": 23.34,
+        "text": "Ye li you guang zai"
+      },
+      {
+        "id": "l08",
+        "start": 23.34,
+        "end": 26.3,
+        "text": "I do not need a crown"
+      },
+      {
+        "id": "l09",
+        "start": 26.3,
+        "end": 29.1,
+        "text": "I only need my name"
+      },
+      {
+        "id": "l10",
+        "start": 29.1,
+        "end": 33.56,
+        "text": "Tada koko ni tatsu, I rise, I shine"
+      },
+      {
+        "id": "l11",
+        "start": 33.56,
+        "end": 37.66,
+        "text": "Best am I, best am I, best am I"
+      },
+      {
+        "id": "l12",
+        "start": 37.66,
+        "end": 40.28,
+        "text": "Wo shi tian xia di yi deng"
+      },
+      {
+        "id": "l13",
+        "start": 40.28,
+        "end": 45.26,
+        "text": "Mune no hikari mada kienai, I am still becoming"
+      },
+      {
+        "id": "l14",
+        "start": 45.78,
+        "end": 49.0,
+        "text": "Best am I, best am I"
+      },
+      {
+        "id": "l15",
+        "start": 49.0,
+        "end": 51.58,
+        "text": "Wo you wo de di yi deng"
+      },
+      {
+        "id": "l16",
+        "start": 51.58,
+        "end": 54.72,
+        "text": "I rise, I shine"
+      },
+      {
+        "id": "l17",
+        "start": 54.72,
+        "end": 56.78,
+        "text": "I am not done"
+      },
+      {
+        "id": "l18",
+        "start": 56.78,
+        "end": 60.16,
+        "text": "I am still becoming"
+      }
+    ]
+  },
+  "playback": {
+    "defaultMode": "single"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/best-am-i-20260712",
+    "audioSource": "ACE-Step 1.5 XL Turbo compact mixed-language anthem route, seed 812401.",
+    "analysisRun": "data/runs/best-am-i-20260712-analysis",
+    "quality": {
+      "gate": "public-candidate",
+      "note": "Selected after rejecting longer dense routes and XL SFT. Website lyrics are corrected to the rendered compact vocal."
+    },
+    "lyricCorrection": "data/creative_projects/best-am-i-20260712/correction_packets/selected-seed812401-20260712-121122/CORRECTION_PACKET.md",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_02a348b19ca3f962016a531567298481909c58ed5626f8a703.png",
+    "publicAudio": "best-am-i-mixed-ace-xl-turbo-seed812401-20260712.mp3"
+  },
+  "artifacts": [
+    {
+      "label": "Analysis report",
+      "path": "data/runs/best-am-i-20260712-analysis/REPORT.md"
+    },
+    {
+      "label": "Chords",
+      "path": "data/runs/best-am-i-20260712-analysis/analysis/chords.csv"
+    },
+    {
+      "label": "Beats",
+      "path": "data/runs/best-am-i-20260712-analysis/analysis/beats.csv"
+    },
+    {
+      "label": "Stems",
+      "path": "data/runs/best-am-i-20260712-analysis/stems"
+    }
+  ]
+}

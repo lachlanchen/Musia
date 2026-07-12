@@ -1,0 +1,782 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "best-am-i",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.0,
+      "end": 5.08,
+      "text": "私は最高、まだ変わり続けている",
+      "singableText": "私は最高、まだ変わり続けている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 0.0,
+          "end": 0.635,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 0.635,
+          "end": 1.27
+        },
+        {
+          "text": "最高",
+          "start": 1.27,
+          "end": 1.905,
+          "reading": "さいこう"
+        },
+        {
+          "text": "、",
+          "start": 1.905,
+          "end": 2.54
+        },
+        {
+          "text": "まだ",
+          "start": 2.54,
+          "end": 3.175
+        },
+        {
+          "text": "変わり",
+          "start": 3.175,
+          "end": 3.81,
+          "reading": "かわり"
+        },
+        {
+          "text": "続け",
+          "start": 3.81,
+          "end": 4.445,
+          "reading": "つづけ"
+        },
+        {
+          "text": "ている",
+          "start": 4.445,
+          "end": 5.08
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 5.08,
+      "end": 10.32,
+      "text": "私は天下一等",
+      "singableText": "私は天下一等",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 5.08,
+          "end": 6.39,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 6.39,
+          "end": 7.7
+        },
+        {
+          "text": "天下",
+          "start": 7.7,
+          "end": 9.01,
+          "reading": "てんか"
+        },
+        {
+          "text": "一等",
+          "start": 9.01,
+          "end": 10.32,
+          "reading": "いっとう"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 11.0,
+      "end": 12.82,
+      "text": "まだ行ける",
+      "singableText": "まだ行ける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "まだ",
+          "start": 11.0,
+          "end": 11.607
+        },
+        {
+          "text": "行け",
+          "start": 11.607,
+          "end": 12.213,
+          "reading": "いけ"
+        },
+        {
+          "text": "る",
+          "start": 12.213,
+          "end": 12.82
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 12.82,
+      "end": 16.32,
+      "text": "空の下で小さかった",
+      "singableText": "空の下で小さかった",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "空",
+          "start": 12.82,
+          "end": 13.403,
+          "reading": "そら"
+        },
+        {
+          "text": "の",
+          "start": 13.403,
+          "end": 13.987
+        },
+        {
+          "text": "下",
+          "start": 13.987,
+          "end": 14.57,
+          "reading": "した"
+        },
+        {
+          "text": "で",
+          "start": 14.57,
+          "end": 15.153
+        },
+        {
+          "text": "小さか",
+          "start": 15.153,
+          "end": 15.737,
+          "reading": "ちーさか"
+        },
+        {
+          "text": "った",
+          "start": 15.737,
+          "end": 16.32
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 16.32,
+      "end": 18.82,
+      "text": "それでも小さな炎を守った",
+      "singableText": "それでも小さな炎を守った",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "それでも",
+          "start": 16.32,
+          "end": 16.677
+        },
+        {
+          "text": "小さ",
+          "start": 16.677,
+          "end": 17.034,
+          "reading": "ちいさ"
+        },
+        {
+          "text": "な",
+          "start": 17.034,
+          "end": 17.391
+        },
+        {
+          "text": "炎",
+          "start": 17.391,
+          "end": 17.749,
+          "reading": "ほのお"
+        },
+        {
+          "text": "を",
+          "start": 17.749,
+          "end": 18.106
+        },
+        {
+          "text": "守っ",
+          "start": 18.106,
+          "end": 18.463,
+          "reading": "まもっ"
+        },
+        {
+          "text": "た",
+          "start": 18.463,
+          "end": 18.82
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 18.82,
+      "end": 21.0,
+      "text": "誰にも見えない涙",
+      "singableText": "誰にも見えない涙",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "誰",
+          "start": 18.82,
+          "end": 19.256,
+          "reading": "だれ"
+        },
+        {
+          "text": "にも",
+          "start": 19.256,
+          "end": 19.692
+        },
+        {
+          "text": "見え",
+          "start": 19.692,
+          "end": 20.128,
+          "reading": "みえ"
+        },
+        {
+          "text": "ない",
+          "start": 20.128,
+          "end": 20.564
+        },
+        {
+          "text": "涙",
+          "start": 20.564,
+          "end": 21.0,
+          "reading": "なみだ"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 21.52,
+      "end": 23.34,
+      "text": "夜にも光がある",
+      "singableText": "夜にも光がある",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "夜",
+          "start": 21.52,
+          "end": 21.975,
+          "reading": "よる"
+        },
+        {
+          "text": "にも",
+          "start": 21.975,
+          "end": 22.43
+        },
+        {
+          "text": "光",
+          "start": 22.43,
+          "end": 22.885,
+          "reading": "ひかり"
+        },
+        {
+          "text": "がある",
+          "start": 22.885,
+          "end": 23.34
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 23.34,
+      "end": 26.3,
+      "text": "冠はいらない",
+      "singableText": "冠はいらない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "冠",
+          "start": 23.34,
+          "end": 24.82,
+          "reading": "かん"
+        },
+        {
+          "text": "はいらない",
+          "start": 24.82,
+          "end": 26.3
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 26.3,
+      "end": 29.1,
+      "text": "必要なのは私の名前だけ",
+      "singableText": "必要なのは私の名前だけ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "必要",
+          "start": 26.3,
+          "end": 26.767,
+          "reading": "ひつよう"
+        },
+        {
+          "text": "なのは",
+          "start": 26.767,
+          "end": 27.233
+        },
+        {
+          "text": "私",
+          "start": 27.233,
+          "end": 27.7,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 27.7,
+          "end": 28.167
+        },
+        {
+          "text": "名前",
+          "start": 28.167,
+          "end": 28.633,
+          "reading": "なまえ"
+        },
+        {
+          "text": "だけ",
+          "start": 28.633,
+          "end": 29.1
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 29.1,
+      "end": 33.56,
+      "text": "ただここに立つ、I rise, I shine",
+      "singableText": "ただここに立つ、I rise, I shine",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ただここに",
+          "start": 29.1,
+          "end": 29.658
+        },
+        {
+          "text": "立つ",
+          "start": 29.658,
+          "end": 30.215,
+          "reading": "たつ"
+        },
+        {
+          "text": "、",
+          "start": 30.215,
+          "end": 30.773
+        },
+        {
+          "text": "I",
+          "start": 30.773,
+          "end": 31.33
+        },
+        {
+          "text": "rise",
+          "start": 31.33,
+          "end": 31.888
+        },
+        {
+          "text": ",",
+          "start": 31.888,
+          "end": 32.445
+        },
+        {
+          "text": "I",
+          "start": 32.445,
+          "end": 33.003
+        },
+        {
+          "text": "shine",
+          "start": 33.003,
+          "end": 33.56
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 33.56,
+      "end": 37.66,
+      "text": "私は最高、私は最高、私は最高",
+      "singableText": "私は最高、私は最高、私は最高",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 33.56,
+          "end": 33.933,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 33.933,
+          "end": 34.305
+        },
+        {
+          "text": "最高",
+          "start": 34.305,
+          "end": 34.678,
+          "reading": "さいこう"
+        },
+        {
+          "text": "、",
+          "start": 34.678,
+          "end": 35.051
+        },
+        {
+          "text": "私",
+          "start": 35.051,
+          "end": 35.424,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 35.424,
+          "end": 35.796
+        },
+        {
+          "text": "最高",
+          "start": 35.796,
+          "end": 36.169,
+          "reading": "さいこう"
+        },
+        {
+          "text": "、",
+          "start": 36.169,
+          "end": 36.542
+        },
+        {
+          "text": "私",
+          "start": 36.542,
+          "end": 36.915,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 36.915,
+          "end": 37.287
+        },
+        {
+          "text": "最高",
+          "start": 37.287,
+          "end": 37.66,
+          "reading": "さいこう"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 37.66,
+      "end": 40.28,
+      "text": "私は天下一等",
+      "singableText": "私は天下一等",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 37.66,
+          "end": 38.315,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 38.315,
+          "end": 38.97
+        },
+        {
+          "text": "天下",
+          "start": 38.97,
+          "end": 39.625,
+          "reading": "てんか"
+        },
+        {
+          "text": "一等",
+          "start": 39.625,
+          "end": 40.28,
+          "reading": "いっとう"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 40.28,
+      "end": 45.26,
+      "text": "胸の光まだ消えない、私はまだ変わり続けている",
+      "singableText": "胸の光まだ消えない、私はまだ変わり続けている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "胸",
+          "start": 40.28,
+          "end": 40.695,
+          "reading": "むね"
+        },
+        {
+          "text": "の",
+          "start": 40.695,
+          "end": 41.11
+        },
+        {
+          "text": "光",
+          "start": 41.11,
+          "end": 41.525,
+          "reading": "ひかり"
+        },
+        {
+          "text": "まだ",
+          "start": 41.525,
+          "end": 41.94
+        },
+        {
+          "text": "消え",
+          "start": 41.94,
+          "end": 42.355,
+          "reading": "きえ"
+        },
+        {
+          "text": "ない",
+          "start": 42.355,
+          "end": 42.77
+        },
+        {
+          "text": "、",
+          "start": 42.77,
+          "end": 43.185
+        },
+        {
+          "text": "私",
+          "start": 43.185,
+          "end": 43.6,
+          "reading": "わたし"
+        },
+        {
+          "text": "はまだ",
+          "start": 43.6,
+          "end": 44.015
+        },
+        {
+          "text": "変わり",
+          "start": 44.015,
+          "end": 44.43,
+          "reading": "かわり"
+        },
+        {
+          "text": "続け",
+          "start": 44.43,
+          "end": 44.845,
+          "reading": "つづけ"
+        },
+        {
+          "text": "ている",
+          "start": 44.845,
+          "end": 45.26
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 45.78,
+      "end": 49.0,
+      "text": "私は最高、私は最高",
+      "singableText": "私は最高、私は最高",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 45.78,
+          "end": 46.24,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 46.24,
+          "end": 46.7
+        },
+        {
+          "text": "最高",
+          "start": 46.7,
+          "end": 47.16,
+          "reading": "さいこう"
+        },
+        {
+          "text": "、",
+          "start": 47.16,
+          "end": 47.62
+        },
+        {
+          "text": "私",
+          "start": 47.62,
+          "end": 48.08,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 48.08,
+          "end": 48.54
+        },
+        {
+          "text": "最高",
+          "start": 48.54,
+          "end": 49.0,
+          "reading": "さいこう"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 49.0,
+      "end": 51.58,
+      "text": "私には私の一等がある",
+      "singableText": "私には私の一等がある",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 49.0,
+          "end": 49.43,
+          "reading": "わたし"
+        },
+        {
+          "text": "には",
+          "start": 49.43,
+          "end": 49.86
+        },
+        {
+          "text": "私",
+          "start": 49.86,
+          "end": 50.29,
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "start": 50.29,
+          "end": 50.72
+        },
+        {
+          "text": "一等",
+          "start": 50.72,
+          "end": 51.15,
+          "reading": "いっとう"
+        },
+        {
+          "text": "がある",
+          "start": 51.15,
+          "end": 51.58
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 51.58,
+      "end": 54.72,
+      "text": "私は昇り、輝く",
+      "singableText": "私は昇り、輝く",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 51.58,
+          "end": 52.208,
+          "reading": "わたし"
+        },
+        {
+          "text": "は",
+          "start": 52.208,
+          "end": 52.836
+        },
+        {
+          "text": "昇り",
+          "start": 52.836,
+          "end": 53.464,
+          "reading": "のぼり"
+        },
+        {
+          "text": "、",
+          "start": 53.464,
+          "end": 54.092
+        },
+        {
+          "text": "輝く",
+          "start": 54.092,
+          "end": 54.72,
+          "reading": "かがやく"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 54.72,
+      "end": 56.78,
+      "text": "まだ終わっていない",
+      "singableText": "まだ終わっていない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "まだ",
+          "start": 54.72,
+          "end": 55.407
+        },
+        {
+          "text": "終わ",
+          "start": 55.407,
+          "end": 56.093,
+          "reading": "おわ"
+        },
+        {
+          "text": "っていない",
+          "start": 56.093,
+          "end": 56.78
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 56.78,
+      "end": 60.16,
+      "text": "私はまだ変わり続けている",
+      "singableText": "私はまだ変わり続けている",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "私",
+          "start": 56.78,
+          "end": 57.456,
+          "reading": "わたし"
+        },
+        {
+          "text": "はまだ",
+          "start": 57.456,
+          "end": 58.132
+        },
+        {
+          "text": "変わり",
+          "start": 58.132,
+          "end": 58.808,
+          "reading": "かわり"
+        },
+        {
+          "text": "続け",
+          "start": 58.808,
+          "end": 59.484,
+          "reading": "つづけ"
+        },
+        {
+          "text": "ている",
+          "start": 59.484,
+          "end": 60.16
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 812401 using full-mix and vocal-stem medium/large-v3 ASR, including no-VAD passes. Planned lines after the rendered ending are omitted. Sound-close intended wording is restored where stronger than ASR guesses.",
+    "correctionPacket": "data/creative_projects/best-am-i-20260712/correction_packets/selected-seed812401-20260712-121122/CORRECTION_PACKET.md"
+  }
+}

@@ -1,0 +1,1109 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "best-am-i",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 0.0,
+      "end": 5.08,
+      "text": "我是最好的我，我仍在成为",
+      "singableText": "我是最好的我，我仍在成为",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 0.0,
+          "end": 0.423,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 0.423,
+          "end": 0.847,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "最",
+          "start": 0.847,
+          "end": 1.27,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "好",
+          "start": 1.27,
+          "end": 1.693,
+          "pinyin": "hao3"
+        },
+        {
+          "text": "的",
+          "start": 1.693,
+          "end": 2.117,
+          "pinyin": "de5"
+        },
+        {
+          "text": "我",
+          "start": 2.117,
+          "end": 2.54,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "，",
+          "start": 2.54,
+          "end": 2.963
+        },
+        {
+          "text": "我",
+          "start": 2.963,
+          "end": 3.387,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "仍",
+          "start": 3.387,
+          "end": 3.81,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "在",
+          "start": 3.81,
+          "end": 4.233,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "成",
+          "start": 4.233,
+          "end": 4.657,
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "为",
+          "start": 4.657,
+          "end": 5.08,
+          "pinyin": "wei4"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 5.08,
+      "end": 10.32,
+      "text": "我是天下第一等",
+      "singableText": "我是天下第一等",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 5.08,
+          "end": 5.829,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 5.829,
+          "end": 6.577,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "天",
+          "start": 6.577,
+          "end": 7.326,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "下",
+          "start": 7.326,
+          "end": 8.074,
+          "pinyin": "xia4"
+        },
+        {
+          "text": "第",
+          "start": 8.074,
+          "end": 8.823,
+          "pinyin": "di4"
+        },
+        {
+          "text": "一",
+          "start": 8.823,
+          "end": 9.571,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "等",
+          "start": 9.571,
+          "end": 10.32,
+          "pinyin": "deng3"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 11.0,
+      "end": 12.82,
+      "text": "我还能继续",
+      "singableText": "我还能继续",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 11.0,
+          "end": 11.364,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "还",
+          "start": 11.364,
+          "end": 11.728,
+          "pinyin": "hai2"
+        },
+        {
+          "text": "能",
+          "start": 11.728,
+          "end": 12.092,
+          "pinyin": "neng2"
+        },
+        {
+          "text": "继",
+          "start": 12.092,
+          "end": 12.456,
+          "pinyin": "ji4"
+        },
+        {
+          "text": "续",
+          "start": 12.456,
+          "end": 12.82,
+          "pinyin": "xu4"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 12.82,
+      "end": 16.32,
+      "text": "我曾在天空下很渺小",
+      "singableText": "我曾在天空下很渺小",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 12.82,
+          "end": 13.209,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "曾",
+          "start": 13.209,
+          "end": 13.598,
+          "pinyin": "ceng2"
+        },
+        {
+          "text": "在",
+          "start": 13.598,
+          "end": 13.987,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "天",
+          "start": 13.987,
+          "end": 14.376,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "空",
+          "start": 14.376,
+          "end": 14.764,
+          "pinyin": "kong1"
+        },
+        {
+          "text": "下",
+          "start": 14.764,
+          "end": 15.153,
+          "pinyin": "xia4"
+        },
+        {
+          "text": "很",
+          "start": 15.153,
+          "end": 15.542,
+          "pinyin": "hen3"
+        },
+        {
+          "text": "渺",
+          "start": 15.542,
+          "end": 15.931,
+          "pinyin": "miao3"
+        },
+        {
+          "text": "小",
+          "start": 15.931,
+          "end": 16.32,
+          "pinyin": "xiao3"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 16.32,
+      "end": 18.82,
+      "text": "仍守着一点火光",
+      "singableText": "仍守着一点火光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "仍",
+          "start": 16.32,
+          "end": 16.677,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "守",
+          "start": 16.677,
+          "end": 17.034,
+          "pinyin": "shou3"
+        },
+        {
+          "text": "着",
+          "start": 17.034,
+          "end": 17.391,
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "一",
+          "start": 17.391,
+          "end": 17.749,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "点",
+          "start": 17.749,
+          "end": 18.106,
+          "pinyin": "dian3"
+        },
+        {
+          "text": "火",
+          "start": 18.106,
+          "end": 18.463,
+          "pinyin": "huo3"
+        },
+        {
+          "text": "光",
+          "start": 18.463,
+          "end": 18.82,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 18.82,
+      "end": 21.0,
+      "text": "谁也看不见的眼泪",
+      "singableText": "谁也看不见的眼泪",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "谁",
+          "start": 18.82,
+          "end": 19.093,
+          "pinyin": "shui2"
+        },
+        {
+          "text": "也",
+          "start": 19.093,
+          "end": 19.365,
+          "pinyin": "ye3"
+        },
+        {
+          "text": "看",
+          "start": 19.365,
+          "end": 19.637,
+          "pinyin": "kan4"
+        },
+        {
+          "text": "不",
+          "start": 19.637,
+          "end": 19.91,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "见",
+          "start": 19.91,
+          "end": 20.183,
+          "pinyin": "jian4"
+        },
+        {
+          "text": "的",
+          "start": 20.183,
+          "end": 20.455,
+          "pinyin": "de5"
+        },
+        {
+          "text": "眼",
+          "start": 20.455,
+          "end": 20.727,
+          "pinyin": "yan3"
+        },
+        {
+          "text": "泪",
+          "start": 20.727,
+          "end": 21.0,
+          "pinyin": "lei4"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 21.52,
+      "end": 23.34,
+      "text": "夜里有光在",
+      "singableText": "夜里有光在",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "夜",
+          "start": 21.52,
+          "end": 21.884,
+          "pinyin": "ye4"
+        },
+        {
+          "text": "里",
+          "start": 21.884,
+          "end": 22.248,
+          "pinyin": "li3"
+        },
+        {
+          "text": "有",
+          "start": 22.248,
+          "end": 22.612,
+          "pinyin": "you3"
+        },
+        {
+          "text": "光",
+          "start": 22.612,
+          "end": 22.976,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "在",
+          "start": 22.976,
+          "end": 23.34,
+          "pinyin": "zai4"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 23.34,
+      "end": 26.3,
+      "text": "我不需要王冠",
+      "singableText": "我不需要王冠",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 23.34,
+          "end": 23.833,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "不",
+          "start": 23.833,
+          "end": 24.327,
+          "pinyin": "bu4"
+        },
+        {
+          "text": "需",
+          "start": 24.327,
+          "end": 24.82,
+          "pinyin": "xu1"
+        },
+        {
+          "text": "要",
+          "start": 24.82,
+          "end": 25.313,
+          "pinyin": "yao4"
+        },
+        {
+          "text": "王",
+          "start": 25.313,
+          "end": 25.807,
+          "pinyin": "wang2"
+        },
+        {
+          "text": "冠",
+          "start": 25.807,
+          "end": 26.3,
+          "pinyin": "guan1"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 26.3,
+      "end": 29.1,
+      "text": "我只需要自己的名字",
+      "singableText": "我只需要自己的名字",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 26.3,
+          "end": 26.611,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "只",
+          "start": 26.611,
+          "end": 26.922,
+          "pinyin": "zhi3"
+        },
+        {
+          "text": "需",
+          "start": 26.922,
+          "end": 27.233,
+          "pinyin": "xu1"
+        },
+        {
+          "text": "要",
+          "start": 27.233,
+          "end": 27.544,
+          "pinyin": "yao4"
+        },
+        {
+          "text": "自",
+          "start": 27.544,
+          "end": 27.856,
+          "pinyin": "zi4"
+        },
+        {
+          "text": "己",
+          "start": 27.856,
+          "end": 28.167,
+          "pinyin": "ji3"
+        },
+        {
+          "text": "的",
+          "start": 28.167,
+          "end": 28.478,
+          "pinyin": "de5"
+        },
+        {
+          "text": "名",
+          "start": 28.478,
+          "end": 28.789,
+          "pinyin": "ming2"
+        },
+        {
+          "text": "字",
+          "start": 28.789,
+          "end": 29.1,
+          "pinyin": "zi4"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 29.1,
+      "end": 33.56,
+      "text": "我就站在这里，升起，发光",
+      "singableText": "我就站在这里，升起，发光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 29.1,
+          "end": 29.472,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "就",
+          "start": 29.472,
+          "end": 29.843,
+          "pinyin": "jiu4"
+        },
+        {
+          "text": "站",
+          "start": 29.843,
+          "end": 30.215,
+          "pinyin": "zhan4"
+        },
+        {
+          "text": "在",
+          "start": 30.215,
+          "end": 30.587,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "这",
+          "start": 30.587,
+          "end": 30.958,
+          "pinyin": "zhe4"
+        },
+        {
+          "text": "里",
+          "start": 30.958,
+          "end": 31.33,
+          "pinyin": "li3"
+        },
+        {
+          "text": "，",
+          "start": 31.33,
+          "end": 31.702
+        },
+        {
+          "text": "升",
+          "start": 31.702,
+          "end": 32.073,
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "起",
+          "start": 32.073,
+          "end": 32.445,
+          "pinyin": "qi3"
+        },
+        {
+          "text": "，",
+          "start": 32.445,
+          "end": 32.817
+        },
+        {
+          "text": "发",
+          "start": 32.817,
+          "end": 33.188,
+          "pinyin": "fa1"
+        },
+        {
+          "text": "光",
+          "start": 33.188,
+          "end": 33.56,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 33.56,
+      "end": 37.66,
+      "text": "我是最好的我，最好的我，最好的我",
+      "singableText": "我是最好的我，最好的我，最好的我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 33.56,
+          "end": 33.816,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 33.816,
+          "end": 34.073,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "最",
+          "start": 34.073,
+          "end": 34.329,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "好",
+          "start": 34.329,
+          "end": 34.585,
+          "pinyin": "hao3"
+        },
+        {
+          "text": "的",
+          "start": 34.585,
+          "end": 34.841,
+          "pinyin": "de5"
+        },
+        {
+          "text": "我",
+          "start": 34.841,
+          "end": 35.097,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "，",
+          "start": 35.097,
+          "end": 35.354
+        },
+        {
+          "text": "最",
+          "start": 35.354,
+          "end": 35.61,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "好",
+          "start": 35.61,
+          "end": 35.866,
+          "pinyin": "hao3"
+        },
+        {
+          "text": "的",
+          "start": 35.866,
+          "end": 36.123,
+          "pinyin": "de5"
+        },
+        {
+          "text": "我",
+          "start": 36.123,
+          "end": 36.379,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "，",
+          "start": 36.379,
+          "end": 36.635
+        },
+        {
+          "text": "最",
+          "start": 36.635,
+          "end": 36.891,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "好",
+          "start": 36.891,
+          "end": 37.147,
+          "pinyin": "hao3"
+        },
+        {
+          "text": "的",
+          "start": 37.147,
+          "end": 37.404,
+          "pinyin": "de5"
+        },
+        {
+          "text": "我",
+          "start": 37.404,
+          "end": 37.66,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 37.66,
+      "end": 40.28,
+      "text": "我是天下第一等",
+      "singableText": "我是天下第一等",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 37.66,
+          "end": 38.034,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 38.034,
+          "end": 38.409,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "天",
+          "start": 38.409,
+          "end": 38.783,
+          "pinyin": "tian1"
+        },
+        {
+          "text": "下",
+          "start": 38.783,
+          "end": 39.157,
+          "pinyin": "xia4"
+        },
+        {
+          "text": "第",
+          "start": 39.157,
+          "end": 39.531,
+          "pinyin": "di4"
+        },
+        {
+          "text": "一",
+          "start": 39.531,
+          "end": 39.906,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "等",
+          "start": 39.906,
+          "end": 40.28,
+          "pinyin": "deng3"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 40.28,
+      "end": 45.26,
+      "text": "心里的光还没熄灭，我仍在成为",
+      "singableText": "心里的光还没熄灭，我仍在成为",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "心",
+          "start": 40.28,
+          "end": 40.636,
+          "pinyin": "xin1"
+        },
+        {
+          "text": "里",
+          "start": 40.636,
+          "end": 40.991,
+          "pinyin": "li3"
+        },
+        {
+          "text": "的",
+          "start": 40.991,
+          "end": 41.347,
+          "pinyin": "de5"
+        },
+        {
+          "text": "光",
+          "start": 41.347,
+          "end": 41.703,
+          "pinyin": "guang1"
+        },
+        {
+          "text": "还",
+          "start": 41.703,
+          "end": 42.059,
+          "pinyin": "hai2"
+        },
+        {
+          "text": "没",
+          "start": 42.059,
+          "end": 42.414,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "熄",
+          "start": 42.414,
+          "end": 42.77,
+          "pinyin": "xi1"
+        },
+        {
+          "text": "灭",
+          "start": 42.77,
+          "end": 43.126,
+          "pinyin": "mie4"
+        },
+        {
+          "text": "，",
+          "start": 43.126,
+          "end": 43.481
+        },
+        {
+          "text": "我",
+          "start": 43.481,
+          "end": 43.837,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "仍",
+          "start": 43.837,
+          "end": 44.193,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "在",
+          "start": 44.193,
+          "end": 44.549,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "成",
+          "start": 44.549,
+          "end": 44.904,
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "为",
+          "start": 44.904,
+          "end": 45.26,
+          "pinyin": "wei4"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 45.78,
+      "end": 49.0,
+      "text": "我是最好的我，最好的我",
+      "singableText": "我是最好的我，最好的我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 45.78,
+          "end": 46.073,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "是",
+          "start": 46.073,
+          "end": 46.365,
+          "pinyin": "shi4"
+        },
+        {
+          "text": "最",
+          "start": 46.365,
+          "end": 46.658,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "好",
+          "start": 46.658,
+          "end": 46.951,
+          "pinyin": "hao3"
+        },
+        {
+          "text": "的",
+          "start": 46.951,
+          "end": 47.244,
+          "pinyin": "de5"
+        },
+        {
+          "text": "我",
+          "start": 47.244,
+          "end": 47.536,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "，",
+          "start": 47.536,
+          "end": 47.829
+        },
+        {
+          "text": "最",
+          "start": 47.829,
+          "end": 48.122,
+          "pinyin": "zui4"
+        },
+        {
+          "text": "好",
+          "start": 48.122,
+          "end": 48.415,
+          "pinyin": "hao3"
+        },
+        {
+          "text": "的",
+          "start": 48.415,
+          "end": 48.707,
+          "pinyin": "de5"
+        },
+        {
+          "text": "我",
+          "start": 48.707,
+          "end": 49.0,
+          "pinyin": "wo3"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 49.0,
+      "end": 51.58,
+      "text": "我有我的第一等",
+      "singableText": "我有我的第一等",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 49.0,
+          "end": 49.369,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "有",
+          "start": 49.369,
+          "end": 49.737,
+          "pinyin": "you3"
+        },
+        {
+          "text": "我",
+          "start": 49.737,
+          "end": 50.106,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "的",
+          "start": 50.106,
+          "end": 50.474,
+          "pinyin": "de5"
+        },
+        {
+          "text": "第",
+          "start": 50.474,
+          "end": 50.843,
+          "pinyin": "di4"
+        },
+        {
+          "text": "一",
+          "start": 50.843,
+          "end": 51.211,
+          "pinyin": "yi1"
+        },
+        {
+          "text": "等",
+          "start": 51.211,
+          "end": 51.58,
+          "pinyin": "deng3"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 51.58,
+      "end": 54.72,
+      "text": "我升起，我发光",
+      "singableText": "我升起，我发光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 51.58,
+          "end": 52.029,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "升",
+          "start": 52.029,
+          "end": 52.477,
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "起",
+          "start": 52.477,
+          "end": 52.926,
+          "pinyin": "qi3"
+        },
+        {
+          "text": "，",
+          "start": 52.926,
+          "end": 53.374
+        },
+        {
+          "text": "我",
+          "start": 53.374,
+          "end": 53.823,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "发",
+          "start": 53.823,
+          "end": 54.271,
+          "pinyin": "fa1"
+        },
+        {
+          "text": "光",
+          "start": 54.271,
+          "end": 54.72,
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 54.72,
+      "end": 56.78,
+      "text": "我还没有结束",
+      "singableText": "我还没有结束",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 54.72,
+          "end": 55.063,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "还",
+          "start": 55.063,
+          "end": 55.407,
+          "pinyin": "hai2"
+        },
+        {
+          "text": "没",
+          "start": 55.407,
+          "end": 55.75,
+          "pinyin": "mei2"
+        },
+        {
+          "text": "有",
+          "start": 55.75,
+          "end": 56.093,
+          "pinyin": "you3"
+        },
+        {
+          "text": "结",
+          "start": 56.093,
+          "end": 56.437,
+          "pinyin": "jie2"
+        },
+        {
+          "text": "束",
+          "start": 56.437,
+          "end": 56.78,
+          "pinyin": "shu4"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 56.78,
+      "end": 60.16,
+      "text": "我仍在成为",
+      "singableText": "我仍在成为",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 56.78,
+          "end": 57.456,
+          "pinyin": "wo3"
+        },
+        {
+          "text": "仍",
+          "start": 57.456,
+          "end": 58.132,
+          "pinyin": "reng2"
+        },
+        {
+          "text": "在",
+          "start": 58.132,
+          "end": 58.808,
+          "pinyin": "zai4"
+        },
+        {
+          "text": "成",
+          "start": 58.808,
+          "end": 59.484,
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "为",
+          "start": 59.484,
+          "end": 60.16,
+          "pinyin": "wei4"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "mixed-vocal",
+    "correction": "Corrected from selected ACE XL Turbo seed 812401 using full-mix and vocal-stem medium/large-v3 ASR, including no-VAD passes. Planned lines after the rendered ending are omitted. Sound-close intended wording is restored where stronger than ASR guesses.",
+    "correctionPacket": "data/creative_projects/best-am-i-20260712/correction_packets/selected-seed812401-20260712-121122/CORRECTION_PACKET.md"
+  }
+}

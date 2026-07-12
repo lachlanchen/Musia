@@ -9,6 +9,31 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "best-am-i",
+      "kind": "song",
+      "title": "Best Am I · 我是天下第一等",
+      "artist": "Musia",
+      "summary": "A mixed English, Mandarin pinyin, and Japanese romaji motivational art-pop anthem about self-belief and becoming.",
+      "manifest": "data/songs/best-am-i/manifest.json",
+      "cover": "assets/covers/best-am-i-16x9.png",
+      "languages": [
+        "mul",
+        "en",
+        "zh-Hans",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "multilingual",
+        "anthem",
+        "self-belief",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "one-boat-moonlight-one-lamp",
       "kind": "song",
       "title": "一船明月一灯影 · One Boat of Moonlight",
