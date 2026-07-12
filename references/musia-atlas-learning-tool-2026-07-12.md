@@ -207,14 +207,17 @@ The coach uses:
 Atlas top layout in study mode:
 
 ```text
-left:   compact player
-middle: chord row + guitar fingering
-right:  current multilingual lyric carousel
+col 1: compact player
+col 2: chord row + guitar fingering
+col 3: current lyric line A
+col 4: current lyric line B
 ```
 
-This keeps the top area shorter so the rhythm/study cards appear higher on the
-page. The normal homepage player remains unchanged; Atlas moves the existing
-chord and fingering DOM into the middle card only in `study-mode`.
+The lyrics card spans the last two grid columns and renders the current two
+lyric rows side by side on desktop. This keeps the top area shorter so the
+rhythm/study cards appear higher on the page. The normal homepage player remains
+unchanged; Atlas moves the existing chord and fingering DOM into the middle card
+only in `study-mode`.
 
 Playback speed is display/practice behavior only. It does not rewrite audio,
 lyrics, chords, or Atlas source data. The page tries to preserve pitch when the
