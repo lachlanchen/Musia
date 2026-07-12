@@ -87,7 +87,7 @@
     {
       "id": "gong-bai-tou-snow-we-share-native",
       "kind": "song",
-      "title": "共白头 · Snow We Share",
+      "title": "共白头 · Snow We Share · Hidden Variant",
       "artist": "Musia",
       "summary": "A source-line Mandarin autumn-and-snow ballad using only the poem lines: 忽有故人心上过，回首山河已入秋，他朝若是同淋雪，此生也算共白头。",
       "manifest": "data/songs/gong-bai-tou-snow-we-share-native/manifest.json",
@@ -108,7 +108,8 @@
         "chords"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; keep the older published Snow We Share / 雪中回声 item visible."
+      "hiddenReason": "Hidden by quality curation; keep the older published Snow We Share / 雪中回声 item visible.",
+      "hiddenLabel": "Hidden Variant"
     },
     {
       "id": "gong-yin-chang-jiang-shui-mixed",
@@ -704,7 +705,7 @@
     {
       "id": "qiang-jin-jiu-normal-song",
       "kind": "song",
-      "title": "将进酒",
+      "title": "将进酒 · Hidden Variant",
       "artist": "Musia",
       "summary": "The normal-song ACE-Step Mandarin adaptation of Li Bai's 将进酒, with corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/qiang-jin-jiu-normal-song/manifest.json",
@@ -725,7 +726,8 @@
         "furigana"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; only original-poem version remains visible."
+      "hiddenReason": "Hidden by quality curation; only original-poem version remains visible.",
+      "hiddenLabel": "Hidden Variant"
     },
     {
       "id": "qiang-jin-jiu-original-poem",
