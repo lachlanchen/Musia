@@ -40,6 +40,10 @@ const state = {
   studyTranspose: 0,
   studyCapo: 0,
   studySimplify: false,
+  studySpeed: 1,
+  studyRhythmMode: "strum",
+  studyRhythmPattern: "fourPart",
+  studyRhythmRenderKey: "",
   studyChordRenderKey: "",
   studyBeatRenderKey: "",
   playbackSyncFrame: 0,
@@ -62,6 +66,66 @@ const PLAYBACK_MODES = [
   { id: "shuffle", label: "Shuffle", title: "Play a random song when this one ends" },
   { id: "single", label: "Loop 1", title: "Loop the current song" }
 ];
+
+const RHYTHM_PATTERNS = {
+  fourPart: {
+    mode: "strum",
+    label: "Four-part: D U D U",
+    note: "Divide each chord into four equal parts. Move your foot down-up-down-up and change chord at the next chord card.",
+    steps: [
+      { count: "1", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "2", action: "Up", direction: "up", strings: [1, 2, 3, 4] },
+      { count: "3", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "4", action: "Up", direction: "up", strings: [1, 2, 3, 4] }
+    ]
+  },
+  downFour: {
+    mode: "strum",
+    label: "Beginner: D D D D",
+    note: "Use this when chord changes are hard. Strum down four times per chord and keep the hand moving.",
+    steps: [
+      { count: "1", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "2", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "3", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "4", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] }
+    ]
+  },
+  popSix: {
+    mode: "strum",
+    label: "Pop: D D U U D U",
+    note: "A common pop pattern. If it feels rushed, use 70% speed first.",
+    steps: [
+      { count: "1", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "2", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "&", action: "Up", direction: "up", strings: [1, 2, 3, 4] },
+      { count: "3", action: "Up", direction: "up", strings: [1, 2, 3, 4] },
+      { count: "4", action: "Down", direction: "down", strings: [6, 5, 4, 3, 2, 1] },
+      { count: "&", action: "Up", direction: "up", strings: [1, 2, 3, 4] }
+    ]
+  },
+  bassThreeTwoOne: {
+    mode: "fingerpick",
+    label: "Fingerpick: Bass 3 2 1",
+    note: "Thumb plays bass, then fingers walk upward. Good for slow songs and speaking lyrics before singing.",
+    steps: [
+      { count: "1", action: "Bass", direction: "pluck", strings: [5, 6] },
+      { count: "2", action: "String 3", direction: "pluck", strings: [3] },
+      { count: "3", action: "String 2", direction: "pluck", strings: [2] },
+      { count: "4", action: "String 1", direction: "pluck", strings: [1] }
+    ]
+  },
+  pima: {
+    mode: "fingerpick",
+    label: "Fingerpick: P I M A",
+    note: "Classical-style thumb, index, middle, ring. Use it as a gentle arpeggio, not as a strict performance claim.",
+    steps: [
+      { count: "P", action: "Thumb", direction: "pluck", strings: [5, 6] },
+      { count: "I", action: "Index", direction: "pluck", strings: [3] },
+      { count: "M", action: "Middle", direction: "pluck", strings: [2] },
+      { count: "A", action: "Ring", direction: "pluck", strings: [1] }
+    ]
+  }
+};
 
 const NOTE_FRETS = {
   E: 0,
@@ -408,11 +472,126 @@ function renderStudyControls() {
   const transpose = $("study-transpose");
   const capo = $("study-capo");
   const simplify = $("study-simplify");
+  const speed = $("study-speed");
+  const mode = $("study-rhythm-mode");
+  const pattern = $("study-rhythm-pattern");
   if (transpose) transpose.value = String(state.studyTranspose);
   if (capo) capo.value = String(state.studyCapo);
+  if (speed) speed.value = String(state.studySpeed);
   if (simplify) {
     simplify.setAttribute("aria-pressed", state.studySimplify ? "true" : "false");
     simplify.classList.toggle("active", state.studySimplify);
+  }
+  if (mode) mode.value = state.studyRhythmMode;
+  if (pattern) {
+    const options = state.studyRhythmMode === "off" ? "" : Object.entries(RHYTHM_PATTERNS)
+      .filter(([, item]) => item.mode === state.studyRhythmMode)
+      .map(([id, item]) => `<option value="${escapeHtml(id)}">${escapeHtml(item.label)}</option>`)
+      .join("");
+    pattern.innerHTML = options || `<option value="">No pattern</option>`;
+    if (!RHYTHM_PATTERNS[state.studyRhythmPattern] || RHYTHM_PATTERNS[state.studyRhythmPattern]?.mode !== state.studyRhythmMode) {
+      state.studyRhythmPattern = state.studyRhythmMode === "fingerpick" ? "bassThreeTwoOne" : "fourPart";
+    }
+    pattern.value = state.studyRhythmPattern;
+    pattern.disabled = state.studyRhythmMode === "off";
+  }
+}
+
+function applyStudySpeed() {
+  const rate = Math.min(1.25, Math.max(0.35, Number(state.studySpeed) || 1));
+  state.studySpeed = rate;
+  [audio, video, state.mediaElement].filter(Boolean).forEach((element) => {
+    element.playbackRate = rate;
+    if ("preservesPitch" in element) element.preservesPitch = true;
+    if ("mozPreservesPitch" in element) element.mozPreservesPitch = true;
+    if ("webkitPreservesPitch" in element) element.webkitPreservesPitch = true;
+  });
+  updateMediaSessionPosition();
+}
+
+function rhythmPattern() {
+  if (state.studyRhythmMode === "off") return null;
+  const current = RHYTHM_PATTERNS[state.studyRhythmPattern];
+  if (current && current.mode === state.studyRhythmMode) return current;
+  const fallbackId = state.studyRhythmMode === "fingerpick" ? "bassThreeTwoOne" : "fourPart";
+  state.studyRhythmPattern = fallbackId;
+  return RHYTHM_PATTERNS[fallbackId];
+}
+
+function rhythmState(activeChord, beatGrid, time) {
+  const pattern = rhythmPattern();
+  if (!pattern) return null;
+  const steps = pattern.steps || [];
+  if (!steps.length) return null;
+  let start = Number(activeChord?.start);
+  let end = Number(activeChord?.end);
+  let source = "chord";
+  if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) {
+    const beat = window.Musia?.activeBeatAt(beatGrid, time);
+    const beatIndex = beatGrid.findIndex((item) => item.index === beat?.index && Math.abs(item.time - beat.time) < 0.001);
+    const nextBeat = beatIndex >= 0 ? beatGrid[beatIndex + 1] : null;
+    start = Number(beat?.time);
+    end = Number(nextBeat?.time);
+    source = "beat";
+  }
+  if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return null;
+  const progress = Math.min(0.999, Math.max(0, (Number(time) - start) / (end - start)));
+  const index = Math.min(steps.length - 1, Math.floor(progress * steps.length));
+  return {
+    pattern,
+    step: steps[index],
+    stepIndex: index,
+    progress,
+    source,
+    start,
+    end
+  };
+}
+
+function renderRhythmCoach(activeChord, beatGrid, time) {
+  const title = $("study-rhythm-title");
+  if (!title) return;
+  const stateInfo = rhythmState(activeChord, beatGrid, time);
+  const stepList = $("study-rhythm-steps");
+  const note = $("study-rhythm-note");
+  const sweep = $("strum-sweep");
+  const strings = Array.from(document.querySelectorAll(".guitar-string-line"));
+  if (!stateInfo) {
+    title.textContent = state.studyRhythmMode === "off" ? "Rhythm coach off" : "Waiting for timing";
+    $("study-rhythm-count").textContent = "–";
+    $("study-rhythm-action").textContent = state.studyRhythmMode === "off" ? "Optional" : "Listen";
+    if (stepList) stepList.innerHTML = "";
+    if (note) note.textContent = "Turn the coach on when you want strum or fingerpicking guidance.";
+    if (sweep) sweep.hidden = true;
+    strings.forEach((string) => string.classList.remove("active", "pluck"));
+    return;
+  }
+
+  const { pattern, step, stepIndex, progress, source } = stateInfo;
+  const stepProgress = (progress * pattern.steps.length) - stepIndex;
+  const sweepY = step.direction === "up" ? (82 - stepProgress * 62) : (20 + stepProgress * 62);
+  title.textContent = `${pattern.label} · ${source === "chord" ? "per chord" : "per beat"}`;
+  $("study-rhythm-count").textContent = step.count;
+  $("study-rhythm-action").textContent = step.action;
+  if (note) note.textContent = `${pattern.note} Playback speed: ${Math.round(state.studySpeed * 100)}%.`;
+  if (sweep) {
+    sweep.hidden = false;
+    sweep.style.top = `${Math.max(14, Math.min(86, sweepY))}%`;
+    sweep.classList.toggle("up", step.direction === "up");
+    sweep.classList.toggle("pluck", step.direction === "pluck");
+  }
+  const activeStrings = new Set(step.strings || []);
+  strings.forEach((string) => {
+    const active = activeStrings.has(Number(string.dataset.string));
+    string.classList.toggle("active", active);
+    string.classList.toggle("pluck", active && step.direction === "pluck");
+  });
+  if (stepList) {
+    stepList.innerHTML = pattern.steps.map((item, index) => `
+      <span class="${index === stepIndex ? "active" : ""}">
+        <strong>${escapeHtml(item.count)}</strong>${escapeHtml(item.action)}
+      </span>
+    `).join("");
   }
 }
 
@@ -463,6 +642,7 @@ function renderStudyPanel(activeLine = null, activeChord = null, time = 0) {
       <span>${beat.beatInBar}</span>
     </button>
   `).join("");
+  renderRhythmCoach(activeChord, beatGrid, time);
 
   const chordList = chords();
   const activeChordIndex = activeChord ? chordList.findIndex((chord) =>
@@ -1132,6 +1312,7 @@ function setMediaSource(asset, keepTime = false) {
     state.mediaElement.crossOrigin = asset.crossOrigin || "anonymous";
   }
   state.mediaElement.src = resolveSitePath(asset.src);
+  applyStudySpeed();
   if (keepTime) state.mediaElement.currentTime = Math.min(previousTime, (state.manifest.duration || previousTime) - 0.1);
   if (wasPlaying) state.mediaElement.play().catch((error) => console.warn("Playback after asset switch was blocked.", error));
   applyActiveLyricSet();
@@ -1675,6 +1856,25 @@ function bindEvents() {
   $("study-simplify")?.addEventListener("click", () => {
     state.studySimplify = !state.studySimplify;
     state.advancedChordRenderKey = "";
+    renderStudyControls();
+    updateSync();
+  });
+  $("study-speed")?.addEventListener("change", () => {
+    state.studySpeed = Number($("study-speed").value) || 1;
+    applyStudySpeed();
+    renderStudyControls();
+    updateSync();
+  });
+  $("study-rhythm-mode")?.addEventListener("change", () => {
+    state.studyRhythmMode = $("study-rhythm-mode").value || "off";
+    if (state.studyRhythmMode === "fingerpick") state.studyRhythmPattern = "bassThreeTwoOne";
+    if (state.studyRhythmMode === "strum") state.studyRhythmPattern = "fourPart";
+    renderStudyControls();
+    updateSync();
+  });
+  $("study-rhythm-pattern")?.addEventListener("change", () => {
+    const next = $("study-rhythm-pattern").value;
+    if (RHYTHM_PATTERNS[next]) state.studyRhythmPattern = next;
     renderStudyControls();
     updateSync();
   });

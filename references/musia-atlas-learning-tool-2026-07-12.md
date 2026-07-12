@@ -159,6 +159,60 @@ The matcher is conservative: if a beat-analysis run cannot be strongly matched
 to the media id, asset id, or audio filename, Atlas uses BPM-estimated beats
 instead of borrowing another song's run.
 
+## Rhythm Coach
+
+Atlas now includes an optional beginner rhythm coach:
+
+- `Off`
+- `Strum`
+- `Fingerpick`
+
+The first practical model is intentionally simple. It is designed for a learner
+who does not yet know how to feel rhythm or sing while playing guitar.
+
+Default strum pattern:
+
+```text
+1  2  3  4
+D  U  D  U
+```
+
+This maps to the user's memory from guitar class: keep the hand or foot moving
+down-up-down-up, and divide each active chord span into four practice parts.
+
+Other included practice patterns:
+
+```text
+D D D D
+D D U U D U
+Bass 3 2 1
+P I M A
+```
+
+Important quality rule:
+
+```text
+Rhythm coach pattern = practice guide, not verified original strumming.
+```
+
+The coach uses:
+
+1.  active chord start/end timing when available;
+2.  beat timing as fallback;
+3.  browser playback speed control for slow practice.
+
+Playback speed is display/practice behavior only. It does not rewrite audio,
+lyrics, chords, or Atlas source data. The page tries to preserve pitch when the
+browser supports it.
+
+Future deep-analysis work can add:
+
+- downbeat detection confidence;
+- section-specific strumming suggestions;
+- melody-entry cues from F0/MIDI;
+- GPU-assisted rhythm/chord/melody reanalysis;
+- optional symbolic notation or tab rendering when Musia has reliable data.
+
 ## Future Upgrades
 
 - Add a human-audited lead-sheet layer with confidence `verified`.

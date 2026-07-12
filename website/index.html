@@ -196,6 +196,17 @@
             </select>
           </label>
           <button id="study-simplify" class="study-toggle" type="button" aria-pressed="false">Simplify</button>
+          <label>
+            <span>Speed</span>
+            <select id="study-speed">
+              <option value="0.5">50%</option>
+              <option value="0.6">60%</option>
+              <option value="0.7">70%</option>
+              <option value="0.8">80%</option>
+              <option value="0.9">90%</option>
+              <option value="1" selected>100%</option>
+            </select>
+          </label>
         </div>
       </div>
 
@@ -212,6 +223,46 @@
           <h3 id="study-beat-title">Tempo</h3>
           <div id="study-beat-lane" class="beat-lane"></div>
           <p id="study-beat-note" class="study-note"></p>
+        </article>
+
+        <article class="study-card study-rhythm-card">
+          <div class="study-card-head">
+            <div>
+              <span class="eyebrow">Rhythm coach</span>
+              <h3 id="study-rhythm-title">Strum map</h3>
+            </div>
+            <div class="rhythm-selects" aria-label="Rhythm coach controls">
+              <label>
+                <span>Mode</span>
+                <select id="study-rhythm-mode">
+                  <option value="off">Off</option>
+                  <option value="strum" selected>Strum</option>
+                  <option value="fingerpick">Fingerpick</option>
+                </select>
+              </label>
+              <label>
+                <span>Pattern</span>
+                <select id="study-rhythm-pattern"></select>
+              </label>
+            </div>
+          </div>
+          <div class="strum-visual" aria-label="Guitar string rhythm visualization">
+            <div class="strum-count">
+              <strong id="study-rhythm-count">1</strong>
+              <span id="study-rhythm-action">Down</span>
+            </div>
+            <div id="string-bed" class="string-bed">
+              <span class="guitar-string-line" data-string="6"></span>
+              <span class="guitar-string-line" data-string="5"></span>
+              <span class="guitar-string-line" data-string="4"></span>
+              <span class="guitar-string-line" data-string="3"></span>
+              <span class="guitar-string-line" data-string="2"></span>
+              <span class="guitar-string-line" data-string="1"></span>
+              <span id="strum-sweep" class="strum-sweep"></span>
+            </div>
+          </div>
+          <div id="study-rhythm-steps" class="rhythm-steps"></div>
+          <p id="study-rhythm-note" class="study-note">Use this as a practice guide. If the exact rhythm feels wrong, slow the song and strum once per chord first.</p>
         </article>
 
         <article class="study-card study-chord-card">

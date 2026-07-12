@@ -1142,6 +1142,14 @@ rt {
   line-height: 1.08;
 }
 
+.study-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
 .study-now {
   background:
     linear-gradient(135deg, rgba(228,244,241,.84), rgba(255,255,255,.8)),
@@ -1207,6 +1215,205 @@ rt {
   border-color: transparent;
   color: #fff;
   box-shadow: 0 10px 24px rgba(45,143,131,.22);
+}
+
+.study-rhythm-card {
+  grid-column: 1 / -1;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(197,106,118,.12), transparent 32%),
+    linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,247,237,.92));
+}
+
+.rhythm-selects {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rhythm-selects label {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.rhythm-selects span {
+  color: var(--muted);
+}
+
+.rhythm-selects select {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+}
+
+.strum-visual {
+  display: grid;
+  grid-template-columns: minmax(92px, 120px) minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+  margin-bottom: 12px;
+}
+
+.strum-count {
+  min-height: 154px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(45,143,131,.16);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(228,244,241,.82), rgba(255,255,255,.78));
+}
+
+.strum-count strong,
+.strum-count span {
+  display: block;
+  text-align: center;
+}
+
+.strum-count strong {
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: .85;
+  color: var(--teal);
+}
+
+.strum-count span {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 950;
+}
+
+.string-bed {
+  position: relative;
+  min-height: 154px;
+  border: 1px solid rgba(185,133,36,.2);
+  border-radius: 22px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.86), rgba(255,247,237,.76)),
+    repeating-linear-gradient(90deg, rgba(45,143,131,.04) 0 1px, transparent 1px 44px);
+  overflow: hidden;
+}
+
+.string-bed::before,
+.string-bed::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  width: 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--gold), #d5af63);
+  box-shadow: 0 8px 18px rgba(185,133,36,.18);
+}
+
+.string-bed::before {
+  left: 20px;
+}
+
+.string-bed::after {
+  right: 20px;
+}
+
+.guitar-string-line {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(111,123,117,.38), rgba(23,33,29,.68), rgba(111,123,117,.38));
+  transform-origin: center;
+  transition: transform .12s ease, height .12s ease, background .12s ease, box-shadow .12s ease;
+}
+
+.guitar-string-line:nth-child(1) { top: 20%; height: 3px; }
+.guitar-string-line:nth-child(2) { top: 32%; height: 2.6px; }
+.guitar-string-line:nth-child(3) { top: 44%; height: 2.2px; }
+.guitar-string-line:nth-child(4) { top: 56%; height: 2px; }
+.guitar-string-line:nth-child(5) { top: 68%; height: 1.8px; }
+.guitar-string-line:nth-child(6) { top: 80%; height: 1.6px; }
+
+.guitar-string-line.active {
+  background: linear-gradient(90deg, rgba(45,143,131,.28), var(--teal), rgba(185,133,36,.7));
+  box-shadow: 0 0 18px rgba(45,143,131,.24);
+  transform: translateY(-1px) scaleY(1.8);
+}
+
+.guitar-string-line.pluck {
+  background: linear-gradient(90deg, rgba(197,106,118,.22), var(--rose), rgba(185,133,36,.62));
+  transform: translateY(-2px) scaleX(1.01) scaleY(2.2);
+}
+
+.strum-sweep {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(45,143,131,.25), rgba(185,133,36,.42), transparent);
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: top .08s linear, opacity .12s ease;
+}
+
+.strum-sweep.up {
+  background: linear-gradient(90deg, transparent, rgba(197,106,118,.18), rgba(45,143,131,.36), transparent);
+}
+
+.strum-sweep.pluck {
+  width: 64px;
+  left: auto;
+  right: 54px;
+  background: radial-gradient(circle, rgba(197,106,118,.42), transparent 70%);
+}
+
+.rhythm-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.rhythm-steps span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.74);
+  color: var(--muted);
+  padding: 8px 12px;
+  font-weight: 900;
+}
+
+.rhythm-steps strong {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+.rhythm-steps span.active {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--teal), var(--gold));
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(45,143,131,.2);
+}
+
+.rhythm-steps span.active strong {
+  background: rgba(255,255,255,.9);
+  color: var(--gold);
 }
 
 .study-chord-list {
@@ -2514,6 +2721,13 @@ body.capture-mode.capture-portrait.capture-full-lyrics .full-row.instrumental-ro
   .study-controls {
     justify-content: flex-start;
   }
+  .study-card-head,
+  .strum-visual {
+    grid-template-columns: 1fr;
+  }
+  .study-card-head {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2566,6 +2780,16 @@ body.capture-mode.capture-portrait.capture-full-lyrics .full-row.instrumental-ro
   }
   .study-chord-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .rhythm-selects label {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .strum-count {
+    min-height: 112px;
+  }
+  .string-bed {
+    min-height: 132px;
   }
   .library-peek {
     left: 12px;
