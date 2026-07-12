@@ -39,6 +39,9 @@ const state = {
   advancedChordRenderKey: "",
   studyMode: false,
   studyData: null,
+  studySourceMediaId: "",
+  studySourceManifest: null,
+  studySourceManifestUrl: "",
   studyTranspose: 0,
   studyCapo: 0,
   studySimplify: false,
@@ -213,9 +216,9 @@ function resolveSitePath(path) {
   return new URL(path, window.location.href).href;
 }
 
-function resolveManifestPath(path) {
+function resolveManifestPath(path, manifestUrl = state.manifestUrl) {
   if (!path) return "";
-  return new URL(path, state.manifestUrl).href;
+  return new URL(path, manifestUrl).href;
 }
 
 function atlasMediaIdFromPath() {
@@ -229,6 +232,26 @@ function isStudyMode(params = new URLSearchParams(window.location.search)) {
 
 function studyPathForMedia(id = state.activeMediaId) {
   return id ? `?mode=atlas&media=${encodeURIComponent(id)}` : "?mode=atlas";
+}
+
+function atlasConfig(manifest = state.manifest) {
+  return manifest?.atlas || manifest?.study || {};
+}
+
+function atlasSourceMediaId(manifest = state.manifest, fallback = "") {
+  const config = atlasConfig(manifest);
+  return config.sourceMediaId
+    || config.mediaId
+    || manifest?.studySourceMediaId
+    || manifest?.provenance?.sourceSongId
+    || fallback
+    || manifest?.id
+    || "";
+}
+
+function atlasAssetMap(manifest = state.manifest) {
+  const map = atlasConfig(manifest).assetMap || atlasConfig(manifest).assets || {};
+  return map && typeof map === "object" ? map : {};
 }
 
 function isHiddenCatalogItem(item) {
@@ -336,7 +359,7 @@ function lyricLinesOnly(lines = []) {
 }
 
 function manifestLines() {
-  return state.manifest?.timeline?.lines || [];
+  return state.manifest?.timeline?.lines || state.studySourceManifest?.timeline?.lines || [];
 }
 
 function activeTimingTrack() {
@@ -387,19 +410,23 @@ function chordDisplay(chordName) {
 }
 
 function activeMusical() {
+  const sourceManifestMusical = state.studySourceManifest?.musical || {};
+  const sourceAssetMusical = activeSourcePlayableAsset()?.musical || {};
   const manifestMusical = state.manifest?.musical || {};
   const primaryMusical = state.manifest?.assets?.primaryAudio?.musical || {};
   const assetMusical = activePlayableAsset()?.musical || {};
   const studyAsset = activeStudyAssetData() || {};
   const timeline = (...values) => values.find((value) => Array.isArray(value) && value.length) || [];
   return {
+    ...sourceManifestMusical,
+    ...sourceAssetMusical,
     ...manifestMusical,
     ...primaryMusical,
     ...assetMusical,
-    chords: timeline(assetMusical.chords, primaryMusical.chords, manifestMusical.chords, studyAsset.chords),
-    beats: timeline(assetMusical.beats, primaryMusical.beats, manifestMusical.beats, studyAsset.beats),
-    chordSource: assetMusical.chordSource || primaryMusical.chordSource || manifestMusical.chordSource || studyAsset.chordSource,
-    beatSource: assetMusical.beatSource || primaryMusical.beatSource || manifestMusical.beatSource || studyAsset.beatSource
+    chords: timeline(assetMusical.chords, primaryMusical.chords, manifestMusical.chords, sourceAssetMusical.chords, sourceManifestMusical.chords, studyAsset.chords),
+    beats: timeline(assetMusical.beats, primaryMusical.beats, manifestMusical.beats, sourceAssetMusical.beats, sourceManifestMusical.beats, studyAsset.beats),
+    chordSource: assetMusical.chordSource || primaryMusical.chordSource || manifestMusical.chordSource || sourceAssetMusical.chordSource || sourceManifestMusical.chordSource || studyAsset.chordSource,
+    beatSource: assetMusical.beatSource || primaryMusical.beatSource || manifestMusical.beatSource || sourceAssetMusical.beatSource || sourceManifestMusical.beatSource || studyAsset.beatSource
   };
 }
 
@@ -420,10 +447,36 @@ function selectedLyricSummary() {
   return tracks.map(languageName).join(" · ");
 }
 
-function activeStudyAssetData() {
+function activeStudySourceAssetId() {
   const assets = state.studyData?.assets || {};
   const activeAsset = activePlayableAsset();
-  return assets[state.activeAssetId] || assets[activeAsset?.id] || null;
+  const map = atlasAssetMap();
+  const mapped = map[state.activeAssetId] || map[activeAsset?.id] || activeAsset?.atlasSourceAssetId || activeAsset?.studyAssetId;
+  if (mapped && assets[mapped]) return mapped;
+  if (assets[state.activeAssetId]) return state.activeAssetId;
+  if (activeAsset?.id && assets[activeAsset.id]) return activeAsset.id;
+  if (activeAsset?.languageCode) {
+    const sameLanguage = Object.entries(assets).find(([, item]) => item?.languageCode === activeAsset.languageCode);
+    if (sameLanguage) return sameLanguage[0];
+  }
+  const keys = Object.keys(assets);
+  return keys.length === 1 ? keys[0] : "";
+}
+
+function activeStudyAssetData() {
+  const assets = state.studyData?.assets || {};
+  const sourceAssetId = activeStudySourceAssetId();
+  return assets[sourceAssetId] || null;
+}
+
+function activeSourcePlayableAsset() {
+  if (!state.studySourceManifest) return null;
+  const activeAsset = activePlayableAsset();
+  const sourceAssetId = activeStudySourceAssetId();
+  const sourceAssets = playableAssets(state.studySourceManifest);
+  return sourceAssets.find((asset) => asset.id === sourceAssetId)
+    || sourceAssets.find((asset) => activeAsset?.languageCode && asset.languageCode === activeAsset.languageCode)
+    || null;
 }
 
 function studyBeatGrid() {
@@ -1194,8 +1247,11 @@ async function handleMediaEnded() {
 
 function activeLyricSetForAsset(asset = activePlayableAsset()) {
   if (!state.lyricSets.length) return null;
+  const sourceAsset = activeSourcePlayableAsset();
   return state.lyricSets.find((set) => set.id && set.id === asset?.lyricSetId)
+    || state.lyricSets.find((set) => set.id && set.id === sourceAsset?.lyricSetId)
     || state.lyricSets.find((set) => set.languageCode && set.languageCode === asset?.languageCode)
+    || state.lyricSets.find((set) => set.languageCode && set.languageCode === sourceAsset?.languageCode)
     || null;
 }
 
@@ -2041,9 +2097,9 @@ async function loadJson(url) {
   return response.json();
 }
 
-async function loadTextTracks(trackInfos = []) {
+async function loadTextTracks(trackInfos = [], manifestUrl = state.manifestUrl) {
   return Promise.all(trackInfos.map(async (trackInfo) => {
-    const url = resolveManifestPath(trackInfo.path);
+    const url = resolveManifestPath(trackInfo.path, manifestUrl);
     const track = await loadJson(url);
     track.__url = url;
     track.__trackInfo = trackInfo;
@@ -2051,17 +2107,51 @@ async function loadTextTracks(trackInfos = []) {
   }));
 }
 
-async function loadStudyData(mediaId) {
-  if (!state.studyMode || !mediaId) return null;
-  const url = `data/songs/${encodeURIComponent(mediaId)}/study.json`;
+function catalogManifestUrl(mediaId) {
+  const item = state.catalog?.items?.find((entry) => entry.id === mediaId);
+  return item?.manifest ? resolveSitePath(item.manifest) : resolveSitePath(`data/songs/${encodeURIComponent(mediaId)}/manifest.json`);
+}
+
+async function loadSourceManifest(mediaId, ownId = state.activeMediaId) {
+  if (!mediaId || mediaId === ownId) return null;
+  const url = catalogManifestUrl(mediaId);
   try {
-    const data = await loadJson(url);
-    data.__url = url;
-    return data;
+    const manifest = await loadJson(url);
+    return { manifest, url };
   } catch (error) {
-    console.info(`No Musia Atlas study data for ${mediaId}.`, error.message);
+    console.info(`No source media manifest for ${mediaId}.`, error.message);
     return null;
   }
+}
+
+async function loadStudyData(mediaId, manifest = state.manifest) {
+  if (!state.studyMode || !mediaId) return null;
+  const sourceId = atlasSourceMediaId(manifest, mediaId);
+  state.studySourceMediaId = sourceId;
+  const candidates = [...new Set([sourceId, mediaId].filter(Boolean))];
+  for (const candidate of candidates) {
+    const url = `data/songs/${encodeURIComponent(candidate)}/study.json`;
+    try {
+      const data = await loadJson(url);
+      data.__url = url;
+      data.__sourceMediaId = candidate;
+      return data;
+    } catch (error) {
+      console.info(`No Musia Atlas study data for ${candidate}.`, error.message);
+    }
+  }
+  return null;
+}
+
+function trackSourceForManifest(manifest, sourceManifest, manifestUrl, sourceManifestUrl) {
+  const hasOwnDefaultTracks = Array.isArray(manifest?.textTracks) && manifest.textTracks.length;
+  const hasOwnLyricSets = Array.isArray(manifest?.lyricSets) && manifest.lyricSets.length;
+  return {
+    defaultTrackInfos: hasOwnDefaultTracks ? manifest.textTracks : (sourceManifest?.textTracks || []),
+    defaultTrackUrl: hasOwnDefaultTracks ? manifestUrl : sourceManifestUrl,
+    lyricSets: hasOwnLyricSets ? manifest.lyricSets : (sourceManifest?.lyricSets || []),
+    lyricSetUrl: hasOwnLyricSets ? manifestUrl : sourceManifestUrl
+  };
 }
 
 async function loadMediaItem(item, updateHash = false) {
@@ -2071,17 +2161,23 @@ async function loadMediaItem(item, updateHash = false) {
   state.activeMediaId = item.id;
   state.manifestUrl = resolveSitePath(item.manifest);
   state.manifest = await loadJson(state.manifestUrl);
-  state.studyData = await loadStudyData(item.id);
+  const sourceMediaId = atlasSourceMediaId(state.manifest, item.id);
+  state.studySourceMediaId = sourceMediaId;
+  const source = await loadSourceManifest(sourceMediaId, item.id);
+  state.studySourceManifest = source?.manifest || null;
+  state.studySourceManifestUrl = source?.url || "";
+  state.studyData = await loadStudyData(item.id, state.manifest);
   state.didApplySkipIntro = false;
   state.renderedChordKey = "";
   state.studyChordRenderKey = "";
   state.studyBeatRenderKey = "";
   if (!state.userPlaybackMode) setPlaybackMode(defaultPlaybackModeForManifest(state.manifest));
   else renderPlaybackMode();
-  state.defaultTracks = await loadTextTracks(state.manifest.textTracks || []);
-  state.lyricSets = await Promise.all((state.manifest.lyricSets || []).map(async (set) => ({
+  const trackSource = trackSourceForManifest(state.manifest, state.studySourceManifest, state.manifestUrl, state.studySourceManifestUrl);
+  state.defaultTracks = await loadTextTracks(trackSource.defaultTrackInfos || [], trackSource.defaultTrackUrl || state.manifestUrl);
+  state.lyricSets = await Promise.all((trackSource.lyricSets || []).map(async (set) => ({
     ...set,
-    tracks: await loadTextTracks(set.textTracks || set.tracks || [])
+    tracks: await loadTextTracks(set.textTracks || set.tracks || [], trackSource.lyricSetUrl || state.manifestUrl)
   })));
   state.tracks = [];
   state.trackByCode = new Map();

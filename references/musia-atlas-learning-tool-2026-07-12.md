@@ -251,6 +251,29 @@ variant, or a demo that should remain linkable for audit history. Standard
 published versions, especially songs already uploaded to Shipinhao Music, should
 normally stay visible unless the user explicitly asks to hide them.
 
+MV reuse rule:
+
+```json
+{
+  "kind": "mv",
+  "atlas": {
+    "sourceMediaId": "source-song-id",
+    "assetMap": {
+      "mv-video-asset-id": "source-song-audio-asset-id"
+    },
+    "reuse": ["lyrics", "chords", "beats", "number-notes", "practice"]
+  }
+}
+```
+
+Atlas mode should keep playing the MV video, but borrow the source song's
+study package for lyrics, chords, beat grid, number notes, and rhythm practice.
+If an MV has its own corrected lyric tracks, those remain authoritative. If the
+MV is lightweight and has no lyric tracks, the player can inherit lyric sets
+from the source song manifest and resolve their paths relative to that source
+manifest. This is the default pattern for song-locked MVs such as Aya Chan
+Hikari Ame and future Musia/LALACHAN videos.
+
 Future deep-analysis work can add:
 
 - downbeat detection confidence;
