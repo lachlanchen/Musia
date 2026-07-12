@@ -166,6 +166,9 @@ Atlas now includes an optional beginner rhythm coach:
 - `Off`
 - `Strum`
 - `Fingerpick`
+- practice speed from `25%` to `200%`
+- sticky mini player for play/pause, time, current chord, and speed while
+  scrolling the study section
 
 The first practical model is intentionally simple. It is designed for a learner
 who does not yet know how to feel rhythm or sing while playing guitar.
@@ -200,6 +203,18 @@ The coach uses:
 1.  active chord start/end timing when available;
 2.  beat timing as fallback;
 3.  browser playback speed control for slow practice.
+
+Atlas top layout in study mode:
+
+```text
+left:   compact player
+middle: chord row + guitar fingering
+right:  current multilingual lyric carousel
+```
+
+This keeps the top area shorter so the rhythm/study cards appear higher on the
+page. The normal homepage player remains unchanged; Atlas moves the existing
+chord and fingering DOM into the middle card only in `study-mode`.
 
 Playback speed is display/practice behavior only. It does not rewrite audio,
 lyrics, chords, or Atlas source data. The page tries to preserve pitch when the

@@ -478,6 +478,8 @@ function renderStudyControls() {
   if (transpose) transpose.value = String(state.studyTranspose);
   if (capo) capo.value = String(state.studyCapo);
   if (speed) speed.value = String(state.studySpeed);
+  const miniSpeed = $("atlas-mini-speed");
+  if (miniSpeed) miniSpeed.value = String(state.studySpeed);
   if (simplify) {
     simplify.setAttribute("aria-pressed", state.studySimplify ? "true" : "false");
     simplify.classList.toggle("active", state.studySimplify);
@@ -498,7 +500,7 @@ function renderStudyControls() {
 }
 
 function applyStudySpeed() {
-  const rate = Math.min(1.25, Math.max(0.35, Number(state.studySpeed) || 1));
+  const rate = Math.min(2, Math.max(0.25, Number(state.studySpeed) || 1));
   state.studySpeed = rate;
   [audio, video, state.mediaElement].filter(Boolean).forEach((element) => {
     element.playbackRate = rate;
@@ -507,6 +509,33 @@ function applyStudySpeed() {
     if ("webkitPreservesPitch" in element) element.webkitPreservesPitch = true;
   });
   updateMediaSessionPosition();
+}
+
+function relocateAtlasPanels() {
+  const card = $("atlas-chords-card");
+  const slot = $("atlas-chord-slot");
+  const chordRow = $("chord-row");
+  const advancedPanel = $("advanced-panel");
+  const mini = $("atlas-mini-player");
+  if (card) card.hidden = !state.studyMode;
+  if (mini) mini.hidden = !state.studyMode;
+  if (!state.studyMode || !slot) return;
+  if (chordRow && chordRow.parentElement !== slot) slot.appendChild(chordRow);
+  if (advancedPanel && advancedPanel.parentElement !== slot) slot.appendChild(advancedPanel);
+}
+
+function updateMiniPlayer(time, activeChordDisplay) {
+  const mini = $("atlas-mini-player");
+  if (!mini) return;
+  mini.hidden = !state.studyMode;
+  if (!state.studyMode) return;
+  const media = state.mediaElement;
+  $("atlas-mini-title").textContent = displayTitleForAsset(activePlayableAsset());
+  $("atlas-mini-time").textContent = formatTime(time);
+  $("atlas-mini-chord").textContent = activeChordDisplay?.guitar || "--";
+  $("atlas-mini-play").textContent = media && !media.paused ? "❚❚" : "▶";
+  const miniSpeed = $("atlas-mini-speed");
+  if (miniSpeed && miniSpeed.value !== String(state.studySpeed)) miniSpeed.value = String(state.studySpeed);
 }
 
 function rhythmPattern() {
@@ -1633,6 +1662,7 @@ function updateSync() {
   renderFullLyrics(activeLine);
   renderChords(activeChord);
   renderStudyPanel(activeLine, activeChord, time);
+  updateMiniPlayer(time, activeChordDisplay);
   updateTokenHighlights(time, activeLine);
 }
 
@@ -1812,6 +1842,15 @@ function bindEvents() {
     applySkipIntro({ force: true });
     playCurrentMedia();
   });
+  $("atlas-mini-play")?.addEventListener("click", async () => {
+    stopCaptureClock();
+    state.captureTime = null;
+    const media = state.mediaElement;
+    if (!media) return;
+    if (media.paused) await playCurrentMedia();
+    else pauseCurrentMedia();
+    updateSync();
+  });
   $("playback-mode").addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target : null;
     const button = target?.closest("[data-playback-mode]");
@@ -1861,6 +1900,12 @@ function bindEvents() {
   });
   $("study-speed")?.addEventListener("change", () => {
     state.studySpeed = Number($("study-speed").value) || 1;
+    applyStudySpeed();
+    renderStudyControls();
+    updateSync();
+  });
+  $("atlas-mini-speed")?.addEventListener("change", () => {
+    state.studySpeed = Number($("atlas-mini-speed").value) || 1;
     applyStudySpeed();
     renderStudyControls();
     updateSync();
@@ -2013,6 +2058,7 @@ async function boot() {
   document.body.classList.toggle("capture-multilingual", state.captureMultilingual);
   document.body.classList.toggle("capture-ktv", capturePortrait && !captureFullLyrics && !captureGuitarFocus);
   document.body.classList.toggle("study-mode", state.studyMode);
+  relocateAtlasPanels();
   bindEvents();
   setAdvancedMode(state.advancedMode, { persist: false });
   state.catalog = await loadJson("data/catalog.json");

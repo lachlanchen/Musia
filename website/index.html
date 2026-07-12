@@ -130,6 +130,17 @@
         <audio id="audio" preload="auto"></audio>
       </article>
 
+      <article id="atlas-chords-card" class="atlas-chords-card" aria-label="Atlas chord and fingering panel" hidden>
+        <div class="atlas-card-head">
+          <div>
+            <span class="eyebrow">Chord map</span>
+            <h2>Hands</h2>
+          </div>
+          <span class="atlas-card-note">analysis-grade</span>
+        </div>
+        <div id="atlas-chord-slot" class="atlas-chord-slot"></div>
+      </article>
+
       <article class="lyrics-card" aria-label="Current lyrics">
         <div class="lyrics-head">
           <div>
@@ -199,12 +210,19 @@
           <label>
             <span>Speed</span>
             <select id="study-speed">
+              <option value="0.25">25%</option>
+              <option value="0.35">35%</option>
               <option value="0.5">50%</option>
               <option value="0.6">60%</option>
               <option value="0.7">70%</option>
               <option value="0.8">80%</option>
               <option value="0.9">90%</option>
               <option value="1" selected>100%</option>
+              <option value="1.1">110%</option>
+              <option value="1.25">125%</option>
+              <option value="1.5">150%</option>
+              <option value="1.75">175%</option>
+              <option value="2">200%</option>
             </select>
           </label>
         </div>
@@ -298,6 +316,32 @@
       <div id="full-lyrics" class="full-lyrics"></div>
     </section>
   </main>
+
+  <aside id="atlas-mini-player" class="atlas-mini-player" aria-label="Sticky Atlas playback controls" hidden>
+    <button id="atlas-mini-play" class="atlas-mini-play" type="button" aria-label="Play or pause">▶</button>
+    <div class="atlas-mini-main">
+      <strong id="atlas-mini-title">Musia Atlas</strong>
+      <span><span id="atlas-mini-time">0:00</span> · <span id="atlas-mini-chord">--</span></span>
+    </div>
+    <label class="atlas-mini-speed">
+      <span>Speed</span>
+      <select id="atlas-mini-speed">
+        <option value="0.25">25%</option>
+        <option value="0.35">35%</option>
+        <option value="0.5">50%</option>
+        <option value="0.6">60%</option>
+        <option value="0.7">70%</option>
+        <option value="0.8">80%</option>
+        <option value="0.9">90%</option>
+        <option value="1" selected>100%</option>
+        <option value="1.1">110%</option>
+        <option value="1.25">125%</option>
+        <option value="1.5">150%</option>
+        <option value="1.75">175%</option>
+        <option value="2">200%</option>
+      </select>
+    </label>
+  </aside>
 
   <script src="musia.js?v=20260712-atlas"></script>
   <script src="app.js?v=20260712-atlas"></script>

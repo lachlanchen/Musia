@@ -467,6 +467,7 @@ h2 {
 
 .player-card,
 .lyrics-card,
+.atlas-chords-card,
 .full-lyrics-section {
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -475,7 +476,8 @@ h2 {
 }
 
 .player-card,
-.lyrics-card {
+.lyrics-card,
+.atlas-chords-card {
   padding: 18px;
 }
 
@@ -734,6 +736,40 @@ h2 {
 .lyrics-card {
   display: grid;
   grid-template-rows: auto auto minmax(260px, 1fr);
+}
+
+.atlas-chords-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-width: 0;
+}
+
+.atlas-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.atlas-card-head h2 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.atlas-card-note {
+  border: 1px solid rgba(45,143,131,.16);
+  border-radius: 999px;
+  background: var(--teal-soft);
+  color: var(--teal);
+  padding: 6px 9px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.atlas-chord-slot {
+  min-width: 0;
 }
 
 .lyrics-head {
@@ -1416,6 +1452,88 @@ rt {
   color: var(--gold);
 }
 
+.atlas-mini-player {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 40;
+  width: min(720px, calc(100vw - 24px));
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(45,143,131,.18);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,247,237,.9)),
+    var(--paper-strong);
+  box-shadow: 0 22px 58px rgba(42,38,28,.18);
+  padding: 10px 12px;
+  transform: translateX(-50%);
+  backdrop-filter: blur(16px);
+}
+
+.atlas-mini-play {
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--gold));
+  color: #fff;
+  font-weight: 950;
+  box-shadow: 0 12px 28px rgba(45,143,131,.22);
+}
+
+.atlas-mini-main {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.atlas-mini-main strong,
+.atlas-mini-main span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-mini-main strong {
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.atlas-mini-main span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.atlas-mini-speed {
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.atlas-mini-speed span {
+  color: var(--muted);
+}
+
+.atlas-mini-speed select {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+}
+
 .study-chord-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
@@ -1492,6 +1610,106 @@ body:not(.study-mode) .study-panel {
 
 body.study-mode .full-lyrics-section {
   margin-top: 18px;
+}
+
+body.study-mode .page-shell {
+  padding-bottom: 108px;
+}
+
+body.study-mode .hero-grid {
+  grid-template-columns: minmax(260px, .82fr) minmax(280px, .82fr) minmax(340px, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+
+body.study-mode .player-card,
+body.study-mode .lyrics-card,
+body.study-mode .atlas-chords-card {
+  padding: 14px;
+  border-radius: 16px;
+}
+
+body.study-mode .title-row {
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+body.study-mode .cover-thumb {
+  width: 64px;
+  border-radius: 12px;
+}
+
+body.study-mode h1 {
+  margin-bottom: 4px;
+  font-size: clamp(22px, 2.3vw, 32px);
+  line-height: 1;
+}
+
+body.study-mode .media-artist {
+  font-size: clamp(16px, 1.7vw, 22px);
+}
+
+body.study-mode .stage {
+  aspect-ratio: 16 / 8;
+  border-radius: 14px;
+}
+
+body.study-mode .stage-copy {
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+}
+
+body.study-mode .stage-copy p {
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+body.study-mode .stage-line {
+  font-size: clamp(18px, 2vw, 28px);
+}
+
+body.study-mode .transport {
+  grid-template-columns: 48px minmax(150px, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+body.study-mode .play-button {
+  width: 48px;
+  height: 48px;
+}
+
+body.study-mode .playback-mode,
+body.study-mode .meta-row,
+body.study-mode .asset-switcher {
+  margin-top: 8px;
+}
+
+body.study-mode .asset-switcher {
+  max-height: 74px;
+  overflow: auto;
+}
+
+body.study-mode .lyrics-card {
+  grid-template-rows: auto minmax(220px, 1fr);
+}
+
+body.study-mode .lyric-carousel {
+  min-height: 220px;
+}
+
+body.study-mode .advanced-panel {
+  margin-bottom: 12px;
+}
+
+body.study-mode .guitar-diagram {
+  height: 188px;
+}
+
+body.study-mode .chord-row {
+  margin-bottom: 12px;
 }
 
 .full-lyrics-section {
@@ -2728,6 +2946,9 @@ body.capture-mode.capture-portrait.capture-full-lyrics .full-row.instrumental-ro
   .study-card-head {
     flex-direction: column;
   }
+  body.study-mode .hero-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2790,6 +3011,21 @@ body.capture-mode.capture-portrait.capture-full-lyrics .full-row.instrumental-ro
   }
   .string-bed {
     min-height: 132px;
+  }
+  .atlas-mini-player {
+    grid-template-columns: 46px minmax(0, 1fr);
+    border-radius: 22px;
+    bottom: 10px;
+    padding: 9px;
+  }
+  .atlas-mini-play {
+    width: 46px;
+    height: 46px;
+  }
+  .atlas-mini-speed {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: space-between;
   }
   .library-peek {
     left: 12px;
