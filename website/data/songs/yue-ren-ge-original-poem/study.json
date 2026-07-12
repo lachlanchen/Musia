@@ -1,0 +1,684 @@
+{
+  "schema": "https://fun.lazying.art/schemas/musia-atlas-study.v1.json",
+  "version": 1,
+  "toolName": "Musia Atlas",
+  "mediaId": "yue-ren-ge-original-poem",
+  "title": "越人歌 · 原诗版 Atlas",
+  "summary": "Detailed practice data for corrected lyrics, chord changes, beat timing, and guitar display.",
+  "defaultAssetId": "yue-ren-ge-original-poem-zh",
+  "dataPolicy": [
+    "Lyrics use corrected Fun website timing JSON for each active vocal.",
+    "Chord and beat maps are analysis-grade unless explicitly marked verified.",
+    "Capo, transpose, and simplify are display-only helpers; source audio is unchanged.",
+    "Instrumental spans are UI state only and are not encoded as lyric lines."
+  ],
+  "assets": {
+    "yue-ren-ge-original-poem-zh": {
+      "label": "中文",
+      "languageCode": "zh-Hans",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/yue-ren-ge-original-poem-zh-Hans-ace-20260701.mp3",
+      "bpm": 69.837,
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "data/runs/yue-ren-ge-original-poem-20260701-analysis/analysis/beats.json",
+      "beats": [
+        {
+          "index": 0,
+          "time": 2.276
+        },
+        {
+          "index": 1,
+          "time": 3.135
+        },
+        {
+          "index": 2,
+          "time": 3.947
+        },
+        {
+          "index": 3,
+          "time": 4.807
+        },
+        {
+          "index": 4,
+          "time": 5.642
+        },
+        {
+          "index": 5,
+          "time": 6.502
+        },
+        {
+          "index": 6,
+          "time": 7.338
+        },
+        {
+          "index": 7,
+          "time": 8.197
+        },
+        {
+          "index": 8,
+          "time": 9.056
+        },
+        {
+          "index": 9,
+          "time": 9.892
+        },
+        {
+          "index": 10,
+          "time": 10.774
+        },
+        {
+          "index": 11,
+          "time": 11.564
+        },
+        {
+          "index": 12,
+          "time": 12.33
+        },
+        {
+          "index": 13,
+          "time": 13.142
+        },
+        {
+          "index": 14,
+          "time": 13.909
+        },
+        {
+          "index": 15,
+          "time": 14.768
+        },
+        {
+          "index": 16,
+          "time": 15.581
+        },
+        {
+          "index": 17,
+          "time": 16.417
+        },
+        {
+          "index": 18,
+          "time": 17.252
+        },
+        {
+          "index": 19,
+          "time": 18.065
+        },
+        {
+          "index": 20,
+          "time": 18.855
+        },
+        {
+          "index": 21,
+          "time": 19.644
+        },
+        {
+          "index": 22,
+          "time": 20.526
+        },
+        {
+          "index": 23,
+          "time": 21.386
+        },
+        {
+          "index": 24,
+          "time": 22.198
+        },
+        {
+          "index": 25,
+          "time": 23.011
+        },
+        {
+          "index": 26,
+          "time": 23.87
+        },
+        {
+          "index": 27,
+          "time": 24.706
+        },
+        {
+          "index": 28,
+          "time": 25.658
+        },
+        {
+          "index": 29,
+          "time": 26.471
+        },
+        {
+          "index": 30,
+          "time": 27.307
+        },
+        {
+          "index": 31,
+          "time": 28.143
+        },
+        {
+          "index": 32,
+          "time": 28.979
+        },
+        {
+          "index": 33,
+          "time": 29.814
+        },
+        {
+          "index": 34,
+          "time": 30.627
+        },
+        {
+          "index": 35,
+          "time": 31.486
+        },
+        {
+          "index": 36,
+          "time": 32.322
+        },
+        {
+          "index": 37,
+          "time": 33.135
+        },
+        {
+          "index": 38,
+          "time": 33.971
+        },
+        {
+          "index": 39,
+          "time": 34.853
+        },
+        {
+          "index": 40,
+          "time": 35.712
+        },
+        {
+          "index": 41,
+          "time": 36.595
+        },
+        {
+          "index": 42,
+          "time": 37.384
+        },
+        {
+          "index": 43,
+          "time": 38.243
+        },
+        {
+          "index": 44,
+          "time": 39.079
+        },
+        {
+          "index": 45,
+          "time": 39.938
+        },
+        {
+          "index": 46,
+          "time": 40.751
+        },
+        {
+          "index": 47,
+          "time": 41.587
+        },
+        {
+          "index": 48,
+          "time": 42.446
+        },
+        {
+          "index": 49,
+          "time": 43.352
+        },
+        {
+          "index": 50,
+          "time": 44.118
+        },
+        {
+          "index": 51,
+          "time": 44.977
+        },
+        {
+          "index": 52,
+          "time": 45.813
+        },
+        {
+          "index": 53,
+          "time": 46.649
+        },
+        {
+          "index": 54,
+          "time": 47.508
+        },
+        {
+          "index": 55,
+          "time": 48.344
+        },
+        {
+          "index": 56,
+          "time": 49.18
+        },
+        {
+          "index": 57,
+          "time": 50.016
+        },
+        {
+          "index": 58,
+          "time": 50.875
+        },
+        {
+          "index": 59,
+          "time": 51.711
+        },
+        {
+          "index": 60,
+          "time": 52.547
+        },
+        {
+          "index": 61,
+          "time": 53.383
+        },
+        {
+          "index": 62,
+          "time": 54.242
+        },
+        {
+          "index": 63,
+          "time": 55.078
+        },
+        {
+          "index": 64,
+          "time": 55.914
+        },
+        {
+          "index": 65,
+          "time": 56.75
+        },
+        {
+          "index": 66,
+          "time": 57.609
+        },
+        {
+          "index": 67,
+          "time": 58.445
+        },
+        {
+          "index": 68,
+          "time": 59.281
+        },
+        {
+          "index": 69,
+          "time": 60.14
+        },
+        {
+          "index": 70,
+          "time": 60.976
+        },
+        {
+          "index": 71,
+          "time": 61.835
+        },
+        {
+          "index": 72,
+          "time": 62.671
+        },
+        {
+          "index": 73,
+          "time": 63.507
+        },
+        {
+          "index": 74,
+          "time": 64.342
+        },
+        {
+          "index": 75,
+          "time": 65.178
+        },
+        {
+          "index": 76,
+          "time": 66.038
+        },
+        {
+          "index": 77,
+          "time": 66.873
+        },
+        {
+          "index": 78,
+          "time": 67.733
+        },
+        {
+          "index": 79,
+          "time": 68.569
+        },
+        {
+          "index": 80,
+          "time": 69.404
+        },
+        {
+          "index": 81,
+          "time": 70.24
+        },
+        {
+          "index": 82,
+          "time": 71.1
+        },
+        {
+          "index": 83,
+          "time": 71.935
+        },
+        {
+          "index": 84,
+          "time": 72.748
+        },
+        {
+          "index": 85,
+          "time": 73.584
+        },
+        {
+          "index": 86,
+          "time": 74.443
+        },
+        {
+          "index": 87,
+          "time": 75.279
+        },
+        {
+          "index": 88,
+          "time": 76.138
+        },
+        {
+          "index": 89,
+          "time": 76.951
+        },
+        {
+          "index": 90,
+          "time": 77.81
+        },
+        {
+          "index": 91,
+          "time": 78.646
+        },
+        {
+          "index": 92,
+          "time": 79.505
+        },
+        {
+          "index": 93,
+          "time": 80.341
+        },
+        {
+          "index": 94,
+          "time": 81.177
+        },
+        {
+          "index": 95,
+          "time": 82.013
+        },
+        {
+          "index": 96,
+          "time": 82.849
+        },
+        {
+          "index": 97,
+          "time": 83.708
+        },
+        {
+          "index": 98,
+          "time": 84.544
+        },
+        {
+          "index": 99,
+          "time": 85.38
+        },
+        {
+          "index": 100,
+          "time": 86.239
+        },
+        {
+          "index": 101,
+          "time": 87.052
+        },
+        {
+          "index": 102,
+          "time": 87.911
+        },
+        {
+          "index": 103,
+          "time": 88.77
+        },
+        {
+          "index": 104,
+          "time": 89.606
+        },
+        {
+          "index": 105,
+          "time": 90.442
+        },
+        {
+          "index": 106,
+          "time": 91.301
+        },
+        {
+          "index": 107,
+          "time": 92.137
+        },
+        {
+          "index": 108,
+          "time": 92.996
+        },
+        {
+          "index": 109,
+          "time": 93.809
+        },
+        {
+          "index": 110,
+          "time": 94.645
+        },
+        {
+          "index": 111,
+          "time": 95.504
+        },
+        {
+          "index": 112,
+          "time": 96.363
+        },
+        {
+          "index": 113,
+          "time": 97.222
+        },
+        {
+          "index": 114,
+          "time": 98.081
+        },
+        {
+          "index": 115,
+          "time": 98.894
+        },
+        {
+          "index": 116,
+          "time": 99.753
+        }
+      ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 50.921,
+          "name": "Am"
+        },
+        {
+          "start": 50.921,
+          "end": 51.78,
+          "name": "F"
+        },
+        {
+          "start": 51.78,
+          "end": 52.64,
+          "name": "Em"
+        },
+        {
+          "start": 52.64,
+          "end": 54.358,
+          "name": "Am"
+        },
+        {
+          "start": 54.358,
+          "end": 55.194,
+          "name": "C"
+        },
+        {
+          "start": 55.194,
+          "end": 57.794,
+          "name": "F"
+        },
+        {
+          "start": 57.794,
+          "end": 59.49,
+          "name": "G"
+        },
+        {
+          "start": 59.49,
+          "end": 61.208,
+          "name": "Em"
+        },
+        {
+          "start": 61.208,
+          "end": 63.785,
+          "name": "Am"
+        },
+        {
+          "start": 63.785,
+          "end": 64.644,
+          "name": "Em"
+        },
+        {
+          "start": 64.644,
+          "end": 65.48,
+          "name": "Dm"
+        },
+        {
+          "start": 65.48,
+          "end": 66.363,
+          "name": "Bm"
+        },
+        {
+          "start": 66.363,
+          "end": 68.058,
+          "name": "C"
+        },
+        {
+          "start": 68.058,
+          "end": 71.494,
+          "name": "F"
+        },
+        {
+          "start": 71.494,
+          "end": 72.353,
+          "name": "Dm"
+        },
+        {
+          "start": 72.353,
+          "end": 73.213,
+          "name": "Bm"
+        },
+        {
+          "start": 73.213,
+          "end": 74.931,
+          "name": "E"
+        },
+        {
+          "start": 74.931,
+          "end": 80.062,
+          "name": "Am"
+        },
+        {
+          "start": 80.062,
+          "end": 81.781,
+          "name": "F"
+        },
+        {
+          "start": 81.781,
+          "end": 83.499,
+          "name": "G"
+        },
+        {
+          "start": 83.499,
+          "end": 86.936,
+          "name": "Am"
+        },
+        {
+          "start": 86.936,
+          "end": 88.631,
+          "name": "F"
+        },
+        {
+          "start": 88.631,
+          "end": 89.49,
+          "name": "G"
+        },
+        {
+          "start": 89.49,
+          "end": 90.349,
+          "name": "Em"
+        },
+        {
+          "start": 90.349,
+          "end": 100.0,
+          "name": "A"
+        }
+      ],
+      "lyricEvidence": {
+        "lyricSetId": "zh-vocal",
+        "activeLanguageCode": "zh-Hans",
+        "activeTrackPath": "lyrics/zh-vocal/zh-Hans.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/zh-vocal/zh-Hans.json",
+            "lineCount": 25,
+            "firstLyricStart": 15.98,
+            "lastLyricEnd": 90.24,
+            "correction": "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: 心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and the original poem is stronger. The second 同舟 line is restored from 得与望之同舟 to 得与王子同舟 because 王子 is close to the sung sound and is the original, stronger text. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, such as the first 望之王子 phrase where ASR/listening indicate a changed structure. The original 越人歌 remains the source and emotional frame."
+          },
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/zh-vocal/en.json",
+            "lineCount": 25,
+            "firstLyricStart": 15.98,
+            "lastLyricEnd": 90.24,
+            "correction": "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: 心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and the original poem is stronger. The second 同舟 line is restored from 得与望之同舟 to 得与王子同舟 because 王子 is close to the sung sound and is the original, stronger text. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, such as the first 望之王子 phrase where ASR/listening indicate a changed structure. The original 越人歌 remains the source and emotional frame."
+          },
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/zh-vocal/ja.json",
+            "lineCount": 25,
+            "firstLyricStart": 15.98,
+            "lastLyricEnd": 90.24,
+            "correction": "ACE original-poem hook render selected from XL SFT, XL Turbo single-pass, sectioned, repeated, and hook candidates. Active Mandarin timing is based on large-v3 ASR from the selected full mix. This revision preserves source text when word count and sound are close: 心爱君兮 is restored to 心悦君兮, 追不着 is restored to 君不知, and 牵愁中流 is restored to 搴舟中流 because the phrase lengths and sounds are close and the original poem is stronger. The second 同舟 line is restored from 得与望之同舟 to 得与王子同舟 because 王子 is close to the sung sound and is the original, stronger text. The final soft 不知 tail is added from user listening even though ASR swallowed it. Larger structural divergences still follow the performance, such as the first 望之王子 phrase where ASR/listening indicate a changed structure. The original 越人歌 remains the source and emotional frame."
+          }
+        ]
+      },
+      "practice": {
+        "beginnerFocus": [
+          "Am",
+          "F",
+          "Em",
+          "C",
+          "G",
+          "Dm",
+          "Bm",
+          "E"
+        ],
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
+      }
+    }
+  },
+  "lesson": {
+    "name": "Atlas first pass",
+    "goal": "Help a beginner follow lyrics, chord changes, and beat entry without needing to sing first.",
+    "steps": [
+      "Listen once and tap the beat lane.",
+      "Loop one phrase and speak the lyric rhythmically.",
+      "Play one strum per displayed chord change.",
+      "Only add a fuller strumming pattern after the lyric and chord entry feel stable."
+    ]
+  }
+}

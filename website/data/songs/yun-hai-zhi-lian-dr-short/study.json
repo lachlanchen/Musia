@@ -1,0 +1,1108 @@
+{
+  "schema": "https://fun.lazying.art/schemas/musia-atlas-study.v1.json",
+  "version": 1,
+  "toolName": "Musia Atlas",
+  "mediaId": "yun-hai-zhi-lian-dr-short",
+  "title": "云海之恋 · DR Short Atlas",
+  "summary": "Detailed practice data for corrected lyrics, chord changes, beat timing, and guitar display.",
+  "defaultAssetId": "yun-hai-dr-short-zh",
+  "dataPolicy": [
+    "Lyrics use corrected Fun website timing JSON for each active vocal.",
+    "Chord and beat maps are analysis-grade unless explicitly marked verified.",
+    "Capo, transpose, and simplify are display-only helpers; source audio is unchanged.",
+    "Instrumental spans are UI state only and are not encoded as lyric lines."
+  ],
+  "assets": {
+    "yun-hai-dr-short-zh": {
+      "label": "中文",
+      "languageCode": "zh-Hans",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-main-zh-Hans-20260630.mp3",
+      "bpm": 117.45,
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "data/runs/yun-hai-zhi-lian-main-20260630-20260630-182732-analysis/analysis/beats.json",
+      "beats": [
+        {
+          "index": 0,
+          "time": 2.647
+        },
+        {
+          "index": 1,
+          "time": 3.506
+        },
+        {
+          "index": 2,
+          "time": 4.319
+        },
+        {
+          "index": 3,
+          "time": 5.224
+        },
+        {
+          "index": 4,
+          "time": 6.084
+        },
+        {
+          "index": 5,
+          "time": 6.943
+        },
+        {
+          "index": 6,
+          "time": 7.802
+        },
+        {
+          "index": 7,
+          "time": 8.661
+        },
+        {
+          "index": 8,
+          "time": 9.52
+        },
+        {
+          "index": 9,
+          "time": 10.379
+        },
+        {
+          "index": 10,
+          "time": 11.215
+        },
+        {
+          "index": 11,
+          "time": 12.098
+        },
+        {
+          "index": 12,
+          "time": 12.934
+        },
+        {
+          "index": 13,
+          "time": 13.816
+        },
+        {
+          "index": 14,
+          "time": 14.675
+        },
+        {
+          "index": 15,
+          "time": 15.534
+        },
+        {
+          "index": 16,
+          "time": 16.37
+        },
+        {
+          "index": 17,
+          "time": 17.229
+        },
+        {
+          "index": 18,
+          "time": 18.088
+        },
+        {
+          "index": 19,
+          "time": 18.947
+        },
+        {
+          "index": 20,
+          "time": 19.807
+        },
+        {
+          "index": 21,
+          "time": 20.666
+        },
+        {
+          "index": 22,
+          "time": 21.525
+        },
+        {
+          "index": 23,
+          "time": 22.384
+        },
+        {
+          "index": 24,
+          "time": 23.243
+        },
+        {
+          "index": 25,
+          "time": 24.079
+        },
+        {
+          "index": 26,
+          "time": 24.938
+        },
+        {
+          "index": 27,
+          "time": 25.797
+        },
+        {
+          "index": 28,
+          "time": 26.68
+        },
+        {
+          "index": 29,
+          "time": 27.516
+        },
+        {
+          "index": 30,
+          "time": 28.375
+        },
+        {
+          "index": 31,
+          "time": 29.234
+        },
+        {
+          "index": 32,
+          "time": 30.07
+        },
+        {
+          "index": 33,
+          "time": 30.929
+        },
+        {
+          "index": 34,
+          "time": 31.788
+        },
+        {
+          "index": 35,
+          "time": 32.647
+        },
+        {
+          "index": 36,
+          "time": 33.506
+        },
+        {
+          "index": 37,
+          "time": 34.366
+        },
+        {
+          "index": 38,
+          "time": 35.225
+        },
+        {
+          "index": 39,
+          "time": 36.084
+        },
+        {
+          "index": 40,
+          "time": 36.943
+        },
+        {
+          "index": 41,
+          "time": 37.802
+        },
+        {
+          "index": 42,
+          "time": 38.638
+        },
+        {
+          "index": 43,
+          "time": 39.497
+        },
+        {
+          "index": 44,
+          "time": 40.356
+        },
+        {
+          "index": 45,
+          "time": 41.215
+        },
+        {
+          "index": 46,
+          "time": 42.075
+        },
+        {
+          "index": 47,
+          "time": 42.934
+        },
+        {
+          "index": 48,
+          "time": 43.793
+        },
+        {
+          "index": 49,
+          "time": 44.652
+        },
+        {
+          "index": 50,
+          "time": 45.511
+        },
+        {
+          "index": 51,
+          "time": 46.37
+        },
+        {
+          "index": 52,
+          "time": 47.229
+        },
+        {
+          "index": 53,
+          "time": 48.089
+        },
+        {
+          "index": 54,
+          "time": 48.924
+        },
+        {
+          "index": 55,
+          "time": 49.807
+        },
+        {
+          "index": 56,
+          "time": 50.643
+        },
+        {
+          "index": 57,
+          "time": 51.525
+        },
+        {
+          "index": 58,
+          "time": 52.361
+        },
+        {
+          "index": 59,
+          "time": 53.22
+        },
+        {
+          "index": 60,
+          "time": 54.079
+        },
+        {
+          "index": 61,
+          "time": 54.938
+        },
+        {
+          "index": 62,
+          "time": 55.798
+        },
+        {
+          "index": 63,
+          "time": 56.657
+        },
+        {
+          "index": 64,
+          "time": 57.493
+        },
+        {
+          "index": 65,
+          "time": 58.375
+        },
+        {
+          "index": 66,
+          "time": 59.211
+        },
+        {
+          "index": 67,
+          "time": 60.093
+        },
+        {
+          "index": 68,
+          "time": 60.929
+        },
+        {
+          "index": 69,
+          "time": 61.788
+        },
+        {
+          "index": 70,
+          "time": 62.647
+        },
+        {
+          "index": 71,
+          "time": 63.507
+        },
+        {
+          "index": 72,
+          "time": 64.366
+        },
+        {
+          "index": 73,
+          "time": 65.225
+        },
+        {
+          "index": 74,
+          "time": 66.084
+        },
+        {
+          "index": 75,
+          "time": 66.943
+        },
+        {
+          "index": 76,
+          "time": 67.802
+        },
+        {
+          "index": 77,
+          "time": 68.661
+        },
+        {
+          "index": 78,
+          "time": 69.497
+        },
+        {
+          "index": 79,
+          "time": 70.38
+        },
+        {
+          "index": 80,
+          "time": 71.216
+        },
+        {
+          "index": 81,
+          "time": 72.075
+        },
+        {
+          "index": 82,
+          "time": 72.934
+        }
+      ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 2.926,
+          "name": "Bb"
+        },
+        {
+          "start": 2.926,
+          "end": 9.056,
+          "name": "Eb"
+        },
+        {
+          "start": 9.056,
+          "end": 10.124,
+          "name": "Bb"
+        },
+        {
+          "start": 10.124,
+          "end": 12.771,
+          "name": "Eb"
+        },
+        {
+          "start": 12.771,
+          "end": 14.234,
+          "name": "Bb"
+        },
+        {
+          "start": 14.234,
+          "end": 14.721,
+          "name": "C#"
+        },
+        {
+          "start": 14.721,
+          "end": 16.231,
+          "name": "Bbm"
+        },
+        {
+          "start": 16.231,
+          "end": 16.742,
+          "name": "Eb"
+        },
+        {
+          "start": 16.742,
+          "end": 17.183,
+          "name": "Bbm"
+        },
+        {
+          "start": 17.183,
+          "end": 17.694,
+          "name": "Fm"
+        },
+        {
+          "start": 17.694,
+          "end": 18.204,
+          "name": "Bbm"
+        },
+        {
+          "start": 18.204,
+          "end": 19.667,
+          "name": "Eb"
+        },
+        {
+          "start": 19.667,
+          "end": 20.666,
+          "name": "Bb"
+        },
+        {
+          "start": 20.666,
+          "end": 21.153,
+          "name": "Fm"
+        },
+        {
+          "start": 21.153,
+          "end": 22.105,
+          "name": "Gm"
+        },
+        {
+          "start": 22.105,
+          "end": 22.616,
+          "name": "C"
+        },
+        {
+          "start": 22.616,
+          "end": 25.101,
+          "name": "Ab"
+        },
+        {
+          "start": 25.101,
+          "end": 25.658,
+          "name": "Cm"
+        },
+        {
+          "start": 25.658,
+          "end": 26.169,
+          "name": "Ab"
+        },
+        {
+          "start": 26.169,
+          "end": 26.657,
+          "name": "Bb"
+        },
+        {
+          "start": 26.657,
+          "end": 29.187,
+          "name": "Eb"
+        },
+        {
+          "start": 29.187,
+          "end": 30.14,
+          "name": "Abm"
+        },
+        {
+          "start": 30.14,
+          "end": 30.604,
+          "name": "Cm"
+        },
+        {
+          "start": 30.604,
+          "end": 31.068,
+          "name": "Bb"
+        },
+        {
+          "start": 31.068,
+          "end": 33.088,
+          "name": "Eb"
+        },
+        {
+          "start": 33.088,
+          "end": 33.576,
+          "name": "Cm"
+        },
+        {
+          "start": 33.576,
+          "end": 34.133,
+          "name": "C"
+        },
+        {
+          "start": 34.133,
+          "end": 35.109,
+          "name": "Bb"
+        },
+        {
+          "start": 35.109,
+          "end": 41.819,
+          "name": "Eb"
+        },
+        {
+          "start": 41.819,
+          "end": 42.33,
+          "name": "Abm"
+        },
+        {
+          "start": 42.33,
+          "end": 42.841,
+          "name": "Bbm"
+        },
+        {
+          "start": 42.841,
+          "end": 43.839,
+          "name": "Bb"
+        },
+        {
+          "start": 43.839,
+          "end": 45.836,
+          "name": "Bbm"
+        },
+        {
+          "start": 45.836,
+          "end": 46.347,
+          "name": "Fm"
+        },
+        {
+          "start": 46.347,
+          "end": 47.345,
+          "name": "Bb"
+        },
+        {
+          "start": 47.345,
+          "end": 47.856,
+          "name": "Bbm"
+        },
+        {
+          "start": 47.856,
+          "end": 49.412,
+          "name": "Bb"
+        },
+        {
+          "start": 49.412,
+          "end": 50.898,
+          "name": "Eb"
+        },
+        {
+          "start": 50.898,
+          "end": 51.432,
+          "name": "Gm"
+        },
+        {
+          "start": 51.432,
+          "end": 54.404,
+          "name": "Ab"
+        },
+        {
+          "start": 54.404,
+          "end": 55.844,
+          "name": "Eb"
+        },
+        {
+          "start": 55.844,
+          "end": 56.355,
+          "name": "F"
+        },
+        {
+          "start": 56.355,
+          "end": 57.446,
+          "name": "Bb"
+        },
+        {
+          "start": 57.446,
+          "end": 59.49,
+          "name": "Eb"
+        },
+        {
+          "start": 59.49,
+          "end": 59.954,
+          "name": "Cm"
+        },
+        {
+          "start": 59.954,
+          "end": 60.558,
+          "name": "Eb"
+        },
+        {
+          "start": 60.558,
+          "end": 61.068,
+          "name": "Ab"
+        },
+        {
+          "start": 61.068,
+          "end": 62.601,
+          "name": "Cm"
+        },
+        {
+          "start": 62.601,
+          "end": 63.112,
+          "name": "Bbm"
+        },
+        {
+          "start": 63.112,
+          "end": 65.155,
+          "name": "Bb"
+        },
+        {
+          "start": 65.155,
+          "end": 65.643,
+          "name": "Gm"
+        },
+        {
+          "start": 65.643,
+          "end": 66.177,
+          "name": "F"
+        },
+        {
+          "start": 66.177,
+          "end": 67.222,
+          "name": "Gm"
+        },
+        {
+          "start": 67.222,
+          "end": 67.709,
+          "name": "Abm"
+        },
+        {
+          "start": 67.709,
+          "end": 69.195,
+          "name": "Ab"
+        },
+        {
+          "start": 69.195,
+          "end": 70.217,
+          "name": "Fm"
+        },
+        {
+          "start": 70.217,
+          "end": 70.705,
+          "name": "Ab"
+        },
+        {
+          "start": 70.705,
+          "end": 71.192,
+          "name": "Bbm"
+        },
+        {
+          "start": 71.192,
+          "end": 72.214,
+          "name": "Fm"
+        },
+        {
+          "start": 72.214,
+          "end": 73.213,
+          "name": "Bb"
+        },
+        {
+          "start": 73.213,
+          "end": 75.093,
+          "name": "Eb"
+        },
+        {
+          "start": 75.093,
+          "end": 75.604,
+          "name": "Abm"
+        },
+        {
+          "start": 75.604,
+          "end": 76.185,
+          "name": "Eb"
+        },
+        {
+          "start": 76.185,
+          "end": 76.696,
+          "name": "Ab"
+        },
+        {
+          "start": 76.696,
+          "end": 77.206,
+          "name": "Ebm"
+        },
+        {
+          "start": 77.206,
+          "end": 79.18,
+          "name": "Bbm"
+        },
+        {
+          "start": 79.18,
+          "end": 80.202,
+          "name": "Fm"
+        },
+        {
+          "start": 80.202,
+          "end": 80.713,
+          "name": "Ebm"
+        },
+        {
+          "start": 80.713,
+          "end": 83.661,
+          "name": "Eb"
+        },
+        {
+          "start": 83.661,
+          "end": 86.541,
+          "name": "Ab"
+        },
+        {
+          "start": 86.541,
+          "end": 87.052,
+          "name": "Abm"
+        },
+        {
+          "start": 87.052,
+          "end": 87.562,
+          "name": "Bbm"
+        },
+        {
+          "start": 87.562,
+          "end": 88.073,
+          "name": "Bb"
+        },
+        {
+          "start": 88.073,
+          "end": 93.112,
+          "name": "Eb"
+        },
+        {
+          "start": 93.112,
+          "end": 94.157,
+          "name": "Bb"
+        },
+        {
+          "start": 94.157,
+          "end": 95.597,
+          "name": "Eb"
+        },
+        {
+          "start": 95.597,
+          "end": 96.084,
+          "name": "Bb"
+        },
+        {
+          "start": 96.084,
+          "end": 96.595,
+          "name": "Bbm"
+        },
+        {
+          "start": 96.595,
+          "end": 97.129,
+          "name": "Bb"
+        },
+        {
+          "start": 97.129,
+          "end": 97.686,
+          "name": "Bbm"
+        },
+        {
+          "start": 97.686,
+          "end": 98.22,
+          "name": "Bb"
+        },
+        {
+          "start": 98.22,
+          "end": 100.194,
+          "name": "Eb"
+        },
+        {
+          "start": 100.194,
+          "end": 102.795,
+          "name": "Ab"
+        },
+        {
+          "start": 102.795,
+          "end": 103.282,
+          "name": "Abm"
+        },
+        {
+          "start": 103.282,
+          "end": 103.793,
+          "name": "Bbm"
+        },
+        {
+          "start": 103.793,
+          "end": 104.327,
+          "name": "Bb"
+        },
+        {
+          "start": 104.327,
+          "end": 106.347,
+          "name": "Eb"
+        },
+        {
+          "start": 106.347,
+          "end": 107.369,
+          "name": "B"
+        },
+        {
+          "start": 107.369,
+          "end": 108.321,
+          "name": "C#"
+        },
+        {
+          "start": 108.321,
+          "end": 112.408,
+          "name": "Ab"
+        },
+        {
+          "start": 112.408,
+          "end": 113.476,
+          "name": "Gm"
+        },
+        {
+          "start": 113.476,
+          "end": 113.987,
+          "name": "G"
+        },
+        {
+          "start": 113.987,
+          "end": 114.474,
+          "name": "Gm"
+        },
+        {
+          "start": 114.474,
+          "end": 117.075,
+          "name": "Ab"
+        },
+        {
+          "start": 117.075,
+          "end": 118.12,
+          "name": "C#m"
+        },
+        {
+          "start": 118.12,
+          "end": 119.095,
+          "name": "C#"
+        },
+        {
+          "start": 119.095,
+          "end": 120.094,
+          "name": "Bbm"
+        },
+        {
+          "start": 120.094,
+          "end": 120.604,
+          "name": "Bb"
+        },
+        {
+          "start": 120.604,
+          "end": 121.696,
+          "name": "Bbm"
+        },
+        {
+          "start": 121.696,
+          "end": 122.717,
+          "name": "Fm"
+        },
+        {
+          "start": 122.717,
+          "end": 123.205,
+          "name": "Cm"
+        },
+        {
+          "start": 123.205,
+          "end": 125.132,
+          "name": "Eb"
+        },
+        {
+          "start": 125.132,
+          "end": 125.643,
+          "name": "Bb"
+        },
+        {
+          "start": 125.643,
+          "end": 126.131,
+          "name": "Ab"
+        },
+        {
+          "start": 126.131,
+          "end": 126.642,
+          "name": "Fm"
+        },
+        {
+          "start": 126.642,
+          "end": 129.753,
+          "name": "Ab"
+        },
+        {
+          "start": 129.753,
+          "end": 130.798,
+          "name": "Gm"
+        },
+        {
+          "start": 130.798,
+          "end": 131.309,
+          "name": "Eb"
+        },
+        {
+          "start": 131.309,
+          "end": 132.865,
+          "name": "Cm"
+        },
+        {
+          "start": 132.865,
+          "end": 135.814,
+          "name": "Fm"
+        },
+        {
+          "start": 135.814,
+          "end": 137.88,
+          "name": "Ab"
+        },
+        {
+          "start": 137.88,
+          "end": 140.527,
+          "name": "Bb"
+        },
+        {
+          "start": 140.527,
+          "end": 141.038,
+          "name": "Eb"
+        },
+        {
+          "start": 141.038,
+          "end": 141.572,
+          "name": "Abm"
+        },
+        {
+          "start": 141.572,
+          "end": 142.083,
+          "name": "Ebm"
+        },
+        {
+          "start": 142.083,
+          "end": 143.105,
+          "name": "Eb"
+        },
+        {
+          "start": 143.105,
+          "end": 143.639,
+          "name": "Dm"
+        },
+        {
+          "start": 143.639,
+          "end": 144.66,
+          "name": "Bb"
+        },
+        {
+          "start": 144.66,
+          "end": 145.171,
+          "name": "C#m"
+        },
+        {
+          "start": 145.171,
+          "end": 146.193,
+          "name": "C#"
+        },
+        {
+          "start": 146.193,
+          "end": 146.634,
+          "name": "Bb"
+        },
+        {
+          "start": 146.634,
+          "end": 147.098,
+          "name": "Bbm"
+        },
+        {
+          "start": 147.098,
+          "end": 147.563,
+          "name": "Cm"
+        },
+        {
+          "start": 147.563,
+          "end": 148.004,
+          "name": "Ab"
+        },
+        {
+          "start": 148.004,
+          "end": 148.538,
+          "name": "F"
+        },
+        {
+          "start": 148.538,
+          "end": 149.049,
+          "name": "Bbm"
+        },
+        {
+          "start": 149.049,
+          "end": 150.071,
+          "name": "Bb"
+        },
+        {
+          "start": 150.071,
+          "end": 150.581,
+          "name": "F"
+        },
+        {
+          "start": 150.581,
+          "end": 151.092,
+          "name": "Eb"
+        },
+        {
+          "start": 151.092,
+          "end": 152.114,
+          "name": "Gm"
+        },
+        {
+          "start": 152.114,
+          "end": 153.136,
+          "name": "Cm"
+        },
+        {
+          "start": 153.136,
+          "end": 153.646,
+          "name": "C"
+        },
+        {
+          "start": 153.646,
+          "end": 154.134,
+          "name": "Ab"
+        },
+        {
+          "start": 154.134,
+          "end": 155.063,
+          "name": "Fm"
+        },
+        {
+          "start": 155.063,
+          "end": 155.504,
+          "name": "Ebm"
+        },
+        {
+          "start": 155.504,
+          "end": 155.945,
+          "name": "Bb"
+        },
+        {
+          "start": 155.945,
+          "end": 159.985,
+          "name": "Eb"
+        }
+      ],
+      "lyricEvidence": {
+        "lyricSetId": "zh-vocal",
+        "activeLanguageCode": "zh-Hans",
+        "activeTrackPath": "lyrics/zh-vocal/zh-Hans.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/zh-vocal/zh-Hans.json",
+            "lineCount": 29,
+            "firstLyricStart": 7.7,
+            "lastLyricEnd": 156.57,
+            "correction": "DiffRhythm 160-second short route. Published timing follows ASR phrase windows from the selected render; sound-close substitutions such as 像年/想念, 这一夜/这一眼, 我白/我把爱, and 海之间/云海之间 are corrected back to the intended lyric. Lines not clearly present in the render are not inserted."
+          },
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/zh-vocal/en.json",
+            "lineCount": 29,
+            "firstLyricStart": 7.7,
+            "lastLyricEnd": 156.57,
+            "correction": "DiffRhythm 160-second short route. Published timing follows ASR phrase windows from the selected render; sound-close substitutions such as 像年/想念, 这一夜/这一眼, 我白/我把爱, and 海之间/云海之间 are corrected back to the intended lyric. Lines not clearly present in the render are not inserted."
+          },
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/zh-vocal/ja.json",
+            "lineCount": 29,
+            "firstLyricStart": 7.7,
+            "lastLyricEnd": 156.57,
+            "correction": "DiffRhythm 160-second short route. Published timing follows ASR phrase windows from the selected render; sound-close substitutions such as 像年/想念, 这一夜/这一眼, 我白/我把爱, and 海之间/云海之间 are corrected back to the intended lyric. Lines not clearly present in the render are not inserted."
+          }
+        ]
+      },
+      "practice": {
+        "beginnerFocus": [
+          "Bb",
+          "Eb",
+          "C#",
+          "Bbm",
+          "Fm",
+          "Gm",
+          "C",
+          "Ab"
+        ],
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
+      }
+    }
+  },
+  "lesson": {
+    "name": "Atlas first pass",
+    "goal": "Help a beginner follow lyrics, chord changes, and beat entry without needing to sing first.",
+    "steps": [
+      "Listen once and tap the beat lane.",
+      "Loop one phrase and speak the lyric rhythmically.",
+      "Play one strum per displayed chord change.",
+      "Only add a fuller strumming pattern after the lyric and chord entry feel stable."
+    ]
+  }
+}

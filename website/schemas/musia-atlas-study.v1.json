@@ -55,6 +55,12 @@
           "beatSource": {
             "type": "string"
           },
+          "chordConfidence": {
+            "enum": ["verified", "analysis", "estimated"]
+          },
+          "chordSource": {
+            "type": "string"
+          },
           "beats": {
             "type": "array",
             "items": {
@@ -68,6 +74,32 @@
                 "time": {
                   "type": "number",
                   "minimum": 0
+                }
+              }
+            }
+          },
+          "chords": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["start", "end", "name"],
+              "properties": {
+                "start": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "confidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
                 }
               }
             }

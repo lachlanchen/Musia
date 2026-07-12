@@ -125,6 +125,40 @@ assets.alternateAudio[].musical.chords
 - `website/atlas/aya-chan-hikari-ame/index.html`
   - static redirect for a clean shareable Atlas path.
 
+## Rebuild Command
+
+After a song is corrected for Fun Lazying Art or prepared for Shipinhao Music,
+rebuild Atlas study data:
+
+```bash
+node bin/musia.js atlas-build --all
+node bin/musia.js fun-validate
+```
+
+For one song:
+
+```bash
+node bin/musia.js atlas-build --media-id <media-id>
+```
+
+The generator writes:
+
+```text
+website/data/songs/<media-id>/study.json
+website/atlas/<media-id>/index.html
+```
+
+Atlas source priority:
+
+1.  corrected website lyric JSON;
+2.  manifest/asset chord maps;
+3.  matched local analysis beats/chords under `data/runs`;
+4.  BPM-estimated beat grid in the browser when no reliable beat file is found.
+
+The matcher is conservative: if a beat-analysis run cannot be strongly matched
+to the media id, asset id, or audio filename, Atlas uses BPM-estimated beats
+instead of borrowing another song's run.
+
 ## Future Upgrades
 
 - Add a human-audited lead-sheet layer with confidence `verified`.

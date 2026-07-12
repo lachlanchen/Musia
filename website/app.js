@@ -283,6 +283,12 @@ function chords() {
   return activeMusical()?.chords || [];
 }
 
+function numericBpm(value) {
+  if (Number.isFinite(Number(value))) return Number(value);
+  const match = String(value || "").match(/([0-9]+(?:\.[0-9]+)?)/);
+  return match ? Number(match[1]) : 0;
+}
+
 function studyOptions() {
   return {
     transpose: state.studyTranspose,
@@ -308,13 +314,16 @@ function activeMusical() {
   const manifestMusical = state.manifest?.musical || {};
   const primaryMusical = state.manifest?.assets?.primaryAudio?.musical || {};
   const assetMusical = activePlayableAsset()?.musical || {};
+  const studyAsset = activeStudyAssetData() || {};
   const timeline = (...values) => values.find((value) => Array.isArray(value) && value.length) || [];
   return {
     ...manifestMusical,
     ...primaryMusical,
     ...assetMusical,
-    chords: timeline(assetMusical.chords, primaryMusical.chords, manifestMusical.chords),
-    beats: timeline(assetMusical.beats, primaryMusical.beats, manifestMusical.beats)
+    chords: timeline(assetMusical.chords, primaryMusical.chords, manifestMusical.chords, studyAsset.chords),
+    beats: timeline(assetMusical.beats, primaryMusical.beats, manifestMusical.beats, studyAsset.beats),
+    chordSource: assetMusical.chordSource || primaryMusical.chordSource || manifestMusical.chordSource || studyAsset.chordSource,
+    beatSource: assetMusical.beatSource || primaryMusical.beatSource || manifestMusical.beatSource || studyAsset.beatSource
   };
 }
 
@@ -347,7 +356,7 @@ function studyBeatGrid() {
   const duration = state.mediaElement?.duration || state.manifest?.duration || 0;
   return window.Musia?.makeBeatGrid({
     beats: assetData?.beats || musical.beats || [],
-    bpm: assetData?.bpm || musical.bpm,
+    bpm: numericBpm(assetData?.bpm || musical.bpm),
     duration,
     timeSignature: assetData?.timeSignature || musical.timeSignature || "4/4"
   }) || [];
@@ -424,7 +433,8 @@ function renderStudyPanel(activeLine = null, activeChord = null, time = 0) {
   const lineNumber = studyLineNumber(activeLine);
 
   $("study-title").textContent = `${displayTitleForAsset(activeAsset)} Atlas`;
-  $("study-summary").textContent = `${musical.key || "Unknown key"} · ${musical.bpm ? `${Number(musical.bpm).toFixed(1)} BPM` : "tempo pending"} · ${activeAsset?.languageLabel || activeAsset?.label || "active vocal"}`;
+  const bpm = numericBpm(musical.bpm);
+  $("study-summary").textContent = `${musical.key || "Unknown key"} · ${bpm ? `${bpm.toFixed(1)} BPM` : "tempo pending"} · ${activeAsset?.languageLabel || activeAsset?.label || "active vocal"}`;
   $("study-line-title").textContent = line
     ? `Line ${String(lineNumber).padStart(2, "0")} · ${formatTime(line.start)}-${formatTime(line.end)}`
     : "Instrumental or waiting for the first lyric";
@@ -550,8 +560,9 @@ function applySkipIntro({ force = false } = {}) {
 
 function updateMusicalLabels() {
   const musical = activeMusical();
+  const bpm = numericBpm(musical.bpm);
   $("key-label").textContent = musical.key || "No key";
-  $("bpm-label").textContent = musical.bpm ? `${Math.round(Number(musical.bpm))} BPM` : "No BPM";
+  $("bpm-label").textContent = bpm ? `${Math.round(bpm)} BPM` : "No BPM";
 }
 
 function lineForTrack(track, lineId) {
@@ -1753,7 +1764,7 @@ async function loadMediaItem(item, updateHash = false) {
   $("media-subtitle").textContent = "";
   $("media-caption").textContent = state.manifest.caption || labelKind(state.manifest.kind);
   $("key-label").textContent = musical.key || "No key";
-  $("bpm-label").textContent = musical.bpm ? `${Math.round(Number(musical.bpm))} BPM` : "No BPM";
+  $("bpm-label").textContent = numericBpm(musical.bpm) ? `${Math.round(numericBpm(musical.bpm))} BPM` : "No BPM";
   updateShareMetadata(state.manifest);
   const cover = coverUrl(state.manifest);
   coverArt.src = cover ? resolveSitePath(cover) : "";

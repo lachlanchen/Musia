@@ -1,0 +1,1002 @@
+{
+  "schema": "https://fun.lazying.art/schemas/musia-atlas-study.v1.json",
+  "version": 1,
+  "toolName": "Musia Atlas",
+  "mediaId": "gong-bai-tou-snow-we-share-native",
+  "title": "共白头 · Snow We Share Atlas",
+  "summary": "Detailed practice data for corrected lyrics, chord changes, beat timing, and guitar display.",
+  "defaultAssetId": "gong-bai-tou-snow-we-share-native-zh",
+  "dataPolicy": [
+    "Lyrics use corrected Fun website timing JSON for each active vocal.",
+    "Chord and beat maps are analysis-grade unless explicitly marked verified.",
+    "Capo, transpose, and simplify are display-only helpers; source audio is unchanged.",
+    "Instrumental spans are UI state only and are not encoded as lyric lines."
+  ],
+  "assets": {
+    "gong-bai-tou-snow-we-share-native-zh": {
+      "label": "中文",
+      "languageCode": "zh-Hans",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/gong-bai-tou-snow-we-share-native-zh-yuerenge-style-seed791401-20260710.mp3",
+      "bpm": 151.999,
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/analysis/beats.json",
+      "beats": [
+        {
+          "index": 0,
+          "time": 22.523
+        },
+        {
+          "index": 1,
+          "time": 22.918
+        },
+        {
+          "index": 2,
+          "time": 23.336
+        },
+        {
+          "index": 3,
+          "time": 23.754
+        },
+        {
+          "index": 4,
+          "time": 24.172
+        },
+        {
+          "index": 5,
+          "time": 24.59
+        },
+        {
+          "index": 6,
+          "time": 25.008
+        },
+        {
+          "index": 7,
+          "time": 25.426
+        },
+        {
+          "index": 8,
+          "time": 25.821
+        },
+        {
+          "index": 9,
+          "time": 26.215
+        },
+        {
+          "index": 10,
+          "time": 26.61
+        },
+        {
+          "index": 11,
+          "time": 27.005
+        },
+        {
+          "index": 12,
+          "time": 27.4
+        },
+        {
+          "index": 13,
+          "time": 27.794
+        },
+        {
+          "index": 14,
+          "time": 28.189
+        },
+        {
+          "index": 15,
+          "time": 28.584
+        },
+        {
+          "index": 16,
+          "time": 28.979
+        },
+        {
+          "index": 17,
+          "time": 29.373
+        },
+        {
+          "index": 18,
+          "time": 29.791
+        },
+        {
+          "index": 19,
+          "time": 30.186
+        },
+        {
+          "index": 20,
+          "time": 30.581
+        },
+        {
+          "index": 21,
+          "time": 30.975
+        },
+        {
+          "index": 22,
+          "time": 31.37
+        },
+        {
+          "index": 23,
+          "time": 31.765
+        },
+        {
+          "index": 24,
+          "time": 32.16
+        },
+        {
+          "index": 25,
+          "time": 32.554
+        },
+        {
+          "index": 26,
+          "time": 32.949
+        },
+        {
+          "index": 27,
+          "time": 33.321
+        },
+        {
+          "index": 28,
+          "time": 33.715
+        },
+        {
+          "index": 29,
+          "time": 34.11
+        },
+        {
+          "index": 30,
+          "time": 34.505
+        },
+        {
+          "index": 31,
+          "time": 34.9
+        },
+        {
+          "index": 32,
+          "time": 35.294
+        },
+        {
+          "index": 33,
+          "time": 35.689
+        },
+        {
+          "index": 34,
+          "time": 36.084
+        },
+        {
+          "index": 35,
+          "time": 36.479
+        },
+        {
+          "index": 36,
+          "time": 36.873
+        },
+        {
+          "index": 37,
+          "time": 37.268
+        },
+        {
+          "index": 38,
+          "time": 37.663
+        },
+        {
+          "index": 39,
+          "time": 38.058
+        },
+        {
+          "index": 40,
+          "time": 38.452
+        },
+        {
+          "index": 41,
+          "time": 38.847
+        },
+        {
+          "index": 42,
+          "time": 39.242
+        },
+        {
+          "index": 43,
+          "time": 39.636
+        },
+        {
+          "index": 44,
+          "time": 40.031
+        },
+        {
+          "index": 45,
+          "time": 40.426
+        },
+        {
+          "index": 46,
+          "time": 40.821
+        },
+        {
+          "index": 47,
+          "time": 41.215
+        },
+        {
+          "index": 48,
+          "time": 41.61
+        },
+        {
+          "index": 49,
+          "time": 42.005
+        },
+        {
+          "index": 50,
+          "time": 42.4
+        },
+        {
+          "index": 51,
+          "time": 42.794
+        },
+        {
+          "index": 52,
+          "time": 43.189
+        },
+        {
+          "index": 53,
+          "time": 43.584
+        },
+        {
+          "index": 54,
+          "time": 44.002
+        },
+        {
+          "index": 55,
+          "time": 44.397
+        },
+        {
+          "index": 56,
+          "time": 44.791
+        },
+        {
+          "index": 57,
+          "time": 45.186
+        },
+        {
+          "index": 58,
+          "time": 45.581
+        },
+        {
+          "index": 59,
+          "time": 45.976
+        },
+        {
+          "index": 60,
+          "time": 46.37
+        },
+        {
+          "index": 61,
+          "time": 46.765
+        },
+        {
+          "index": 62,
+          "time": 47.16
+        },
+        {
+          "index": 63,
+          "time": 47.554
+        },
+        {
+          "index": 64,
+          "time": 47.949
+        },
+        {
+          "index": 65,
+          "time": 48.344
+        },
+        {
+          "index": 66,
+          "time": 48.739
+        },
+        {
+          "index": 67,
+          "time": 49.11
+        },
+        {
+          "index": 68,
+          "time": 49.505
+        },
+        {
+          "index": 69,
+          "time": 49.9
+        },
+        {
+          "index": 70,
+          "time": 50.294
+        },
+        {
+          "index": 71,
+          "time": 50.689
+        },
+        {
+          "index": 72,
+          "time": 51.084
+        },
+        {
+          "index": 73,
+          "time": 51.479
+        },
+        {
+          "index": 74,
+          "time": 51.873
+        },
+        {
+          "index": 75,
+          "time": 52.268
+        },
+        {
+          "index": 76,
+          "time": 52.663
+        },
+        {
+          "index": 77,
+          "time": 53.058
+        },
+        {
+          "index": 78,
+          "time": 53.452
+        },
+        {
+          "index": 79,
+          "time": 53.847
+        },
+        {
+          "index": 80,
+          "time": 54.242
+        },
+        {
+          "index": 81,
+          "time": 54.637
+        },
+        {
+          "index": 82,
+          "time": 55.031
+        },
+        {
+          "index": 83,
+          "time": 55.403
+        },
+        {
+          "index": 84,
+          "time": 55.798
+        },
+        {
+          "index": 85,
+          "time": 56.192
+        },
+        {
+          "index": 86,
+          "time": 56.61
+        },
+        {
+          "index": 87,
+          "time": 57.005
+        },
+        {
+          "index": 88,
+          "time": 57.4
+        },
+        {
+          "index": 89,
+          "time": 57.794
+        },
+        {
+          "index": 90,
+          "time": 58.189
+        },
+        {
+          "index": 91,
+          "time": 58.584
+        },
+        {
+          "index": 92,
+          "time": 58.979
+        },
+        {
+          "index": 93,
+          "time": 59.35
+        },
+        {
+          "index": 94,
+          "time": 59.768
+        },
+        {
+          "index": 95,
+          "time": 60.163
+        },
+        {
+          "index": 96,
+          "time": 60.558
+        },
+        {
+          "index": 97,
+          "time": 60.952
+        },
+        {
+          "index": 98,
+          "time": 61.347
+        },
+        {
+          "index": 99,
+          "time": 61.742
+        },
+        {
+          "index": 100,
+          "time": 62.137
+        },
+        {
+          "index": 101,
+          "time": 62.508
+        },
+        {
+          "index": 102,
+          "time": 62.926
+        },
+        {
+          "index": 103,
+          "time": 63.321
+        },
+        {
+          "index": 104,
+          "time": 63.716
+        },
+        {
+          "index": 105,
+          "time": 64.11
+        },
+        {
+          "index": 106,
+          "time": 64.505
+        },
+        {
+          "index": 107,
+          "time": 64.9
+        },
+        {
+          "index": 108,
+          "time": 65.295
+        },
+        {
+          "index": 109,
+          "time": 65.689
+        },
+        {
+          "index": 110,
+          "time": 66.084
+        },
+        {
+          "index": 111,
+          "time": 66.479
+        },
+        {
+          "index": 112,
+          "time": 66.873
+        },
+        {
+          "index": 113,
+          "time": 67.268
+        },
+        {
+          "index": 114,
+          "time": 67.663
+        },
+        {
+          "index": 115,
+          "time": 68.058
+        },
+        {
+          "index": 116,
+          "time": 68.452
+        },
+        {
+          "index": 117,
+          "time": 68.824
+        },
+        {
+          "index": 118,
+          "time": 69.219
+        },
+        {
+          "index": 119,
+          "time": 69.637
+        },
+        {
+          "index": 120,
+          "time": 70.031
+        },
+        {
+          "index": 121,
+          "time": 70.426
+        },
+        {
+          "index": 122,
+          "time": 70.821
+        },
+        {
+          "index": 123,
+          "time": 71.216
+        },
+        {
+          "index": 124,
+          "time": 71.61
+        },
+        {
+          "index": 125,
+          "time": 72.005
+        },
+        {
+          "index": 126,
+          "time": 72.4
+        },
+        {
+          "index": 127,
+          "time": 72.795
+        },
+        {
+          "index": 128,
+          "time": 73.189
+        },
+        {
+          "index": 129,
+          "time": 73.584
+        },
+        {
+          "index": 130,
+          "time": 73.979
+        },
+        {
+          "index": 131,
+          "time": 74.374
+        },
+        {
+          "index": 132,
+          "time": 74.768
+        },
+        {
+          "index": 133,
+          "time": 75.14
+        },
+        {
+          "index": 134,
+          "time": 75.535
+        },
+        {
+          "index": 135,
+          "time": 75.952
+        },
+        {
+          "index": 136,
+          "time": 76.324
+        },
+        {
+          "index": 137,
+          "time": 76.696
+        },
+        {
+          "index": 138,
+          "time": 77.137
+        },
+        {
+          "index": 139,
+          "time": 77.531
+        },
+        {
+          "index": 140,
+          "time": 77.926
+        },
+        {
+          "index": 141,
+          "time": 78.298
+        },
+        {
+          "index": 142,
+          "time": 78.716
+        },
+        {
+          "index": 143,
+          "time": 79.11
+        },
+        {
+          "index": 144,
+          "time": 79.505
+        },
+        {
+          "index": 145,
+          "time": 79.9
+        },
+        {
+          "index": 146,
+          "time": 80.295
+        },
+        {
+          "index": 147,
+          "time": 80.689
+        },
+        {
+          "index": 148,
+          "time": 81.084
+        },
+        {
+          "index": 149,
+          "time": 81.479
+        },
+        {
+          "index": 150,
+          "time": 81.897
+        },
+        {
+          "index": 151,
+          "time": 82.268
+        },
+        {
+          "index": 152,
+          "time": 82.663
+        },
+        {
+          "index": 153,
+          "time": 83.058
+        },
+        {
+          "index": 154,
+          "time": 83.453
+        },
+        {
+          "index": 155,
+          "time": 83.801
+        },
+        {
+          "index": 156,
+          "time": 84.172
+        },
+        {
+          "index": 157,
+          "time": 84.544
+        },
+        {
+          "index": 158,
+          "time": 84.939
+        },
+        {
+          "index": 159,
+          "time": 85.333
+        },
+        {
+          "index": 160,
+          "time": 85.728
+        },
+        {
+          "index": 161,
+          "time": 86.123
+        },
+        {
+          "index": 162,
+          "time": 86.518
+        },
+        {
+          "index": 163,
+          "time": 86.912
+        }
+      ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 22.523,
+          "name": "A"
+        },
+        {
+          "start": 22.523,
+          "end": 23.336,
+          "name": "Em"
+        },
+        {
+          "start": 23.336,
+          "end": 26.215,
+          "name": "G"
+        },
+        {
+          "start": 26.215,
+          "end": 26.61,
+          "name": "F#m"
+        },
+        {
+          "start": 26.61,
+          "end": 27.794,
+          "name": "D"
+        },
+        {
+          "start": 27.794,
+          "end": 28.189,
+          "name": "F#m"
+        },
+        {
+          "start": 28.189,
+          "end": 28.584,
+          "name": "D"
+        },
+        {
+          "start": 28.584,
+          "end": 29.373,
+          "name": "G"
+        },
+        {
+          "start": 29.373,
+          "end": 29.791,
+          "name": "Em"
+        },
+        {
+          "start": 29.791,
+          "end": 31.37,
+          "name": "G"
+        },
+        {
+          "start": 31.37,
+          "end": 32.16,
+          "name": "Em"
+        },
+        {
+          "start": 32.16,
+          "end": 32.554,
+          "name": "D"
+        },
+        {
+          "start": 32.554,
+          "end": 35.689,
+          "name": "Am"
+        },
+        {
+          "start": 35.689,
+          "end": 37.268,
+          "name": "G"
+        },
+        {
+          "start": 37.268,
+          "end": 38.847,
+          "name": "A"
+        },
+        {
+          "start": 38.847,
+          "end": 41.61,
+          "name": "D"
+        },
+        {
+          "start": 41.61,
+          "end": 42.005,
+          "name": "Bm"
+        },
+        {
+          "start": 42.005,
+          "end": 44.791,
+          "name": "G"
+        },
+        {
+          "start": 44.791,
+          "end": 45.186,
+          "name": "Em"
+        },
+        {
+          "start": 45.186,
+          "end": 47.949,
+          "name": "F#m"
+        },
+        {
+          "start": 47.949,
+          "end": 49.11,
+          "name": "B"
+        },
+        {
+          "start": 49.11,
+          "end": 54.242,
+          "name": "Bm"
+        },
+        {
+          "start": 54.242,
+          "end": 54.637,
+          "name": "E"
+        },
+        {
+          "start": 54.637,
+          "end": 55.031,
+          "name": "Gm"
+        },
+        {
+          "start": 55.031,
+          "end": 55.798,
+          "name": "G"
+        },
+        {
+          "start": 55.798,
+          "end": 56.192,
+          "name": "Em"
+        },
+        {
+          "start": 56.192,
+          "end": 57.794,
+          "name": "G"
+        },
+        {
+          "start": 57.794,
+          "end": 60.163,
+          "name": "Am"
+        },
+        {
+          "start": 60.163,
+          "end": 60.558,
+          "name": "A"
+        },
+        {
+          "start": 60.558,
+          "end": 60.952,
+          "name": "Em"
+        },
+        {
+          "start": 60.952,
+          "end": 62.137,
+          "name": "G"
+        },
+        {
+          "start": 62.137,
+          "end": 62.508,
+          "name": "Gm"
+        },
+        {
+          "start": 62.508,
+          "end": 64.11,
+          "name": "A"
+        },
+        {
+          "start": 64.11,
+          "end": 65.689,
+          "name": "D"
+        },
+        {
+          "start": 65.689,
+          "end": 66.084,
+          "name": "Dm"
+        },
+        {
+          "start": 66.084,
+          "end": 66.873,
+          "name": "Am"
+        },
+        {
+          "start": 66.873,
+          "end": 67.268,
+          "name": "D"
+        },
+        {
+          "start": 67.268,
+          "end": 70.031,
+          "name": "G"
+        },
+        {
+          "start": 70.031,
+          "end": 70.426,
+          "name": "Gm"
+        },
+        {
+          "start": 70.426,
+          "end": 73.584,
+          "name": "Am"
+        },
+        {
+          "start": 73.584,
+          "end": 76.696,
+          "name": "G"
+        },
+        {
+          "start": 76.696,
+          "end": 77.926,
+          "name": "F"
+        },
+        {
+          "start": 77.926,
+          "end": 78.716,
+          "name": "Fm"
+        },
+        {
+          "start": 78.716,
+          "end": 79.9,
+          "name": "F"
+        },
+        {
+          "start": 79.9,
+          "end": 80.689,
+          "name": "G"
+        },
+        {
+          "start": 80.689,
+          "end": 81.084,
+          "name": "Em"
+        },
+        {
+          "start": 81.084,
+          "end": 81.479,
+          "name": "Gm"
+        },
+        {
+          "start": 81.479,
+          "end": 82.663,
+          "name": "Bm"
+        },
+        {
+          "start": 82.663,
+          "end": 83.453,
+          "name": "Gm"
+        },
+        {
+          "start": 83.453,
+          "end": 86.912,
+          "name": "F#"
+        },
+        {
+          "start": 86.912,
+          "end": 92.0,
+          "name": "F#m"
+        }
+      ],
+      "lyricEvidence": {
+        "lyricSetId": "zh-vocal",
+        "activeLanguageCode": "zh-Hans",
+        "activeTrackPath": "lyrics/zh-vocal/zh-Hans.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/zh-vocal/zh-Hans.json",
+            "lineCount": 9,
+            "firstLyricStart": 16.27,
+            "lastLyricEnd": 84.16,
+            "correction": "Corrected from the selected Chinese render using same-audio ASR, the source poem, and the Musia source-close policy. No instrumental placeholder rows are stored as lyrics."
+          },
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/zh-vocal/en.json",
+            "lineCount": 9,
+            "firstLyricStart": 16.27,
+            "lastLyricEnd": 84.16,
+            "correction": "Corrected from the selected Chinese render using same-audio ASR, the source poem, and the Musia source-close policy. No instrumental placeholder rows are stored as lyrics."
+          },
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/zh-vocal/ja.json",
+            "lineCount": 9,
+            "firstLyricStart": 16.27,
+            "lastLyricEnd": 84.16,
+            "correction": "Corrected from the selected Chinese render using same-audio ASR, the source poem, and the Musia source-close policy. No instrumental placeholder rows are stored as lyrics."
+          }
+        ]
+      },
+      "practice": {
+        "beginnerFocus": [
+          "A",
+          "Em",
+          "G",
+          "F#m",
+          "D",
+          "Am",
+          "Bm",
+          "B"
+        ],
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
+      }
+    }
+  },
+  "lesson": {
+    "name": "Atlas first pass",
+    "goal": "Help a beginner follow lyrics, chord changes, and beat entry without needing to sing first.",
+    "steps": [
+      "Listen once and tap the beat lane.",
+      "Loop one phrase and speak the lyric rhythmically.",
+      "Play one strum per displayed chord change.",
+      "Only add a fuller strumming pattern after the lyric and chord entry feel stable."
+    ]
+  }
+}

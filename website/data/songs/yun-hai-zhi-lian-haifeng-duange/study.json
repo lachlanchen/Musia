@@ -1,0 +1,601 @@
+{
+  "schema": "https://fun.lazying.art/schemas/musia-atlas-study.v1.json",
+  "version": 1,
+  "toolName": "Musia Atlas",
+  "mediaId": "yun-hai-zhi-lian-haifeng-duange",
+  "title": "云海之恋 Atlas",
+  "summary": "Detailed practice data for corrected lyrics, chord changes, beat timing, and guitar display.",
+  "defaultAssetId": "haifeng-duange-zh",
+  "dataPolicy": [
+    "Lyrics use corrected Fun website timing JSON for each active vocal.",
+    "Chord and beat maps are analysis-grade unless explicitly marked verified.",
+    "Capo, transpose, and simplify are display-only helpers; source audio is unchanged.",
+    "Instrumental spans are UI state only and are not encoded as lyric lines."
+  ],
+  "assets": {
+    "haifeng-duange-zh": {
+      "label": "中文",
+      "languageCode": "zh-Hans",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-haifeng-duange-zh-Hans-ace-20260630.mp3",
+      "bpm": 76.0,
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "data/runs/yun-hai-zhi-lian-haifeng-duange-20260630-analysis/analysis/beats.json",
+      "beats": [
+        {
+          "index": 0,
+          "time": 15.139
+        },
+        {
+          "index": 1,
+          "time": 15.929
+        },
+        {
+          "index": 2,
+          "time": 16.742
+        },
+        {
+          "index": 3,
+          "time": 17.531
+        },
+        {
+          "index": 4,
+          "time": 18.297
+        },
+        {
+          "index": 5,
+          "time": 19.087
+        },
+        {
+          "index": 6,
+          "time": 19.876
+        },
+        {
+          "index": 7,
+          "time": 20.666
+        },
+        {
+          "index": 8,
+          "time": 21.455
+        },
+        {
+          "index": 9,
+          "time": 22.291
+        },
+        {
+          "index": 10,
+          "time": 23.057
+        },
+        {
+          "index": 11,
+          "time": 23.847
+        },
+        {
+          "index": 12,
+          "time": 24.636
+        },
+        {
+          "index": 13,
+          "time": 25.426
+        },
+        {
+          "index": 14,
+          "time": 26.192
+        },
+        {
+          "index": 15,
+          "time": 26.982
+        },
+        {
+          "index": 16,
+          "time": 27.771
+        },
+        {
+          "index": 17,
+          "time": 28.561
+        },
+        {
+          "index": 18,
+          "time": 29.35
+        },
+        {
+          "index": 19,
+          "time": 30.14
+        },
+        {
+          "index": 20,
+          "time": 30.929
+        },
+        {
+          "index": 21,
+          "time": 31.718
+        },
+        {
+          "index": 22,
+          "time": 32.508
+        },
+        {
+          "index": 23,
+          "time": 33.297
+        },
+        {
+          "index": 24,
+          "time": 34.087
+        },
+        {
+          "index": 25,
+          "time": 34.876
+        },
+        {
+          "index": 26,
+          "time": 35.666
+        },
+        {
+          "index": 27,
+          "time": 36.432
+        },
+        {
+          "index": 28,
+          "time": 37.245
+        },
+        {
+          "index": 29,
+          "time": 38.034
+        },
+        {
+          "index": 30,
+          "time": 38.824
+        },
+        {
+          "index": 31,
+          "time": 39.613
+        },
+        {
+          "index": 32,
+          "time": 40.403
+        },
+        {
+          "index": 33,
+          "time": 41.192
+        },
+        {
+          "index": 34,
+          "time": 41.982
+        },
+        {
+          "index": 35,
+          "time": 42.771
+        },
+        {
+          "index": 36,
+          "time": 43.561
+        },
+        {
+          "index": 37,
+          "time": 44.35
+        },
+        {
+          "index": 38,
+          "time": 45.14
+        },
+        {
+          "index": 39,
+          "time": 45.929
+        },
+        {
+          "index": 40,
+          "time": 46.719
+        },
+        {
+          "index": 41,
+          "time": 47.508
+        },
+        {
+          "index": 42,
+          "time": 48.298
+        },
+        {
+          "index": 43,
+          "time": 49.087
+        },
+        {
+          "index": 44,
+          "time": 49.876
+        },
+        {
+          "index": 45,
+          "time": 50.666
+        },
+        {
+          "index": 46,
+          "time": 51.455
+        },
+        {
+          "index": 47,
+          "time": 52.268
+        },
+        {
+          "index": 48,
+          "time": 53.034
+        },
+        {
+          "index": 49,
+          "time": 53.824
+        },
+        {
+          "index": 50,
+          "time": 54.613
+        },
+        {
+          "index": 51,
+          "time": 55.403
+        },
+        {
+          "index": 52,
+          "time": 56.192
+        },
+        {
+          "index": 53,
+          "time": 56.982
+        },
+        {
+          "index": 54,
+          "time": 57.771
+        },
+        {
+          "index": 55,
+          "time": 58.561
+        },
+        {
+          "index": 56,
+          "time": 59.35
+        },
+        {
+          "index": 57,
+          "time": 60.14
+        },
+        {
+          "index": 58,
+          "time": 60.929
+        },
+        {
+          "index": 59,
+          "time": 61.719
+        },
+        {
+          "index": 60,
+          "time": 62.508
+        },
+        {
+          "index": 61,
+          "time": 63.298
+        },
+        {
+          "index": 62,
+          "time": 64.087
+        },
+        {
+          "index": 63,
+          "time": 64.877
+        },
+        {
+          "index": 64,
+          "time": 65.666
+        },
+        {
+          "index": 65,
+          "time": 66.456
+        },
+        {
+          "index": 66,
+          "time": 67.245
+        },
+        {
+          "index": 67,
+          "time": 68.034
+        },
+        {
+          "index": 68,
+          "time": 68.824
+        },
+        {
+          "index": 69,
+          "time": 69.613
+        },
+        {
+          "index": 70,
+          "time": 70.403
+        },
+        {
+          "index": 71,
+          "time": 71.192
+        },
+        {
+          "index": 72,
+          "time": 71.982
+        },
+        {
+          "index": 73,
+          "time": 72.771
+        },
+        {
+          "index": 74,
+          "time": 73.561
+        },
+        {
+          "index": 75,
+          "time": 74.35
+        },
+        {
+          "index": 76,
+          "time": 75.14
+        },
+        {
+          "index": 77,
+          "time": 75.929
+        },
+        {
+          "index": 78,
+          "time": 76.719
+        },
+        {
+          "index": 79,
+          "time": 77.508
+        },
+        {
+          "index": 80,
+          "time": 78.298
+        },
+        {
+          "index": 81,
+          "time": 79.087
+        },
+        {
+          "index": 82,
+          "time": 79.877
+        },
+        {
+          "index": 83,
+          "time": 80.666
+        },
+        {
+          "index": 84,
+          "time": 81.456
+        }
+      ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 15.139,
+          "name": "A"
+        },
+        {
+          "start": 15.139,
+          "end": 18.297,
+          "name": "D"
+        },
+        {
+          "start": 18.297,
+          "end": 21.455,
+          "name": "F#m"
+        },
+        {
+          "start": 21.455,
+          "end": 23.057,
+          "name": "G"
+        },
+        {
+          "start": 23.057,
+          "end": 24.636,
+          "name": "C#m"
+        },
+        {
+          "start": 24.636,
+          "end": 26.982,
+          "name": "F#m"
+        },
+        {
+          "start": 26.982,
+          "end": 27.771,
+          "name": "A"
+        },
+        {
+          "start": 27.771,
+          "end": 30.14,
+          "name": "D"
+        },
+        {
+          "start": 30.14,
+          "end": 30.929,
+          "name": "Dm"
+        },
+        {
+          "start": 30.929,
+          "end": 34.087,
+          "name": "F#m"
+        },
+        {
+          "start": 34.087,
+          "end": 35.666,
+          "name": "G"
+        },
+        {
+          "start": 35.666,
+          "end": 37.245,
+          "name": "E"
+        },
+        {
+          "start": 37.245,
+          "end": 39.613,
+          "name": "Am"
+        },
+        {
+          "start": 39.613,
+          "end": 43.561,
+          "name": "D"
+        },
+        {
+          "start": 43.561,
+          "end": 46.719,
+          "name": "F#m"
+        },
+        {
+          "start": 46.719,
+          "end": 48.298,
+          "name": "G"
+        },
+        {
+          "start": 48.298,
+          "end": 49.876,
+          "name": "C#m"
+        },
+        {
+          "start": 49.876,
+          "end": 52.268,
+          "name": "F#m"
+        },
+        {
+          "start": 52.268,
+          "end": 53.034,
+          "name": "A"
+        },
+        {
+          "start": 53.034,
+          "end": 56.192,
+          "name": "Bm"
+        },
+        {
+          "start": 56.192,
+          "end": 59.35,
+          "name": "F#m"
+        },
+        {
+          "start": 59.35,
+          "end": 60.929,
+          "name": "G"
+        },
+        {
+          "start": 60.929,
+          "end": 62.508,
+          "name": "C#m"
+        },
+        {
+          "start": 62.508,
+          "end": 65.666,
+          "name": "F#m"
+        },
+        {
+          "start": 65.666,
+          "end": 67.245,
+          "name": "Bm"
+        },
+        {
+          "start": 67.245,
+          "end": 68.824,
+          "name": "Em"
+        },
+        {
+          "start": 68.824,
+          "end": 69.613,
+          "name": "A"
+        },
+        {
+          "start": 69.613,
+          "end": 70.403,
+          "name": "E"
+        },
+        {
+          "start": 70.403,
+          "end": 74.35,
+          "name": "F#m"
+        },
+        {
+          "start": 74.35,
+          "end": 75.14,
+          "name": "A"
+        },
+        {
+          "start": 75.14,
+          "end": 77.508,
+          "name": "D"
+        },
+        {
+          "start": 77.508,
+          "end": 78.298,
+          "name": "Dm"
+        },
+        {
+          "start": 78.298,
+          "end": 81.456,
+          "name": "E"
+        },
+        {
+          "start": 81.456,
+          "end": 90.0,
+          "name": "A"
+        }
+      ],
+      "lyricEvidence": {
+        "lyricSetId": "zh-vocal",
+        "activeLanguageCode": "zh-Hans",
+        "activeTrackPath": "lyrics/zh-vocal/zh-Hans.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/zh-vocal/zh-Hans.json",
+            "lineCount": 25,
+            "firstLyricStart": 14.68,
+            "lastLyricEnd": 83.46,
+            "correction": "Active Mandarin lyrics corrected from selected-audio small ASR, vocal-stem medium ASR, no-VAD base/small/medium ASR, user listening feedback, and the reference lyric. Opening and outro 天蓝蓝/海蓝蓝 lines were restored because no-VAD ASR recovered them as sound-close variants and the user confirmed the audio contains them. Skipped bridge draft lines remain unpublished."
+          },
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/zh-vocal/en.json",
+            "lineCount": 25,
+            "firstLyricStart": 14.68,
+            "lastLyricEnd": 83.46,
+            "correction": "Active Mandarin lyrics corrected from selected-audio small ASR, vocal-stem medium ASR, no-VAD base/small/medium ASR, user listening feedback, and the reference lyric. Opening and outro 天蓝蓝/海蓝蓝 lines were restored because no-VAD ASR recovered them as sound-close variants and the user confirmed the audio contains them. Skipped bridge draft lines remain unpublished."
+          },
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/zh-vocal/ja.json",
+            "lineCount": 25,
+            "firstLyricStart": 14.68,
+            "lastLyricEnd": 83.46,
+            "correction": "Active Mandarin lyrics corrected from selected-audio small ASR, vocal-stem medium ASR, no-VAD base/small/medium ASR, user listening feedback, and the reference lyric. Opening and outro 天蓝蓝/海蓝蓝 lines were restored because no-VAD ASR recovered them as sound-close variants and the user confirmed the audio contains them. Skipped bridge draft lines remain unpublished."
+          }
+        ]
+      },
+      "practice": {
+        "beginnerFocus": [
+          "A",
+          "D",
+          "F#m",
+          "G",
+          "C#m",
+          "Dm",
+          "E",
+          "Am"
+        ],
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
+      }
+    }
+  },
+  "lesson": {
+    "name": "Atlas first pass",
+    "goal": "Help a beginner follow lyrics, chord changes, and beat entry without needing to sing first.",
+    "steps": [
+      "Listen once and tap the beat lane.",
+      "Loop one phrase and speak the lyric rhythmically.",
+      "Play one strum per displayed chord change.",
+      "Only add a fuller strumming pattern after the lyric and chord entry feel stable."
+    ]
+  }
+}

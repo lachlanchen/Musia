@@ -41,10 +41,15 @@ Creative CLI:
   musia setup
   musia models
   musia plan --title "My Song" --idea "..." --provider deepseek
+  musia lyrics --title "Hook Draft" --idea "..." --language en
+  musia melody --title "Theme" --idea "..." --melody "slow rising chorus"
+  musia compose --title "Full Song" --idea "..." --language ja
+  musia localize --title "Licensed CN Version" --reference-audio song.wav --target-language zh-CN --rights-confirmed
   musia song init --title "Aya Chan" --vocal-language ja --lyrics-file lyrics.txt
   musia song review --project-dir data/creative_projects/... --audio song.wav --run-analysis
   musia song correct --project-dir data/creative_projects/... --issues "vocal too quiet"
   musia song handoff --project-dir data/creative_projects/... --audio song.wav
+  musia master-companion --title "My Song" --master-audio master.mp3 --run-analysis --target-languages en zh-Hans
   musia mv-pack --audio song.wav --title "Four Buddies MV" --duration 15 --copy-references
   musia plan --title "Vocal" --generation-mode free_vocal --lyrics "..."
   musia plan --title "Controlled" --generation-mode controlled_song --control-level melody_sheet --melody "..."
@@ -53,12 +58,15 @@ Creative CLI:
   musia new-session --title "My album" --cwd ./my-song-folder
   musia chat --cwd ./my-song-folder --mode chat "What should I do next?"
   musia chat --cwd ./my-song-folder --mode worker "Analyze this song and register artifacts."
+  musia chat --interactive --cwd ./my-song-folder
   musia sessions --cwd ./my-song-folder
   musia resume-session <session-id> --cwd ./another-folder
   musia jobs --session-id <id>
   musia artifacts <session-id>
   musia fun-record --media-id one-sky-three-lights-mixed --skip-intro
   musia fun-audit --media-id one-sky-three-lights-mixed
+  musia atlas-build --all
+  musia fun-validate
 
 Analysis pipeline:
   musia pipeline INPUT_AUDIO --run-name my-run --max-duration 60
@@ -144,7 +152,7 @@ function pythonCommand(scriptRelative, args) {
     if (conda) {
       return {
         command: conda,
-        args: ["run", "-n", envValue("MUSIA_CONDA_ENV", "MUSAI_CONDA_ENV", DEFAULT_ENV), "python", script, ...args]
+        args: ["run", "--no-capture-output", "-n", envValue("MUSIA_CONDA_ENV", "MUSAI_CONDA_ENV", DEFAULT_ENV), "python", script, ...args]
       };
     }
   }
@@ -166,6 +174,20 @@ function runSystemPython(scriptRelative, args) {
   const python = findExecutable(["python3", "python"]);
   if (!python) fail("Python was not found.");
   return spawn(python, [script, ...args]);
+}
+
+function pythonRuntimeLabel() {
+  const configuredPython = envValue("MUSIA_PYTHON", "MUSAI_PYTHON");
+  if (configuredPython) {
+    return configuredPython;
+  }
+  if (!envValue("MUSIA_NO_CONDA", "MUSAI_NO_CONDA")) {
+    const conda = findExecutable(["conda"]);
+    if (conda) {
+      return `${conda} run --no-capture-output -n ${envValue("MUSIA_CONDA_ENV", "MUSAI_CONDA_ENV", DEFAULT_ENV)} python`;
+    }
+  }
+  return findExecutable(["python3", "python"]) || "";
 }
 
 function runShell(scriptRelative, args) {
@@ -190,6 +212,7 @@ function doctor(jsonOutput = false) {
     npm: npm || "",
     conda: conda || "",
     conda_env: envValue("MUSIA_CONDA_ENV", "MUSAI_CONDA_ENV", DEFAULT_ENV),
+    python_runner: pythonRuntimeLabel(),
     legacy_env_vars: [
       ["MUSIA_CONDA_ENV", "MUSAI_CONDA_ENV"],
       ["MUSIA_PYTHON", "MUSAI_PYTHON"],
@@ -274,19 +297,51 @@ function main() {
     return;
   }
   if (command === "fun-record" || command === "record-fun-player") {
-    runSystemPython("scripts/record_fun_player.py", rest);
+    runPython("scripts/record_fun_player.py", rest);
     return;
   }
   if (command === "fun-audit" || command === "audit-fun-media-item") {
-    runSystemPython("scripts/audit_fun_media_item.py", rest);
+    runPython("scripts/audit_fun_media_item.py", rest);
+    return;
+  }
+  if (command === "fun-validate" || command === "website-validate") {
+    runPython("scripts/validate_fun_media_site.py", rest.length ? rest : ["--root", "website"]);
+    return;
+  }
+  if (command === "fun-add-youtube" || command === "website-add-youtube") {
+    runPython("scripts/add_fun_media_youtube.py", rest);
+    return;
+  }
+  if (command === "atlas-build" || command === "fun-atlas-build") {
+    runPython("scripts/build_musia_atlas_study_data.py", rest.length ? rest : ["--all"]);
     return;
   }
   if (command === "song" || command === "song-workbench") {
     runPython("scripts/musia_song_workbench.py", rest);
     return;
   }
+  if (command === "lyrics") {
+    runPython("scripts/musia_create.py", ["plan", "--generation-mode", "full_production", "--control-level", "lyrics", ...rest]);
+    return;
+  }
+  if (command === "melody" || command === "xuanlv") {
+    runPython("scripts/musia_create.py", ["plan", "--generation-mode", "melody_generation", "--control-level", "melody_sheet", ...rest]);
+    return;
+  }
+  if (command === "compose" || command === "create-music") {
+    runPython("scripts/musia_create.py", ["plan", "--generation-mode", "full_production", "--control-level", "free", ...rest]);
+    return;
+  }
+  if (command === "localize" || command === "localise") {
+    runPython("scripts/musia_create.py", ["plan", "--generation-mode", "localization", "--control-level", "strict_localization", ...rest]);
+    return;
+  }
+  if (command === "master-companion" || command === "same-melody-companion") {
+    runPython("scripts/musia_master_companion_pipeline.py", rest);
+    return;
+  }
   if (command === "mv-pack" || command === "lalachan-mv-pack") {
-    runSystemPython("scripts/prepare_lalachan_mv_pack.py", rest);
+    runPython("scripts/prepare_lalachan_mv_pack.py", rest);
     return;
   }
   if (PY_COMMANDS.has(command)) {

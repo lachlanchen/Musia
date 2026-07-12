@@ -4,17 +4,20 @@
   "toolName": "Musia Atlas",
   "mediaId": "aya-chan-hikari-ame",
   "title": "Aya Chan Hikari Ame Atlas",
-  "summary": "Beginner-friendly chord, beat, lyric-entry, and guitar-practice map for the Aya Chan song.",
+  "summary": "Detailed practice data for corrected lyrics, chord changes, beat timing, and guitar display.",
   "defaultAssetId": "aya-hikari-ame-ja",
   "dataPolicy": [
-    "Lyrics use corrected website timing JSON for the active vocal.",
-    "Beats come from local analysis runs and are marked as analysis data.",
-    "Chords are imported from the song manifest and should be verified by ear before formal teaching.",
-    "Instrumental spans are represented as player state, not lyric lines."
+    "Lyrics use corrected Fun website timing JSON for each active vocal.",
+    "Chord and beat maps are analysis-grade unless explicitly marked verified.",
+    "Capo, transpose, and simplify are display-only helpers; source audio is unchanged.",
+    "Instrumental spans are UI state only and are not encoded as lyric lines."
   ],
   "assets": {
     "aya-hikari-ame-ja": {
-      "bpm": 92.285,
+      "label": "Japanese vocal",
+      "languageCode": "ja",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/aya-chan-hikari-ame-ja.mp3",
+      "bpm": 92.29,
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/aya-chan-hikari-ame-20260628-20260628-154133-analysis/analysis/beats.json",
@@ -408,20 +411,425 @@
           "time": 64.412
         }
       ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:assets.primaryAudio.musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 1.904,
+          "name": "C#",
+          "confidence": 0.516
+        },
+        {
+          "start": 1.904,
+          "end": 3.251,
+          "name": "C",
+          "confidence": 0.957
+        },
+        {
+          "start": 3.251,
+          "end": 3.901,
+          "name": "G",
+          "confidence": 0.654
+        },
+        {
+          "start": 3.901,
+          "end": 4.551,
+          "name": "Em",
+          "confidence": 0.74
+        },
+        {
+          "start": 4.551,
+          "end": 5.851,
+          "name": "Bm",
+          "confidence": 0.852
+        },
+        {
+          "start": 5.851,
+          "end": 6.502,
+          "name": "C",
+          "confidence": 0.845
+        },
+        {
+          "start": 6.502,
+          "end": 7.152,
+          "name": "Em",
+          "confidence": 0.892
+        },
+        {
+          "start": 7.152,
+          "end": 8.475,
+          "name": "Am",
+          "confidence": 0.839
+        },
+        {
+          "start": 8.475,
+          "end": 9.149,
+          "name": "Em",
+          "confidence": 0.756
+        },
+        {
+          "start": 9.149,
+          "end": 9.822,
+          "name": "Am",
+          "confidence": 0.73
+        },
+        {
+          "start": 9.822,
+          "end": 11.099,
+          "name": "Dm",
+          "confidence": 0.851
+        },
+        {
+          "start": 11.099,
+          "end": 12.446,
+          "name": "G",
+          "confidence": 0.921
+        },
+        {
+          "start": 12.446,
+          "end": 13.746,
+          "name": "C",
+          "confidence": 0.915
+        },
+        {
+          "start": 13.746,
+          "end": 15.023,
+          "name": "Am",
+          "confidence": 0.865
+        },
+        {
+          "start": 15.023,
+          "end": 16.997,
+          "name": "Bm",
+          "confidence": 0.845
+        },
+        {
+          "start": 16.997,
+          "end": 17.647,
+          "name": "E",
+          "confidence": 0.873
+        },
+        {
+          "start": 17.647,
+          "end": 18.947,
+          "name": "Am",
+          "confidence": 0.856
+        },
+        {
+          "start": 18.947,
+          "end": 19.621,
+          "name": "Dm",
+          "confidence": 0.776
+        },
+        {
+          "start": 19.621,
+          "end": 20.271,
+          "name": "Em",
+          "confidence": 0.7
+        },
+        {
+          "start": 20.271,
+          "end": 20.944,
+          "name": "D",
+          "confidence": 0.7
+        },
+        {
+          "start": 20.944,
+          "end": 22.895,
+          "name": "G",
+          "confidence": 0.743
+        },
+        {
+          "start": 22.895,
+          "end": 23.545,
+          "name": "C",
+          "confidence": 0.762
+        },
+        {
+          "start": 23.545,
+          "end": 24.218,
+          "name": "Em",
+          "confidence": 0.684
+        },
+        {
+          "start": 24.218,
+          "end": 25.496,
+          "name": "Bm",
+          "confidence": 0.748
+        },
+        {
+          "start": 25.496,
+          "end": 26.169,
+          "name": "Am",
+          "confidence": 0.692
+        },
+        {
+          "start": 26.169,
+          "end": 26.819,
+          "name": "Em",
+          "confidence": 0.674
+        },
+        {
+          "start": 26.819,
+          "end": 27.469,
+          "name": "D",
+          "confidence": 0.745
+        },
+        {
+          "start": 27.469,
+          "end": 28.119,
+          "name": "Cm",
+          "confidence": 0.594
+        },
+        {
+          "start": 28.119,
+          "end": 29.28,
+          "name": "F",
+          "confidence": 0.736
+        },
+        {
+          "start": 29.28,
+          "end": 29.931,
+          "name": "Em",
+          "confidence": 0.697
+        },
+        {
+          "start": 29.931,
+          "end": 30.581,
+          "name": "Bm",
+          "confidence": 0.651
+        },
+        {
+          "start": 30.581,
+          "end": 31.068,
+          "name": "Am",
+          "confidence": 0.679
+        },
+        {
+          "start": 31.068,
+          "end": 31.718,
+          "name": "D",
+          "confidence": 0.65
+        },
+        {
+          "start": 31.718,
+          "end": 32.369,
+          "name": "Bm",
+          "confidence": 0.712
+        },
+        {
+          "start": 32.369,
+          "end": 33.692,
+          "name": "G",
+          "confidence": 0.755
+        },
+        {
+          "start": 33.692,
+          "end": 35.643,
+          "name": "C",
+          "confidence": 0.769
+        },
+        {
+          "start": 35.643,
+          "end": 38.917,
+          "name": "Am",
+          "confidence": 0.827
+        },
+        {
+          "start": 38.917,
+          "end": 39.567,
+          "name": "Bm",
+          "confidence": 0.758
+        },
+        {
+          "start": 39.567,
+          "end": 40.24,
+          "name": "Am",
+          "confidence": 0.65
+        },
+        {
+          "start": 40.24,
+          "end": 41.517,
+          "name": "Em",
+          "confidence": 0.803
+        },
+        {
+          "start": 41.517,
+          "end": 42.191,
+          "name": "F",
+          "confidence": 0.751
+        },
+        {
+          "start": 42.191,
+          "end": 42.841,
+          "name": "Am",
+          "confidence": 0.716
+        },
+        {
+          "start": 42.841,
+          "end": 44.164,
+          "name": "Em",
+          "confidence": 0.688
+        },
+        {
+          "start": 44.164,
+          "end": 46.765,
+          "name": "F",
+          "confidence": 0.763
+        },
+        {
+          "start": 46.765,
+          "end": 47.415,
+          "name": "B",
+          "confidence": 0.711
+        },
+        {
+          "start": 47.415,
+          "end": 49.389,
+          "name": "Em",
+          "confidence": 0.783
+        },
+        {
+          "start": 49.389,
+          "end": 50.039,
+          "name": "Am",
+          "confidence": 0.734
+        },
+        {
+          "start": 50.039,
+          "end": 50.689,
+          "name": "Em",
+          "confidence": 0.664
+        },
+        {
+          "start": 50.689,
+          "end": 51.316,
+          "name": "Bm",
+          "confidence": 0.633
+        },
+        {
+          "start": 51.316,
+          "end": 51.989,
+          "name": "D",
+          "confidence": 0.665
+        },
+        {
+          "start": 51.989,
+          "end": 54.613,
+          "name": "G",
+          "confidence": 0.788
+        },
+        {
+          "start": 54.613,
+          "end": 55.287,
+          "name": "C",
+          "confidence": 0.927
+        },
+        {
+          "start": 55.287,
+          "end": 55.937,
+          "name": "Am",
+          "confidence": 0.904
+        },
+        {
+          "start": 55.937,
+          "end": 57.237,
+          "name": "D",
+          "confidence": 0.929
+        },
+        {
+          "start": 57.237,
+          "end": 57.887,
+          "name": "G",
+          "confidence": 0.819
+        },
+        {
+          "start": 57.887,
+          "end": 58.538,
+          "name": "Em",
+          "confidence": 0.838
+        },
+        {
+          "start": 58.538,
+          "end": 61.788,
+          "name": "G",
+          "confidence": 0.874
+        },
+        {
+          "start": 61.788,
+          "end": 62.438,
+          "name": "D",
+          "confidence": 0.696
+        },
+        {
+          "start": 62.438,
+          "end": 64.412,
+          "name": "C",
+          "confidence": 0.867
+        },
+        {
+          "start": 64.412,
+          "end": 68.0,
+          "name": "G",
+          "confidence": 0.675
+        }
+      ],
+      "lyricEvidence": {
+        "lyricSetId": "ja-vocal",
+        "activeLanguageCode": "ja",
+        "activeTrackPath": "lyrics/ja-vocal/ja.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/ja-vocal/ja.json",
+            "lineCount": 6,
+            "firstLyricStart": 0.11,
+            "lastLyricEnd": 59.26,
+            "correction": ""
+          },
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/ja-vocal/en.json",
+            "lineCount": 6,
+            "firstLyricStart": 0.11,
+            "lastLyricEnd": 59.26,
+            "correction": ""
+          },
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/ja-vocal/zh-Hans.json",
+            "lineCount": 6,
+            "firstLyricStart": 0.11,
+            "lastLyricEnd": 59.26,
+            "correction": ""
+          }
+        ]
+      },
       "practice": {
-        "counting": "Count steady quarter-note pulses; most chord changes sit on or near a downbeat.",
         "beginnerFocus": [
-          "G",
-          "D",
+          "C#",
           "C",
+          "G",
           "Em",
-          "Am"
+          "Bm",
+          "Am",
+          "Dm",
+          "E"
         ],
-        "warning": "Chord timing is analysis-grade, not a human-certified lead sheet. Confirm by ear for formal teaching."
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
       }
     },
     "aya-hikari-ame-en": {
-      "bpm": 92.285,
+      "label": "English vocal",
+      "languageCode": "en",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/aya-chan-hikari-ame-en.mp3",
+      "bpm": 92.29,
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/aya-chan-hikari-ame-en-compact-20260628-20260628-225929-analysis/analysis/beats.json",
@@ -783,20 +1191,401 @@
           "time": 58.236
         }
       ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:assets.alternateAudio[0].musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 3.204,
+          "name": "G",
+          "confidence": 0.888
+        },
+        {
+          "start": 3.204,
+          "end": 4.505,
+          "name": "D",
+          "confidence": 0.963
+        },
+        {
+          "start": 4.505,
+          "end": 5.155,
+          "name": "C",
+          "confidence": 0.897
+        },
+        {
+          "start": 5.155,
+          "end": 5.759,
+          "name": "Am",
+          "confidence": 0.734
+        },
+        {
+          "start": 5.759,
+          "end": 6.316,
+          "name": "Dm",
+          "confidence": 0.865
+        },
+        {
+          "start": 6.316,
+          "end": 7.059,
+          "name": "F",
+          "confidence": 0.77
+        },
+        {
+          "start": 7.059,
+          "end": 8.452,
+          "name": "Em",
+          "confidence": 0.797
+        },
+        {
+          "start": 8.452,
+          "end": 9.102,
+          "name": "F#m",
+          "confidence": 0.705
+        },
+        {
+          "start": 9.102,
+          "end": 9.752,
+          "name": "Abm",
+          "confidence": 0.616
+        },
+        {
+          "start": 9.752,
+          "end": 11.099,
+          "name": "Am",
+          "confidence": 0.76
+        },
+        {
+          "start": 11.099,
+          "end": 12.446,
+          "name": "A",
+          "confidence": 0.788
+        },
+        {
+          "start": 12.446,
+          "end": 13.746,
+          "name": "G",
+          "confidence": 0.779
+        },
+        {
+          "start": 13.746,
+          "end": 15.047,
+          "name": "C",
+          "confidence": 0.962
+        },
+        {
+          "start": 15.047,
+          "end": 16.37,
+          "name": "F#m",
+          "confidence": 0.731
+        },
+        {
+          "start": 16.37,
+          "end": 17.67,
+          "name": "B",
+          "confidence": 0.832
+        },
+        {
+          "start": 17.67,
+          "end": 20.248,
+          "name": "Em",
+          "confidence": 0.92
+        },
+        {
+          "start": 20.248,
+          "end": 20.898,
+          "name": "Dm",
+          "confidence": 0.891
+        },
+        {
+          "start": 20.898,
+          "end": 21.548,
+          "name": "Am",
+          "confidence": 0.751
+        },
+        {
+          "start": 21.548,
+          "end": 22.221,
+          "name": "Dm",
+          "confidence": 0.782
+        },
+        {
+          "start": 22.221,
+          "end": 22.848,
+          "name": "Bm",
+          "confidence": 0.619
+        },
+        {
+          "start": 22.848,
+          "end": 24.195,
+          "name": "G",
+          "confidence": 0.731
+        },
+        {
+          "start": 24.195,
+          "end": 24.845,
+          "name": "C",
+          "confidence": 0.814
+        },
+        {
+          "start": 24.845,
+          "end": 25.496,
+          "name": "Em",
+          "confidence": 0.574
+        },
+        {
+          "start": 25.496,
+          "end": 26.146,
+          "name": "F#m",
+          "confidence": 0.666
+        },
+        {
+          "start": 26.146,
+          "end": 28.119,
+          "name": "B",
+          "confidence": 0.849
+        },
+        {
+          "start": 28.119,
+          "end": 29.42,
+          "name": "Em",
+          "confidence": 0.897
+        },
+        {
+          "start": 29.42,
+          "end": 30.72,
+          "name": "E",
+          "confidence": 0.8
+        },
+        {
+          "start": 30.72,
+          "end": 33.367,
+          "name": "Am",
+          "confidence": 0.842
+        },
+        {
+          "start": 33.367,
+          "end": 34.691,
+          "name": "G",
+          "confidence": 0.775
+        },
+        {
+          "start": 34.691,
+          "end": 35.341,
+          "name": "Am",
+          "confidence": 0.801
+        },
+        {
+          "start": 35.341,
+          "end": 35.991,
+          "name": "C",
+          "confidence": 0.703
+        },
+        {
+          "start": 35.991,
+          "end": 36.641,
+          "name": "F#",
+          "confidence": 0.671
+        },
+        {
+          "start": 36.641,
+          "end": 37.314,
+          "name": "F",
+          "confidence": 0.641
+        },
+        {
+          "start": 37.314,
+          "end": 38.615,
+          "name": "Bm",
+          "confidence": 0.76
+        },
+        {
+          "start": 38.615,
+          "end": 39.938,
+          "name": "Em",
+          "confidence": 0.872
+        },
+        {
+          "start": 39.938,
+          "end": 41.239,
+          "name": "Am",
+          "confidence": 0.763
+        },
+        {
+          "start": 41.239,
+          "end": 41.889,
+          "name": "D",
+          "confidence": 0.741
+        },
+        {
+          "start": 41.889,
+          "end": 42.562,
+          "name": "Dm",
+          "confidence": 0.671
+        },
+        {
+          "start": 42.562,
+          "end": 43.212,
+          "name": "Bm",
+          "confidence": 0.683
+        },
+        {
+          "start": 43.212,
+          "end": 43.862,
+          "name": "D",
+          "confidence": 0.718
+        },
+        {
+          "start": 43.862,
+          "end": 45.163,
+          "name": "G",
+          "confidence": 0.848
+        },
+        {
+          "start": 45.163,
+          "end": 45.813,
+          "name": "Am",
+          "confidence": 0.758
+        },
+        {
+          "start": 45.813,
+          "end": 46.486,
+          "name": "A",
+          "confidence": 0.761
+        },
+        {
+          "start": 46.486,
+          "end": 47.137,
+          "name": "D",
+          "confidence": 0.7
+        },
+        {
+          "start": 47.137,
+          "end": 47.81,
+          "name": "A",
+          "confidence": 0.71
+        },
+        {
+          "start": 47.81,
+          "end": 49.133,
+          "name": "Bm",
+          "confidence": 0.76
+        },
+        {
+          "start": 49.133,
+          "end": 50.434,
+          "name": "Em",
+          "confidence": 0.846
+        },
+        {
+          "start": 50.434,
+          "end": 51.734,
+          "name": "Am",
+          "confidence": 0.795
+        },
+        {
+          "start": 51.734,
+          "end": 53.708,
+          "name": "Bm",
+          "confidence": 0.797
+        },
+        {
+          "start": 53.708,
+          "end": 54.381,
+          "name": "D",
+          "confidence": 0.833
+        },
+        {
+          "start": 54.381,
+          "end": 55.728,
+          "name": "G",
+          "confidence": 0.888
+        },
+        {
+          "start": 55.728,
+          "end": 56.378,
+          "name": "Am",
+          "confidence": 0.864
+        },
+        {
+          "start": 56.378,
+          "end": 58.352,
+          "name": "F",
+          "confidence": 0.849
+        },
+        {
+          "start": 58.352,
+          "end": 59.699,
+          "name": "Bm",
+          "confidence": 0.872
+        },
+        {
+          "start": 59.699,
+          "end": 62.438,
+          "name": "Em",
+          "confidence": 0.948
+        },
+        {
+          "start": 62.438,
+          "end": 68.0,
+          "name": "D",
+          "confidence": 0.943
+        }
+      ],
+      "lyricEvidence": {
+        "lyricSetId": "en-vocal",
+        "activeLanguageCode": "en",
+        "activeTrackPath": "lyrics/en-vocal/en.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/en-vocal/en.json",
+            "lineCount": 12,
+            "firstLyricStart": 0.08,
+            "lastLyricEnd": 62.35,
+            "correction": ""
+          },
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/en-vocal/ja.json",
+            "lineCount": 12,
+            "firstLyricStart": 0.08,
+            "lastLyricEnd": 62.35,
+            "correction": ""
+          },
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/en-vocal/zh-Hans.json",
+            "lineCount": 12,
+            "firstLyricStart": 0.08,
+            "lastLyricEnd": 62.35,
+            "correction": ""
+          }
+        ]
+      },
       "practice": {
-        "counting": "Count steady quarter-note pulses; most chord changes sit on or near a downbeat.",
         "beginnerFocus": [
           "G",
           "D",
           "C",
+          "Am",
+          "Dm",
+          "F",
           "Em",
-          "Am"
+          "F#m"
         ],
-        "warning": "Chord timing is analysis-grade, not a human-certified lead sheet. Confirm by ear for formal teaching."
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
       }
     },
     "aya-hikari-ame-zh-Hans": {
-      "bpm": 92.285,
+      "label": "Mandarin vocal",
+      "languageCode": "zh-Hans",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/aya-chan-hikari-ame-zh-Hans.mp3",
+      "bpm": 92.29,
       "timeSignature": "4/4",
       "beatConfidence": "analysis",
       "beatSource": "data/runs/aya-chan-hikari-ame-zh-20260628-20260628-225746-analysis/analysis/beats.json",
@@ -1174,27 +1963,435 @@
           "time": 62.856
         }
       ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:assets.alternateAudio[1].musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 2.113,
+          "name": "Gm",
+          "confidence": 0.761
+        },
+        {
+          "start": 2.113,
+          "end": 3.437,
+          "name": "Bm",
+          "confidence": 0.84
+        },
+        {
+          "start": 3.437,
+          "end": 4.087,
+          "name": "C",
+          "confidence": 0.871
+        },
+        {
+          "start": 4.087,
+          "end": 4.76,
+          "name": "D",
+          "confidence": 0.779
+        },
+        {
+          "start": 4.76,
+          "end": 5.41,
+          "name": "G",
+          "confidence": 0.748
+        },
+        {
+          "start": 5.41,
+          "end": 7.384,
+          "name": "Em",
+          "confidence": 0.853
+        },
+        {
+          "start": 7.384,
+          "end": 8.684,
+          "name": "A",
+          "confidence": 0.767
+        },
+        {
+          "start": 8.684,
+          "end": 10.031,
+          "name": "G",
+          "confidence": 0.67
+        },
+        {
+          "start": 10.031,
+          "end": 11.355,
+          "name": "D",
+          "confidence": 0.755
+        },
+        {
+          "start": 11.355,
+          "end": 12.074,
+          "name": "G",
+          "confidence": 0.934
+        },
+        {
+          "start": 12.074,
+          "end": 12.678,
+          "name": "Em",
+          "confidence": 0.706
+        },
+        {
+          "start": 12.678,
+          "end": 13.328,
+          "name": "Bm",
+          "confidence": 0.798
+        },
+        {
+          "start": 13.328,
+          "end": 13.978,
+          "name": "D",
+          "confidence": 0.827
+        },
+        {
+          "start": 13.978,
+          "end": 15.302,
+          "name": "Em",
+          "confidence": 0.834
+        },
+        {
+          "start": 15.302,
+          "end": 16.649,
+          "name": "G",
+          "confidence": 0.822
+        },
+        {
+          "start": 16.649,
+          "end": 17.322,
+          "name": "Em",
+          "confidence": 0.947
+        },
+        {
+          "start": 17.322,
+          "end": 17.972,
+          "name": "G",
+          "confidence": 0.849
+        },
+        {
+          "start": 17.972,
+          "end": 19.273,
+          "name": "Em",
+          "confidence": 0.828
+        },
+        {
+          "start": 19.273,
+          "end": 20.596,
+          "name": "Am",
+          "confidence": 0.896
+        },
+        {
+          "start": 20.596,
+          "end": 21.896,
+          "name": "A",
+          "confidence": 0.687
+        },
+        {
+          "start": 21.896,
+          "end": 23.197,
+          "name": "C",
+          "confidence": 0.862
+        },
+        {
+          "start": 23.197,
+          "end": 24.543,
+          "name": "Am",
+          "confidence": 0.873
+        },
+        {
+          "start": 24.543,
+          "end": 25.194,
+          "name": "Bm",
+          "confidence": 0.702
+        },
+        {
+          "start": 25.194,
+          "end": 25.844,
+          "name": "F#m",
+          "confidence": 0.741
+        },
+        {
+          "start": 25.844,
+          "end": 27.167,
+          "name": "Em",
+          "confidence": 0.832
+        },
+        {
+          "start": 27.167,
+          "end": 27.841,
+          "name": "A",
+          "confidence": 0.803
+        },
+        {
+          "start": 27.841,
+          "end": 28.491,
+          "name": "Am",
+          "confidence": 0.792
+        },
+        {
+          "start": 28.491,
+          "end": 29.814,
+          "name": "C#m",
+          "confidence": 0.82
+        },
+        {
+          "start": 29.814,
+          "end": 30.465,
+          "name": "G",
+          "confidence": 0.695
+        },
+        {
+          "start": 30.465,
+          "end": 31.115,
+          "name": "C",
+          "confidence": 0.671
+        },
+        {
+          "start": 31.115,
+          "end": 31.788,
+          "name": "Dm",
+          "confidence": 0.623
+        },
+        {
+          "start": 31.788,
+          "end": 32.461,
+          "name": "D",
+          "confidence": 0.688
+        },
+        {
+          "start": 32.461,
+          "end": 35.085,
+          "name": "G",
+          "confidence": 0.77
+        },
+        {
+          "start": 35.085,
+          "end": 36.409,
+          "name": "C",
+          "confidence": 0.796
+        },
+        {
+          "start": 36.409,
+          "end": 37.059,
+          "name": "B",
+          "confidence": 0.702
+        },
+        {
+          "start": 37.059,
+          "end": 37.709,
+          "name": "Ebm",
+          "confidence": 0.798
+        },
+        {
+          "start": 37.709,
+          "end": 40.356,
+          "name": "Em",
+          "confidence": 0.793
+        },
+        {
+          "start": 40.356,
+          "end": 41.68,
+          "name": "F",
+          "confidence": 0.78
+        },
+        {
+          "start": 41.68,
+          "end": 43.003,
+          "name": "Dm",
+          "confidence": 0.659
+        },
+        {
+          "start": 43.003,
+          "end": 43.654,
+          "name": "Gm",
+          "confidence": 0.693
+        },
+        {
+          "start": 43.654,
+          "end": 45.65,
+          "name": "G",
+          "confidence": 0.793
+        },
+        {
+          "start": 45.65,
+          "end": 46.301,
+          "name": "C",
+          "confidence": 0.932
+        },
+        {
+          "start": 46.301,
+          "end": 46.951,
+          "name": "Em",
+          "confidence": 0.913
+        },
+        {
+          "start": 46.951,
+          "end": 47.624,
+          "name": "Bm",
+          "confidence": 0.895
+        },
+        {
+          "start": 47.624,
+          "end": 48.924,
+          "name": "Em",
+          "confidence": 0.82
+        },
+        {
+          "start": 48.924,
+          "end": 49.575,
+          "name": "Bm",
+          "confidence": 0.763
+        },
+        {
+          "start": 49.575,
+          "end": 50.921,
+          "name": "Em",
+          "confidence": 0.894
+        },
+        {
+          "start": 50.921,
+          "end": 51.572,
+          "name": "Dm",
+          "confidence": 0.632
+        },
+        {
+          "start": 51.572,
+          "end": 52.222,
+          "name": "Bm",
+          "confidence": 0.606
+        },
+        {
+          "start": 52.222,
+          "end": 52.895,
+          "name": "G",
+          "confidence": 0.77
+        },
+        {
+          "start": 52.895,
+          "end": 53.545,
+          "name": "D",
+          "confidence": 0.735
+        },
+        {
+          "start": 53.545,
+          "end": 54.869,
+          "name": "G",
+          "confidence": 0.833
+        },
+        {
+          "start": 54.869,
+          "end": 55.519,
+          "name": "Bm",
+          "confidence": 0.852
+        },
+        {
+          "start": 55.519,
+          "end": 56.192,
+          "name": "G",
+          "confidence": 0.676
+        },
+        {
+          "start": 56.192,
+          "end": 57.493,
+          "name": "C",
+          "confidence": 0.861
+        },
+        {
+          "start": 57.493,
+          "end": 58.839,
+          "name": "B",
+          "confidence": 0.878
+        },
+        {
+          "start": 58.839,
+          "end": 59.49,
+          "name": "Em",
+          "confidence": 0.882
+        },
+        {
+          "start": 59.49,
+          "end": 60.14,
+          "name": "G",
+          "confidence": 0.848
+        },
+        {
+          "start": 60.14,
+          "end": 61.463,
+          "name": "Em",
+          "confidence": 0.923
+        },
+        {
+          "start": 61.463,
+          "end": 62.856,
+          "name": "F",
+          "confidence": 0.802
+        },
+        {
+          "start": 62.856,
+          "end": 68.0,
+          "name": "G",
+          "confidence": 0.84
+        }
+      ],
+      "lyricEvidence": {
+        "lyricSetId": "zh-vocal",
+        "activeLanguageCode": "zh-Hans",
+        "activeTrackPath": "lyrics/zh-vocal/zh-Hans.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/zh-vocal/zh-Hans.json",
+            "lineCount": 5,
+            "firstLyricStart": 10.26,
+            "lastLyricEnd": 51.07,
+            "correction": ""
+          },
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/zh-vocal/en.json",
+            "lineCount": 5,
+            "firstLyricStart": 10.26,
+            "lastLyricEnd": 51.07,
+            "correction": ""
+          },
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/zh-vocal/ja.json",
+            "lineCount": 5,
+            "firstLyricStart": 10.26,
+            "lastLyricEnd": 51.07,
+            "correction": ""
+          }
+        ]
+      },
       "practice": {
-        "counting": "Count steady quarter-note pulses; most chord changes sit on or near a downbeat.",
         "beginnerFocus": [
-          "G",
-          "D",
+          "Gm",
+          "Bm",
           "C",
+          "D",
+          "G",
           "Em",
+          "A",
           "Am"
         ],
-        "warning": "Chord timing is analysis-grade, not a human-certified lead sheet. Confirm by ear for formal teaching."
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
       }
     }
   },
   "lesson": {
-    "name": "First guitar pass",
-    "goal": "Learn to follow a generated song with chord changes, beat counting, and lyric-entry cues without needing to sing first.",
+    "name": "Atlas first pass",
+    "goal": "Help a beginner follow lyrics, chord changes, and beat entry without needing to sing first.",
     "steps": [
-      "Play the track once and tap only the beat lane.",
-      "Loop a short section and strum once per displayed chord change.",
-      "Speak the current lyric on the beat before attempting melody.",
-      "Use capo and simplify only as display aids; keep the audio unchanged."
+      "Listen once and tap the beat lane.",
+      "Loop one phrase and speak the lyric rhythmically.",
+      "Play one strum per displayed chord change.",
+      "Only add a fuller strumming pattern after the lyric and chord entry feel stable."
     ]
   }
 }
