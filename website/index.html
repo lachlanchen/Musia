@@ -38,6 +38,7 @@
         </a>
       </div>
       <div class="header-actions">
+        <a id="atlas-link" class="atlas-link" href="?mode=atlas" aria-label="Open Musia Atlas study page">Atlas</a>
         <button id="advanced-toggle" class="advanced-toggle" type="button" aria-label="Toggle advanced chord mode" aria-pressed="false" aria-controls="advanced-panel">Advanced</button>
         <button id="search-toggle" class="icon-button" type="button" aria-label="Search media" aria-expanded="false">⌕</button>
         <label class="vocal-select-wrap" aria-label="Vocal language">
@@ -155,6 +156,89 @@
       </article>
     </section>
 
+    <section id="study-panel" class="study-panel" aria-label="Musia Atlas song study" hidden>
+      <div class="study-title-row">
+        <div>
+          <span class="eyebrow">Musia Atlas</span>
+          <h2 id="study-title">Song map</h2>
+          <p id="study-summary">Timing, chords, rhythm, and beginner practice cues.</p>
+        </div>
+        <div class="study-controls" aria-label="Study controls">
+          <label>
+            <span>Transpose</span>
+            <select id="study-transpose">
+              <option value="-6">-6</option>
+              <option value="-5">-5</option>
+              <option value="-4">-4</option>
+              <option value="-3">-3</option>
+              <option value="-2">-2</option>
+              <option value="-1">-1</option>
+              <option value="0" selected>0</option>
+              <option value="1">+1</option>
+              <option value="2">+2</option>
+              <option value="3">+3</option>
+              <option value="4">+4</option>
+              <option value="5">+5</option>
+              <option value="6">+6</option>
+            </select>
+          </label>
+          <label>
+            <span>Capo</span>
+            <select id="study-capo">
+              <option value="0" selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </label>
+          <button id="study-simplify" class="study-toggle" type="button" aria-pressed="false">Simplify</button>
+        </div>
+      </div>
+
+      <div class="study-grid">
+        <article class="study-card study-now">
+          <span class="eyebrow">Current phrase</span>
+          <h3 id="study-line-title">Ready</h3>
+          <p id="study-line-text">Press play to follow the line, chord, beat, and entry timing together.</p>
+          <div id="study-line-metrics" class="study-metrics"></div>
+        </article>
+
+        <article class="study-card">
+          <span class="eyebrow">Beat map</span>
+          <h3 id="study-beat-title">Tempo</h3>
+          <div id="study-beat-lane" class="beat-lane"></div>
+          <p id="study-beat-note" class="study-note"></p>
+        </article>
+
+        <article class="study-card study-chord-card">
+          <span class="eyebrow">Chord practice</span>
+          <h3 id="study-chord-title">Progression</h3>
+          <div id="study-chord-list" class="study-chord-list"></div>
+        </article>
+
+        <article class="study-card">
+          <span class="eyebrow">How to practice</span>
+          <h3>One pass at a time</h3>
+          <ol class="study-steps">
+            <li>Listen once and only tap the beat.</li>
+            <li>Play one chord per change, even if the rhythm is simplified.</li>
+            <li>Speak the lyric on the beat before trying to sing it.</li>
+            <li>Use capo and transpose as display helpers; the recording itself is unchanged.</li>
+          </ol>
+        </article>
+
+        <article class="study-card study-trust-card">
+          <span class="eyebrow">Data trust</span>
+          <h3>Use this carefully</h3>
+          <div id="study-trust-list" class="study-trust-list"></div>
+        </article>
+      </div>
+    </section>
+
     <section class="full-lyrics-section" aria-label="Full trilingual lyrics">
       <div class="section-title">
         <span class="eyebrow">Full lyrics</span>
@@ -164,6 +248,7 @@
     </section>
   </main>
 
-  <script src="app.js?v=20260702-chord-fallback"></script>
+  <script src="musia.js?v=20260712-atlas"></script>
+  <script src="app.js?v=20260712-atlas"></script>
 </body>
 </html>

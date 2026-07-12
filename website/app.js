@@ -35,6 +35,13 @@ const state = {
   advancingPlayback: false,
   advancedMode: false,
   advancedChordRenderKey: "",
+  studyMode: false,
+  studyData: null,
+  studyTranspose: 0,
+  studyCapo: 0,
+  studySimplify: false,
+  studyChordRenderKey: "",
+  studyBeatRenderKey: "",
   playbackSyncFrame: 0,
   captureClockFrame: 0,
   mediaSessionHandlersInstalled: false
@@ -143,6 +150,19 @@ function resolveSitePath(path) {
 function resolveManifestPath(path) {
   if (!path) return "";
   return new URL(path, state.manifestUrl).href;
+}
+
+function atlasMediaIdFromPath() {
+  const match = window.location.pathname.match(/\/atlas\/([^/?#]+)/);
+  return match ? decodeURIComponent(match[1]) : "";
+}
+
+function isStudyMode(params = new URLSearchParams(window.location.search)) {
+  return params.get("mode") === "atlas" || Boolean(atlasMediaIdFromPath());
+}
+
+function studyPathForMedia(id = state.activeMediaId) {
+  return id ? `?mode=atlas&media=${encodeURIComponent(id)}` : "?mode=atlas";
 }
 
 function pinyinTone(value) {
@@ -263,6 +283,27 @@ function chords() {
   return activeMusical()?.chords || [];
 }
 
+function studyOptions() {
+  return {
+    transpose: state.studyTranspose,
+    capo: state.studyCapo,
+    simplify: state.studySimplify
+  };
+}
+
+function chordDisplay(chordName) {
+  if (!window.Musia || !state.studyMode) {
+    return {
+      original: chordName || "",
+      concert: chordName || "",
+      guitar: chordName || "",
+      capo: 0,
+      transpose: 0
+    };
+  }
+  return window.Musia.displayChord(chordName, studyOptions());
+}
+
 function activeMusical() {
   const manifestMusical = state.manifest?.musical || {};
   const primaryMusical = state.manifest?.assets?.primaryAudio?.musical || {};
@@ -292,6 +333,150 @@ function selectedLyricSummary() {
   if (!tracks.length) return "Lyrics";
   if (tracks.length === state.tracks.length) return "Lyrics";
   return tracks.map(languageName).join(" · ");
+}
+
+function activeStudyAssetData() {
+  const assets = state.studyData?.assets || {};
+  const activeAsset = activePlayableAsset();
+  return assets[state.activeAssetId] || assets[activeAsset?.id] || null;
+}
+
+function studyBeatGrid() {
+  const assetData = activeStudyAssetData();
+  const musical = activeMusical();
+  const duration = state.mediaElement?.duration || state.manifest?.duration || 0;
+  return window.Musia?.makeBeatGrid({
+    beats: assetData?.beats || musical.beats || [],
+    bpm: assetData?.bpm || musical.bpm,
+    duration,
+    timeSignature: assetData?.timeSignature || musical.timeSignature || "4/4"
+  }) || [];
+}
+
+function studyLineNumber(line) {
+  const lines = timingLines();
+  const index = lines.findIndex((item) => item.id === line?.id);
+  return index >= 0 ? index + 1 : 0;
+}
+
+function studyTrustRows() {
+  const assetData = activeStudyAssetData();
+  const musical = activeMusical();
+  const activeAsset = activePlayableAsset();
+  const activeTrack = activeTimingTrack();
+  return [
+    {
+      label: "Lyrics",
+      value: activeTrack?.__url ? "Corrected timed JSON" : "Timed lyric track",
+      detail: activeTrack?.__url ? activeTrack.__url.replace(window.location.origin + "/", "") : "Uses the active vocal language track."
+    },
+    {
+      label: "Chords",
+      value: musical.chords?.length ? `${musical.chords.length} timed changes` : "No chord map",
+      detail: activeAsset?.musical?.chordSource || musical.chordSource || "Imported analysis; verify by ear before teaching exact harmony."
+    },
+    {
+      label: "Beats",
+      value: assetData?.beatConfidence === "analysis" ? "Analysis beat grid" : "BPM estimate",
+      detail: assetData?.beatSource || (musical.bpm ? "Generated from BPM because no beat grid is attached." : "No tempo source.")
+    }
+  ];
+}
+
+function renderStudyTrust() {
+  const node = $("study-trust-list");
+  if (!node) return;
+  node.innerHTML = studyTrustRows().map((row) => `
+    <div class="study-trust-row">
+      <strong>${escapeHtml(row.label)}</strong>
+      <span>${escapeHtml(row.value)}</span>
+      <em>${escapeHtml(row.detail)}</em>
+    </div>
+  `).join("");
+}
+
+function renderStudyControls() {
+  const transpose = $("study-transpose");
+  const capo = $("study-capo");
+  const simplify = $("study-simplify");
+  if (transpose) transpose.value = String(state.studyTranspose);
+  if (capo) capo.value = String(state.studyCapo);
+  if (simplify) {
+    simplify.setAttribute("aria-pressed", state.studySimplify ? "true" : "false");
+    simplify.classList.toggle("active", state.studySimplify);
+  }
+}
+
+function renderStudyPanel(activeLine = null, activeChord = null, time = 0) {
+  const panel = $("study-panel");
+  if (!panel) return;
+  panel.hidden = !state.studyMode;
+  if (!state.studyMode) return;
+
+  const activeAsset = activePlayableAsset();
+  const musical = activeMusical();
+  const beatGrid = studyBeatGrid();
+  const activeBeat = window.Musia?.activeBeatAt(beatGrid, time) || null;
+  const activeTrack = activeTimingTrack();
+  const line = activeLine ? (lineForTrack(activeTrack, activeLine.id) || activeLine) : null;
+  const lineMetrics = line ? window.Musia?.lineMetrics(line, beatGrid) : null;
+  const display = chordDisplay(activeChord?.name || "");
+  const lineNumber = studyLineNumber(activeLine);
+
+  $("study-title").textContent = `${displayTitleForAsset(activeAsset)} Atlas`;
+  $("study-summary").textContent = `${musical.key || "Unknown key"} · ${musical.bpm ? `${Number(musical.bpm).toFixed(1)} BPM` : "tempo pending"} · ${activeAsset?.languageLabel || activeAsset?.label || "active vocal"}`;
+  $("study-line-title").textContent = line
+    ? `Line ${String(lineNumber).padStart(2, "0")} · ${formatTime(line.start)}-${formatTime(line.end)}`
+    : "Instrumental or waiting for the first lyric";
+  $("study-line-text").textContent = line?.singableText || line?.text || "Tap the beat here. Lyrics begin when the vocal starts.";
+  $("study-line-metrics").innerHTML = lineMetrics ? [
+    `<span><strong>${lineMetrics.tokenCount}</strong> sung tokens</span>`,
+    `<span><strong>${lineMetrics.beatCount || "?"}</strong> beats in phrase</span>`,
+    `<span><strong>${lineMetrics.wordsPerSecond.toFixed(1)}</strong> tokens/sec</span>`,
+    `<span><strong>${escapeHtml(display.guitar || "--")}</strong> current guitar chord</span>`
+  ].join("") : `<span><strong>${escapeHtml(display.guitar || "--")}</strong> current chord</span>`;
+
+  $("study-beat-title").textContent = activeBeat
+    ? `Bar ${activeBeat.bar}, beat ${activeBeat.beatInBar}`
+    : "Tempo map";
+  $("study-beat-note").textContent = activeBeat
+    ? `Beat ${activeBeat.index + 1} at ${formatTime(activeBeat.time)}. Use it to count before changing chords or speaking lyrics.`
+    : "No beat grid is available yet.";
+
+  const activeBeatIndex = activeBeat ? beatGrid.findIndex((beat) =>
+    beat.index === activeBeat.index && Math.abs(beat.time - activeBeat.time) < 0.001
+  ) : -1;
+  const beatStart = Math.max(0, activeBeatIndex - 5);
+  const beatWindow = beatGrid.slice(beatStart, beatStart + 18);
+  $("study-beat-lane").innerHTML = beatWindow.map((beat) => `
+    <button class="beat-dot ${beat.index === activeBeat?.index ? "active" : ""} ${beat.beatInBar === 1 ? "downbeat" : ""}" type="button" data-study-time="${Number(beat.time).toFixed(3)}" title="Bar ${beat.bar}, beat ${beat.beatInBar}">
+      <span>${beat.beatInBar}</span>
+    </button>
+  `).join("");
+
+  const chordList = chords();
+  const activeChordIndex = activeChord ? chordList.findIndex((chord) =>
+    chord === activeChord
+    || (chord.name === activeChord.name && Number(chord.start) === Number(activeChord.start))
+  ) : -1;
+  const chordStart = Math.max(0, activeChordIndex - 4);
+  const chordWindow = chordList.slice(chordStart, chordStart + 12);
+  $("study-chord-title").textContent = display.guitar
+    ? `${display.guitar}${display.guitar !== display.original ? ` from ${display.original}` : ""}`
+    : "Progression";
+  $("study-chord-list").innerHTML = chordWindow.map((chord, index) => {
+    const absoluteIndex = chordStart + index;
+    const shown = chordDisplay(chord.name);
+    return `
+      <button class="study-chord ${absoluteIndex === activeChordIndex ? "active" : ""}" type="button" data-study-time="${Number(chord.start).toFixed(3)}">
+        <span>${formatTime(chord.start)}</span>
+        <strong>${escapeHtml(shown.guitar)}</strong>
+        ${shown.guitar !== shown.original ? `<em>${escapeHtml(shown.original)}</em>` : ""}
+      </button>
+    `;
+  }).join("");
+
+  renderStudyTrust();
 }
 
 function languageKey(code) {
@@ -536,8 +721,9 @@ function updateAdvancedChord(activeChord = null) {
     state.advancedChordRenderKey = "";
     return;
   }
-  const chordName = activeChord?.name || "";
-  const chordKey = `${activeChord?.start ?? ""}-${activeChord?.end ?? ""}-${chordName}`;
+  const display = chordDisplay(activeChord?.name || "");
+  const chordName = display.guitar || activeChord?.name || "";
+  const chordKey = `${activeChord?.start ?? ""}-${activeChord?.end ?? ""}-${chordName}-${state.studyTranspose}-${state.studyCapo}-${state.studySimplify ? 1 : 0}`;
   if (state.advancedChordRenderKey === chordKey) return;
   state.advancedChordRenderKey = chordKey;
   renderGuitarDiagram(chordName, guitarShapeForChord(chordName));
@@ -1079,13 +1265,20 @@ function renderChords(activeChord = null) {
       && Number(chord.end) === Number(activeChord.end))
   ) : -1;
   row.hidden = list.length === 0;
-  const key = list.map((chord) => `${chord.start}-${chord.end}-${chord.name}`).join("|");
+  const key = [
+    state.studyMode ? "study" : "player",
+    state.studyTranspose,
+    state.studyCapo,
+    state.studySimplify ? 1 : 0,
+    list.map((chord) => `${chord.start}-${chord.end}-${chord.name}`).join("|")
+  ].join("::");
   if (row.dataset.chordKey !== key) {
     row.dataset.chordKey = key;
     row.dataset.activeChordIndex = "";
     row.innerHTML = list.map((chord, index) => `
       <button class="chord-pill" type="button" data-chord-index="${index}">
-        <strong>${escapeHtml(chord.name)}</strong><span>${escapeHtml(chord.degree || "")}</span>
+        <strong>${escapeHtml(chordDisplay(chord.name).guitar)}</strong>
+        <span>${escapeHtml(chordDisplay(chord.name).guitar !== chord.name ? chord.name : (chord.degree || ""))}</span>
       </button>
     `).join("");
     row.querySelectorAll("[data-chord-index]").forEach((button) => {
@@ -1237,7 +1430,8 @@ function updateSync() {
   $("duration").textContent = formatTime(duration);
   $("seek").value = String(Math.round((time / duration) * 1000));
   $("progress-fill").style.width = `${progress}%`;
-  $("now-chord").textContent = activeChord?.name || "--";
+  const activeChordDisplay = chordDisplay(activeChord?.name || "");
+  $("now-chord").textContent = activeChordDisplay.guitar || "--";
   $("now-degree").textContent = activeChord?.degree || "";
   $("stage-line").textContent = trackLine?.singableText || trackLine?.text || gap?.label || "";
   $("current-lyric-label").textContent = selectedLyricSummary();
@@ -1246,6 +1440,7 @@ function updateSync() {
   renderCarousel(activeLine, time);
   renderFullLyrics(activeLine);
   renderChords(activeChord);
+  renderStudyPanel(activeLine, activeChord, time);
   updateTokenHighlights(time, activeLine);
 }
 
@@ -1456,6 +1651,29 @@ function bindEvents() {
     const asset = assets.find((item) => item.id === $("vocal-language-select").value);
     if (asset) setMediaSource(asset, true);
   });
+  $("study-transpose")?.addEventListener("change", () => {
+    state.studyTranspose = Number($("study-transpose").value) || 0;
+    state.advancedChordRenderKey = "";
+    updateSync();
+  });
+  $("study-capo")?.addEventListener("change", () => {
+    state.studyCapo = Number($("study-capo").value) || 0;
+    state.advancedChordRenderKey = "";
+    updateSync();
+  });
+  $("study-simplify")?.addEventListener("click", () => {
+    state.studySimplify = !state.studySimplify;
+    state.advancedChordRenderKey = "";
+    renderStudyControls();
+    updateSync();
+  });
+  $("study-panel")?.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    const jump = target?.closest("[data-study-time]");
+    if (!jump || !state.mediaElement) return;
+    state.mediaElement.currentTime = Math.max(0, Number(jump.dataset.studyTime) || 0);
+    updateSync();
+  });
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       setLibraryOpen(false);
@@ -1485,6 +1703,19 @@ async function loadTextTracks(trackInfos = []) {
   }));
 }
 
+async function loadStudyData(mediaId) {
+  if (!state.studyMode || !mediaId) return null;
+  const url = `data/songs/${encodeURIComponent(mediaId)}/study.json`;
+  try {
+    const data = await loadJson(url);
+    data.__url = url;
+    return data;
+  } catch (error) {
+    console.info(`No Musia Atlas study data for ${mediaId}.`, error.message);
+    return null;
+  }
+}
+
 async function loadMediaItem(item, updateHash = false) {
   if (!item) throw new Error("No media item in catalog.");
   if (state.mediaElement) state.mediaElement.pause();
@@ -1492,8 +1723,11 @@ async function loadMediaItem(item, updateHash = false) {
   state.activeMediaId = item.id;
   state.manifestUrl = resolveSitePath(item.manifest);
   state.manifest = await loadJson(state.manifestUrl);
+  state.studyData = await loadStudyData(item.id);
   state.didApplySkipIntro = false;
   state.renderedChordKey = "";
+  state.studyChordRenderKey = "";
+  state.studyBeatRenderKey = "";
   if (!state.userPlaybackMode) setPlaybackMode(defaultPlaybackModeForManifest(state.manifest));
   else renderPlaybackMode();
   state.defaultTracks = await loadTextTracks(state.manifest.textTracks || []);
@@ -1507,6 +1741,12 @@ async function loadMediaItem(item, updateHash = false) {
   state.selectedLyricLangs = new Set();
 
   const musical = state.manifest.musical || {};
+  const atlasLink = $("atlas-link");
+  if (atlasLink) {
+    atlasLink.href = studyPathForMedia(item.id);
+    atlasLink.textContent = state.studyMode ? "Player" : "Atlas";
+    if (state.studyMode) atlasLink.href = `?media=${encodeURIComponent(item.id)}`;
+  }
   $("kind-label").textContent = labelKind(state.manifest.kind);
   $("media-title").textContent = state.manifest.title;
   $("media-artist").textContent = state.manifest.artist ? `by ${state.manifest.artist}` : "";
@@ -1525,21 +1765,27 @@ async function loadMediaItem(item, updateHash = false) {
   const assets = playableAssets(state.manifest);
   const selectedAsset = assets.find((asset) => asset.id === state.requestedAssetId) || assets[0];
   if (!selectedAsset) throw new Error("No playable media asset in manifest.");
+  renderStudyControls();
   setMediaSource(selectedAsset);
   updateMediaSession();
   updateSync();
-  if (updateHash) history.replaceState(null, "", `#${encodeURIComponent(item.id)}`);
+  if (updateHash) {
+    history.replaceState(null, "", state.studyMode ? studyPathForMedia(item.id) : `#${encodeURIComponent(item.id)}`);
+  }
 }
 
 async function boot() {
   const params = new URLSearchParams(window.location.search);
+  state.studyMode = isStudyMode(params);
   state.captureMode = params.get("capture") === "1" || params.get("record") === "1";
   state.skipIntroOnLoad = params.get("skipIntro") === "1" || params.get("skip") === "vocal";
   state.requestedAssetId = params.get("asset") || "";
   try {
-    state.advancedMode = params.get("advanced") === "1" || (!state.captureMode && localStorage.getItem("funAdvancedMode") === "1");
+    state.advancedMode = params.get("advanced") === "0"
+      ? false
+      : (state.studyMode || params.get("advanced") === "1" || (!state.captureMode && localStorage.getItem("funAdvancedMode") === "1"));
   } catch {
-    state.advancedMode = params.get("advanced") === "1";
+    state.advancedMode = params.get("advanced") === "0" ? false : (state.studyMode || params.get("advanced") === "1");
   }
   const captureFullLyrics = state.captureMode && params.get("fullLyrics") === "1";
   const capturePortrait = state.captureMode && params.get("portrait") === "1";
@@ -1555,11 +1801,12 @@ async function boot() {
   document.body.classList.toggle("capture-publication", capturePublication);
   document.body.classList.toggle("capture-multilingual", state.captureMultilingual);
   document.body.classList.toggle("capture-ktv", capturePortrait && !captureFullLyrics && !captureGuitarFocus);
+  document.body.classList.toggle("study-mode", state.studyMode);
   bindEvents();
   setAdvancedMode(state.advancedMode, { persist: false });
   state.catalog = await loadJson("data/catalog.json");
   startLibraryPeekLoop();
-  const requestedId = params.get("media") || params.get("id") || window.location.hash.replace(/^#/, "");
+  const requestedId = atlasMediaIdFromPath() || params.get("media") || params.get("id") || window.location.hash.replace(/^#/, "");
   const hashId = decodeURIComponent(requestedId);
   const item = state.catalog.items.find((entry) => entry.id === hashId)
     || state.catalog.items.find((entry) => entry.id === state.catalog.defaultMedia)

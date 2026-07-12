@@ -1,0 +1,1200 @@
+{
+  "schema": "https://fun.lazying.art/schemas/musia-atlas-study.v1.json",
+  "version": 1,
+  "toolName": "Musia Atlas",
+  "mediaId": "aya-chan-hikari-ame",
+  "title": "Aya Chan Hikari Ame Atlas",
+  "summary": "Beginner-friendly chord, beat, lyric-entry, and guitar-practice map for the Aya Chan song.",
+  "defaultAssetId": "aya-hikari-ame-ja",
+  "dataPolicy": [
+    "Lyrics use corrected website timing JSON for the active vocal.",
+    "Beats come from local analysis runs and are marked as analysis data.",
+    "Chords are imported from the song manifest and should be verified by ear before formal teaching.",
+    "Instrumental spans are represented as player state, not lyric lines."
+  ],
+  "assets": {
+    "aya-hikari-ame-ja": {
+      "bpm": 92.285,
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "data/runs/aya-chan-hikari-ame-20260628-20260628-154133-analysis/analysis/beats.json",
+      "beats": [
+        {
+          "index": 0,
+          "time": 1.904
+        },
+        {
+          "index": 1,
+          "time": 2.577
+        },
+        {
+          "index": 2,
+          "time": 3.251
+        },
+        {
+          "index": 3,
+          "time": 3.901
+        },
+        {
+          "index": 4,
+          "time": 4.551
+        },
+        {
+          "index": 5,
+          "time": 5.201
+        },
+        {
+          "index": 6,
+          "time": 5.851
+        },
+        {
+          "index": 7,
+          "time": 6.502
+        },
+        {
+          "index": 8,
+          "time": 7.152
+        },
+        {
+          "index": 9,
+          "time": 7.848
+        },
+        {
+          "index": 10,
+          "time": 8.475
+        },
+        {
+          "index": 11,
+          "time": 9.149
+        },
+        {
+          "index": 12,
+          "time": 9.822
+        },
+        {
+          "index": 13,
+          "time": 10.449
+        },
+        {
+          "index": 14,
+          "time": 11.099
+        },
+        {
+          "index": 15,
+          "time": 11.749
+        },
+        {
+          "index": 16,
+          "time": 12.446
+        },
+        {
+          "index": 17,
+          "time": 13.073
+        },
+        {
+          "index": 18,
+          "time": 13.746
+        },
+        {
+          "index": 19,
+          "time": 14.396
+        },
+        {
+          "index": 20,
+          "time": 15.023
+        },
+        {
+          "index": 21,
+          "time": 15.673
+        },
+        {
+          "index": 22,
+          "time": 16.347
+        },
+        {
+          "index": 23,
+          "time": 16.997
+        },
+        {
+          "index": 24,
+          "time": 17.647
+        },
+        {
+          "index": 25,
+          "time": 18.297
+        },
+        {
+          "index": 26,
+          "time": 18.947
+        },
+        {
+          "index": 27,
+          "time": 19.621
+        },
+        {
+          "index": 28,
+          "time": 20.271
+        },
+        {
+          "index": 29,
+          "time": 20.944
+        },
+        {
+          "index": 30,
+          "time": 21.571
+        },
+        {
+          "index": 31,
+          "time": 22.221
+        },
+        {
+          "index": 32,
+          "time": 22.895
+        },
+        {
+          "index": 33,
+          "time": 23.545
+        },
+        {
+          "index": 34,
+          "time": 24.218
+        },
+        {
+          "index": 35,
+          "time": 24.845
+        },
+        {
+          "index": 36,
+          "time": 25.496
+        },
+        {
+          "index": 37,
+          "time": 26.169
+        },
+        {
+          "index": 38,
+          "time": 26.819
+        },
+        {
+          "index": 39,
+          "time": 27.469
+        },
+        {
+          "index": 40,
+          "time": 28.119
+        },
+        {
+          "index": 41,
+          "time": 28.63
+        },
+        {
+          "index": 42,
+          "time": 29.28
+        },
+        {
+          "index": 43,
+          "time": 29.931
+        },
+        {
+          "index": 44,
+          "time": 30.581
+        },
+        {
+          "index": 45,
+          "time": 31.068
+        },
+        {
+          "index": 46,
+          "time": 31.718
+        },
+        {
+          "index": 47,
+          "time": 32.369
+        },
+        {
+          "index": 48,
+          "time": 33.019
+        },
+        {
+          "index": 49,
+          "time": 33.692
+        },
+        {
+          "index": 50,
+          "time": 34.342
+        },
+        {
+          "index": 51,
+          "time": 35.016
+        },
+        {
+          "index": 52,
+          "time": 35.643
+        },
+        {
+          "index": 53,
+          "time": 36.293
+        },
+        {
+          "index": 54,
+          "time": 36.943
+        },
+        {
+          "index": 55,
+          "time": 37.64
+        },
+        {
+          "index": 56,
+          "time": 38.243
+        },
+        {
+          "index": 57,
+          "time": 38.917
+        },
+        {
+          "index": 58,
+          "time": 39.567
+        },
+        {
+          "index": 59,
+          "time": 40.24
+        },
+        {
+          "index": 60,
+          "time": 40.867
+        },
+        {
+          "index": 61,
+          "time": 41.517
+        },
+        {
+          "index": 62,
+          "time": 42.191
+        },
+        {
+          "index": 63,
+          "time": 42.841
+        },
+        {
+          "index": 64,
+          "time": 43.491
+        },
+        {
+          "index": 65,
+          "time": 44.164
+        },
+        {
+          "index": 66,
+          "time": 44.791
+        },
+        {
+          "index": 67,
+          "time": 45.465
+        },
+        {
+          "index": 68,
+          "time": 46.092
+        },
+        {
+          "index": 69,
+          "time": 46.765
+        },
+        {
+          "index": 70,
+          "time": 47.415
+        },
+        {
+          "index": 71,
+          "time": 48.112
+        },
+        {
+          "index": 72,
+          "time": 48.715
+        },
+        {
+          "index": 73,
+          "time": 49.389
+        },
+        {
+          "index": 74,
+          "time": 50.039
+        },
+        {
+          "index": 75,
+          "time": 50.689
+        },
+        {
+          "index": 76,
+          "time": 51.316
+        },
+        {
+          "index": 77,
+          "time": 51.989
+        },
+        {
+          "index": 78,
+          "time": 52.64
+        },
+        {
+          "index": 79,
+          "time": 53.29
+        },
+        {
+          "index": 80,
+          "time": 53.917
+        },
+        {
+          "index": 81,
+          "time": 54.613
+        },
+        {
+          "index": 82,
+          "time": 55.287
+        },
+        {
+          "index": 83,
+          "time": 55.937
+        },
+        {
+          "index": 84,
+          "time": 56.587
+        },
+        {
+          "index": 85,
+          "time": 57.237
+        },
+        {
+          "index": 86,
+          "time": 57.887
+        },
+        {
+          "index": 87,
+          "time": 58.538
+        },
+        {
+          "index": 88,
+          "time": 59.188
+        },
+        {
+          "index": 89,
+          "time": 59.838
+        },
+        {
+          "index": 90,
+          "time": 60.488
+        },
+        {
+          "index": 91,
+          "time": 61.138
+        },
+        {
+          "index": 92,
+          "time": 61.788
+        },
+        {
+          "index": 93,
+          "time": 62.438
+        },
+        {
+          "index": 94,
+          "time": 63.089
+        },
+        {
+          "index": 95,
+          "time": 63.762
+        },
+        {
+          "index": 96,
+          "time": 64.412
+        }
+      ],
+      "practice": {
+        "counting": "Count steady quarter-note pulses; most chord changes sit on or near a downbeat.",
+        "beginnerFocus": [
+          "G",
+          "D",
+          "C",
+          "Em",
+          "Am"
+        ],
+        "warning": "Chord timing is analysis-grade, not a human-certified lead sheet. Confirm by ear for formal teaching."
+      }
+    },
+    "aya-hikari-ame-en": {
+      "bpm": 92.285,
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "data/runs/aya-chan-hikari-ame-en-compact-20260628-20260628-225929-analysis/analysis/beats.json",
+      "beats": [
+        {
+          "index": 0,
+          "time": 0.789
+        },
+        {
+          "index": 1,
+          "time": 1.463
+        },
+        {
+          "index": 2,
+          "time": 2.113
+        },
+        {
+          "index": 3,
+          "time": 2.763
+        },
+        {
+          "index": 4,
+          "time": 3.413
+        },
+        {
+          "index": 5,
+          "time": 4.063
+        },
+        {
+          "index": 6,
+          "time": 4.737
+        },
+        {
+          "index": 7,
+          "time": 5.387
+        },
+        {
+          "index": 8,
+          "time": 6.037
+        },
+        {
+          "index": 9,
+          "time": 6.711
+        },
+        {
+          "index": 10,
+          "time": 7.361
+        },
+        {
+          "index": 11,
+          "time": 8.011
+        },
+        {
+          "index": 12,
+          "time": 8.661
+        },
+        {
+          "index": 13,
+          "time": 9.311
+        },
+        {
+          "index": 14,
+          "time": 9.961
+        },
+        {
+          "index": 15,
+          "time": 10.612
+        },
+        {
+          "index": 16,
+          "time": 11.262
+        },
+        {
+          "index": 17,
+          "time": 11.912
+        },
+        {
+          "index": 18,
+          "time": 12.585
+        },
+        {
+          "index": 19,
+          "time": 13.235
+        },
+        {
+          "index": 20,
+          "time": 13.886
+        },
+        {
+          "index": 21,
+          "time": 14.536
+        },
+        {
+          "index": 22,
+          "time": 15.209
+        },
+        {
+          "index": 23,
+          "time": 15.836
+        },
+        {
+          "index": 24,
+          "time": 16.486
+        },
+        {
+          "index": 25,
+          "time": 17.136
+        },
+        {
+          "index": 26,
+          "time": 17.81
+        },
+        {
+          "index": 27,
+          "time": 18.46
+        },
+        {
+          "index": 28,
+          "time": 19.087
+        },
+        {
+          "index": 29,
+          "time": 19.76
+        },
+        {
+          "index": 30,
+          "time": 20.41
+        },
+        {
+          "index": 31,
+          "time": 21.06
+        },
+        {
+          "index": 32,
+          "time": 21.711
+        },
+        {
+          "index": 33,
+          "time": 22.361
+        },
+        {
+          "index": 34,
+          "time": 23.011
+        },
+        {
+          "index": 35,
+          "time": 23.661
+        },
+        {
+          "index": 36,
+          "time": 24.335
+        },
+        {
+          "index": 37,
+          "time": 24.985
+        },
+        {
+          "index": 38,
+          "time": 25.635
+        },
+        {
+          "index": 39,
+          "time": 26.285
+        },
+        {
+          "index": 40,
+          "time": 26.935
+        },
+        {
+          "index": 41,
+          "time": 27.585
+        },
+        {
+          "index": 42,
+          "time": 28.235
+        },
+        {
+          "index": 43,
+          "time": 28.909
+        },
+        {
+          "index": 44,
+          "time": 29.559
+        },
+        {
+          "index": 45,
+          "time": 30.186
+        },
+        {
+          "index": 46,
+          "time": 30.836
+        },
+        {
+          "index": 47,
+          "time": 31.509
+        },
+        {
+          "index": 48,
+          "time": 32.16
+        },
+        {
+          "index": 49,
+          "time": 32.81
+        },
+        {
+          "index": 50,
+          "time": 33.46
+        },
+        {
+          "index": 51,
+          "time": 34.11
+        },
+        {
+          "index": 52,
+          "time": 34.76
+        },
+        {
+          "index": 53,
+          "time": 35.41
+        },
+        {
+          "index": 54,
+          "time": 36.061
+        },
+        {
+          "index": 55,
+          "time": 36.711
+        },
+        {
+          "index": 56,
+          "time": 37.361
+        },
+        {
+          "index": 57,
+          "time": 38.034
+        },
+        {
+          "index": 58,
+          "time": 38.684
+        },
+        {
+          "index": 59,
+          "time": 39.335
+        },
+        {
+          "index": 60,
+          "time": 39.985
+        },
+        {
+          "index": 61,
+          "time": 40.635
+        },
+        {
+          "index": 62,
+          "time": 41.285
+        },
+        {
+          "index": 63,
+          "time": 41.935
+        },
+        {
+          "index": 64,
+          "time": 42.585
+        },
+        {
+          "index": 65,
+          "time": 43.236
+        },
+        {
+          "index": 66,
+          "time": 43.886
+        },
+        {
+          "index": 67,
+          "time": 44.536
+        },
+        {
+          "index": 68,
+          "time": 45.186
+        },
+        {
+          "index": 69,
+          "time": 45.859
+        },
+        {
+          "index": 70,
+          "time": 46.51
+        },
+        {
+          "index": 71,
+          "time": 47.16
+        },
+        {
+          "index": 72,
+          "time": 47.81
+        },
+        {
+          "index": 73,
+          "time": 48.46
+        },
+        {
+          "index": 74,
+          "time": 49.11
+        },
+        {
+          "index": 75,
+          "time": 49.76
+        },
+        {
+          "index": 76,
+          "time": 50.411
+        },
+        {
+          "index": 77,
+          "time": 51.061
+        },
+        {
+          "index": 78,
+          "time": 51.711
+        },
+        {
+          "index": 79,
+          "time": 52.361
+        },
+        {
+          "index": 80,
+          "time": 53.011
+        },
+        {
+          "index": 81,
+          "time": 53.661
+        },
+        {
+          "index": 82,
+          "time": 54.335
+        },
+        {
+          "index": 83,
+          "time": 54.985
+        },
+        {
+          "index": 84,
+          "time": 55.635
+        },
+        {
+          "index": 85,
+          "time": 56.285
+        },
+        {
+          "index": 86,
+          "time": 56.935
+        },
+        {
+          "index": 87,
+          "time": 57.585
+        },
+        {
+          "index": 88,
+          "time": 58.236
+        }
+      ],
+      "practice": {
+        "counting": "Count steady quarter-note pulses; most chord changes sit on or near a downbeat.",
+        "beginnerFocus": [
+          "G",
+          "D",
+          "C",
+          "Em",
+          "Am"
+        ],
+        "warning": "Chord timing is analysis-grade, not a human-certified lead sheet. Confirm by ear for formal teaching."
+      }
+    },
+    "aya-hikari-ame-zh-Hans": {
+      "bpm": 92.285,
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "data/runs/aya-chan-hikari-ame-zh-20260628-20260628-225746-analysis/analysis/beats.json",
+      "beats": [
+        {
+          "index": 0,
+          "time": 2.113
+        },
+        {
+          "index": 1,
+          "time": 2.786
+        },
+        {
+          "index": 2,
+          "time": 3.437
+        },
+        {
+          "index": 3,
+          "time": 4.087
+        },
+        {
+          "index": 4,
+          "time": 4.76
+        },
+        {
+          "index": 5,
+          "time": 5.41
+        },
+        {
+          "index": 6,
+          "time": 6.06
+        },
+        {
+          "index": 7,
+          "time": 6.734
+        },
+        {
+          "index": 8,
+          "time": 7.384
+        },
+        {
+          "index": 9,
+          "time": 8.057
+        },
+        {
+          "index": 10,
+          "time": 8.684
+        },
+        {
+          "index": 11,
+          "time": 9.358
+        },
+        {
+          "index": 12,
+          "time": 10.031
+        },
+        {
+          "index": 13,
+          "time": 10.704
+        },
+        {
+          "index": 14,
+          "time": 11.355
+        },
+        {
+          "index": 15,
+          "time": 12.074
+        },
+        {
+          "index": 16,
+          "time": 12.678
+        },
+        {
+          "index": 17,
+          "time": 13.328
+        },
+        {
+          "index": 18,
+          "time": 13.978
+        },
+        {
+          "index": 19,
+          "time": 14.652
+        },
+        {
+          "index": 20,
+          "time": 15.302
+        },
+        {
+          "index": 21,
+          "time": 16.022
+        },
+        {
+          "index": 22,
+          "time": 16.649
+        },
+        {
+          "index": 23,
+          "time": 17.322
+        },
+        {
+          "index": 24,
+          "time": 17.972
+        },
+        {
+          "index": 25,
+          "time": 18.622
+        },
+        {
+          "index": 26,
+          "time": 19.273
+        },
+        {
+          "index": 27,
+          "time": 19.946
+        },
+        {
+          "index": 28,
+          "time": 20.596
+        },
+        {
+          "index": 29,
+          "time": 21.246
+        },
+        {
+          "index": 30,
+          "time": 21.896
+        },
+        {
+          "index": 31,
+          "time": 22.547
+        },
+        {
+          "index": 32,
+          "time": 23.197
+        },
+        {
+          "index": 33,
+          "time": 23.87
+        },
+        {
+          "index": 34,
+          "time": 24.543
+        },
+        {
+          "index": 35,
+          "time": 25.194
+        },
+        {
+          "index": 36,
+          "time": 25.844
+        },
+        {
+          "index": 37,
+          "time": 26.517
+        },
+        {
+          "index": 38,
+          "time": 27.167
+        },
+        {
+          "index": 39,
+          "time": 27.841
+        },
+        {
+          "index": 40,
+          "time": 28.491
+        },
+        {
+          "index": 41,
+          "time": 29.164
+        },
+        {
+          "index": 42,
+          "time": 29.814
+        },
+        {
+          "index": 43,
+          "time": 30.465
+        },
+        {
+          "index": 44,
+          "time": 31.115
+        },
+        {
+          "index": 45,
+          "time": 31.788
+        },
+        {
+          "index": 46,
+          "time": 32.461
+        },
+        {
+          "index": 47,
+          "time": 33.112
+        },
+        {
+          "index": 48,
+          "time": 33.762
+        },
+        {
+          "index": 49,
+          "time": 34.412
+        },
+        {
+          "index": 50,
+          "time": 35.085
+        },
+        {
+          "index": 51,
+          "time": 35.736
+        },
+        {
+          "index": 52,
+          "time": 36.409
+        },
+        {
+          "index": 53,
+          "time": 37.059
+        },
+        {
+          "index": 54,
+          "time": 37.709
+        },
+        {
+          "index": 55,
+          "time": 38.359
+        },
+        {
+          "index": 56,
+          "time": 39.033
+        },
+        {
+          "index": 57,
+          "time": 39.683
+        },
+        {
+          "index": 58,
+          "time": 40.356
+        },
+        {
+          "index": 59,
+          "time": 41.006
+        },
+        {
+          "index": 60,
+          "time": 41.68
+        },
+        {
+          "index": 61,
+          "time": 42.33
+        },
+        {
+          "index": 62,
+          "time": 43.003
+        },
+        {
+          "index": 63,
+          "time": 43.654
+        },
+        {
+          "index": 64,
+          "time": 44.304
+        },
+        {
+          "index": 65,
+          "time": 45.0
+        },
+        {
+          "index": 66,
+          "time": 45.65
+        },
+        {
+          "index": 67,
+          "time": 46.301
+        },
+        {
+          "index": 68,
+          "time": 46.951
+        },
+        {
+          "index": 69,
+          "time": 47.624
+        },
+        {
+          "index": 70,
+          "time": 48.274
+        },
+        {
+          "index": 71,
+          "time": 48.924
+        },
+        {
+          "index": 72,
+          "time": 49.575
+        },
+        {
+          "index": 73,
+          "time": 50.271
+        },
+        {
+          "index": 74,
+          "time": 50.921
+        },
+        {
+          "index": 75,
+          "time": 51.572
+        },
+        {
+          "index": 76,
+          "time": 52.222
+        },
+        {
+          "index": 77,
+          "time": 52.895
+        },
+        {
+          "index": 78,
+          "time": 53.545
+        },
+        {
+          "index": 79,
+          "time": 54.195
+        },
+        {
+          "index": 80,
+          "time": 54.869
+        },
+        {
+          "index": 81,
+          "time": 55.519
+        },
+        {
+          "index": 82,
+          "time": 56.192
+        },
+        {
+          "index": 83,
+          "time": 56.842
+        },
+        {
+          "index": 84,
+          "time": 57.493
+        },
+        {
+          "index": 85,
+          "time": 58.166
+        },
+        {
+          "index": 86,
+          "time": 58.839
+        },
+        {
+          "index": 87,
+          "time": 59.49
+        },
+        {
+          "index": 88,
+          "time": 60.14
+        },
+        {
+          "index": 89,
+          "time": 60.813
+        },
+        {
+          "index": 90,
+          "time": 61.463
+        },
+        {
+          "index": 91,
+          "time": 62.16
+        },
+        {
+          "index": 92,
+          "time": 62.856
+        }
+      ],
+      "practice": {
+        "counting": "Count steady quarter-note pulses; most chord changes sit on or near a downbeat.",
+        "beginnerFocus": [
+          "G",
+          "D",
+          "C",
+          "Em",
+          "Am"
+        ],
+        "warning": "Chord timing is analysis-grade, not a human-certified lead sheet. Confirm by ear for formal teaching."
+      }
+    }
+  },
+  "lesson": {
+    "name": "First guitar pass",
+    "goal": "Learn to follow a generated song with chord changes, beat counting, and lyric-entry cues without needing to sing first.",
+    "steps": [
+      "Play the track once and tap only the beat lane.",
+      "Loop a short section and strum once per displayed chord change.",
+      "Speak the current lyric on the beat before attempting melody.",
+      "Use capo and simplify only as display aids; keep the audio unchanged."
+    ]
+  }
+}

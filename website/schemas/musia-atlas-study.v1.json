@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fun.lazying.art/schemas/musia-atlas-study.v1.json",
+  "title": "Musia Atlas Study Data",
+  "type": "object",
+  "required": ["version", "toolName", "mediaId", "assets"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    },
+    "toolName": {
+      "const": "Musia Atlas"
+    },
+    "mediaId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "defaultAssetId": {
+      "type": "string"
+    },
+    "dataPolicy": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["bpm", "timeSignature", "beatConfidence", "beats"],
+        "additionalProperties": true,
+        "properties": {
+          "bpm": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "timeSignature": {
+            "type": "string",
+            "pattern": "^[0-9]+/[0-9]+$"
+          },
+          "beatConfidence": {
+            "enum": ["verified", "analysis", "estimated"]
+          },
+          "beatSource": {
+            "type": "string"
+          },
+          "beats": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["index", "time"],
+              "properties": {
+                "index": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "time": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
