@@ -54,56 +54,62 @@
       "id": "l02",
       "start": 3.4,
       "end": 7.56,
-      "text": "天似秋露，盖丝颜",
-      "singableText": "天似秋露，盖丝颜",
+      "text": "天似穹庐，笼盖四野",
+      "singableText": "天似穹庐，笼盖四野",
       "role": "lyric",
       "tokens": [
         {
           "text": "天",
           "start": 3.4,
-          "end": 3.92,
+          "end": 3.862,
           "pinyin": "tian1"
         },
         {
           "text": "似",
-          "start": 3.92,
-          "end": 4.44,
-          "pinyin": "shi4"
+          "start": 3.862,
+          "end": 4.324,
+          "pinyin": "si4"
         },
         {
-          "text": "秋",
-          "start": 4.44,
-          "end": 4.96,
-          "pinyin": "qiu1"
+          "text": "穹",
+          "start": 4.324,
+          "end": 4.787,
+          "pinyin": "qiong2"
         },
         {
-          "text": "露",
-          "start": 4.96,
-          "end": 5.48,
-          "pinyin": "lu4"
+          "text": "庐",
+          "start": 4.787,
+          "end": 5.249,
+          "pinyin": "lu2"
         },
         {
           "text": "，",
-          "start": 5.48,
-          "end": 6.0
+          "start": 5.249,
+          "end": 5.711
+        },
+        {
+          "text": "笼",
+          "start": 5.711,
+          "end": 6.173,
+          "pinyin": "long3"
         },
         {
           "text": "盖",
-          "start": 6.0,
-          "end": 6.52,
+          "start": 6.173,
+          "end": 6.636,
           "pinyin": "gai4"
         },
         {
-          "text": "丝",
-          "start": 6.52,
-          "end": 7.04,
-          "pinyin": "si1"
+          "text": "四",
+          "start": 6.636,
+          "end": 7.098,
+          "pinyin": "si4"
         },
         {
-          "text": "颜",
-          "start": 7.04,
+          "text": "野",
+          "start": 7.098,
           "end": 7.56,
-          "pinyin": "yan2"
+          "pinyin": "ya3"
         }
       ]
     },
@@ -111,27 +117,27 @@
       "id": "l03",
       "start": 14.63,
       "end": 19.91,
-      "text": "坠落船，云山下",
-      "singableText": "坠落船，云山下",
+      "text": "敕勒川，阴山下",
+      "singableText": "敕勒川，阴山下",
       "role": "lyric",
       "tokens": [
         {
-          "text": "坠",
+          "text": "敕",
           "start": 14.63,
           "end": 15.384,
-          "pinyin": "zhui4"
+          "pinyin": "chi4"
         },
         {
-          "text": "落",
+          "text": "勒",
           "start": 15.384,
           "end": 16.139,
-          "pinyin": "luo4"
+          "pinyin": "le4"
         },
         {
-          "text": "船",
+          "text": "川",
           "start": 16.139,
           "end": 16.893,
-          "pinyin": "chuan2"
+          "pinyin": "chuan1"
         },
         {
           "text": "，",
@@ -139,10 +145,10 @@
           "end": 17.647
         },
         {
-          "text": "云",
+          "text": "阴",
           "start": 17.647,
           "end": 18.401,
-          "pinyin": "yun2"
+          "pinyin": "yin1"
         },
         {
           "text": "山",
@@ -162,8 +168,8 @@
       "id": "l04",
       "start": 21.37,
       "end": 26.83,
-      "text": "天似秋露，露盖丝颜",
-      "singableText": "天似秋露，露盖丝颜",
+      "text": "天似穹庐，笼盖四野",
+      "singableText": "天似穹庐，笼盖四野",
       "role": "lyric",
       "tokens": [
         {
@@ -176,19 +182,19 @@
           "text": "似",
           "start": 21.977,
           "end": 22.583,
-          "pinyin": "shi4"
+          "pinyin": "si4"
         },
         {
-          "text": "秋",
+          "text": "穹",
           "start": 22.583,
           "end": 23.19,
-          "pinyin": "qiu1"
+          "pinyin": "qiong2"
         },
         {
-          "text": "露",
+          "text": "庐",
           "start": 23.19,
           "end": 23.797,
-          "pinyin": "lu4"
+          "pinyin": "lu2"
         },
         {
           "text": "，",
@@ -196,10 +202,10 @@
           "end": 24.403
         },
         {
-          "text": "露",
+          "text": "笼",
           "start": 24.403,
           "end": 25.01,
-          "pinyin": "lu4"
+          "pinyin": "long3"
         },
         {
           "text": "盖",
@@ -208,16 +214,16 @@
           "pinyin": "gai4"
         },
         {
-          "text": "丝",
+          "text": "四",
           "start": 25.617,
           "end": 26.223,
-          "pinyin": "si1"
+          "pinyin": "si4"
         },
         {
-          "text": "颜",
+          "text": "野",
           "start": 26.223,
           "end": 26.83,
-          "pinyin": "yan2"
+          "pinyin": "ya3"
         }
       ]
     },
@@ -276,54 +282,49 @@
       "id": "l06",
       "start": 30.27,
       "end": 33.63,
-      "text": "风吹草低，见牛羊",
-      "singableText": "风吹草低，见牛羊",
+      "text": "风吹草低见牛羊",
+      "singableText": "风吹草低见牛羊",
       "role": "lyric",
       "tokens": [
         {
           "text": "风",
           "start": 30.27,
-          "end": 30.69,
+          "end": 30.75,
           "pinyin": "feng1"
         },
         {
           "text": "吹",
-          "start": 30.69,
-          "end": 31.11,
+          "start": 30.75,
+          "end": 31.23,
           "pinyin": "chui1"
         },
         {
           "text": "草",
-          "start": 31.11,
-          "end": 31.53,
+          "start": 31.23,
+          "end": 31.71,
           "pinyin": "cao3"
         },
         {
           "text": "低",
-          "start": 31.53,
-          "end": 31.95,
+          "start": 31.71,
+          "end": 32.19,
           "pinyin": "di1"
         },
         {
-          "text": "，",
-          "start": 31.95,
-          "end": 32.37
-        },
-        {
           "text": "见",
-          "start": 32.37,
-          "end": 32.79,
+          "start": 32.19,
+          "end": 32.67,
           "pinyin": "xian4"
         },
         {
           "text": "牛",
-          "start": 32.79,
-          "end": 33.21,
+          "start": 32.67,
+          "end": 33.15,
           "pinyin": "niu2"
         },
         {
           "text": "羊",
-          "start": 33.21,
+          "start": 33.15,
           "end": 33.63,
           "pinyin": "yang2"
         }
@@ -384,54 +385,49 @@
       "id": "l08",
       "start": 58.72,
       "end": 65.54,
-      "text": "风吹草低，见牛羊",
-      "singableText": "风吹草低，见牛羊",
+      "text": "风吹草低见牛羊",
+      "singableText": "风吹草低见牛羊",
       "role": "lyric",
       "tokens": [
         {
           "text": "风",
           "start": 58.72,
-          "end": 59.572,
+          "end": 59.694,
           "pinyin": "feng1"
         },
         {
           "text": "吹",
-          "start": 59.572,
-          "end": 60.425,
+          "start": 59.694,
+          "end": 60.669,
           "pinyin": "chui1"
         },
         {
           "text": "草",
-          "start": 60.425,
-          "end": 61.278,
+          "start": 60.669,
+          "end": 61.643,
           "pinyin": "cao3"
         },
         {
           "text": "低",
-          "start": 61.278,
-          "end": 62.13,
+          "start": 61.643,
+          "end": 62.617,
           "pinyin": "di1"
         },
         {
-          "text": "，",
-          "start": 62.13,
-          "end": 62.983
-        },
-        {
           "text": "见",
-          "start": 62.983,
-          "end": 63.835,
+          "start": 62.617,
+          "end": 63.591,
           "pinyin": "xian4"
         },
         {
           "text": "牛",
-          "start": 63.835,
-          "end": 64.688,
+          "start": 63.591,
+          "end": 64.566,
           "pinyin": "niu2"
         },
         {
           "text": "羊",
-          "start": 64.688,
+          "start": 64.566,
           "end": 65.54,
           "pinyin": "yang2"
         }

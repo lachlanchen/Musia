@@ -12,7 +12,7 @@
   "artist": "Musia",
   "description": "A northern grassland folk-song render of 敕勒歌 using only original poem lines with repetition and ASR-corrected timing.",
   "caption": "Sky like a felt tent, endless wilds, wind bending the grass until cattle and sheep appear.",
-  "duration": 72.0,
+  "duration": 72,
   "canonicalUrl": "https://fun.lazying.art/#chi-le-ge-original-poem",
   "share": {
     "title": "敕勒歌 · 原文版 - Fun Lazying Art",
@@ -62,7 +62,7 @@
     "timeSignature": "4/4",
     "chords": [
       {
-        "start": 0.0,
+        "start": 0,
         "end": 3.019,
         "name": "Am",
         "degree": ""
@@ -207,12 +207,12 @@
       },
       {
         "start": 28.723,
-        "end": 30.0,
+        "end": 30,
         "name": "Am",
         "degree": ""
       },
       {
-        "start": 30.0,
+        "start": 30,
         "end": 31.695,
         "name": "D",
         "degree": ""
@@ -495,7 +495,7 @@
       },
       {
         "start": 65.712,
-        "end": 72.0,
+        "end": 72,
         "name": "D",
         "degree": ""
       }
@@ -556,19 +556,19 @@
         "id": "l02",
         "start": 3.4,
         "end": 7.56,
-        "text": "天似秋露，盖丝颜"
+        "text": "天似穹庐，笼盖四野"
       },
       {
         "id": "l03",
         "start": 14.63,
         "end": 19.91,
-        "text": "坠落船，云山下"
+        "text": "敕勒川，阴山下"
       },
       {
         "id": "l04",
         "start": 21.37,
         "end": 26.83,
-        "text": "天似秋露，露盖丝颜"
+        "text": "天似穹庐，笼盖四野"
       },
       {
         "id": "l05",
@@ -580,7 +580,7 @@
         "id": "l06",
         "start": 30.27,
         "end": 33.63,
-        "text": "风吹草低，见牛羊"
+        "text": "风吹草低见牛羊"
       },
       {
         "id": "l07",
@@ -592,7 +592,7 @@
         "id": "l08",
         "start": 58.72,
         "end": 65.54,
-        "text": "风吹草低，见牛羊"
+        "text": "风吹草低见牛羊"
       }
     ]
   },
@@ -623,7 +623,7 @@
       "selectedMediumAsrOverlap": 0.2835820895522388,
       "gate": "review-original-poem"
     },
-    "lyricCorrection": "Corrected 2026-07-06 from large-v3 ASR and the original 敕勒歌 source text. The opening couplets are now published as ASR-close text because the render diverges from the source; the later 天苍苍/风吹草低 hook is clearer. 见 is published with pinyin xian4 and 野 with pinyin ya3.",
+    "lyricCorrection": "Re-polished 2026-07-12 from user listening notes, ASR, and the original 敕勒歌 source. When the sung sound stayed close to the poem and the phrase length matched, the source poem now wins over ASR artifacts: 敕勒川/阴山下, 天似穹庐/笼盖四野, and 风吹草低见牛羊. 见 is published with pinyin xian4 and 野 with pinyin ya3.",
     "pronunciationGuide": "data/creative_projects/chi-le-ge-original-poem-20260706/source/pronunciation-guide.md",
     "cover": {
       "src": "assets/covers/chi-le-ge-original-poem-16x9.png",

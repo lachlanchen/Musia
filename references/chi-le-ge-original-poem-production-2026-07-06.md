@@ -29,3 +29,18 @@ Generated for Musia on 2026-07-06.
 ## Audit
 
 The selected render was chosen from 18 candidates. Medium-ASR overlap was highest for seed `748143` at `0.2836`. Large-v3 ASR confirms the later hook `天苍苍，野茫茫 / 风吹草低，见牛羊` is the clearest part. On 2026-07-07 the opening couplets were changed from source-restored text to ASR-close text because the audio diverges too much from the poem there. This item should not be treated as a perfect exact poem recitation.
+
+## 2026-07-12 Lyric Polish
+
+The public lyric track was re-polished with the source poem as context. For classical source songs, ASR is evidence, not the final text. If the sung phrase is close to the poem and the character count/phrase shape still matches, keep the original poem wording because it is more beautiful and meaningful than a literal ASR artifact.
+
+Updated public lines:
+
+```text
+天似穹庐，笼盖四野
+敕勒川，阴山下
+天似穹庐，笼盖四野
+风吹草低见牛羊
+```
+
+The first line `天擦穿云霞` remains ASR-close because that opening render is less clearly aligned with `敕勒川，阴山下`. Pronunciation annotations remain source-aware: `野` uses `ya3`, and `见` uses `xian4`.

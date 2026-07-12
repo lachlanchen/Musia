@@ -88,104 +88,95 @@
       "id": "l02",
       "start": 3.4,
       "end": 7.56,
-      "text": "空は秋の露のように、絹めいた色を覆う",
-      "singableText": "空は秋の露のように、絹めいた色を覆う",
+      "text": "空は穹廬のように、四方の野を覆う",
+      "singableText": "空は穹廬のように、四方の野を覆う",
       "role": "lyric",
       "tokens": [
         {
           "text": "空",
           "start": 3.4,
-          "end": 3.631,
+          "end": 3.66,
           "reading": "そら"
         },
         {
           "text": "は",
-          "start": 3.631,
-          "end": 3.862
+          "start": 3.66,
+          "end": 3.92
         },
         {
-          "text": "秋",
-          "start": 3.862,
-          "end": 4.093,
-          "reading": "あき"
+          "text": "穹",
+          "start": 3.92,
+          "end": 4.18,
+          "reading": "きゅう"
         },
         {
-          "text": "の",
-          "start": 4.093,
-          "end": 4.324
-        },
-        {
-          "text": "露",
-          "start": 4.324,
-          "end": 4.556,
-          "reading": "つゆ"
+          "text": "廬",
+          "start": 4.18,
+          "end": 4.44,
+          "reading": "ろ"
         },
         {
           "text": "の",
-          "start": 4.556,
-          "end": 4.787
+          "start": 4.44,
+          "end": 4.7
         },
         {
           "text": "よ",
-          "start": 4.787,
-          "end": 5.018
+          "start": 4.7,
+          "end": 4.96
         },
         {
           "text": "う",
-          "start": 5.018,
-          "end": 5.249
+          "start": 4.96,
+          "end": 5.22
         },
         {
           "text": "に",
-          "start": 5.249,
+          "start": 5.22,
           "end": 5.48
         },
         {
           "text": "、",
           "start": 5.48,
-          "end": 5.711
+          "end": 5.74
         },
         {
-          "text": "絹",
-          "start": 5.711,
-          "end": 5.942,
-          "reading": "きぬ"
+          "text": "四",
+          "start": 5.74,
+          "end": 6,
+          "reading": "し"
         },
         {
-          "text": "め",
-          "start": 5.942,
-          "end": 6.173
+          "text": "方",
+          "start": 6,
+          "end": 6.26,
+          "reading": "ほう"
         },
         {
-          "text": "い",
-          "start": 6.173,
-          "end": 6.404
+          "text": "の",
+          "start": 6.26,
+          "end": 6.52
         },
         {
-          "text": "た",
-          "start": 6.404,
-          "end": 6.636
-        },
-        {
-          "text": "色",
-          "start": 6.636,
-          "end": 6.867,
-          "reading": "いろ"
+          "text": "野",
+          "start": 6.52,
+          "end": 6.78,
+          "reading": "の"
         },
         {
           "text": "を",
-          "start": 6.867,
-          "end": 7.098
+          "start": 6.78,
+          "end": 7.04
         },
         {
           "text": "覆",
-          "start": 7.098,
-          "end": 7.329,
-          "reading": "ふく"
+          "start": 7.04,
+          "end": 7.3,
+          "reading": "おお"
         },
         {
           "text": "う",
-          "start": 7.329,
+          "start": 7.3,
           "end": 7.56
         }
       ]
@@ -194,83 +185,78 @@
       "id": "l03",
       "start": 14.63,
       "end": 19.91,
-      "text": "落ちゆく舟が雲の山の下にある",
-      "singableText": "落ちゆく舟が雲の山の下にある",
+      "text": "敕勒川は陰山のふもとにある",
+      "singableText": "敕勒川は陰山のふもとにある",
       "role": "lyric",
       "tokens": [
         {
-          "text": "落",
+          "text": "敕",
           "start": 14.63,
-          "end": 15.007,
-          "reading": "らく"
+          "end": 15.036,
+          "reading": "ちょく"
         },
         {
-          "text": "ち",
-          "start": 15.007,
-          "end": 15.384
+          "text": "勒",
+          "start": 15.036,
+          "end": 15.442,
+          "reading": "ろく"
         },
         {
-          "text": "ゆ",
-          "start": 15.384,
-          "end": 15.761
+          "text": "川",
+          "start": 15.442,
+          "end": 15.848,
+          "reading": "せん"
         },
         {
-          "text": "く",
-          "start": 15.761,
-          "end": 16.139
+          "text": "は",
+          "start": 15.848,
+          "end": 16.255
         },
         {
-          "text": "舟",
-          "start": 16.139,
-          "end": 16.516,
-          "reading": "ふね"
-        },
-        {
-          "text": "が",
-          "start": 16.516,
-          "end": 16.893
-        },
-        {
-          "text": "雲",
-          "start": 16.893,
-          "end": 17.27,
-          "reading": "くも"
-        },
-        {
-          "text": "の",
-          "start": 17.27,
-          "end": 17.647
+          "text": "陰",
+          "start": 16.255,
+          "end": 16.661,
+          "reading": "いん"
         },
         {
           "text": "山",
-          "start": 17.647,
-          "end": 18.024,
-          "reading": "やま"
+          "start": 16.661,
+          "end": 17.067,
+          "reading": "ざん"
         },
         {
           "text": "の",
-          "start": 18.024,
-          "end": 18.401
+          "start": 17.067,
+          "end": 17.473
         },
         {
-          "text": "下",
-          "start": 18.401,
-          "end": 18.779,
-          "reading": "した"
+          "text": "ふ",
+          "start": 17.473,
+          "end": 17.879
+        },
+        {
+          "text": "も",
+          "start": 17.879,
+          "end": 18.285
+        },
+        {
+          "text": "と",
+          "start": 18.285,
+          "end": 18.692
         },
         {
           "text": "に",
-          "start": 18.779,
-          "end": 19.156
+          "start": 18.692,
+          "end": 19.098
         },
         {
           "text": "あ",
-          "start": 19.156,
-          "end": 19.533
+          "start": 19.098,
+          "end": 19.504
         },
         {
           "text": "る",
-          "start": 19.533,
+          "start": 19.504,
           "end": 19.91
         }
       ]
@@ -279,115 +265,95 @@
       "id": "l04",
       "start": 21.37,
       "end": 26.83,
-      "text": "空は秋の露のように、露が絹めいた色を覆う",
-      "singableText": "空は秋の露のように、露が絹めいた色を覆う",
+      "text": "空は穹廬のように、四方の野を覆う",
+      "singableText": "空は穹廬のように、四方の野を覆う",
       "role": "lyric",
       "tokens": [
         {
           "text": "空",
           "start": 21.37,
-          "end": 21.643,
+          "end": 21.711,
           "reading": "そら"
         },
         {
           "text": "は",
-          "start": 21.643,
-          "end": 21.916
+          "start": 21.711,
+          "end": 22.053
         },
         {
-          "text": "秋",
-          "start": 21.916,
-          "end": 22.189,
-          "reading": "あき"
+          "text": "穹",
+          "start": 22.053,
+          "end": 22.394,
+          "reading": "きゅう"
         },
         {
-          "text": "の",
-          "start": 22.189,
-          "end": 22.462
-        },
-        {
-          "text": "露",
-          "start": 22.462,
+          "text": "廬",
+          "start": 22.394,
           "end": 22.735,
-          "reading": "つゆ"
+          "reading": "ろ"
         },
         {
           "text": "の",
           "start": 22.735,
-          "end": 23.008
+          "end": 23.076
         },
         {
           "text": "よ",
-          "start": 23.008,
-          "end": 23.281
+          "start": 23.076,
+          "end": 23.418
         },
         {
           "text": "う",
-          "start": 23.281,
-          "end": 23.554
+          "start": 23.418,
+          "end": 23.759
         },
         {
           "text": "に",
-          "start": 23.554,
-          "end": 23.827
-        },
-        {
-          "text": "、",
-          "start": 23.827,
+          "start": 23.759,
           "end": 24.1
         },
         {
-          "text": "露",
+          "text": "、",
           "start": 24.1,
-          "end": 24.373,
-          "reading": "つゆ"
+          "end": 24.441
         },
         {
-          "text": "が",
-          "start": 24.373,
-          "end": 24.646
+          "text": "四",
+          "start": 24.441,
+          "end": 24.782,
+          "reading": "し"
         },
         {
-          "text": "絹",
-          "start": 24.646,
-          "end": 24.919,
-          "reading": "きぬ"
+          "text": "方",
+          "start": 24.782,
+          "end": 25.124,
+          "reading": "ほう"
         },
         {
-          "text": "め",
-          "start": 24.919,
-          "end": 25.192
-        },
-        {
-          "text": "い",
-          "start": 25.192,
+          "text": "の",
+          "start": 25.124,
           "end": 25.465
         },
         {
-          "text": "た",
+          "text": "野",
           "start": 25.465,
-          "end": 25.738
-        },
-        {
-          "text": "色",
-          "start": 25.738,
-          "end": 26.011,
-          "reading": "いろ"
+          "end": 25.806,
+          "reading": "の"
         },
         {
           "text": "を",
-          "start": 26.011,
-          "end": 26.284
+          "start": 25.806,
+          "end": 26.148
         },
         {
           "text": "覆",
-          "start": 26.284,
-          "end": 26.557,
-          "reading": "ふく"
+          "start": 26.148,
+          "end": 26.489,
+          "reading": "おお"
         },
         {
           "text": "う",
-          "start": 26.557,
+          "start": 26.489,
           "end": 26.83
         }
       ]
@@ -510,7 +476,7 @@
           "text": "低",
           "start": 31.11,
           "end": 31.32,
-          "reading": "てい"
+          "reading": "ひく"
         },
         {
           "text": "く",
@@ -521,7 +487,7 @@
           "text": "吹",
           "start": 31.53,
           "end": 31.74,
-          "reading": "すい"
+          "reading": "ふ"
         },
         {
           "text": "き",
@@ -553,13 +519,13 @@
         {
           "text": "が",
           "start": 32.79,
-          "end": 33.0
+          "end": 33
         },
         {
           "text": "見",
-          "start": 33.0,
+          "start": 33,
           "end": 33.21,
-          "reading": "けん"
+          "reading": "み"
         },
         {
           "text": "え",
@@ -691,7 +657,7 @@
           "text": "低",
           "start": 60.425,
           "end": 60.851,
-          "reading": "てい"
+          "reading": "ひく"
         },
         {
           "text": "く",
@@ -702,7 +668,7 @@
           "text": "吹",
           "start": 61.278,
           "end": 61.704,
-          "reading": "すい"
+          "reading": "ふ"
         },
         {
           "text": "き",
@@ -740,7 +706,7 @@
           "text": "見",
           "start": 64.261,
           "end": 64.688,
-          "reading": "けん"
+          "reading": "み"
         },
         {
           "text": "え",
