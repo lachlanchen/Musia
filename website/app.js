@@ -35,6 +35,7 @@ const state = {
   advancingPlayback: false,
   advancedMode: false,
   showAllMedia: false,
+  hiddenOnlyMedia: false,
   advancedChordRenderKey: "",
   studyMode: false,
   studyData: null,
@@ -234,8 +235,9 @@ function isHiddenCatalogItem(item) {
   return Boolean(item?.hidden || item?.visibility === "hidden");
 }
 
-function catalogItems({ includeHidden = state.showAllMedia } = {}) {
+function catalogItems({ includeHidden = state.showAllMedia, hiddenOnly = state.hiddenOnlyMedia } = {}) {
   const items = state.catalog?.items || [];
+  if (hiddenOnly) return items.filter(isHiddenCatalogItem);
   return includeHidden ? items : items.filter((item) => !isHiddenCatalogItem(item));
 }
 
@@ -2124,6 +2126,7 @@ async function boot() {
   const params = new URLSearchParams(window.location.search);
   state.studyMode = isStudyMode(params);
   state.showAllMedia = params.has("showall") || params.has("showAll");
+  state.hiddenOnlyMedia = params.has("hidden") || params.has("hided") || params.has("hiddenOnly");
   state.captureMode = params.get("capture") === "1" || params.get("record") === "1";
   state.skipIntroOnLoad = params.get("skipIntro") === "1" || params.get("skip") === "vocal";
   state.requestedAssetId = params.get("asset") || "";

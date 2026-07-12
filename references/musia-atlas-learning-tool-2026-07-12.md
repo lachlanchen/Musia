@@ -243,6 +243,7 @@ Catalog curation rule:
 ```text
 hidden: true        -> hidden from normal catalog and playback queue
 ?showall or showAll -> include hidden songs again for review/debug
+?hidden or ?hided   -> show only hidden songs for focused curation review
 ```
 
 Use hiding rather than deleting when a song is low quality, a superseded suffix
