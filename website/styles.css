@@ -382,6 +382,39 @@ h2 {
   margin-bottom: 14px;
 }
 
+.library-mode-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -2px 0 14px;
+}
+
+.legacy-toggle {
+  height: 36px;
+  border: 1px solid rgba(42,38,28,.13);
+  border-radius: 999px;
+  background: rgba(255,255,255,.88);
+  color: var(--ink);
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0;
+  box-shadow: 0 8px 20px rgba(42,38,28,.05);
+}
+
+.legacy-toggle.active,
+.legacy-toggle[aria-pressed="true"] {
+  border-color: rgba(196,98,59,.36);
+  background: linear-gradient(135deg, rgba(255,239,213,.98), rgba(255,216,196,.92));
+  color: #7c2d12;
+}
+
+#library-mode-note {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .library-search {
   display: grid;
   gap: 7px;

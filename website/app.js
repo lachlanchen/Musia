@@ -264,6 +264,17 @@ function catalogItems({ includeHidden = state.showAllMedia, hiddenOnly = state.h
   return includeHidden ? items : items.filter((item) => !isHiddenCatalogItem(item));
 }
 
+function hiddenCatalogCount() {
+  return (state.catalog?.items || []).filter(isHiddenCatalogItem).length;
+}
+
+function updateCatalogModeUrl() {
+  const url = new URL(window.location.href);
+  ["hidden", "hided", "hiddenOnly", "showall", "showAll"].forEach((key) => url.searchParams.delete(key));
+  if (state.hiddenOnlyMedia) url.searchParams.set("hidden", "1");
+  history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
 function pinyinTone(value) {
   return String(value || "")
     .replace("1", "ˉ")
@@ -1501,6 +1512,19 @@ function setMediaSource(asset, keepTime = false) {
 
 function renderLibrary() {
   const items = catalogItems();
+  const legacyButton = $("legacy-toggle");
+  const modeNote = $("library-mode-note");
+  if (legacyButton) {
+    legacyButton.classList.toggle("active", state.hiddenOnlyMedia);
+    legacyButton.setAttribute("aria-pressed", state.hiddenOnlyMedia ? "true" : "false");
+    legacyButton.textContent = state.hiddenOnlyMedia ? "Legacy on" : "Legacy";
+    legacyButton.title = state.hiddenOnlyMedia ? "Return to the visible catalog" : "Show hidden Legacy and review-only songs";
+  }
+  if (modeNote) {
+    modeNote.textContent = state.hiddenOnlyMedia
+      ? `${hiddenCatalogCount()} hidden items`
+      : (state.showAllMedia ? "All items" : "Visible catalog");
+  }
   const query = state.searchQuery.trim().toLowerCase();
   const visibleItems = items.filter((item) => {
     const kindMatch = state.kindFilter === "all" || item.kind === state.kindFilter;
@@ -1519,7 +1543,7 @@ function renderLibrary() {
       <span>${escapeHtml(isHiddenCatalogItem(item) ? `Hidden ${labelKind(item.kind)}` : labelKind(item.kind))}</span>
       <strong>${escapeHtml(item.title)}</strong>
     </button>
-  `).join("") : `<div class="empty-chip">No matching media</div>`;
+  `).join("") : `<div class="empty-chip">${state.hiddenOnlyMedia ? "No hidden media matches" : "No matching media"}</div>`;
   document.querySelectorAll("[data-media-id]").forEach((button) => {
     button.addEventListener("click", async () => {
       const item = state.catalog.items.find((entry) => entry.id === button.dataset.mediaId);
@@ -2009,6 +2033,13 @@ function bindEvents() {
   $("library-backdrop").addEventListener("click", () => setLibraryOpen(false));
   $("search-toggle").addEventListener("click", () => setSearchOpen(true));
   $("advanced-toggle").addEventListener("click", () => setAdvancedMode(!state.advancedMode));
+  $("legacy-toggle")?.addEventListener("click", () => {
+    state.hiddenOnlyMedia = !state.hiddenOnlyMedia;
+    if (state.hiddenOnlyMedia) state.showAllMedia = false;
+    updateCatalogModeUrl();
+    setLibraryOpen(true);
+    renderLibrary();
+  });
   document.querySelectorAll("[data-kind-filter]").forEach((button) => {
     button.addEventListener("click", () => {
       state.kindFilter = button.dataset.kindFilter;
