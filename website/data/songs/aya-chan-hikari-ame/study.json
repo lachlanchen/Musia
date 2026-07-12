@@ -782,8 +782,8 @@
         "confidence": "analysis",
         "source": "data/runs/aya-chan-hikari-ame-20260628-20260628-154133-analysis/analysis/melody_f0.csv",
         "key": "G major",
-        "notation": "jianpu/simple numbered notes",
-        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "notation": "numbered musical notation / simple number notes",
+        "description": "Token-level median vocal F0 converted to Western note names and key-relative numbered scale degrees. Analysis-grade, not human-transcribed sheet music.",
         "lines": [
           {
             "lineId": "ja-001",
@@ -800,6 +800,7 @@
                 "end": 0.614,
                 "midi": 62.6,
                 "note": "D#4",
+                "numberNote": "b6,",
                 "jianpu": "b6,",
                 "chord": "C#"
               },
@@ -809,6 +810,7 @@
                 "end": 1.118,
                 "midi": 67.9,
                 "note": "G#4",
+                "numberNote": "#1",
                 "jianpu": "#1",
                 "chord": "C#"
               },
@@ -818,6 +820,7 @@
                 "end": 1.623,
                 "midi": 69.1,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "C#"
               },
@@ -827,6 +830,7 @@
                 "end": 2.127,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "C#"
               },
@@ -836,6 +840,7 @@
                 "end": 2.631,
                 "midi": 68.4,
                 "note": "G#4",
+                "numberNote": "#1",
                 "jianpu": "#1",
                 "chord": "C"
               },
@@ -845,6 +850,7 @@
                 "end": 3.135,
                 "midi": 72.0,
                 "note": "C5",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "C"
               },
@@ -854,6 +860,7 @@
                 "end": 3.639,
                 "midi": 69.1,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "G"
               },
@@ -863,6 +870,7 @@
                 "end": 4.144,
                 "midi": 67.4,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "G"
               },
@@ -872,6 +880,7 @@
                 "end": 4.648,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Em"
               },
@@ -881,6 +890,7 @@
                 "end": 5.152,
                 "midi": 62.2,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -890,6 +900,7 @@
                 "end": 5.656,
                 "midi": 64.7,
                 "note": "F4",
+                "numberNote": "b7,",
                 "jianpu": "b7,",
                 "chord": "Bm"
               },
@@ -899,6 +910,7 @@
                 "end": 6.161,
                 "midi": 60.0,
                 "note": "C4",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "C"
               },
@@ -908,6 +920,7 @@
                 "end": 6.665,
                 "midi": 62.1,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "C"
               },
@@ -917,6 +930,7 @@
                 "end": 7.169,
                 "midi": 64.7,
                 "note": "F4",
+                "numberNote": "b7,",
                 "jianpu": "b7,",
                 "chord": "Em"
               },
@@ -926,6 +940,7 @@
                 "end": 7.673,
                 "midi": 60.0,
                 "note": "C4",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "Am"
               },
@@ -935,6 +950,7 @@
                 "end": 8.177,
                 "midi": 64.0,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "Am"
               },
@@ -944,6 +960,7 @@
                 "end": 8.682,
                 "midi": 67.6,
                 "note": "G#4",
+                "numberNote": "#1",
                 "jianpu": "#1",
                 "chord": "Am"
               },
@@ -953,6 +970,7 @@
                 "end": 9.186,
                 "midi": 70.6,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Em"
               },
@@ -962,6 +980,7 @@
                 "end": 9.69,
                 "midi": 71.1,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Am"
               }
@@ -982,6 +1001,7 @@
                 "end": 11.731,
                 "midi": 62.1,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "G"
               },
@@ -991,6 +1011,7 @@
                 "end": 12.262,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "G"
               },
@@ -1000,6 +1021,7 @@
                 "end": 12.793,
                 "midi": 71.8,
                 "note": "C5",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "C"
               },
@@ -1009,6 +1031,7 @@
                 "end": 13.324,
                 "midi": 64.1,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "C"
               },
@@ -1018,6 +1041,7 @@
                 "end": 13.855,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "C"
               },
@@ -1027,6 +1051,7 @@
                 "end": 14.386,
                 "midi": 67.3,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Am"
               },
@@ -1036,6 +1061,7 @@
                 "end": 14.917,
                 "midi": 69.2,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Am"
               },
@@ -1045,6 +1071,7 @@
                 "end": 15.448,
                 "midi": 62.3,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -1054,6 +1081,7 @@
                 "end": 15.979,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -1063,6 +1091,7 @@
                 "end": 16.51,
                 "midi": 62.7,
                 "note": "D#4",
+                "numberNote": "b6,",
                 "jianpu": "b6,",
                 "chord": "Bm"
               },
@@ -1072,6 +1101,7 @@
                 "end": 17.041,
                 "midi": 59.2,
                 "note": "B3",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Bm"
               },
@@ -1081,6 +1111,7 @@
                 "end": 17.572,
                 "midi": 62.9,
                 "note": "D#4",
+                "numberNote": "b6,",
                 "jianpu": "b6,",
                 "chord": "E"
               },
@@ -1090,6 +1121,7 @@
                 "end": 18.103,
                 "midi": 64.0,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "Am"
               },
@@ -1099,6 +1131,7 @@
                 "end": 18.634,
                 "midi": 68.9,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Am"
               },
@@ -1108,6 +1141,7 @@
                 "end": 19.165,
                 "midi": 71.1,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Am"
               },
@@ -1117,6 +1151,7 @@
                 "end": 19.696,
                 "midi": 67.2,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Dm"
               },
@@ -1126,6 +1161,7 @@
                 "end": 20.227,
                 "midi": 67.1,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Em"
               },
@@ -1135,6 +1171,7 @@
                 "end": 20.758,
                 "midi": 66.1,
                 "note": "F#4",
+                "numberNote": "7,",
                 "jianpu": "7,",
                 "chord": "D"
               },
@@ -1144,6 +1181,7 @@
                 "end": 21.289,
                 "midi": 69.1,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "G"
               },
@@ -1153,6 +1191,7 @@
                 "end": 21.82,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "G"
               }
@@ -1173,6 +1212,7 @@
                 "end": 22.232,
                 "midi": 64.0,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "G"
               },
@@ -1182,6 +1222,7 @@
                 "end": 22.644,
                 "midi": 62.2,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "G"
               },
@@ -1191,6 +1232,7 @@
                 "end": 23.056,
                 "midi": 63.6,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "G"
               },
@@ -1200,6 +1242,7 @@
                 "end": 23.468,
                 "midi": 70.2,
                 "note": "A#4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "C"
               },
@@ -1209,6 +1252,7 @@
                 "end": 23.88,
                 "midi": 71.1,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Em"
               },
@@ -1218,6 +1262,7 @@
                 "end": 24.292,
                 "midi": 62.2,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Em"
               },
@@ -1227,6 +1272,7 @@
                 "end": 24.704,
                 "midi": 61.9,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -1236,6 +1282,7 @@
                 "end": 25.116,
                 "midi": 62.5,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -1245,6 +1292,7 @@
                 "end": 25.528,
                 "midi": 62.1,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -1254,6 +1302,7 @@
                 "end": 25.94,
                 "midi": 64.1,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "Am"
               },
@@ -1263,6 +1312,7 @@
                 "end": 26.352,
                 "midi": 69.1,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Am"
               },
@@ -1272,6 +1322,7 @@
                 "end": 26.764,
                 "midi": 66.9,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Em"
               },
@@ -1281,6 +1332,7 @@
                 "end": 27.176,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "D"
               },
@@ -1290,6 +1342,7 @@
                 "end": 27.588,
                 "midi": 62.1,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "D"
               },
@@ -1299,6 +1352,7 @@
                 "end": 28.0,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Cm"
               },
@@ -1308,6 +1362,7 @@
                 "end": 28.412,
                 "midi": 60.1,
                 "note": "C4",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "F"
               },
@@ -1317,6 +1372,7 @@
                 "end": 28.824,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "F"
               },
@@ -1326,6 +1382,7 @@
                 "end": 29.236,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "F"
               },
@@ -1335,6 +1392,7 @@
                 "end": 29.648,
                 "midi": 69.0,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Em"
               },
@@ -1344,6 +1402,7 @@
                 "end": 30.06,
                 "midi": 71.0,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Em"
               }
@@ -1364,6 +1423,7 @@
                 "end": 33.492,
                 "midi": 72.0,
                 "note": "C5",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "G"
               },
@@ -1373,6 +1433,7 @@
                 "end": 33.764,
                 "midi": 70.2,
                 "note": "A#4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "G"
               },
@@ -1382,6 +1443,7 @@
                 "end": 34.036,
                 "midi": 64.0,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "C"
               },
@@ -1391,6 +1453,7 @@
                 "end": 34.308,
                 "midi": 64.0,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "C"
               },
@@ -1400,6 +1463,7 @@
                 "end": 34.58,
                 "midi": 72.0,
                 "note": "C5",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "C"
               },
@@ -1409,6 +1473,7 @@
                 "end": 34.852,
                 "midi": 68.9,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "C"
               },
@@ -1418,6 +1483,7 @@
                 "end": 35.124,
                 "midi": 64.6,
                 "note": "F4",
+                "numberNote": "b7,",
                 "jianpu": "b7,",
                 "chord": "C"
               },
@@ -1427,6 +1493,7 @@
                 "end": 35.396,
                 "midi": 67.2,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "C"
               },
@@ -1436,6 +1503,7 @@
                 "end": 35.668,
                 "midi": 67.2,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "C"
               },
@@ -1445,6 +1513,7 @@
                 "end": 35.94,
                 "midi": 69.7,
                 "note": "A#4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "Am"
               },
@@ -1454,6 +1523,7 @@
                 "end": 36.212,
                 "midi": 71.8,
                 "note": "C5",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "Am"
               },
@@ -1463,6 +1533,7 @@
                 "end": 36.484,
                 "midi": 69.7,
                 "note": "A#4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "Am"
               },
@@ -1472,6 +1543,7 @@
                 "end": 36.756,
                 "midi": 70.6,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Am"
               },
@@ -1481,6 +1553,7 @@
                 "end": 37.028,
                 "midi": 67.1,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Am"
               },
@@ -1490,6 +1563,7 @@
                 "end": 37.3,
                 "midi": 68.7,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Am"
               },
@@ -1499,6 +1573,7 @@
                 "end": 37.572,
                 "midi": 66.4,
                 "note": "F#4",
+                "numberNote": "7,",
                 "jianpu": "7,",
                 "chord": "Am"
               },
@@ -1508,6 +1583,7 @@
                 "end": 37.844,
                 "midi": 64.5,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "Am"
               },
@@ -1517,6 +1593,7 @@
                 "end": 38.116,
                 "midi": 67.3,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Am"
               },
@@ -1526,6 +1603,7 @@
                 "end": 38.388,
                 "midi": 66.9,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Am"
               },
@@ -1535,6 +1613,7 @@
                 "end": 38.66,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Am"
               }
@@ -1555,6 +1634,7 @@
                 "end": 39.574,
                 "midi": 61.9,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -1564,6 +1644,7 @@
                 "end": 40.031,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Am"
               },
@@ -1573,6 +1654,7 @@
                 "end": 40.488,
                 "midi": 64.1,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "Em"
               },
@@ -1582,6 +1664,7 @@
                 "end": 40.945,
                 "midi": 68.7,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Em"
               },
@@ -1591,6 +1674,7 @@
                 "end": 41.402,
                 "midi": 71.6,
                 "note": "C5",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "Em"
               },
@@ -1600,6 +1684,7 @@
                 "end": 41.859,
                 "midi": 74.0,
                 "note": "D5",
+                "numberNote": "5",
                 "jianpu": "5",
                 "chord": "F"
               },
@@ -1609,6 +1694,7 @@
                 "end": 42.316,
                 "midi": 74.1,
                 "note": "D5",
+                "numberNote": "5",
                 "jianpu": "5",
                 "chord": "F"
               },
@@ -1618,6 +1704,7 @@
                 "end": 42.773,
                 "midi": 71.0,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Am"
               },
@@ -1627,6 +1714,7 @@
                 "end": 43.23,
                 "midi": 68.9,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Em"
               },
@@ -1636,6 +1724,7 @@
                 "end": 43.687,
                 "midi": 71.0,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "Em"
               },
@@ -1645,6 +1734,7 @@
                 "end": 44.144,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Em"
               },
@@ -1654,6 +1744,7 @@
                 "end": 44.601,
                 "midi": 64.8,
                 "note": "F4",
+                "numberNote": "b7,",
                 "jianpu": "b7,",
                 "chord": "F"
               },
@@ -1663,6 +1754,7 @@
                 "end": 45.058,
                 "midi": 64.1,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "F"
               },
@@ -1672,6 +1764,7 @@
                 "end": 45.515,
                 "midi": 64.2,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "F"
               },
@@ -1681,6 +1774,7 @@
                 "end": 45.972,
                 "midi": 70.7,
                 "note": "B4",
+                "numberNote": "3",
                 "jianpu": "3",
                 "chord": "F"
               },
@@ -1690,6 +1784,7 @@
                 "end": 46.429,
                 "midi": 69.0,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "F"
               },
@@ -1699,6 +1794,7 @@
                 "end": 46.886,
                 "midi": 67.1,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "F"
               },
@@ -1708,6 +1804,7 @@
                 "end": 47.343,
                 "midi": 74.0,
                 "note": "D5",
+                "numberNote": "5",
                 "jianpu": "5",
                 "chord": "B"
               },
@@ -1717,6 +1814,7 @@
                 "end": 47.8,
                 "midi": 74.0,
                 "note": "D5",
+                "numberNote": "5",
                 "jianpu": "5",
                 "chord": "Em"
               }
@@ -1737,6 +1835,7 @@
                 "end": 48.474,
                 "midi": 62.2,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Em"
               },
@@ -1746,6 +1845,7 @@
                 "end": 49.148,
                 "midi": 69.0,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Em"
               },
@@ -1755,6 +1855,7 @@
                 "end": 49.822,
                 "midi": 63.9,
                 "note": "E4",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "Am"
               },
@@ -1764,6 +1865,7 @@
                 "end": 50.496,
                 "midi": 62.1,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Em"
               },
@@ -1773,6 +1875,7 @@
                 "end": 51.171,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Bm"
               },
@@ -1782,6 +1885,7 @@
                 "end": 51.845,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "D"
               },
@@ -1791,6 +1895,7 @@
                 "end": 52.519,
                 "midi": 67.1,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "G"
               },
@@ -1800,6 +1905,7 @@
                 "end": 53.193,
                 "midi": 67.1,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "G"
               },
@@ -1809,6 +1915,7 @@
                 "end": 53.867,
                 "midi": 65.0,
                 "note": "F4",
+                "numberNote": "b7,",
                 "jianpu": "b7,",
                 "chord": "G"
               },
@@ -1818,6 +1925,7 @@
                 "end": 54.541,
                 "midi": 64.9,
                 "note": "F4",
+                "numberNote": "b7,",
                 "jianpu": "b7,",
                 "chord": "G"
               },
@@ -1827,6 +1935,7 @@
                 "end": 55.215,
                 "midi": 66.7,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "C"
               },
@@ -1836,6 +1945,7 @@
                 "end": 55.889,
                 "midi": 68.7,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Am"
               },
@@ -1845,6 +1955,7 @@
                 "end": 56.564,
                 "midi": 68.8,
                 "note": "A4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "D"
               },
@@ -1854,6 +1965,7 @@
                 "end": 57.238,
                 "midi": 70.3,
                 "note": "A#4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "D"
               },
@@ -1863,6 +1975,7 @@
                 "end": 57.912,
                 "midi": 67.0,
                 "note": "G4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "G"
               },
@@ -1872,6 +1985,7 @@
                 "end": 58.586,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Em"
               },
@@ -1881,6 +1995,7 @@
                 "end": 59.26,
                 "midi": 66.0,
                 "note": "F#4",
+                "numberNote": "7,",
                 "jianpu": "7,",
                 "chord": "G"
               }
@@ -2651,7 +2766,7 @@
         "confidence": "unavailable",
         "source": "",
         "key": "G major",
-        "notation": "jianpu/simple numbered notes",
+        "notation": "numbered musical notation / simple number notes",
         "lines": []
       },
       "lyricEvidence": {
@@ -3463,7 +3578,7 @@
         "confidence": "unavailable",
         "source": "",
         "key": "G major",
-        "notation": "jianpu/simple numbered notes",
+        "notation": "numbered musical notation / simple number notes",
         "lines": []
       },
       "lyricEvidence": {

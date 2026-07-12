@@ -483,7 +483,27 @@ function melodyLineFor(lineId) {
   return lines.find((line) => line.lineId === lineId) || null;
 }
 
-function renderStudyMelodyNotes(line) {
+function activeMelodyNoteIndex(notes, time) {
+  const active = notes.findIndex((note) => time >= Number(note.start) && time < Number(note.end));
+  if (active >= 0) return active;
+  let previous = -1;
+  notes.forEach((note, index) => {
+    if (Number(note.end) <= time) previous = index;
+  });
+  return previous;
+}
+
+function centerActiveStudyNote() {
+  const lane = document.querySelector("#study-line-notes .study-note-chips");
+  const active = lane?.querySelector(".study-note-chip.active");
+  if (!lane || !active) return;
+  requestAnimationFrame(() => {
+    const target = active.offsetLeft - Math.max(16, lane.clientWidth * 0.22);
+    lane.scrollTo({ left: Math.max(0, target), behavior: state.captureMode ? "auto" : "smooth" });
+  });
+}
+
+function renderStudyMelodyNotes(line, time = 0) {
   if (!line) return "";
   const melodyLine = melodyLineFor(line.id);
   const notes = melodyLine?.tokens || [];
@@ -491,27 +511,30 @@ function renderStudyMelodyNotes(line) {
     return `
       <div class="study-note-lane empty">
         <span>Number notes pending</span>
-        <em>Run Atlas build with melody/F0 data to show jianpu.</em>
+        <em>Run Atlas build with melody/F0 data to show numbered notes.</em>
       </div>
     `;
   }
-  const compact = notes
+  const noteItems = notes
     .filter((note) => note.jianpu || note.note)
-    .slice(0, 18)
-    .map((note) => `
-      <span class="study-note-chip" title="${escapeHtml(note.note || "")}${note.chord ? ` over ${escapeHtml(note.chord)}` : ""}">
+    .map((note, index) => {
+      const active = index === activeMelodyNoteIndex(notes, time);
+      const numberNote = note.numberNote || note.jianpu || "?";
+      return `
+      <span class="study-note-chip ${active ? "active" : ""}" data-study-note-index="${index}" data-note-start="${Number(note.start)}" data-note-end="${Number(note.end)}" aria-current="${active ? "true" : "false"}" title="${escapeHtml(note.note || "")}${note.chord ? ` over ${escapeHtml(note.chord)}` : ""}">
         <small>${escapeHtml(note.text || "")}</small>
-        <strong>${escapeHtml(note.jianpu || "?")}</strong>
+        <strong>${escapeHtml(numberNote)}</strong>
         <em>${escapeHtml(note.note || "")}</em>
       </span>
-    `).join("");
+    `;
+    }).join("");
   return `
     <div class="study-note-lane" aria-label="Analysis-grade numbered melody notes">
       <div class="study-note-head">
-        <span>Jianpu</span>
+        <span>Number notes</span>
         <em>${escapeHtml(melodyLine.key || "key unknown")} · ${escapeHtml(melodyLine.confidence || "analysis")}</em>
       </div>
-      <div class="study-note-chips">${compact || "<span>No voiced notes in this phrase.</span>"}</div>
+      <div class="study-note-chips">${noteItems || "<span>No voiced notes in this phrase.</span>"}</div>
     </div>
   `;
 }
@@ -533,6 +556,7 @@ function renderStudyControls() {
     simplify.classList.toggle("active", state.studySimplify);
   }
   if (mode) mode.value = state.studyRhythmMode;
+  syncStudyLoopButton();
   if (pattern) {
     const options = state.studyRhythmMode === "off" ? "" : Object.entries(RHYTHM_PATTERNS)
       .filter(([, item]) => item.mode === state.studyRhythmMode)
@@ -545,6 +569,15 @@ function renderStudyControls() {
     pattern.value = state.studyRhythmPattern;
     pattern.disabled = state.studyRhythmMode === "off";
   }
+}
+
+function syncStudyLoopButton() {
+  const button = $("study-loop-current");
+  if (!button) return;
+  const active = state.playbackMode === "single";
+  button.classList.toggle("active", active);
+  button.setAttribute("aria-pressed", active ? "true" : "false");
+  button.textContent = active ? "Looping song" : "Loop song";
 }
 
 function applyStudySpeed() {
@@ -697,7 +730,8 @@ function renderStudyPanel(activeLine = null, activeChord = null, time = 0) {
   $("study-line-text").innerHTML = line
     ? renderTrackLine(activeTrack, line)
     : `<div class="plain-line">Tap the beat here. Lyrics begin when the vocal starts.</div>`;
-  $("study-line-notes").innerHTML = renderStudyMelodyNotes(line);
+  $("study-line-notes").innerHTML = renderStudyMelodyNotes(line, time);
+  centerActiveStudyNote();
   $("study-line-metrics").innerHTML = lineMetrics ? [
     `<span><strong>${lineMetrics.tokenCount}</strong> sung tokens</span>`,
     `<span><strong>${lineMetrics.beatCount || "?"}</strong> beats in phrase</span>`,
@@ -1103,6 +1137,7 @@ function renderPlaybackMode() {
       </button>
     `;
   }).join("");
+  syncStudyLoopButton();
 }
 
 function setPlaybackMode(mode, { user = false } = {}) {
@@ -1947,6 +1982,10 @@ function bindEvents() {
     state.studySimplify = !state.studySimplify;
     state.advancedChordRenderKey = "";
     renderStudyControls();
+    updateSync();
+  });
+  $("study-loop-current")?.addEventListener("click", () => {
+    setPlaybackMode(state.playbackMode === "single" ? "off" : "single", { user: true });
     updateSync();
   });
   $("study-speed")?.addEventListener("change", () => {

@@ -165,6 +165,10 @@ def jianpu_for_midi(midi: float, key: str) -> str:
     return degree
 
 
+def number_note_for_midi(midi: float, key: str) -> str:
+    return jianpu_for_midi(midi, key)
+
+
 def parse_float(value: Any) -> float | None:
     try:
         result = float(value)
@@ -341,7 +345,7 @@ def build_melody_map(
             "confidence": "unavailable",
             "source": source,
             "key": key,
-            "notation": "jianpu/simple numbered notes",
+            "notation": "numbered musical notation / simple number notes",
             "lines": [],
         }
 
@@ -362,6 +366,7 @@ def build_melody_map(
                 "end": round(token["end"], 3),
                 "midi": midi,
                 "note": midi_note_name(midi),
+                "numberNote": number_note_for_midi(midi, key),
                 "jianpu": jianpu_for_midi(midi, key),
                 "chord": active_chord_name(chords, midpoint),
             })
@@ -373,7 +378,7 @@ def build_melody_map(
                 "key": key,
                 "confidence": "analysis",
                 "source": source,
-                "summary": " ".join(note["jianpu"] for note in line_notes),
+                "summary": " ".join(note["numberNote"] for note in line_notes),
                 "tokens": line_notes,
             })
 
@@ -381,8 +386,8 @@ def build_melody_map(
         "confidence": "analysis" if lines else "unavailable",
         "source": source,
         "key": key,
-        "notation": "jianpu/simple numbered notes",
-        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "notation": "numbered musical notation / simple number notes",
+        "description": "Token-level median vocal F0 converted to Western note names and key-relative numbered scale degrees. Analysis-grade, not human-transcribed sheet music.",
         "lines": lines,
     }
 

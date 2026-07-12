@@ -225,13 +225,14 @@ player. Chinese lines should show pinyin when the corrected lyric JSON contains
 contains `token.reading`. If a line has no token ruby, Atlas must not invent it
 client-side; fix or enrich the lyric JSON first.
 
-Atlas can also display simple numbered notes / jianpu when an analysis run has a
-matching `melody_f0.csv`. The current implementation computes median vocal F0
-inside each lyric token, converts it to a Western note name and a key-relative
-jianpu degree, and shows that beside the current phrase. This is labeled
-`analysis`, not a verified lead sheet. It is useful for seeing the relationship
-between sung pitch and the active chord, but a human-audited score should use
-confidence `verified`.
+Atlas can also display **Number notes** when an analysis run has a matching
+`melody_f0.csv`. This is the English UI label for 简谱-style numbered musical
+notation. The current implementation computes median vocal F0 inside each lyric
+token, converts it to a Western note name and a key-relative numbered scale
+degree, highlights the current sung note, and auto-scrolls the note lane as the
+song plays. This is labeled `analysis`, not a verified lead sheet. It is useful
+for seeing the relationship between sung pitch and the active chord, but a
+human-audited score should use confidence `verified`.
 
 Playback speed is display/practice behavior only. It does not rewrite audio,
 lyrics, chords, or Atlas source data. The page tries to preserve pitch when the

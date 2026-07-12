@@ -1047,7 +1047,7 @@
         "confidence": "unavailable",
         "source": "",
         "key": "D minor",
-        "notation": "jianpu/simple numbered notes",
+        "notation": "numbered musical notation / simple number notes",
         "lines": []
       },
       "lyricEvidence": {
@@ -1630,7 +1630,7 @@
         "confidence": "unavailable",
         "source": "",
         "key": "D minor",
-        "notation": "jianpu/simple numbered notes",
+        "notation": "numbered musical notation / simple number notes",
         "lines": []
       },
       "lyricEvidence": {
@@ -2276,8 +2276,8 @@
         "confidence": "analysis",
         "source": "data/runs/generated-rain-day-full-ja-analysis/analysis/melody_f0.csv",
         "key": "D minor",
-        "notation": "jianpu/simple numbered notes",
-        "description": "Token-level median vocal F0 converted to Western note names and numbered jianpu degrees. Analysis-grade, not human-transcribed sheet music.",
+        "notation": "numbered musical notation / simple number notes",
+        "description": "Token-level median vocal F0 converted to Western note names and key-relative numbered scale degrees. Analysis-grade, not human-transcribed sheet music.",
         "lines": [
           {
             "lineId": "line-001",
@@ -2294,6 +2294,7 @@
                 "end": 6.205,
                 "midi": 65.2,
                 "note": "F4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "Dm"
               },
@@ -2303,6 +2304,7 @@
                 "end": 11.24,
                 "midi": 65.3,
                 "note": "F4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "Gm"
               }
@@ -2323,6 +2325,7 @@
                 "end": 16.37,
                 "midi": 57.2,
                 "note": "A3",
+                "numberNote": "5,",
                 "jianpu": "5,",
                 "chord": "Dm"
               },
@@ -2332,6 +2335,7 @@
                 "end": 19.34,
                 "midi": 59.2,
                 "note": "B3",
+                "numberNote": "6,",
                 "jianpu": "6,",
                 "chord": "Bb"
               }
@@ -2352,6 +2356,7 @@
                 "end": 24.6,
                 "midi": 64.1,
                 "note": "E4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "Bbm"
               },
@@ -2361,6 +2366,7 @@
                 "end": 27.1,
                 "midi": 61.8,
                 "note": "D4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Am"
               }
@@ -2381,6 +2387,7 @@
                 "end": 34.19,
                 "midi": 68.7,
                 "note": "A4",
+                "numberNote": "5",
                 "jianpu": "5",
                 "chord": "Am"
               },
@@ -2390,6 +2397,7 @@
                 "end": 40.28,
                 "midi": 65.1,
                 "note": "F4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "F"
               }
@@ -2410,6 +2418,7 @@
                 "end": 42.51,
                 "midi": 65.2,
                 "note": "F4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "F"
               },
@@ -2419,6 +2428,7 @@
                 "end": 44.74,
                 "midi": 65.0,
                 "note": "F4",
+                "numberNote": "b3",
                 "jianpu": "b3",
                 "chord": "Dm"
               }
@@ -2439,6 +2449,7 @@
                 "end": 46.76,
                 "midi": 62.0,
                 "note": "D4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "G"
               },
@@ -2448,6 +2459,7 @@
                 "end": 48.78,
                 "midi": 67.1,
                 "note": "G4",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "Gm"
               }
@@ -2468,6 +2480,7 @@
                 "end": 53.875,
                 "midi": 66.9,
                 "note": "G4",
+                "numberNote": "4",
                 "jianpu": "4",
                 "chord": "Dm"
               },
@@ -2477,6 +2490,7 @@
                 "end": 55.95,
                 "midi": 70.1,
                 "note": "A#4",
+                "numberNote": "b6",
                 "jianpu": "b6",
                 "chord": "F"
               }
@@ -2497,6 +2511,7 @@
                 "end": 60.28,
                 "midi": 62.1,
                 "note": "D4",
+                "numberNote": "1",
                 "jianpu": "1",
                 "chord": "Gm"
               },
@@ -2506,6 +2521,7 @@
                 "end": 63.33,
                 "midi": 64.1,
                 "note": "E4",
+                "numberNote": "2",
                 "jianpu": "2",
                 "chord": "A"
               }
@@ -2691,7 +2707,7 @@
         "confidence": "unavailable",
         "source": "",
         "key": "D minor",
-        "notation": "jianpu/simple numbered notes",
+        "notation": "numbered musical notation / simple number notes",
         "lines": []
       },
       "lyricEvidence": {
