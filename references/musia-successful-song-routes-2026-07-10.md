@@ -130,6 +130,39 @@ drums, spacious reverb, intimate and cinematic, no clipped endings, no buried
 vocal, no spoken narration, no real singer imitation.
 ```
 
+## Route E: Compact Mixed Anthem
+
+Example:
+
+```text
+Best Am I · 我是天下第一等
+```
+
+Why it worked:
+
+- dense mixed-language drafts failed even when audio levels were healthy;
+- the successful render used a compact XL Turbo lyric with fewer unique lines,
+  repeated hook phrases, and one language phrase per line;
+- pinyin/romaji acted as private sound control for the active mixed vocal;
+- XL SFT was tested but rejected because it hallucinated generic video-outro
+  text;
+- the final website lyric used the selected audio's compact sung structure
+  rather than the longer draft prompt.
+
+Reusable rule:
+
+```text
+public native lyric for meaning
+-> compact ACE-facing mixed performance lyric
+-> XL Turbo seed sweep
+-> medium/large-v3 full-mix + vocal-stem ASR
+-> publish only corrected active-vocal JSON
+```
+
+Use this route for motivational, pop, cute, or emotional mixed EN/ZH/JP songs
+where the user values beauty and lyric accuracy but does not require every draft
+line to be sung.
+
 ## Correction Discipline
 
 For every public song:
