@@ -94,6 +94,28 @@ case "${1:-all}" in
     create_env "$ENV_ROOT/heartmula" "3.10"
     pip_in_env "$ENV_ROOT/heartmula" install -U pip setuptools wheel
     pip_in_env "$ENV_ROOT/heartmula" install -e "$THIRD_PARTY/HeartMuLa"
+    pip_in_env "$ENV_ROOT/heartmula" install soundfile
+    ;;
+
+  songgeneration-v2)
+    create_env "$ENV_ROOT/songgeneration-v2" "3.10"
+    # OpenAI CLIP still imports pkg_resources, which setuptools 81+ removed.
+    pip_in_env "$ENV_ROOT/songgeneration-v2" install -U pip "setuptools<81" wheel
+    pip_in_env "$ENV_ROOT/songgeneration-v2" install \
+      torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 \
+      --index-url https://download.pytorch.org/whl/cu124
+    pip_in_env "$ENV_ROOT/songgeneration-v2" install \
+      -r "$THIRD_PARTY/SongGeneration-v2/requirements.txt"
+    pip_in_env "$ENV_ROOT/songgeneration-v2" install \
+      -r "$THIRD_PARTY/SongGeneration-v2/requirements_nodeps.txt" \
+      --no-deps
+    add_python_path_entry \
+      "$ENV_ROOT/songgeneration-v2" \
+      "$THIRD_PARTY/SongGeneration-v2" \
+      "musia-songgeneration-v2"
+    if [[ "${MUSIA_INSTALL_FLASH_ATTN:-0}" == "1" ]]; then
+      pip_in_env "$ENV_ROOT/songgeneration-v2" install flash-attn --no-build-isolation
+    fi
     ;;
 
   moss-music)
@@ -104,6 +126,17 @@ case "${1:-all}" in
     pip_in_env "$ENV_ROOT/moss-music" install "nvidia-npp-cu12==12.4.1.87"
     ;;
 
+  apex-music)
+    create_env "$ENV_ROOT/apex-music" "3.10"
+    pip_in_env "$ENV_ROOT/apex-music" install -U pip setuptools wheel
+    pip_in_env "$ENV_ROOT/apex-music" install \
+      torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 \
+      --index-url https://download.pytorch.org/whl/cu124
+    pip_in_env "$ENV_ROOT/apex-music" install \
+      "transformers>=4.49,<5" accelerate soundfile librosa \
+      "numpy<2" "scipy<1.16"
+    ;;
+
   all)
     "$0" system-deps || true
     "$0" soulx
@@ -112,10 +145,16 @@ case "${1:-all}" in
     "$0" diffrhythm
     "$0" heartmula
     "$0" moss-music
+    "$0" apex-music
+    if [[ "${MUSIA_ACCEPT_SONGGENERATION_RESEARCH_LICENSE:-0}" == "1" ]]; then
+      "$0" songgeneration-v2
+    else
+      echo "Skipping research-only SongGeneration v2; set MUSIA_ACCEPT_SONGGENERATION_RESEARCH_LICENSE=1 after reviewing its license."
+    fi
     ;;
 
   *)
-    echo "Usage: $0 {system-deps|soulx|ace-step|songgen|diffrhythm|heartmula|moss-music|all}" >&2
+    echo "Usage: $0 {system-deps|soulx|ace-step|songgen|songgeneration-v2|diffrhythm|heartmula|moss-music|apex-music|all}" >&2
     exit 2
     ;;
 esac

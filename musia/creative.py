@@ -70,6 +70,36 @@ MODEL_REGISTRY: list[dict[str, Any]] = [
         "outputs": ["full-song candidates"],
     },
     {
+        "id": "levo-2-songgeneration-v2",
+        "local_path": "third_party/SongGeneration-v2",
+        "status": "installed_research_only",
+        "best_for": [
+            "frontier_full_song_research",
+            "multilingual_lyric_adherence_comparison",
+            "separate_vocal_and_bgm_generation",
+        ],
+        "quality_role": (
+            "High-quality local A/B challenger. Its current upstream license "
+            "forbids commercial and production use, so outputs must remain private."
+        ),
+        "outputs": ["research-only mixed song", "research-only vocal", "research-only bgm"],
+    },
+    {
+        "id": "moss-music-apex-quality",
+        "local_path": "third_party/MOSS-Music + third_party/APEX",
+        "status": "installed_quality_only",
+        "best_for": [
+            "blind_lyric_transcription",
+            "song_structure_review",
+            "aesthetic_candidate_ranking",
+        ],
+        "quality_role": (
+            "Independent QA evidence only. Neither model produces a song, and "
+            "their scores never replace signal checks or human listening."
+        ),
+        "outputs": ["blind lyric transcript", "music analysis", "aesthetic score JSON"],
+    },
+    {
         "id": "deepseek-openai-lyricfit",
         "local_path": "api",
         "status": "api_key_optional",

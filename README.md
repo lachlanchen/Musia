@@ -268,9 +268,13 @@ The local machine has staged heavier research backends for better vocal quality 
 
 - Strict song localization: SoulX-Singer and YingMusic-Singer-Plus.
 - Full-song alternatives: ACE-Step 1.5, YuE, DiffRhythm, SongGen, HeartMuLa.
-- Music understanding and QA: MOSS-Music.
+- Research-only full-song challenger: LeVo 2 / SongGeneration-v2-large.
+- Music understanding and QA: MOSS-Music, HeartTranscriptor, and APEX + MERT.
 
 See [`references/high-quality-vocal-backends.md`](references/high-quality-vocal-backends.md) and [`references/local-quality-backend-install-status.md`](references/local-quality-backend-install-status.md).
+For the July 2026 same-lyric ACE/HeartMuLa/LeVo benchmark, verified model
+downloads, objective audio checks, APEX ranking, and license-aware routing, see
+[`references/luoshenfu-frontier-model-research-2026-07-29.md`](references/luoshenfu-frontier-model-research-2026-07-29.md).
 For the practical control modes, including vocal-only SoulX generation, melody/旋律 generation, full production, controlled material-based generation, and licensed localization, see [`references/musia-control-and-soulx-workflow.md`](references/musia-control-and-soulx-workflow.md).
 For the local SoulX vocal-only outputs that sounded usable, see [`references/soulx-good-vocal-runs-2026-06-28.md`](references/soulx-good-vocal-runs-2026-06-28.md).
 

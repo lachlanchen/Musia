@@ -890,6 +890,40 @@ def run_worker_job(job_id: str) -> None:
 
 def setup_status() -> dict[str, Any]:
     settings = load_settings()
+    songgeneration_root = ROOT / "third_party" / "SongGeneration-v2"
+    songgeneration_assets = (
+        (
+            songgeneration_root
+            / "checkpoints"
+            / "SongGeneration-v2-large"
+            / "model.pt",
+            12_000_000_000,
+        ),
+        (songgeneration_root / "tools" / "new_auto_prompt.pt", 10_000_000),
+        (
+            songgeneration_root
+            / "ckpt"
+            / "model_septoken"
+            / "model_2.safetensors",
+            4_000_000_000,
+        ),
+        (
+            songgeneration_root
+            / "ckpt"
+            / "model_1rvq"
+            / "model_2_fixed.safetensors",
+            4_000_000_000,
+        ),
+    )
+    apex_root = ROOT / "third_party" / "APEX"
+
+    def completed_artifact(path: Path, minimum_size: int) -> bool:
+        return (
+            path.is_file()
+            and path.stat().st_size >= minimum_size
+            and not Path(f"{path}.aria2").exists()
+        )
+
     return {
         "root": str(ROOT),
         "studio_root": str(STUDIO_ROOT),
@@ -905,5 +939,18 @@ def setup_status() -> dict[str, Any]:
             "ace_step": (ROOT / "third_party" / "ACE-Step-1.5").exists(),
             "soulx_singer": (ROOT / "third_party" / "SoulX-Singer").exists(),
             "yingmusic": (ROOT / "third_party" / "YingMusic-Singer-Plus").exists(),
+            "heartmula": (ROOT / "third_party" / "HeartMuLa").exists(),
+            "songgeneration_v2": all(
+                completed_artifact(path, minimum_size)
+                for path, minimum_size in songgeneration_assets
+            ),
+            "moss_music": (ROOT / "third_party" / "MOSS-Music").exists(),
+            "apex_music_quality": (
+                completed_artifact(apex_root / "pytorch_model.bin", 3_000_000)
+                and completed_artifact(
+                    apex_root / "mert-v1-95m" / "pytorch_model.bin",
+                    300_000_000,
+                )
+            ),
         },
     }
