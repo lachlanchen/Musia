@@ -449,6 +449,44 @@ scripts/run_apex_music_quality.sh \
 APEX 与 MERT 权重都必须先用 `scripts/verify_hf_artifacts.py --sha256` 校验。
 输出用于候选排序，不得替代歌词审计、信号测量和人工听感。
 
+## 正式原创验证：《洛水照影》
+
+在模型基准完成后，又用同一质量门制作了一首生产许可清晰的原创中文候选
+《洛水照影》。作品只借鉴洛水、人神相隔、轻云回雪等公共文化意象，不复制
+乱徵《洛神》或其他现代录音的旋律、编曲、声线与具体表达。
+
+本轮以 108 秒、74 BPM、D minor 的紧凑歌词生成 12 个 ACE XL Turbo 候选。
+整曲 ASR 一度把音乐性较好的候选误判成通用片尾话术；Demucs 分离人声后，
+large-v3 与 MOSS-Music 均恢复了实际歌词。这证明高质量歌曲不能只凭混音
+轨 ASR 淘汰，正式门禁应为：
+
+```text
+整曲信号健康
+  -> APEX 粗排
+  -> Demucs 分离人声
+  -> large-v3 + MOSS 双路盲转写
+  -> 音乐优先 / 歌词优先双候选
+  -> 真人完整试听终选
+```
+
+当前保留两份统一到约 `-14 LUFS / -1.5 dBTP` 的本地试听副本：
+
+```text
+data/creative_projects/luoshui-zhaoying-20260729/selected/
+  01-luoshui-zhaoying-music-first-seed829213.mp3
+  02-luoshui-zhaoying-lyric-first-seed812401.mp3
+```
+
+音乐优先版原始 WAV 为 `ce775df6...`：APEX 音乐性 `2.82`、记忆度
+`2.88`，MOSS 判断女声、钢琴弦乐层次和副歌抬升完整；信号健康检查为
+`-12.5 LUFS`、`-0.8 dBFS` 真峰值、无削波、自然收尾。歌词优先版原始
+WAV 为 `02e3a8ba...`：分离人声 large-v3 的歌词重合度由前者的 `0.714`
+提高到 `0.782`，并恢复了完整段落结构，但 APEX 音乐性与记忆度略低。
+
+因此不能伪造一个“机器唯一最佳版”。01 是当前审美证据更强的主候选，02 是
+歌词完整性更强的保底候选；必须由真人完整听完后再进入歌词逐词校正、网站、
+封面与发布流程。详细证据保存在私有项目的 `SELECTION.md`。
+
 ## 本机状态与注意事项
 
 - 本轮代码版本固定为 ACE-Step 1.5 `6d467e4b5081`、HeartMuLa
