@@ -9,6 +9,38 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "luoshenfu-original-excerpt-preview",
+      "kind": "song",
+      "title": "洛神赋 · 原文选段",
+      "artist": "Musia",
+      "summary": "An unlisted original-text listening preview built from Cao Zhi's Luoshenfu.",
+      "manifest": "data/songs/luoshenfu-original-excerpt-preview/manifest.json",
+      "cover": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+      "visibility": "unlisted",
+      "releaseStage": "preview",
+      "category": "preview",
+      "previewLabel": "Listening Preview",
+      "previewReason": "Awaiting listener confirmation before a normal catalog release.",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "preview",
+        "unlisted",
+        "Mandarin",
+        "classical Chinese",
+        "洛神赋",
+        "曹植",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "luoshui-zhaoying-preview",
       "kind": "song",
       "title": "洛水照影 · Preview",

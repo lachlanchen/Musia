@@ -1,0 +1,2849 @@
+{
+  "schema": "fun.lazying.media.manifest.v1",
+  "version": 1,
+  "id": "luoshenfu-original-excerpt-preview",
+  "kind": "song",
+  "title": "洛神赋 · 原文选段",
+  "localizedTitles": {
+    "zh-Hans": "洛神赋 · 原文选段",
+    "en": "Luoshen Fu · Original Excerpt",
+    "ja": "洛神賦・原文抄"
+  },
+  "artist": "Musia",
+  "description": "Cao Zhi's original Luoshenfu lines carried by a new luminous, cinematic Mandarin melody.",
+  "caption": "Light cloud veils the moon; flowing wind turns the returning snow.",
+  "duration": 134.0,
+  "canonicalUrl": "https://fun.lazying.art/?preview=1#luoshenfu-original-excerpt-preview",
+  "publication": {
+    "visibility": "unlisted",
+    "stage": "preview",
+    "label": "Unlisted Preview",
+    "listed": false,
+    "note": "Direct-link listening preview; excluded from the default catalog and playback queue."
+  },
+  "share": {
+    "title": "洛神赋 · 原文选段 - Musia",
+    "description": "An original cinematic Mandarin setting of selected lines from Cao Zhi's Luoshenfu.",
+    "url": "https://fun.lazying.art/?preview=1#luoshenfu-original-excerpt-preview",
+    "image": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+    "siteName": "Fun Lazying Art"
+  },
+  "assets": {
+    "cover": {
+      "id": "cover",
+      "label": "洛神赋 original excerpt cover",
+      "role": "cover",
+      "src": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "poster": {
+      "id": "poster",
+      "label": "16:9 Poster",
+      "role": "poster",
+      "src": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+      "mime": "image/png",
+      "width": 1600,
+      "height": 900
+    },
+    "primaryAudio": {
+      "id": "luoshenfu-original-zh",
+      "label": "Original Text",
+      "selectorLabel": "中文原文",
+      "publicRoleLabel": "Preview",
+      "role": "vocal",
+      "languageCode": "zh-Hans",
+      "languageLabel": "中文",
+      "lyricSetId": "zh-vocal",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3",
+      "mime": "audio/mpeg",
+      "musical": {
+        "key": "D minor requested / Dm-centered analysis",
+        "bpm": 71.777,
+        "timeSignature": "4/4",
+        "chords": [
+          {
+            "start": 0.0,
+            "end": 2.554,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.718
+          },
+          {
+            "start": 2.554,
+            "end": 4.226,
+            "name": "D",
+            "degree": "",
+            "confidence": 0.839
+          },
+          {
+            "start": 4.226,
+            "end": 5.898,
+            "name": "G",
+            "degree": "",
+            "confidence": 0.823
+          },
+          {
+            "start": 5.898,
+            "end": 7.57,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.714
+          },
+          {
+            "start": 7.57,
+            "end": 8.382,
+            "name": "D",
+            "degree": "",
+            "confidence": 0.682
+          },
+          {
+            "start": 8.382,
+            "end": 9.218,
+            "name": "Bm",
+            "degree": "",
+            "confidence": 0.672
+          },
+          {
+            "start": 9.218,
+            "end": 10.054,
+            "name": "D",
+            "degree": "",
+            "confidence": 0.606
+          },
+          {
+            "start": 10.054,
+            "end": 10.89,
+            "name": "A",
+            "degree": "",
+            "confidence": 0.737
+          },
+          {
+            "start": 10.89,
+            "end": 11.726,
+            "name": "B",
+            "degree": "",
+            "confidence": 0.613
+          },
+          {
+            "start": 11.726,
+            "end": 12.562,
+            "name": "A",
+            "degree": "",
+            "confidence": 0.582
+          },
+          {
+            "start": 12.562,
+            "end": 13.398,
+            "name": "Eb",
+            "degree": "",
+            "confidence": 0.584
+          },
+          {
+            "start": 13.398,
+            "end": 14.234,
+            "name": "B",
+            "degree": "",
+            "confidence": 0.561
+          },
+          {
+            "start": 14.234,
+            "end": 15.07,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.575
+          },
+          {
+            "start": 15.07,
+            "end": 16.695,
+            "name": "F#m",
+            "degree": "",
+            "confidence": 0.871
+          },
+          {
+            "start": 16.695,
+            "end": 20.852,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.91
+          },
+          {
+            "start": 20.852,
+            "end": 23.359,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.959
+          },
+          {
+            "start": 23.359,
+            "end": 24.195,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.756
+          },
+          {
+            "start": 24.195,
+            "end": 25.867,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.871
+          },
+          {
+            "start": 25.867,
+            "end": 27.516,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.927
+          },
+          {
+            "start": 27.516,
+            "end": 28.328,
+            "name": "A",
+            "degree": "",
+            "confidence": 0.793
+          },
+          {
+            "start": 28.328,
+            "end": 29.187,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.841
+          },
+          {
+            "start": 29.187,
+            "end": 30.023,
+            "name": "A",
+            "degree": "",
+            "confidence": 0.909
+          },
+          {
+            "start": 30.023,
+            "end": 30.859,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.822
+          },
+          {
+            "start": 30.859,
+            "end": 34.203,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.908
+          },
+          {
+            "start": 34.203,
+            "end": 35.852,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.851
+          },
+          {
+            "start": 35.852,
+            "end": 37.523,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.893
+          },
+          {
+            "start": 37.523,
+            "end": 39.195,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.924
+          },
+          {
+            "start": 39.195,
+            "end": 40.031,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.713
+          },
+          {
+            "start": 40.031,
+            "end": 40.844,
+            "name": "Em",
+            "degree": "",
+            "confidence": 0.85
+          },
+          {
+            "start": 40.844,
+            "end": 41.68,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.954
+          },
+          {
+            "start": 41.68,
+            "end": 42.516,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.946
+          },
+          {
+            "start": 42.516,
+            "end": 44.188,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.818
+          },
+          {
+            "start": 44.188,
+            "end": 45.859,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.782
+          },
+          {
+            "start": 45.859,
+            "end": 48.344,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.937
+          },
+          {
+            "start": 48.344,
+            "end": 49.18,
+            "name": "A",
+            "degree": "",
+            "confidence": 0.666
+          },
+          {
+            "start": 49.18,
+            "end": 52.5,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.829
+          },
+          {
+            "start": 52.5,
+            "end": 53.336,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.756
+          },
+          {
+            "start": 53.336,
+            "end": 54.172,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.766
+          },
+          {
+            "start": 54.172,
+            "end": 55.844,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.779
+          },
+          {
+            "start": 55.844,
+            "end": 56.68,
+            "name": "G",
+            "degree": "",
+            "confidence": 0.756
+          },
+          {
+            "start": 56.68,
+            "end": 57.516,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.686
+          },
+          {
+            "start": 57.516,
+            "end": 59.164,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.835
+          },
+          {
+            "start": 59.164,
+            "end": 62.508,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.791
+          },
+          {
+            "start": 62.508,
+            "end": 64.946,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.745
+          },
+          {
+            "start": 64.946,
+            "end": 65.852,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.675
+          },
+          {
+            "start": 65.852,
+            "end": 66.688,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.781
+          },
+          {
+            "start": 66.688,
+            "end": 67.524,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.682
+          },
+          {
+            "start": 67.524,
+            "end": 69.172,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.809
+          },
+          {
+            "start": 69.172,
+            "end": 70.867,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.775
+          },
+          {
+            "start": 70.867,
+            "end": 72.516,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.675
+          },
+          {
+            "start": 72.516,
+            "end": 74.188,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.721
+          },
+          {
+            "start": 74.188,
+            "end": 75.836,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.717
+          },
+          {
+            "start": 75.836,
+            "end": 77.508,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.743
+          },
+          {
+            "start": 77.508,
+            "end": 78.344,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.73
+          },
+          {
+            "start": 78.344,
+            "end": 79.18,
+            "name": "A",
+            "degree": "",
+            "confidence": 0.807
+          },
+          {
+            "start": 79.18,
+            "end": 82.5,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.797
+          },
+          {
+            "start": 82.5,
+            "end": 83.336,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.838
+          },
+          {
+            "start": 83.336,
+            "end": 84.172,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.775
+          },
+          {
+            "start": 84.172,
+            "end": 85.008,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.892
+          },
+          {
+            "start": 85.008,
+            "end": 85.844,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.851
+          },
+          {
+            "start": 85.844,
+            "end": 86.68,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.907
+          },
+          {
+            "start": 86.68,
+            "end": 87.516,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.789
+          },
+          {
+            "start": 87.516,
+            "end": 89.165,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.897
+          },
+          {
+            "start": 89.165,
+            "end": 90.836,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.765
+          },
+          {
+            "start": 90.836,
+            "end": 92.508,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.805
+          },
+          {
+            "start": 92.508,
+            "end": 94.18,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.789
+          },
+          {
+            "start": 94.18,
+            "end": 95.852,
+            "name": "F",
+            "degree": "",
+            "confidence": 0.771
+          },
+          {
+            "start": 95.852,
+            "end": 97.501,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.768
+          },
+          {
+            "start": 97.501,
+            "end": 99.172,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.781
+          },
+          {
+            "start": 99.172,
+            "end": 100.008,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.644
+          },
+          {
+            "start": 100.008,
+            "end": 100.844,
+            "name": "Em",
+            "degree": "",
+            "confidence": 0.621
+          },
+          {
+            "start": 100.844,
+            "end": 101.68,
+            "name": "D",
+            "degree": "",
+            "confidence": 0.752
+          },
+          {
+            "start": 101.68,
+            "end": 102.516,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.661
+          },
+          {
+            "start": 102.516,
+            "end": 104.188,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.786
+          },
+          {
+            "start": 104.188,
+            "end": 105.86,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.754
+          },
+          {
+            "start": 105.86,
+            "end": 106.672,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.75
+          },
+          {
+            "start": 106.672,
+            "end": 107.532,
+            "name": "C",
+            "degree": "",
+            "confidence": 0.827
+          },
+          {
+            "start": 107.532,
+            "end": 109.18,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.798
+          },
+          {
+            "start": 109.18,
+            "end": 110.852,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.717
+          },
+          {
+            "start": 110.852,
+            "end": 112.524,
+            "name": "A",
+            "degree": "",
+            "confidence": 0.821
+          },
+          {
+            "start": 112.524,
+            "end": 115.914,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.78
+          },
+          {
+            "start": 115.914,
+            "end": 117.702,
+            "name": "Bb",
+            "degree": "",
+            "confidence": 0.851
+          },
+          {
+            "start": 117.702,
+            "end": 119.351,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.711
+          },
+          {
+            "start": 119.351,
+            "end": 120.14,
+            "name": "G",
+            "degree": "",
+            "confidence": 0.763
+          },
+          {
+            "start": 120.14,
+            "end": 120.953,
+            "name": "Gm",
+            "degree": "",
+            "confidence": 0.684
+          },
+          {
+            "start": 120.953,
+            "end": 123.437,
+            "name": "Am",
+            "degree": "",
+            "confidence": 0.856
+          },
+          {
+            "start": 123.437,
+            "end": 125.875,
+            "name": "E",
+            "degree": "",
+            "confidence": 0.768
+          },
+          {
+            "start": 125.875,
+            "end": 126.688,
+            "name": "C#m",
+            "degree": "",
+            "confidence": 0.621
+          },
+          {
+            "start": 126.688,
+            "end": 134.0,
+            "name": "Dm",
+            "degree": "",
+            "confidence": 0.841
+          }
+        ],
+        "beats": [
+          {
+            "index": 0,
+            "time": 2.554
+          },
+          {
+            "index": 1,
+            "time": 3.39
+          },
+          {
+            "index": 2,
+            "time": 4.226
+          },
+          {
+            "index": 3,
+            "time": 5.062
+          },
+          {
+            "index": 4,
+            "time": 5.898
+          },
+          {
+            "index": 5,
+            "time": 6.734
+          },
+          {
+            "index": 6,
+            "time": 7.57
+          },
+          {
+            "index": 7,
+            "time": 8.382
+          },
+          {
+            "index": 8,
+            "time": 9.218
+          },
+          {
+            "index": 9,
+            "time": 10.054
+          },
+          {
+            "index": 10,
+            "time": 10.89
+          },
+          {
+            "index": 11,
+            "time": 11.726
+          },
+          {
+            "index": 12,
+            "time": 12.562
+          },
+          {
+            "index": 13,
+            "time": 13.398
+          },
+          {
+            "index": 14,
+            "time": 14.234
+          },
+          {
+            "index": 15,
+            "time": 15.07
+          },
+          {
+            "index": 16,
+            "time": 15.882
+          },
+          {
+            "index": 17,
+            "time": 16.695
+          },
+          {
+            "index": 18,
+            "time": 17.508
+          },
+          {
+            "index": 19,
+            "time": 18.344
+          },
+          {
+            "index": 20,
+            "time": 19.18
+          },
+          {
+            "index": 21,
+            "time": 20.016
+          },
+          {
+            "index": 22,
+            "time": 20.852
+          },
+          {
+            "index": 23,
+            "time": 21.664
+          },
+          {
+            "index": 24,
+            "time": 22.523
+          },
+          {
+            "index": 25,
+            "time": 23.359
+          },
+          {
+            "index": 26,
+            "time": 24.195
+          },
+          {
+            "index": 27,
+            "time": 25.031
+          },
+          {
+            "index": 28,
+            "time": 25.867
+          },
+          {
+            "index": 29,
+            "time": 26.68
+          },
+          {
+            "index": 30,
+            "time": 27.516
+          },
+          {
+            "index": 31,
+            "time": 28.328
+          },
+          {
+            "index": 32,
+            "time": 29.187
+          },
+          {
+            "index": 33,
+            "time": 30.023
+          },
+          {
+            "index": 34,
+            "time": 30.859
+          },
+          {
+            "index": 35,
+            "time": 31.695
+          },
+          {
+            "index": 36,
+            "time": 32.531
+          },
+          {
+            "index": 37,
+            "time": 33.367
+          },
+          {
+            "index": 38,
+            "time": 34.203
+          },
+          {
+            "index": 39,
+            "time": 35.016
+          },
+          {
+            "index": 40,
+            "time": 35.852
+          },
+          {
+            "index": 41,
+            "time": 36.688
+          },
+          {
+            "index": 42,
+            "time": 37.523
+          },
+          {
+            "index": 43,
+            "time": 38.359
+          },
+          {
+            "index": 44,
+            "time": 39.195
+          },
+          {
+            "index": 45,
+            "time": 40.031
+          },
+          {
+            "index": 46,
+            "time": 40.844
+          },
+          {
+            "index": 47,
+            "time": 41.68
+          },
+          {
+            "index": 48,
+            "time": 42.516
+          },
+          {
+            "index": 49,
+            "time": 43.352
+          },
+          {
+            "index": 50,
+            "time": 44.188
+          },
+          {
+            "index": 51,
+            "time": 45.023
+          },
+          {
+            "index": 52,
+            "time": 45.859
+          },
+          {
+            "index": 53,
+            "time": 46.695
+          },
+          {
+            "index": 54,
+            "time": 47.508
+          },
+          {
+            "index": 55,
+            "time": 48.344
+          },
+          {
+            "index": 56,
+            "time": 49.18
+          },
+          {
+            "index": 57,
+            "time": 50.016
+          },
+          {
+            "index": 58,
+            "time": 50.852
+          },
+          {
+            "index": 59,
+            "time": 51.688
+          },
+          {
+            "index": 60,
+            "time": 52.5
+          },
+          {
+            "index": 61,
+            "time": 53.336
+          },
+          {
+            "index": 62,
+            "time": 54.172
+          },
+          {
+            "index": 63,
+            "time": 55.008
+          },
+          {
+            "index": 64,
+            "time": 55.844
+          },
+          {
+            "index": 65,
+            "time": 56.68
+          },
+          {
+            "index": 66,
+            "time": 57.516
+          },
+          {
+            "index": 67,
+            "time": 58.329
+          },
+          {
+            "index": 68,
+            "time": 59.164
+          },
+          {
+            "index": 69,
+            "time": 60.0
+          },
+          {
+            "index": 70,
+            "time": 60.836
+          },
+          {
+            "index": 71,
+            "time": 61.672
+          },
+          {
+            "index": 72,
+            "time": 62.508
+          },
+          {
+            "index": 73,
+            "time": 63.344
+          },
+          {
+            "index": 74,
+            "time": 64.18
+          },
+          {
+            "index": 75,
+            "time": 64.946
+          },
+          {
+            "index": 76,
+            "time": 65.852
+          },
+          {
+            "index": 77,
+            "time": 66.688
+          },
+          {
+            "index": 78,
+            "time": 67.524
+          },
+          {
+            "index": 79,
+            "time": 68.336
+          },
+          {
+            "index": 80,
+            "time": 69.172
+          },
+          {
+            "index": 81,
+            "time": 70.008
+          },
+          {
+            "index": 82,
+            "time": 70.867
+          },
+          {
+            "index": 83,
+            "time": 71.68
+          },
+          {
+            "index": 84,
+            "time": 72.516
+          },
+          {
+            "index": 85,
+            "time": 73.352
+          },
+          {
+            "index": 86,
+            "time": 74.188
+          },
+          {
+            "index": 87,
+            "time": 75.0
+          },
+          {
+            "index": 88,
+            "time": 75.836
+          },
+          {
+            "index": 89,
+            "time": 76.672
+          },
+          {
+            "index": 90,
+            "time": 77.508
+          },
+          {
+            "index": 91,
+            "time": 78.344
+          },
+          {
+            "index": 92,
+            "time": 79.18
+          },
+          {
+            "index": 93,
+            "time": 80.016
+          },
+          {
+            "index": 94,
+            "time": 80.852
+          },
+          {
+            "index": 95,
+            "time": 81.665
+          },
+          {
+            "index": 96,
+            "time": 82.5
+          },
+          {
+            "index": 97,
+            "time": 83.336
+          },
+          {
+            "index": 98,
+            "time": 84.172
+          },
+          {
+            "index": 99,
+            "time": 85.008
+          },
+          {
+            "index": 100,
+            "time": 85.844
+          },
+          {
+            "index": 101,
+            "time": 86.68
+          },
+          {
+            "index": 102,
+            "time": 87.516
+          },
+          {
+            "index": 103,
+            "time": 88.329
+          },
+          {
+            "index": 104,
+            "time": 89.165
+          },
+          {
+            "index": 105,
+            "time": 90.001
+          },
+          {
+            "index": 106,
+            "time": 90.836
+          },
+          {
+            "index": 107,
+            "time": 91.672
+          },
+          {
+            "index": 108,
+            "time": 92.508
+          },
+          {
+            "index": 109,
+            "time": 93.344
+          },
+          {
+            "index": 110,
+            "time": 94.18
+          },
+          {
+            "index": 111,
+            "time": 95.016
+          },
+          {
+            "index": 112,
+            "time": 95.852
+          },
+          {
+            "index": 113,
+            "time": 96.665
+          },
+          {
+            "index": 114,
+            "time": 97.501
+          },
+          {
+            "index": 115,
+            "time": 98.337
+          },
+          {
+            "index": 116,
+            "time": 99.172
+          },
+          {
+            "index": 117,
+            "time": 100.008
+          },
+          {
+            "index": 118,
+            "time": 100.844
+          },
+          {
+            "index": 119,
+            "time": 101.68
+          },
+          {
+            "index": 120,
+            "time": 102.516
+          },
+          {
+            "index": 121,
+            "time": 103.352
+          },
+          {
+            "index": 122,
+            "time": 104.188
+          },
+          {
+            "index": 123,
+            "time": 105.001
+          },
+          {
+            "index": 124,
+            "time": 105.86
+          },
+          {
+            "index": 125,
+            "time": 106.672
+          },
+          {
+            "index": 126,
+            "time": 107.532
+          },
+          {
+            "index": 127,
+            "time": 108.344
+          },
+          {
+            "index": 128,
+            "time": 109.18
+          },
+          {
+            "index": 129,
+            "time": 110.016
+          },
+          {
+            "index": 130,
+            "time": 110.852
+          },
+          {
+            "index": 131,
+            "time": 111.665
+          },
+          {
+            "index": 132,
+            "time": 112.524
+          },
+          {
+            "index": 133,
+            "time": 113.337
+          },
+          {
+            "index": 134,
+            "time": 114.196
+          },
+          {
+            "index": 135,
+            "time": 115.008
+          },
+          {
+            "index": 136,
+            "time": 115.914
+          },
+          {
+            "index": 137,
+            "time": 116.82
+          },
+          {
+            "index": 138,
+            "time": 117.702
+          },
+          {
+            "index": 139,
+            "time": 118.538
+          },
+          {
+            "index": 140,
+            "time": 119.351
+          },
+          {
+            "index": 141,
+            "time": 120.14
+          },
+          {
+            "index": 142,
+            "time": 120.953
+          },
+          {
+            "index": 143,
+            "time": 121.789
+          },
+          {
+            "index": 144,
+            "time": 122.625
+          },
+          {
+            "index": 145,
+            "time": 123.437
+          },
+          {
+            "index": 146,
+            "time": 124.25
+          },
+          {
+            "index": 147,
+            "time": 125.063
+          },
+          {
+            "index": 148,
+            "time": 125.875
+          },
+          {
+            "index": 149,
+            "time": 126.688
+          }
+        ],
+        "chordSource": "Musia analysis-grade chord inference from the selected render",
+        "beatSource": "Musia beat analysis from the selected render"
+      }
+    },
+    "alternateAudio": []
+  },
+  "musical": {
+    "key": "D minor requested / Dm-centered analysis",
+    "bpm": 71.777,
+    "timeSignature": "4/4",
+    "chords": [
+      {
+        "start": 0.0,
+        "end": 2.554,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.718
+      },
+      {
+        "start": 2.554,
+        "end": 4.226,
+        "name": "D",
+        "degree": "",
+        "confidence": 0.839
+      },
+      {
+        "start": 4.226,
+        "end": 5.898,
+        "name": "G",
+        "degree": "",
+        "confidence": 0.823
+      },
+      {
+        "start": 5.898,
+        "end": 7.57,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.714
+      },
+      {
+        "start": 7.57,
+        "end": 8.382,
+        "name": "D",
+        "degree": "",
+        "confidence": 0.682
+      },
+      {
+        "start": 8.382,
+        "end": 9.218,
+        "name": "Bm",
+        "degree": "",
+        "confidence": 0.672
+      },
+      {
+        "start": 9.218,
+        "end": 10.054,
+        "name": "D",
+        "degree": "",
+        "confidence": 0.606
+      },
+      {
+        "start": 10.054,
+        "end": 10.89,
+        "name": "A",
+        "degree": "",
+        "confidence": 0.737
+      },
+      {
+        "start": 10.89,
+        "end": 11.726,
+        "name": "B",
+        "degree": "",
+        "confidence": 0.613
+      },
+      {
+        "start": 11.726,
+        "end": 12.562,
+        "name": "A",
+        "degree": "",
+        "confidence": 0.582
+      },
+      {
+        "start": 12.562,
+        "end": 13.398,
+        "name": "Eb",
+        "degree": "",
+        "confidence": 0.584
+      },
+      {
+        "start": 13.398,
+        "end": 14.234,
+        "name": "B",
+        "degree": "",
+        "confidence": 0.561
+      },
+      {
+        "start": 14.234,
+        "end": 15.07,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.575
+      },
+      {
+        "start": 15.07,
+        "end": 16.695,
+        "name": "F#m",
+        "degree": "",
+        "confidence": 0.871
+      },
+      {
+        "start": 16.695,
+        "end": 20.852,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.91
+      },
+      {
+        "start": 20.852,
+        "end": 23.359,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.959
+      },
+      {
+        "start": 23.359,
+        "end": 24.195,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.756
+      },
+      {
+        "start": 24.195,
+        "end": 25.867,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.871
+      },
+      {
+        "start": 25.867,
+        "end": 27.516,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.927
+      },
+      {
+        "start": 27.516,
+        "end": 28.328,
+        "name": "A",
+        "degree": "",
+        "confidence": 0.793
+      },
+      {
+        "start": 28.328,
+        "end": 29.187,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.841
+      },
+      {
+        "start": 29.187,
+        "end": 30.023,
+        "name": "A",
+        "degree": "",
+        "confidence": 0.909
+      },
+      {
+        "start": 30.023,
+        "end": 30.859,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.822
+      },
+      {
+        "start": 30.859,
+        "end": 34.203,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.908
+      },
+      {
+        "start": 34.203,
+        "end": 35.852,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.851
+      },
+      {
+        "start": 35.852,
+        "end": 37.523,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.893
+      },
+      {
+        "start": 37.523,
+        "end": 39.195,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.924
+      },
+      {
+        "start": 39.195,
+        "end": 40.031,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.713
+      },
+      {
+        "start": 40.031,
+        "end": 40.844,
+        "name": "Em",
+        "degree": "",
+        "confidence": 0.85
+      },
+      {
+        "start": 40.844,
+        "end": 41.68,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.954
+      },
+      {
+        "start": 41.68,
+        "end": 42.516,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.946
+      },
+      {
+        "start": 42.516,
+        "end": 44.188,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.818
+      },
+      {
+        "start": 44.188,
+        "end": 45.859,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.782
+      },
+      {
+        "start": 45.859,
+        "end": 48.344,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.937
+      },
+      {
+        "start": 48.344,
+        "end": 49.18,
+        "name": "A",
+        "degree": "",
+        "confidence": 0.666
+      },
+      {
+        "start": 49.18,
+        "end": 52.5,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.829
+      },
+      {
+        "start": 52.5,
+        "end": 53.336,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.756
+      },
+      {
+        "start": 53.336,
+        "end": 54.172,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.766
+      },
+      {
+        "start": 54.172,
+        "end": 55.844,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.779
+      },
+      {
+        "start": 55.844,
+        "end": 56.68,
+        "name": "G",
+        "degree": "",
+        "confidence": 0.756
+      },
+      {
+        "start": 56.68,
+        "end": 57.516,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.686
+      },
+      {
+        "start": 57.516,
+        "end": 59.164,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.835
+      },
+      {
+        "start": 59.164,
+        "end": 62.508,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.791
+      },
+      {
+        "start": 62.508,
+        "end": 64.946,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.745
+      },
+      {
+        "start": 64.946,
+        "end": 65.852,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.675
+      },
+      {
+        "start": 65.852,
+        "end": 66.688,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.781
+      },
+      {
+        "start": 66.688,
+        "end": 67.524,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.682
+      },
+      {
+        "start": 67.524,
+        "end": 69.172,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.809
+      },
+      {
+        "start": 69.172,
+        "end": 70.867,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.775
+      },
+      {
+        "start": 70.867,
+        "end": 72.516,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.675
+      },
+      {
+        "start": 72.516,
+        "end": 74.188,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.721
+      },
+      {
+        "start": 74.188,
+        "end": 75.836,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.717
+      },
+      {
+        "start": 75.836,
+        "end": 77.508,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.743
+      },
+      {
+        "start": 77.508,
+        "end": 78.344,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.73
+      },
+      {
+        "start": 78.344,
+        "end": 79.18,
+        "name": "A",
+        "degree": "",
+        "confidence": 0.807
+      },
+      {
+        "start": 79.18,
+        "end": 82.5,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.797
+      },
+      {
+        "start": 82.5,
+        "end": 83.336,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.838
+      },
+      {
+        "start": 83.336,
+        "end": 84.172,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.775
+      },
+      {
+        "start": 84.172,
+        "end": 85.008,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.892
+      },
+      {
+        "start": 85.008,
+        "end": 85.844,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.851
+      },
+      {
+        "start": 85.844,
+        "end": 86.68,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.907
+      },
+      {
+        "start": 86.68,
+        "end": 87.516,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.789
+      },
+      {
+        "start": 87.516,
+        "end": 89.165,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.897
+      },
+      {
+        "start": 89.165,
+        "end": 90.836,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.765
+      },
+      {
+        "start": 90.836,
+        "end": 92.508,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.805
+      },
+      {
+        "start": 92.508,
+        "end": 94.18,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.789
+      },
+      {
+        "start": 94.18,
+        "end": 95.852,
+        "name": "F",
+        "degree": "",
+        "confidence": 0.771
+      },
+      {
+        "start": 95.852,
+        "end": 97.501,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.768
+      },
+      {
+        "start": 97.501,
+        "end": 99.172,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.781
+      },
+      {
+        "start": 99.172,
+        "end": 100.008,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.644
+      },
+      {
+        "start": 100.008,
+        "end": 100.844,
+        "name": "Em",
+        "degree": "",
+        "confidence": 0.621
+      },
+      {
+        "start": 100.844,
+        "end": 101.68,
+        "name": "D",
+        "degree": "",
+        "confidence": 0.752
+      },
+      {
+        "start": 101.68,
+        "end": 102.516,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.661
+      },
+      {
+        "start": 102.516,
+        "end": 104.188,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.786
+      },
+      {
+        "start": 104.188,
+        "end": 105.86,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.754
+      },
+      {
+        "start": 105.86,
+        "end": 106.672,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.75
+      },
+      {
+        "start": 106.672,
+        "end": 107.532,
+        "name": "C",
+        "degree": "",
+        "confidence": 0.827
+      },
+      {
+        "start": 107.532,
+        "end": 109.18,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.798
+      },
+      {
+        "start": 109.18,
+        "end": 110.852,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.717
+      },
+      {
+        "start": 110.852,
+        "end": 112.524,
+        "name": "A",
+        "degree": "",
+        "confidence": 0.821
+      },
+      {
+        "start": 112.524,
+        "end": 115.914,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.78
+      },
+      {
+        "start": 115.914,
+        "end": 117.702,
+        "name": "Bb",
+        "degree": "",
+        "confidence": 0.851
+      },
+      {
+        "start": 117.702,
+        "end": 119.351,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.711
+      },
+      {
+        "start": 119.351,
+        "end": 120.14,
+        "name": "G",
+        "degree": "",
+        "confidence": 0.763
+      },
+      {
+        "start": 120.14,
+        "end": 120.953,
+        "name": "Gm",
+        "degree": "",
+        "confidence": 0.684
+      },
+      {
+        "start": 120.953,
+        "end": 123.437,
+        "name": "Am",
+        "degree": "",
+        "confidence": 0.856
+      },
+      {
+        "start": 123.437,
+        "end": 125.875,
+        "name": "E",
+        "degree": "",
+        "confidence": 0.768
+      },
+      {
+        "start": 125.875,
+        "end": 126.688,
+        "name": "C#m",
+        "degree": "",
+        "confidence": 0.621
+      },
+      {
+        "start": 126.688,
+        "end": 134.0,
+        "name": "Dm",
+        "degree": "",
+        "confidence": 0.841
+      }
+    ],
+    "beats": [
+      {
+        "index": 0,
+        "time": 2.554
+      },
+      {
+        "index": 1,
+        "time": 3.39
+      },
+      {
+        "index": 2,
+        "time": 4.226
+      },
+      {
+        "index": 3,
+        "time": 5.062
+      },
+      {
+        "index": 4,
+        "time": 5.898
+      },
+      {
+        "index": 5,
+        "time": 6.734
+      },
+      {
+        "index": 6,
+        "time": 7.57
+      },
+      {
+        "index": 7,
+        "time": 8.382
+      },
+      {
+        "index": 8,
+        "time": 9.218
+      },
+      {
+        "index": 9,
+        "time": 10.054
+      },
+      {
+        "index": 10,
+        "time": 10.89
+      },
+      {
+        "index": 11,
+        "time": 11.726
+      },
+      {
+        "index": 12,
+        "time": 12.562
+      },
+      {
+        "index": 13,
+        "time": 13.398
+      },
+      {
+        "index": 14,
+        "time": 14.234
+      },
+      {
+        "index": 15,
+        "time": 15.07
+      },
+      {
+        "index": 16,
+        "time": 15.882
+      },
+      {
+        "index": 17,
+        "time": 16.695
+      },
+      {
+        "index": 18,
+        "time": 17.508
+      },
+      {
+        "index": 19,
+        "time": 18.344
+      },
+      {
+        "index": 20,
+        "time": 19.18
+      },
+      {
+        "index": 21,
+        "time": 20.016
+      },
+      {
+        "index": 22,
+        "time": 20.852
+      },
+      {
+        "index": 23,
+        "time": 21.664
+      },
+      {
+        "index": 24,
+        "time": 22.523
+      },
+      {
+        "index": 25,
+        "time": 23.359
+      },
+      {
+        "index": 26,
+        "time": 24.195
+      },
+      {
+        "index": 27,
+        "time": 25.031
+      },
+      {
+        "index": 28,
+        "time": 25.867
+      },
+      {
+        "index": 29,
+        "time": 26.68
+      },
+      {
+        "index": 30,
+        "time": 27.516
+      },
+      {
+        "index": 31,
+        "time": 28.328
+      },
+      {
+        "index": 32,
+        "time": 29.187
+      },
+      {
+        "index": 33,
+        "time": 30.023
+      },
+      {
+        "index": 34,
+        "time": 30.859
+      },
+      {
+        "index": 35,
+        "time": 31.695
+      },
+      {
+        "index": 36,
+        "time": 32.531
+      },
+      {
+        "index": 37,
+        "time": 33.367
+      },
+      {
+        "index": 38,
+        "time": 34.203
+      },
+      {
+        "index": 39,
+        "time": 35.016
+      },
+      {
+        "index": 40,
+        "time": 35.852
+      },
+      {
+        "index": 41,
+        "time": 36.688
+      },
+      {
+        "index": 42,
+        "time": 37.523
+      },
+      {
+        "index": 43,
+        "time": 38.359
+      },
+      {
+        "index": 44,
+        "time": 39.195
+      },
+      {
+        "index": 45,
+        "time": 40.031
+      },
+      {
+        "index": 46,
+        "time": 40.844
+      },
+      {
+        "index": 47,
+        "time": 41.68
+      },
+      {
+        "index": 48,
+        "time": 42.516
+      },
+      {
+        "index": 49,
+        "time": 43.352
+      },
+      {
+        "index": 50,
+        "time": 44.188
+      },
+      {
+        "index": 51,
+        "time": 45.023
+      },
+      {
+        "index": 52,
+        "time": 45.859
+      },
+      {
+        "index": 53,
+        "time": 46.695
+      },
+      {
+        "index": 54,
+        "time": 47.508
+      },
+      {
+        "index": 55,
+        "time": 48.344
+      },
+      {
+        "index": 56,
+        "time": 49.18
+      },
+      {
+        "index": 57,
+        "time": 50.016
+      },
+      {
+        "index": 58,
+        "time": 50.852
+      },
+      {
+        "index": 59,
+        "time": 51.688
+      },
+      {
+        "index": 60,
+        "time": 52.5
+      },
+      {
+        "index": 61,
+        "time": 53.336
+      },
+      {
+        "index": 62,
+        "time": 54.172
+      },
+      {
+        "index": 63,
+        "time": 55.008
+      },
+      {
+        "index": 64,
+        "time": 55.844
+      },
+      {
+        "index": 65,
+        "time": 56.68
+      },
+      {
+        "index": 66,
+        "time": 57.516
+      },
+      {
+        "index": 67,
+        "time": 58.329
+      },
+      {
+        "index": 68,
+        "time": 59.164
+      },
+      {
+        "index": 69,
+        "time": 60.0
+      },
+      {
+        "index": 70,
+        "time": 60.836
+      },
+      {
+        "index": 71,
+        "time": 61.672
+      },
+      {
+        "index": 72,
+        "time": 62.508
+      },
+      {
+        "index": 73,
+        "time": 63.344
+      },
+      {
+        "index": 74,
+        "time": 64.18
+      },
+      {
+        "index": 75,
+        "time": 64.946
+      },
+      {
+        "index": 76,
+        "time": 65.852
+      },
+      {
+        "index": 77,
+        "time": 66.688
+      },
+      {
+        "index": 78,
+        "time": 67.524
+      },
+      {
+        "index": 79,
+        "time": 68.336
+      },
+      {
+        "index": 80,
+        "time": 69.172
+      },
+      {
+        "index": 81,
+        "time": 70.008
+      },
+      {
+        "index": 82,
+        "time": 70.867
+      },
+      {
+        "index": 83,
+        "time": 71.68
+      },
+      {
+        "index": 84,
+        "time": 72.516
+      },
+      {
+        "index": 85,
+        "time": 73.352
+      },
+      {
+        "index": 86,
+        "time": 74.188
+      },
+      {
+        "index": 87,
+        "time": 75.0
+      },
+      {
+        "index": 88,
+        "time": 75.836
+      },
+      {
+        "index": 89,
+        "time": 76.672
+      },
+      {
+        "index": 90,
+        "time": 77.508
+      },
+      {
+        "index": 91,
+        "time": 78.344
+      },
+      {
+        "index": 92,
+        "time": 79.18
+      },
+      {
+        "index": 93,
+        "time": 80.016
+      },
+      {
+        "index": 94,
+        "time": 80.852
+      },
+      {
+        "index": 95,
+        "time": 81.665
+      },
+      {
+        "index": 96,
+        "time": 82.5
+      },
+      {
+        "index": 97,
+        "time": 83.336
+      },
+      {
+        "index": 98,
+        "time": 84.172
+      },
+      {
+        "index": 99,
+        "time": 85.008
+      },
+      {
+        "index": 100,
+        "time": 85.844
+      },
+      {
+        "index": 101,
+        "time": 86.68
+      },
+      {
+        "index": 102,
+        "time": 87.516
+      },
+      {
+        "index": 103,
+        "time": 88.329
+      },
+      {
+        "index": 104,
+        "time": 89.165
+      },
+      {
+        "index": 105,
+        "time": 90.001
+      },
+      {
+        "index": 106,
+        "time": 90.836
+      },
+      {
+        "index": 107,
+        "time": 91.672
+      },
+      {
+        "index": 108,
+        "time": 92.508
+      },
+      {
+        "index": 109,
+        "time": 93.344
+      },
+      {
+        "index": 110,
+        "time": 94.18
+      },
+      {
+        "index": 111,
+        "time": 95.016
+      },
+      {
+        "index": 112,
+        "time": 95.852
+      },
+      {
+        "index": 113,
+        "time": 96.665
+      },
+      {
+        "index": 114,
+        "time": 97.501
+      },
+      {
+        "index": 115,
+        "time": 98.337
+      },
+      {
+        "index": 116,
+        "time": 99.172
+      },
+      {
+        "index": 117,
+        "time": 100.008
+      },
+      {
+        "index": 118,
+        "time": 100.844
+      },
+      {
+        "index": 119,
+        "time": 101.68
+      },
+      {
+        "index": 120,
+        "time": 102.516
+      },
+      {
+        "index": 121,
+        "time": 103.352
+      },
+      {
+        "index": 122,
+        "time": 104.188
+      },
+      {
+        "index": 123,
+        "time": 105.001
+      },
+      {
+        "index": 124,
+        "time": 105.86
+      },
+      {
+        "index": 125,
+        "time": 106.672
+      },
+      {
+        "index": 126,
+        "time": 107.532
+      },
+      {
+        "index": 127,
+        "time": 108.344
+      },
+      {
+        "index": 128,
+        "time": 109.18
+      },
+      {
+        "index": 129,
+        "time": 110.016
+      },
+      {
+        "index": 130,
+        "time": 110.852
+      },
+      {
+        "index": 131,
+        "time": 111.665
+      },
+      {
+        "index": 132,
+        "time": 112.524
+      },
+      {
+        "index": 133,
+        "time": 113.337
+      },
+      {
+        "index": 134,
+        "time": 114.196
+      },
+      {
+        "index": 135,
+        "time": 115.008
+      },
+      {
+        "index": 136,
+        "time": 115.914
+      },
+      {
+        "index": 137,
+        "time": 116.82
+      },
+      {
+        "index": 138,
+        "time": 117.702
+      },
+      {
+        "index": 139,
+        "time": 118.538
+      },
+      {
+        "index": 140,
+        "time": 119.351
+      },
+      {
+        "index": 141,
+        "time": 120.14
+      },
+      {
+        "index": 142,
+        "time": 120.953
+      },
+      {
+        "index": 143,
+        "time": 121.789
+      },
+      {
+        "index": 144,
+        "time": 122.625
+      },
+      {
+        "index": 145,
+        "time": 123.437
+      },
+      {
+        "index": 146,
+        "time": 124.25
+      },
+      {
+        "index": 147,
+        "time": 125.063
+      },
+      {
+        "index": 148,
+        "time": 125.875
+      },
+      {
+        "index": 149,
+        "time": 126.688
+      }
+    ],
+    "chordSource": "Musia analysis-grade chord inference from the selected render",
+    "beatSource": "Musia beat analysis from the selected render"
+  },
+  "textTracks": [],
+  "lyricSets": [
+    {
+      "id": "zh-vocal",
+      "label": "Original Text",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "active-vocal",
+            "pinyin",
+            "word-highlight"
+          ],
+          "path": "lyrics/zh-vocal/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation",
+            "rough-highlight"
+          ],
+          "path": "lyrics/zh-vocal/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "translation",
+            "furigana",
+            "rough-highlight"
+          ],
+          "path": "lyrics/zh-vocal/ja.json"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "unit": "seconds",
+    "lines": [
+      {
+        "id": "l01",
+        "start": 14.84,
+        "end": 17.92,
+        "text": "秾纤得衷"
+      },
+      {
+        "id": "l02",
+        "start": 17.92,
+        "end": 21.16,
+        "text": "修短合度"
+      },
+      {
+        "id": "l03",
+        "start": 21.16,
+        "end": 23.49,
+        "text": "肩若削成"
+      },
+      {
+        "id": "l04",
+        "start": 23.49,
+        "end": 25.82,
+        "text": "腰如约素"
+      },
+      {
+        "id": "l05",
+        "start": 25.82,
+        "end": 27.49,
+        "text": "延颈秀项"
+      },
+      {
+        "id": "l06",
+        "start": 27.49,
+        "end": 29.16,
+        "text": "皓质呈露"
+      },
+      {
+        "id": "l07",
+        "start": 29.82,
+        "end": 31.18,
+        "text": "飘忽若神"
+      },
+      {
+        "id": "l08",
+        "start": 31.18,
+        "end": 32.54,
+        "text": "体迅飞凫"
+      },
+      {
+        "id": "l09",
+        "start": 32.54,
+        "end": 34.24,
+        "text": "云髻峨峨"
+      },
+      {
+        "id": "l10",
+        "start": 34.24,
+        "end": 35.94,
+        "text": "修眉联娟"
+      },
+      {
+        "id": "l11",
+        "start": 35.94,
+        "end": 37.62,
+        "text": "丹唇外朗"
+      },
+      {
+        "id": "l12",
+        "start": 37.62,
+        "end": 39.3,
+        "text": "皓齿内鲜"
+      },
+      {
+        "id": "l13",
+        "start": 39.3,
+        "end": 40.96,
+        "text": "明眸善睐"
+      },
+      {
+        "id": "l14",
+        "start": 40.96,
+        "end": 42.62,
+        "text": "靥辅承权"
+      },
+      {
+        "id": "l15",
+        "start": 42.62,
+        "end": 44.62,
+        "text": "瑰姿艳逸"
+      },
+      {
+        "id": "l16",
+        "start": 44.62,
+        "end": 46.62,
+        "text": "仪静体闲"
+      },
+      {
+        "id": "l17",
+        "start": 47.92,
+        "end": 50.35,
+        "text": "翩若惊鸿"
+      },
+      {
+        "id": "l18",
+        "start": 50.35,
+        "end": 52.8,
+        "text": "婉若游龙"
+      },
+      {
+        "id": "l19",
+        "start": 52.8,
+        "end": 56.02,
+        "text": "荣曜秋菊"
+      },
+      {
+        "id": "l20",
+        "start": 56.02,
+        "end": 59.24,
+        "text": "华茂春松"
+      },
+      {
+        "id": "l21",
+        "start": 59.8,
+        "end": 67.6,
+        "text": "髣髴兮若轻云之蔽月"
+      },
+      {
+        "id": "l22",
+        "start": 67.6,
+        "end": 71.0,
+        "text": "飘飖兮若流风之回雪"
+      },
+      {
+        "id": "l23",
+        "start": 71.0,
+        "end": 72.85,
+        "text": "翩若惊鸿"
+      },
+      {
+        "id": "l24",
+        "start": 72.85,
+        "end": 74.7,
+        "text": "婉若游龙"
+      },
+      {
+        "id": "l25",
+        "start": 74.7,
+        "end": 76.96,
+        "text": "荣曜秋菊"
+      },
+      {
+        "id": "l26",
+        "start": 76.96,
+        "end": 79.22,
+        "text": "华茂春松"
+      },
+      {
+        "id": "l27",
+        "start": 81.38,
+        "end": 84.4,
+        "text": "披罗衣之璀粲兮"
+      },
+      {
+        "id": "l28",
+        "start": 84.4,
+        "end": 87.56,
+        "text": "珥瑶碧之华琚"
+      },
+      {
+        "id": "l29",
+        "start": 87.56,
+        "end": 89.58,
+        "text": "戴金翠之首饰"
+      },
+      {
+        "id": "l30",
+        "start": 89.58,
+        "end": 91.54,
+        "text": "缀明珠以耀躯"
+      },
+      {
+        "id": "l31",
+        "start": 91.54,
+        "end": 93.44,
+        "text": "践远游之文履"
+      },
+      {
+        "id": "l32",
+        "start": 93.44,
+        "end": 95.06,
+        "text": "曳雾绡之轻裾"
+      },
+      {
+        "id": "l33",
+        "start": 95.06,
+        "end": 96.36,
+        "text": "芳泽无加"
+      },
+      {
+        "id": "l34",
+        "start": 96.36,
+        "end": 99.56,
+        "text": "铅华弗御"
+      },
+      {
+        "id": "l35",
+        "start": 100.52,
+        "end": 103.22,
+        "text": "翩若惊鸿"
+      },
+      {
+        "id": "l36",
+        "start": 103.22,
+        "end": 106.04,
+        "text": "婉若游龙"
+      },
+      {
+        "id": "l37",
+        "start": 106.04,
+        "end": 109.82,
+        "text": "荣曜秋菊"
+      },
+      {
+        "id": "l38",
+        "start": 109.82,
+        "end": 113.6,
+        "text": "华茂春松"
+      },
+      {
+        "id": "l39",
+        "start": 113.6,
+        "end": 117.82,
+        "text": "髣髴兮若轻云之蔽月"
+      },
+      {
+        "id": "l40",
+        "start": 117.82,
+        "end": 123.58,
+        "text": "飘飖兮若流风之回雪"
+      }
+    ]
+  },
+  "playback": {
+    "defaultMode": "off"
+  },
+  "provenance": {
+    "createdBy": "Musia",
+    "generationProject": "data/creative_projects/luoshenfu-original-excerpt-preview-20260729",
+    "audioSource": "ACE-Step 1.5 XL Turbo, exact-source sweep, seed 729403.",
+    "analysisRun": "data/creative_projects/luoshenfu-original-excerpt-preview-20260729/analysis/source-seed729403",
+    "sourceText": "Cao Zhi, 洛神赋; selected public-domain original lines.",
+    "quality": {
+      "gate": "unlisted-human-listening-preview",
+      "candidateCount": 10,
+      "health": "pass",
+      "apex": {
+        "coherence": 2.915,
+        "musicality": 2.8,
+        "memorability": 2.839,
+        "clarity": 2.666,
+        "naturalness": 2.571
+      },
+      "note": "Selected over seven other XL Turbo candidates and two rejected XL SFT challengers after signal health, APEX, separated-vocal large-v3, no-VAD, and MOSS-Music review."
+    },
+    "lyricCorrection": "Every planned source line is accounted for. Timing combines large-v3 no-VAD anchors with MOSS-Music phrase boundaries; source-close recognition errors retain the original poem.",
+    "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/call_3TfPoLAlsEjwQn2r9DJ11qDM.png",
+    "coverPrompt": "Luoshui river through a luminous jade-and-silver celestial megastructure, light cloud veiling the moon, returning snow, and one small original robed figure crossing the water; no text.",
+    "publicAudio": "luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3"
+  }
+}
