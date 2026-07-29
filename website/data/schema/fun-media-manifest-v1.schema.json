@@ -16,6 +16,17 @@
     "caption": {"type": "string"},
     "duration": {"type": "number", "exclusiveMinimum": 0},
     "canonicalUrl": {"type": "string"},
+    "publication": {
+      "type": "object",
+      "properties": {
+        "visibility": {"enum": ["public", "unlisted", "hidden"]},
+        "stage": {"enum": ["published", "preview", "legacy", "draft"]},
+        "label": {"type": "string"},
+        "listed": {"type": "boolean"},
+        "note": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
     "share": {
       "type": "object",
       "properties": {

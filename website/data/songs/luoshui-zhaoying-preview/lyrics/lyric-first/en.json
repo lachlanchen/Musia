@@ -1,0 +1,1383 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "luoshui-zhaoying-preview",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 13.3,
+      "end": 16.26,
+      "text": "Dawn lights the Luoshui.",
+      "singableText": "Dawn lights the Luoshui.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Dawn",
+          "start": 13.3,
+          "end": 13.892
+        },
+        {
+          "text": "lights",
+          "start": 13.892,
+          "end": 14.484
+        },
+        {
+          "text": "the",
+          "start": 14.484,
+          "end": 15.076
+        },
+        {
+          "text": "Luoshui",
+          "start": 15.076,
+          "end": 15.668
+        },
+        {
+          "text": ".",
+          "start": 15.668,
+          "end": 16.26
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 17.28,
+      "end": 19.5,
+      "text": "The wind stirs the finest dust.",
+      "singableText": "The wind stirs the finest dust.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 17.28,
+          "end": 17.597
+        },
+        {
+          "text": "wind",
+          "start": 17.597,
+          "end": 17.914
+        },
+        {
+          "text": "stirs",
+          "start": 17.914,
+          "end": 18.231
+        },
+        {
+          "text": "the",
+          "start": 18.231,
+          "end": 18.549
+        },
+        {
+          "text": "finest",
+          "start": 18.549,
+          "end": 18.866
+        },
+        {
+          "text": "dust",
+          "start": 18.866,
+          "end": 19.183
+        },
+        {
+          "text": ".",
+          "start": 19.183,
+          "end": 19.5
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 20.68,
+      "end": 22.46,
+      "text": "A thousand veils of mist lie between us.",
+      "singableText": "A thousand veils of mist lie between us.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 20.68,
+          "end": 20.878
+        },
+        {
+          "text": "thousand",
+          "start": 20.878,
+          "end": 21.076
+        },
+        {
+          "text": "veils",
+          "start": 21.076,
+          "end": 21.273
+        },
+        {
+          "text": "of",
+          "start": 21.273,
+          "end": 21.471
+        },
+        {
+          "text": "mist",
+          "start": 21.471,
+          "end": 21.669
+        },
+        {
+          "text": "lie",
+          "start": 21.669,
+          "end": 21.867
+        },
+        {
+          "text": "between",
+          "start": 21.867,
+          "end": 22.064
+        },
+        {
+          "text": "us",
+          "start": 22.064,
+          "end": 22.262
+        },
+        {
+          "text": ".",
+          "start": 22.262,
+          "end": 22.46
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 22.46,
+      "end": 25.5,
+      "text": "I see you turn around.",
+      "singableText": "I see you turn around.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 22.46,
+          "end": 22.967
+        },
+        {
+          "text": "see",
+          "start": 22.967,
+          "end": 23.473
+        },
+        {
+          "text": "you",
+          "start": 23.473,
+          "end": 23.98
+        },
+        {
+          "text": "turn",
+          "start": 23.98,
+          "end": 24.487
+        },
+        {
+          "text": "around",
+          "start": 24.487,
+          "end": 24.993
+        },
+        {
+          "text": ".",
+          "start": 24.993,
+          "end": 25.5
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 25.5,
+      "end": 29.08,
+      "text": "Clouds veil a single moon.",
+      "singableText": "Clouds veil a single moon.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Clouds",
+          "start": 25.5,
+          "end": 26.097
+        },
+        {
+          "text": "veil",
+          "start": 26.097,
+          "end": 26.693
+        },
+        {
+          "text": "a",
+          "start": 26.693,
+          "end": 27.29
+        },
+        {
+          "text": "single",
+          "start": 27.29,
+          "end": 27.887
+        },
+        {
+          "text": "moon",
+          "start": 27.887,
+          "end": 28.483
+        },
+        {
+          "text": ".",
+          "start": 28.483,
+          "end": 29.08
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 29.08,
+      "end": 31.78,
+      "text": "Snow falls into a season of spring.",
+      "singableText": "Snow falls into a season of spring.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Snow",
+          "start": 29.08,
+          "end": 29.417
+        },
+        {
+          "text": "falls",
+          "start": 29.417,
+          "end": 29.755
+        },
+        {
+          "text": "into",
+          "start": 29.755,
+          "end": 30.093
+        },
+        {
+          "text": "a",
+          "start": 30.093,
+          "end": 30.43
+        },
+        {
+          "text": "season",
+          "start": 30.43,
+          "end": 30.767
+        },
+        {
+          "text": "of",
+          "start": 30.767,
+          "end": 31.105
+        },
+        {
+          "text": "spring",
+          "start": 31.105,
+          "end": 31.443
+        },
+        {
+          "text": ".",
+          "start": 31.443,
+          "end": 31.78
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 31.78,
+      "end": 35.88,
+      "text": "You emerge from the shimmering water.",
+      "singableText": "You emerge from the shimmering water.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 31.78,
+          "end": 32.366
+        },
+        {
+          "text": "emerge",
+          "start": 32.366,
+          "end": 32.951
+        },
+        {
+          "text": "from",
+          "start": 32.951,
+          "end": 33.537
+        },
+        {
+          "text": "the",
+          "start": 33.537,
+          "end": 34.123
+        },
+        {
+          "text": "shimmering",
+          "start": 34.123,
+          "end": 34.709
+        },
+        {
+          "text": "water",
+          "start": 34.709,
+          "end": 35.294
+        },
+        {
+          "text": ".",
+          "start": 35.294,
+          "end": 35.88
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 35.88,
+      "end": 38.62,
+      "text": "Step by step, you draw near.",
+      "singableText": "Step by step, you draw near.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Step",
+          "start": 35.88,
+          "end": 36.223
+        },
+        {
+          "text": "by",
+          "start": 36.223,
+          "end": 36.565
+        },
+        {
+          "text": "step",
+          "start": 36.565,
+          "end": 36.907
+        },
+        {
+          "text": ",",
+          "start": 36.907,
+          "end": 37.25
+        },
+        {
+          "text": "you",
+          "start": 37.25,
+          "end": 37.593
+        },
+        {
+          "text": "draw",
+          "start": 37.593,
+          "end": 37.935
+        },
+        {
+          "text": "near",
+          "start": 37.935,
+          "end": 38.277
+        },
+        {
+          "text": ".",
+          "start": 38.277,
+          "end": 38.62
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 42.18,
+      "end": 44.34,
+      "text": "You come across the waves.",
+      "singableText": "You come across the waves.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 42.18,
+          "end": 42.54
+        },
+        {
+          "text": "come",
+          "start": 42.54,
+          "end": 42.9
+        },
+        {
+          "text": "across",
+          "start": 42.9,
+          "end": 43.26
+        },
+        {
+          "text": "the",
+          "start": 43.26,
+          "end": 43.62
+        },
+        {
+          "text": "waves",
+          "start": 43.62,
+          "end": 43.98
+        },
+        {
+          "text": ".",
+          "start": 43.98,
+          "end": 44.34
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 44.34,
+      "end": 45.88,
+      "text": "Then leave with the wind.",
+      "singableText": "Then leave with the wind.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Then",
+          "start": 44.34,
+          "end": 44.597
+        },
+        {
+          "text": "leave",
+          "start": 44.597,
+          "end": 44.853
+        },
+        {
+          "text": "with",
+          "start": 44.853,
+          "end": 45.11
+        },
+        {
+          "text": "the",
+          "start": 45.11,
+          "end": 45.367
+        },
+        {
+          "text": "wind",
+          "start": 45.367,
+          "end": 45.623
+        },
+        {
+          "text": ".",
+          "start": 45.623,
+          "end": 45.88
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 45.88,
+      "end": 47.46,
+      "text": "One startling, radiant glimpse.",
+      "singableText": "One startling, radiant glimpse.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "One",
+          "start": 45.88,
+          "end": 46.143
+        },
+        {
+          "text": "startling",
+          "start": 46.143,
+          "end": 46.407
+        },
+        {
+          "text": ",",
+          "start": 46.407,
+          "end": 46.67
+        },
+        {
+          "text": "radiant",
+          "start": 46.67,
+          "end": 46.933
+        },
+        {
+          "text": "glimpse",
+          "start": 46.933,
+          "end": 47.197
+        },
+        {
+          "text": ".",
+          "start": 47.197,
+          "end": 47.46
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 47.46,
+      "end": 49.26,
+      "text": "A lifetime could not find it again.",
+      "singableText": "A lifetime could not find it again.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 47.46,
+          "end": 47.685
+        },
+        {
+          "text": "lifetime",
+          "start": 47.685,
+          "end": 47.91
+        },
+        {
+          "text": "could",
+          "start": 47.91,
+          "end": 48.135
+        },
+        {
+          "text": "not",
+          "start": 48.135,
+          "end": 48.36
+        },
+        {
+          "text": "find",
+          "start": 48.36,
+          "end": 48.585
+        },
+        {
+          "text": "it",
+          "start": 48.585,
+          "end": 48.81
+        },
+        {
+          "text": "again",
+          "start": 48.81,
+          "end": 49.035
+        },
+        {
+          "text": ".",
+          "start": 49.035,
+          "end": 49.26
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 49.26,
+      "end": 52.42,
+      "text": "My heart stays by the Luoshui.",
+      "singableText": "My heart stays by the Luoshui.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 49.26,
+          "end": 49.711
+        },
+        {
+          "text": "heart",
+          "start": 49.711,
+          "end": 50.163
+        },
+        {
+          "text": "stays",
+          "start": 50.163,
+          "end": 50.614
+        },
+        {
+          "text": "by",
+          "start": 50.614,
+          "end": 51.066
+        },
+        {
+          "text": "the",
+          "start": 51.066,
+          "end": 51.517
+        },
+        {
+          "text": "Luoshui",
+          "start": 51.517,
+          "end": 51.969
+        },
+        {
+          "text": ".",
+          "start": 51.969,
+          "end": 52.42
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 52.42,
+      "end": 54.84,
+      "text": "Across a thousand li, no name remains.",
+      "singableText": "Across a thousand li, no name remains.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Across",
+          "start": 52.42,
+          "end": 52.689
+        },
+        {
+          "text": "a",
+          "start": 52.689,
+          "end": 52.958
+        },
+        {
+          "text": "thousand",
+          "start": 52.958,
+          "end": 53.227
+        },
+        {
+          "text": "li",
+          "start": 53.227,
+          "end": 53.496
+        },
+        {
+          "text": ",",
+          "start": 53.496,
+          "end": 53.764
+        },
+        {
+          "text": "no",
+          "start": 53.764,
+          "end": 54.033
+        },
+        {
+          "text": "name",
+          "start": 54.033,
+          "end": 54.302
+        },
+        {
+          "text": "remains",
+          "start": 54.302,
+          "end": 54.571
+        },
+        {
+          "text": ".",
+          "start": 54.571,
+          "end": 54.84
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 54.84,
+      "end": 59.1,
+      "text": "Across a thousand li, it still refuses to forget.",
+      "singableText": "Across a thousand li, it still refuses to forget.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Across",
+          "start": 54.84,
+          "end": 55.227
+        },
+        {
+          "text": "a",
+          "start": 55.227,
+          "end": 55.615
+        },
+        {
+          "text": "thousand",
+          "start": 55.615,
+          "end": 56.002
+        },
+        {
+          "text": "li",
+          "start": 56.002,
+          "end": 56.389
+        },
+        {
+          "text": ",",
+          "start": 56.389,
+          "end": 56.776
+        },
+        {
+          "text": "it",
+          "start": 56.776,
+          "end": 57.164
+        },
+        {
+          "text": "still",
+          "start": 57.164,
+          "end": 57.551
+        },
+        {
+          "text": "refuses",
+          "start": 57.551,
+          "end": 57.938
+        },
+        {
+          "text": "to",
+          "start": 57.938,
+          "end": 58.325
+        },
+        {
+          "text": "forget",
+          "start": 58.325,
+          "end": 58.713
+        },
+        {
+          "text": ".",
+          "start": 58.713,
+          "end": 59.1
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 60.66,
+      "end": 62.26,
+      "text": "The fragrance of orchids lingers in your sleeve.",
+      "singableText": "The fragrance of orchids lingers in your sleeve.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 60.66,
+          "end": 60.838
+        },
+        {
+          "text": "fragrance",
+          "start": 60.838,
+          "end": 61.016
+        },
+        {
+          "text": "of",
+          "start": 61.016,
+          "end": 61.193
+        },
+        {
+          "text": "orchids",
+          "start": 61.193,
+          "end": 61.371
+        },
+        {
+          "text": "lingers",
+          "start": 61.371,
+          "end": 61.549
+        },
+        {
+          "text": "in",
+          "start": 61.549,
+          "end": 61.727
+        },
+        {
+          "text": "your",
+          "start": 61.727,
+          "end": 61.904
+        },
+        {
+          "text": "sleeve",
+          "start": 61.904,
+          "end": 62.082
+        },
+        {
+          "text": ".",
+          "start": 62.082,
+          "end": 62.26
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 62.82,
+      "end": 66.0,
+      "text": "Stars gather in your eyes.",
+      "singableText": "Stars gather in your eyes.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Stars",
+          "start": 62.82,
+          "end": 63.35
+        },
+        {
+          "text": "gather",
+          "start": 63.35,
+          "end": 63.88
+        },
+        {
+          "text": "in",
+          "start": 63.88,
+          "end": 64.41
+        },
+        {
+          "text": "your",
+          "start": 64.41,
+          "end": 64.94
+        },
+        {
+          "text": "eyes",
+          "start": 64.94,
+          "end": 65.47
+        },
+        {
+          "text": ".",
+          "start": 65.47,
+          "end": 66.0
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 66.0,
+      "end": 69.08,
+      "text": "You never spoke the word farewell.",
+      "singableText": "You never spoke the word farewell.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 66.0,
+          "end": 66.44
+        },
+        {
+          "text": "never",
+          "start": 66.44,
+          "end": 66.88
+        },
+        {
+          "text": "spoke",
+          "start": 66.88,
+          "end": 67.32
+        },
+        {
+          "text": "the",
+          "start": 67.32,
+          "end": 67.76
+        },
+        {
+          "text": "word",
+          "start": 67.76,
+          "end": 68.2
+        },
+        {
+          "text": "farewell",
+          "start": 68.2,
+          "end": 68.64
+        },
+        {
+          "text": ".",
+          "start": 68.64,
+          "end": 69.08
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 69.08,
+      "end": 72.4,
+      "text": "I already know our fate has reached its end.",
+      "singableText": "I already know our fate has reached its end.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 69.08,
+          "end": 69.412
+        },
+        {
+          "text": "already",
+          "start": 69.412,
+          "end": 69.744
+        },
+        {
+          "text": "know",
+          "start": 69.744,
+          "end": 70.076
+        },
+        {
+          "text": "our",
+          "start": 70.076,
+          "end": 70.408
+        },
+        {
+          "text": "fate",
+          "start": 70.408,
+          "end": 70.74
+        },
+        {
+          "text": "has",
+          "start": 70.74,
+          "end": 71.072
+        },
+        {
+          "text": "reached",
+          "start": 71.072,
+          "end": 71.404
+        },
+        {
+          "text": "its",
+          "start": 71.404,
+          "end": 71.736
+        },
+        {
+          "text": "end",
+          "start": 71.736,
+          "end": 72.068
+        },
+        {
+          "text": ".",
+          "start": 72.068,
+          "end": 72.4
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 72.96,
+      "end": 75.94,
+      "text": "If only the dream could stop here.",
+      "singableText": "If only the dream could stop here.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "If",
+          "start": 72.96,
+          "end": 73.332
+        },
+        {
+          "text": "only",
+          "start": 73.332,
+          "end": 73.705
+        },
+        {
+          "text": "the",
+          "start": 73.705,
+          "end": 74.078
+        },
+        {
+          "text": "dream",
+          "start": 74.078,
+          "end": 74.45
+        },
+        {
+          "text": "could",
+          "start": 74.45,
+          "end": 74.822
+        },
+        {
+          "text": "stop",
+          "start": 74.822,
+          "end": 75.195
+        },
+        {
+          "text": "here",
+          "start": 75.195,
+          "end": 75.567
+        },
+        {
+          "text": ".",
+          "start": 75.567,
+          "end": 75.94
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 75.94,
+      "end": 79.26,
+      "text": "May the long night never wake.",
+      "singableText": "May the long night never wake.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "May",
+          "start": 75.94,
+          "end": 76.414
+        },
+        {
+          "text": "the",
+          "start": 76.414,
+          "end": 76.889
+        },
+        {
+          "text": "long",
+          "start": 76.889,
+          "end": 77.363
+        },
+        {
+          "text": "night",
+          "start": 77.363,
+          "end": 77.837
+        },
+        {
+          "text": "never",
+          "start": 77.837,
+          "end": 78.311
+        },
+        {
+          "text": "wake",
+          "start": 78.311,
+          "end": 78.786
+        },
+        {
+          "text": ".",
+          "start": 78.786,
+          "end": 79.26
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 79.26,
+      "end": 83.18,
+      "text": "If there were a shore between mortal and divine.",
+      "singableText": "If there were a shore between mortal and divine.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "If",
+          "start": 79.26,
+          "end": 79.652
+        },
+        {
+          "text": "there",
+          "start": 79.652,
+          "end": 80.044
+        },
+        {
+          "text": "were",
+          "start": 80.044,
+          "end": 80.436
+        },
+        {
+          "text": "a",
+          "start": 80.436,
+          "end": 80.828
+        },
+        {
+          "text": "shore",
+          "start": 80.828,
+          "end": 81.22
+        },
+        {
+          "text": "between",
+          "start": 81.22,
+          "end": 81.612
+        },
+        {
+          "text": "mortal",
+          "start": 81.612,
+          "end": 82.004
+        },
+        {
+          "text": "and",
+          "start": 82.004,
+          "end": 82.396
+        },
+        {
+          "text": "divine",
+          "start": 82.396,
+          "end": 82.788
+        },
+        {
+          "text": ".",
+          "start": 82.788,
+          "end": 83.18
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 83.18,
+      "end": 85.46,
+      "text": "I would cross all of time.",
+      "singableText": "I would cross all of time.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 83.18,
+          "end": 83.506
+        },
+        {
+          "text": "would",
+          "start": 83.506,
+          "end": 83.831
+        },
+        {
+          "text": "cross",
+          "start": 83.831,
+          "end": 84.157
+        },
+        {
+          "text": "all",
+          "start": 84.157,
+          "end": 84.483
+        },
+        {
+          "text": "of",
+          "start": 84.483,
+          "end": 84.809
+        },
+        {
+          "text": "time",
+          "start": 84.809,
+          "end": 85.134
+        },
+        {
+          "text": ".",
+          "start": 85.134,
+          "end": 85.46
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 85.46,
+      "end": 88.22,
+      "text": "You come across the waves.",
+      "singableText": "You come across the waves.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 85.46,
+          "end": 85.92
+        },
+        {
+          "text": "come",
+          "start": 85.92,
+          "end": 86.38
+        },
+        {
+          "text": "across",
+          "start": 86.38,
+          "end": 86.84
+        },
+        {
+          "text": "the",
+          "start": 86.84,
+          "end": 87.3
+        },
+        {
+          "text": "waves",
+          "start": 87.3,
+          "end": 87.76
+        },
+        {
+          "text": ".",
+          "start": 87.76,
+          "end": 88.22
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 88.22,
+      "end": 89.82,
+      "text": "Then leave with the wind.",
+      "singableText": "Then leave with the wind.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Then",
+          "start": 88.22,
+          "end": 88.487
+        },
+        {
+          "text": "leave",
+          "start": 88.487,
+          "end": 88.753
+        },
+        {
+          "text": "with",
+          "start": 88.753,
+          "end": 89.02
+        },
+        {
+          "text": "the",
+          "start": 89.02,
+          "end": 89.287
+        },
+        {
+          "text": "wind",
+          "start": 89.287,
+          "end": 89.553
+        },
+        {
+          "text": ".",
+          "start": 89.553,
+          "end": 89.82
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 89.82,
+      "end": 91.5,
+      "text": "Light cloud veils the moon.",
+      "singableText": "Light cloud veils the moon.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Light",
+          "start": 89.82,
+          "end": 90.1
+        },
+        {
+          "text": "cloud",
+          "start": 90.1,
+          "end": 90.38
+        },
+        {
+          "text": "veils",
+          "start": 90.38,
+          "end": 90.66
+        },
+        {
+          "text": "the",
+          "start": 90.66,
+          "end": 90.94
+        },
+        {
+          "text": "moon",
+          "start": 90.94,
+          "end": 91.22
+        },
+        {
+          "text": ".",
+          "start": 91.22,
+          "end": 91.5
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 91.5,
+      "end": 93.2,
+      "text": "Whirling snow brushes your robe.",
+      "singableText": "Whirling snow brushes your robe.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Whirling",
+          "start": 91.5,
+          "end": 91.783
+        },
+        {
+          "text": "snow",
+          "start": 91.783,
+          "end": 92.067
+        },
+        {
+          "text": "brushes",
+          "start": 92.067,
+          "end": 92.35
+        },
+        {
+          "text": "your",
+          "start": 92.35,
+          "end": 92.633
+        },
+        {
+          "text": "robe",
+          "start": 92.633,
+          "end": 92.917
+        },
+        {
+          "text": ".",
+          "start": 92.917,
+          "end": 93.2
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 93.2,
+      "end": 96.28,
+      "text": "My heart stays by the Luoshui.",
+      "singableText": "My heart stays by the Luoshui.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 93.2,
+          "end": 93.64
+        },
+        {
+          "text": "heart",
+          "start": 93.64,
+          "end": 94.08
+        },
+        {
+          "text": "stays",
+          "start": 94.08,
+          "end": 94.52
+        },
+        {
+          "text": "by",
+          "start": 94.52,
+          "end": 94.96
+        },
+        {
+          "text": "the",
+          "start": 94.96,
+          "end": 95.4
+        },
+        {
+          "text": "Luoshui",
+          "start": 95.4,
+          "end": 95.84
+        },
+        {
+          "text": ".",
+          "start": 95.84,
+          "end": 96.28
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 96.28,
+      "end": 99.42,
+      "text": "A thousand li away, I can still see you.",
+      "singableText": "A thousand li away, I can still see you.",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 96.28,
+          "end": 96.565
+        },
+        {
+          "text": "thousand",
+          "start": 96.565,
+          "end": 96.851
+        },
+        {
+          "text": "li",
+          "start": 96.851,
+          "end": 97.136
+        },
+        {
+          "text": "away",
+          "start": 97.136,
+          "end": 97.422
+        },
+        {
+          "text": ",",
+          "start": 97.422,
+          "end": 97.707
+        },
+        {
+          "text": "I",
+          "start": 97.707,
+          "end": 97.993
+        },
+        {
+          "text": "can",
+          "start": 97.993,
+          "end": 98.278
+        },
+        {
+          "text": "still",
+          "start": 98.278,
+          "end": 98.564
+        },
+        {
+          "text": "see",
+          "start": 98.564,
+          "end": 98.849
+        },
+        {
+          "text": "you",
+          "start": 98.849,
+          "end": 99.135
+        },
+        {
+          "text": ".",
+          "start": 99.135,
+          "end": 99.42
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "lyric-first",
+    "releaseStage": "unlisted-preview",
+    "correction": "Corrected independently from this render's separated-vocal large-v3 normal/no-VAD ASR, MOSS-Music blind transcription, and planned lyric. Close phonetic substitutions were restored to the stronger intended Chinese; the extra 千里不成名 phrase remains because two evidence routes found an additional sung phrase before 千里不肯忘记."
+  }
+}

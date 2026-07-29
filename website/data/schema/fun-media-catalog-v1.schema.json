@@ -32,6 +32,11 @@
           "hidden": {"type": "boolean"},
           "hiddenLabel": {"type": "string"},
           "hiddenReason": {"type": "string"},
+          "visibility": {"enum": ["public", "unlisted", "hidden"]},
+          "releaseStage": {"enum": ["published", "preview", "legacy", "draft"]},
+          "category": {"type": "string"},
+          "previewLabel": {"type": "string"},
+          "previewReason": {"type": "string"},
           "languages": {"type": "array", "items": {"type": "string"}},
           "tags": {"type": "array", "items": {"type": "string"}}
         }

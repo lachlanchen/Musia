@@ -9,6 +9,37 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "luoshui-zhaoying-preview",
+      "kind": "song",
+      "title": "洛水照影 · Preview",
+      "artist": "Musia",
+      "summary": "An unlisted two-candidate preview for choosing between stronger musical expression and fuller lyric coverage.",
+      "manifest": "data/songs/luoshui-zhaoying-preview/manifest.json",
+      "cover": "assets/covers/luoshui-zhaoying-preview-16x9.png",
+      "visibility": "unlisted",
+      "releaseStage": "preview",
+      "category": "preview",
+      "previewLabel": "Listening Preview",
+      "previewReason": "Awaiting human selection of the Music First or Lyrics First master.",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "preview",
+        "unlisted",
+        "Mandarin",
+        "Luoshui",
+        "cinematic",
+        "ACE-Step",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "best-am-i",
       "kind": "song",
       "title": "Best Am I · 我是天下第一等",

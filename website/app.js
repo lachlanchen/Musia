@@ -36,6 +36,7 @@ const state = {
   advancedMode: false,
   showAllMedia: false,
   hiddenOnlyMedia: false,
+  previewOnlyMedia: false,
   advancedChordRenderKey: "",
   studyMode: false,
   studyData: null,
@@ -258,20 +259,38 @@ function isHiddenCatalogItem(item) {
   return Boolean(item?.hidden || item?.visibility === "hidden");
 }
 
-function catalogItems({ includeHidden = state.showAllMedia, hiddenOnly = state.hiddenOnlyMedia } = {}) {
+function isPreviewCatalogItem(item) {
+  return item?.releaseStage === "preview"
+    || item?.category === "preview"
+    || item?.visibility === "unlisted";
+}
+
+function catalogItems({
+  includeHidden = state.showAllMedia,
+  hiddenOnly = state.hiddenOnlyMedia,
+  previewOnly = state.previewOnlyMedia
+} = {}) {
   const items = state.catalog?.items || [];
   if (hiddenOnly) return items.filter(isHiddenCatalogItem);
-  return includeHidden ? items : items.filter((item) => !isHiddenCatalogItem(item));
+  if (previewOnly) return items.filter((item) => isPreviewCatalogItem(item) && !isHiddenCatalogItem(item));
+  return includeHidden
+    ? items
+    : items.filter((item) => !isHiddenCatalogItem(item) && !isPreviewCatalogItem(item));
 }
 
 function hiddenCatalogCount() {
   return (state.catalog?.items || []).filter(isHiddenCatalogItem).length;
 }
 
+function previewCatalogCount() {
+  return (state.catalog?.items || []).filter((item) => isPreviewCatalogItem(item) && !isHiddenCatalogItem(item)).length;
+}
+
 function updateCatalogModeUrl() {
   const url = new URL(window.location.href);
-  ["hidden", "hided", "hiddenOnly", "showall", "showAll"].forEach((key) => url.searchParams.delete(key));
+  ["hidden", "hided", "hiddenOnly", "preview", "previews", "showall", "showAll"].forEach((key) => url.searchParams.delete(key));
   if (state.hiddenOnlyMedia) url.searchParams.set("hidden", "1");
+  if (state.previewOnlyMedia) url.searchParams.set("preview", "1");
   history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
@@ -873,7 +892,8 @@ function nativeLanguageName(code, fallback = "") {
 }
 
 function vocalLanguageName(asset) {
-  return asset?.languageNativeLabel
+  return asset?.selectorLabel
+    || asset?.languageNativeLabel
     || nativeLanguageName(asset?.languageCode, asset?.languageLabel || asset?.label);
 }
 
@@ -1513,6 +1533,7 @@ function setMediaSource(asset, keepTime = false) {
 function renderLibrary() {
   const items = catalogItems();
   const legacyButton = $("legacy-toggle");
+  const previewButton = $("preview-toggle");
   const modeNote = $("library-mode-note");
   if (legacyButton) {
     legacyButton.classList.toggle("active", state.hiddenOnlyMedia);
@@ -1520,10 +1541,18 @@ function renderLibrary() {
     legacyButton.textContent = state.hiddenOnlyMedia ? "Legacy on" : "Legacy";
     legacyButton.title = state.hiddenOnlyMedia ? "Return to the visible catalog" : "Show hidden Legacy and review-only songs";
   }
+  if (previewButton) {
+    previewButton.classList.toggle("active", state.previewOnlyMedia);
+    previewButton.setAttribute("aria-pressed", state.previewOnlyMedia ? "true" : "false");
+    previewButton.textContent = state.previewOnlyMedia ? "Preview on" : "Preview";
+    previewButton.title = state.previewOnlyMedia ? "Return to the visible catalog" : "Show unlisted listening previews";
+  }
   if (modeNote) {
     modeNote.textContent = state.hiddenOnlyMedia
       ? `${hiddenCatalogCount()} hidden items`
-      : (state.showAllMedia ? "All items" : "Visible catalog");
+      : (state.previewOnlyMedia
+        ? `${previewCatalogCount()} unlisted preview${previewCatalogCount() === 1 ? "" : "s"}`
+        : (state.showAllMedia ? "All items" : "Visible catalog"));
   }
   const query = state.searchQuery.trim().toLowerCase();
   const visibleItems = items.filter((item) => {
@@ -1540,7 +1569,11 @@ function renderLibrary() {
   });
   $("media-library").innerHTML = visibleItems.length ? visibleItems.map((item) => `
     <button class="media-chip ${item.id === state.activeMediaId ? "active" : ""}" type="button" data-media-id="${escapeHtml(item.id)}">
-      <span>${escapeHtml(isHiddenCatalogItem(item) ? `Hidden ${labelKind(item.kind)}` : labelKind(item.kind))}</span>
+      <span>${escapeHtml(
+        isHiddenCatalogItem(item)
+          ? `Hidden ${labelKind(item.kind)}`
+          : (isPreviewCatalogItem(item) ? `Preview ${labelKind(item.kind)}` : labelKind(item.kind))
+      )}</span>
       <strong>${escapeHtml(item.title)}</strong>
     </button>
   `).join("") : `<div class="empty-chip">${state.hiddenOnlyMedia ? "No hidden media matches" : "No matching media"}</div>`;
@@ -2035,7 +2068,20 @@ function bindEvents() {
   $("advanced-toggle").addEventListener("click", () => setAdvancedMode(!state.advancedMode));
   $("legacy-toggle")?.addEventListener("click", () => {
     state.hiddenOnlyMedia = !state.hiddenOnlyMedia;
-    if (state.hiddenOnlyMedia) state.showAllMedia = false;
+    if (state.hiddenOnlyMedia) {
+      state.showAllMedia = false;
+      state.previewOnlyMedia = false;
+    }
+    updateCatalogModeUrl();
+    setLibraryOpen(true);
+    renderLibrary();
+  });
+  $("preview-toggle")?.addEventListener("click", () => {
+    state.previewOnlyMedia = !state.previewOnlyMedia;
+    if (state.previewOnlyMedia) {
+      state.showAllMedia = false;
+      state.hiddenOnlyMedia = false;
+    }
     updateCatalogModeUrl();
     setLibraryOpen(true);
     renderLibrary();
@@ -2254,6 +2300,7 @@ async function boot() {
   state.studyMode = isStudyMode(params);
   state.showAllMedia = params.has("showall") || params.has("showAll");
   state.hiddenOnlyMedia = params.has("hidden") || params.has("hided") || params.has("hiddenOnly");
+  state.previewOnlyMedia = !state.hiddenOnlyMedia && (params.has("preview") || params.has("previews"));
   state.captureMode = params.get("capture") === "1" || params.get("record") === "1";
   state.skipIntroOnLoad = params.get("skipIntro") === "1" || params.get("skip") === "vocal";
   state.requestedAssetId = params.get("asset") || "";
