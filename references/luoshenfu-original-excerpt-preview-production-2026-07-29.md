@@ -102,3 +102,40 @@ node bin/musia.js fun-audit \
   --media-id luoshenfu-original-excerpt-preview \
   --strict
 ```
+
+## 读音优化第二版
+
+2026-07-30 在不覆盖首版的前提下，把同种子 `729403` 的读音优化候选加入同一
+个 Unlisted Preview，供 A/B 试听：
+
+- `Source A / 原字首版`：首版原字输入；
+- `Pronunciation V2 / 读音优化 V2`：只对首版已证明唱错的难字使用私有
+  同音易字控制。
+
+模型仍为 `acestep-v15-xl-turbo`，没有切换到朗诵、SoulX 或低质量迁移路线。
+V2 的公开歌词恢复曹植原字；模型内部使用的 `仿佛、飘摇、荣耀、飞浮` 等
+控制字不冒充原文。V2 独立保存 41 行时间轴，其中包括音频结尾实际多唱的一次
+`飘飖兮`，不复用首版 timing。
+
+V2 交叉证据包括整曲与 Demucs 人声轨的 faster-whisper large-v3
+normal/no-VAD，以及 MOSS-Music 独立盲转写。两条路线均恢复了
+`fang-fu-xi`，MOSS 两次完整识别为：
+
+```text
+仿佛兮若轻云之蔽月
+飘摇兮若流风之回雪
+```
+
+公开音频：
+
+```text
+https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3
+```
+
+可重复构建仍使用同一脚本；它现在会同时生成两个候选、两套歌词与两套音乐
+分析：
+
+```bash
+PYTHONNOUSERSITE=1 conda run -n musia python \
+  scripts/prepare_luoshenfu_original_preview_fun_item.py
+```

@@ -12,7 +12,7 @@
   "artist": "Musia",
   "description": "Cao Zhi's original Luoshenfu lines carried by a new luminous, cinematic Mandarin melody.",
   "caption": "Light cloud veils the moon; flowing wind turns the returning snow.",
-  "duration": 134.0,
+  "duration": 136.0,
   "canonicalUrl": "https://fun.lazying.art/?preview=1#luoshenfu-original-excerpt-preview",
   "publication": {
     "visibility": "unlisted",
@@ -49,12 +49,12 @@
     },
     "primaryAudio": {
       "id": "luoshenfu-original-zh",
-      "label": "Original Text",
-      "selectorLabel": "中文原文",
+      "label": "Source A",
+      "selectorLabel": "原字首版",
       "publicRoleLabel": "Preview",
       "role": "vocal",
       "languageCode": "zh-Hans",
-      "languageLabel": "中文",
+      "languageLabel": "Source A",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3",
       "mime": "audio/mpeg",
@@ -1289,11 +1289,816 @@
             "time": 126.688
           }
         ],
-        "chordSource": "Musia analysis-grade chord inference from the selected render",
-        "beatSource": "Musia beat analysis from the selected render"
+        "chordSource": "Musia analysis-grade chord inference from this exact render",
+        "beatSource": "Musia beat analysis from this exact render"
       }
     },
-    "alternateAudio": []
+    "alternateAudio": [
+      {
+        "id": "luoshenfu-pronunciation-v2",
+        "label": "Pronunciation V2",
+        "selectorLabel": "读音优化 V2",
+        "publicRoleLabel": "Preview",
+        "role": "vocal",
+        "languageCode": "zh-Hans",
+        "languageLabel": "Pronunciation V2",
+        "lyricSetId": "pronunciation-v2",
+        "src": "https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3",
+        "mime": "audio/mpeg",
+        "musical": {
+          "key": "D minor requested / Dm-centered analysis",
+          "bpm": 71.777,
+          "timeSignature": "4/4",
+          "chords": [
+            {
+              "start": 0.0,
+              "end": 48.344,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.696
+            },
+            {
+              "start": 48.344,
+              "end": 49.18,
+              "name": "A",
+              "degree": "",
+              "confidence": 0.651
+            },
+            {
+              "start": 49.18,
+              "end": 52.5,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.785
+            },
+            {
+              "start": 52.5,
+              "end": 53.336,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.759
+            },
+            {
+              "start": 53.336,
+              "end": 54.172,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.747
+            },
+            {
+              "start": 54.172,
+              "end": 55.844,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.789
+            },
+            {
+              "start": 55.844,
+              "end": 56.68,
+              "name": "G",
+              "degree": "",
+              "confidence": 0.78
+            },
+            {
+              "start": 56.68,
+              "end": 57.516,
+              "name": "Gm",
+              "degree": "",
+              "confidence": 0.665
+            },
+            {
+              "start": 57.516,
+              "end": 59.164,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.834
+            },
+            {
+              "start": 59.164,
+              "end": 62.508,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.796
+            },
+            {
+              "start": 62.508,
+              "end": 65.016,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.772
+            },
+            {
+              "start": 65.016,
+              "end": 65.852,
+              "name": "Am",
+              "degree": "",
+              "confidence": 0.729
+            },
+            {
+              "start": 65.852,
+              "end": 66.688,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.758
+            },
+            {
+              "start": 66.688,
+              "end": 67.524,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.689
+            },
+            {
+              "start": 67.524,
+              "end": 69.172,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.823
+            },
+            {
+              "start": 69.172,
+              "end": 70.867,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.787
+            },
+            {
+              "start": 70.867,
+              "end": 72.516,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.77
+            },
+            {
+              "start": 72.516,
+              "end": 73.352,
+              "name": "G",
+              "degree": "",
+              "confidence": 0.699
+            },
+            {
+              "start": 73.352,
+              "end": 74.188,
+              "name": "Gm",
+              "degree": "",
+              "confidence": 0.667
+            },
+            {
+              "start": 74.188,
+              "end": 75.836,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.741
+            },
+            {
+              "start": 75.836,
+              "end": 77.508,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.748
+            },
+            {
+              "start": 77.508,
+              "end": 79.18,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.781
+            },
+            {
+              "start": 79.18,
+              "end": 83.336,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.766
+            },
+            {
+              "start": 83.336,
+              "end": 84.196,
+              "name": "Em",
+              "degree": "",
+              "confidence": 0.557
+            },
+            {
+              "start": 84.196,
+              "end": 85.008,
+              "name": "Bm",
+              "degree": "",
+              "confidence": 0.683
+            },
+            {
+              "start": 85.008,
+              "end": 85.844,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.636
+            },
+            {
+              "start": 85.844,
+              "end": 86.68,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.625
+            },
+            {
+              "start": 86.68,
+              "end": 87.516,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.646
+            },
+            {
+              "start": 87.516,
+              "end": 88.329,
+              "name": "Bm",
+              "degree": "",
+              "confidence": 0.651
+            },
+            {
+              "start": 88.329,
+              "end": 89.165,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.682
+            },
+            {
+              "start": 89.165,
+              "end": 90.813,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.742
+            },
+            {
+              "start": 90.813,
+              "end": 92.508,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.82
+            },
+            {
+              "start": 92.508,
+              "end": 94.203,
+              "name": "Gm",
+              "degree": "",
+              "confidence": 0.801
+            },
+            {
+              "start": 94.203,
+              "end": 95.852,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.769
+            },
+            {
+              "start": 95.852,
+              "end": 97.524,
+              "name": "Gm",
+              "degree": "",
+              "confidence": 0.762
+            },
+            {
+              "start": 97.524,
+              "end": 98.337,
+              "name": "A",
+              "degree": "",
+              "confidence": 0.748
+            },
+            {
+              "start": 98.337,
+              "end": 99.172,
+              "name": "Am",
+              "degree": "",
+              "confidence": 0.736
+            },
+            {
+              "start": 99.172,
+              "end": 100.844,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.777
+            },
+            {
+              "start": 100.844,
+              "end": 101.68,
+              "name": "D",
+              "degree": "",
+              "confidence": 0.684
+            },
+            {
+              "start": 101.68,
+              "end": 105.86,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.767
+            },
+            {
+              "start": 105.86,
+              "end": 106.672,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.692
+            },
+            {
+              "start": 106.672,
+              "end": 107.532,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.809
+            },
+            {
+              "start": 107.532,
+              "end": 109.18,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.807
+            },
+            {
+              "start": 109.18,
+              "end": 110.852,
+              "name": "Gm",
+              "degree": "",
+              "confidence": 0.743
+            },
+            {
+              "start": 110.852,
+              "end": 112.524,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.803
+            },
+            {
+              "start": 112.524,
+              "end": 115.821,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.803
+            },
+            {
+              "start": 115.821,
+              "end": 117.4,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.84
+            },
+            {
+              "start": 117.4,
+              "end": 119.025,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.786
+            },
+            {
+              "start": 119.025,
+              "end": 119.838,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.691
+            },
+            {
+              "start": 119.838,
+              "end": 122.276,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.939
+            },
+            {
+              "start": 122.276,
+              "end": 123.089,
+              "name": "F",
+              "degree": "",
+              "confidence": 0.606
+            },
+            {
+              "start": 123.089,
+              "end": 124.83,
+              "name": "Bb",
+              "degree": "",
+              "confidence": 0.925
+            },
+            {
+              "start": 124.83,
+              "end": 126.688,
+              "name": "C",
+              "degree": "",
+              "confidence": 0.769
+            },
+            {
+              "start": 126.688,
+              "end": 127.524,
+              "name": "D",
+              "degree": "",
+              "confidence": 0.801
+            },
+            {
+              "start": 127.524,
+              "end": 136.0,
+              "name": "Dm",
+              "degree": "",
+              "confidence": 0.888
+            }
+          ],
+          "beats": [
+            {
+              "index": 0,
+              "time": 48.344
+            },
+            {
+              "index": 1,
+              "time": 49.18
+            },
+            {
+              "index": 2,
+              "time": 50.016
+            },
+            {
+              "index": 3,
+              "time": 50.852
+            },
+            {
+              "index": 4,
+              "time": 51.688
+            },
+            {
+              "index": 5,
+              "time": 52.5
+            },
+            {
+              "index": 6,
+              "time": 53.336
+            },
+            {
+              "index": 7,
+              "time": 54.172
+            },
+            {
+              "index": 8,
+              "time": 55.008
+            },
+            {
+              "index": 9,
+              "time": 55.844
+            },
+            {
+              "index": 10,
+              "time": 56.68
+            },
+            {
+              "index": 11,
+              "time": 57.516
+            },
+            {
+              "index": 12,
+              "time": 58.329
+            },
+            {
+              "index": 13,
+              "time": 59.164
+            },
+            {
+              "index": 14,
+              "time": 60.0
+            },
+            {
+              "index": 15,
+              "time": 60.836
+            },
+            {
+              "index": 16,
+              "time": 61.672
+            },
+            {
+              "index": 17,
+              "time": 62.508
+            },
+            {
+              "index": 18,
+              "time": 63.344
+            },
+            {
+              "index": 19,
+              "time": 64.18
+            },
+            {
+              "index": 20,
+              "time": 65.016
+            },
+            {
+              "index": 21,
+              "time": 65.852
+            },
+            {
+              "index": 22,
+              "time": 66.688
+            },
+            {
+              "index": 23,
+              "time": 67.524
+            },
+            {
+              "index": 24,
+              "time": 68.336
+            },
+            {
+              "index": 25,
+              "time": 69.172
+            },
+            {
+              "index": 26,
+              "time": 70.008
+            },
+            {
+              "index": 27,
+              "time": 70.867
+            },
+            {
+              "index": 28,
+              "time": 71.68
+            },
+            {
+              "index": 29,
+              "time": 72.516
+            },
+            {
+              "index": 30,
+              "time": 73.352
+            },
+            {
+              "index": 31,
+              "time": 74.188
+            },
+            {
+              "index": 32,
+              "time": 75.0
+            },
+            {
+              "index": 33,
+              "time": 75.836
+            },
+            {
+              "index": 34,
+              "time": 76.672
+            },
+            {
+              "index": 35,
+              "time": 77.508
+            },
+            {
+              "index": 36,
+              "time": 78.344
+            },
+            {
+              "index": 37,
+              "time": 79.18
+            },
+            {
+              "index": 38,
+              "time": 80.016
+            },
+            {
+              "index": 39,
+              "time": 80.852
+            },
+            {
+              "index": 40,
+              "time": 81.665
+            },
+            {
+              "index": 41,
+              "time": 82.524
+            },
+            {
+              "index": 42,
+              "time": 83.336
+            },
+            {
+              "index": 43,
+              "time": 84.196
+            },
+            {
+              "index": 44,
+              "time": 85.008
+            },
+            {
+              "index": 45,
+              "time": 85.844
+            },
+            {
+              "index": 46,
+              "time": 86.68
+            },
+            {
+              "index": 47,
+              "time": 87.516
+            },
+            {
+              "index": 48,
+              "time": 88.329
+            },
+            {
+              "index": 49,
+              "time": 89.165
+            },
+            {
+              "index": 50,
+              "time": 90.001
+            },
+            {
+              "index": 51,
+              "time": 90.813
+            },
+            {
+              "index": 52,
+              "time": 91.672
+            },
+            {
+              "index": 53,
+              "time": 92.508
+            },
+            {
+              "index": 54,
+              "time": 93.344
+            },
+            {
+              "index": 55,
+              "time": 94.203
+            },
+            {
+              "index": 56,
+              "time": 95.016
+            },
+            {
+              "index": 57,
+              "time": 95.852
+            },
+            {
+              "index": 58,
+              "time": 96.688
+            },
+            {
+              "index": 59,
+              "time": 97.524
+            },
+            {
+              "index": 60,
+              "time": 98.337
+            },
+            {
+              "index": 61,
+              "time": 99.172
+            },
+            {
+              "index": 62,
+              "time": 100.008
+            },
+            {
+              "index": 63,
+              "time": 100.844
+            },
+            {
+              "index": 64,
+              "time": 101.68
+            },
+            {
+              "index": 65,
+              "time": 102.516
+            },
+            {
+              "index": 66,
+              "time": 103.352
+            },
+            {
+              "index": 67,
+              "time": 104.188
+            },
+            {
+              "index": 68,
+              "time": 105.024
+            },
+            {
+              "index": 69,
+              "time": 105.86
+            },
+            {
+              "index": 70,
+              "time": 106.672
+            },
+            {
+              "index": 71,
+              "time": 107.532
+            },
+            {
+              "index": 72,
+              "time": 108.344
+            },
+            {
+              "index": 73,
+              "time": 109.18
+            },
+            {
+              "index": 74,
+              "time": 110.016
+            },
+            {
+              "index": 75,
+              "time": 110.852
+            },
+            {
+              "index": 76,
+              "time": 111.665
+            },
+            {
+              "index": 77,
+              "time": 112.524
+            },
+            {
+              "index": 78,
+              "time": 113.337
+            },
+            {
+              "index": 79,
+              "time": 114.173
+            },
+            {
+              "index": 80,
+              "time": 115.008
+            },
+            {
+              "index": 81,
+              "time": 115.821
+            },
+            {
+              "index": 82,
+              "time": 116.611
+            },
+            {
+              "index": 83,
+              "time": 117.4
+            },
+            {
+              "index": 84,
+              "time": 118.213
+            },
+            {
+              "index": 85,
+              "time": 119.025
+            },
+            {
+              "index": 86,
+              "time": 119.838
+            },
+            {
+              "index": 87,
+              "time": 120.651
+            },
+            {
+              "index": 88,
+              "time": 121.464
+            },
+            {
+              "index": 89,
+              "time": 122.276
+            },
+            {
+              "index": 90,
+              "time": 123.089
+            },
+            {
+              "index": 91,
+              "time": 123.971
+            },
+            {
+              "index": 92,
+              "time": 124.83
+            },
+            {
+              "index": 93,
+              "time": 125.759
+            },
+            {
+              "index": 94,
+              "time": 126.688
+            },
+            {
+              "index": 95,
+              "time": 127.524
+            },
+            {
+              "index": 96,
+              "time": 128.36
+            },
+            {
+              "index": 97,
+              "time": 129.196
+            },
+            {
+              "index": 98,
+              "time": 130.009
+            }
+          ],
+          "chordSource": "Musia analysis-grade chord inference from this exact render",
+          "beatSource": "Musia beat analysis from this exact render"
+        }
+      }
+    ]
   },
   "musical": {
     "key": "D minor requested / Dm-centered analysis",
@@ -2526,14 +3331,14 @@
         "time": 126.688
       }
     ],
-    "chordSource": "Musia analysis-grade chord inference from the selected render",
-    "beatSource": "Musia beat analysis from the selected render"
+    "chordSource": "Musia analysis-grade chord inference from this exact render",
+    "beatSource": "Musia beat analysis from this exact render"
   },
   "textTracks": [],
   "lyricSets": [
     {
       "id": "zh-vocal",
-      "label": "Original Text",
+      "label": "Source A",
       "languageCode": "zh-Hans",
       "tracks": [
         {
@@ -2570,6 +3375,48 @@
             "rough-highlight"
           ],
           "path": "lyrics/zh-vocal/ja.json"
+        }
+      ]
+    },
+    {
+      "id": "pronunciation-v2",
+      "label": "Pronunciation V2",
+      "languageCode": "zh-Hans",
+      "tracks": [
+        {
+          "code": "zh-Hans",
+          "label": "Mandarin Chinese",
+          "nativeLabel": "中文",
+          "script": "Hans",
+          "features": [
+            "active-vocal",
+            "pinyin",
+            "word-highlight"
+          ],
+          "path": "lyrics/pronunciation-v2/zh-Hans.json"
+        },
+        {
+          "code": "en",
+          "label": "English",
+          "nativeLabel": "English",
+          "script": "Latn",
+          "features": [
+            "translation",
+            "rough-highlight"
+          ],
+          "path": "lyrics/pronunciation-v2/en.json"
+        },
+        {
+          "code": "ja",
+          "label": "Japanese",
+          "nativeLabel": "日本語",
+          "script": "Jpan",
+          "features": [
+            "translation",
+            "furigana",
+            "rough-highlight"
+          ],
+          "path": "lyrics/pronunciation-v2/ja.json"
         }
       ]
     }
@@ -2825,12 +3672,15 @@
   "provenance": {
     "createdBy": "Musia",
     "generationProject": "data/creative_projects/luoshenfu-original-excerpt-preview-20260729",
-    "audioSource": "ACE-Step 1.5 XL Turbo, exact-source sweep, seed 729403.",
-    "analysisRun": "data/creative_projects/luoshenfu-original-excerpt-preview-20260729/analysis/source-seed729403",
+    "audioSource": "ACE-Step 1.5 XL Turbo same-seed A/B: exact-source Source A and selective private pronunciation-control V2, seed 729403.",
+    "analysisRuns": [
+      "data/creative_projects/luoshenfu-original-excerpt-preview-20260729/analysis/source-seed729403",
+      "data/runs/luoshenfu-pronunciation-v2-seed729403-analysis"
+    ],
     "sourceText": "Cao Zhi, 洛神赋; selected public-domain original lines.",
     "quality": {
       "gate": "unlisted-human-listening-preview",
-      "candidateCount": 10,
+      "candidateCount": 14,
       "health": "pass",
       "apex": {
         "coherence": 2.915,
@@ -2839,11 +3689,14 @@
         "clarity": 2.666,
         "naturalness": 2.571
       },
-      "note": "Selected over seven other XL Turbo candidates and two rejected XL SFT challengers after signal health, APEX, separated-vocal large-v3, no-VAD, and MOSS-Music review."
+      "note": "Source A and Pronunciation V2 were selected from independent four-candidate XL Turbo sweeps after signal health, APEX, separated-vocal large-v3, no-VAD, and MOSS-Music review."
     },
-    "lyricCorrection": "Every planned source line is accounted for. Timing combines large-v3 no-VAD anchors with MOSS-Music phrase boundaries; source-close recognition errors retain the original poem.",
+    "lyricCorrection": "Each audio asset owns an independent lyric set and timing map. Source-close recognition errors retain the original poem; V2 also retains its audible extra final 飘飖兮 repetition.",
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/call_3TfPoLAlsEjwQn2r9DJ11qDM.png",
     "coverPrompt": "Luoshui river through a luminous jade-and-silver celestial megastructure, light cloud veiling the moon, returning snow, and one small original robed figure crossing the water; no text.",
-    "publicAudio": "luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3"
+    "publicAudio": [
+      "luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3",
+      "luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3"
+    ]
   }
 }

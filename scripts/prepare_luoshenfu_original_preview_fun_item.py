@@ -17,9 +17,17 @@ ROOT = Path(__file__).resolve().parents[1]
 SONGS = ROOT.parent / "MusiaSongs"
 MEDIA_ID = "luoshenfu-original-excerpt-preview"
 PROJECT = ROOT / "data/creative_projects/luoshenfu-original-excerpt-preview-20260729"
-ANALYSIS = PROJECT / "analysis/source-seed729403"
-AUDIO = PROJECT / "selected/luoshenfu-original-excerpt-seed729403.mp3"
-PUBLIC_NAME = "luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3"
+ANALYSIS_SOURCE = PROJECT / "analysis/source-seed729403"
+ANALYSIS_V2 = ROOT / "data/runs/luoshenfu-pronunciation-v2-seed729403-analysis"
+AUDIO_SOURCE = PROJECT / "selected/luoshenfu-original-excerpt-seed729403.mp3"
+AUDIO_V2 = PROJECT / "selected/luoshenfu-original-excerpt-pronunciation-v2-seed729403.mp3"
+PUBLIC_NAME_SOURCE = (
+    "luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3"
+)
+PUBLIC_NAME_V2 = (
+    "luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-"
+    "ace-xl-turbo-seed729403-20260730.mp3"
+)
 PUBLIC_BASE = "https://lazyingart.github.io/MusiaSongs/audio/"
 COVER = "assets/covers/luoshenfu-original-excerpt-preview-16x9.png"
 COVER_SOURCE = (
@@ -71,6 +79,53 @@ ROWS = [
     (117.82, 123.58, "飘飖兮若流风之回雪", "Like flowing wind returning the snow.", "流れる風が雪を舞い返すよう"),
 ]
 
+# Candidate-specific timing for the same-seed pronunciation-control render.
+# Boundaries combine full-mix and separated-vocal large-v3 word anchors with
+# MOSS-Music's independent structure pass. The final extra 飘飖兮 is audible
+# and therefore remains as its own public line.
+ROWS_V2 = [
+    (15.86, 18.92, "秾纤得衷", "Fullness and grace in perfect balance.", "豊かさも細さもほどよく"),
+    (19.15, 21.61, "修短合度", "Her stature meets the ideal measure.", "背丈も理想の姿にかなう"),
+    (22.53, 24.07, "肩若削成", "Shoulders shaped as if carved.", "肩は彫り出したよう"),
+    (24.07, 25.77, "腰如约素", "A waist like bundled white silk.", "腰は白絹を束ねたよう"),
+    (25.77, 27.21, "延颈秀项", "A long neck and graceful nape.", "長い首とうるわしいうなじ"),
+    (27.21, 29.17, "皓质呈露", "Luminous skin is revealed.", "白く輝く肌があらわになる"),
+    (29.17, 30.83, "飘忽若神", "She drifts as if divine.", "神のようにふわりと漂い"),
+    (30.83, 32.51, "体迅飞凫", "Swift as a flying waterbird.", "飛ぶ水鳥のようにすばやい"),
+    (32.51, 34.13, "云髻峨峨", "Her cloudlike coiffure rises high.", "雲のような髪は高く結われ"),
+    (34.13, 35.85, "修眉联娟", "Long brows curve delicately.", "長い眉は美しく弧を描く"),
+    (35.85, 37.53, "丹唇外朗", "Vermilion lips shine.", "朱の唇は明るく輝き"),
+    (37.53, 39.19, "皓齿内鲜", "Bright teeth gleam within.", "白い歯は内にきらめく"),
+    (39.19, 40.83, "明眸善睐", "Clear eyes glance with grace.", "澄んだ瞳は美しく流れ"),
+    (40.83, 42.57, "靥辅承权", "Dimples rest beside her cheeks.", "えくぼは頬に寄り添う"),
+    (42.57, 44.57, "瑰姿艳逸", "Rare beauty, radiant and free.", "稀なる姿は華やかで"),
+    (44.57, 46.59, "仪静体闲", "Serene in bearing and unhurried in form.", "佇まいは静かで優雅"),
+    (47.89, 49.21, "翩若惊鸿", "Light as a startled swan.", "舞う姿は驚く鴻のよう"),
+    (49.64, 52.58, "婉若游龙", "Graceful as a wandering dragon.", "しなやかさは遊ぶ龍のよう"),
+    (52.83, 54.21, "荣曜秋菊", "Radiant as autumn chrysanthemums.", "秋の菊のように輝き"),
+    (54.21, 55.93, "华茂春松", "Flourishing as spring pines.", "春の松のように華やぐ"),
+    (64.20, 67.75, "髣髴兮若轻云之蔽月", "Like light cloud veiling the moon.", "淡い雲が月を覆うよう"),
+    (67.75, 70.93, "飘飖兮若流风之回雪", "Like flowing wind returning the snow.", "流れる風が雪を舞い返すよう"),
+    (70.93, 72.83, "翩若惊鸿", "Light as a startled swan.", "舞う姿は驚く鴻のよう"),
+    (72.83, 74.57, "婉若游龙", "Graceful as a wandering dragon.", "しなやかさは遊ぶ龍のよう"),
+    (74.57, 76.39, "荣曜秋菊", "Radiant as autumn chrysanthemums.", "秋の菊のように輝き"),
+    (76.97, 79.29, "华茂春松", "Flourishing as spring pines.", "春の松のように華やぐ"),
+    (81.35, 84.21, "披罗衣之璀粲兮", "She wears shimmering gauze.", "きらめく薄絹をまとい"),
+    (84.21, 87.57, "珥瑶碧之华琚", "Jade earrings and splendid pendants.", "碧玉の耳飾りを揺らす"),
+    (87.57, 89.97, "戴金翠之首饰", "Gold and kingfisher adorn her hair.", "金と翠の髪飾りを戴き"),
+    (89.97, 91.63, "缀明珠以耀躯", "Bright pearls illuminate her form.", "明珠がその姿を照らす"),
+    (91.63, 93.29, "践远游之文履", "Her feet tread patterned Far-Wanderer shoes.", "文様ある遠遊の履を踏み"),
+    (93.29, 95.07, "曳雾绡之轻裾", "Mist-silk hems trail lightly.", "霧の薄絹の裾を引く"),
+    (95.07, 96.57, "芳泽无加", "No fragrance need be added.", "香りを添える必要もなく"),
+    (96.57, 98.43, "铅华弗御", "No powdered ornament touches her.", "白粉の装いさえ用いない"),
+    (101.02, 104.07, "翩若惊鸿", "Light as a startled swan.", "舞う姿は驚く鴻のよう"),
+    (104.07, 106.32, "婉若游龙", "Graceful as a wandering dragon.", "しなやかさは遊ぶ龍のよう"),
+    (106.32, 110.20, "荣曜秋菊", "Radiant as autumn chrysanthemums.", "秋の菊のように輝き"),
+    (110.20, 114.07, "华茂春松", "Flourishing as spring pines.", "春の松のように華やぐ"),
+    (114.22, 117.80, "髣髴兮若轻云之蔽月", "Like light cloud veiling the moon.", "淡い雲が月を覆うよう"),
+    (117.80, 119.92, "飘飖兮", "She drifts and sways.", "ひらひらと揺らめき"),
+    (121.54, 126.74, "飘飖兮若流风之回雪", "Like flowing wind returning the snow.", "流れる風が雪を舞い返すよう"),
+]
 
 LANGUAGES = {
     "zh-Hans": {
@@ -189,9 +244,9 @@ def make_line(line_id: str, start: float, end: float, text: str, code: str) -> d
     }
 
 
-def build_tracks() -> dict[str, list[dict[str, Any]]]:
+def build_tracks(rows: list[tuple[float, float, str, str, str]]) -> dict[str, list[dict[str, Any]]]:
     tracks = {code: [] for code in LANGUAGES}
-    for index, (start, end, zh, en, ja) in enumerate(ROWS, 1):
+    for index, (start, end, zh, en, ja) in enumerate(rows, 1):
         line_id = f"l{index:02d}"
         tracks["zh-Hans"].append(make_line(line_id, start, end, zh, "zh-Hans"))
         tracks["en"].append(make_line(line_id, start, end, en, "en"))
@@ -199,7 +254,12 @@ def build_tracks() -> dict[str, list[dict[str, Any]]]:
     return tracks
 
 
-def track_document(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
+def track_document(
+    code: str,
+    lines: list[dict[str, Any]],
+    vocal_set: str,
+    correction: str,
+) -> dict[str, Any]:
     return {
         "schema": "fun.lazying.media.text-track.v1",
         "version": 1,
@@ -207,21 +267,16 @@ def track_document(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
         "language": LANGUAGES[code],
         "lines": lines,
         "provenance": {
-            "vocalSet": "zh-vocal",
+            "vocalSet": vocal_set,
             "releaseStage": "unlisted-preview",
-            "correction": (
-                "Corrected from the source lyric, separated-vocal and full-mix "
-                "faster-whisper large-v3 normal/no-VAD passes, and MOSS-Music "
-                "blind transcription. All source lines are accounted for; "
-                "sound-close ASR substitutions retain Cao Zhi's verified text."
-            ),
+            "correction": correction,
         },
     }
 
 
-def load_musical() -> dict[str, Any]:
-    chord_data = read_json(ANALYSIS / "analysis/chords.json").get("chords", [])
-    beat_data = read_json(ANALYSIS / "analysis/beats.json").get("beats", [])
+def load_musical(analysis: Path, bpm: float) -> dict[str, Any]:
+    chord_data = read_json(analysis / "analysis/chords.json").get("chords", [])
+    beat_data = read_json(analysis / "analysis/beats.json").get("beats", [])
     chords = [
         {
             "start": round(float(item["start"]), 3),
@@ -238,21 +293,26 @@ def load_musical() -> dict[str, Any]:
     ]
     return {
         "key": "D minor requested / Dm-centered analysis",
-        "bpm": 71.777,
+        "bpm": bpm,
         "timeSignature": "4/4",
         "chords": chords,
         "beats": beats,
-        "chordSource": "Musia analysis-grade chord inference from the selected render",
-        "beatSource": "Musia beat analysis from the selected render",
+        "chordSource": "Musia analysis-grade chord inference from this exact render",
+        "beatSource": "Musia beat analysis from this exact render",
     }
 
 
 def ensure_public_audio() -> None:
-    if not AUDIO.is_file():
-        raise FileNotFoundError(AUDIO)
-    target = SONGS / "audio" / PUBLIC_NAME
-    target.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(AUDIO, target)
+    pairs = (
+        (AUDIO_SOURCE, PUBLIC_NAME_SOURCE),
+        (AUDIO_V2, PUBLIC_NAME_V2),
+    )
+    for source, public_name in pairs:
+        if not source.is_file():
+            raise FileNotFoundError(source)
+        target = SONGS / "audio" / public_name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
     subprocess.run(["node", "scripts/build-audio-json.js"], cwd=SONGS, check=True)
 
 
@@ -261,24 +321,60 @@ def write_media_item() -> None:
     if not cover_path.is_file():
         raise FileNotFoundError(cover_path)
 
-    tracks = build_tracks()
+    tracks = build_tracks(ROWS)
+    tracks_v2 = build_tracks(ROWS_V2)
     media_dir = ROOT / "website/data/songs" / MEDIA_ID
+    source_correction = (
+        "Corrected from the source lyric, separated-vocal and full-mix "
+        "faster-whisper large-v3 normal/no-VAD passes, and MOSS-Music blind "
+        "transcription. All source lines are accounted for; sound-close ASR "
+        "substitutions retain Cao Zhi's verified text."
+    )
+    v2_correction = (
+        "Corrected independently from the pronunciation-control render using "
+        "full-mix and separated-vocal faster-whisper large-v3 normal/no-VAD "
+        "passes plus MOSS-Music blind transcription. Public spelling restores "
+        "Cao Zhi's source where the sound remains close; the audible extra final "
+        "飘飖兮 repetition is retained."
+    )
     for code, lines in tracks.items():
-        write_json(media_dir / "lyrics/zh-vocal" / f"{code}.json", track_document(code, lines))
+        write_json(
+            media_dir / "lyrics/zh-vocal" / f"{code}.json",
+            track_document(code, lines, "zh-vocal", source_correction),
+        )
+    for code, lines in tracks_v2.items():
+        write_json(
+            media_dir / "lyrics/pronunciation-v2" / f"{code}.json",
+            track_document(code, lines, "pronunciation-v2", v2_correction),
+        )
 
-    musical = load_musical()
+    musical = load_musical(ANALYSIS_SOURCE, 71.777)
+    musical_v2 = load_musical(ANALYSIS_V2, 71.777)
     audio_asset = {
         "id": "luoshenfu-original-zh",
-        "label": "Original Text",
-        "selectorLabel": "中文原文",
+        "label": "Source A",
+        "selectorLabel": "原字首版",
         "publicRoleLabel": "Preview",
         "role": "vocal",
         "languageCode": "zh-Hans",
-        "languageLabel": "中文",
+        "languageLabel": "Source A",
         "lyricSetId": "zh-vocal",
-        "src": PUBLIC_BASE + PUBLIC_NAME,
+        "src": PUBLIC_BASE + PUBLIC_NAME_SOURCE,
         "mime": "audio/mpeg",
         "musical": musical,
+    }
+    audio_asset_v2 = {
+        "id": "luoshenfu-pronunciation-v2",
+        "label": "Pronunciation V2",
+        "selectorLabel": "读音优化 V2",
+        "publicRoleLabel": "Preview",
+        "role": "vocal",
+        "languageCode": "zh-Hans",
+        "languageLabel": "Pronunciation V2",
+        "lyricSetId": "pronunciation-v2",
+        "src": PUBLIC_BASE + PUBLIC_NAME_V2,
+        "mime": "audio/mpeg",
+        "musical": musical_v2,
     }
     timeline = [
         {"id": line["id"], "start": line["start"], "end": line["end"], "text": line["text"]}
@@ -298,7 +394,7 @@ def write_media_item() -> None:
         "artist": "Musia",
         "description": "Cao Zhi's original Luoshenfu lines carried by a new luminous, cinematic Mandarin melody.",
         "caption": "Light cloud veils the moon; flowing wind turns the returning snow.",
-        "duration": 134.0,
+        "duration": 136.0,
         "canonicalUrl": f"https://fun.lazying.art/?preview=1#{MEDIA_ID}",
         "publication": {
             "visibility": "unlisted",
@@ -334,14 +430,14 @@ def write_media_item() -> None:
                 "height": 900,
             },
             "primaryAudio": audio_asset,
-            "alternateAudio": [],
+            "alternateAudio": [audio_asset_v2],
         },
         "musical": musical,
         "textTracks": [],
         "lyricSets": [
             {
                 "id": "zh-vocal",
-                "label": "Original Text",
+                "label": "Source A",
                 "languageCode": "zh-Hans",
                 "tracks": [
                     {
@@ -369,6 +465,37 @@ def write_media_item() -> None:
                         "path": "lyrics/zh-vocal/ja.json",
                     },
                 ],
+            },
+            {
+                "id": "pronunciation-v2",
+                "label": "Pronunciation V2",
+                "languageCode": "zh-Hans",
+                "tracks": [
+                    {
+                        "code": "zh-Hans",
+                        "label": "Mandarin Chinese",
+                        "nativeLabel": "中文",
+                        "script": "Hans",
+                        "features": ["active-vocal", "pinyin", "word-highlight"],
+                        "path": "lyrics/pronunciation-v2/zh-Hans.json",
+                    },
+                    {
+                        "code": "en",
+                        "label": "English",
+                        "nativeLabel": "English",
+                        "script": "Latn",
+                        "features": ["translation", "rough-highlight"],
+                        "path": "lyrics/pronunciation-v2/en.json",
+                    },
+                    {
+                        "code": "ja",
+                        "label": "Japanese",
+                        "nativeLabel": "日本語",
+                        "script": "Jpan",
+                        "features": ["translation", "furigana", "rough-highlight"],
+                        "path": "lyrics/pronunciation-v2/ja.json",
+                    },
+                ],
             }
         ],
         "timeline": {"unit": "seconds", "lines": timeline},
@@ -376,12 +503,18 @@ def write_media_item() -> None:
         "provenance": {
             "createdBy": "Musia",
             "generationProject": str(PROJECT.relative_to(ROOT)),
-            "audioSource": "ACE-Step 1.5 XL Turbo, exact-source sweep, seed 729403.",
-            "analysisRun": str(ANALYSIS.relative_to(ROOT)),
+            "audioSource": (
+                "ACE-Step 1.5 XL Turbo same-seed A/B: exact-source Source A and "
+                "selective private pronunciation-control V2, seed 729403."
+            ),
+            "analysisRuns": [
+                str(ANALYSIS_SOURCE.relative_to(ROOT)),
+                str(ANALYSIS_V2.relative_to(ROOT)),
+            ],
             "sourceText": "Cao Zhi, 洛神赋; selected public-domain original lines.",
             "quality": {
                 "gate": "unlisted-human-listening-preview",
-                "candidateCount": 10,
+                "candidateCount": 14,
                 "health": "pass",
                 "apex": {
                     "coherence": 2.915,
@@ -391,15 +524,15 @@ def write_media_item() -> None:
                     "naturalness": 2.571,
                 },
                 "note": (
-                    "Selected over seven other XL Turbo candidates and two rejected "
-                    "XL SFT challengers after signal health, APEX, separated-vocal "
-                    "large-v3, no-VAD, and MOSS-Music review."
+                    "Source A and Pronunciation V2 were selected from independent "
+                    "four-candidate XL Turbo sweeps after signal health, APEX, "
+                    "separated-vocal large-v3, no-VAD, and MOSS-Music review."
                 ),
             },
             "lyricCorrection": (
-                "Every planned source line is accounted for. Timing combines "
-                "large-v3 no-VAD anchors with MOSS-Music phrase boundaries; "
-                "source-close recognition errors retain the original poem."
+                "Each audio asset owns an independent lyric set and timing map. "
+                "Source-close recognition errors retain the original poem; V2 "
+                "also retains its audible extra final 飘飖兮 repetition."
             ),
             "coverSource": COVER_SOURCE,
             "coverPrompt": (
@@ -407,7 +540,7 @@ def write_media_item() -> None:
                 "megastructure, light cloud veiling the moon, returning snow, "
                 "and one small original robed figure crossing the water; no text."
             ),
-            "publicAudio": PUBLIC_NAME,
+            "publicAudio": [PUBLIC_NAME_SOURCE, PUBLIC_NAME_V2],
         },
     }
     write_json(media_dir / "manifest.json", manifest)
