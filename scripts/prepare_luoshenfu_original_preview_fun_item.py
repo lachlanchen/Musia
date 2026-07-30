@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Prepare the unlisted Fun preview for 洛神赋 · 原文选段."""
+"""Prepare the formal Fun release for 洛神赋 · 原文选段.
+
+The filename is retained for compatibility with the earlier preview workflow.
+"""
 
 from __future__ import annotations
 
+import filecmp
 import json
 import shutil
 import subprocess
@@ -268,7 +272,7 @@ def track_document(
         "lines": lines,
         "provenance": {
             "vocalSet": vocal_set,
-            "releaseStage": "unlisted-preview",
+            "releaseStage": "formal-release",
             "correction": correction,
         },
     }
@@ -307,13 +311,17 @@ def ensure_public_audio() -> None:
         (AUDIO_SOURCE, PUBLIC_NAME_SOURCE),
         (AUDIO_V2, PUBLIC_NAME_V2),
     )
+    changed = False
     for source, public_name in pairs:
         if not source.is_file():
             raise FileNotFoundError(source)
         target = SONGS / "audio" / public_name
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
-    subprocess.run(["node", "scripts/build-audio-json.js"], cwd=SONGS, check=True)
+        if not target.is_file() or not filecmp.cmp(source, target, shallow=False):
+            shutil.copy2(source, target)
+            changed = True
+    if changed:
+        subprocess.run(["node", "scripts/build-audio-json.js"], cwd=SONGS, check=True)
 
 
 def write_media_item() -> None:
@@ -354,10 +362,9 @@ def write_media_item() -> None:
         "id": "luoshenfu-original-zh",
         "label": "Source A",
         "selectorLabel": "原字首版",
-        "publicRoleLabel": "Preview",
         "role": "vocal",
         "languageCode": "zh-Hans",
-        "languageLabel": "Source A",
+        "languageLabel": "中文 · 原字首版",
         "lyricSetId": "zh-vocal",
         "src": PUBLIC_BASE + PUBLIC_NAME_SOURCE,
         "mime": "audio/mpeg",
@@ -367,10 +374,9 @@ def write_media_item() -> None:
         "id": "luoshenfu-pronunciation-v2",
         "label": "Pronunciation V2",
         "selectorLabel": "读音优化 V2",
-        "publicRoleLabel": "Preview",
         "role": "vocal",
         "languageCode": "zh-Hans",
-        "languageLabel": "Pronunciation V2",
+        "languageLabel": "中文 · 读音优化 V2",
         "lyricSetId": "pronunciation-v2",
         "src": PUBLIC_BASE + PUBLIC_NAME_V2,
         "mime": "audio/mpeg",
@@ -378,7 +384,7 @@ def write_media_item() -> None:
     }
     timeline = [
         {"id": line["id"], "start": line["start"], "end": line["end"], "text": line["text"]}
-        for line in tracks["zh-Hans"]
+        for line in tracks_v2["zh-Hans"]
     ]
     manifest = {
         "schema": "fun.lazying.media.manifest.v1",
@@ -392,21 +398,17 @@ def write_media_item() -> None:
             "ja": "洛神賦・原文抄",
         },
         "artist": "Musia",
-        "description": "Cao Zhi's original Luoshenfu lines carried by a new luminous, cinematic Mandarin melody.",
+        "description": (
+            "Cao Zhi's original Luoshenfu lines carried by two luminous, "
+            "cinematic Mandarin performances."
+        ),
         "caption": "Light cloud veils the moon; flowing wind turns the returning snow.",
         "duration": 136.0,
-        "canonicalUrl": f"https://fun.lazying.art/?preview=1#{MEDIA_ID}",
-        "publication": {
-            "visibility": "unlisted",
-            "stage": "preview",
-            "label": "Unlisted Preview",
-            "listed": False,
-            "note": "Direct-link listening preview; excluded from the default catalog and playback queue.",
-        },
+        "canonicalUrl": f"https://fun.lazying.art/#{MEDIA_ID}",
         "share": {
             "title": "洛神赋 · 原文选段 - Musia",
             "description": "An original cinematic Mandarin setting of selected lines from Cao Zhi's Luoshenfu.",
-            "url": f"https://fun.lazying.art/?preview=1#{MEDIA_ID}",
+            "url": f"https://fun.lazying.art/#{MEDIA_ID}",
             "image": COVER,
             "siteName": "Fun Lazying Art",
         },
@@ -429,10 +431,10 @@ def write_media_item() -> None:
                 "width": 1600,
                 "height": 900,
             },
-            "primaryAudio": audio_asset,
-            "alternateAudio": [audio_asset_v2],
+            "primaryAudio": audio_asset_v2,
+            "alternateAudio": [audio_asset],
         },
-        "musical": musical,
+        "musical": musical_v2,
         "textTracks": [],
         "lyricSets": [
             {
@@ -499,7 +501,7 @@ def write_media_item() -> None:
             }
         ],
         "timeline": {"unit": "seconds", "lines": timeline},
-        "playback": {"defaultMode": "off"},
+        "playback": {"defaultMode": "single"},
         "provenance": {
             "createdBy": "Musia",
             "generationProject": str(PROJECT.relative_to(ROOT)),
@@ -513,7 +515,7 @@ def write_media_item() -> None:
             ],
             "sourceText": "Cao Zhi, 洛神赋; selected public-domain original lines.",
             "quality": {
-                "gate": "unlisted-human-listening-preview",
+                "gate": "formal-public-release",
                 "candidateCount": 14,
                 "health": "pass",
                 "apex": {
@@ -552,19 +554,12 @@ def write_media_item() -> None:
         "kind": "song",
         "title": "洛神赋 · 原文选段",
         "artist": "Musia",
-        "summary": "An unlisted original-text listening preview built from Cao Zhi's Luoshenfu.",
+        "summary": "Two cinematic Mandarin settings of selected original lines from Cao Zhi's Luoshenfu.",
         "manifest": f"data/songs/{MEDIA_ID}/manifest.json",
         "cover": COVER,
-        "visibility": "unlisted",
-        "releaseStage": "preview",
-        "category": "preview",
-        "previewLabel": "Listening Preview",
-        "previewReason": "Awaiting listener confirmation before a normal catalog release.",
         "languages": ["zh-Hans", "en", "ja"],
         "tags": [
             "music",
-            "preview",
-            "unlisted",
             "Mandarin",
             "classical Chinese",
             "洛神赋",
@@ -583,7 +578,7 @@ def write_media_item() -> None:
 def main() -> None:
     ensure_public_audio()
     write_media_item()
-    print(f"https://fun.lazying.art/?preview=1#{MEDIA_ID}")
+    print(f"https://fun.lazying.art/#{MEDIA_ID}")
 
 
 if __name__ == "__main__":

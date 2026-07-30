@@ -1,4 +1,4 @@
-# 《洛神赋 · 原文选段》试听制作记录
+# 《洛神赋 · 原文选段》制作与发布记录
 
 ## 范围
 
@@ -30,7 +30,7 @@
 入模同音控制只为处理 `秾、凫、靥、髣髴、飘飖、珥、琚、绡、裾、铅`
 等字。网页与公开歌词始终恢复为核定原文。
 
-## 终选
+## 首版选择
 
 终选为原字路 seed `729403`：
 
@@ -80,14 +80,15 @@ XL SFT 虽然自动审美分稍高，但分离人声出现无关/不可懂内容
 luoshenfu-original-excerpt-preview
 ```
 
-直接试听：
+正式页面：
 
 ```text
-https://fun.lazying.art/?preview=1#luoshenfu-original-excerpt-preview
+https://fun.lazying.art/#luoshenfu-original-excerpt-preview
 ```
 
-它使用 `visibility: unlisted`、`releaseStage: preview` 和
-`category: preview`，不会进入默认歌单、搜索预览或自动播放队列。
+2026-07-30 经用户确认，原字首版和读音优化 V2 一起从 Unlisted Preview
+提升为正式发布。条目进入正常曲库、搜索和播放队列；V2 是默认音频，原字首版
+作为同一作品内的可切换版本保留。
 
 公开音频由 `MusiaSongs` 托管；Fun 条目包含中文原文、拼音、英文/日文意义层、
 逐词高亮、节拍、和弦和本曲专属 16:9 封面。
@@ -105,8 +106,8 @@ node bin/musia.js fun-audit \
 
 ## 读音优化第二版
 
-2026-07-30 在不覆盖首版的前提下，把同种子 `729403` 的读音优化候选加入同一
-个 Unlisted Preview，供 A/B 试听：
+2026-07-30 在不覆盖首版的前提下，把同种子 `729403` 的读音优化版本加入同一
+作品；两版先完成 A/B 试听，随后一起正式发布：
 
 - `Source A / 原字首版`：首版原字输入；
 - `Pronunciation V2 / 读音优化 V2`：只对首版已证明唱错的难字使用私有
@@ -132,8 +133,8 @@ normal/no-VAD，以及 MOSS-Music 独立盲转写。两条路线均恢复了
 https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3
 ```
 
-可重复构建仍使用同一脚本；它现在会同时生成两个候选、两套歌词与两套音乐
-分析：
+可重复构建仍使用同一兼容脚本；它现在会同时生成两个正式音频版本、两套歌词
+与两套音乐分析：
 
 ```bash
 PYTHONNOUSERSITE=1 conda run -n musia python \
