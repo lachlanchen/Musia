@@ -1,31 +1,31 @@
 {
   "schema": "fun.lazying.media.manifest.v1",
   "version": 1,
-  "id": "xing-bian-shi-jian-preview",
+  "id": "xing-bian-shi-jian",
   "kind": "song",
-  "title": "行遍世间 · Preview",
+  "title": "行遍世间",
   "localizedTitles": {
-    "zh-Hans": "行遍世间 · 试听",
-    "en": "Every Road in the World · Preview",
-    "ja": "世界のすべての道・プレビュー"
+    "zh-Hans": "行遍世间",
+    "en": "Every Road in the World",
+    "ja": "世界のすべての道"
   },
   "artist": "Musia",
   "description": "A traveler crosses snow, tides, mountains, and years, only to discover that every road was leading home.",
   "caption": "Against time, step after step, every road turns toward one long-awaited meeting.",
   "duration": 124.0,
-  "canonicalUrl": "https://fun.lazying.art/?preview=1#xing-bian-shi-jian-preview",
+  "canonicalUrl": "https://fun.lazying.art/#xing-bian-shi-jian",
   "publication": {
-    "visibility": "unlisted",
-    "stage": "preview",
-    "label": "Listening Preview",
-    "listed": false,
-    "note": "Direct-link listening preview; excluded from the default library and playback queue."
+    "visibility": "public",
+    "stage": "published",
+    "label": "Published",
+    "listed": true,
+    "note": "Selected public master with ASR-reviewed Mandarin lyrics and aligned translations."
   },
   "share": {
     "title": "行遍世间 - Fun Lazying Art",
     "description": "Across snow, tides, and years, every road leads to one long-awaited meeting.",
-    "url": "https://fun.lazying.art/?preview=1#xing-bian-shi-jian-preview",
-    "image": "assets/covers/xing-bian-shi-jian-preview-16x9.png",
+    "url": "https://fun.lazying.art/#xing-bian-shi-jian",
+    "image": "assets/covers/xing-bian-shi-jian-16x9.png",
     "siteName": "Fun Lazying Art"
   },
   "assets": {
@@ -33,7 +33,7 @@
       "id": "cover",
       "label": "行遍世间 cover",
       "role": "cover",
-      "src": "assets/covers/xing-bian-shi-jian-preview-16x9.png",
+      "src": "assets/covers/xing-bian-shi-jian-16x9.png",
       "mime": "image/png",
       "width": 1600,
       "height": 900
@@ -42,7 +42,7 @@
       "id": "poster",
       "label": "16:9 Poster",
       "role": "poster",
-      "src": "assets/covers/xing-bian-shi-jian-preview-16x9.png",
+      "src": "assets/covers/xing-bian-shi-jian-16x9.png",
       "mime": "image/png",
       "width": 1600,
       "height": 900
@@ -51,12 +51,12 @@
       "id": "xing-bian-shi-jian-zh-vocal",
       "label": "中文",
       "selectorLabel": "中文",
-      "publicRoleLabel": "Preview",
+      "publicRoleLabel": "中文",
       "role": "vocal",
       "languageCode": "zh-Hans",
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
-      "src": "https://lazyingart.github.io/MusiaSongs/audio/xing-bian-shi-jian-preview-zh-Hans-ace-xl-turbo-seed829213-20260801.mp3",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/xing-bian-shi-jian-zh-Hans-ace-xl-turbo-seed829213-20260801.mp3",
       "mime": "audio/mpeg",
       "musical": {
         "key": "D major requested / D-centered analysis",
@@ -2494,7 +2494,7 @@
     ]
   },
   "playback": {
-    "defaultMode": "off"
+    "defaultMode": "single"
   },
   "provenance": {
     "createdBy": "Musia",
@@ -2502,11 +2502,11 @@
     "analysisRun": "data/runs/xing-bian-shi-jian-preview-seed829213-analysis",
     "selectedSeed": 829213,
     "quality": {
-      "gate": "unlisted-human-listening-preview",
+      "gate": "public-selected-master",
       "note": "Selected after an eight-candidate music-first review; audio health passed and lyrics were corrected from independent full-mix and separated-vocal evidence."
     },
     "lyricCorrection": "data/creative_projects/xing-bian-shi-jian-20260801/correction/selected-seed829213/CORRECTION_PACKET.md",
     "coverSource": "data/creative_projects/xing-bian-shi-jian-20260801/assets/cover-source-16x9.png",
-    "publicAudio": "xing-bian-shi-jian-preview-zh-Hans-ace-xl-turbo-seed829213-20260801.mp3"
+    "publicAudio": "xing-bian-shi-jian-zh-Hans-ace-xl-turbo-seed829213-20260801.mp3"
   }
 }

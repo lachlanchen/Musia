@@ -1,7 +1,7 @@
 {
   "schema": "fun.lazying.media.text-track.v1",
   "version": 1,
-  "mediaId": "xing-bian-shi-jian-preview",
+  "mediaId": "xing-bian-shi-jian",
   "language": {
     "code": "ja",
     "label": "Japanese",
@@ -1425,7 +1425,7 @@
   ],
   "provenance": {
     "vocalSet": "zh-vocal",
-    "releaseStage": "unlisted-preview",
+    "releaseStage": "published",
     "correction": "Line timing follows separated-vocal large-v3 no-VAD ASR evidence. Sound-close intended Mandarin is preserved where phonetics, line length, context, and independent MOSS evidence agree. Two unsung draft lines are omitted and the generated outro is shortened."
   }
 }

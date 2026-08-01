@@ -41,8 +41,22 @@ are restored to the intended lyric only when phonetics, syllable count, context,
 and multiple evidence routes agree. The shortened generated outro is represented
 as `原来，在身边` rather than copying unsung draft words.
 
-## Preview Contract
+## Public Release
 
-The website item is an unlisted Listening Preview. It remains directly playable
-with `?preview=1`, but does not enter the normal public library until the user
-chooses to promote it.
+The user selected this master after listening, so it was promoted from the
+unlisted Preview into the normal Fun Lazying Art catalog on 2026-08-01. The
+formal media ID is `xing-bian-shi-jian`, the public title has no method or
+Preview suffix, and the original Preview entry was removed.
+
+Public website data, player recording, and Shipinhao Music packaging must all
+reuse the same corrected Mandarin track:
+
+```text
+website/data/songs/xing-bian-shi-jian/lyrics/zh-vocal/zh-Hans.json
+```
+
+Formal URL:
+
+```text
+https://fun.lazying.art/#xing-bian-shi-jian
+```

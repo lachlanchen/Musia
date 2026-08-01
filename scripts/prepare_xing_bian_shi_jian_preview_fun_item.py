@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Prepare the unlisted Fun listening preview for 行遍世间."""
+"""Prepare the preview or selected public release for 行遍世间."""
 
 from __future__ import annotations
 
+import argparse
 import json
 import shutil
 import subprocess
@@ -15,15 +16,30 @@ from pypinyin import Style, pinyin
 
 ROOT = Path(__file__).resolve().parents[1]
 SONGS = ROOT.parent / "MusiaSongs"
-MEDIA_ID = "xing-bian-shi-jian-preview"
+PREVIEW_MEDIA_ID = "xing-bian-shi-jian-preview"
+PUBLISHED_MEDIA_ID = "xing-bian-shi-jian"
+MEDIA_ID = PREVIEW_MEDIA_ID
 PROJECT = ROOT / "data/creative_projects/xing-bian-shi-jian-20260801"
 ANALYSIS = ROOT / "data/runs/xing-bian-shi-jian-preview-seed829213-analysis"
 CORRECTION = PROJECT / "correction/selected-seed829213/CORRECTION_PACKET.md"
 SOURCE_AUDIO = PROJECT / "selected/xing-bian-shi-jian-zh-Hans-ace-xl-turbo-seed829213.mp3"
-PUBLIC_AUDIO = "xing-bian-shi-jian-preview-zh-Hans-ace-xl-turbo-seed829213-20260801.mp3"
+PREVIEW_PUBLIC_AUDIO = "xing-bian-shi-jian-preview-zh-Hans-ace-xl-turbo-seed829213-20260801.mp3"
+PUBLISHED_PUBLIC_AUDIO = "xing-bian-shi-jian-zh-Hans-ace-xl-turbo-seed829213-20260801.mp3"
+PUBLIC_AUDIO = PREVIEW_PUBLIC_AUDIO
 PUBLIC_BASE = "https://lazyingart.github.io/MusiaSongs/audio/"
-COVER = "assets/covers/xing-bian-shi-jian-preview-16x9.png"
+PREVIEW_COVER = "assets/covers/xing-bian-shi-jian-preview-16x9.png"
+PUBLISHED_COVER = "assets/covers/xing-bian-shi-jian-16x9.png"
+COVER = PREVIEW_COVER
 COVER_SOURCE = PROJECT / "assets/cover-source-16x9.png"
+PUBLISHED = False
+
+
+def configure_release(published: bool) -> None:
+    global COVER, MEDIA_ID, PUBLIC_AUDIO, PUBLISHED
+    PUBLISHED = published
+    MEDIA_ID = PUBLISHED_MEDIA_ID if published else PREVIEW_MEDIA_ID
+    PUBLIC_AUDIO = PUBLISHED_PUBLIC_AUDIO if published else PREVIEW_PUBLIC_AUDIO
+    COVER = PUBLISHED_COVER if published else PREVIEW_COVER
 
 
 LANGUAGES = {
@@ -206,7 +222,7 @@ def track_document(code: str, lines: list[dict[str, Any]]) -> dict[str, Any]:
         "lines": lines,
         "provenance": {
             "vocalSet": "zh-vocal",
-            "releaseStage": "unlisted-preview",
+            "releaseStage": "published" if PUBLISHED else "unlisted-preview",
             "correction": (
                 "Line timing follows separated-vocal large-v3 no-VAD ASR evidence. "
                 "Sound-close intended Mandarin is preserved where phonetics, "
@@ -254,11 +270,21 @@ def ensure_public_audio() -> None:
     target = SONGS / "audio" / PUBLIC_AUDIO
     target.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(SOURCE_AUDIO, target)
+    if PUBLISHED:
+        preview_target = SONGS / "audio" / PREVIEW_PUBLIC_AUDIO
+        if preview_target != target and preview_target.exists():
+            preview_target.unlink()
     subprocess.run(["node", "scripts/build-audio-json.js"], cwd=SONGS, check=True)
 
 
 def write_media_item() -> None:
     cover_path = ROOT / "website" / COVER
+    if PUBLISHED and not cover_path.is_file():
+        preview_cover_path = ROOT / "website" / PREVIEW_COVER
+        if not preview_cover_path.is_file():
+            raise FileNotFoundError(preview_cover_path)
+        cover_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(preview_cover_path, cover_path)
     if not cover_path.is_file():
         raise FileNotFoundError(cover_path)
     if not CORRECTION.is_file():
@@ -274,7 +300,7 @@ def write_media_item() -> None:
         "id": "xing-bian-shi-jian-zh-vocal",
         "label": "中文",
         "selectorLabel": "中文",
-        "publicRoleLabel": "Preview",
+        "publicRoleLabel": "中文" if PUBLISHED else "Preview",
         "role": "vocal",
         "languageCode": "zh-Hans",
         "languageLabel": "中文",
@@ -292,28 +318,32 @@ def write_media_item() -> None:
         "version": 1,
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "行遍世间 · Preview",
+        "title": "行遍世间" if PUBLISHED else "行遍世间 · Preview",
         "localizedTitles": {
-            "zh-Hans": "行遍世间 · 试听",
-            "en": "Every Road in the World · Preview",
-            "ja": "世界のすべての道・プレビュー",
+            "zh-Hans": "行遍世间" if PUBLISHED else "行遍世间 · 试听",
+            "en": "Every Road in the World" if PUBLISHED else "Every Road in the World · Preview",
+            "ja": "世界のすべての道" if PUBLISHED else "世界のすべての道・プレビュー",
         },
         "artist": "Musia",
         "description": "A traveler crosses snow, tides, mountains, and years, only to discover that every road was leading home.",
         "caption": "Against time, step after step, every road turns toward one long-awaited meeting.",
         "duration": 124.0,
-        "canonicalUrl": f"https://fun.lazying.art/?preview=1#{MEDIA_ID}",
+        "canonicalUrl": f"https://fun.lazying.art/#{MEDIA_ID}" if PUBLISHED else f"https://fun.lazying.art/?preview=1#{MEDIA_ID}",
         "publication": {
-            "visibility": "unlisted",
-            "stage": "preview",
-            "label": "Listening Preview",
-            "listed": False,
-            "note": "Direct-link listening preview; excluded from the default library and playback queue.",
+            "visibility": "public" if PUBLISHED else "unlisted",
+            "stage": "published" if PUBLISHED else "preview",
+            "label": "Published" if PUBLISHED else "Listening Preview",
+            "listed": PUBLISHED,
+            "note": (
+                "Selected public master with ASR-reviewed Mandarin lyrics and aligned translations."
+                if PUBLISHED
+                else "Direct-link listening preview; excluded from the default library and playback queue."
+            ),
         },
         "share": {
             "title": "行遍世间 - Fun Lazying Art",
             "description": "Across snow, tides, and years, every road leads to one long-awaited meeting.",
-            "url": f"https://fun.lazying.art/?preview=1#{MEDIA_ID}",
+            "url": f"https://fun.lazying.art/#{MEDIA_ID}" if PUBLISHED else f"https://fun.lazying.art/?preview=1#{MEDIA_ID}",
             "image": COVER,
             "siteName": "Fun Lazying Art",
         },
@@ -375,14 +405,14 @@ def write_media_item() -> None:
             }
         ],
         "timeline": {"unit": "seconds", "lines": timeline},
-        "playback": {"defaultMode": "off"},
+        "playback": {"defaultMode": "single" if PUBLISHED else "off"},
         "provenance": {
             "createdBy": "Musia",
             "generationProject": str(PROJECT.relative_to(ROOT)),
             "analysisRun": str(ANALYSIS.relative_to(ROOT)),
             "selectedSeed": 829213,
             "quality": {
-                "gate": "unlisted-human-listening-preview",
+                "gate": "public-selected-master" if PUBLISHED else "unlisted-human-listening-preview",
                 "note": "Selected after an eight-candidate music-first review; audio health passed and lyrics were corrected from independent full-mix and separated-vocal evidence.",
             },
             "lyricCorrection": str(CORRECTION.relative_to(ROOT)),
@@ -397,21 +427,17 @@ def write_media_item() -> None:
     item = {
         "id": MEDIA_ID,
         "kind": "song",
-        "title": "行遍世间 · Preview",
+        "title": "行遍世间" if PUBLISHED else "行遍世间 · Preview",
         "artist": "Musia",
         "summary": "Across snow, tides, mountains, and years, every road leads to one long-awaited meeting.",
         "manifest": f"data/songs/{MEDIA_ID}/manifest.json",
         "cover": COVER,
-        "visibility": "unlisted",
-        "releaseStage": "preview",
-        "category": "preview",
-        "previewLabel": "Listening Preview",
-        "previewReason": "Awaiting the user's listening decision before formal publication.",
+        "visibility": "public" if PUBLISHED else "unlisted",
+        "releaseStage": "published" if PUBLISHED else "preview",
+        "category": "music" if PUBLISHED else "preview",
         "languages": ["zh-Hans", "en", "ja"],
         "tags": [
             "music",
-            "preview",
-            "unlisted",
             "Mandarin",
             "journey",
             "homecoming",
@@ -421,15 +447,38 @@ def write_media_item() -> None:
             "chords",
         ],
     }
-    catalog["items"] = [entry for entry in catalog.get("items", []) if entry.get("id") != MEDIA_ID]
+    if not PUBLISHED:
+        item["previewLabel"] = "Listening Preview"
+        item["previewReason"] = "Awaiting the user's listening decision before formal publication."
+        item["tags"][1:1] = ["preview", "unlisted"]
+    removed_ids = {MEDIA_ID}
+    if PUBLISHED:
+        removed_ids.add(PREVIEW_MEDIA_ID)
+    catalog["items"] = [entry for entry in catalog.get("items", []) if entry.get("id") not in removed_ids]
     catalog["items"].insert(0, item)
     write_json(catalog_path, catalog)
 
+    if PUBLISHED:
+        preview_media_dir = ROOT / "website/data/songs" / PREVIEW_MEDIA_ID
+        if preview_media_dir != media_dir and preview_media_dir.exists():
+            shutil.rmtree(preview_media_dir)
+        preview_cover_path = ROOT / "website" / PREVIEW_COVER
+        if preview_cover_path != cover_path and preview_cover_path.exists():
+            preview_cover_path.unlink()
+
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--publish",
+        action="store_true",
+        help="Promote the selected render into the normal public Fun catalog.",
+    )
+    args = parser.parse_args()
+    configure_release(args.publish)
     ensure_public_audio()
     write_media_item()
-    print(f"https://fun.lazying.art/?preview=1#{MEDIA_ID}")
+    print(f"https://fun.lazying.art/#{MEDIA_ID}" if PUBLISHED else f"https://fun.lazying.art/?preview=1#{MEDIA_ID}")
 
 
 if __name__ == "__main__":
