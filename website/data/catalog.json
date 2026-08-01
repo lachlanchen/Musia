@@ -9,6 +9,37 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "xing-bian-shi-jian-preview",
+      "kind": "song",
+      "title": "行遍世间 · Preview",
+      "artist": "Musia",
+      "summary": "Across snow, tides, mountains, and years, every road leads to one long-awaited meeting.",
+      "manifest": "data/songs/xing-bian-shi-jian-preview/manifest.json",
+      "cover": "assets/covers/xing-bian-shi-jian-preview-16x9.png",
+      "visibility": "unlisted",
+      "releaseStage": "preview",
+      "category": "preview",
+      "previewLabel": "Listening Preview",
+      "previewReason": "Awaiting the user's listening decision before formal publication.",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "preview",
+        "unlisted",
+        "Mandarin",
+        "journey",
+        "homecoming",
+        "cinematic",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "luoshenfu-original-excerpt-preview",
       "kind": "song",
       "title": "洛神赋 · 原文选段",

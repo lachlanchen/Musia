@@ -1,0 +1,1431 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "xing-bian-shi-jian-preview",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 13.68,
+      "end": 17.06,
+      "text": "北の雪を歩いてきた",
+      "singableText": "北の雪を歩いてきた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "北",
+          "start": 13.68,
+          "end": 14.243,
+          "reading": "きた"
+        },
+        {
+          "text": "の",
+          "start": 14.243,
+          "end": 14.525
+        },
+        {
+          "text": "雪",
+          "start": 14.525,
+          "end": 15.088,
+          "reading": "ゆき"
+        },
+        {
+          "text": "を",
+          "start": 15.088,
+          "end": 15.37
+        },
+        {
+          "text": "歩い",
+          "start": 15.37,
+          "end": 16.215,
+          "reading": "あるい"
+        },
+        {
+          "text": "てきた",
+          "start": 16.215,
+          "end": 17.06
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 17.06,
+      "end": 20.34,
+      "text": "潮が長い夜を連れ去るのを見た",
+      "singableText": "潮が長い夜を連れ去るのを見た",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "潮",
+          "start": 17.06,
+          "end": 17.446,
+          "reading": "しお"
+        },
+        {
+          "text": "が",
+          "start": 17.446,
+          "end": 17.639
+        },
+        {
+          "text": "長い",
+          "start": 17.639,
+          "end": 18.218,
+          "reading": "ながい"
+        },
+        {
+          "text": "夜",
+          "start": 18.218,
+          "end": 18.604,
+          "reading": "よる"
+        },
+        {
+          "text": "を",
+          "start": 18.604,
+          "end": 18.796
+        },
+        {
+          "text": "連れ",
+          "start": 18.796,
+          "end": 19.182,
+          "reading": "つれ"
+        },
+        {
+          "text": "去る",
+          "start": 19.182,
+          "end": 19.568,
+          "reading": "さる"
+        },
+        {
+          "text": "のを",
+          "start": 19.568,
+          "end": 19.954
+        },
+        {
+          "text": "見た",
+          "start": 19.954,
+          "end": 20.34,
+          "reading": "みた"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 20.34,
+      "end": 23.6,
+      "text": "遠ざかる灯りの一つ一つが",
+      "singableText": "遠ざかる灯りの一つ一つが",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "遠ざ",
+          "start": 20.34,
+          "end": 20.951,
+          "reading": "とおざ"
+        },
+        {
+          "text": "かる",
+          "start": 20.951,
+          "end": 21.359
+        },
+        {
+          "text": "灯り",
+          "start": 21.359,
+          "end": 21.97,
+          "reading": "あかり"
+        },
+        {
+          "text": "の",
+          "start": 21.97,
+          "end": 22.174
+        },
+        {
+          "text": "一つ一つ",
+          "start": 22.174,
+          "end": 23.396,
+          "reading": "ひとつひとつ"
+        },
+        {
+          "text": "が",
+          "start": 23.396,
+          "end": 23.6
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 23.6,
+      "end": 26.46,
+      "text": "君の言えなかったさよならに見えた",
+      "singableText": "君の言えなかったさよならに見えた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 23.6,
+          "end": 23.936,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 23.936,
+          "end": 24.105
+        },
+        {
+          "text": "言え",
+          "start": 24.105,
+          "end": 24.441,
+          "reading": "いえ"
+        },
+        {
+          "text": "なかったさよならに",
+          "start": 24.441,
+          "end": 25.955
+        },
+        {
+          "text": "見え",
+          "start": 25.955,
+          "end": 26.292,
+          "reading": "みえ"
+        },
+        {
+          "text": "た",
+          "start": 26.292,
+          "end": 26.46
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 26.46,
+      "end": 30.22,
+      "text": "沈黙する山に問いかけ",
+      "singableText": "沈黙する山に問いかけ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "沈黙",
+          "start": 26.46,
+          "end": 27.617,
+          "reading": "ちんもく"
+        },
+        {
+          "text": "する",
+          "start": 27.617,
+          "end": 28.195
+        },
+        {
+          "text": "山",
+          "start": 28.195,
+          "end": 28.774,
+          "reading": "やま"
+        },
+        {
+          "text": "に",
+          "start": 28.774,
+          "end": 29.063
+        },
+        {
+          "text": "問い",
+          "start": 29.063,
+          "end": 29.642,
+          "reading": "とい"
+        },
+        {
+          "text": "かけ",
+          "start": 29.642,
+          "end": 30.22
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 30.22,
+      "end": 34.28,
+      "text": "空の果ての雁にも問いかけた",
+      "singableText": "空の果ての雁にも問いかけた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "空",
+          "start": 30.22,
+          "end": 30.761,
+          "reading": "そら"
+        },
+        {
+          "text": "の",
+          "start": 30.761,
+          "end": 31.032
+        },
+        {
+          "text": "果て",
+          "start": 31.032,
+          "end": 31.573,
+          "reading": "はて"
+        },
+        {
+          "text": "の",
+          "start": 31.573,
+          "end": 31.844
+        },
+        {
+          "text": "雁",
+          "start": 31.844,
+          "end": 32.385,
+          "reading": "かり"
+        },
+        {
+          "text": "にも",
+          "start": 32.385,
+          "end": 32.927
+        },
+        {
+          "text": "問い",
+          "start": 32.927,
+          "end": 33.468,
+          "reading": "とい"
+        },
+        {
+          "text": "かけた",
+          "start": 33.468,
+          "end": 34.28
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 36.08,
+      "end": 38.94,
+      "text": "もし出会いがすでに記され",
+      "singableText": "もし出会いがすでに記され",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "もし",
+          "start": 36.08,
+          "end": 36.52
+        },
+        {
+          "text": "出会い",
+          "start": 36.52,
+          "end": 37.18,
+          "reading": "であい"
+        },
+        {
+          "text": "がすでに",
+          "start": 37.18,
+          "end": 38.06
+        },
+        {
+          "text": "記さ",
+          "start": 38.06,
+          "end": 38.72,
+          "reading": "しるさ"
+        },
+        {
+          "text": "れ",
+          "start": 38.72,
+          "end": 38.94
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 38.94,
+      "end": 41.94,
+      "text": "巡る星の向こうにあるのなら",
+      "singableText": "巡る星の向こうにあるのなら",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "巡る",
+          "start": 38.94,
+          "end": 39.54,
+          "reading": "めぐる"
+        },
+        {
+          "text": "星",
+          "start": 39.54,
+          "end": 39.94,
+          "reading": "ほし"
+        },
+        {
+          "text": "の",
+          "start": 39.94,
+          "end": 40.14
+        },
+        {
+          "text": "向こう",
+          "start": 40.14,
+          "end": 40.74,
+          "reading": "むこう"
+        },
+        {
+          "text": "にあるのなら",
+          "start": 40.74,
+          "end": 41.94
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 41.94,
+      "end": 45.46,
+      "text": "なぜ私はなお越えねばならない",
+      "singableText": "なぜ私はなお越えねばならない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "なぜ",
+          "start": 41.94,
+          "end": 42.38
+        },
+        {
+          "text": "私",
+          "start": 42.38,
+          "end": 43.04,
+          "reading": "わたし"
+        },
+        {
+          "text": "はなお",
+          "start": 43.04,
+          "end": 43.7
+        },
+        {
+          "text": "越え",
+          "start": 43.7,
+          "end": 44.14,
+          "reading": "こえ"
+        },
+        {
+          "text": "ねばならない",
+          "start": 44.14,
+          "end": 45.46
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 45.46,
+      "end": 48.26,
+      "text": "これほど長い年月を",
+      "singableText": "これほど長い年月を",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "これほど",
+          "start": 45.46,
+          "end": 46.393
+        },
+        {
+          "text": "長い",
+          "start": 46.393,
+          "end": 47.093,
+          "reading": "ながい"
+        },
+        {
+          "text": "年月",
+          "start": 47.093,
+          "end": 48.027,
+          "reading": "としつき"
+        },
+        {
+          "text": "を",
+          "start": 48.027,
+          "end": 48.26
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 48.26,
+      "end": 51.66,
+      "text": "この世のすべての道を歩いた",
+      "singableText": "この世のすべての道を歩いた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 48.26,
+          "end": 48.713
+        },
+        {
+          "text": "世の",
+          "start": 48.713,
+          "end": 49.167,
+          "reading": "よの"
+        },
+        {
+          "text": "すべての",
+          "start": 49.167,
+          "end": 50.073
+        },
+        {
+          "text": "道",
+          "start": 50.073,
+          "end": 50.527,
+          "reading": "みち"
+        },
+        {
+          "text": "を",
+          "start": 50.527,
+          "end": 50.753
+        },
+        {
+          "text": "歩い",
+          "start": 50.753,
+          "end": 51.433,
+          "reading": "あるい"
+        },
+        {
+          "text": "た",
+          "start": 51.433,
+          "end": 51.66
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 51.66,
+      "end": 54.92,
+      "text": "時に逆らい、一歩ずつ",
+      "singableText": "時に逆らい、一歩ずつ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "時に",
+          "start": 51.66,
+          "end": 52.412,
+          "reading": "ときに"
+        },
+        {
+          "text": "逆ら",
+          "start": 52.412,
+          "end": 53.165,
+          "reading": "さから"
+        },
+        {
+          "text": "い",
+          "start": 53.165,
+          "end": 53.415
+        },
+        {
+          "text": "、",
+          "start": 53.415,
+          "end": 53.666
+        },
+        {
+          "text": "一歩",
+          "start": 53.666,
+          "end": 54.418,
+          "reading": "いっぽ"
+        },
+        {
+          "text": "ずつ",
+          "start": 54.418,
+          "end": 54.92
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 54.92,
+      "end": 57.74,
+      "text": "ただこの世で君に出会うため",
+      "singableText": "ただこの世で君に出会うため",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ただこの",
+          "start": 54.92,
+          "end": 55.726
+        },
+        {
+          "text": "世",
+          "start": 55.726,
+          "end": 55.927,
+          "reading": "よ"
+        },
+        {
+          "text": "で",
+          "start": 55.927,
+          "end": 56.129
+        },
+        {
+          "text": "君",
+          "start": 56.129,
+          "end": 56.531,
+          "reading": "くん"
+        },
+        {
+          "text": "に",
+          "start": 56.531,
+          "end": 56.733
+        },
+        {
+          "text": "出会う",
+          "start": 56.733,
+          "end": 57.337,
+          "reading": "であう"
+        },
+        {
+          "text": "ため",
+          "start": 57.337,
+          "end": 57.74
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 57.74,
+      "end": 60.06,
+      "text": "数えきれない人の果てで",
+      "singableText": "数えきれない人の果てで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "数え",
+          "start": 57.74,
+          "end": 58.275,
+          "reading": "かぞえ"
+        },
+        {
+          "text": "きれない",
+          "start": 58.275,
+          "end": 58.989
+        },
+        {
+          "text": "人",
+          "start": 58.989,
+          "end": 59.346,
+          "reading": "にん"
+        },
+        {
+          "text": "の",
+          "start": 59.346,
+          "end": 59.525
+        },
+        {
+          "text": "果て",
+          "start": 59.525,
+          "end": 59.882,
+          "reading": "はて"
+        },
+        {
+          "text": "で",
+          "start": 59.882,
+          "end": 60.06
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 60.06,
+      "end": 63.06,
+      "text": "人の世のすべての夕暮れを見つめ",
+      "singableText": "人の世のすべての夕暮れを見つめ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "人",
+          "start": 60.06,
+          "end": 60.413,
+          "reading": "にん"
+        },
+        {
+          "text": "の",
+          "start": 60.413,
+          "end": 60.589
+        },
+        {
+          "text": "世の",
+          "start": 60.589,
+          "end": 60.942,
+          "reading": "よの"
+        },
+        {
+          "text": "すべての",
+          "start": 60.942,
+          "end": 61.648
+        },
+        {
+          "text": "夕暮れ",
+          "start": 61.648,
+          "end": 62.354,
+          "reading": "ゆうぐれ"
+        },
+        {
+          "text": "を",
+          "start": 62.354,
+          "end": 62.531
+        },
+        {
+          "text": "見つ",
+          "start": 62.531,
+          "end": 62.884,
+          "reading": "みつ"
+        },
+        {
+          "text": "め",
+          "start": 62.884,
+          "end": 63.06
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 63.06,
+      "end": 66.52,
+      "text": "ようやく君の足音を聞いた",
+      "singableText": "ようやく君の足音を聞いた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ようやく",
+          "start": 63.06,
+          "end": 63.983
+        },
+        {
+          "text": "君",
+          "start": 63.983,
+          "end": 64.444,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 64.444,
+          "end": 64.675
+        },
+        {
+          "text": "足音",
+          "start": 64.675,
+          "end": 65.597,
+          "reading": "あしおと"
+        },
+        {
+          "text": "を",
+          "start": 65.597,
+          "end": 65.828
+        },
+        {
+          "text": "聞い",
+          "start": 65.828,
+          "end": 66.289,
+          "reading": "きい"
+        },
+        {
+          "text": "た",
+          "start": 66.289,
+          "end": 66.52
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 66.52,
+      "end": 69.7,
+      "text": "旅は迷い道ではなかった",
+      "singableText": "旅は迷い道ではなかった",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "旅",
+          "start": 66.52,
+          "end": 66.974,
+          "reading": "たび"
+        },
+        {
+          "text": "は",
+          "start": 66.974,
+          "end": 67.201
+        },
+        {
+          "text": "迷い",
+          "start": 67.201,
+          "end": 67.883,
+          "reading": "まよい"
+        },
+        {
+          "text": "道",
+          "start": 67.883,
+          "end": 68.337,
+          "reading": "みち"
+        },
+        {
+          "text": "ではなかった",
+          "start": 68.337,
+          "end": 69.7
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 69.7,
+      "end": 72.96,
+      "text": "すべての道のりが帰る場所へ続いていた",
+      "singableText": "すべての道のりが帰る場所へ続いていた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "すべての",
+          "start": 69.7,
+          "end": 70.293
+        },
+        {
+          "text": "道のり",
+          "start": 70.293,
+          "end": 70.885,
+          "reading": "みちのり"
+        },
+        {
+          "text": "が",
+          "start": 70.885,
+          "end": 71.034
+        },
+        {
+          "text": "帰る",
+          "start": 71.034,
+          "end": 71.478,
+          "reading": "かえる"
+        },
+        {
+          "text": "場所",
+          "start": 71.478,
+          "end": 71.923,
+          "reading": "ばしょ"
+        },
+        {
+          "text": "へ",
+          "start": 71.923,
+          "end": 72.071
+        },
+        {
+          "text": "続い",
+          "start": 72.071,
+          "end": 72.515,
+          "reading": "つづい"
+        },
+        {
+          "text": "ていた",
+          "start": 72.515,
+          "end": 72.96
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 72.96,
+      "end": 76.2,
+      "text": "もし私たちがすれ違ったのなら",
+      "singableText": "もし私たちがすれ違ったのなら",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "もし",
+          "start": 72.96,
+          "end": 73.341
+        },
+        {
+          "text": "私たち",
+          "start": 73.341,
+          "end": 74.294,
+          "reading": "わたしたち"
+        },
+        {
+          "text": "がすれ",
+          "start": 74.294,
+          "end": 74.866
+        },
+        {
+          "text": "違っ",
+          "start": 74.866,
+          "end": 75.438,
+          "reading": "ちがっ"
+        },
+        {
+          "text": "たのなら",
+          "start": 75.438,
+          "end": 76.2
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 76.2,
+      "end": 79.14,
+      "text": "春よ、もう少しゆっくり進んで",
+      "singableText": "春よ、もう少しゆっくり進んで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "春",
+          "start": 76.2,
+          "end": 76.546,
+          "reading": "はる"
+        },
+        {
+          "text": "よ",
+          "start": 76.546,
+          "end": 76.719
+        },
+        {
+          "text": "、",
+          "start": 76.719,
+          "end": 76.892
+        },
+        {
+          "text": "もう",
+          "start": 76.892,
+          "end": 77.238
+        },
+        {
+          "text": "少し",
+          "start": 77.238,
+          "end": 77.756,
+          "reading": "すこし"
+        },
+        {
+          "text": "ゆっくり",
+          "start": 77.756,
+          "end": 78.448
+        },
+        {
+          "text": "進ん",
+          "start": 78.448,
+          "end": 78.967,
+          "reading": "すすん"
+        },
+        {
+          "text": "で",
+          "start": 78.967,
+          "end": 79.14
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 79.14,
+      "end": 82.46,
+      "text": "君の瞳を見つけさせて",
+      "singableText": "君の瞳を見つけさせて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 79.14,
+          "end": 79.651,
+          "reading": "くん"
+        },
+        {
+          "text": "の",
+          "start": 79.651,
+          "end": 79.906
+        },
+        {
+          "text": "瞳",
+          "start": 79.906,
+          "end": 80.672,
+          "reading": "ひとみ"
+        },
+        {
+          "text": "を",
+          "start": 80.672,
+          "end": 80.928
+        },
+        {
+          "text": "見つ",
+          "start": 80.928,
+          "end": 81.438,
+          "reading": "みつ"
+        },
+        {
+          "text": "けさせて",
+          "start": 81.438,
+          "end": 82.46
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 82.46,
+      "end": 86.24,
+      "text": "故郷の灯りを見つけるように",
+      "singableText": "故郷の灯りを見つけるように",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "故郷",
+          "start": 82.46,
+          "end": 83.405,
+          "reading": "こきょう"
+        },
+        {
+          "text": "の",
+          "start": 83.405,
+          "end": 83.641
+        },
+        {
+          "text": "灯り",
+          "start": 83.641,
+          "end": 84.35,
+          "reading": "あかり"
+        },
+        {
+          "text": "を",
+          "start": 84.35,
+          "end": 84.586
+        },
+        {
+          "text": "見つ",
+          "start": 84.586,
+          "end": 85.059,
+          "reading": "みつ"
+        },
+        {
+          "text": "けるように",
+          "start": 85.059,
+          "end": 86.24
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 86.24,
+      "end": 89.04,
+      "text": "この世のすべての道を歩いた",
+      "singableText": "この世のすべての道を歩いた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 86.24,
+          "end": 86.613
+        },
+        {
+          "text": "世の",
+          "start": 86.613,
+          "end": 86.987,
+          "reading": "よの"
+        },
+        {
+          "text": "すべての",
+          "start": 86.987,
+          "end": 87.733
+        },
+        {
+          "text": "道",
+          "start": 87.733,
+          "end": 88.107,
+          "reading": "みち"
+        },
+        {
+          "text": "を",
+          "start": 88.107,
+          "end": 88.293
+        },
+        {
+          "text": "歩い",
+          "start": 88.293,
+          "end": 88.853,
+          "reading": "あるい"
+        },
+        {
+          "text": "た",
+          "start": 88.853,
+          "end": 89.04
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 89.6,
+      "end": 92.16,
+      "text": "時に逆らい、一歩ずつ",
+      "singableText": "時に逆らい、一歩ずつ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "時に",
+          "start": 89.6,
+          "end": 90.191,
+          "reading": "ときに"
+        },
+        {
+          "text": "逆ら",
+          "start": 90.191,
+          "end": 90.782,
+          "reading": "さから"
+        },
+        {
+          "text": "い",
+          "start": 90.782,
+          "end": 90.978
+        },
+        {
+          "text": "、",
+          "start": 90.978,
+          "end": 91.175
+        },
+        {
+          "text": "一歩",
+          "start": 91.175,
+          "end": 91.766,
+          "reading": "いっぽ"
+        },
+        {
+          "text": "ずつ",
+          "start": 91.766,
+          "end": 92.16
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 92.16,
+      "end": 95.42,
+      "text": "ただこの世で君に出会うため",
+      "singableText": "ただこの世で君に出会うため",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ただこの",
+          "start": 92.16,
+          "end": 93.091
+        },
+        {
+          "text": "世",
+          "start": 93.091,
+          "end": 93.324,
+          "reading": "よ"
+        },
+        {
+          "text": "で",
+          "start": 93.324,
+          "end": 93.557
+        },
+        {
+          "text": "君",
+          "start": 93.557,
+          "end": 94.023,
+          "reading": "くん"
+        },
+        {
+          "text": "に",
+          "start": 94.023,
+          "end": 94.256
+        },
+        {
+          "text": "出会う",
+          "start": 94.256,
+          "end": 94.954,
+          "reading": "であう"
+        },
+        {
+          "text": "ため",
+          "start": 94.954,
+          "end": 95.42
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 95.42,
+      "end": 98.9,
+      "text": "歳月のやさしい果てで",
+      "singableText": "歳月のやさしい果てで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "歳月",
+          "start": 95.42,
+          "end": 96.58,
+          "reading": "さいげつ"
+        },
+        {
+          "text": "のやさしい",
+          "start": 96.58,
+          "end": 98.03
+        },
+        {
+          "text": "果て",
+          "start": 98.03,
+          "end": 98.61,
+          "reading": "はて"
+        },
+        {
+          "text": "で",
+          "start": 98.61,
+          "end": 98.9
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 98.9,
+      "end": 101.98,
+      "text": "道すがらの孤独をすべて置き",
+      "singableText": "道すがらの孤独をすべて置き",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "道",
+          "start": 98.9,
+          "end": 99.311,
+          "reading": "みち"
+        },
+        {
+          "text": "すがらの",
+          "start": 99.311,
+          "end": 100.132
+        },
+        {
+          "text": "孤独",
+          "start": 100.132,
+          "end": 100.748,
+          "reading": "こどく"
+        },
+        {
+          "text": "をすべて",
+          "start": 100.748,
+          "end": 101.569
+        },
+        {
+          "text": "置き",
+          "start": 101.569,
+          "end": 101.98,
+          "reading": "おき"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 101.98,
+      "end": 105.46,
+      "text": "残る人生を君に託す",
+      "singableText": "残る人生を君に託す",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "残る",
+          "start": 101.98,
+          "end": 102.726,
+          "reading": "のこる"
+        },
+        {
+          "text": "人生",
+          "start": 102.726,
+          "end": 103.72,
+          "reading": "じんせい"
+        },
+        {
+          "text": "を",
+          "start": 103.72,
+          "end": 103.969
+        },
+        {
+          "text": "君",
+          "start": 103.969,
+          "end": 104.466,
+          "reading": "くん"
+        },
+        {
+          "text": "に",
+          "start": 104.466,
+          "end": 104.714
+        },
+        {
+          "text": "託す",
+          "start": 104.714,
+          "end": 105.46,
+          "reading": "たくす"
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 105.46,
+      "end": 108.68,
+      "text": "これから山も海も遠くはない",
+      "singableText": "これから山も海も遠くはない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "これから",
+          "start": 105.46,
+          "end": 106.265
+        },
+        {
+          "text": "山",
+          "start": 106.265,
+          "end": 106.668,
+          "reading": "やま"
+        },
+        {
+          "text": "も",
+          "start": 106.668,
+          "end": 106.869
+        },
+        {
+          "text": "海",
+          "start": 106.869,
+          "end": 107.271,
+          "reading": "うみ"
+        },
+        {
+          "text": "も",
+          "start": 107.271,
+          "end": 107.473
+        },
+        {
+          "text": "遠く",
+          "start": 107.473,
+          "end": 108.076,
+          "reading": "とおく"
+        },
+        {
+          "text": "はない",
+          "start": 108.076,
+          "end": 108.68
+        }
+      ]
+    },
+    {
+      "id": "l30",
+      "start": 108.68,
+      "end": 111.86,
+      "text": "君がそばにいる、それが帰る場所",
+      "singableText": "君がそばにいる、それが帰る場所",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 108.68,
+          "end": 109.033,
+          "reading": "くん"
+        },
+        {
+          "text": "がそばにいる",
+          "start": 109.033,
+          "end": 110.093
+        },
+        {
+          "text": "、",
+          "start": 110.093,
+          "end": 110.27
+        },
+        {
+          "text": "それが",
+          "start": 110.27,
+          "end": 110.8
+        },
+        {
+          "text": "帰る",
+          "start": 110.8,
+          "end": 111.33,
+          "reading": "かえる"
+        },
+        {
+          "text": "場所",
+          "start": 111.33,
+          "end": 111.86,
+          "reading": "ばしょ"
+        }
+      ]
+    },
+    {
+      "id": "l31",
+      "start": 111.86,
+      "end": 115.0,
+      "text": "この世のすべての道を歩いた",
+      "singableText": "この世のすべての道を歩いた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "この",
+          "start": 111.86,
+          "end": 112.279
+        },
+        {
+          "text": "世の",
+          "start": 112.279,
+          "end": 112.697,
+          "reading": "よの"
+        },
+        {
+          "text": "すべての",
+          "start": 112.697,
+          "end": 113.535
+        },
+        {
+          "text": "道",
+          "start": 113.535,
+          "end": 113.953,
+          "reading": "みち"
+        },
+        {
+          "text": "を",
+          "start": 113.953,
+          "end": 114.163
+        },
+        {
+          "text": "歩い",
+          "start": 114.163,
+          "end": 114.791,
+          "reading": "あるい"
+        },
+        {
+          "text": "た",
+          "start": 114.791,
+          "end": 115.0
+        }
+      ]
+    },
+    {
+      "id": "l32",
+      "start": 117.4,
+      "end": 120.08,
+      "text": "帰る場所は、ずっとそばにあった",
+      "singableText": "帰る場所は、ずっとそばにあった",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帰る",
+          "start": 117.4,
+          "end": 117.873,
+          "reading": "かえる"
+        },
+        {
+          "text": "場所",
+          "start": 117.873,
+          "end": 118.346,
+          "reading": "ばしょ"
+        },
+        {
+          "text": "は",
+          "start": 118.346,
+          "end": 118.504
+        },
+        {
+          "text": "、",
+          "start": 118.504,
+          "end": 118.661
+        },
+        {
+          "text": "ずっとそばにあった",
+          "start": 118.661,
+          "end": 120.08
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-vocal",
+    "releaseStage": "unlisted-preview",
+    "correction": "Line timing follows separated-vocal large-v3 no-VAD ASR evidence. Sound-close intended Mandarin is preserved where phonetics, line length, context, and independent MOSS evidence agree. Two unsung draft lines are omitted and the generated outro is shortened."
+  }
+}
