@@ -2272,6 +2272,11 @@ async function loadMediaItem(item, updateHash = false) {
   $("media-title").textContent = state.manifest.title;
   $("media-artist").textContent = state.manifest.artist ? `by ${state.manifest.artist}` : "";
   $("media-subtitle").textContent = "";
+  const mediaCredit = $("media-credit");
+  if (mediaCredit) {
+    mediaCredit.textContent = state.manifest.generationCredit || "";
+    mediaCredit.hidden = !state.manifest.generationCredit;
+  }
   $("media-caption").textContent = state.manifest.caption || labelKind(state.manifest.kind);
   $("key-label").textContent = musical.key || "No key";
   $("bpm-label").textContent = numericBpm(musical.bpm) ? `${Math.round(numericBpm(musical.bpm))} BPM` : "No BPM";

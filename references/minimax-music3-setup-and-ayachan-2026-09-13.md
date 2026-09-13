@@ -1,5 +1,9 @@
 # MiniMax Music 3: installation and Aya Chan song
 
+Update, September 14: the user subsequently requested website publication of
+the selected song. See the [publication record](ban-qu-chang-an-website-publication-2026-09-14.md).
+The private-audition statements below describe the original generation task.
+
 ## Scope
 
 Requested: update the music tools, prioritize MiniMax, and generate a beautiful

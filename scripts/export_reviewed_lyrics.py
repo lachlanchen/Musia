@@ -68,6 +68,8 @@ def main() -> int:
     load_phrases_dict({"弹完": [["tán"], ["wán"]], "长安": [["cháng"], ["ān"]]})
     kakasi = pykakasi.kakasi()
     proper = {"長安": "ちょうあん", "蘭州": "らんしゅう", "黄河": "こうが", "丹霞": "たんか"}
+    proper.update(review.get("jaReadingOverrides", {}))
+    proper_pattern = "(" + "|".join(re.escape(word) for word in sorted(proper, key=len, reverse=True)) + ")"
     languages = {
         "zh-Hans": {"code": "zh-Hans", "label": "Mandarin Chinese", "nativeLabel": "中文", "script": "Hans", "pronunciation": "pinyin"},
         "en": {"code": "en", "label": "English", "nativeLabel": "English", "script": "Latn"},
@@ -92,7 +94,7 @@ def main() -> int:
             text = row["text"] if code == "zh-Hans" else row[code]
             translated = []
             if code == "ja":
-                for part in re.split("(" + "|".join(proper) + ")", text):
+                for part in re.split(proper_pattern, text):
                     if part in proper:
                         translated.append({"text": part, "reading": proper[part]})
                     else:

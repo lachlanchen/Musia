@@ -9,6 +9,35 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "ban-qu-chang-an",
+      "kind": "song",
+      "title": "半曲长安",
+      "artist": "Musia",
+      "summary": "Half a melody waits in Chang'an; the other half travels across the Yellow River and red mountains, carrying a promise to return.",
+      "manifest": "data/songs/ban-qu-chang-an/manifest.json",
+      "cover": "assets/covers/ban-qu-chang-an-16x9.png",
+      "visibility": "public",
+      "releaseStage": "published",
+      "category": "music",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "Mandarin",
+        "Aya Chan",
+        "hanfu",
+        "Chang'an",
+        "Yellow River",
+        "homecoming",
+        "pinyin",
+        "furigana",
+        "chords"
+      ]
+    },
+    {
       "id": "xing-bian-shi-jian",
       "kind": "song",
       "title": "行遍世间",

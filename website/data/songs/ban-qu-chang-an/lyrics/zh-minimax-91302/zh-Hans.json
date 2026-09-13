@@ -1,0 +1,2090 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "ban-qu-chang-an",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 15.259999999999998,
+      "end": 19.4,
+      "text": "城墙的风拂过衣裳",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "城",
+          "start": 15.259999999999998,
+          "end": 16.1,
+          "alignment": "asr-word-span",
+          "sourceText": "陈",
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "墙",
+          "start": 16.1,
+          "end": 16.56,
+          "alignment": "asr-word-span",
+          "sourceText": "强",
+          "pinyin": "qiang2"
+        },
+        {
+          "text": "的",
+          "start": 16.56,
+          "end": 16.9,
+          "alignment": "asr-word-span",
+          "sourceText": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "风",
+          "start": 16.9,
+          "end": 17.28,
+          "alignment": "asr-word-span",
+          "sourceText": "风",
+          "pinyin": "feng1"
+        },
+        {
+          "text": "拂",
+          "start": 17.28,
+          "end": 18.04,
+          "alignment": "asr-word-span",
+          "sourceText": "拂",
+          "pinyin": "fu2"
+        },
+        {
+          "text": "过",
+          "start": 18.04,
+          "end": 18.46,
+          "alignment": "asr-word-span",
+          "sourceText": "过",
+          "pinyin": "guo4"
+        },
+        {
+          "text": "衣",
+          "start": 18.46,
+          "end": 18.98,
+          "alignment": "asr-word-span",
+          "sourceText": "衣",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "裳",
+          "start": 18.98,
+          "end": 19.4,
+          "alignment": "asr-word-span",
+          "sourceText": "裳",
+          "pinyin": "shang5"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 20.779999999999998,
+      "end": 25.3,
+      "text": "你把晚霞别在我肩上",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "你",
+          "start": 20.779999999999998,
+          "end": 21.62,
+          "alignment": "asr-word-span",
+          "sourceText": "你",
+          "pinyin": "ni3"
+        },
+        {
+          "text": "把",
+          "start": 21.62,
+          "end": 21.86,
+          "alignment": "asr-word-span",
+          "sourceText": "把",
+          "pinyin": "ba3"
+        },
+        {
+          "text": "晚",
+          "start": 21.86,
+          "end": 22.1,
+          "alignment": "asr-word-span",
+          "sourceText": "晚",
+          "pinyin": "wan3"
+        },
+        {
+          "text": "霞",
+          "start": 22.1,
+          "end": 22.5,
+          "alignment": "asr-word-span",
+          "sourceText": "霞",
+          "pinyin": "xia2"
+        },
+        {
+          "text": "别",
+          "start": 22.5,
+          "end": 22.9,
+          "alignment": "asr-word-span",
+          "sourceText": "憋",
+          "pinyin": "bie2"
+        },
+        {
+          "text": "在",
+          "start": 22.9,
+          "end": 23.32,
+          "alignment": "asr-word-span",
+          "sourceText": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "我",
+          "start": 23.32,
+          "end": 23.72,
+          "alignment": "asr-word-span",
+          "sourceText": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "肩",
+          "start": 23.72,
+          "end": 24.48,
+          "alignment": "asr-word-span",
+          "sourceText": "肩",
+          "pinyin": "jian1"
+        },
+        {
+          "text": "上",
+          "start": 24.48,
+          "end": 25.3,
+          "alignment": "asr-word-span",
+          "sourceText": "上",
+          "pinyin": "shang4"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 26.7,
+      "end": 31.58,
+      "text": "一曲未尽天色已晚",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 26.7,
+          "end": 27.92,
+          "alignment": "asr-word-span",
+          "sourceText": "一",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "曲",
+          "start": 27.92,
+          "end": 28.38,
+          "alignment": "asr-word-span",
+          "sourceText": "曲",
+          "pinyin": "qu1"
+        },
+        {
+          "text": "未",
+          "start": 28.38,
+          "end": 28.84,
+          "alignment": "asr-word-span",
+          "sourceText": "未",
+          "pinyin": "wei4"
+        },
+        {
+          "text": "尽",
+          "start": 28.84,
+          "end": 29.18,
+          "alignment": "asr-word-span",
+          "sourceText": "尽",
+          "pinyin": "jin3"
+        },
+        {
+          "text": "天",
+          "start": 29.18,
+          "end": 29.58,
+          "alignment": "asr-word-span",
+          "sourceText": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "色",
+          "start": 29.58,
+          "end": 29.94,
+          "alignment": "asr-word-span",
+          "sourceText": "色",
+          "pinyin": "se4"
+        },
+        {
+          "text": "已",
+          "start": 29.94,
+          "end": 30.64,
+          "alignment": "asr-word-span",
+          "sourceText": "已",
+          "pinyin": "yi3"
+        },
+        {
+          "text": "晚",
+          "start": 30.64,
+          "end": 31.58,
+          "alignment": "asr-word-span",
+          "sourceText": "晚",
+          "pinyin": "wan3"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 31.58,
+      "end": 37.9,
+      "text": "我说等我再续下一段",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "start": 31.58,
+          "end": 33.5,
+          "alignment": "asr-word-span",
+          "sourceText": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "说",
+          "start": 33.5,
+          "end": 33.7,
+          "alignment": "asr-word-span",
+          "sourceText": "说",
+          "pinyin": "shuo1"
+        },
+        {
+          "text": "等",
+          "start": 33.7,
+          "end": 33.86,
+          "alignment": "asr-word-span",
+          "sourceText": "等",
+          "pinyin": "deng3"
+        },
+        {
+          "text": "我",
+          "start": 33.86,
+          "end": 34.3,
+          "alignment": "asr-word-span",
+          "sourceText": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "再",
+          "start": 34.3,
+          "end": 34.7,
+          "alignment": "asr-word-span",
+          "sourceText": "再",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "续",
+          "start": 34.7,
+          "end": 35.6,
+          "alignment": "asr-word-span",
+          "sourceText": "续",
+          "pinyin": "xu4"
+        },
+        {
+          "text": "下一",
+          "start": 35.6,
+          "end": 36.42,
+          "alignment": "asr-word-span",
+          "sourceText": "下一",
+          "pinyin": "xia4 yi1"
+        },
+        {
+          "text": "段",
+          "start": 36.42,
+          "end": 37.9,
+          "alignment": "asr-word-span",
+          "sourceText": "段",
+          "pinyin": "duan4"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 37.9,
+      "end": 44.28,
+      "text": "马蹄声远灯火渐淡",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "马",
+          "start": 37.9,
+          "end": 39.92,
+          "alignment": "asr-word-span",
+          "sourceText": "马",
+          "pinyin": "ma3"
+        },
+        {
+          "text": "蹄",
+          "start": 39.92,
+          "end": 40.22,
+          "alignment": "asr-word-span",
+          "sourceText": "蹄",
+          "pinyin": "ti2"
+        },
+        {
+          "text": "声",
+          "start": 40.22,
+          "end": 40.64,
+          "alignment": "asr-word-span",
+          "sourceText": "声",
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "远",
+          "start": 40.64,
+          "end": 41.1,
+          "alignment": "asr-word-span",
+          "sourceText": "远",
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "灯",
+          "start": 41.1,
+          "end": 42.02,
+          "alignment": "asr-word-span",
+          "sourceText": "灯",
+          "pinyin": "deng1"
+        },
+        {
+          "text": "火",
+          "start": 42.02,
+          "end": 42.62,
+          "alignment": "asr-word-span",
+          "sourceText": "火",
+          "pinyin": "huo3"
+        },
+        {
+          "text": "渐",
+          "start": 42.62,
+          "end": 43.66,
+          "alignment": "asr-word-span",
+          "sourceText": "简",
+          "pinyin": "jian4"
+        },
+        {
+          "text": "淡",
+          "start": 43.66,
+          "end": 44.28,
+          "alignment": "asr-word-span",
+          "sourceText": "单",
+          "pinyin": "dan4"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 44.28,
+      "end": 50.58,
+      "text": "回头还有你在城南",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "回",
+          "start": 44.28,
+          "end": 46.14,
+          "alignment": "asr-word-span",
+          "sourceText": "回",
+          "pinyin": "hui2"
+        },
+        {
+          "text": "头",
+          "start": 46.14,
+          "end": 46.6,
+          "alignment": "asr-word-span",
+          "sourceText": "头",
+          "pinyin": "tou2"
+        },
+        {
+          "text": "还有",
+          "start": 46.6,
+          "end": 47.06,
+          "alignment": "asr-word-span",
+          "sourceText": "还有",
+          "pinyin": "hai2 you3"
+        },
+        {
+          "text": "你在",
+          "start": 47.06,
+          "end": 48.44,
+          "alignment": "asr-word-span",
+          "sourceText": "你在",
+          "pinyin": "ni3 zai4"
+        },
+        {
+          "text": "城",
+          "start": 48.44,
+          "end": 49.88,
+          "alignment": "asr-word-span",
+          "sourceText": "城",
+          "pinyin": "cheng2"
+        },
+        {
+          "text": "南",
+          "start": 49.88,
+          "end": 50.58,
+          "alignment": "asr-word-span",
+          "sourceText": "门",
+          "pinyin": "nan2"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 52.160000000000004,
+      "end": 55.62,
+      "text": "半首琴声留在长安",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "半",
+          "start": 52.160000000000004,
+          "end": 52.92,
+          "alignment": "asr-word-span",
+          "sourceText": "伴",
+          "pinyin": "ban4"
+        },
+        {
+          "text": "首",
+          "start": 52.92,
+          "end": 53.24,
+          "alignment": "asr-word-span",
+          "sourceText": "手",
+          "pinyin": "shou3"
+        },
+        {
+          "text": "琴",
+          "start": 53.24,
+          "end": 53.74,
+          "alignment": "asr-word-span",
+          "sourceText": "琴",
+          "pinyin": "qin2"
+        },
+        {
+          "text": "声",
+          "start": 53.74,
+          "end": 54.02,
+          "alignment": "asr-word-span",
+          "sourceText": "声",
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "留",
+          "start": 54.02,
+          "end": 54.48,
+          "alignment": "asr-word-span",
+          "sourceText": "留",
+          "pinyin": "liu2"
+        },
+        {
+          "text": "在",
+          "start": 54.48,
+          "end": 54.92,
+          "alignment": "asr-word-span",
+          "sourceText": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "长",
+          "start": 54.92,
+          "end": 55.24,
+          "alignment": "asr-word-span",
+          "sourceText": "长",
+          "pinyin": "chang2"
+        },
+        {
+          "text": "安",
+          "start": 55.24,
+          "end": 55.62,
+          "alignment": "asr-word-span",
+          "sourceText": "安",
+          "pinyin": "an1"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 55.62,
+      "end": 58.84,
+      "text": "一半随我越过千山",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 55.62,
+          "end": 56.2,
+          "alignment": "asr-word-span",
+          "sourceText": "一",
+          "pinyin": "yi2"
+        },
+        {
+          "text": "半",
+          "start": 56.2,
+          "end": 56.48,
+          "alignment": "asr-word-span",
+          "sourceText": "伴",
+          "pinyin": "ban4"
+        },
+        {
+          "text": "随",
+          "start": 56.48,
+          "end": 56.92,
+          "alignment": "asr-word-span",
+          "sourceText": "随",
+          "pinyin": "sui2"
+        },
+        {
+          "text": "我",
+          "start": 56.92,
+          "end": 57.26,
+          "alignment": "asr-word-span",
+          "sourceText": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "越",
+          "start": 57.26,
+          "end": 57.68,
+          "alignment": "asr-word-span",
+          "sourceText": "越",
+          "pinyin": "yue4"
+        },
+        {
+          "text": "过",
+          "start": 57.68,
+          "end": 58.1,
+          "alignment": "asr-word-span",
+          "sourceText": "过",
+          "pinyin": "guo4"
+        },
+        {
+          "text": "千",
+          "start": 58.1,
+          "end": 58.34,
+          "alignment": "asr-word-span",
+          "sourceText": "千",
+          "pinyin": "qian1"
+        },
+        {
+          "text": "山",
+          "start": 58.34,
+          "end": 58.84,
+          "alignment": "asr-word-span",
+          "sourceText": "山",
+          "pinyin": "shan1"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 58.84,
+      "end": 62.4,
+      "text": "黄河再宽隔不断想念",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "黄",
+          "start": 58.84,
+          "end": 59.62,
+          "alignment": "asr-word-span",
+          "sourceText": "黄",
+          "pinyin": "huang2"
+        },
+        {
+          "text": "河",
+          "start": 59.62,
+          "end": 59.82,
+          "alignment": "asr-word-span",
+          "sourceText": "河",
+          "pinyin": "he2"
+        },
+        {
+          "text": "再",
+          "start": 59.82,
+          "end": 60.0,
+          "alignment": "asr-word-span",
+          "sourceText": "再",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "宽",
+          "start": 60.0,
+          "end": 60.46,
+          "alignment": "asr-word-span",
+          "sourceText": "宽",
+          "pinyin": "kuan1"
+        },
+        {
+          "text": "隔",
+          "start": 60.46,
+          "end": 60.8,
+          "alignment": "asr-word-span",
+          "sourceText": "隔",
+          "pinyin": "ge2"
+        },
+        {
+          "text": "不",
+          "start": 60.8,
+          "end": 61.14,
+          "alignment": "asr-word-span",
+          "sourceText": "不",
+          "pinyin": "bu4"
+        },
+        {
+          "text": "断",
+          "start": 61.14,
+          "end": 61.68,
+          "alignment": "asr-word-span",
+          "sourceText": "断",
+          "pinyin": "duan4"
+        },
+        {
+          "text": "想",
+          "start": 61.68,
+          "end": 61.96,
+          "alignment": "asr-word-span",
+          "sourceText": "想",
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "念",
+          "start": 61.96,
+          "end": 62.4,
+          "alignment": "asr-word-span",
+          "sourceText": "念",
+          "pinyin": "nian4"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 62.4,
+      "end": 64.78,
+      "text": "风沙再大认得你的眼",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 62.4,
+          "end": 62.72,
+          "alignment": "asr-word-span",
+          "sourceText": "风",
+          "pinyin": "feng1"
+        },
+        {
+          "text": "沙",
+          "start": 62.72,
+          "end": 62.96,
+          "alignment": "asr-word-span",
+          "sourceText": "沙",
+          "pinyin": "sha1"
+        },
+        {
+          "text": "再",
+          "start": 62.96,
+          "end": 63.18,
+          "alignment": "asr-word-span",
+          "sourceText": "再",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "大",
+          "start": 63.18,
+          "end": 63.58,
+          "alignment": "asr-word-span",
+          "sourceText": "大",
+          "pinyin": "da4"
+        },
+        {
+          "text": "认",
+          "start": 63.58,
+          "end": 63.94,
+          "alignment": "asr-word-span",
+          "sourceText": "认",
+          "pinyin": "ren4"
+        },
+        {
+          "text": "得",
+          "start": 63.94,
+          "end": 64.14,
+          "alignment": "asr-word-span",
+          "sourceText": "得",
+          "pinyin": "de5"
+        },
+        {
+          "text": "你的",
+          "start": 64.14,
+          "end": 64.4,
+          "alignment": "asr-word-span",
+          "sourceText": "你的",
+          "pinyin": "ni3 de5"
+        },
+        {
+          "text": "眼",
+          "start": 64.4,
+          "end": 64.78,
+          "alignment": "asr-word-span",
+          "sourceText": "眼",
+          "pinyin": "yan3"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 64.78,
+      "end": 68.72,
+      "text": "等我归来坐在你身旁",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "等",
+          "start": 64.78,
+          "end": 65.52,
+          "alignment": "asr-word-span",
+          "sourceText": "等",
+          "pinyin": "deng3"
+        },
+        {
+          "text": "我",
+          "start": 65.52,
+          "end": 65.94,
+          "alignment": "asr-word-span",
+          "sourceText": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "归",
+          "start": 65.94,
+          "end": 66.36,
+          "alignment": "asr-word-span",
+          "sourceText": "归",
+          "pinyin": "gui1"
+        },
+        {
+          "text": "来",
+          "start": 66.36,
+          "end": 66.76,
+          "alignment": "asr-word-span",
+          "sourceText": "来",
+          "pinyin": "lai2"
+        },
+        {
+          "text": "坐",
+          "start": 66.76,
+          "end": 67.1,
+          "alignment": "asr-word-span",
+          "sourceText": "坐",
+          "pinyin": "zuo4"
+        },
+        {
+          "text": "在",
+          "start": 67.1,
+          "end": 67.56,
+          "alignment": "asr-word-span",
+          "sourceText": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "你",
+          "start": 67.56,
+          "end": 67.92,
+          "alignment": "asr-word-span",
+          "sourceText": "你",
+          "pinyin": "ni3"
+        },
+        {
+          "text": "身",
+          "start": 67.92,
+          "end": 68.28,
+          "alignment": "asr-word-span",
+          "sourceText": "身",
+          "pinyin": "shen1"
+        },
+        {
+          "text": "旁",
+          "start": 68.28,
+          "end": 68.72,
+          "alignment": "asr-word-span",
+          "sourceText": "旁",
+          "pinyin": "pang2"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 68.72,
+      "end": 71.52,
+      "text": "把那半首轻轻弹完",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "把",
+          "start": 68.72,
+          "end": 69.08,
+          "alignment": "asr-word-span",
+          "sourceText": "把",
+          "pinyin": "ba3"
+        },
+        {
+          "text": "那",
+          "start": 69.08,
+          "end": 69.3,
+          "alignment": "asr-word-span",
+          "sourceText": "那",
+          "pinyin": "na4"
+        },
+        {
+          "text": "半",
+          "start": 69.3,
+          "end": 69.54,
+          "alignment": "asr-word-span",
+          "sourceText": "伴",
+          "pinyin": "ban4"
+        },
+        {
+          "text": "首",
+          "start": 69.54,
+          "end": 69.96,
+          "alignment": "asr-word-span",
+          "sourceText": "手",
+          "pinyin": "shou3"
+        },
+        {
+          "text": "轻",
+          "start": 69.96,
+          "end": 70.4,
+          "alignment": "asr-word-span",
+          "sourceText": "轻",
+          "pinyin": "qing1"
+        },
+        {
+          "text": "轻",
+          "start": 70.4,
+          "end": 70.84,
+          "alignment": "asr-word-span",
+          "sourceText": "轻",
+          "pinyin": "qing1"
+        },
+        {
+          "text": "弹",
+          "start": 70.84,
+          "end": 71.1,
+          "alignment": "asr-word-span",
+          "sourceText": "弹",
+          "pinyin": "tan2"
+        },
+        {
+          "text": "完",
+          "start": 71.1,
+          "end": 71.52,
+          "alignment": "asr-word-span",
+          "sourceText": "完",
+          "pinyin": "wan2"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 87.0,
+      "end": 90.9,
+      "text": "兰州的夜水映星光",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "兰",
+          "start": 87.0,
+          "end": 87.76,
+          "alignment": "asr-word-span",
+          "sourceText": "蓝",
+          "pinyin": "lan2"
+        },
+        {
+          "text": "州",
+          "start": 87.76,
+          "end": 88.06,
+          "alignment": "asr-word-span",
+          "sourceText": "昼",
+          "pinyin": "zhou1"
+        },
+        {
+          "text": "的",
+          "start": 88.06,
+          "end": 88.3,
+          "alignment": "asr-word-span",
+          "sourceText": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "夜",
+          "start": 88.3,
+          "end": 88.52,
+          "alignment": "asr-word-span",
+          "sourceText": "夜",
+          "pinyin": "ye4"
+        },
+        {
+          "text": "水",
+          "start": 88.52,
+          "end": 89.22,
+          "alignment": "asr-word-span",
+          "sourceText": "水",
+          "pinyin": "shui3"
+        },
+        {
+          "text": "映",
+          "start": 89.22,
+          "end": 90.08,
+          "alignment": "asr-word-span",
+          "sourceText": "映",
+          "pinyin": "ying4"
+        },
+        {
+          "text": "星",
+          "start": 90.08,
+          "end": 90.38,
+          "alignment": "asr-word-span",
+          "sourceText": "星",
+          "pinyin": "xing1"
+        },
+        {
+          "text": "光",
+          "start": 90.38,
+          "end": 90.9,
+          "alignment": "asr-word-span",
+          "sourceText": "光",
+          "pinyin": "guang1"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 90.9,
+      "end": 93.6,
+      "text": "丹霞如火染红了远山",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "丹",
+          "start": 90.9,
+          "end": 91.28,
+          "alignment": "asr-word-span",
+          "sourceText": "淡",
+          "pinyin": "dan1"
+        },
+        {
+          "text": "霞",
+          "start": 91.28,
+          "end": 91.42,
+          "alignment": "asr-word-span",
+          "sourceText": "夏",
+          "pinyin": "xia2"
+        },
+        {
+          "text": "如",
+          "start": 91.42,
+          "end": 91.64,
+          "alignment": "asr-word-span",
+          "sourceText": "如",
+          "pinyin": "ru2"
+        },
+        {
+          "text": "火",
+          "start": 91.64,
+          "end": 92.06,
+          "alignment": "asr-word-span",
+          "sourceText": "火",
+          "pinyin": "huo3"
+        },
+        {
+          "text": "染",
+          "start": 92.06,
+          "end": 92.38,
+          "alignment": "asr-word-span",
+          "sourceText": "染",
+          "pinyin": "ran3"
+        },
+        {
+          "text": "红",
+          "start": 92.38,
+          "end": 92.64,
+          "alignment": "asr-word-span",
+          "sourceText": "红",
+          "pinyin": "hong2"
+        },
+        {
+          "text": "了",
+          "start": 92.64,
+          "end": 92.9,
+          "alignment": "asr-word-span",
+          "sourceText": "了",
+          "pinyin": "le5"
+        },
+        {
+          "text": "远",
+          "start": 92.9,
+          "end": 93.22,
+          "alignment": "asr-word-span",
+          "sourceText": "云",
+          "pinyin": "yuan3"
+        },
+        {
+          "text": "山",
+          "start": 93.22,
+          "end": 93.6,
+          "alignment": "asr-word-span",
+          "sourceText": "山",
+          "pinyin": "shan1"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 93.6,
+      "end": 96.86,
+      "text": "风吹红衣翻过山湾",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 93.6,
+          "end": 94.32,
+          "alignment": "asr-word-span",
+          "sourceText": "风",
+          "pinyin": "feng1"
+        },
+        {
+          "text": "吹",
+          "start": 94.32,
+          "end": 94.6,
+          "alignment": "asr-word-span",
+          "sourceText": "吹",
+          "pinyin": "chui1"
+        },
+        {
+          "text": "红",
+          "start": 94.6,
+          "end": 94.92,
+          "alignment": "asr-word-span",
+          "sourceText": "红",
+          "pinyin": "hong2"
+        },
+        {
+          "text": "衣",
+          "start": 94.92,
+          "end": 95.28,
+          "alignment": "asr-word-span",
+          "sourceText": "衣",
+          "pinyin": "yi1"
+        },
+        {
+          "text": "翻",
+          "start": 95.28,
+          "end": 95.54,
+          "alignment": "asr-word-span",
+          "sourceText": "翻",
+          "pinyin": "fan1"
+        },
+        {
+          "text": "过",
+          "start": 95.54,
+          "end": 95.92,
+          "alignment": "asr-word-span",
+          "sourceText": "过",
+          "pinyin": "guo4"
+        },
+        {
+          "text": "山",
+          "start": 95.92,
+          "end": 96.36,
+          "alignment": "asr-word-span",
+          "sourceText": "山",
+          "pinyin": "shan1"
+        },
+        {
+          "text": "湾",
+          "start": 96.36,
+          "end": 96.86,
+          "alignment": "asr-word-span",
+          "sourceText": "湾",
+          "pinyin": "wan1"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 96.86,
+      "end": 100.06,
+      "text": "身后的人都要平安",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "身",
+          "start": 96.86,
+          "end": 97.46,
+          "alignment": "asr-word-span",
+          "sourceText": "身",
+          "pinyin": "shen1"
+        },
+        {
+          "text": "后",
+          "start": 97.46,
+          "end": 97.68,
+          "alignment": "asr-word-span",
+          "sourceText": "后",
+          "pinyin": "hou4"
+        },
+        {
+          "text": "的人",
+          "start": 97.68,
+          "end": 98.24,
+          "alignment": "asr-word-span",
+          "sourceText": "的人",
+          "pinyin": "de5 ren2"
+        },
+        {
+          "text": "都",
+          "start": 98.24,
+          "end": 98.74,
+          "alignment": "asr-word-span",
+          "sourceText": "都",
+          "pinyin": "dou1"
+        },
+        {
+          "text": "要",
+          "start": 98.74,
+          "end": 99.1,
+          "alignment": "asr-word-span",
+          "sourceText": "要",
+          "pinyin": "yao4"
+        },
+        {
+          "text": "平",
+          "start": 99.1,
+          "end": 99.48,
+          "alignment": "asr-word-span",
+          "sourceText": "平",
+          "pinyin": "ping2"
+        },
+        {
+          "text": "安",
+          "start": 99.48,
+          "end": 100.06,
+          "alignment": "asr-word-span",
+          "sourceText": "安",
+          "pinyin": "an1"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 101.1,
+      "end": 104.32,
+      "text": "也曾怕这归途太长",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "也",
+          "start": 101.1,
+          "end": 101.86,
+          "alignment": "asr-word-span",
+          "sourceText": "也",
+          "pinyin": "ye3"
+        },
+        {
+          "text": "曾",
+          "start": 101.86,
+          "end": 102.28,
+          "alignment": "asr-word-span",
+          "sourceText": "曾",
+          "pinyin": "ceng2"
+        },
+        {
+          "text": "怕",
+          "start": 102.28,
+          "end": 102.76,
+          "alignment": "asr-word-span",
+          "sourceText": "怕",
+          "pinyin": "pa4"
+        },
+        {
+          "text": "这",
+          "start": 102.76,
+          "end": 103.24,
+          "alignment": "asr-word-span",
+          "sourceText": "这",
+          "pinyin": "zhe4"
+        },
+        {
+          "text": "归",
+          "start": 103.24,
+          "end": 103.5,
+          "alignment": "asr-word-span",
+          "sourceText": "归",
+          "pinyin": "gui1"
+        },
+        {
+          "text": "途",
+          "start": 103.5,
+          "end": 103.64,
+          "alignment": "asr-word-span",
+          "sourceText": "度",
+          "pinyin": "tu2"
+        },
+        {
+          "text": "太",
+          "start": 103.64,
+          "end": 103.84,
+          "alignment": "asr-word-span",
+          "sourceText": "太",
+          "pinyin": "tai4"
+        },
+        {
+          "text": "长",
+          "start": 103.84,
+          "end": 104.32,
+          "alignment": "asr-word-span",
+          "sourceText": "长",
+          "pinyin": "zhang3"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 104.32,
+      "end": 107.54,
+      "text": "也曾借着月色把泪藏",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "也",
+          "start": 104.32,
+          "end": 105.0,
+          "alignment": "asr-word-span",
+          "sourceText": "也",
+          "pinyin": "ye3"
+        },
+        {
+          "text": "曾",
+          "start": 105.0,
+          "end": 105.28,
+          "alignment": "asr-word-span",
+          "sourceText": "曾",
+          "pinyin": "ceng2"
+        },
+        {
+          "text": "借",
+          "start": 105.28,
+          "end": 105.48,
+          "alignment": "asr-word-span",
+          "sourceText": "借",
+          "pinyin": "jie4"
+        },
+        {
+          "text": "着",
+          "start": 105.48,
+          "end": 105.66,
+          "alignment": "asr-word-span",
+          "sourceText": "着",
+          "pinyin": "zhe5"
+        },
+        {
+          "text": "月",
+          "start": 105.66,
+          "end": 105.84,
+          "alignment": "asr-word-span",
+          "sourceText": "月",
+          "pinyin": "yue4"
+        },
+        {
+          "text": "色",
+          "start": 105.84,
+          "end": 106.22,
+          "alignment": "asr-word-span",
+          "sourceText": "色",
+          "pinyin": "se4"
+        },
+        {
+          "text": "把",
+          "start": 106.22,
+          "end": 106.62,
+          "alignment": "asr-word-span",
+          "sourceText": "把",
+          "pinyin": "ba3"
+        },
+        {
+          "text": "泪",
+          "start": 106.62,
+          "end": 107.1,
+          "alignment": "asr-word-span",
+          "sourceText": "泪",
+          "pinyin": "lei4"
+        },
+        {
+          "text": "藏",
+          "start": 107.1,
+          "end": 107.54,
+          "alignment": "asr-word-span",
+          "sourceText": "藏",
+          "pinyin": "cang2"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 107.54,
+      "end": 110.96,
+      "text": "可一想你还等在窗前",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "可一",
+          "start": 107.54,
+          "end": 108.72,
+          "alignment": "asr-word-span",
+          "sourceText": "可以",
+          "pinyin": "ke3 yi1"
+        },
+        {
+          "text": "想",
+          "start": 108.72,
+          "end": 109.06,
+          "alignment": "asr-word-span",
+          "sourceText": "像",
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "你",
+          "start": 109.06,
+          "end": 109.4,
+          "alignment": "asr-word-span",
+          "sourceText": "你",
+          "pinyin": "ni3"
+        },
+        {
+          "text": "还",
+          "start": 109.4,
+          "end": 109.56,
+          "alignment": "asr-word-span",
+          "sourceText": "还",
+          "pinyin": "hai2"
+        },
+        {
+          "text": "等",
+          "start": 109.56,
+          "end": 109.82,
+          "alignment": "asr-word-span",
+          "sourceText": "等",
+          "pinyin": "deng3"
+        },
+        {
+          "text": "在",
+          "start": 109.82,
+          "end": 110.16,
+          "alignment": "asr-word-span",
+          "sourceText": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "窗",
+          "start": 110.16,
+          "end": 110.66,
+          "alignment": "asr-word-span",
+          "sourceText": "窗",
+          "pinyin": "chuang1"
+        },
+        {
+          "text": "前",
+          "start": 110.66,
+          "end": 110.96,
+          "alignment": "asr-word-span",
+          "sourceText": "前",
+          "pinyin": "qian2"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 110.96,
+      "end": 114.62,
+      "text": "漫天的风都吹向长安",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "漫",
+          "start": 110.96,
+          "end": 111.42,
+          "alignment": "asr-word-span",
+          "sourceText": "满",
+          "pinyin": "man4"
+        },
+        {
+          "text": "天",
+          "start": 111.42,
+          "end": 111.62,
+          "alignment": "asr-word-span",
+          "sourceText": "天",
+          "pinyin": "tian1"
+        },
+        {
+          "text": "的",
+          "start": 111.62,
+          "end": 111.8,
+          "alignment": "asr-word-span",
+          "sourceText": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "风",
+          "start": 111.8,
+          "end": 111.98,
+          "alignment": "asr-word-span",
+          "sourceText": "风",
+          "pinyin": "feng1"
+        },
+        {
+          "text": "都",
+          "start": 111.98,
+          "end": 112.18,
+          "alignment": "asr-word-span",
+          "sourceText": "都",
+          "pinyin": "dou1"
+        },
+        {
+          "text": "吹",
+          "start": 112.18,
+          "end": 112.82,
+          "alignment": "asr-word-span",
+          "sourceText": "吹",
+          "pinyin": "chui1"
+        },
+        {
+          "text": "向",
+          "start": 112.82,
+          "end": 113.28,
+          "alignment": "asr-word-span",
+          "sourceText": "向",
+          "pinyin": "xiang4"
+        },
+        {
+          "text": "长",
+          "start": 113.28,
+          "end": 113.78,
+          "alignment": "asr-word-span",
+          "sourceText": "长",
+          "pinyin": "chang2"
+        },
+        {
+          "text": "安",
+          "start": 113.78,
+          "end": 114.62,
+          "alignment": "asr-word-span",
+          "sourceText": "安",
+          "pinyin": "an1"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 117.38000000000001,
+      "end": 120.42,
+      "text": "半首琴声留在长安",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "半",
+          "start": 117.38000000000001,
+          "end": 117.76,
+          "alignment": "asr-word-span",
+          "sourceText": "伴",
+          "pinyin": "ban4"
+        },
+        {
+          "text": "首",
+          "start": 117.76,
+          "end": 118.14,
+          "alignment": "asr-word-span",
+          "sourceText": "手",
+          "pinyin": "shou3"
+        },
+        {
+          "text": "琴",
+          "start": 118.14,
+          "end": 118.56,
+          "alignment": "asr-word-span",
+          "sourceText": "琴",
+          "pinyin": "qin2"
+        },
+        {
+          "text": "声",
+          "start": 118.56,
+          "end": 118.9,
+          "alignment": "asr-word-span",
+          "sourceText": "声",
+          "pinyin": "sheng1"
+        },
+        {
+          "text": "留",
+          "start": 118.9,
+          "end": 119.34,
+          "alignment": "asr-word-span",
+          "sourceText": "留",
+          "pinyin": "liu2"
+        },
+        {
+          "text": "在",
+          "start": 119.34,
+          "end": 119.72,
+          "alignment": "asr-word-span",
+          "sourceText": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "长",
+          "start": 119.72,
+          "end": 120.02,
+          "alignment": "asr-word-span",
+          "sourceText": "长",
+          "pinyin": "chang2"
+        },
+        {
+          "text": "安",
+          "start": 120.02,
+          "end": 120.42,
+          "alignment": "asr-word-span",
+          "sourceText": "安",
+          "pinyin": "an1"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 120.42,
+      "end": 123.68,
+      "text": "一半随我越过千山",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一",
+          "start": 120.42,
+          "end": 121.0,
+          "alignment": "asr-word-span",
+          "sourceText": "一",
+          "pinyin": "yi2"
+        },
+        {
+          "text": "半",
+          "start": 121.0,
+          "end": 121.3,
+          "alignment": "asr-word-span",
+          "sourceText": "伴",
+          "pinyin": "ban4"
+        },
+        {
+          "text": "随",
+          "start": 121.3,
+          "end": 121.76,
+          "alignment": "asr-word-span",
+          "sourceText": "随",
+          "pinyin": "sui2"
+        },
+        {
+          "text": "我",
+          "start": 121.76,
+          "end": 122.06,
+          "alignment": "asr-word-span",
+          "sourceText": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "越",
+          "start": 122.06,
+          "end": 122.5,
+          "alignment": "asr-word-span",
+          "sourceText": "越",
+          "pinyin": "yue4"
+        },
+        {
+          "text": "过",
+          "start": 122.5,
+          "end": 122.9,
+          "alignment": "asr-word-span",
+          "sourceText": "过",
+          "pinyin": "guo4"
+        },
+        {
+          "text": "千",
+          "start": 122.9,
+          "end": 123.16,
+          "alignment": "asr-word-span",
+          "sourceText": "千",
+          "pinyin": "qian1"
+        },
+        {
+          "text": "山",
+          "start": 123.16,
+          "end": 123.68,
+          "alignment": "asr-word-span",
+          "sourceText": "山",
+          "pinyin": "shan1"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 123.68,
+      "end": 127.2,
+      "text": "黄河再宽隔不断想念",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "黄",
+          "start": 123.68,
+          "end": 124.44,
+          "alignment": "asr-word-span",
+          "sourceText": "黄",
+          "pinyin": "huang2"
+        },
+        {
+          "text": "河",
+          "start": 124.44,
+          "end": 124.68,
+          "alignment": "asr-word-span",
+          "sourceText": "河",
+          "pinyin": "he2"
+        },
+        {
+          "text": "再",
+          "start": 124.68,
+          "end": 124.84,
+          "alignment": "asr-word-span",
+          "sourceText": "再",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "宽",
+          "start": 124.84,
+          "end": 125.32,
+          "alignment": "asr-word-span",
+          "sourceText": "宽",
+          "pinyin": "kuan1"
+        },
+        {
+          "text": "隔",
+          "start": 125.32,
+          "end": 125.64,
+          "alignment": "asr-word-span",
+          "sourceText": "隔",
+          "pinyin": "ge2"
+        },
+        {
+          "text": "不",
+          "start": 125.64,
+          "end": 126.04,
+          "alignment": "asr-word-span",
+          "sourceText": "不",
+          "pinyin": "bu4"
+        },
+        {
+          "text": "断",
+          "start": 126.04,
+          "end": 126.5,
+          "alignment": "asr-word-span",
+          "sourceText": "断",
+          "pinyin": "duan4"
+        },
+        {
+          "text": "想",
+          "start": 126.5,
+          "end": 126.82,
+          "alignment": "asr-word-span",
+          "sourceText": "想",
+          "pinyin": "xiang3"
+        },
+        {
+          "text": "念",
+          "start": 126.82,
+          "end": 127.2,
+          "alignment": "asr-word-span",
+          "sourceText": "念",
+          "pinyin": "nian4"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 127.2,
+      "end": 129.62,
+      "text": "风沙再大认得你的眼",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "风",
+          "start": 127.2,
+          "end": 127.52,
+          "alignment": "asr-word-span",
+          "sourceText": "风",
+          "pinyin": "feng1"
+        },
+        {
+          "text": "沙",
+          "start": 127.52,
+          "end": 127.8,
+          "alignment": "asr-word-span",
+          "sourceText": "刷",
+          "pinyin": "sha1"
+        },
+        {
+          "text": "再",
+          "start": 127.8,
+          "end": 127.96,
+          "alignment": "asr-word-span",
+          "sourceText": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "大",
+          "start": 127.96,
+          "end": 128.36,
+          "alignment": "asr-word-span",
+          "sourceText": "大",
+          "pinyin": "da4"
+        },
+        {
+          "text": "认",
+          "start": 128.36,
+          "end": 128.72,
+          "alignment": "asr-word-span",
+          "sourceText": "人",
+          "pinyin": "ren4"
+        },
+        {
+          "text": "得",
+          "start": 128.72,
+          "end": 128.88,
+          "alignment": "asr-word-span",
+          "sourceText": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "你的",
+          "start": 128.88,
+          "end": 129.22,
+          "alignment": "asr-word-span",
+          "sourceText": "你的",
+          "pinyin": "ni3 de5"
+        },
+        {
+          "text": "眼",
+          "start": 129.22,
+          "end": 129.62,
+          "alignment": "asr-word-span",
+          "sourceText": "眼",
+          "pinyin": "yan3"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 129.62,
+      "end": 133.56,
+      "text": "等我归来坐在你身旁",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "等",
+          "start": 129.62,
+          "end": 130.34,
+          "alignment": "asr-word-span",
+          "sourceText": "等",
+          "pinyin": "deng3"
+        },
+        {
+          "text": "我",
+          "start": 130.34,
+          "end": 130.78,
+          "alignment": "asr-word-span",
+          "sourceText": "我",
+          "pinyin": "wo3"
+        },
+        {
+          "text": "归",
+          "start": 130.78,
+          "end": 131.16,
+          "alignment": "asr-word-span",
+          "sourceText": "归",
+          "pinyin": "gui1"
+        },
+        {
+          "text": "来",
+          "start": 131.16,
+          "end": 131.58,
+          "alignment": "asr-word-span",
+          "sourceText": "来",
+          "pinyin": "lai2"
+        },
+        {
+          "text": "坐",
+          "start": 131.58,
+          "end": 131.92,
+          "alignment": "asr-word-span",
+          "sourceText": "坐",
+          "pinyin": "zuo4"
+        },
+        {
+          "text": "在",
+          "start": 131.92,
+          "end": 132.28,
+          "alignment": "asr-word-span",
+          "sourceText": "在",
+          "pinyin": "zai4"
+        },
+        {
+          "text": "你",
+          "start": 132.28,
+          "end": 132.72,
+          "alignment": "asr-word-span",
+          "sourceText": "你",
+          "pinyin": "ni3"
+        },
+        {
+          "text": "身",
+          "start": 132.72,
+          "end": 133.1,
+          "alignment": "asr-word-span",
+          "sourceText": "身",
+          "pinyin": "shen1"
+        },
+        {
+          "text": "旁",
+          "start": 133.1,
+          "end": 133.56,
+          "alignment": "asr-word-span",
+          "sourceText": "旁",
+          "pinyin": "pang2"
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 133.56,
+      "end": 136.38,
+      "text": "把那半首轻轻弹完",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "把",
+          "start": 133.56,
+          "end": 133.88,
+          "alignment": "asr-word-span",
+          "sourceText": "把",
+          "pinyin": "ba3"
+        },
+        {
+          "text": "那",
+          "start": 133.88,
+          "end": 134.12,
+          "alignment": "asr-word-span",
+          "sourceText": "那",
+          "pinyin": "na4"
+        },
+        {
+          "text": "半",
+          "start": 134.12,
+          "end": 134.38,
+          "alignment": "asr-word-span",
+          "sourceText": "伴",
+          "pinyin": "ban4"
+        },
+        {
+          "text": "首",
+          "start": 134.38,
+          "end": 134.74,
+          "alignment": "asr-word-span",
+          "sourceText": "手",
+          "pinyin": "shou3"
+        },
+        {
+          "text": "轻",
+          "start": 134.74,
+          "end": 135.06,
+          "alignment": "asr-word-span",
+          "sourceText": "輕",
+          "pinyin": "qing1"
+        },
+        {
+          "text": "轻",
+          "start": 135.06,
+          "end": 135.56,
+          "alignment": "asr-word-span",
+          "sourceText": "輕",
+          "pinyin": "qing1"
+        },
+        {
+          "text": "弹",
+          "start": 135.56,
+          "end": 135.96,
+          "alignment": "asr-word-span",
+          "sourceText": "彈",
+          "pinyin": "tan2"
+        },
+        {
+          "text": "完",
+          "start": 135.96,
+          "end": 136.38,
+          "alignment": "asr-word-span",
+          "sourceText": "完",
+          "pinyin": "wan2"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 143.3,
+      "end": 146.26,
+      "text": "那年未尽的半曲",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "那",
+          "start": 143.3,
+          "end": 143.72,
+          "alignment": "asr-word-span",
+          "sourceText": "那",
+          "pinyin": "na4"
+        },
+        {
+          "text": "年",
+          "start": 143.72,
+          "end": 144.22,
+          "alignment": "asr-word-span",
+          "sourceText": "年",
+          "pinyin": "nian2"
+        },
+        {
+          "text": "未",
+          "start": 144.22,
+          "end": 144.56,
+          "alignment": "asr-word-span",
+          "sourceText": "未",
+          "pinyin": "wei4"
+        },
+        {
+          "text": "尽",
+          "start": 144.56,
+          "end": 145.04,
+          "alignment": "asr-word-span",
+          "sourceText": "盡",
+          "pinyin": "jin3"
+        },
+        {
+          "text": "的",
+          "start": 145.04,
+          "end": 145.48,
+          "alignment": "asr-word-span",
+          "sourceText": "的",
+          "pinyin": "de5"
+        },
+        {
+          "text": "半",
+          "start": 145.48,
+          "end": 145.86,
+          "alignment": "asr-word-span",
+          "sourceText": "伴",
+          "pinyin": "ban4"
+        },
+        {
+          "text": "曲",
+          "start": 145.86,
+          "end": 146.26,
+          "alignment": "asr-word-span",
+          "sourceText": "曲",
+          "pinyin": "qu1"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 146.26,
+      "end": 149.38,
+      "text": "今夜为你弹完",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "今",
+          "start": 146.26,
+          "end": 147.04,
+          "alignment": "asr-word-span",
+          "sourceText": "今",
+          "pinyin": "jin1"
+        },
+        {
+          "text": "夜",
+          "start": 147.04,
+          "end": 147.5,
+          "alignment": "asr-word-span",
+          "sourceText": "夜",
+          "pinyin": "ye4"
+        },
+        {
+          "text": "为",
+          "start": 147.5,
+          "end": 147.92,
+          "alignment": "asr-word-span",
+          "sourceText": "為",
+          "pinyin": "wei4"
+        },
+        {
+          "text": "你",
+          "start": 147.92,
+          "end": 148.46,
+          "alignment": "asr-word-span",
+          "sourceText": "你",
+          "pinyin": "ni3"
+        },
+        {
+          "text": "弹",
+          "start": 148.46,
+          "end": 148.96,
+          "alignment": "asr-word-span",
+          "sourceText": "彈",
+          "pinyin": "tan2"
+        },
+        {
+          "text": "完",
+          "start": 148.96,
+          "end": 149.38,
+          "alignment": "asr-word-span",
+          "sourceText": "完",
+          "pinyin": "wan2"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-minimax-91302",
+    "releaseStage": "published",
+    "audioSha256": "ab11dafb5c11624588d9c60c6243f3611c2e8cc3460c7db9d8772b029603b4fe",
+    "correction": "Source-informed multi-ASR audit; human listening confirmation pending",
+    "timing": "ASR word anchors, approximate; not forced-aligned or approved for recording",
+    "notes": [
+      "The 28 entries map one-to-one to the full-mix large-v3 no-VAD segments, not the incomplete VAD transcript.",
+      "MOSS-Music and both no-VAD passes recover the second chorus and the complete two-line ending.",
+      "Retain source-close homophones: 别, 渐淡, 半首, 一半, 兰州, 丹霞, 远山, 可一想, 漫天, 未尽, 弹完.",
+      "城南 is retained from the input and MOSS; Whisper repeatedly hears 城门. This is the main unresolved listening check.",
+      "Discard unsupported composer credits hallucinated only in the separated-stem no-VAD intro.",
+      "Instrumental gaps are not lyric lines. The first ASR's duplicated endings for seed 91301 are not applicable to this seed."
+    ],
+    "publicationAuthorization": "User requested website upload on 2026-09-14"
+  }
+}

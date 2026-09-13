@@ -554,6 +554,13 @@ h2 {
   font-weight: 950;
 }
 
+.title-row .media-credit {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
 .stage {
   position: relative;
   overflow: hidden;

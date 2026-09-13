@@ -1,0 +1,1808 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "ban-qu-chang-an",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 15.259999999999998,
+      "end": 19.4,
+      "text": "城壁を渡る風が袖をなでる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "城壁",
+          "reading": "じょうへき",
+          "start": 15.259999999999998,
+          "end": 15.851428571428569,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 15.851428571428569,
+          "end": 16.44285714285714,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "渡る",
+          "reading": "わたる",
+          "start": 16.44285714285714,
+          "end": 17.034285714285712,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "風",
+          "reading": "かぜ",
+          "start": 17.034285714285712,
+          "end": 17.625714285714285,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "が",
+          "start": 17.625714285714285,
+          "end": 18.217142857142857,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "袖",
+          "reading": "そで",
+          "start": 18.217142857142857,
+          "end": 18.808571428571426,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "をなでる",
+          "start": 18.808571428571426,
+          "end": 19.4,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 20.779999999999998,
+      "end": 25.3,
+      "text": "あなたは夕焼けを私の肩に留めた",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "あなたは",
+          "start": 20.779999999999998,
+          "end": 21.28222222222222,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "夕焼け",
+          "reading": "ゆうやけ",
+          "start": 21.28222222222222,
+          "end": 21.784444444444443,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 21.784444444444443,
+          "end": 22.286666666666665,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "私",
+          "reading": "わたし",
+          "start": 22.286666666666665,
+          "end": 22.788888888888888,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 22.788888888888888,
+          "end": 23.29111111111111,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "肩",
+          "reading": "かた",
+          "start": 23.29111111111111,
+          "end": 23.793333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "に",
+          "start": 23.793333333333333,
+          "end": 24.295555555555556,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "留め",
+          "reading": "とめ",
+          "start": 24.295555555555556,
+          "end": 24.797777777777778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "た",
+          "start": 24.797777777777778,
+          "end": 25.3,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 26.7,
+      "end": 31.58,
+      "text": "一曲を弾き終えぬまま日は暮れて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一曲",
+          "reading": "いっきょく",
+          "start": 26.7,
+          "end": 27.24222222222222,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 27.24222222222222,
+          "end": 27.784444444444443,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "弾き",
+          "reading": "ひき",
+          "start": 27.784444444444443,
+          "end": 28.326666666666664,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "終え",
+          "reading": "おえ",
+          "start": 28.326666666666664,
+          "end": 28.86888888888889,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ぬまま",
+          "start": 28.86888888888889,
+          "end": 29.41111111111111,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "日",
+          "reading": "ひ",
+          "start": 29.41111111111111,
+          "end": 29.953333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 29.953333333333333,
+          "end": 30.495555555555555,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "暮れ",
+          "reading": "くれ",
+          "start": 30.495555555555555,
+          "end": 31.037777777777777,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "て",
+          "start": 31.037777777777777,
+          "end": 31.58,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 31.58,
+      "end": 37.9,
+      "text": "待っていてと告げた、続きは帰ってから",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "待っ",
+          "reading": "まっ",
+          "start": 31.58,
+          "end": 32.282222222222224,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ていてと",
+          "start": 32.282222222222224,
+          "end": 32.98444444444444,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "告げ",
+          "reading": "つげ",
+          "start": 32.98444444444444,
+          "end": 33.68666666666667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "た",
+          "start": 33.68666666666667,
+          "end": 34.388888888888886,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 34.388888888888886,
+          "end": 35.09111111111111,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "続き",
+          "reading": "つづき",
+          "start": 35.09111111111111,
+          "end": 35.79333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 35.79333333333333,
+          "end": 36.495555555555555,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "帰っ",
+          "reading": "かえっ",
+          "start": 36.495555555555555,
+          "end": 37.19777777777777,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "てから",
+          "start": 37.19777777777777,
+          "end": 37.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 37.9,
+      "end": 44.28,
+      "text": "ひづめの音は遠ざかり灯りは薄れる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ひづめの",
+          "start": 37.9,
+          "end": 38.608888888888885,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "音",
+          "reading": "おと",
+          "start": 38.608888888888885,
+          "end": 39.31777777777778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 39.31777777777778,
+          "end": 40.026666666666664,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "遠ざ",
+          "reading": "とおざ",
+          "start": 40.026666666666664,
+          "end": 40.73555555555556,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "かり",
+          "start": 40.73555555555556,
+          "end": 41.44444444444444,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "灯り",
+          "reading": "あかり",
+          "start": 41.44444444444444,
+          "end": 42.153333333333336,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 42.153333333333336,
+          "end": 42.86222222222222,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "薄れ",
+          "reading": "うすれ",
+          "start": 42.86222222222222,
+          "end": 43.57111111111111,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "る",
+          "start": 43.57111111111111,
+          "end": 44.28,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 44.28,
+      "end": 50.58,
+      "text": "振り返れば街の南にまだあなたがいる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "振り返れ",
+          "reading": "ふりかえれ",
+          "start": 44.28,
+          "end": 45.33,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ば",
+          "start": 45.33,
+          "end": 46.38,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "街",
+          "reading": "まち",
+          "start": 46.38,
+          "end": 47.43,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 47.43,
+          "end": 48.48,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "南",
+          "reading": "みなみ",
+          "start": 48.48,
+          "end": 49.53,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "にまだあなたがいる",
+          "start": 49.53,
+          "end": 50.58,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 52.160000000000004,
+      "end": 55.62,
+      "text": "琴の調べの半分は長安に残して",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "",
+          "start": 52.160000000000004,
+          "end": 52.474545454545456,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "琴",
+          "reading": "こと",
+          "start": 52.474545454545456,
+          "end": 52.78909090909091,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 52.78909090909091,
+          "end": 53.10363636363637,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "調べ",
+          "reading": "しらべ",
+          "start": 53.10363636363637,
+          "end": 53.41818181818182,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 53.41818181818182,
+          "end": 53.732727272727274,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "半分",
+          "reading": "はんぶん",
+          "start": 53.732727272727274,
+          "end": 54.04727272727273,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 54.04727272727273,
+          "end": 54.36181818181818,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "長安",
+          "reading": "ちょうあん",
+          "start": 54.36181818181818,
+          "end": 54.67636363636363,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "に",
+          "start": 54.67636363636363,
+          "end": 54.99090909090909,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "残し",
+          "reading": "のこし",
+          "start": 54.99090909090909,
+          "end": 55.305454545454545,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "て",
+          "start": 55.305454545454545,
+          "end": 55.62,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 55.62,
+      "end": 58.84,
+      "text": "もう半分は私と千の山を越える",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "もう",
+          "start": 55.62,
+          "end": 55.912727272727274,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "半分",
+          "reading": "はんぶん",
+          "start": 55.912727272727274,
+          "end": 56.20545454545454,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 56.20545454545454,
+          "end": 56.49818181818182,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "私",
+          "reading": "わたし",
+          "start": 56.49818181818182,
+          "end": 56.79090909090909,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "と",
+          "start": 56.79090909090909,
+          "end": 57.083636363636366,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "千",
+          "reading": "せん",
+          "start": 57.083636363636366,
+          "end": 57.376363636363635,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 57.376363636363635,
+          "end": 57.66909090909091,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "山",
+          "reading": "やま",
+          "start": 57.66909090909091,
+          "end": 57.96181818181818,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 57.96181818181818,
+          "end": 58.25454545454546,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "越え",
+          "reading": "こえ",
+          "start": 58.25454545454546,
+          "end": 58.54727272727273,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "る",
+          "start": 58.54727272727273,
+          "end": 58.84,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 58.84,
+      "end": 62.4,
+      "text": "黄河がどれほど広くても想いは隔てられない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "",
+          "start": 58.84,
+          "end": 59.23555555555556,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "黄河",
+          "reading": "こうが",
+          "start": 59.23555555555556,
+          "end": 59.63111111111111,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "がどれほど",
+          "start": 59.63111111111111,
+          "end": 60.02666666666667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "広く",
+          "reading": "ひろく",
+          "start": 60.02666666666667,
+          "end": 60.422222222222224,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ても",
+          "start": 60.422222222222224,
+          "end": 60.81777777777778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "想い",
+          "reading": "おもい",
+          "start": 60.81777777777778,
+          "end": 61.21333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 61.21333333333333,
+          "end": 61.60888888888889,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "隔て",
+          "reading": "へだて",
+          "start": 61.60888888888889,
+          "end": 62.004444444444445,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "られない",
+          "start": 62.004444444444445,
+          "end": 62.4,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 62.4,
+      "end": 64.78,
+      "text": "どんな砂嵐の中でもあなたの瞳を見つける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "どんな",
+          "start": 62.4,
+          "end": 62.66444444444444,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "砂嵐",
+          "reading": "すなあらし",
+          "start": 62.66444444444444,
+          "end": 62.928888888888885,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 62.928888888888885,
+          "end": 63.193333333333335,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "中",
+          "reading": "なか",
+          "start": 63.193333333333335,
+          "end": 63.45777777777778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "でもあなたの",
+          "start": 63.45777777777778,
+          "end": 63.72222222222222,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "瞳",
+          "reading": "ひとみ",
+          "start": 63.72222222222222,
+          "end": 63.986666666666665,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 63.986666666666665,
+          "end": 64.25111111111111,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "見つ",
+          "reading": "みつ",
+          "start": 64.25111111111111,
+          "end": 64.51555555555555,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ける",
+          "start": 64.51555555555555,
+          "end": 64.78,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 64.78,
+      "end": 68.72,
+      "text": "帰ったらあなたのそばに座って",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帰っ",
+          "reading": "かえっ",
+          "start": 64.78,
+          "end": 65.765,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "たらあなたのそばに",
+          "start": 65.765,
+          "end": 66.75,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "座っ",
+          "reading": "すわっ",
+          "start": 66.75,
+          "end": 67.735,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "て",
+          "start": 67.735,
+          "end": 68.72,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 68.72,
+      "end": 71.52,
+      "text": "残りの調べをそっと弾き終えよう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "残り",
+          "reading": "のこり",
+          "start": 68.72,
+          "end": 69.12,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 69.12,
+          "end": 69.52,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "調べ",
+          "reading": "しらべ",
+          "start": 69.52,
+          "end": 69.92,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "をそっと",
+          "start": 69.92,
+          "end": 70.32,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "弾き",
+          "reading": "ひき",
+          "start": 70.32,
+          "end": 70.72,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "終え",
+          "reading": "おえ",
+          "start": 70.72,
+          "end": 71.11999999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "よう",
+          "start": 71.11999999999999,
+          "end": 71.52,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 87.0,
+      "end": 90.9,
+      "text": "蘭州の夜、水面に星が映る",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "",
+          "start": 87.0,
+          "end": 87.39,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "蘭州",
+          "reading": "らんしゅう",
+          "start": 87.39,
+          "end": 87.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 87.78,
+          "end": 88.17,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "夜",
+          "reading": "よる",
+          "start": 88.17,
+          "end": 88.56,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 88.56,
+          "end": 88.95,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "水面",
+          "reading": "すいめん",
+          "start": 88.95,
+          "end": 89.34,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "に",
+          "start": 89.34,
+          "end": 89.73,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "星",
+          "reading": "ほし",
+          "start": 89.73,
+          "end": 90.12,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "が",
+          "start": 90.12,
+          "end": 90.51,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "映る",
+          "reading": "うつる",
+          "start": 90.51,
+          "end": 90.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 90.9,
+      "end": 93.6,
+      "text": "炎のような丹霞が遠い山々を赤く染める",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "炎",
+          "reading": "ほのお",
+          "start": 90.9,
+          "end": 91.17,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "のような",
+          "start": 91.17,
+          "end": 91.44,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "丹霞",
+          "reading": "たんか",
+          "start": 91.44,
+          "end": 91.71000000000001,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "が",
+          "start": 91.71000000000001,
+          "end": 91.98,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "遠い",
+          "reading": "とおい",
+          "start": 91.98,
+          "end": 92.25,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "山々",
+          "reading": "やまやま",
+          "start": 92.25,
+          "end": 92.52,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 92.52,
+          "end": 92.78999999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "赤く",
+          "reading": "あかく",
+          "start": 92.78999999999999,
+          "end": 93.06,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "染め",
+          "reading": "そめ",
+          "start": 93.06,
+          "end": 93.33,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "る",
+          "start": 93.33,
+          "end": 93.6,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 93.6,
+      "end": 96.86,
+      "text": "紅い衣を風になびかせ山の曲がり道を越える",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "紅い",
+          "reading": "あかい",
+          "start": 93.6,
+          "end": 93.87166666666666,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "衣",
+          "reading": "ころも",
+          "start": 93.87166666666666,
+          "end": 94.14333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 94.14333333333333,
+          "end": 94.41499999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "風",
+          "reading": "かぜ",
+          "start": 94.41499999999999,
+          "end": 94.68666666666667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "になびかせ",
+          "start": 94.68666666666667,
+          "end": 94.95833333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "山",
+          "reading": "やま",
+          "start": 94.95833333333333,
+          "end": 95.22999999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 95.22999999999999,
+          "end": 95.50166666666667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "曲がり",
+          "reading": "まがり",
+          "start": 95.50166666666667,
+          "end": 95.77333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "道",
+          "reading": "みち",
+          "start": 95.77333333333333,
+          "end": 96.045,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 96.045,
+          "end": 96.31666666666666,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "越え",
+          "reading": "こえ",
+          "start": 96.31666666666666,
+          "end": 96.58833333333334,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "る",
+          "start": 96.58833333333334,
+          "end": 96.86,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 96.86,
+      "end": 100.06,
+      "text": "後ろに続く人たちがみな無事でありますように",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "後ろ",
+          "reading": "うしろ",
+          "start": 96.86,
+          "end": 97.31714285714285,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "に",
+          "start": 97.31714285714285,
+          "end": 97.77428571428571,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "続く",
+          "reading": "つづく",
+          "start": 97.77428571428571,
+          "end": 98.23142857142857,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "reading": "ひと",
+          "start": 98.23142857142857,
+          "end": 98.68857142857144,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "たちがみな",
+          "start": 98.68857142857144,
+          "end": 99.14571428571429,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "無事",
+          "reading": "ぶじ",
+          "start": 99.14571428571429,
+          "end": 99.60285714285715,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "でありますように",
+          "start": 99.60285714285715,
+          "end": 100.06,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 101.1,
+      "end": 104.32,
+      "text": "帰り道の長さが怖くなる日もあった",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帰り道",
+          "reading": "かえりみち",
+          "start": 101.1,
+          "end": 101.5025,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 101.5025,
+          "end": 101.905,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "長さ",
+          "reading": "ながさ",
+          "start": 101.905,
+          "end": 102.30749999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "が",
+          "start": 102.30749999999999,
+          "end": 102.71,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "怖く",
+          "reading": "こわく",
+          "start": 102.71,
+          "end": 103.1125,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "なる",
+          "start": 103.1125,
+          "end": 103.51499999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "日",
+          "reading": "ひ",
+          "start": 103.51499999999999,
+          "end": 103.91749999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "もあった",
+          "start": 103.91749999999999,
+          "end": 104.32,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 104.32,
+      "end": 107.54,
+      "text": "月明かりに涙を隠す夜もあった",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "",
+          "start": 104.32,
+          "end": 104.7225,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "月明かり",
+          "reading": "つきあかり",
+          "start": 104.7225,
+          "end": 105.125,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "に",
+          "start": 105.125,
+          "end": 105.5275,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "涙",
+          "reading": "なみだ",
+          "start": 105.5275,
+          "end": 105.93,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 105.93,
+          "end": 106.3325,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "隠す",
+          "reading": "かくす",
+          "start": 106.3325,
+          "end": 106.735,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "夜",
+          "reading": "よる",
+          "start": 106.735,
+          "end": 107.1375,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "もあった",
+          "start": 107.1375,
+          "end": 107.54,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 107.54,
+      "end": 110.96,
+      "text": "けれど窓辺で待つあなたを想えば",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "けれど",
+          "start": 107.54,
+          "end": 108.02857142857144,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "窓辺",
+          "reading": "まどべ",
+          "start": 108.02857142857144,
+          "end": 108.51714285714286,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "で",
+          "start": 108.51714285714286,
+          "end": 109.00571428571429,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "待つ",
+          "reading": "まつ",
+          "start": 109.00571428571429,
+          "end": 109.49428571428571,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "あなたを",
+          "start": 109.49428571428571,
+          "end": 109.98285714285714,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "想え",
+          "reading": "おもえ",
+          "start": 109.98285714285714,
+          "end": 110.47142857142856,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ば",
+          "start": 110.47142857142856,
+          "end": 110.96,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 110.96,
+      "end": 114.62,
+      "text": "空いっぱいの風がみな長安へと吹いていく",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "",
+          "start": 110.96,
+          "end": 111.36666666666666,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "空",
+          "reading": "そら",
+          "start": 111.36666666666666,
+          "end": 111.77333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "いっぱいの",
+          "start": 111.77333333333333,
+          "end": 112.17999999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "風",
+          "reading": "かぜ",
+          "start": 112.17999999999999,
+          "end": 112.58666666666666,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "がみな",
+          "start": 112.58666666666666,
+          "end": 112.99333333333334,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "長安",
+          "reading": "ちょうあん",
+          "start": 112.99333333333334,
+          "end": 113.4,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "へと",
+          "start": 113.4,
+          "end": 113.80666666666667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "吹い",
+          "reading": "ふい",
+          "start": 113.80666666666667,
+          "end": 114.21333333333334,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ていく",
+          "start": 114.21333333333334,
+          "end": 114.62,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 117.38000000000001,
+      "end": 120.42,
+      "text": "琴の調べの半分は長安に残して",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "",
+          "start": 117.38000000000001,
+          "end": 117.65636363636365,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "琴",
+          "reading": "こと",
+          "start": 117.65636363636365,
+          "end": 117.93272727272728,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 117.93272727272728,
+          "end": 118.20909090909092,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "調べ",
+          "reading": "しらべ",
+          "start": 118.20909090909092,
+          "end": 118.48545454545456,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 118.48545454545456,
+          "end": 118.76181818181819,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "半分",
+          "reading": "はんぶん",
+          "start": 118.76181818181819,
+          "end": 119.03818181818183,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 119.03818181818183,
+          "end": 119.31454545454545,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "長安",
+          "reading": "ちょうあん",
+          "start": 119.31454545454545,
+          "end": 119.5909090909091,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "に",
+          "start": 119.5909090909091,
+          "end": 119.86727272727273,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "残し",
+          "reading": "のこし",
+          "start": 119.86727272727273,
+          "end": 120.14363636363636,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "て",
+          "start": 120.14363636363636,
+          "end": 120.42,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 120.42,
+      "end": 123.68,
+      "text": "もう半分は私と千の山を越える",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "もう",
+          "start": 120.42,
+          "end": 120.71636363636364,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "半分",
+          "reading": "はんぶん",
+          "start": 120.71636363636364,
+          "end": 121.01272727272728,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 121.01272727272728,
+          "end": 121.30909090909091,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "私",
+          "reading": "わたし",
+          "start": 121.30909090909091,
+          "end": 121.60545454545455,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "と",
+          "start": 121.60545454545455,
+          "end": 121.90181818181819,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "千",
+          "reading": "せん",
+          "start": 121.90181818181819,
+          "end": 122.19818181818182,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 122.19818181818182,
+          "end": 122.49454545454546,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "山",
+          "reading": "やま",
+          "start": 122.49454545454546,
+          "end": 122.7909090909091,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 122.7909090909091,
+          "end": 123.08727272727273,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "越え",
+          "reading": "こえ",
+          "start": 123.08727272727273,
+          "end": 123.38363636363637,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "る",
+          "start": 123.38363636363637,
+          "end": 123.68,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 123.68,
+      "end": 127.2,
+      "text": "黄河がどれほど広くても想いは隔てられない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "",
+          "start": 123.68,
+          "end": 124.07111111111112,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "黄河",
+          "reading": "こうが",
+          "start": 124.07111111111112,
+          "end": 124.46222222222222,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "がどれほど",
+          "start": 124.46222222222222,
+          "end": 124.85333333333334,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "広く",
+          "reading": "ひろく",
+          "start": 124.85333333333334,
+          "end": 125.24444444444445,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ても",
+          "start": 125.24444444444445,
+          "end": 125.63555555555556,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "想い",
+          "reading": "おもい",
+          "start": 125.63555555555556,
+          "end": 126.02666666666667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 126.02666666666667,
+          "end": 126.41777777777779,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "隔て",
+          "reading": "へだて",
+          "start": 126.41777777777779,
+          "end": 126.80888888888889,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "られない",
+          "start": 126.80888888888889,
+          "end": 127.2,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 127.2,
+      "end": 129.62,
+      "text": "どんな砂嵐の中でもあなたの瞳を見つける",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "どんな",
+          "start": 127.2,
+          "end": 127.4688888888889,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "砂嵐",
+          "reading": "すなあらし",
+          "start": 127.4688888888889,
+          "end": 127.73777777777778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 127.73777777777778,
+          "end": 128.00666666666666,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "中",
+          "reading": "なか",
+          "start": 128.00666666666666,
+          "end": 128.27555555555557,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "でもあなたの",
+          "start": 128.27555555555557,
+          "end": 128.54444444444445,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "瞳",
+          "reading": "ひとみ",
+          "start": 128.54444444444445,
+          "end": 128.81333333333333,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 128.81333333333333,
+          "end": 129.0822222222222,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "見つ",
+          "reading": "みつ",
+          "start": 129.0822222222222,
+          "end": 129.35111111111112,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ける",
+          "start": 129.35111111111112,
+          "end": 129.62,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 129.62,
+      "end": 133.56,
+      "text": "帰ったらあなたのそばに座って",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帰っ",
+          "reading": "かえっ",
+          "start": 129.62,
+          "end": 130.60500000000002,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "たらあなたのそばに",
+          "start": 130.60500000000002,
+          "end": 131.59,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "座っ",
+          "reading": "すわっ",
+          "start": 131.59,
+          "end": 132.575,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "て",
+          "start": 132.575,
+          "end": 133.56,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 133.56,
+      "end": 136.38,
+      "text": "残りの調べをそっと弾き終えよう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "残り",
+          "reading": "のこり",
+          "start": 133.56,
+          "end": 133.96285714285713,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 133.96285714285713,
+          "end": 134.3657142857143,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "調べ",
+          "reading": "しらべ",
+          "start": 134.3657142857143,
+          "end": 134.76857142857142,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "をそっと",
+          "start": 134.76857142857142,
+          "end": 135.17142857142858,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "弾き",
+          "reading": "ひき",
+          "start": 135.17142857142858,
+          "end": 135.5742857142857,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "終え",
+          "reading": "おえ",
+          "start": 135.5742857142857,
+          "end": 135.97714285714287,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "よう",
+          "start": 135.97714285714287,
+          "end": 136.38,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 143.3,
+      "end": 146.26,
+      "text": "あの日弾き終えなかった調べを",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "あの",
+          "start": 143.3,
+          "end": 143.72285714285715,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "日",
+          "reading": "ひ",
+          "start": 143.72285714285715,
+          "end": 144.1457142857143,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "弾き",
+          "reading": "ひき",
+          "start": 144.1457142857143,
+          "end": 144.56857142857143,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "終え",
+          "reading": "おえ",
+          "start": 144.56857142857143,
+          "end": 144.99142857142857,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "なかった",
+          "start": 144.99142857142857,
+          "end": 145.4142857142857,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "調べ",
+          "reading": "しらべ",
+          "start": 145.4142857142857,
+          "end": 145.83714285714285,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 145.83714285714285,
+          "end": 146.26,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 146.26,
+      "end": 149.38,
+      "text": "今夜あなたのために最後まで奏でる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "今夜",
+          "reading": "こんや",
+          "start": 146.26,
+          "end": 146.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "あなたのために",
+          "start": 146.78,
+          "end": 147.29999999999998,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "最後",
+          "reading": "さいご",
+          "start": 147.29999999999998,
+          "end": 147.82,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "まで",
+          "start": 147.82,
+          "end": 148.34,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "奏で",
+          "reading": "かなで",
+          "start": 148.34,
+          "end": 148.85999999999999,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "る",
+          "start": 148.85999999999999,
+          "end": 149.38,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "zh-minimax-91302",
+    "releaseStage": "published",
+    "audioSha256": "ab11dafb5c11624588d9c60c6243f3611c2e8cc3460c7db9d8772b029603b4fe",
+    "correction": "Source-informed multi-ASR audit; human listening confirmation pending",
+    "timing": "ASR word anchors, approximate; not forced-aligned or approved for recording",
+    "notes": [
+      "The 28 entries map one-to-one to the full-mix large-v3 no-VAD segments, not the incomplete VAD transcript.",
+      "MOSS-Music and both no-VAD passes recover the second chorus and the complete two-line ending.",
+      "Retain source-close homophones: 别, 渐淡, 半首, 一半, 兰州, 丹霞, 远山, 可一想, 漫天, 未尽, 弹完.",
+      "城南 is retained from the input and MOSS; Whisper repeatedly hears 城门. This is the main unresolved listening check.",
+      "Discard unsupported composer credits hallucinated only in the separated-stem no-VAD intro.",
+      "Instrumental gaps are not lyric lines. The first ASR's duplicated endings for seed 91301 are not applicable to this seed."
+    ],
+    "publicationAuthorization": "User requested website upload on 2026-09-14"
+  }
+}

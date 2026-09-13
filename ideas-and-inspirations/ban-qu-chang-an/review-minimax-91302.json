@@ -6,6 +6,13 @@
   "audioSha256": "ab11dafb5c11624588d9c60c6243f3611c2e8cc3460c7db9d8772b029603b4fe",
   "reviewStatus": "Source-informed multi-ASR audit; human listening confirmation pending",
   "timingStatus": "ASR word anchors, approximate; not forced-aligned or approved for recording",
+  "jaReadingOverrides": {
+    "琴": "こと",
+    "月明かり": "つきあかり",
+    "空": "そら",
+    "日": "ひ",
+    "人": "ひと"
+  },
   "notes": [
     "The 28 entries map one-to-one to the full-mix large-v3 no-VAD segments, not the incomplete VAD transcript.",
     "MOSS-Music and both no-VAD passes recover the second chorus and the complete two-line ending.",
