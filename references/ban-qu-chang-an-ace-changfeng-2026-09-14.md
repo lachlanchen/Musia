@@ -192,3 +192,22 @@ desktop/mobile playback, seeking, current-word and chord movement, ruby,
 cover load, and horizontal overflow. Run it locally after audio Pages is ready,
 then again with `--live` after the Fun deploy. It verifies player mechanics,
 not musical or linguistic correctness.
+
+## Release verification
+
+Musia publication commit: `134cf7c`. Website Pages run `34789685817` succeeded.
+MusiaSongs Pages built commit `263b6db`; an MP3 range request returned HTTP 206
+with exactly the requested 64 bytes. Both repos were pushed to `main`.
+
+Five exporter tests passed; strict audits passed for both song items and full
+Fun validation passed. Local and live browser tests passed at 1440x1000 and
+390x844: playback clock, real MP3 seeking, lyric IDs/word highlights at 1.18,
+47.88, 84.86 and 127.84 seconds, current chord visibility/movement, cover/ruby,
+and no horizontal overflow. Smooth chord scrolling is allowed to settle before
+the screenshot check; checking only the existence of an `.active` class was
+insufficient. Test browser contexts and the ephemeral local server were closed.
+
+Live EN/JA/ZH lyric JSON was fetched and compared structurally to the local
+reviewed files: all 28 lines matched, including the shortened line 25 in each
+language. The old live title is `半曲长安 · MiniMax`. Screenshots and JSON test
+evidence remain under the new project's `review/website/` directory.
