@@ -1,5 +1,12 @@
 # 半曲长安: Aya Chan hanfu song handoff
 
+Website update, September 14: the user requested upload after the audition.
+The selected song is now public at https://fun.lazying.art/#ban-qu-chang-an .
+Canonical website lyrics are in
+`website/data/songs/ban-qu-chang-an/lyrics/zh-minimax-91302/` in Musia, including
+the corrected contextual Japanese readings. The review caveats below remain;
+website publication does not approve social posting or new video generation.
+
 ## Scope and status
 
 New original Mandarin song for Aya's Chang'an, Yellow River, Lanzhou and danxia

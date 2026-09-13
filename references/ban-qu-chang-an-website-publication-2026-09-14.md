@@ -71,3 +71,20 @@ globally active GitHub account was not switched.
 
 Do not change `hidden`/`Legacy` rules or rerun the global naming script for this
 new standalone song. The same selected audio is the only public vocal.
+
+## Verified result
+
+- MusiaSongs commit `4cc4fcb`: Pages built; the exact public MP3 returns HTTP 200
+  with byte-range support and CORS enabled.
+- Musia commit `91a4299`: website deployment run `34787450113` succeeded.
+- Strict item audit, full catalog validation and JavaScript syntax passed.
+- Live desktop (1440 x 1000) and mobile (390 x 844) browser checks passed:
+  playback advances, the opening/choruses/outro seek correctly, current line and
+  word highlights update, chord indices change, and ruby/credit render.
+- No page JavaScript errors or page-level horizontal overflow were detected.
+- Screenshots and JSON evidence: creative project `review/website/live-*`.
+- Selected/Nutstore lyric JSONs now match the website publication; the handoff
+  and local package link to the public song. Audio bytes were not changed.
+
+The final HTML also versions the changed CSS/JS URLs so a returning browser does
+not retain the older bundle that cannot display the optional generation credit.
