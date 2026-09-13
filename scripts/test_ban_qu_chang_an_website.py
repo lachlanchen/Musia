@@ -27,10 +27,22 @@ class QuietHandler(SimpleHTTPRequestHandler):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--live", action="store_true")
+    parser.add_argument("--media-id", default=MEDIA_ID)
+    parser.add_argument("--output-dir", type=Path)
     args = parser.parse_args()
-    out = ROOT / "data/creative_projects/aya-chan-ban-qu-chang-an-minimax-20260913/review/website"
+    media_id = args.media_id
+    out = args.output_dir or ROOT / "data/creative_projects/aya-chan-ban-qu-chang-an-minimax-20260913/review/website"
     out.mkdir(parents=True, exist_ok=True)
-    manifest = json.loads((ROOT / f"website/data/songs/{MEDIA_ID}/manifest.json").read_text())
+    song_dir = ROOT / f"website/data/songs/{media_id}"
+    manifest = json.loads((song_dir / "manifest.json").read_text())
+    lyric_set = next(s for s in manifest["lyricSets"] if s["id"] == manifest["assets"]["primaryAudio"]["lyricSetId"])
+    track = next(t for t in lyric_set["tracks"] if t["code"] == "zh-Hans")
+    lines = json.loads((song_dir / track["path"]).read_text())["lines"]
+    checkpoints = []
+    for i in (0, len(lines) // 3, 2 * len(lines) // 3, len(lines) - 1):
+        line = lines[i]
+        token = line["tokens"][len(line["tokens"]) // 2]
+        checkpoints.append(((token["start"] + token["end"]) / 2, line["id"]))
     source = manifest["assets"]["primaryAudio"]["src"]
     server = None
     if args.live:
@@ -52,33 +64,35 @@ def main():
                     page = context.new_page()
                     errors = []
                     page.on("pageerror", lambda error: errors.append(str(error)))
-                    page.goto(base + "#" + MEDIA_ID, wait_until="networkidle", timeout=90000)
+                    page.goto(base + "#" + media_id, wait_until="networkidle", timeout=90000)
                     page.wait_for_function("document.querySelector('#audio')?.readyState >= 2", timeout=90000)
                     page.wait_for_function("document.querySelector('#cover-art')?.naturalWidth > 0")
                     assert page.locator("#media-credit").is_visible()
-                    assert "MiniMax-Music3" in page.locator("#media-credit").inner_text()
-                    assert page.locator("#audio").evaluate("a => !a.error && a.duration > 158 && a.duration < 159")
+                    assert manifest["generationCredit"] == page.locator("#media-credit").inner_text()
+                    assert page.locator("#audio").evaluate("(a, d) => !a.error && Math.abs(a.duration-d)<0.2", manifest["duration"])
                     assert page.locator("#audio").evaluate("a => a.currentSrc") == source
                     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
                     page.locator("#audio").evaluate("async a => {a.muted=true; a.currentTime=0; await a.play();}")
                     page.wait_for_function("document.querySelector('#audio').currentTime > 0.3")
                     page.locator("#audio").evaluate("a => a.pause()")
-                    assert page.locator("#lyric-carousel [data-token-start].active").count() == 0
+                    if lines[0]["start"] > 1:
+                        assert page.locator("#lyric-carousel [data-token-start].active").count() == 0
                     states = []
-                    for at, expected in [(16.5, "l01"), (53.5, "l07"), (118.5, "l21"), (148.5, "l28")]:
+                    for at, expected in checkpoints:
                         page.locator("#audio").evaluate("(a, t) => {a.currentTime=t; a.dispatchEvent(new Event('timeupdate'));}", at)
                         page.wait_for_timeout(300)
                         print(label, at, page.evaluate("({time:document.querySelector('#audio').currentTime, line:document.querySelector('#lyric-carousel .carousel-line.active')?.dataset.lineId, stage:document.querySelector('#stage-line').textContent})"), flush=True)
                         page.wait_for_function("id => document.querySelector('#lyric-carousel .carousel-line.active')?.dataset.lineId === id", arg=expected, timeout=5000)
-                        page.wait_for_timeout(200)
+                        page.wait_for_timeout(800)
                         assert page.locator("#chord-row .chord-pill.active").count() == 1
+                        assert page.locator("#chord-row .chord-pill.active").evaluate("el => {const b=el.getBoundingClientRect(), r=el.parentElement.getBoundingClientRect(); return b.left>=r.left-2 && b.right<=r.right+2;}")
                         assert page.locator("#lyric-carousel [data-token-start].active").count() > 0
                         assert page.locator("#lyric-carousel ruby rt").count() > 0
                         states.append({"time": at, "line": expected,
                                        "chordIndex": page.locator("#chord-row").get_attribute("data-active-chord-index")})
                     assert len({item["chordIndex"] for item in states}) > 1
-                    page.locator("#audio").evaluate("a => {a.currentTime=53.5; a.dispatchEvent(new Event('timeupdate'));}")
-                    page.wait_for_timeout(250)
+                    page.locator("#audio").evaluate("(a,t) => {a.currentTime=t; a.dispatchEvent(new Event('timeupdate'));}", checkpoints[1][0])
+                    page.wait_for_timeout(1000)
                     page.screenshot(path=str(out / f"{'live' if args.live else 'local'}-{label}.png"))
                     assert not errors, errors
                     evidence.append({"viewport": label, "playback": "passed", "states": states, "errors": errors})

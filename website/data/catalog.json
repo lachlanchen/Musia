@@ -9,9 +9,37 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "ban-qu-chang-an-ace-changfeng",
+      "kind": "song",
+      "title": "半曲长安 · ACE · 长风",
+      "artist": "Musia",
+      "summary": "Half a melody waits in Chang'an. Across the Yellow River and red mountains, a rider carries the promise of playing it again beside the one she loves.",
+      "manifest": "data/songs/ban-qu-chang-an-ace-changfeng/manifest.json",
+      "cover": "assets/covers/ban-qu-chang-an-ace-changfeng-16x9.png",
+      "visibility": "public",
+      "releaseStage": "published",
+      "category": "music",
+      "languages": [
+        "zh-Hans",
+        "en",
+        "ja"
+      ],
+      "tags": [
+        "music",
+        "Mandarin",
+        "guofeng",
+        "pop-rock",
+        "Aya Chan",
+        "Chang'an",
+        "Yellow River",
+        "homecoming",
+        "chords"
+      ]
+    },
+    {
       "id": "ban-qu-chang-an",
       "kind": "song",
-      "title": "半曲长安",
+      "title": "半曲长安 · MiniMax",
       "artist": "Musia",
       "summary": "Half a melody waits in Chang'an; the other half travels across the Yellow River and red mountains, carrying a promise to return.",
       "manifest": "data/songs/ban-qu-chang-an/manifest.json",

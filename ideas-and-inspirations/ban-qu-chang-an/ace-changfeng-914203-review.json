@@ -1,0 +1,63 @@
+{
+  "title": "半曲长安 · ACE · 长风",
+  "mediaId": "ban-qu-chang-an-ace-changfeng",
+  "vocalSet": "zh-ace-914203",
+  "artist": "Musia",
+  "audioSha256": "9e482fe6af745fe62833282b9ccb2fe33d8b2a265a8f435d55e4393e2db1bbb1",
+  "reviewStatus": "Source-informed review of large-v3 full-mix and vocal no-VAD ASR, normal vocal ASR, and independent MOSS lyrics. Human listening approval remains pending.",
+  "timingStatus": "Full-mix no-VAD ASR word spans; source-close wording restored. The opening Chang'an name uses a grouped ASR span, not independently aligned syllables. Companion highlighting is approximate within each line.",
+  "notes": [
+    "28 performed lines, in planned order; final chorus line 25 is shortened to 等我回来. Do not append the unsung 坐在你身旁 there.",
+    "Both large-v3 passes collapse the first 长安 to 肠; MOSS and repeated hooks support 长安. Restore the name within the existing phrase anchor without fabricating separate character timing.",
+    "Preserve source-close 琴声, 城墙, 晚霞, 未尽, 渐淡, 认得, 丹霞, 远山, 半曲, 弹完 rather than recognizer homophones. Some consonants remain softened in this generated performance.",
+    "MOSS timestamps drift substantially late in the song and are not used as public timing.",
+    "Instrumental gaps and the fading ending are not lyric rows. No recording or social publication is authorized by this package alone."
+  ],
+  "zhReadingOverrides": {
+    "一曲未尽": ["yì", "qǔ", "wèi", "jìn"],
+    "未尽": ["wèi", "jìn"],
+    "半曲": ["bàn", "qǔ"],
+    "弹响": ["tán", "xiǎng"],
+    "下一段": ["xià", "yí", "duàn"]
+  },
+  "jaReadingOverrides": {
+    "年": "とし", "留める": "とめる",
+    "長安": "ちょうあん", "半分": "はんぶん", "調べ": "しらべ", "幾千": "いくせん",
+    "城壁": "じょうへき", "衣": "ころも", "夕焼け": "ゆうやけ", "一曲": "いっきょく",
+    "夜": "よる", "日": "ひ", "灯": "ひ", "蹄": "ひづめ", "城南": "じょうなん",
+    "黄河": "こうが", "想い": "おもい", "瞳": "ひとみ", "奏でる": "かなでる",
+    "蘭州": "らんしゅう", "水面": "みなも", "丹霞": "たんか", "山並み": "やまなみ",
+    "紅": "くれない", "旅路": "たびじ", "人": "ひと", "無事": "ぶじ", "窓辺": "まどべ",
+    "光": "ひかり", "待つ": "まつ", "今夜": "こんや", "終わり": "おわり"
+  },
+  "lines": [
+    {"text": "半首琴声 留在长安", "en": "Half a melody stays in Chang'an", "ja": "半分の調べを長安に残して", "wordTextOverrides": {"6": {"source": "肠", "text": "长安", "reason": "The source lyric, independent MOSS transcription and later repeated hooks support Chang'an; both Whisper passes merge the name. Keep one approximate phrase span."}}},
+    {"text": "一半随我 越过千山", "en": "The other half crosses a thousand mountains with me", "ja": "もう半分は私と幾千の山を越える"},
+    {"text": "城墙的风 拂过衣裳", "en": "Wind from the city walls brushes my robes", "ja": "城壁からの風が衣をなでる"},
+    {"text": "你把晚霞 别在我肩上", "en": "You pin the sunset upon my shoulder", "ja": "あなたは夕焼けを私の肩に留める"},
+    {"text": "一曲未尽 天色已晚", "en": "The tune is unfinished, but night has fallen", "ja": "一曲が終わらぬうちに夜が来た"},
+    {"text": "我说等我 再续下一段", "en": "Wait for me, I said; we will play the next part", "ja": "待っていて、続きをまた奏でようと言った"},
+    {"text": "马蹄声远 灯火渐淡", "en": "Hoofbeats recede, and the lamplight fades", "ja": "蹄の音は遠ざかり、灯は薄れてゆく"},
+    {"text": "回头还有 你在城南", "en": "I turn back; you are still there, south of the city", "ja": "振り返れば、城南にあなたがいる"},
+    {"text": "半首琴声 留在长安", "en": "Half a melody stays in Chang'an", "ja": "半分の調べを長安に残して"},
+    {"text": "一半随我 越过千山", "en": "The other half crosses a thousand mountains with me", "ja": "もう半分は私と幾千の山を越える"},
+    {"text": "黄河再宽 隔不断想念", "en": "However wide the Yellow River, it cannot sever my longing", "ja": "黄河がどれほど広くても、この想いは断ち切れない"},
+    {"text": "风沙再大 认得你的眼", "en": "Even through the fiercest sandstorm, I would know your eyes", "ja": "どんな砂嵐の中でも、あなたの瞳を見分けられる"},
+    {"text": "等我归来 坐在你身旁", "en": "Wait until I return and sit beside you", "ja": "帰ってあなたの隣に座るまで、待っていて"},
+    {"text": "把那半首 为你弹响", "en": "I will let that half-finished melody ring out for you", "ja": "残した半分の調べを、あなたに奏でる"},
+    {"text": "兰州的夜 水映星光", "en": "On a Lanzhou night, starlight shimmers on the water", "ja": "蘭州の夜、水面に星明かりが映る"},
+    {"text": "丹霞如火 染红了远山", "en": "The Danxia cliffs blaze, reddening the distant mountains", "ja": "丹霞は炎のように、遠い山並みを赤く染める"},
+    {"text": "风吹红衣 翻过山湾", "en": "The wind lifts my red robes as I round the mountain bend", "ja": "風に紅の衣をなびかせ、山の曲がり道を越える"},
+    {"text": "身后的人 都要平安", "en": "May everyone behind me stay safe", "ja": "背にした人たちが、みんな無事でありますように"},
+    {"text": "山河再远 心还有方向", "en": "However far the journey, my heart still knows the way", "ja": "山河がどれほど遠くても、心は向かう先を知っている"},
+    {"text": "你在窗前 为我留着光", "en": "At your window, you leave a light for me", "ja": "あなたは窓辺で、私のために光を残している"},
+    {"text": "半首琴声 留在长安", "en": "Half a melody stays in Chang'an", "ja": "半分の調べを長安に残して"},
+    {"text": "一半随我 越过千山", "en": "The other half crosses a thousand mountains with me", "ja": "もう半分は私と幾千の山を越える"},
+    {"text": "黄河再宽 隔不断想念", "en": "However wide the Yellow River, it cannot sever my longing", "ja": "黄河がどれほど広くても、この想いは断ち切れない"},
+    {"text": "风沙再大 认得你的眼", "en": "Even through the fiercest sandstorm, I would know your eyes", "ja": "どんな砂嵐の中でも、あなたの瞳を見分けられる"},
+    {"text": "等我回来", "en": "Wait for me to come back", "ja": "私が帰るのを待っていて"},
+    {"text": "把那半首 为你弹响", "en": "I will let that half-finished melody ring out for you", "ja": "残した半分の調べを、あなたに奏でる"},
+    {"text": "那年未尽的半曲", "en": "The half-finished tune from that year", "ja": "あの年、奏できれなかった半分の調べ"},
+    {"text": "今夜 为你弹完", "en": "Tonight, I will play it to the end for you", "ja": "今夜、あなたのために終わりまで奏でる"}
+  ]
+}

@@ -98,13 +98,13 @@ def main() -> None:
     description = "Half a melody waits in Chang'an; the other half travels across the Yellow River and red mountains, carrying a promise to return."
     manifest = {
         "schema": "fun.lazying.media.manifest.v1", "version": 1, "id": MEDIA_ID,
-        "kind": "song", "title": "半曲长安", "artist": "Musia",
-        "localizedTitles": {"zh-Hans": "半曲长安", "en": "The Melody I Left in Chang'an", "ja": "長安に残した調べ"},
+        "kind": "song", "title": "半曲长安 · MiniMax", "artist": "Musia",
+        "localizedTitles": {"zh-Hans": "半曲长安 · MiniMax", "en": "The Melody I Left in Chang'an · MiniMax", "ja": "長安に残した調べ · MiniMax"},
         "description": description, "caption": "半首琴声留在长安，一半随她越过千山。",
         "generationCredit": "AI-generated music · MiniMax-Music3",
         "duration": duration, "canonicalUrl": URL,
         "publication": {"visibility": "public", "stage": "published", "listed": True},
-        "share": {"title": "半曲长安 | Musia", "description": description,
+        "share": {"title": "半曲长安 · MiniMax | Musia", "description": description,
                   "url": URL, "image": COVER, "siteName": "Fun Lazying Art"},
         "assets": {
             "cover": {"id": "cover", "label": "半曲长安 cover", "role": "cover", "src": COVER,
@@ -131,7 +131,7 @@ def main() -> None:
     write_json(ROOT / f"website/data/songs/{MEDIA_ID}/manifest.json", manifest)
     path = ROOT / "website/data/catalog.json"
     catalog = read_json(path)
-    item = {"id": MEDIA_ID, "kind": "song", "title": "半曲长安", "artist": "Musia",
+    item = {"id": MEDIA_ID, "kind": "song", "title": "半曲长安 · MiniMax", "artist": "Musia",
             "summary": description, "manifest": f"data/songs/{MEDIA_ID}/manifest.json", "cover": COVER,
             "visibility": "public", "releaseStage": "published", "category": "music",
             "languages": ["zh-Hans", "en", "ja"],

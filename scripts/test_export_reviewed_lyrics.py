@@ -21,6 +21,19 @@ class ReviewedAnchorTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "duplicate"):
             map_words({"text": "半", "words": [{"word": "半", "start": 1, "end": 1}]}, "半")
 
+    def test_explicit_review_can_restore_asr_merged_name_without_new_timestamps(self):
+        segment = {"text": "肠", "words": [{"word": "肠", "start": 1, "end": 2}]}
+        tokens = map_words(segment, "长安", {"0": {"source": "肠", "text": "长安",
+                           "reason": "Independent transcript supports the slurred proper name."}})
+        self.assertEqual(tokens[0]["text"], "长安")
+        self.assertEqual((tokens[0]["start"], tokens[0]["end"]), (1, 2))
+        self.assertEqual(tokens[0]["sourceText"], "肠")
+
+    def test_override_must_match_evidence(self):
+        with self.assertRaisesRegex(ValueError, "source evidence"):
+            map_words({"words": [{"word": "肠", "start": 1, "end": 2}]}, "长安",
+                      {"0": {"source": "其他", "text": "长安", "reason": "reviewed"}})
+
 
 if __name__ == "__main__":
     unittest.main()

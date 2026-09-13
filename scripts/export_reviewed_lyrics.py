@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Export a manually reviewed Mandarin ASR mapping as audition lyric artifacts.
 
-This is not an automatic lyric corrector. The review must account for every
-selected ASR segment, and equal character counts are required to reuse anchors.
+This is not an automatic lyric corrector. Every selected segment needs review.
+Changed character counts require an explicit, source-bound phrase-span override;
+such overrides retain the original span and do not invent syllable timestamps.
 """
 
 from __future__ import annotations
@@ -28,20 +29,34 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def map_words(segment: dict, corrected: str) -> list[dict]:
+def map_words(segment: dict, corrected: str, overrides: dict | None = None) -> list[dict]:
     words = [word for word in segment["words"] if visible(word["word"])]
+    overrides = overrides or {}
+    for index, override in overrides.items():
+        if not index.isdigit() or int(index) >= len(words):
+            raise ValueError("Invalid reviewed ASR word index")
+        if override["source"] != words[int(index)]["word"] or not override.get("reason", "").strip():
+            raise ValueError("Word-span override needs matching source evidence and a review reason")
+        if not visible(override["text"]):
+            raise ValueError("An override cannot erase a recognized word")
+    counts = [len(visible(overrides.get(str(i), {}).get("text", word["word"]))) for i, word in enumerate(words)]
     text = visible(corrected)
-    if sum(len(visible(word["word"])) for word in words) != len(text):
+    if sum(counts) != len(text):
         raise ValueError(f"Review needs explicit re-alignment: {segment['text']} -> {corrected}")
     tokens, offset = [], 0
     previous_end = 0.0
-    for word in words:
-        count = len(visible(word["word"]))
+    for i, word in enumerate(words):
+        count = counts[i]
         start, end = float(word["start"]), float(word["end"])
         if not all(map(math.isfinite, (start, end))) or start < previous_end - 0.02 or end <= start:
             raise ValueError(f"Invalid/duplicate ASR word timing: {word}")
         tokens.append({"text": text[offset:offset + count], "start": start, "end": end,
                        "alignment": "asr-word-span", "sourceText": word["word"]})
+        if str(i) in overrides:
+            if tokens[-1]["text"] != visible(overrides[str(i)]["text"]):
+                raise ValueError("Reviewed word-span replacement differs from the corrected line")
+            tokens[-1].update(alignment="source-reviewed-asr-phrase-span",
+                              reviewReason=overrides[str(i)]["reason"])
         offset += count
         previous_end = end
     return tokens
@@ -66,6 +81,10 @@ def main() -> int:
     import pykakasi
 
     load_phrases_dict({"弹完": [["tán"], ["wán"]], "长安": [["cháng"], ["ān"]]})
+    for phrase, readings in review.get("zhReadingOverrides", {}).items():
+        if len(phrase) != len(readings):
+            raise ValueError(f"Chinese reading override must match character count: {phrase}")
+        load_phrases_dict({phrase: [[reading] for reading in readings]})
     kakasi = pykakasi.kakasi()
     proper = {"長安": "ちょうあん", "蘭州": "らんしゅう", "黄河": "こうが", "丹霞": "たんか"}
     proper.update(review.get("jaReadingOverrides", {}))
@@ -80,7 +99,7 @@ def main() -> int:
     for index, (row, segment) in enumerate(zip(review["lines"], asr["segments"]), 1):
         if not re.fullmatch(r"[\u3400-\u9fff]+", visible(row["text"])):
             raise ValueError("This exporter supports native Mandarin lines, not mixed/phonetic source vocals")
-        tokens = map_words(segment, row["text"])
+        tokens = map_words(segment, row["text"], row.get("wordTextOverrides"))
         readings = lazy_pinyin(visible(row["text"]), style=Style.TONE3, neutral_tone_with_five=True)
         offset = 0
         for token in tokens:
