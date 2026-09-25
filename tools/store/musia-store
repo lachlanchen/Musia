@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+root="$(cd "$(dirname "$0")/../.." && pwd)"
+export PYTHONDONTWRITEBYTECODE=1
+if [[ -n "${MUSIA_PYTHON:-}" ]]; then
+    exec "$MUSIA_PYTHON" -B "$root/tools/store/musia_store.py" "$@"
+fi
+export PYTHONNOUSERSITE=1
+exec conda run --no-capture-output -n musia python -B "$root/tools/store/musia_store.py" "$@"

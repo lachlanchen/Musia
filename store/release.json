@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "name": "Musia",
+  "bundle_id": "art.lazying.musia",
+  "owner": "LazyingArt LLC",
+  "apple_team": "Q8M2S2FY77",
+  "google_developer_id": "6157557679644496686",
+  "version": "0.1.0",
+  "ios_build": "1",
+  "android_version_code": 1,
+  "apple_app_id": null,
+  "apple_bundle_resource_id": "X6JCGYAZQS",
+  "apple_profile_id": "J6F9KQD6GQ",
+  "apple_profile_uuid": "a819ecbe-6994-475d-979c-3a1ae95dbedb",
+  "google_app_id": null,
+  "pricing": null,
+  "formal_submission_enabled": false,
+  "scope": {
+    "native_ios": "SwiftUI",
+    "native_android": "Kotlin/Compose",
+    "accounts": false,
+    "microphone": false,
+    "uploads": false,
+    "analytics_sdk": false,
+    "learning_content": "read-only public curated streaming",
+    "practice_and_progress": "device-local",
+    "first_pulse": "synthetic"
+  },
+  "declarations": {
+    "privacy": "pending exact binary and endpoint review",
+    "content_rights": "pending catalogue evidence",
+    "age_rating": "not submitted",
+    "pricing": "no selection authorized by this tooling"
+  }
+}

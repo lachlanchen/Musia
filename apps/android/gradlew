@@ -1,0 +1,28 @@
+#!/bin/sh
+set -eu
+# Reuse the workstation distribution; never download a second toolchain.
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+export ANDROID_HOME="${ANDROID_HOME:-$HOME/Android/Sdk}"
+if [ -z "${JAVA_HOME:-}" ]; then
+    for candidate in "$HOME/.sdkman/candidates/java/current" /usr/lib/jvm/java-21-openjdk-amd64; do
+        if [ -x "$candidate/bin/javac" ]; then JAVA_HOME="$candidate"; break; fi
+    done
+fi
+if [ -z "${JAVA_HOME:-}" ] || [ ! -x "$JAVA_HOME/bin/javac" ]; then
+    printf '%s\n' 'Set JAVA_HOME to an existing complete JDK with javac, not a JRE.' >&2
+    exit 1
+fi
+export JAVA_HOME
+if [ -n "${GRADLE_HOME:-}" ]; then
+    gradle="$GRADLE_HOME/bin/gradle"
+else
+    gradle=""
+    for candidate in "${GRADLE_USER_HOME:-$HOME/.gradle}"/wrapper/dists/gradle-8.14.3-all/*/gradle-8.14.3/bin/gradle; do
+        if [ -x "$candidate" ]; then gradle="$candidate"; break; fi
+    done
+fi
+if [ ! -x "$gradle" ]; then
+    printf '%s\n' 'Shared Gradle 8.14.3 not found. Set GRADLE_HOME to an existing installation.' >&2
+    exit 1
+fi
+exec "$gradle" -p "$project_dir" "$@"

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#087f78"><meta name="description" content="Musia music practice: listen, find the pulse, and play a phrase at your pace.">
+  <title>Musia · Practice</title><link rel="icon" href="/assets/brand.png"><link rel="stylesheet" href="/styles.css">
+  <script src="/vendor/lucide.js" defer></script><script src="/assets/musia.js" defer></script><script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navigation">
+      <a class="brand" href="/"><img src="/assets/brand.png" alt=""><span>Musia<span class="brand-note">Music, within reach.</span></span></a>
+      <nav id="navigation">
+        <button data-view="practice" class="nav-item selected"><i data-lucide="audio-lines"></i><span>Practice</span></button>
+        <button data-view="library" class="nav-item"><i data-lucide="library"></i><span>Songbook</span></button>
+        <button data-view="progress" class="nav-item"><i data-lucide="chart-no-axes-column"></i><span>My progress</span></button>
+        <button data-view="create" class="nav-item"><i data-lucide="square-pen"></i><span>Create</span></button>
+      </nav>
+      <div class="sidebar-bottom"><span class="local-label"><i data-lucide="hard-drive"></i>Saved on this device</span><div><a href="/privacy">Privacy</a><a href="/support">Support</a></div></div>
+    </aside>
+    <main>
+      <header class="page-header"><div><span class="eyebrow">YOUR MUSIC SPACE</span><h1 id="page-title">Practice</h1></div><button class="today" id="today-progress" title="Open practice history"><i data-lucide="flame"></i><span>0 min today</span></button></header>
+      <div id="notice" role="status" class="notice" hidden></div>
+      <section id="practice-view" class="view">
+        <div class="practice-grid">
+          <section class="workspace">
+            <div class="track-head"><img id="cover" src="/assets/brand.png" alt="Selected music cover"><div><span class="eyebrow" id="track-kind">FOUNDATIONS</span><h2 id="song-title">Loading your songbook…</h2><p id="artist">Musia</p></div><button id="change-song" class="icon-button" title="Choose a song" aria-label="Choose a song"><i data-lucide="list-music"></i></button></div>
+            <div class="track-meta"><span id="tempo-label">— BPM</span><span id="evidence-label" class="evidence">Loading</span><label class="vocal-label">Vocal <select id="vocal" aria-label="Vocal version"></select></label></div>
+            <div class="transport"><button id="restart" class="icon-button" title="Restart phrase" aria-label="Restart phrase"><i data-lucide="rotate-ccw"></i></button><button id="play" class="play-button" title="Play" aria-label="Play"><i data-lucide="play"></i></button><span id="time">0:00</span><input id="seek" aria-label="Playback position" type="range" min="0" max="22" step=".05" value="0"><span id="duration">0:22</span><button id="loop" class="icon-button" aria-label="Loop selected phrase" title="Loop selected phrase" aria-pressed="false"><i data-lucide="repeat-2"></i></button></div>
+            <div class="speed-row"><label for="speed">Your pace <strong id="speed-value">100%</strong></label><input id="speed" type="range" min="25" max="200" step="5" value="100"><span id="effective-tempo">60 BPM</span></div>
+            <div class="mode-row" role="group" aria-label="Practice mode"><button data-mode="listen" class="selected"><i data-lucide="headphones"></i>Listen</button><button data-mode="tap"><i data-lucide="hand"></i>Tap</button><button data-mode="play"><i data-lucide="guitar"></i>Play</button></div>
+            <div class="pulse-section"><div class="section-title"><h3>The pulse</h3><span id="pulse-status">Ready</span></div><div class="pulse-lane" id="pulse-lane" aria-label="Beat pulse"></div></div>
+            <div id="lyric-stage" class="lyric-stage"><p id="current-lyric"> </p><p id="next-lyric"> </p></div>
+            <div class="tap-section" id="tap-section" hidden><button id="tap" class="tap-button"><i data-lucide="hand"></i><span>Tap</span></button><div><strong id="tap-feedback">Find the pulse</strong><p id="tap-detail">Timing only · device latency can affect the offset.</p><button id="clear-taps" class="text-button">Reset taps</button></div></div>
+            <div class="section-title"><h3>Phrase by phrase</h3><button class="text-button" id="whole-song">Whole track</button></div><div id="phrases" class="phrases"></div>
+          </section>
+          <aside class="practice-aside">
+            <section class="lesson-section"><span class="eyebrow">TODAY'S SMALL STEP</span><h2 id="lesson-title">Feel a steady beat</h2><p id="lesson-body">A beat is a steady pulse. You can follow it without singing a note.</p><ol id="lesson-steps"></ol><button id="next-lesson" class="primary-button">Next step <i data-lucide="arrow-right"></i></button></section>
+            <section class="chord-section"><div class="section-title"><h3 id="chord-heading">Current chord</h3><span id="next-chord">—</span></div><strong id="chord-name" class="chord-name">—</strong><div id="fretboard" class="fretboard" aria-label="Guitar chord shape"></div><p id="shape-status" class="muted">Standard tuning · E A D G B e</p><div class="chord-controls"><label>Capo <select id="capo" aria-label="Capo fret"><option value="0">None</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label><label><input id="simplify" type="checkbox">Simple shapes</label></div></section>
+          </aside>
+        </div>
+      </section>
+      <section id="library-view" class="view" hidden><div class="library-toolbar"><label class="search"><i data-lucide="search"></i><input id="search" placeholder="Find a song" aria-label="Search songbook"></label><span id="song-count"></span></div><div id="library" class="library-grid"></div></section>
+      <section id="progress-view" class="view" hidden><div class="section-title"><h2>Your practice, at your pace</h2><button id="export-progress" class="icon-button" title="Export practice history" aria-label="Export practice history"><i data-lucide="download"></i></button></div><p class="muted">Time practiced and your own reflections. No singing or guitar accuracy score.</p><div id="history"></div><button id="reset-progress" class="text-button danger">Clear practice history</button></section>
+      <section id="create-view" class="view" hidden><div class="create-layout"><form id="brief-form"><span class="eyebrow">A PLACE FOR YOUR NEXT SONG</span><h2>Start with a feeling.</h2><label>Working title<input name="title" maxlength="120" placeholder="An evening by the sea" required></label><label>Your idea<textarea name="idea" rows="4" maxlength="6000" placeholder="What should this music make someone feel?" required></textarea></label><label>Lyrics or notes<textarea name="lyrics" rows="7" maxlength="12000" placeholder="A line, a chord progression, a small beginning…"></textarea></label><div class="form-row"><label>Language<select name="language"><option value="zh-Hans">中文</option><option value="ja">日本語</option><option value="en">English</option><option value="mixed">Mixed</option></select></label><label>Feeling<select name="feeling"><option>Warm and hopeful</option><option>Quiet and intimate</option><option>Bright and energetic</option><option>Wide and cinematic</option></select></label></div><button class="primary-button" type="submit"><i data-lucide="download"></i>Save & export brief</button><p id="brief-status" role="status" class="muted">Private draft · saved on this device</p></form><aside><h3>Your work stays yours</h3><p>Only include lyrics and reference material you have permission to use.</p><p>Generation service: not connected in this preview.</p></aside></div></section>
+      <footer class="practice-footer"><div><button id="floating-play" class="icon-button" title="Play or pause" aria-label="Play"><i data-lucide="play"></i></button><span id="session-time">0:00 practiced</span></div><button id="finish" class="primary-button">Finish practice <i data-lucide="check"></i></button></footer>
+    </main>
+  </div><audio id="audio" preload="metadata" playsinline></audio>
+</body></html>

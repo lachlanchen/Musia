@@ -1,0 +1,35 @@
+{
+  "observed_date": "2026-09-25",
+  "bundle_id": "art.lazying.musia",
+  "apple": {
+    "initial_inventory": "No matching app or bundle identifier",
+    "bundle_identifier": "REGISTERED",
+    "bundle_resource_id": "X6JCGYAZQS",
+    "app_store_profile": "CREATED_AND_IDENTITY_VERIFIED",
+    "profile_uuid": "a819ecbe-6994-475d-979c-3a1ae95dbedb",
+    "app_record": "MISSING",
+    "app_record_blocker": "App Store Connect web login redirected with authResult=FAILED; app record creation is website-only",
+    "web_session_check": "Existing shared Apps tab: read-only session GET returned HTTP 401; cached app data is not proof of authentication",
+    "alternate_browser_check": "Other live store browser belongs to a different company; not used",
+    "testflight_group": "NOT_CREATED_NO_APP_RECORD",
+    "binary_uploaded": false,
+    "formal_review_submitted": false
+  },
+  "google": {
+    "inventory": "Complete authenticated account list: 8 apps, Musia absent",
+    "own_upload_key": "GENERATED",
+    "upload_certificate_sha256": "7301f46b0727b90f41a5f622bbe7f84cfaf3c79d720d0a4251cf8e1a308e3bd2",
+    "app_record": "NOT_CREATED",
+    "app_record_blocker": "Create-app pricing/declarations are not selected; do not guess them",
+    "binary_uploaded": false,
+    "internal_published": false,
+    "formal_review_submitted": false
+  },
+  "invitations": "NOT_SENT_NO_STORE_TEST_RELEASE",
+  "invitation_queued": false,
+  "native_builds_run_by_store_worker": false,
+  "website_qa": "29 backend, 7 web logic, 6 deployment tests and public Playwright passed; not a native qualification receipt",
+  "android_signed_build": "0.1.0 (1) APK/AAB built; 34 release unit tests, signature/identity checks and exact signed APK emulator playback/background/screen-off state checks passed; no upload",
+  "ios_build": "Unsigned simulator application builds; 22 Swift core tests pass; native player readiness is not yet verified",
+  "private_evidence": "store/.runtime/ (ignored, owner-only)"
+}

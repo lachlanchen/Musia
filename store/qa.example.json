@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "platform": "android",
+  "bundle_id": "art.lazying.musia",
+  "source_sha256": null,
+  "artifact_sha256": null,
+  "build_receipt_sha256": null,
+  "checks": {
+    "unit_tests": {"status": "pending", "evidence": null, "sha256": null},
+    "native_smoke": {"status": "pending", "evidence": null, "sha256": null},
+    "offline_progress": {"status": "pending", "evidence": null, "sha256": null},
+    "background_playback": {"status": "pending", "evidence": null, "sha256": null},
+    "permissions": {"status": "pending", "evidence": null, "sha256": null},
+    "content_rights": {"status": "pending", "evidence": null, "sha256": null}
+  },
+  "qa_environment": "Replace with actual simulator/device and OS; never relabel simulator evidence",
+  "reviewed_at": null
+}

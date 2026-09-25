@@ -1,0 +1,46 @@
+[Unit]
+Description=Musia public read-only learning API
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=musia-learning
+Group=musia-learning
+WorkingDirectory=@RELEASE@/app
+ExecStart=@RELEASE@/runtime/bin/python -B -m uvicorn musia.learning:create_app --factory --host 127.0.0.1 --port 18440 --workers 1 --no-proxy-headers --no-server-header --no-access-log --limit-concurrency 8 --backlog 32 --timeout-keep-alive 2 --timeout-graceful-shutdown 10 --h11-max-incomplete-event-size 8192
+Environment=PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 MUSIA_PUBLIC_BASE_URL=https://musia.lazying.art
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectKernelLogs=true
+ProtectClock=true
+RestrictSUIDSGID=true
+RestrictRealtime=true
+RestrictNamespaces=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_INET AF_UNIX
+IPAddressDeny=any
+IPAddressAllow=localhost
+MemoryHigh=96M
+MemoryMax=128M
+MemorySwapMax=0
+CPUQuota=50%
+TasksMax=32
+LimitNOFILE=256
+
+[Install]
+WantedBy=multi-user.target
