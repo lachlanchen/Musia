@@ -6,6 +6,21 @@ owns `store/` and `tools/store/` only. Native workers own `apps/ios/` and
 
 ## Actual State
 
+2026-09-26 continuation: the owner confirmed **paid USD 2.99** on both platforms
+as the ongoing default. This is recorded in `release.json`, but no provider price
+has been saved yet. The Google creation form is prepared with Musia,
+`art.lazying.musia`, English (US), App and Paid; package availability was confirmed.
+Creation is not submitted: the required policy/export declarations await owner
+confirmation. One owned form tab is retained privately for continuation.
+
+The owner reported a restored Apple login, but a fresh owned `/apps` navigation
+still redirected to `/login?targetUrl=%2Fapps&authResult=FAILED`. Read-only
+session and app-list GETs returned HTTP 401. The older cached Apps tab remains
+untouched. A new owned sign-in tab is visible in the same shared browser; no
+password, verification code, account switch or login attempt was automated.
+The latest private tab IDs are in `.runtime/apple-login-tab.json` and
+`.runtime/play-create-form.json`. No app record, upload or invitation was created.
+
 See `provider-readiness.json`. On 2026-09-25, authenticated Apple GETs found no
 Musia app or bundle ID, and the complete Google Play account list had eight apps,
 none Musia. Subsequently this worker registered the Musia Apple identifier,
@@ -33,8 +48,8 @@ attempts. The verified restore URL/profile and timestamped evidence are in
 `store/.runtime/handoff.md` (private). Restore the account-holder session there
 and verify LazyingArt LLC before creating Musia's record.
 
-Google app creation is pending an explicit pricing decision and supported
-declarations. Do not inherit Bunko's paid price, silently choose free, create an
+Google app creation now has explicit paid USD 2.99 authorization and is pending
+supported declarations. Do not inherit Bunko's paid price, silently choose free, create an
 API edit as a status probe, or invent an app ID. Later create Musia's own tester
 list from the protected owner recipient, not another app's tester configuration.
 

@@ -13,7 +13,15 @@
   "apple_profile_id": "J6F9KQD6GQ",
   "apple_profile_uuid": "a819ecbe-6994-475d-979c-3a1ae95dbedb",
   "google_app_id": null,
-  "pricing": null,
+  "pricing": {
+    "model": "paid",
+    "currency": "USD",
+    "price": "2.99",
+    "platforms": ["apple", "google"],
+    "status": "owner_authorized_not_applied",
+    "authorized_date": "2026-09-26",
+    "default_for_future_releases": true
+  },
   "formal_submission_enabled": false,
   "scope": {
     "native_ios": "SwiftUI",
@@ -30,6 +38,6 @@
     "privacy": "pending exact binary and endpoint review",
     "content_rights": "pending catalogue evidence",
     "age_rating": "not submitted",
-    "pricing": "no selection authorized by this tooling"
+    "pricing": "Owner authorized USD 2.99 paid on both platforms; provider readback pending"
   }
 }

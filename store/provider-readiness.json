@@ -1,5 +1,5 @@
 {
-  "observed_date": "2026-09-25",
+  "observed_date": "2026-09-26",
   "bundle_id": "art.lazying.musia",
   "apple": {
     "initial_inventory": "No matching app or bundle identifier",
@@ -8,8 +8,8 @@
     "app_store_profile": "CREATED_AND_IDENTITY_VERIFIED",
     "profile_uuid": "a819ecbe-6994-475d-979c-3a1ae95dbedb",
     "app_record": "MISSING",
-    "app_record_blocker": "App Store Connect web login redirected with authResult=FAILED; app record creation is website-only",
-    "web_session_check": "Existing shared Apps tab: read-only session GET returned HTTP 401; cached app data is not proof of authentication",
+    "app_record_blocker": "Owner reported login restored; fresh owned navigation still redirects with authResult=FAILED. A fresh sign-in tab is retained for owner login",
+    "web_session_check": "Read-only session and app-list GETs returned HTTP 401 on 2026-09-26; cached app data is not proof of authentication",
     "alternate_browser_check": "Other live store browser belongs to a different company; not used",
     "testflight_group": "NOT_CREATED_NO_APP_RECORD",
     "binary_uploaded": false,
@@ -20,7 +20,8 @@
     "own_upload_key": "GENERATED",
     "upload_certificate_sha256": "7301f46b0727b90f41a5f622bbe7f84cfaf3c79d720d0a4251cf8e1a308e3bd2",
     "app_record": "NOT_CREATED",
-    "app_record_blocker": "Create-app pricing/declarations are not selected; do not guess them",
+    "app_record_blocker": "Paid creation form prepared and package availability confirmed; policy/export declarations await owner confirmation",
+    "price_authorized": {"currency": "USD", "amount": "2.99", "applied": false},
     "binary_uploaded": false,
     "internal_published": false,
     "formal_review_submitted": false

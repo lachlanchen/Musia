@@ -37,7 +37,9 @@ verified by construction, not by claims about AI accuracy.
 - [x] Signed Android 0.1.0 (1) APK and AAB; 34 release unit tests passed,
   release lint passed, package/permissions and both signatures verified.
 - [ ] Apple app record: existing App Store Connect web session needs login.
-- [ ] Google app record: free/paid choice and supported declarations pending.
+- [x] Owner confirmed paid USD 2.99 on both platforms as the future default.
+- [ ] Google app record: form prepared and package available; policy/export
+  declarations pending. No provider price saved yet.
 - [ ] Remaining release checks (including content rights and physical-device
   audio interruptions), iOS archive and provider uploads.
 - [ ] TestFlight and Google internal-test availability; invitations not sent.

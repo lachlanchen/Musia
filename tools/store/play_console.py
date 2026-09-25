@@ -37,7 +37,7 @@ class OwnedTab:
         return result.get("result", {}).get("value")
 
     def view(self):
-        return self.evaluate("({url:location.href,text:document.body.innerText})")
+        return self.evaluate("({url:location.href,text:document.body?.innerText ?? ''})")
 
     def close(self):
         self.ws.close()

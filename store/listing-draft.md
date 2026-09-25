@@ -46,7 +46,10 @@ internet connection.
 
 ## Not Yet Declared
 
-Price, distribution countries, catalogue rights, age questionnaires, export
+Paid USD 2.99 was authorized on 2026-09-26 for both platforms and future releases;
+it has not yet been applied in the provider consoles.
+
+Distribution countries, catalogue rights, age questionnaires, export
 compliance, exact privacy labels/data safety and formal review submission still
 need their supported answers. No checkbox or declaration is assumed from this
 copy. Reuse the already verified private self-test recipient without placing it

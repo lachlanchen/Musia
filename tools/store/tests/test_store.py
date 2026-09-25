@@ -11,6 +11,7 @@ import storelib as s
 import musia_store as cli
 import invite_play
 from build_native import check_profile, android_manifest, android_config
+from play_console import OwnedTab
 
 
 class StoreTests(unittest.TestCase):
@@ -146,6 +147,12 @@ class StoreTests(unittest.TestCase):
     def test_android_build_rejects_jre_before_launching_gradle(self):
         with self.assertRaisesRegex(s.GuardError, "complete shared JDK"):
             android_config({"java_home": str(self.root / "missing-jdk")})
+
+    def test_store_view_allows_body_not_yet_attached(self):
+        tab = object.__new__(OwnedTab)
+        with patch.object(tab, "evaluate", return_value={"url": "about:blank", "text": ""}) as evaluate:
+            self.assertEqual(tab.view()["text"], "")
+            self.assertIn("document.body?.innerText", evaluate.call_args.args[0])
 
     def test_upload_and_invite_need_qa_before_provider_access(self):
         args = argparse.Namespace(build_receipt=None, qa=None, confirm_upload=True, confirm_invite=True)
