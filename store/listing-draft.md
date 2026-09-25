@@ -7,6 +7,9 @@ uploading. Do not advertise disabled AI, recording or creation capabilities.
 
 Name: **Musia**
 
+Apple store name: **Musia: Learn Music & Guitar** (the bare name was unavailable).
+This is the created record's name; the descriptive listing below remains draft.
+
 Apple subtitle: **Hear the beat. Play along.**
 
 Google short description: **Practice guitar at your pace with song loops, chord shapes and a steady pulse.**
@@ -46,10 +49,12 @@ internet connection.
 
 ## Not Yet Declared
 
-Paid USD 2.99 was authorized on 2026-09-26 for both platforms and future releases;
-it has not yet been applied in the provider consoles.
+Paid USD 2.99 was authorized on 2026-09-26 for both platforms and future releases.
+It is saved and freshly read back in both consoles, but not publicly available.
+Google's two create-app policy/export declarations were expressly authorized
+and applied. This does not answer other platform or release questionnaires.
 
-Distribution countries, catalogue rights, age questionnaires, export
+Distribution countries, catalogue rights, age questionnaires, Apple build export
 compliance, exact privacy labels/data safety and formal review submission still
 need their supported answers. No checkbox or declaration is assumed from this
 copy. Reuse the already verified private self-test recipient without placing it

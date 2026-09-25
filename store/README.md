@@ -6,52 +6,54 @@ owns `store/` and `tools/store/` only. Native workers own `apps/ios/` and
 
 ## Actual State
 
-2026-09-26 continuation: the owner confirmed **paid USD 2.99** on both platforms
-as the ongoing default. This is recorded in `release.json`, but no provider price
-has been saved yet. The Google creation form is prepared with Musia,
-`art.lazying.musia`, English (US), App and Paid; package availability was confirmed.
-Creation is not submitted: the required policy/export declarations await owner
-confirmation. One owned form tab is retained privately for continuation.
+2026-09-26: both application records exist, and **paid USD 2.99** is saved in
+both provider consoles. The owner chose this as the future default. Each price
+was verified after a fresh page reload, not just a successful click or toast.
 
-The owner reported a restored Apple login, but a fresh owned `/apps` navigation
-still redirected to `/login?targetUrl=%2Fapps&authResult=FAILED`. Read-only
-session and app-list GETs returned HTTP 401. The older cached Apps tab remains
-untouched. A new owned sign-in tab is visible in the same shared browser; no
-password, verification code, account switch or login attempt was automated.
-The latest private tab IDs are in `.runtime/apple-login-tab.json` and
-`.runtime/play-create-form.json`. No app record, upload or invitation was created.
+| Provider | Store Record | Readback |
+| --- | --- | --- |
+| Apple | `6816265930`, **Musia: Learn Music & Guitar** | API verified `art.lazying.musia`; US price $2.99 |
+| Google | `4973883817798043601`, **Musia** | Full account inventory verified `art.lazying.musia`; US price USD 2.99 |
 
-See `provider-readiness.json`. On 2026-09-25, authenticated Apple GETs found no
-Musia app or bundle ID, and the complete Google Play account list had eight apps,
-none Musia. Subsequently this worker registered the Musia Apple identifier,
-created and validated its App Store profile, and generated a separate Musia
-Android upload key. No binary, invitation, pricing choice, privacy declaration,
-legal attestation or review submission was sent.
+The owner restored Apple login; a fresh session GET returned 200 for LazyingArt
+LLC. Apple rejected the bare name Musia as already used, so the descriptive
+branded name above was accepted. Google creation used English (US), App and
+Paid. Its Developer Program Policies and US export-law declarations were
+explicitly confirmed by the owner before checking and submitting them.
+
+Other regional prices use the providers' conversions. Price schedules do not
+enable distribution: country availability is not configured. No binary upload,
+test release, invitation or formal review submission has happened. No unrelated
+privacy, content-rating or rights declarations were inferred from these two
+creation authorizations. See `provider-readiness.json` for remaining checks.
+
+Historical inventory on 2026-09-25 found no Musia record and eight Google apps;
+after creation there are nine. Earlier Apple 401/login-failed evidence is kept
+privately as history, not a current blocker. The bundle identifier, app-specific
+profile and separate Android upload key remain unchanged.
 
 `listing-draft.md` contains feature-accurate listing copy and reviewer steps;
 it is not a submitted store listing or a substitute for provider declarations.
 
-App Store Connect web access redirected to login with `authResult=FAILED`.
-Apple API credentials still work, but Apple requires its website to create the
-app record. Restore the existing account's web authentication, then create an
-iOS record named Musia with primary language English, bundle `art.lazying.musia`,
-and a unique Musia SKU. Read back its exact bundle ID before recording the app ID.
-Do not change agreements, pricing or another app. Without this record, there is
-no Musia TestFlight group to attach to.
+Use the existing shared browser recorded in `.runtime/handoff.md`; do not
+restart it or switch to the separate company's browser. Identify retained tabs
+by exact CDP target ID with `tools/store/browser_ui.py`, not page order or a
+broad URL match. Preserve other projects' tabs. If a submit is interrupted,
+reconcile through inventory/current provider state before retrying; retain
+operation journals. Never recreate these app records.
 
-The Company's browser playbook points to the same L & N-owned shared profile
-used by Bunko. Its existing Apps tab can show cached content after expiry:
-a read-only session GET on 2026-09-25 returned HTTP 401. The other live store
-browser inspected belongs to a different company, not this Apple team. Do not
-switch accounts, reuse a personal browser, restart Chrome or repeat login
-attempts. The verified restore URL/profile and timestamped evidence are in
-`store/.runtime/handoff.md` (private). Restore the account-holder session there
-and verify LazyingArt LLC before creating Musia's record.
+Apple's pricing dialog persisted its schedule on **Confirm**. The top Save
+control was CSS-disabled (without a native disabled attribute), so a subsequent
+click was intercepted and did not dispatch. Reload and the read-only regional
+price popover confirmed $2.99; no forced click or duplicate save was needed.
+Google required **Update**, then **Save changes**, followed by a fresh reload.
+These observations document this console session, not permanent UI selectors.
 
-Google app creation now has explicit paid USD 2.99 authorization and is pending
-supported declarations. Do not inherit Bunko's paid price, silently choose free, create an
-API edit as a status probe, or invent an app ID. Later create Musia's own tester
-list from the protected owner recipient, not another app's tester configuration.
+Reuse the protected owner tester recipient when a test release is available,
+not another app's tester list. Do not inherit another app's price, choose free,
+or open a Google API edit merely as a status probe. Apple created a default
+draft version 1.0; reconcile it with the qualified binary's version before any
+later review submission (native sources currently use 0.1.0).
 
 ## Runtime And Credentials
 

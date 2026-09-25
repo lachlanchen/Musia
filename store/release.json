@@ -8,17 +8,21 @@
   "version": "0.1.0",
   "ios_build": "1",
   "android_version_code": 1,
-  "apple_app_id": null,
+  "apple_app_id": "6816265930",
+  "apple_store_name": "Musia: Learn Music & Guitar",
   "apple_bundle_resource_id": "X6JCGYAZQS",
   "apple_profile_id": "J6F9KQD6GQ",
   "apple_profile_uuid": "a819ecbe-6994-475d-979c-3a1ae95dbedb",
-  "google_app_id": null,
+  "google_app_id": "4973883817798043601",
   "pricing": {
     "model": "paid",
     "currency": "USD",
     "price": "2.99",
     "platforms": ["apple", "google"],
-    "status": "owner_authorized_not_applied",
+    "status": "saved_and_read_back_both_providers_not_public",
+    "provider_observed_date": "2026-09-26",
+    "base_country": "United States",
+    "regional_prices": "provider-converted; distribution countries not configured",
     "authorized_date": "2026-09-26",
     "default_for_future_releases": true
   },
@@ -35,9 +39,14 @@
     "first_pulse": "synthetic"
   },
   "declarations": {
+    "google_create_app": {
+      "developer_program_policies": "owner_confirmed_and_applied",
+      "us_export_laws": "owner_confirmed_and_applied",
+      "confirmed_date": "2026-09-26"
+    },
     "privacy": "pending exact binary and endpoint review",
     "content_rights": "pending catalogue evidence",
     "age_rating": "not submitted",
-    "pricing": "Owner authorized USD 2.99 paid on both platforms; provider readback pending"
+    "pricing": "USD 2.99 saved and freshly read back in both consoles; not publicly available"
   }
 }

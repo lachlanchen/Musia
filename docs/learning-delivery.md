@@ -1,6 +1,6 @@
 # Learning App Delivery Checkpoint
 
-Date: 2026-09-25. This is a first learning release, not a claim that the entire
+Updated: 2026-09-26. This is a first learning release, not a claim that the entire
 music creation roadmap or store publication is complete.
 
 ## Available
@@ -10,7 +10,7 @@ music creation roadmap or store publication is complete.
 - [x] Browser listen/tap/play practice, 25-200% speed, phrase looping, current
   lyrics/readings, chord shapes, local progress and creative-brief export.
 - [x] Dedicated read-only API. Private Studio/generation controls are not exposed.
-- [x] 29 API tests, 7 web logic tests, 6 deployment tests, 18 store-tool guard tests.
+- [x] 29 API tests, 7 web logic tests, 6 deployment tests, 23 store-tool guard tests.
 - [x] Real public-site browser playback and workflow tests; screenshots checked
   at desktop and mobile sizes, no horizontal overflow at 320-1440 px.
 - [x] Native Android debug build, 34 unit tests and lint without blocking errors.
@@ -36,10 +36,13 @@ verified by construction, not by claims about AI accuracy.
 - [x] Separate Musia Android upload key, protected and ignored by Git.
 - [x] Signed Android 0.1.0 (1) APK and AAB; 34 release unit tests passed,
   release lint passed, package/permissions and both signatures verified.
-- [ ] Apple app record: existing App Store Connect web session needs login.
+- [x] Apple app `6816265930`, **Musia: Learn Music & Guitar**; restored company
+  login and exact bundle verified. The bare Musia name was unavailable.
 - [x] Owner confirmed paid USD 2.99 on both platforms as the future default.
-- [ ] Google app record: form prepared and package available; policy/export
-  declarations pending. No provider price saved yet.
+- [x] Google app `4973883817798043601`, exact package verified; owner-confirmed
+  create-app policy/export declarations applied.
+- [x] US price USD 2.99 saved and freshly read back in both consoles. Regional
+  conversion is set; distribution countries and public availability are not.
 - [ ] Remaining release checks (including content rights and physical-device
   audio interruptions), iOS archive and provider uploads.
 - [ ] TestFlight and Google internal-test availability; invitations not sent.
