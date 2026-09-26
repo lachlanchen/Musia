@@ -73,11 +73,31 @@ def port_open():
         return sock.connect_ex(("127.0.0.1", 18440)) == 0
 
 
+def ingress_imports(text, *, allowed_root=Path('/etc')):
+    """Fingerprint protected, literal imports without retaining their secret contents."""
+    records = {}
+    for line in text.splitlines():
+        if not re.match(r'^\s*import\b', line):
+            continue
+        match = re.fullmatch(r'\s*import\s+(/[A-Za-z0-9_./-]+)\s*', line)
+        assert match, 'Only literal absolute ingress imports are supported'
+        path = Path(match[1])
+        assert '..' not in path.parts and path.is_relative_to(allowed_root), 'Import outside protected configuration'
+        assert not any(p.is_symlink() for p in (path, *path.parents)), 'Symlink ingress import refused'
+        info = path.stat()
+        assert stat.S_ISREG(info.st_mode) and not info.st_mode & 0o022, 'Writable or non-file ingress import'
+        content = path.read_bytes()
+        assert not re.search(rb'(?m)^\s*import\b', content), 'Nested imports require separate review'
+        assert HOST.encode() not in content, 'Imported Musia site has another owner'
+        records[str(path)] = {'sha256': sha(content), 'uid': info.st_uid, 'gid': info.st_gid, 'mode': stat.S_IMODE(info.st_mode)}
+    return records
+
+
 def preflight():
     assert os.geteuid() == 0
     assert not CADDY.is_symlink() and CADDY.is_file(), "Unexpected ingress configuration"
     text = CADDY.read_text()
-    assert not re.search(r"(?m)^\s*import\s", text), "Imported configs need explicit snapshot review"
+    imports = ingress_imports(text)
     assert "admin 127.0.0.1:12019" in text and "https_port 18443" in text
     for host in PRESERVED:
         assert host in text, f"Missing preserved host: {host}"
@@ -88,7 +108,7 @@ def preflight():
         assert str(BASE) in UNIT.read_text(), "Musia unit has another owner"
     memory = dict(line.split(":", 1) for line in Path("/proc/meminfo").read_text().splitlines())
     return {"availableMiB": int(memory["MemAvailable"].split()[0]) // 1024,
-            "caddySha256": sha(CADDY.read_bytes()), "firewallSha256": firewall_hash(),
+            "caddySha256": sha(CADDY.read_bytes()), "ingressImports": imports, "firewallSha256": firewall_hash(),
             "preservedHosts": PRESERVED, "processes": processes(), "portOccupied": port_open()}
 
 
@@ -123,6 +143,7 @@ def preserved_checks(release):
 
 
 def assert_unchanged(state):
+    assert ingress_imports(CADDY.read_text()) == state['baseline'].get('ingressImports', {}), 'Imported ingress configuration changed'
     assert firewall_hash() == state["baseline"]["firewallSha256"], "Firewall changed during transaction"
     assert processes() == state["baseline"]["processes"], "Preserved service identity changed"
 
@@ -272,11 +293,15 @@ def replace_site(original, block):
 
 def install_caddy(directory, state, candidate_bytes):
     assert sha(CADDY.read_bytes()) == state["expectedCaddySha256"], "Concurrent Caddy change; refuse overwrite"
+    assert_unchanged(state)
+    if candidate_bytes == CADDY.read_bytes():
+        return
     candidate = CADDY.parent / ("Caddyfile.musia-" + directory.name)
     atomic(candidate, candidate_bytes, state["caddyMode"], tuple(state["caddyOwner"]))
     try:
         command(["runuser", "-u", "lazystudio", "--", "/usr/bin/caddy", "validate", "--config", candidate, "--adapter", "caddyfile"])
         assert sha(CADDY.read_bytes()) == state["expectedCaddySha256"], "Concurrent ingress edit during validation"
+        assert_unchanged(state)
         state["expectedCaddySha256"] = sha(candidate_bytes)
         json_write(directory / "state.json", state)
         os.replace(candidate, CADDY)
@@ -349,6 +374,11 @@ def main():
         if args.action == "stage":
             result = stage(directory, release, args.sha256)
         else:
+            if args.action == 'rollback' and not (directory / 'state.json').exists():
+                active = STATE / 'active-deployment'
+                assert not active.exists() or active.read_text() != directory.name, 'Missing state for an active transaction'
+                print(json.dumps({'rolledBack': False, 'reason': 'Stage did not reach the mutation checkpoint'}))
+                return
             state = json.loads((directory / "state.json").read_text())
             assert state["sha256"] == args.sha256 and state["release"] == str(release)
             if args.action == "rollback":

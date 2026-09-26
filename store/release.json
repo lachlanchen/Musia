@@ -22,11 +22,18 @@
     "status": "saved_and_read_back_both_providers_not_public",
     "provider_observed_date": "2026-09-26",
     "base_country": "United States",
-    "regional_prices": "provider-converted; distribution countries not configured",
+    "regional_prices": "provider-converted; current territories recorded in provider-readiness.json",
     "authorized_date": "2026-09-26",
     "default_for_future_releases": true
   },
   "formal_submission_enabled": false,
+  "formal_browser_submission": {
+    "authorized_date": "2026-09-26",
+    "platforms": ["apple", "google"],
+    "territories": "worldwide where eligible",
+    "note": "Separate authorized browser lane; beta CLI formal-submission prohibition remains unchanged",
+    "record": "store/formal-review-2026-09-26.md"
+  },
   "scope": {
     "native_ios": "SwiftUI",
     "native_android": "Kotlin/Compose",
@@ -44,9 +51,9 @@
       "us_export_laws": "owner_confirmed_and_applied",
       "confirmed_date": "2026-09-26"
     },
-    "privacy": "pending exact binary and endpoint review",
-    "content_rights": "pending catalogue evidence",
-    "age_rating": "not submitted",
+    "privacy": "Saved in both consoles after native code and hosting review; see formal-review-2026-09-26.md",
+    "content_rights": "Owner explicitly confirmed commercial catalog, lyric, translation, vocal and cover rights",
+    "age_rating": "Apple and Google questionnaires saved; provider-specific calculated ratings retained",
     "pricing": "USD 2.99 saved and freshly read back in both consoles; not publicly available"
   }
 }

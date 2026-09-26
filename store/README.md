@@ -21,25 +21,33 @@ branded name above was accepted. Google creation used English (US), App and
 Paid. Its Developer Program Policies and US export-law declarations were
 explicitly confirmed by the owner before checking and submitting them.
 
-Other regional prices use the providers' conversions. Public distribution
-countries are not configured. Version **0.1.1 (2)** is available in both internal
+Other regional prices use the providers' conversions. Apple availability is
+saved for 174 territories (excluding China mainland pending ICP), and Google
+production targets 172 eligible paid-app regions. Version **0.1.1 (2)** is available in both internal
 testing tracks. Google's release and sole owner tester list were read back in
 Console. Apple processed the signed IPA as VALID and reports IN_BETA_TESTING;
 the exact build is attached to the existing owner-only Musia Internal group,
 with its preceding build preserved. Existing invitations remain valid; no new
 email or resend was requested for this update. See `provider-readiness.json`
-for the latest TestFlight group/access readback. Neither formal review nor public release
-was requested in this test delivery. No unrelated
-privacy, content-rating or rights declarations were inferred from these two
-creation authorizations. See `provider-readiness.json` for remaining checks.
+for the latest TestFlight group/access readback. The owner subsequently requested
+formal production review and separately confirmed commercial catalog rights,
+worldwide distribution where eligible, and real iPhone playback.
+
+Google accepted **10 changes for review**, including production 0.1.1 (2).
+A fresh reload shows **Changes in review**, with automatic quick checks still
+running. Managed publishing is on; this is not public availability.
+Apple's actual submission validation lists only missing iPhone and 13-inch
+iPad screenshots. Its exact build is attached, listing/privacy/age/availability
+are saved, and manual release is selected, but it has **not** been submitted.
+See [formal review](formal-review-2026-09-26.md) and `provider-readiness.json`.
 
 Historical inventory on 2026-09-25 found no Musia record and eight Google apps;
 after creation there are nine. Earlier Apple 401/login-failed evidence is kept
 privately as history, not a current blocker. The bundle identifier, app-specific
 profile and separate Android upload key remain unchanged.
 
-`listing-draft.md` contains feature-accurate listing copy and reviewer steps;
-it is not a submitted store listing or a substitute for provider declarations.
+`listing-draft.md` is historical draft copy. `listing.en-US.json` contains the
+current saved listing and reviewer steps; neither replaces provider readback.
 
 Use the existing shared browser recorded in `.runtime/handoff.md`; do not
 restart it or switch to the separate company's browser. Identify retained tabs
@@ -57,9 +65,8 @@ These observations document this console session, not permanent UI selectors.
 
 Reuse the protected owner tester recipient when a test release is available,
 not another app's tester list. Do not inherit another app's price, choose free,
-or open a Google API edit merely as a status probe. Apple created a default
-draft version 1.0; reconcile it with the qualified binary's version before any
-later review submission (native sources currently use 0.1.1).
+or open a Google API edit merely as a status probe. Apple's initial draft 1.0
+has been reconciled to 0.1.1 and the exact build 2; do not recreate it.
 
 ## Runtime And Credentials
 
@@ -133,8 +140,9 @@ Android has 36 passing release unit tests, release lint and signed-APK
 phone/tablet/enlarged-text layout and playback checks. Swift has 23 passing core
 tests and one opt-in network skip; iPhone/iPad simulator navigation, rotation
 and enlarged-text tests pass. The virtual Mac's system-tab screenshot and
-audio-clock limitations remain, so physical iPhone visual/playback confirmation
-is still pending. See the [fix and regression checks](../references/musia-native-chords-and-navigation-2026-09-26.md).
+audio-clock limitations remain. The owner has since confirmed audible and
+locked-screen playback on the latest TestFlight iPhone build. Genuine listing
+screenshots remain pending. See the [fix and regression checks](../references/musia-native-chords-and-navigation-2026-09-26.md).
 
 Historical first-beta build:
 

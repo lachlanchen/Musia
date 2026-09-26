@@ -21,6 +21,38 @@ builder = module("musia_deploy_builder", HERE.parents[1] / "scripts/deploy_musia
 
 
 class DeploymentTest(unittest.TestCase):
+    def test_literal_ingress_imports_are_fingerprinted_not_copied(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            target = root / 'other.site'
+            target.write_text('other.example { respond 200 }\n')
+            target.chmod(0o640)
+            text = f'import {target}\n'
+            before = remote.ingress_imports(text, allowed_root=root)
+            self.assertEqual(before[str(target)]['sha256'], builder.digest(target))
+            self.assertNotIn('respond', json.dumps(before))
+            target.write_text('other.example { respond 201 }\n')
+            self.assertNotEqual(before, remote.ingress_imports(text, allowed_root=root))
+            for content in ('import /etc/nested.site\n', 'musia.lazying.art { respond 200 }'):
+                target.write_text(content)
+                with self.assertRaises(AssertionError):
+                    remote.ingress_imports(text, allowed_root=root)
+            target.write_text('other.example { respond 200 }')
+            target.chmod(0o666)
+            with self.assertRaises(AssertionError):
+                remote.ingress_imports(text, allowed_root=root)
+
+    def test_dynamic_and_symlink_imports_refused(self):
+        for text in ('import snippets/*', 'import /etc/*.site', 'import shared', 'import /etc/x arg', 'import /etc/../tmp/x'):
+            with self.assertRaises(AssertionError):
+                remote.ingress_imports(text)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/'target').write_text('other.example { respond 200 }')
+            (root/'link').symlink_to(root/'target')
+            with self.assertRaises(AssertionError):
+                remote.ingress_imports(f'import {root}/link', allowed_root=root)
+
     def test_additive_ingress_preserves_existing_bytes(self):
         original = "{\n admin 127.0.0.1:12019\n}\nedit.lazying.art {\n respond 200\n}\n"
         changed = remote.replace_site(original, remote.site_block(None, tls_only=True))

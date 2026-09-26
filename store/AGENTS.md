@@ -30,3 +30,11 @@
 - Reconcile uploaded version 0.1.0 (1) before uploading again. The current
   TestFlight and Play internal versions are already available; do not duplicate
   invitations. Provider/readback receipts are under the ignored `.runtime/`.
+- The current formal candidate is **0.1.1 (2)**, already in both internal tracks.
+  The owner requested production review, confirmed commercial catalog rights,
+  worldwide availability where eligible, and audible/locked-screen playback on
+  an iPhone. Do not ask those questions again. Formal browser work is separate
+  from the beta CLI's intentionally prohibited formal-submission operations.
+- Read `formal-review-2026-09-26.md` and `provider-readiness.json` before resuming.
+  Reuse the exact qualified builds. Apple listing screenshots remain genuine
+  native screenshots; never use black simulator images or web-screen substitutes.
