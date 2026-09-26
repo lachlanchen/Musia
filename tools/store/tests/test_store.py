@@ -91,6 +91,29 @@ class StoreTests(unittest.TestCase):
             with self.assertRaises(s.GuardError):
                 s.release()
 
+    def test_play_update_form_proves_package_on_parent_track(self):
+        from unittest.mock import Mock
+        base = f"https://play.google.com/console/u/0/developers/{s.DEVELOPER}/app/123/tracks/456"
+        cfg = {"google_app_id":"123", "play_internal_url":base+"?tab=releases", "play_upload_url":base+"/releases/2/prepare"}
+        tab = Mock()
+        tab.view.side_effect = [{"url":cfg["play_internal_url"],"text":s.BUNDLE+" Internal testing"},
+                                {"url":cfg["play_upload_url"],"text":"Create internal testing release"}]
+        play_console.open_verified_prepare(tab,cfg)
+        self.assertEqual([c.kwargs["url"] for c in tab.call.call_args_list], [cfg["play_internal_url"],cfg["play_upload_url"]])
+        for bad in (base+"/releases/2/prepare?other=1", base.replace("456","999")+"/releases/2/prepare", base.replace("/123/","/999/")+"/releases/2/prepare"):
+            with self.assertRaises(s.GuardError):
+                play_console.open_verified_prepare(Mock(),dict(cfg,play_upload_url=bad))
+
+    def test_play_update_form_rejects_wrong_package_before_prepare(self):
+        from unittest.mock import Mock
+        base = f"https://play.google.com/console/u/0/developers/{s.DEVELOPER}/app/123/tracks/456"
+        cfg = {"google_app_id":"123", "play_internal_url":base+"?tab=releases", "play_upload_url":base+"/releases/2/prepare"}
+        tab = Mock()
+        tab.view.return_value = {"url":cfg["play_internal_url"],"text":"another.app Internal testing"}
+        with patch.object(play_console.time,"sleep"), self.assertRaises(s.GuardError):
+            play_console.open_verified_prepare(tab,cfg)
+        self.assertEqual(tab.call.call_count, 1)
+
     def fixture(self):
         artifact = self.runtime / "Musia.aab"
         s.write_private(artifact, b"fixture-not-a-real-signature")

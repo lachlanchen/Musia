@@ -67,24 +67,41 @@ def inventory():
         tab.close()
 
 
-def upload(build, confirm=False):
-    cfg = config()
+def open_verified_prepare(tab, cfg):
     app = cfg.get("google_app_id")
     url = cfg.get("play_upload_url", "")
     prefix = f"https://play.google.com/console/u/0/developers/{DEVELOPER}/app/{app}/"
-    require(app and app.isdigit() and url.startswith(prefix) and "prepare" in url
-            and "production" not in url, "Configure Musia's observed internal prepare URL, never another app's URL")
+    match = re.fullmatch(re.escape(prefix) + r"tracks/(\d+)/releases/\d+/prepare", url)
+    require(app and app.isdigit() and match, "Configure Musia's exact observed internal prepare URL")
+    track = cfg.get("play_internal_url", "")
+    require(track == prefix + "tracks/" + match[1] + "?tab=releases", "Prepare URL must belong to the configured internal track")
+    # Update forms omit the package label. Prove identity on the parent track
+    # before opening its exact prepare URL, rather than relaxing the app guard.
+    tab.call("Page.navigate", url=track)
+    for _ in range(45):
+        view = tab.view()
+        if view["url"] == track and BUNDLE in view["text"] and "Internal testing" in view["text"]:
+            break
+        time.sleep(1)
+    require(view["url"] == track and BUNDLE in view["text"] and "Internal testing" in view["text"],
+            "Cannot prove this is Musia internal testing; no upload")
+    tab.call("Page.navigate", url=url)
+    for _ in range(45):
+        view = tab.view()
+        if view["url"] == url and "Create internal testing release" in view["text"]:
+            break
+        time.sleep(1)
+    require(view["url"] == url and "Create internal testing release" in view["text"],
+            "Cannot prove the exact internal release form; no upload")
+
+
+def upload(build, confirm=False):
+    cfg = config()
+    app = cfg.get("google_app_id")
     tab = OwnedTab(cfg)
     dispatched = False
     try:
-        tab.call("Page.navigate", url=url)
-        for _ in range(45):
-            view = tab.view()
-            if BUNDLE in view["text"] and "Internal testing" in view["text"]:
-                break
-            time.sleep(1)
-        require(view["url"] == url and BUNDLE in view["text"] and "Internal testing" in view["text"],
-                "Cannot prove this is Musia internal testing; no upload")
+        open_verified_prepare(tab, cfg)
         selector = 'input[type="file"][accept*=".aab"]'
         count = tab.evaluate(f"document.querySelectorAll({json.dumps(selector)}).length")
         require(count == 1, "Unambiguous AAB upload control not found")

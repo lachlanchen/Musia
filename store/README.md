@@ -22,11 +22,13 @@ Paid. Its Developer Program Policies and US export-law declarations were
 explicitly confirmed by the owner before checking and submitting them.
 
 Other regional prices use the providers' conversions. Public distribution
-countries are not configured. Version **0.1.0 (1)** is uploaded to both stores;
-Google's internal release is available to the configured owner tester, and its
-installation invitation was sent through the existing Gmail account. Apple
-has processed the signed IPA as VALID; see `provider-readiness.json` for the
-latest TestFlight group/access readback. Neither formal review nor public release
+countries are not configured. Version **0.1.1 (2)** is available in both internal
+testing tracks. Google's release and sole owner tester list were read back in
+Console. Apple processed the signed IPA as VALID and reports IN_BETA_TESTING;
+the exact build is attached to the existing owner-only Musia Internal group,
+with its preceding build preserved. Existing invitations remain valid; no new
+email or resend was requested for this update. See `provider-readiness.json`
+for the latest TestFlight group/access readback. Neither formal review nor public release
 was requested in this test delivery. No unrelated
 privacy, content-rating or rights declarations were inferred from these two
 creation authorizations. See `provider-readiness.json` for remaining checks.
@@ -57,7 +59,7 @@ Reuse the protected owner tester recipient when a test release is available,
 not another app's tester list. Do not inherit another app's price, choose free,
 or open a Google API edit merely as a status probe. Apple created a default
 draft version 1.0; reconcile it with the qualified binary's version before any
-later review submission (native sources currently use 0.1.0).
+later review submission (native sources currently use 0.1.1).
 
 ## Runtime And Credentials
 
@@ -122,6 +124,19 @@ were duplicated to install these small provider dependencies.
   library JAR with the standalone executable or commit the downloaded JAR.
 
 ## Build And QA
+
+Current **0.1.1 (2)** fixes navigation overlap and shares all 24 major/minor
+guitar diagrams across clients. Build receipts are
+`.runtime/artifacts/android-0.1.1-2-0829eef1b9c2/build.json` (Linux) and
+`.runtime/artifacts/ios-0.1.1-2-47891c9291fd/build.json` (Mac).
+Android has 36 passing release unit tests, release lint and signed-APK
+phone/tablet/enlarged-text layout and playback checks. Swift has 23 passing core
+tests and one opt-in network skip; iPhone/iPad simulator navigation, rotation
+and enlarged-text tests pass. The virtual Mac's system-tab screenshot and
+audio-clock limitations remain, so physical iPhone visual/playback confirmation
+is still pending. See the [fix and regression checks](../references/musia-native-chords-and-navigation-2026-09-26.md).
+
+Historical first-beta build:
 
 These commands only plan until `--execute-build` is supplied. The parent agent
 completed an Android signed build on 2026-09-25 after the native worker finished.
@@ -210,6 +225,14 @@ Never delete a journal simply to make an ambiguous upload/send run again.
 Play upload leaves its single owned upload tab open, recording its ID privately,
 so closing the helper cannot abort an in-flight AAB transfer. After observing
 processing completion, close that exact tab. Inventory tabs always close.
+
+Update forms can omit the package label. The upload helper now verifies the
+exact package on the parent internal track, then validates the same track's
+exact prepare URL and heading. A newly opened, unsaved draft can be client-side
+only: navigating a second tab directly to its URL redirects away. In that case
+retain the original owned draft tab, recheck the parent track separately, and
+upload only the qualified, snapshotted AAB there with a mutation journal. Do
+not weaken identity checks, create another draft, or retry an uncertain upload.
 
 Formal review remains disabled. After signed native QA, separately prepare real
 screenshots, supported content-rights/privacy/age declarations, support/privacy
