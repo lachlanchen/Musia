@@ -111,7 +111,7 @@ def inspect_ios(artifact, cfg):
         profile = check_profile(decode_profile(app / "embedded.mobileprovision"), cfg)
         # Compare the actual signing leaf, not just the allowed profile certificate.
         prefix = root / "signer"
-        run(["/usr/bin/codesign", "-d", "--extract-certificates", prefix, app])
+        run(["/usr/bin/codesign", "-d", "--extract-certificates=" + str(prefix), app])
         require(hashlib.sha1(Path(str(prefix) + "0").read_bytes()).hexdigest().upper() == cfg["apple_certificate_sha1"],
                 "IPA signer differs from the pinned account distribution certificate")
         return {"profile_uuid": profile["UUID"], "certificate_sha1": cfg["apple_certificate_sha1"]}

@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import storelib as s
 import musia_store as cli
 import invite_play
+import play_console
 from build_native import check_profile, android_manifest, android_config
 from play_console import OwnedTab
 
@@ -52,6 +53,9 @@ class StoreTests(unittest.TestCase):
         build = self.root / "apps/android/build"
         build.mkdir()
         (build / "generated").write_text("noise")
+        runtime = self.root / "apps/android/.runtime"
+        runtime.mkdir()
+        (runtime / "qa.log").write_text("device evidence is not source")
         self.assertEqual(before, s.source_sha("android"))
         (self.root / "apps/android/source.kt").write_text("changed")
         self.assertNotEqual(before, s.source_sha("android"))
@@ -60,6 +64,24 @@ class StoreTests(unittest.TestCase):
         (self.root / "apps/android/secret").symlink_to(self.root / "store/release.json")
         with self.assertRaises(s.GuardError):
             s.source_sha("android")
+
+    def test_apple_owner_tester_is_scoped_to_app(self):
+        from unittest.mock import Mock
+        api = Mock()
+        owner = {"id": "musia-owner", "attributes": {"email": "owner@example.test"}}
+        api.rows.side_effect = [[owner, {"id": "other", "attributes": {"email": "other@example.test"}}],
+                                [{"id": "musia", "attributes": {"bundleId": s.BUNDLE}}]]
+        self.assertEqual(cli.apple_owner_tester(api, "musia", "OWNER@example.test"), owner)
+        self.assertIn("filter%5Bapps%5D=musia", api.rows.call_args_list[0].args[0])
+        api.rows.assert_called_with("/v1/betaTesters/musia-owner/apps?limit=200")
+        api.rows.side_effect = None
+        for rows in ([], [owner, owner]):
+            api.rows.return_value = rows
+            with self.assertRaises(s.GuardError):
+                cli.apple_owner_tester(api, "musia", "owner@example.test")
+        api.rows.side_effect = [[owner], [{"id": "other-app", "attributes": {"bundleId": s.BUNDLE}}]]
+        with self.assertRaises(s.GuardError):
+            cli.apple_owner_tester(api, "musia", "owner@example.test")
 
     def test_other_app_identity_and_formal_submit_are_rejected(self):
         for field, value in (("bundle_id", "art.lazying.bunko"), ("formal_submission_enabled", True),
@@ -105,11 +127,42 @@ class StoreTests(unittest.TestCase):
         s.write_private(qa_path, qa)
         with self.assertRaises(s.GuardError):
             s.check_qa(receipt, qa_path)
+
         qa["checks"]["native_smoke"]["status"] = "passed"
         qa["checks"]["native_smoke"]["sha256"] = "wrong"
         s.write_private(qa_path, qa)
         with self.assertRaises(s.GuardError):
             s.check_qa(receipt, qa_path)
+
+    def test_internal_beta_does_not_satisfy_full_qualification(self):
+        receipt, qa_path, build, qa = self.fixture()
+        evidence = qa["checks"]["unit_tests"]
+        qa.update(scope="internal-owner-test", production_qualified=False,
+                  known_limitations=["Physical-device playback still needs testing"],
+                  checks={key: dict(evidence) for key in s.INTERNAL_BETA_CHECKS})
+        s.write_private(qa_path, qa)
+        self.assertEqual(s.check_qa(receipt, qa_path, internal_beta=True)["bundle_id"], s.BUNDLE)
+        with self.assertRaises(s.GuardError):
+            s.check_qa(receipt, qa_path)
+        for override in ({"scope": "production"}, {"production_qualified": True}, {"known_limitations": []}):
+            s.write_private(qa_path, dict(qa, **override))
+            with self.assertRaises(s.GuardError):
+                s.check_qa(receipt, qa_path, internal_beta=True)
+
+    def test_internal_beta_still_requires_passed_hashed_evidence(self):
+        receipt, qa_path, build, qa = self.fixture()
+        evidence = qa["checks"]["unit_tests"]
+        qa.update(scope="internal-owner-test", production_qualified=False,
+                  known_limitations=["Device testing pending"],
+                  checks={key: dict(evidence) for key in s.INTERNAL_BETA_CHECKS})
+        qa["checks"]["native_ui"]["status"] = "pending"
+        s.write_private(qa_path, qa)
+        with self.assertRaises(s.GuardError):
+            s.check_qa(receipt, qa_path, internal_beta=True)
+        qa["checks"]["native_ui"].update(status="passed", sha256="wrong")
+        s.write_private(qa_path, qa)
+        with self.assertRaises(s.GuardError):
+            s.check_qa(receipt, qa_path, internal_beta=True)
 
     def test_apple_inventory_checks_exact_bundle(self):
         api = s.Apple({})
@@ -181,6 +234,41 @@ class StoreTests(unittest.TestCase):
             with self.assertRaises(s.GuardError):
                 invite_play.invite(build, confirm=True)
             self.assertFalse((self.runtime / "mail" / (build["artifact_sha256"] + ".json")).exists())
+
+    def test_play_access_checks_saved_list_and_actual_members(self):
+        from unittest.mock import Mock
+        base = f"https://play.google.com/console/u/0/developers/{s.DEVELOPER}/app/123/tracks/456"
+        cfg = {"google_app_id": "123", "play_internal_url": base + "?tab=releases",
+               "play_testers_url": base + "?tab=testers",
+               "play_opt_in_url": "https://play.google.com/apps/internaltest/456",
+               "self_tester_email": "owner@example.invalid"}
+        for selected, members, succeeds in (
+                (["Musia Internal Owner"], "owner@example.invalid", True),
+                (["Other app testers"], "owner@example.invalid", False),
+                (["Musia Internal Owner"], "owner@example.invalid stranger@example.invalid", False)):
+            tab = Mock()
+            current = {}
+            tab.call.side_effect = lambda method, **kwargs: current.update(url=kwargs["url"])
+            tab.view.side_effect = lambda: {"url": current["url"], "text":
+                s.BUNDLE + " Internal testing Available to internal testers 1 (0.1.0)"}
+            def evaluate(expression):
+                if "selected, links" in expression:
+                    return {"selected": selected, "links": [cfg["play_opt_in_url"]]}
+                if "const b =" in expression:
+                    return True
+                return members
+            tab.evaluate.side_effect = evaluate
+            with patch.object(play_console, "config", return_value=cfg), \
+                 patch.object(play_console, "OwnedTab", return_value=tab), \
+                 patch.object(play_console, "RUNTIME", self.runtime), \
+                 patch.object(play_console.time, "sleep"):
+                build = {"build_number": "1", "version": "0.1.0", "artifact_sha256": "fixture"}
+                if succeeds:
+                    self.assertEqual(play_console.test_access(build), cfg["play_opt_in_url"])
+                else:
+                    with self.assertRaises(s.GuardError):
+                        play_console.test_access(build)
+            tab.close.assert_called_once()
 
     def test_mail_acceptance_does_not_claim_delivery_or_allow_resend(self):
         _, _, build, _ = self.fixture()

@@ -98,7 +98,8 @@ def android_key(confirm):
 
 def qualified(args):
     require(args.build_receipt and args.qa, "Supply --build-receipt and --qa; never upload untested source")
-    candidate = check_qa(Path(args.build_receipt), Path(args.qa))
+    candidate = check_qa(Path(args.build_receipt), Path(args.qa),
+                         internal_beta=getattr(args, "internal_beta", False))
     cfg = config()
     inspection = inspect_ios if candidate["platform"] == "ios" else inspect_android
     inspection(Path(candidate["artifact"]), cfg)
@@ -131,6 +132,19 @@ def upload_apple(args):
         return {"state": "upload_accepted_processing_unverified", "submitted_for_review": False}
 
 
+def apple_owner_tester(api, app_id, recipient):
+    # Apple can return different per-app tester records for the same email.
+    query = urllib.parse.urlencode({"filter[apps]": app_id, "filter[email]": recipient, "limit": 200})
+    testers = api.rows("/v1/betaTesters?" + query)
+    matches = [t for t in testers if t["attributes"].get("email", "").casefold() == recipient.casefold()]
+    require(len(matches) == 1,
+            "Select the existing owner account in Musia's internal TestFlight group through App Store Connect, then retry; do not reuse another app's tester")
+    apps = api.rows(f"/v1/betaTesters/{matches[0]['id']}/apps?limit=200")
+    require(any(a["id"] == app_id and a["attributes"].get("bundleId") == BUNDLE for a in apps),
+            "Tester is not associated with Musia")
+    return matches[0]
+
+
 def invite_apple(args):
     candidate = qualified(args)
     require(candidate["platform"] == "ios", "TestFlight needs an iOS candidate")
@@ -149,9 +163,7 @@ def invite_apple(args):
     require(prerelease["attributes"]["version"] == candidate["version"], "Processed marketing version mismatch")
     recipient = cfg.get("self_tester_email", "")
     require("@" in recipient and not any(c in recipient for c in "\r\n"), "Private self-test recipient missing")
-    testers = api.rows("/v1/betaTesters?" + urllib.parse.urlencode({"filter[email]": recipient, "limit": 200}))
-    require(len(testers) == 1 and testers[0]["attributes"]["email"].casefold() == recipient.casefold(),
-            "Expected existing owner tester; do not create account users or guess recipients")
+    tester = apple_owner_tester(api, app["id"], recipient)
     groups = [g for g in api.rows(f"/v1/apps/{app['id']}/betaGroups?limit=200")
               if g["attributes"]["name"] == "Musia Internal"]
     require(len(groups) <= 1 and all(g["attributes"].get("isInternalGroup")
@@ -162,7 +174,7 @@ def invite_apple(args):
         group = groups[0] if groups else api.request("POST", "/v1/betaGroups", {"data": {"type": "betaGroups", "attributes": {
             "name": "Musia Internal", "isInternalGroup": True, "hasAccessToAllBuilds": False},
             "relationships": {"app": {"data": {"type": "apps", "id": app["id"]}}}}}, operation="create-musia-internal-group")["data"]
-        for relation, item in (("builds", selected), ("betaTesters", testers[0])):
+        for relation, item in (("builds", selected), ("betaTesters", tester)):
             path = f"/v1/betaGroups/{group['id']}/relationships/{relation}"
             attached = {r["id"] for r in api.rows(path + "?limit=200")}
             if item["id"] not in attached:
@@ -170,7 +182,7 @@ def invite_apple(args):
                             operation=f"musia-internal-{relation}-{item['id']}")
             require(item["id"] in {r["id"] for r in api.rows(path + "?limit=200")}, "Tester/build attachment not confirmed")
         result = {"at": now(), "state": "owner_added_to_testflight_group", "app_id": app["id"],
-                  "build_id": selected["id"], "tester_id": testers[0]["id"], "email": recipient,
+                  "build_id": selected["id"], "tester_id": tester["id"], "email": recipient,
                   "email_delivery": "not independently verified; no resend requested"}
         write_private(RUNTIME / "apple/self-test.json", result)
         return {k: v for k, v in result.items() if k not in {"email", "tester_id"}}
@@ -186,6 +198,8 @@ def main():
     parser.add_argument("--qa")
     parser.add_argument("--confirm-upload", action="store_true")
     parser.add_argument("--confirm-invite", action="store_true")
+    parser.add_argument("--internal-beta", action="store_true",
+                        help="Explicit owner-only beta QA with documented limitations; not production qualification")
     args = parser.parse_args()
     release()
     if args.command == "inventory-apple":
@@ -201,7 +215,8 @@ def main():
         result = build(args.command.removeprefix("build-"), args.execute_build)
     elif args.command == "qualify":
         value = qualified(args)
-        result = {"state": "qualified", "platform": value["platform"], "artifact_sha256": value["artifact_sha256"]}
+        result = {"state": "internal_beta_qualified" if args.internal_beta else "qualified",
+                  "platform": value["platform"], "artifact_sha256": value["artifact_sha256"]}
     elif args.command == "upload-apple":
         result = upload_apple(args)
     elif args.command == "upload-play":

@@ -10,7 +10,7 @@ music creation roadmap or store publication is complete.
 - [x] Browser listen/tap/play practice, 25-200% speed, phrase looping, current
   lyrics/readings, chord shapes, local progress and creative-brief export.
 - [x] Dedicated read-only API. Private Studio/generation controls are not exposed.
-- [x] 29 API tests, 7 web logic tests, 6 deployment tests, 23 store-tool guard tests.
+- [x] 29 API tests, 7 web logic tests, 6 deployment tests, 27 store-tool guard tests.
 - [x] Real public-site browser playback and workflow tests; screenshots checked
   at desktop and mobile sizes, no horizontal overflow at 320-1440 px.
 - [x] Native Android debug build, 34 unit tests and lint without blocking errors.
@@ -43,9 +43,14 @@ verified by construction, not by claims about AI accuracy.
   create-app policy/export declarations applied.
 - [x] US price USD 2.99 saved and freshly read back in both consoles. Regional
   conversion is set; distribution countries and public availability are not.
-- [ ] Remaining release checks (including content rights and physical-device
-  audio interruptions), iOS archive and provider uploads.
-- [ ] TestFlight and Google internal-test availability; invitations not sent.
+- [x] Signed iOS archive/export and exact signature/profile inspection; Apple
+  validation/upload succeeded and build 0.1.0 (1) processed VALID.
+- [x] TestFlight **Musia Internal**, one owner tester and build 0.1.0 (1):
+  **Testing**. Tester status **Invited**, verified after reload and by API.
+- [x] Google 0.1.0 (1) **Available to internal testers**; exact owner-only tester
+  list and member verified. Gmail confirmed its installation invitation sent.
+- [ ] Remaining production checks including commercial content rights,
+  physical-device audio interruptions, persistence and accessibility.
 - [ ] Formal review submissions; neither store submission is claimed.
 
 See [store runbook](../store/README.md) and its provider-readiness receipt. Do not
@@ -53,6 +58,13 @@ turn an unsigned debug APK, a profile, or an invitation plan into a publication
 claim. Physical-device audio focus/interruption tests, native accessibility,
 offline persistence, content rights and exact binary privacy checks remain
 release gates.
+
+This owner-only beta uses documented limitations, not full production
+qualification. The iOS simulator playback failure remains unresolved pending
+device testing. Invitations do not prove installation or email receipt.
+Android install: https://play.google.com/apps/internaltest/4701000336240069263
+(use the configured tester account). iOS installation uses the TestFlight
+invitation. Both native builds are **0.1.0 (1)**.
 
 ## Reproduce And Inspect
 

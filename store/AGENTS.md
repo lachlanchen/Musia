@@ -20,3 +20,13 @@
   before retrying. Do not recreate records or delete journals to bypass this.
 - Never fabricate legal declarations, successful runtime QA, invitations,
   submissions or approval. Record a pending requirement honestly.
+- Owner-only test deliveries may use `--internal-beta` with exact artifact/source
+  hashes, real unit/UI/permission/content-review evidence and explicit unresolved
+  device limitations. This does not qualify a production release or waive any
+  provider requirement. Preserve the full QA path unchanged.
+- Apple tester emails are not globally unique records. Resolve by app and email,
+  then verify its app relationship. On first setup, select the existing owner
+  account in Musia's internal-group UI; never guess another app's tester ID.
+- Reconcile uploaded version 0.1.0 (1) before uploading again. The current
+  TestFlight and Play internal versions are already available; do not duplicate
+  invitations. Provider/readback receipts are under the ignored `.runtime/`.

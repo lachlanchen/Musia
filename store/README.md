@@ -21,9 +21,13 @@ branded name above was accepted. Google creation used English (US), App and
 Paid. Its Developer Program Policies and US export-law declarations were
 explicitly confirmed by the owner before checking and submitting them.
 
-Other regional prices use the providers' conversions. Price schedules do not
-enable distribution: country availability is not configured. No binary upload,
-test release, invitation or formal review submission has happened. No unrelated
+Other regional prices use the providers' conversions. Public distribution
+countries are not configured. Version **0.1.0 (1)** is uploaded to both stores;
+Google's internal release is available to the configured owner tester, and its
+installation invitation was sent through the existing Gmail account. Apple
+has processed the signed IPA as VALID; see `provider-readiness.json` for the
+latest TestFlight group/access readback. Neither formal review nor public release
+was requested in this test delivery. No unrelated
 privacy, content-rating or rights declarations were inferred from these two
 creation authorizations. See `provider-readiness.json` for remaining checks.
 
@@ -79,6 +83,19 @@ The Apple builder does not unlock, import into, relock or change search lists of
 shared keychains. It requires an already available configured signing identity.
 Coordinate any signing-session preparation with the build-host owner.
 
+For this beta, the existing `landn-release.keychain-db` identity was reused with
+Musia's own profile. The build-host preparation followed Bunko's protected
+password/partition workflow without importing a certificate or changing global
+search lists/timeouts. Unlock and archive must run in the **same SSH security
+session**; a successful probe in an earlier SSH session did not enable the later
+archive. Preserve the private failed-attempt logs; do not treat them as current
+build status. The keychain was tightened to owner-only permissions.
+
+The Mac provider runtime is `~/.local/share/musia/store-python/bin/python`
+(PyJWT 2.10.1 and cryptography 45.0.7 binary wheels). Use it for provider commands;
+the system Python still suffices for the native builder. No SDK or signing keys
+were duplicated to install these small provider dependencies.
+
 ## Native Worker Handoff
 
 - Android signing: `MUSIA_SIGNING_PROPERTIES` must point to the absolute
@@ -114,7 +131,9 @@ tests, release lint, APK and AAB signature and identity checks. Artifacts and
 `build.json` are under `.runtime/artifacts/android-0.1.0-1-87c66c5e98e6/`.
 This final build includes the corrected native setup instructions and JDK
 launcher check. Its APK/AAB bytes match the preceding successful build.
-No iOS archive or provider upload was attempted. Check resources and coordinate the one build per
+The signed iOS archive/export is now verified under
+`.runtime/artifacts/ios-0.1.0-1-36bc223c0358/`. Apple validation and upload succeeded,
+and the build processed as VALID. Check resources and coordinate one build per
 platform/project before using the execute flag. Tool-owned locks alone cannot
 detect a worker invoking Gradle or Xcode directly.
 
@@ -136,6 +155,15 @@ checks and nonempty hashed evidence for unit tests, native navigation/smoke,
 offline progress, background playback, permissions and content rights. Record
 the actual OS/simulator/device, review timestamp and limitations. Website tests
 alone do not qualify native binaries. No check starts as passed.
+
+For an explicitly requested **owner-only internal beta**, add `--internal-beta`
+to qualification, upload and invitation commands and use an internal-beta QA
+receipt. It requires exact source/artifact/receipt hashes, passed unit/native-UI/
+permissions/content-review evidence, `scope: internal-owner-test`,
+`production_qualified: false`, and nonempty known limitations. It does not turn
+unresolved playback/device/content-rights checks into passed full-release checks.
+See [internal beta review](internal-beta-review.md). iOS device playback is an
+explicit owner test because simulator AVPlayer failed on the audio-less Mac.
 
 ```bash
 MUSIA_PYTHON=/usr/bin/python3 tools/store/musia-store qualify \
@@ -160,6 +188,12 @@ Never delete a journal simply to make an ambiguous upload/send run again.
   and add the already known owner tester. No new account users, bulk invitations,
   public beta group or automatic resend. Read back relationships; adding a tester
   is not proof that an email was received.
+  Apple can have multiple tester records for the same email across apps. Select
+  the existing owner account through Musia's internal-group UI on first setup;
+  the CLI filters `/betaTesters` by both app ID and email and verifies the
+  tester-to-app relationship, never an arbitrary account-wide match. The
+  `/apps/<id>/betaTesters` read was rejected by this provider; the documented
+  app filter works. No new company account user is created.
 - `upload-play`: needs the observed Musia app ID and internal prepare URL in
   private config. It rechecks account/app/package/track, uploads the qualified
   AAB once, and **does not click Save, Publish or Send for review**. Reconcile
@@ -184,7 +218,12 @@ uploads/analytics SDK is the current feature scope, not a blanket claim that
 streaming hosts/CDNs collect no request logs. Reviewer login should not be
 required for this initial scope. Never guess a legal/privacy answer.
 
-Invitation status is currently **not prepared, not queued and not sent**.
+Google internal opt-in: https://play.google.com/apps/internaltest/4701000336240069263.
+The owner-only list selection and exact member were read back after reload.
+Gmail confirmed **Message sent** for its installation invitation; receipt is
+private. TestFlight **Musia Internal** has exactly one owner tester and build
+0.1.0 (1): **Testing** in the UI and **IN_BETA_TESTING** in the API. Owner status
+is **Invited**. No external beta/review was submitted or invitation resent.
 Commands distinguish a plan, a private draft, confirmed tester membership and
 mail-transport acceptance. None of these proves that a recipient received email.
 

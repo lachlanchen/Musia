@@ -24,6 +24,7 @@ BUNDLE = "art.lazying.musia"
 TEAM = "Q8M2S2FY77"
 DEVELOPER = "6157557679644496686"
 CHECKS = {"unit_tests", "native_smoke", "offline_progress", "background_playback", "permissions", "content_rights"}
+INTERNAL_BETA_CHECKS = {"unit_tests", "native_ui", "permissions", "content_review"}
 
 
 class GuardError(RuntimeError):
@@ -121,7 +122,7 @@ def lock(name):
 def source_sha(platform):
     base = ROOT / "apps" / platform
     require(platform in {"ios", "android"} and base.is_dir(), "Native source tree missing")
-    skip = {"build", ".build", ".gradle", "DerivedData", "xcuserdata", ".swiftpm"}
+    skip = {"build", ".build", ".gradle", ".runtime", "DerivedData", "xcuserdata", ".swiftpm"}
     records = []
     for path in sorted(base.rglob("*")):
         relative = path.relative_to(base)
@@ -236,7 +237,7 @@ class Apple:
         return app
 
 
-def check_qa(build_path, qa_path):
+def check_qa(build_path, qa_path, *, internal_beta=False):
     build_path = private_file(build_path)
     build = read_json(build_path)
     qa = read_json(private_file(qa_path))
@@ -254,7 +255,15 @@ def check_qa(build_path, qa_path):
     require(build["version"] == current["version"] and str(build["build_number"]) ==
             str(current["ios_build"] if platform == "ios" else current["android_version_code"]), "Release version changed")
     require(bool(qa.get("reviewed_at")) and bool(qa.get("qa_environment")), "QA review/environment missing")
-    for check in CHECKS:
+    checks = CHECKS
+    if internal_beta:
+        require(qa.get("scope") == "internal-owner-test" and qa.get("production_qualified") is False,
+                "Internal beta receipt must explicitly exclude production qualification")
+        require(isinstance(qa.get("known_limitations"), list) and qa["known_limitations"]
+                and all(isinstance(x, str) and x.strip() for x in qa["known_limitations"]),
+                "Internal beta needs explicit device-test limitations")
+        checks = INTERNAL_BETA_CHECKS
+    for check in checks:
         item = qa.get("checks", {}).get(check, {})
         require(item.get("status") == "passed", "QA check not passed: " + check)
         evidence = Path(item.get("evidence") or "")

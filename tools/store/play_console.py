@@ -125,6 +125,8 @@ def test_access(build):
     require(re.fullmatch(r"https://play\.google\.com/apps/internaltest/\d+", opt_in), "Invalid internal opt-in URL")
     recipient = cfg.get("self_tester_email", "")
     require("@" in recipient and not any(c in recipient for c in "\r\n"), "Private recipient missing")
+    tester_list = cfg.get("play_tester_list", "Musia Internal Owner")
+    require(tester_list == "Musia Internal Owner", "Use Musia's owner-only tester list")
     tab = OwnedTab(cfg)
     try:
         tab.call("Page.navigate", url=internal)
@@ -141,14 +143,37 @@ def test_access(build):
         tab.call("Page.navigate", url=testers)
         for _ in range(45):
             view = tab.view()
-            links = tab.evaluate("[...document.querySelectorAll('a[href]')].map(a=>a.href)")
-            if opt_in in links and recipient.casefold() in view["text"].casefold():
+            access = tab.evaluate("""(() => {
+                const boxes = [...document.querySelectorAll('[role="checkbox"][aria-label]')];
+                const selected = boxes.filter(e => e.getAttribute('aria-checked') === 'true')
+                    .map(e => e.getAttribute('aria-label')).filter(x => x !== 'Select all rows');
+                const links = [...document.querySelectorAll('a[href]')].map(e => e.href);
+                for (const e of document.querySelectorAll('[aria-label^="Copy link: "]'))
+                    links.push(e.getAttribute('aria-label').slice('Copy link: '.length));
+                return {selected, links};
+            })()""")
+            if opt_in in access["links"] and access["selected"] == [tester_list]:
                 break
             time.sleep(1)
-        require(view["url"] == testers and opt_in in links and recipient.casefold() in view["text"].casefold(),
-                "Exact opt-in URL and owner tester access not visible; inspect Console without guessing")
+        require(view["url"] == testers and opt_in in access["links"] and access["selected"] == [tester_list],
+                "Exact opt-in URL and only Musia's owner list must be selected")
+        # Console shows the list name, not its members, until its edit dialog opens.
+        label = json.dumps("Edit email list " + tester_list)
+        opened = tab.evaluate("(() => { const b = [...document.querySelectorAll('[role=button],button')]"
+                              f".find(e => e.getAttribute('aria-label') === {label});"
+                              "if (!b) return false; b.click(); return true; })()")
+        require(opened, "Tester list inspection control absent")
+        for _ in range(30):
+            members = tab.evaluate("[...document.querySelectorAll('[role=dialog]')].map(e=>e.innerText).join('\\n')")
+            emails = set(re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", members))
+            emails.discard("user@example.com")
+            if {x.casefold() for x in emails} == {recipient.casefold()}:
+                break
+            time.sleep(1)
+        require({x.casefold() for x in emails} == {recipient.casefold()}, "Owner-only tester membership not confirmed")
         receipt = {"at": now(), "bundle_id": BUNDLE, "build_number": build["build_number"],
-                   "sha256": build["artifact_sha256"], "release": release_view, "testers": view, "opt_in": opt_in}
+                   "sha256": build["artifact_sha256"], "release": release_view, "testers": view,
+                   "member_dialog": members, "opt_in": opt_in}
         write_private(RUNTIME / "play-test-access.json", receipt)
         return opt_in
     finally:
