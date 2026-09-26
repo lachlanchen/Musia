@@ -29,9 +29,14 @@ No fake readiness or simulator workaround is included. See
   device latency remain uncalibrated. Unmatched taps do not become a score.
 - Only First Pulse has count-in/bar phases and Em-at-4s/Am-at-8s instructions.
   Other songs retain generic practice guidance and an unverified-downbeat label.
-- Play mode includes only known standard-tuning Em `022000` and Am `x02210`
-  diagrams, open/muted strings, finger numbers, and full VoiceOver descriptions.
-  Unknown chords have no guessed fingering. No transposition/capo engine.
+- Play mode includes all 24 major/minor shapes in standard tuning, open/muted
+  strings, finger numbers, explicit barres, shifted fret windows and VoiceOver
+  descriptions. The source is `../shared/guitar-shapes.json`; verify generated
+  tables with `python tools/generate_guitar_shapes.py --check` from the repo root.
+  Unsupported extensions/slash chords have no guessed fingering. No native
+  transposition/capo engine.
+- The mini-player reserves space within each tab's content, above native tab
+  navigation, with an opaque background. It never overlays the outer TabView.
 - API confidence is shown independently for beats, chords, and melody. Absent
   events are unavailable, not fabricated from BPM.
 - One app-owned player survives sheet dismissal and supports background audio,

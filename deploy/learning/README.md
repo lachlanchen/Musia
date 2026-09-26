@@ -109,6 +109,15 @@ passwordless sudo, or administer through a restricted tunnel account.
 
 ## Deployment Checkpoint
 
+Latest update **2026-09-26 05:16:05 UTC**: shared major/minor chord diagrams and
+responsive footer spacing deployed successfully. Release
+`2d58d928cc954a0c6eb42f67886aa84cd49d2ed6af17dafa0741ac6c6e7a0bbb`, transaction
+`20260926T131441-2d58d928cc95`; predecessor `09e9dd2c...` retained. The exact
+static allowlist adds `/guitar-shapes.js`. Public asset hashes, full playback
+smoke, 24-shape rendering and 12 viewport/text-scale checks pass. See
+[fix verification](../../references/musia-native-chords-and-navigation-2026-09-26.md).
+The observations below describe the preceding September 25 deployment.
+
 Accepted **2026-09-25 14:48:28 UTC / 22:48:28 HKT**. The public preview is live
 with 31 published songs plus First Pulse, the corrected support link, 100%
 initial exercise speed, and the lyric-spacing/punctuation fix. The final web

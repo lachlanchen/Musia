@@ -102,10 +102,12 @@ Word highlighting matches tokens sequentially within the original lyric text;
 it never reconstructs whitespace or punctuation. If any token cannot be matched,
 the entire original line displays without word highlighting. Active-token
 pronunciation readings appear separately and never modify the original text.
-Play includes curated standard-tuning Em (`022000`) and Am (`x02210`) fretboard
-diagrams, low E on the left, with open/mute markers, finger numbers, fret numbers,
-and complete TalkBack descriptions. Other chord shapes are explicitly unavailable;
-there is no guessed simplification or transposition.
+Play includes all 24 major/minor standard-tuning fretboard diagrams, low E on
+the left, with open/mute markers, finger numbers, explicit barres, shifted fret
+windows and TalkBack descriptions. The source is `../shared/guitar-shapes.json`;
+verify generated tables with `python tools/generate_guitar_shapes.py --check`
+from the repo root. Unsupported extensions/slash chords remain explicitly
+unavailable; there is no guessed simplification or transposition.
 
 No tap is accepted while paused/buffering, before the first supplied beat, or
 after the last supplied beat. Feedback clears in those states. Positive manual

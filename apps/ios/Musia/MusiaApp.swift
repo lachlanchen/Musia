@@ -34,20 +34,34 @@ struct RootView: View {
     @State private var showPractice = false
 
     var body: some View {
-        TabView {
-            NavigationStack { LibraryView(showPractice: $showPractice) }
-                .tabItem { Label("Library", systemImage: "music.note.list") }
-            NavigationStack { LessonsView(showPractice: $showPractice) }
-                .tabItem { Label("Lessons", systemImage: "book") }
-            NavigationStack { HistoryView() }
-                .tabItem { Label("History", systemImage: "clock.arrow.circlepath") }
-        }
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            if player.hasSelection { MiniPlayer(showPractice: $showPractice) }
-        }
+        tabs
         .sheet(isPresented: $showPractice) {
             NavigationStack { PracticeView() }
                 .presentationDragIndicator(.visible)
+        }
+    }
+
+    private var tabs: some View {
+        TabView {
+            page { LibraryView(showPractice: $showPractice) }
+                .tabItem { Label("Library", systemImage: "music.note.list") }
+            page { LessonsView(showPractice: $showPractice) }
+                .tabItem { Label("Lessons", systemImage: "book") }
+            page { HistoryView() }
+                .tabItem { Label("History", systemImage: "clock.arrow.circlepath") }
+        }
+    }
+
+    private func page<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        NavigationStack {
+            // Reserve space inside each tab, never outside TabView's navigation safe area.
+            content().safeAreaInset(edge: .bottom, spacing: 0) {
+                if player.hasSelection {
+                    MiniPlayer(showPractice: $showPractice)
+                }
+            }
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarBackground(Color(.systemBackground), for: .tabBar)
         }
     }
 }

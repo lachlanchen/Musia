@@ -1,9 +1,12 @@
 import { activeInterval, activeBeat, tapOffset, tapSummary, validLoop, clock, readingText, loadLocal, saveLocal, practiceHistory, lyricParts } from './core.js';
+import { guitarShape } from './guitar-shapes.js';
 
 const $ = id => document.getElementById(id);
 const audio = $('audio');
 const state = { library: [], song: null, asset: null, lessons: [], lesson: 0, mode: 'listen', loop: null, offsets: [], lastTapBeat: null, seconds: 0, history: practiceHistory(loadLocal('musia.practice.v1', [])), lastTime: performance.now(), lastLyric: null, lastChord: null, loadingId: 0 };
-const shapes = { Em: { frets:[0,2,2,0,0,0], fingers:['',2,3,'','',''] }, Am: { frets:['x',0,2,2,1,0], fingers:['','',2,3,1,''] }, C: { frets:['x',3,2,0,1,0], fingers:['',3,2,'',1,''] }, G: { frets:[3,2,0,0,0,3], fingers:[3,2,'','','',4] }, D: { frets:['x','x',0,2,3,2], fingers:['','','',1,3,2] }, Dm: { frets:['x','x',0,2,3,1], fingers:['','','',2,3,1] }, E: { frets:[0,2,2,1,0,0], fingers:['',2,3,1,'',''] }, A: { frets:['x',0,2,2,2,0], fingers:['','',1,2,3,''] }, F: { frets:[1,3,3,2,1,1], fingers:[1,3,4,2,1,1] } };
+new ResizeObserver(entries => {
+  document.documentElement.style.setProperty('--practice-footer-height', `${entries[0].target.getBoundingClientRect().height}px`);
+}).observe(document.querySelector('.practice-footer'));
 const icons = () => window.lucide?.createIcons();
 function node(tag, text, className) { const e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (className) e.className = className; return e; }
 function notice(text) { $('notice').textContent = text; $('notice').hidden = !text; }
@@ -112,13 +115,23 @@ async function togglePlay() {
   try { await audio.play(); notice(''); } catch { notice('Audio could not start. Check your connection and press play to retry.'); }
 }
 function drawShape(chord) {
-  const shape = shapes[chord]; const root = $('fretboard'); root.replaceChildren(); root.classList.toggle('empty', !shape);
-  if (!shape) { root.textContent = chord === '—' ? 'Listen for the next chord' : 'Shape not in this beginner set'; return; }
+  const shape = guitarShape(chord); const root = $('fretboard'); root.replaceChildren(); root.classList.toggle('empty', !shape);
+  root.removeAttribute('aria-label'); root.removeAttribute('data-start-fret');
+  if (!shape) { root.textContent = chord === '—' ? 'Listen for the next chord' : `Diagram not available for ${chord} yet`; return; }
+  root.dataset.startFret = shape.startFret;
+  root.classList.toggle('shifted', shape.startFret > 1);
+  const top = fret => `${(fret - shape.startFret + .5) * 100 / shape.fretCount}%`;
+  for (let i = 0; i < shape.fretCount; i++) {
+    const label = node('span', String(shape.startFret+i), 'fret-label'); label.style.top = top(shape.startFret+i); root.append(label);
+  }
+  for (const [fret, first, last] of shape.barres) {
+    const bar = node('span', undefined, 'fret-barre'); bar.style.left = `${first*20}%`; bar.style.width = `${(last-first)*20}%`; bar.style.top = top(fret); root.append(bar);
+  }
   shape.frets.forEach((fret, string) => {
-    if (fret === 'x' || fret === 0) { const mark = node('span', fret === 'x' ? '×' : '○', 'string-mark'); mark.style.left = `${string*20}%`; root.append(mark); }
-    else { const dot = node('span', String(shape.fingers[string]), 'fret-dot'); dot.style.left = `${string*20}%`; dot.style.top = `${(fret-.5)*25}%`; root.append(dot); }
+    if (fret <= 0) { const mark = node('span', fret < 0 ? '×' : '○', 'string-mark'); mark.style.left = `${string*20}%`; root.append(mark); }
+    else { const dot = node('span', String(shape.fingers[string]), 'fret-dot'); dot.style.left = `${string*20}%`; dot.style.top = top(fret); root.append(dot); }
   });
-  root.setAttribute('aria-label', `${chord}. Frets from low E: ${shape.frets.join(', ')}`);
+  root.setAttribute('aria-label', `${chord}. Frets from low E: ${shape.frets.map(f => f < 0 ? 'muted' : f === 0 ? 'open' : f).join(', ')}. ${shape.barres.map(([f, first, last, finger]) => `Barre fret ${f}, finger ${finger}, strings ${first+1} to ${last+1}`).join('. ')}`);
 }
 function renderLyric(line) {
   const root = $('current-lyric'); root.replaceChildren();

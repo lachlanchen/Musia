@@ -128,7 +128,8 @@ def build():
     source_paths.update(value[0] for value in learning.STATIC_FILES.values())
     before = {p: digest(ROOT / p) for p in sorted(source_paths)}
     run([sys.executable, "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_learning_api.py", "-v"], cwd=ROOT)
-    run(["node", "--test", "apps/web/tests/core.test.mjs"], cwd=ROOT)
+    run(["node", "--test", "apps/web/tests/core.test.mjs", "apps/web/guitar-shapes.test.mjs"], cwd=ROOT)
+    run([sys.executable, "tools/generate_guitar_shapes.py", "--check"], cwd=ROOT)
     job = WORK / ("build-" + time.strftime("%Y%m%dT%H%M%S"))
     job.mkdir(mode=0o700)
     tree = job / "payload"

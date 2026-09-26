@@ -17,6 +17,26 @@ class GuitarShapesTest {
         assertTrue(shape.description.contains("low E muted"))
     }
     @Test fun otherChordsAreNotInventedOrSimplified() {
-        listOf(null, "", "E", "A", "Em7", "Am/G", "F#maj7").forEach { assertNull(curatedShape(it)) }
+        listOf(null, "", "N", "C7", "Em7", "Am/G", "F#maj7").forEach { assertNull(curatedShape(it)) }
+    }
+    @Test fun allCatalogChordsHaveExactTonesAndVisibleFrets() {
+        val roots = listOf("C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B")
+        val tuning = listOf(40, 45, 50, 55, 59, 64)
+        roots.forEachIndexed { pitch, root ->
+            listOf("", "m").forEach { suffix ->
+                val shape = curatedShape(root + suffix)!!
+                val notes = shape.frets.mapIndexedNotNull { i, fret -> if (fret < 0) null else (tuning[i] + fret) % 12 }
+                assertEquals(setOf(pitch, (pitch + if (suffix == "m") 3 else 4) % 12, (pitch + 7) % 12), notes.toSet())
+                assertEquals(pitch, notes.first())
+                assertTrue(shape.frets.filter { it > 0 }.all { it in shape.startFret until shape.startFret + shape.fretCount })
+            }
+        }
+        assertEquals(6, curatedShape("Eb")!!.startFret)
+        assertEquals(2, curatedShape("B")!!.barres.size)
+    }
+    @Test fun enharmonicAliasesAreSupported() {
+        listOf("Db" to "C#", "G\u266dm" to "F#m", "D#:min" to "Ebm", "C:maj" to "C").forEach { (alias, name) ->
+            assertEquals(curatedShape(name)!!.frets, curatedShape(alias)!!.frets)
+        }
     }
 }

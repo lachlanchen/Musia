@@ -102,21 +102,28 @@ struct MiniPlayer: View {
                         Text(player.song?.title ?? (player.loading ? "Loading..." : "Practice"))
                             .font(.headline).lineLimit(1)
                         Text(player.issue != nil ? "Playback unavailable" : player.mode.rawValue)
-                            .font(.subheadline).foregroundStyle(.secondary)
+                            .font(.subheadline).foregroundStyle(.secondary).lineLimit(1)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityIdentifier("mini.open")
             TransportButton(title: player.isPlaying || player.waiting ? "Pause" : "Play",
                             symbol: player.isPlaying || player.waiting ? "pause.fill" : "play.fill") {
                 player.togglePlayback()
             }
             .disabled(!player.ready)
+            .accessibilityIdentifier("mini.play")
         }
         .padding(.horizontal, 16).padding(.vertical, 8)
-        .background(.regularMaterial)
+        // Keep compact transport readable without displacing tabs in landscape.
+        // Opening the full player retains the user's unrestricted Dynamic Type size.
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
+        .background(Color(.secondarySystemBackground))
         .overlay(alignment: .top) { Divider() }
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("mini.player")
     }
 }

@@ -16,6 +16,7 @@ def main():
     parser.add_argument("--serial", required=True)
     parser.add_argument("--adb", default=str(Path.home() / "Android/Sdk/platform-tools/adb"))
     parser.add_argument("--apk", type=Path)
+    parser.add_argument("--layout-only", action="store_true", help="Check mini-player/navigation at phone and tablet sizes")
     parser.add_argument("--output", type=Path, default=Path(".runtime/learning/android-review"))
     args = parser.parse_args()
     if not re.fullmatch(r"emulator-\d+", args.serial):
@@ -68,6 +69,53 @@ def main():
             time.sleep(.5)
         raise AssertionError(f"No playing Musia media session: {name}")
 
+    def verify_layouts():
+        original_size = adb("shell", "wm", "size")
+        original_density = adb("shell", "wm", "density")
+        original_font = adb("shell", "settings", "get", "system", "font_scale")
+        size_override = re.search(r"Override size: (\d+x\d+)", original_size)
+        density_override = re.search(r"Override density: (\d+)", original_density)
+        try:
+            click("Back", description=True)
+            for label, width, height, density, scale in [
+                ("phone", 1080, 2400, 420, 1),
+                ("phone-large-text", 1080, 2400, 420, 1.5),
+                ("tablet", 1600, 2560, 240, 1),
+                ("tablet-landscape-large-text", 2560, 1600, 240, 1.5),
+            ]:
+                adb("shell", "wm", "size", f"{width}x{height}")
+                adb("shell", "wm", "density", str(density))
+                adb("shell", "settings", "put", "system", "font_scale", str(scale))
+                time.sleep(2)
+                for destination in ["History", "Settings", "Songs"]:
+                    click(destination)
+                root, _ = screen()
+                parents = {child: parent for parent in root.iter() for child in parent}
+
+                def control_bounds(text, description=False):
+                    key = "content-desc" if description else "text"
+                    target = next(n for n in root.iter("node") if n.get(key) == text)
+                    while target.get("clickable") != "true" and target.get("selected") != "true" and target in parents:
+                        target = parents[target]
+                    return tuple(map(int, re.findall(r"\d+", target.get("bounds", ""))))
+
+                mini = control_bounds("First Pulse")
+                assert len(mini) == 4 and mini[2] > mini[0] and mini[3] > mini[1], (label, mini)
+                assert 0 <= mini[0] < mini[2] <= width and 0 <= mini[1] < mini[3] <= height
+                for destination in ["Songs", "Practice", "History", "Settings"]:
+                    bounds = control_bounds(destination)
+                    assert len(bounds) == 4 and bounds[2] > bounds[0] and bounds[3] > bounds[1]
+                    assert mini[3] <= bounds[1] < bounds[3] <= height, (label, mini, destination, bounds)
+                capture("navigation-" + label)
+                evidence["checks"].append(f"Mini-player above all four tappable tabs: {label}")
+        finally:
+            adb("shell", "wm", "size", size_override.group(1) if size_override else "reset")
+            adb("shell", "wm", "density", density_override.group(1) if density_override else "reset")
+            if original_font == "null":
+                adb("shell", "settings", "delete", "system", "font_scale")
+            else:
+                adb("shell", "settings", "put", "system", "font_scale", original_font)
+
     evidence = {"emulator":name,"serial":args.serial,"checks":[],"limits":["Emulator state checks do not prove audible pitch quality or real-device interruptions."]}
     if args.apk:
         adb("install","-r",str(args.apk.resolve()))
@@ -78,6 +126,11 @@ def main():
         click("Practice")
         click("First Pulse")
         capture("first-pulse")
+        if args.layout_only:
+            verify_layouts()
+            (args.output/"result.json").write_text(json.dumps(evidence,indent=2)+"\n")
+            print(json.dumps(evidence,indent=2))
+            return
         click("Play")
         click("O open / X muted",scroll=True)
         capture("guitar-shape")

@@ -41,6 +41,7 @@ STATIC_FILES = {
     "/index.html": ("apps/web/index.html", "text/html"),
     "/app.js": ("apps/web/app.js", "text/javascript"),
     "/core.js": ("apps/web/core.js", "text/javascript"),
+    "/guitar-shapes.js": ("apps/web/guitar-shapes.js", "text/javascript"),
     "/styles.css": ("apps/web/styles.css", "text/css"),
     "/privacy": ("apps/web/privacy.html", "text/html"),
     "/privacy.html": ("apps/web/privacy.html", "text/html"),

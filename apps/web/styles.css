@@ -7,3 +7,6 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .legal-page{max-width:780px;margin:0 auto;padding:40px 22px}.legal-page h1{margin:28px 0 18px}.legal-page h2{font-size:21px;margin:28px 0 12px}.legal-page p{margin-bottom:16px}
 .pulse-lane.unmetered{grid-template-columns:1fr}.unmetered .beat{font-size:16px;height:54px}
+.fretboard.shifted{border-top-width:1px}.fret-label{position:absolute;left:-26px;transform:translateY(-50%);font-size:13px;color:var(--muted)}.fret-barre{position:absolute;height:19px;transform:translateY(-50%);border-radius:10px;background:var(--teal)}
+.practice-footer{gap:12px;flex-wrap:wrap;padding-bottom:max(14px,env(safe-area-inset-bottom))}main{padding-bottom:calc(var(--practice-footer-height,90px) + 24px)}
+.nav-item{min-width:0;overflow-wrap:anywhere}.mode-row button{min-width:0;flex-wrap:wrap}.page-header{flex-wrap:wrap}.speed-row{flex-wrap:wrap}.practice-footer>div{min-width:0;overflow-wrap:anywhere}
