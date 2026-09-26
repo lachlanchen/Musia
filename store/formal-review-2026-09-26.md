@@ -67,8 +67,8 @@ reported only optional deobfuscation/native-debug-symbol warnings. Minification
 is disabled; no unqualified replacement bundle was generated for these warnings.
 
 The final **Send changes for review** confirmation was accepted for 10 changes.
-A fresh reload shows **Changes in review**, while automatic quick checks are
-still running. This is not approval or public availability. Managed publishing
+A subsequent readback confirms automatic quick checks completed and explicitly
+states **Your changes are now in review**. This is not approval or public availability. Managed publishing
 is **on**, so approval alone will not publish the app. Reconcile this pending
 submission before any subsequent mutation; do not send a duplicate.
 

@@ -34,8 +34,8 @@ formal production review and separately confirmed commercial catalog rights,
 worldwide distribution where eligible, and real iPhone playback.
 
 Google accepted **10 changes for review**, including production 0.1.1 (2).
-A fresh reload shows **Changes in review**, with automatic quick checks still
-running. Managed publishing is on; this is not public availability.
+Automatic checks have completed and Console explicitly reports **Your changes
+are now in review**. Managed publishing is on; this is not public availability.
 Apple's actual submission validation lists only missing iPhone and 13-inch
 iPad screenshots. Its exact build is attached, listing/privacy/age/availability
 are saved, and manual release is selected, but it has **not** been submitted.

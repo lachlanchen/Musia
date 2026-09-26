@@ -49,7 +49,7 @@
     "opt_in_url": "https://play.google.com/apps/internaltest/4701000336240069263",
     "warnings": ["No obfuscation mapping; minification is disabled", "No native debug symbols for bundled libraries"],
     "formal_review_submitted": true,
-    "formal_status": "10 changes sent; fresh reload shows Changes in review with automatic quick checks still running",
+    "formal_status": "IN_REVIEW; automatic checks completed and Console explicitly states Your changes are now in review",
     "formal_release": "0.1.1 (2), first production full rollout, reused internal AAB",
     "managed_publishing": true,
     "publicly_available": false,
@@ -64,7 +64,7 @@
   "website_qa": "29 backend, 9 web logic, 8 deployment tests and public Playwright passed; 24 chord shapes and 12 viewport/text-scale cases pass; live catalog 32 items/45 audio versions has no unsupported chord symbols. Not a native qualification receipt.",
   "android_signed_build": "0.1.1 (2) APK/AAB internally published; 36 release unit tests, release lint, signature/identity checks, exact signed APK emulator phone/tablet/enlarged-text navigation and playback/background/screen-off state checks passed",
   "ios_build": "0.1.1 (2) IPA archived, exported, signature inspected, altool validated/uploaded, processed VALID, IN_BETA_TESTING. 23 Swift core tests pass; one opt-in live-network test skipped. iPhone/iPad rotation and enlarged-text navigation tests pass. Owner confirmed iPhone audible and locked-screen playback. Listing screenshots remain blocked by virtual Mac rendering limitations; timed-out screenshot capture is not a passed test.",
-  "qualification_scope": "Owner authorized formal review of existing qualified binaries with documented device evidence; Google submission accepted pending quick checks, Apple withheld pending genuine listing screenshots. Original beta receipts and API guards are preserved.",
+  "qualification_scope": "Owner authorized formal review of existing qualified binaries with documented device evidence; Google IN_REVIEW after automatic checks, Apple withheld pending genuine listing screenshots. Original beta receipts and API guards are preserved.",
   "store_tool_tests": "29 local guard tests passed",
   "private_evidence": "store/.runtime/ (ignored, owner-only)"
 }
