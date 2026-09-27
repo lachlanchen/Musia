@@ -1,0 +1,16 @@
+{
+  "name": "@lazyingart/app-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Candidate shared contracts and server-side account adapter for LazyingArt apps",
+  "exports": {
+    ".": "./src/contracts.mjs",
+    "./server": "./src/server.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "license": "UNLICENSED"
+}

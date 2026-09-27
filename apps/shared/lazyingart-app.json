@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "appId": "musia",
+  "displayName": "Musia",
+  "candidate": "app-kit-development-20260927",
+  "account": {
+    "enabled": false,
+    "registrations": []
+  },
+  "features": [
+    { "id": "library", "available": true, "requiresAccount": false, "requiresAccess": false, "explicitConfirmation": false },
+    { "id": "lessons", "available": true, "requiresAccount": false, "requiresAccess": false, "explicitConfirmation": false },
+    { "id": "exerciseAudio", "available": true, "requiresAccount": false, "requiresAccess": false, "explicitConfirmation": false },
+    { "id": "privateSync", "available": false, "requiresAccount": true, "requiresAccess": true, "explicitConfirmation": true },
+    { "id": "cloudGeneration", "available": false, "requiresAccount": true, "requiresAccess": true, "explicitConfirmation": true },
+    { "id": "upload", "available": false, "requiresAccount": true, "requiresAccess": true, "explicitConfirmation": true },
+    { "id": "aiCoaching", "available": false, "requiresAccount": true, "requiresAccess": true, "explicitConfirmation": true },
+    { "id": "publicPublishing", "available": false, "requiresAccount": true, "requiresAccess": true, "explicitConfirmation": true }
+  ]
+}

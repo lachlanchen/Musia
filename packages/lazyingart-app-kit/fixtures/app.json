@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "appId": "sample-app",
+  "displayName": "Sample App",
+  "candidate": "synthetic-candidate",
+  "account": { "enabled": false, "registrations": [] },
+  "features": [
+    { "id": "reading", "available": true, "requiresAccount": false, "requiresAccess": false, "explicitConfirmation": false },
+    { "id": "privateSync", "available": false, "requiresAccount": true, "requiresAccess": true, "explicitConfirmation": true }
+  ]
+}

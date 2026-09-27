@@ -41,3 +41,11 @@ It checks portrait/landscape phone, tablet and desktop layouts at normal and
 enlarged text sizes. Use `scripts/test_musia_learning_web.py` separately for real
 audio playback and API integration. Native QA also needs tab navigation with a
 selected song, rotation, large text and actual device playback.
+
+## Shared Account Candidate
+
+`lazyingart-app.json` is a separate, disabled-by-default adoption manifest for
+[LazyingArt App Kit](../../packages/lazyingart-app-kit/README.md). It does not
+enable login or modify the current native/web release. See the
+[cross-app framework](../../docs/lazyingart-app-framework.md) for the verified
+protocol, owner boundaries, rollout gates and offline checks.

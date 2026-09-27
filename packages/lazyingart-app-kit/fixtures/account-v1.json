@@ -1,0 +1,51 @@
+{
+  "source": "EchoMind fc05a2a6ae70e5fa51ddd237739d948e5a2bb138, synthetic values, no live credentials",
+  "registration": {
+    "issuer": "https://account.example.test",
+    "clientId": "musia-web-test",
+    "audience": "musia-test",
+    "redirectUri": "https://app.example.test/account/callback",
+    "type": "confidential",
+    "platform": "web"
+  },
+  "discovery": {
+    "issuer": "https://account.example.test",
+    "authorization_endpoint": "https://account.example.test/account/authorize",
+    "token_endpoint": "https://account.example.test/account/token",
+    "profile_endpoint": "https://account.example.test/account/profile",
+    "revocation_endpoint": "https://account.example.test/account/revoke",
+    "account_endpoint": "https://account.example.test/account",
+    "response_types_supported": ["code"],
+    "grant_types_supported": ["authorization_code", "refresh_token"],
+    "code_challenge_methods_supported": ["S256"],
+    "scopes_supported": ["profile"],
+    "providers": { "password": true, "google": false, "apple": false, "github": false },
+    "registration_requires_invitation": false,
+    "echomind_invitation_required": true,
+    "contract_version": 1
+  },
+  "tokens": {
+    "access_token": "synthetic-access-token",
+    "refresh_token": "synthetic-refresh-token",
+    "token_type": "Bearer",
+    "expires_in": 600,
+    "scope": "profile"
+  },
+  "profile": {
+    "subject": "la_synthetic",
+    "display_name": "Test Listener",
+    "client_id": "musia-web-test",
+    "account_status": "active"
+  },
+  "featureDecisions": [
+    { "session": "guest", "access": "unknown", "requiresAccount": false, "requiresAccess": false, "expected": "available" },
+    { "session": "guest", "access": "active", "requiresAccount": true, "requiresAccess": true, "expected": "sign_in" },
+    { "session": "active", "access": "invitation_required", "requiresAccount": true, "requiresAccess": true, "expected": "invitation_required" },
+    { "session": "active", "access": "purchase_required", "requiresAccount": true, "requiresAccess": true, "expected": "purchase_required" },
+    { "session": "active", "access": "suspended", "requiresAccount": true, "requiresAccess": true, "expected": "suspended" },
+    { "session": "active", "access": "unknown", "requiresAccount": true, "requiresAccess": true, "expected": "unknown" },
+    { "session": "offline", "access": "active", "requiresAccount": true, "requiresAccess": true, "expected": "offline" },
+    { "session": "reauth_required", "access": "active", "requiresAccount": true, "requiresAccess": true, "expected": "sign_in" },
+    { "session": "active", "access": "active", "requiresAccount": true, "requiresAccess": true, "expected": "available" }
+  ]
+}
