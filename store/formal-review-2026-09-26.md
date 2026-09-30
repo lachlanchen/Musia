@@ -1,5 +1,10 @@
 # Musia 0.1.1 Formal Review
 
+Continuation: [2026-09-30 submission record](formal-review-2026-09-30.md).
+Apple's screenshot blocker below is historical and now resolved; Apple is
+WAITING_FOR_REVIEW and Google remains in review. The original qualification,
+artifacts and owner confirmations in this document remain unchanged.
+
 ## Authorization and Scope
 
 The owner requested production review for both native apps and confirmed:

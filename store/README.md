@@ -33,13 +33,15 @@ for the latest TestFlight group/access readback. The owner subsequently requeste
 formal production review and separately confirmed commercial catalog rights,
 worldwide distribution where eligible, and real iPhone playback.
 
-Google accepted **10 changes for review**, including production 0.1.1 (2).
-Automatic checks have completed and Console explicitly reports **Your changes
-are now in review**. Managed publishing is on; this is not public availability.
-Apple's actual submission validation lists only missing iPhone and 13-inch
-iPad screenshots. Its exact build is attached, listing/privacy/age/availability
-are saved, and manual release is selected, but it has **not** been submitted.
-See [formal review](formal-review-2026-09-26.md) and `provider-readiness.json`.
+**2026-09-30:** Google still reports **Changes in review** for production
+0.1.1 (2), verified after a fresh Console reload; its existing 10-change
+submission was preserved. Apple now reports **Waiting for Review** for the
+same version after genuine native screenshot capture and submission. All eight
+screenshots finished processing. No replacement binary or duplicate invitation
+was needed. Google managed publishing and Apple manual release remain selected;
+neither app is approved or public yet. See
+[submission record](formal-review-2026-09-30.md),
+[original qualification](formal-review-2026-09-26.md) and `provider-readiness.json`.
 
 Historical inventory on 2026-09-25 found no Musia record and eight Google apps;
 after creation there are nine. Earlier Apple 401/login-failed evidence is kept
@@ -142,7 +144,10 @@ tests and one opt-in network skip; iPhone/iPad simulator navigation, rotation
 and enlarged-text tests pass. The virtual Mac's system-tab screenshot and
 audio-clock limitations remain. The owner has since confirmed audible and
 locked-screen playback on the latest TestFlight iPhone build. Genuine listing
-screenshots remain pending. See the [fix and regression checks](../references/musia-native-chords-and-navigation-2026-09-26.md).
+screenshots were captured on a hardware Mac mini on September 30; both native
+capture tests passed and the chosen images were visually reviewed. See the
+[fix and regression checks](../references/musia-native-chords-and-navigation-2026-09-26.md)
+and [reusable capture procedure](formal-review-2026-09-30.md#native-screenshot-capture).
 
 Historical first-beta build:
 

@@ -35,6 +35,8 @@
   worldwide availability where eligible, and audible/locked-screen playback on
   an iPhone. Do not ask those questions again. Formal browser work is separate
   from the beta CLI's intentionally prohibited formal-submission operations.
-- Read `formal-review-2026-09-26.md` and `provider-readiness.json` before resuming.
-  Reuse the exact qualified builds. Apple listing screenshots remain genuine
-  native screenshots; never use black simulator images or web-screen substitutes.
+- Read `formal-review-2026-09-30.md` and `provider-readiness.json` before resuming.
+  Apple is WAITING_FOR_REVIEW and Google has Changes in review for 0.1.1 (2).
+  Reconcile before any mutation; do not duplicate or cancel these submissions.
+  Apple manual release and Google managed publishing remain enabled.
+  Use genuine native screenshots; never use black images or web substitutes.

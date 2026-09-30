@@ -2,6 +2,58 @@ import XCTest
 
 final class PracticeSmokeTests: XCTestCase {
     @MainActor
+    func testStoreScreenshots() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-musia.mode.v1", "Listen", "-musia.rate.v1", "1",
+                               "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryL"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        defer { app.terminate() }
+
+        func capture(_ name: String) {
+            Thread.sleep(forTimeInterval: 1)
+            let image = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            image.name = "store-\(name)"
+            image.lifetime = .keepAlways
+            add(image)
+        }
+
+        let exercise = app.buttons["library.localFirstPulse"]
+        XCTAssertTrue(exercise.waitForExistence(timeout: 20))
+        let loading = app.staticTexts["Loading library..."]
+        let loaded = NSPredicate { _, _ in !loading.exists }
+        _ = XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: loaded, object: nil)], timeout: 30)
+        capture("library")
+
+        exercise.tap()
+        let transport = app.buttons["practice.transport.play"]
+        XCTAssertTrue(transport.waitForExistence(timeout: 15))
+        capture("practice")
+
+        app.segmentedControls["practice.mode"].buttons["Play"].tap()
+        let shape = app.descendants(matching: .any)["guitar.Em"].firstMatch
+        for _ in 0..<3 {
+            if shape.isHittable { break }
+            app.swipeUp(velocity: .slow)
+        }
+        XCTAssertTrue(shape.waitForExistence(timeout: 5))
+        XCTAssertTrue(shape.isHittable)
+        // iPad presents a shorter sheet; bring the whole diagram into view.
+        if app.frame.width > 700 {
+            let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.60))
+            let end = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.46))
+            start.press(forDuration: 0.05, thenDragTo: end)
+        }
+        capture("guitar")
+
+        app.buttons["practice.close"].tap()
+        let lessons = app.buttons.matching(NSPredicate(format: "label == 'Lessons'")).firstMatch
+        XCTAssertTrue(lessons.waitForExistence(timeout: 5))
+        lessons.tap()
+        capture("lessons")
+    }
+
+    @MainActor
     func testMiniPlayerDoesNotCoverNavigation() {
         verifyMiniPlayerNavigation(largeText: false)
     }
