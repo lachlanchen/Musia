@@ -32,7 +32,29 @@
     "listing_screenshots": "4 genuine native iPhone 6.9-inch and 4 iPad 13-inch screenshots; all 8 API delivery states COMPLETE; visually reviewed",
     "privacy_status": "Published; Device ID and Product Interaction; linked, functionality, no tracking",
     "age_rating": "13+ calculated; questionnaire saved",
-    "device_playback": "Owner confirmed latest TestFlight iPhone audible playback and locked-screen playback"
+    "device_playback": "Owner confirmed latest TestFlight iPhone audible playback and locked-screen playback",
+    "macos": {
+      "observed_date": "2026-10-04",
+      "implementation": "Native SwiftUI/AVFoundation; no Catalyst or WebView",
+      "version": "0.1.1 (3)",
+      "minimum_os": "14.0",
+      "architectures": ["arm64", "x86_64"],
+      "build_id": "912a785a-be0e-4b3c-974f-db7c96c29fd6",
+      "processing_state": "VALID",
+      "internal_build_status": "IN_BETA_TESTING; existing owner-only Musia Internal group",
+      "formal_version_id": "252606cc-493d-4385-b901-dd4cf7f659f0",
+      "formal_submission_id": "cdb09c5a-7833-45a5-bba0-ffba95107a46",
+      "formal_submitted_at": "2026-10-04T13:58:22.169Z",
+      "formal_status": "WAITING_FOR_REVIEW",
+      "formal_review_submitted": true,
+      "release_type": "MANUAL",
+      "package_sha256": "aa8251ce391daaf725267a29a92b1bce96f61d0da253fe1d565fdba840c25a26",
+      "qualification": "27 native Release XCTest passes with live API/audio; physical Intel runtime and actual screenshots; Apple silicon native build and core tests; iOS compile regression; 40 store guard tests",
+      "listing_screenshots": "3 genuine 1280x800 native Mac captures, all COMPLETE",
+      "price": {"currency": "USD", "amount": "2.99", "state": "FRESH_API_VERIFIED_SHARED_APP_PRICE"},
+      "publicly_available": false,
+      "record": "store/macos-review-2026-10-04.md"
+    }
   },
   "google": {
     "inventory": "Complete authenticated account list after creation: 9 apps, including Musia with exact package art.lazying.musia",

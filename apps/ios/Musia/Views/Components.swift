@@ -6,6 +6,13 @@ enum Palette {
     static let coral = Color(red: 0.77, green: 0.23, blue: 0.20)
     static let mint = Color(red: 0.90, green: 0.98, blue: 0.96)
     static let ink = Color(red: 0.09, green: 0.15, blue: 0.16)
+    static var surface: Color {
+#if os(macOS)
+        Color(nsColor: .controlBackgroundColor)
+#else
+        Color(.secondarySystemBackground)
+#endif
+    }
 }
 
 struct CoverView: View {
@@ -121,7 +128,7 @@ struct MiniPlayer: View {
         // Keep compact transport readable without displacing tabs in landscape.
         // Opening the full player retains the user's unrestricted Dynamic Type size.
         .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
-        .background(Color(.secondarySystemBackground))
+        .background(Palette.surface)
         .overlay(alignment: .top) { Divider() }
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("mini.player")

@@ -2,7 +2,13 @@ import AVFoundation
 import Combine
 import MediaPlayer
 import MusiaCore
+#if os(iOS)
 import UIKit
+private typealias PlaybackImage = UIImage
+#else
+import AppKit
+private typealias PlaybackImage = NSImage
+#endif
 
 @MainActor
 final class PlaybackController: ObservableObject {
@@ -174,9 +180,11 @@ final class PlaybackController: ObservableObject {
     func play() {
         guard ready, issue == nil, asset != nil else { return }
         do {
+#if os(iOS)
             let session = AVAudioSession.sharedInstance()
             try session.setCategory(.playback, mode: .default, policy: .longFormAudio)
             try session.setActive(true)
+#endif
             wantsPlayback = true
             if position >= duration - 0.02 || loop.map({ position < $0.start || position >= $0.end }) == true {
                 seek(to: loop?.start ?? 0)
@@ -379,6 +387,7 @@ final class PlaybackController: ObservableObject {
     }
 
     private func observeSession() {
+#if os(iOS)
         notifications.append(NotificationCenter.default.addObserver(
             forName: AVAudioSession.interruptionNotification, object: nil, queue: .main
         ) { [weak self] notification in
@@ -410,6 +419,13 @@ final class PlaybackController: ObservableObject {
         ) { [weak self] _ in
             Task { @MainActor [weak self] in self?.fail("The audio service restarted. Retry playback.") }
         })
+#else
+        notifications.append(NSWorkspace.shared.notificationCenter.addObserver(
+            forName: NSWorkspace.willSleepNotification, object: nil, queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor [weak self] in self?.pause() }
+        })
+#endif
     }
 
     private func configureRemoteCommands() {
@@ -443,6 +459,9 @@ final class PlaybackController: ObservableObject {
     }
 
     private func updateNowPlaying() {
+#if os(macOS)
+        MPNowPlayingInfoCenter.default().playbackState = isPlaying ? .playing : .paused
+#endif
         guard let song, let asset else { MPNowPlayingInfoCenter.default().nowPlayingInfo = nil; return }
         var info: [String: Any] = [
             MPMediaItemPropertyTitle: song.title,
@@ -455,7 +474,7 @@ final class PlaybackController: ObservableObject {
             MPNowPlayingInfoPropertyMediaType: MPNowPlayingInfoMediaType.audio.rawValue,
             MPNowPlayingInfoPropertyIsLiveStream: false
         ]
-        if #available(iOS 18.0, *) { info[MPNowPlayingInfoPropertyExcludeFromSuggestions] = true }
+        if #available(iOS 18.0, macOS 15.0, *) { info[MPNowPlayingInfoPropertyExcludeFromSuggestions] = true }
         if let artwork { info[MPMediaItemPropertyArtwork] = artwork }
         MPNowPlayingInfoCenter.default().nowPlayingInfo = info
     }
@@ -465,11 +484,11 @@ final class PlaybackController: ObservableObject {
         let token = generation
         artworkTask = Task { [weak self] in
             guard let self else { return }
-            var image = isLocalExercise ? UIImage(named: "FirstPulseCover") : nil
+            var image = isLocalExercise ? PlaybackImage(named: "FirstPulseCover") : nil
             if let url, APIClient.isSecureRemoteURL(url) {
                 if let (data, response) = try? await URLSession.shared.data(from: url),
                    (response as? HTTPURLResponse)?.statusCode == 200, data.count < 8_000_000 {
-                    image = UIImage(data: data)
+                    image = PlaybackImage(data: data)
                 }
             } else if !isLocalExercise { image = nil }
             guard !Task.isCancelled, token == generation, let image else { return }
@@ -483,6 +502,9 @@ final class PlaybackController: ObservableObject {
         if let periodicObserver { player.removeTimeObserver(periodicObserver) }
         if let boundaryObserver { player.removeTimeObserver(boundaryObserver) }
         notifications.forEach(NotificationCenter.default.removeObserver)
+#if os(macOS)
+        notifications.forEach(NSWorkspace.shared.notificationCenter.removeObserver)
+#endif
         itemNotifications.forEach(NotificationCenter.default.removeObserver)
         for (command, target) in remoteTargets { command.removeTarget(target) }
     }

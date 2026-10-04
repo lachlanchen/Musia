@@ -14,6 +14,31 @@ struct PracticeView: View {
                 if player.loading { ProgressView("Loading song...").frame(maxWidth: .infinity).padding() }
                 if let issue = player.issue { ErrorNotice(message: issue) { player.retry() } }
                 if let song = player.song, let asset = player.asset {
+#if os(macOS)
+                    HStack(alignment: .top, spacing: 32) {
+                        VStack(alignment: .leading, spacing: 24) {
+                            heading(song)
+                            assetPicker(song, asset: asset)
+                            transport
+                            Divider()
+                            loopControls(asset)
+                        }
+                        .frame(width: 300)
+                        Divider()
+                        VStack(alignment: .leading, spacing: 24) {
+                            modePicker
+                            Text(PracticeGuidance.text(songID: song.id, mode: player.mode))
+                                .foregroundStyle(.secondary)
+                            pulse(song: song, asset: asset)
+                            lyrics(asset)
+                            if player.mode == .tap { tapPad(asset) }
+                            if player.mode == .play || !asset.chords.isEmpty { harmony(asset) }
+                            Divider()
+                            analysis(asset)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                    }
+#else
                     heading(song)
                     assetPicker(song, asset: asset)
                     modePicker
@@ -28,14 +53,20 @@ struct PracticeView: View {
                     Divider()
                     loopControls(asset)
                     analysis(asset)
+#endif
                 }
             }
+#if os(macOS)
+            .frame(maxWidth: 1240)
+#else
             .frame(maxWidth: 760)
+#endif
             .padding(20)
             .frame(maxWidth: .infinity)
         }
         .background(Color.white)
         .navigationTitle("Practice")
+#if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -44,6 +75,7 @@ struct PracticeView: View {
                     .accessibilityIdentifier("practice.close")
             }
         }
+#endif
         .onChange(of: player.asset?.id) { _, _ in scrubbing = false }
     }
 
@@ -187,7 +219,11 @@ struct PracticeView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
+#if os(macOS)
+        .frame(maxWidth: .infinity, minHeight: 60, alignment: .leading)
+#else
         .frame(maxWidth: .infinity, minHeight: 92, alignment: .leading)
+#endif
     }
 
     private func highlighted(_ rendering: LyricRendering) -> AttributedString {

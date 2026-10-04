@@ -40,3 +40,11 @@
   Reconcile before any mutation; do not duplicate or cancel these submissions.
   Apple manual release and Google managed publishing remain enabled.
   Use genuine native screenshots; never use black images or web substitutes.
+- macOS0.1.1(3) was submitted on 2026-10-04 and is WAITING_FOR_REVIEW; read
+  `macos-review-2026-10-04.md` before any Mac release mutation. Its internal
+  TestFlight build is available. iOS0.1.1(2) remains unchanged in review.
+- Mac builds use the existing shared signing keychain and Musia-specific Mac
+  profile. Keep the enclosing runtime private but installed app files readable.
+  Prefer the documented universal archive/productbuild flow. Never treat an
+  altool exit-zero result as success without checking its JSON product-errors
+  and success-message. Preserve the separate beta CLI's formal-review guards.

@@ -1,5 +1,8 @@
 # Musia Native iOS
 
+The native [macOS target](../macos/README.md) shares the core, services and views;
+its sidebar, window and menu entry point remain separate from this iOS app.
+
 Native SwiftUI, AVFoundation/AVPlayer and MediaPlayer. No WebKit, PWA, account,
 analytics SDK, microphone, or server progress. Bundle ID: `art.lazying.musia`.
 Minimum iOS 17; iPhone and iPad. The checked-in `Musia.xcodeproj` and shared

@@ -79,6 +79,8 @@ private struct LessonDetail: View {
         }
         .listStyle(.plain)
         .navigationTitle("Lesson")
+#if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+#endif
     }
 }

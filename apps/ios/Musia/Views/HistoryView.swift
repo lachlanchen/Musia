@@ -56,7 +56,7 @@ struct HistoryView: View {
         .listStyle(.plain)
         .navigationTitle("History")
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .primaryAction) {
                 Button {
                     player.checkpoint()
                     do { document = HistoryDocument(data: try history.export()); exporting = true }

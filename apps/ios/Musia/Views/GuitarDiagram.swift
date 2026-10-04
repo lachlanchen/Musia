@@ -61,7 +61,11 @@ struct GuitarDiagram: View {
                 }
             }
             .aspectRatio(1.15, contentMode: .fit)
+#if os(macOS)
+            .frame(maxWidth: 250)
+#else
             .frame(maxWidth: 320)
+#endif
             .accessibilityHidden(true)
             Text("Low E to high E - Standard tuning")
                 .font(.subheadline).foregroundStyle(.secondary)

@@ -1,10 +1,18 @@
 # Musia Native Store Release
 
-Identity: `art.lazying.musia`, iOS SwiftUI and Android Kotlin/Compose. This worker
-owns `store/` and `tools/store/` only. Native workers own `apps/ios/` and
-`apps/android/`. Do not launch a store build while a native worker is building.
+Identity: `art.lazying.musia`, iOS/macOS SwiftUI and Android Kotlin/Compose.
+Release tools live in `store/` and `tools/store/`; native sources live in
+`apps/ios/`, `apps/macos/` and `apps/android/`. Do not launch a store build while
+a native worker is building.
 
 ## Actual State
+
+**2026-10-04:** Native **macOS 0.1.1 (3)** is now **WAITING_FOR_REVIEW**, with
+27 native release tests passing and three accepted native Mac screenshots.
+The universal Intel/Apple-silicon build is also available in the existing internal
+TestFlight group. iOS0.1.1(2) remains in review unchanged; Google was not modified
+in this Mac task. [Mac release record](macos-review-2026-10-04.md) and
+[native Mac build guide](../apps/macos/README.md).
 
 2026-09-26: both application records exist, and **paid USD 2.99** is saved in
 both provider consoles. The owner chose this as the future default. Each price

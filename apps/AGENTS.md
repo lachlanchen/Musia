@@ -1,6 +1,6 @@
 # Musia Learning App Rules
 
-- Native means SwiftUI/AVFoundation on iOS and Kotlin/Compose/Media3 on Android;
+- Native means SwiftUI/AVFoundation on iOS/macOS and Kotlin/Compose/Media3 on Android;
   do not replace them with a PWA shell or WebView.
 - Keep the shared learning API contract compatible across web and native clients.
 - Do not expose the existing Studio shell, sessions, filesystem or model workers
@@ -19,3 +19,10 @@
   stay out of Git. Verify provider results before claiming invitations or review.
 - Validate desktop/mobile layouts with screenshots and actual playback, and
   native background/interruption behavior on a device before claiming it works.
+- The macOS target lives in `apps/macos`, sharing Swift core/services/views from
+  iOS. Preserve iOS conditionals and run its generic simulator compile after
+  shared-source changes. macOS14+; universal Intel and Apple silicon release.
+- Use `apps/macos/README.md` for native Mac qualification and screenshot capture.
+  The Debug-only review harness never ships. Keep archive signing and local
+  test signing separate; do not weaken the production hardened runtime to fix
+  an ad-hoc XCTest loading problem.
