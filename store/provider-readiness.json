@@ -1,5 +1,5 @@
 {
-  "observed_date": "2026-09-30",
+  "observed_date": "2026-10-05",
   "bundle_id": "art.lazying.musia",
   "apple": {
     "initial_inventory": "No matching app or bundle identifier",
@@ -57,13 +57,14 @@
     }
   },
   "google": {
+    "observed_date": "2026-10-05",
     "inventory": "Complete authenticated account list after creation: 9 apps, including Musia with exact package art.lazying.musia",
     "own_upload_key": "GENERATED",
     "upload_certificate_sha256": "7301f46b0727b90f41a5f622bbe7f84cfaf3c79d720d0a4251cf8e1a308e3bd2",
     "app_record": "CREATED_AND_EXACT_PACKAGE_VERIFIED",
     "app_id": "4973883817798043601",
     "creation_declarations": "Developer Program Policies and US export laws explicitly confirmed by owner and applied",
-    "price": {"currency": "USD", "amount": "2.99", "state": "SAVED_FRESH_RELOAD_VERIFIED", "publicly_available": false},
+    "price": {"currency": "USD", "amount": "2.99", "state": "PUBLIC_US_LISTING_VERIFIED", "publicly_available": true},
     "distribution_countries": "172 eligible paid-app regions saved for production",
     "binary_uploaded": true,
     "internal_published": true,
@@ -74,10 +75,14 @@
     "opt_in_url": "https://play.google.com/apps/internaltest/4701000336240069263",
     "warnings": ["No obfuscation mapping; minification is disabled", "No native debug symbols for bundled libraries"],
     "formal_review_submitted": true,
-    "formal_status": "IN_REVIEW; fresh 2026-09-30 Console reload confirms Changes in review for production 0.1.1 (2); existing submission preserved",
+    "formal_status": "PUBLISHED; 2026-10-05 Console reload confirms publication and Production Active for 0.1.1 (2)",
     "formal_release": "0.1.1 (2), first production full rollout, reused internal AAB",
     "managed_publishing": true,
-    "publicly_available": false,
+    "publicly_available": true,
+    "public_listing_url": "https://play.google.com/store/apps/details?id=art.lazying.musia",
+    "public_listing_verified_at": "2026-10-05T04:07:13.306425+00:00",
+    "public_listing_verification": "Unauthenticated US HTTP 200; structured app identity, LazyingArt LLC and USD2.99 InStock offer verified; other-region propagation not individually tested",
+    "publication_record": "store/google-release-2026-10-05.md",
     "listing_name": "Musia: Learn Music & Guitar",
     "listing_locale": "en-US",
     "privacy_status": "Device or other IDs and App interactions; collected/shared, required, non-ephemeral, functionality/security",
@@ -89,7 +94,7 @@
   "website_qa": "29 backend, 9 web logic, 8 deployment tests and public Playwright passed; 24 chord shapes and 12 viewport/text-scale cases pass; live catalog 32 items/45 audio versions has no unsupported chord symbols. Not a native qualification receipt.",
   "android_signed_build": "0.1.1 (2) APK/AAB internally published; 36 release unit tests, release lint, signature/identity checks, exact signed APK emulator phone/tablet/enlarged-text navigation and playback/background/screen-off state checks passed",
   "ios_build": "0.1.1 (2) IPA archived, exported, signature inspected, altool validated/uploaded, processed VALID, IN_BETA_TESTING. 23 Swift core tests pass; one opt-in live-network test skipped. iPhone/iPad rotation and enlarged-text navigation tests pass. Owner confirmed iPhone audible and locked-screen playback. Genuine native screenshot tests now pass on a hardware Mac mini with iPhone and iPad simulators; images visually reviewed. Submitted binary unchanged.",
-  "qualification_scope": "Owner authorized formal review of existing qualified binaries with documented device evidence; Google IN_REVIEW and Apple WAITING_FOR_REVIEW. Original beta receipts and API guards preserved. Neither platform approved or publicly available. Shared-account integration remains disabled and outside this release.",
+  "qualification_scope": "Owner authorized review of existing qualified binaries and explicitly authorized Google publication on 2026-10-05. Google production 0.1.1 (2) is Active with public US listing verified. Apple iOS and macOS remain WAITING_FOR_REVIEW. Original beta receipts and API guards preserved. Shared-account integration remains disabled and outside this release.",
   "store_tool_tests": "36 local guard tests passed, including native screenshot ownership, evidence and timeout guards",
   "private_evidence": "store/.runtime/ (ignored, owner-only)"
 }

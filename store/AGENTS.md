@@ -35,8 +35,11 @@
   worldwide availability where eligible, and audible/locked-screen playback on
   an iPhone. Do not ask those questions again. Formal browser work is separate
   from the beta CLI's intentionally prohibited formal-submission operations.
-- Read `formal-review-2026-09-30.md` and `provider-readiness.json` before resuming.
-  Apple is WAITING_FOR_REVIEW and Google has Changes in review for 0.1.1 (2).
+- Read `google-release-2026-10-05.md` and `provider-readiness.json` before resuming.
+  Google 0.1.1 (2) is published: Production Active in 172 regions, public US
+  listing verified at USD2.99. Its approved ten changes were published once on
+  October5 with explicit owner authorization. Do not republish that release.
+  Apple iOS and macOS are WAITING_FOR_REVIEW as observed October5.
   Reconcile before any mutation; do not duplicate or cancel these submissions.
   Apple manual release and Google managed publishing remain enabled.
   Use genuine native screenshots; never use black images or web substitutes.

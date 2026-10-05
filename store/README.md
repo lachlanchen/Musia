@@ -7,6 +7,12 @@ a native worker is building.
 
 ## Actual State
 
+**2026-10-05:** Google Play **0.1.1 (2) is published**, with Production Active
+in 172 countries/regions. The public US listing is verified at **USD 2.99**.
+Managed publishing remains enabled for future changes. Apple iOS/macOS remain
+in review, unchanged. [Google release record](google-release-2026-10-05.md) and
+[public listing](https://play.google.com/store/apps/details?id=art.lazying.musia).
+
 **2026-10-04:** Native **macOS 0.1.1 (3)** is now **WAITING_FOR_REVIEW**, with
 27 native release tests passing and three accepted native Mac screenshots.
 The universal Intel/Apple-silicon build is also available in the existing internal
