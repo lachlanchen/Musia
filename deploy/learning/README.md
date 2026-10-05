@@ -109,7 +109,19 @@ passwordless sudo, or administer through a restricted tunnel account.
 
 ## Deployment Checkpoint
 
-Latest update **2026-09-26 05:16:05 UTC**: shared major/minor chord diagrams and
+Latest update **2026-10-05 06:26:50 UTC**: bilingual catalog and archive selection
+published from clean source commit `da41b32`. Release
+`4faa66d368a185bb71670355d44debb3c819fc6449eee63798b48b1cfff0c4a5`, transaction
+`20261005T142512-4faa66d368a1`; predecessor `99b459c47682...` retained.
+The app API has 29 songs plus First Pulse. All 29 song responses match the
+sanitized build exactly; 71 public HTTP checks and desktop/mobile browser
+playback checks passed. No app binary change was needed. See the
+[catalog release record](../../references/catalog-curation-2026-10-05.md)
+for the scoped, owner-approved memory recovery and firmware-service restoration.
+The 180 MiB guard remains unchanged. Unrelated services and firewall rules were
+preserved. Private transaction evidence is in `.work/20261005T142512-4faa66d368a1/`.
+
+Previous checkpoint **2026-09-26 05:16:05 UTC**: shared major/minor chord diagrams and
 responsive footer spacing deployed successfully. Release
 `2d58d928cc954a0c6eb42f67886aa84cd49d2ed6af17dafa0741ac6c6e7a0bbb`, transaction
 `20260926T131441-2d58d928cc95`; predecessor `09e9dd2c...` retained. The exact
