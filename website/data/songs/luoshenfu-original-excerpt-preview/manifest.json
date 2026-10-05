@@ -3,11 +3,11 @@
   "version": 1,
   "id": "luoshenfu-original-excerpt-preview",
   "kind": "song",
-  "title": "洛神赋 · 原文选段",
+  "title": "洛神赋 · Ode to the Goddess of the Luo",
   "localizedTitles": {
-    "zh-Hans": "洛神赋 · 原文选段",
-    "en": "Luoshen Fu · Original Excerpt",
-    "ja": "洛神賦・原文抄"
+    "zh-Hans": "洛神赋",
+    "en": "Ode to the Goddess of the Luo",
+    "ja": "洛神賦"
   },
   "artist": "Musia",
   "description": "Cao Zhi's original Luoshenfu lines carried by two luminous, cinematic Mandarin performances.",
@@ -15,7 +15,7 @@
   "duration": 136.0,
   "canonicalUrl": "https://fun.lazying.art/#luoshenfu-original-excerpt-preview",
   "share": {
-    "title": "洛神赋 · 原文选段 - Musia",
+    "title": "洛神赋 · Ode to the Goddess of the Luo - Musia",
     "description": "An original cinematic Mandarin setting of selected lines from Cao Zhi's Luoshenfu.",
     "url": "https://fun.lazying.art/#luoshenfu-original-excerpt-preview",
     "image": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "洛神赋 original excerpt cover",
+      "label": "洛神赋 · Ode to the Goddess of the Luo cover",
       "role": "cover",
       "src": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
       "mime": "image/png",
@@ -42,11 +42,11 @@
     },
     "primaryAudio": {
       "id": "luoshenfu-pronunciation-v2",
-      "label": "Pronunciation V2",
-      "selectorLabel": "读音优化 V2",
+      "label": "中文",
+      "selectorLabel": "中文",
       "role": "vocal",
       "languageCode": "zh-Hans",
-      "languageLabel": "中文 · 读音优化 V2",
+      "languageLabel": "中文",
       "lyricSetId": "pronunciation-v2",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3",
       "mime": "audio/mpeg",
@@ -846,11 +846,11 @@
     "alternateAudio": [
       {
         "id": "luoshenfu-original-zh",
-        "label": "Source A",
-        "selectorLabel": "原字首版",
+        "label": "中文 · Archive 01",
+        "selectorLabel": "中文 · Archive 01",
         "role": "vocal",
         "languageCode": "zh-Hans",
-        "languageLabel": "中文 · 原字首版",
+        "languageLabel": "中文 · Archive 01",
         "lyricSetId": "zh-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3",
         "mime": "audio/mpeg",
@@ -2087,7 +2087,9 @@
           ],
           "chordSource": "Musia analysis-grade chord inference from this exact render",
           "beatSource": "Musia beat analysis from this exact render"
-        }
+        },
+        "hidden": true,
+        "hiddenLabel": "Archive 01"
       }
     ]
   },
@@ -3253,5 +3255,10 @@
       "luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3",
       "luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3"
     ]
+  },
+  "displayTitle": "洛神赋 · Ode to the Goddess of the Luo",
+  "workId": "luoshenfu",
+  "edition": {
+    "status": "selected"
   }
 }

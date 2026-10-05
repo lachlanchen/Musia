@@ -15,7 +15,7 @@
   "duration": 74.0,
   "canonicalUrl": "https://fun.lazying.art/#one-boat-moonlight-one-lamp",
   "share": {
-    "title": "一船明月一灯影 · One Boat of Moonlight - Fun Lazying Art",
+    "title": "一船明月一灯影 · One Boat of Moonlight - Musia",
     "description": "A Musia mixed-language Tang farewell song with corrected synced lyrics, original Chinese poem anchors, translations, pinyin, furigana, and chords.",
     "url": "https://fun.lazying.art/#one-boat-moonlight-one-lamp",
     "image": "assets/covers/one-boat-moonlight-one-lamp-megastructure-20260711-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Moonlit sea cover",
+      "label": "一船明月一灯影 · One Boat of Moonlight cover",
       "role": "cover",
       "src": "assets/covers/one-boat-moonlight-one-lamp-megastructure-20260711-16x9.png",
       "mime": "image/png",
@@ -42,14 +42,15 @@
     },
     "primaryAudio": {
       "id": "one-boat-moonlight-one-lamp",
-      "label": "Mixed",
+      "label": "English · 中文 · 日本語",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "mul",
-      "languageLabel": "Mixed",
+      "languageLabel": "English · 中文 · 日本語",
       "lyricSetId": "mixed-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/one-boat-moonlight-one-lamp-ace-xl-turbo-seed780826-20260711.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "English · 中文 · 日本語"
     },
     "alternateAudio": []
   },
@@ -1361,5 +1362,10 @@
       "label": "Stems",
       "path": "data/runs/one-boat-moonlight-one-lamp-20260711-analysis/stems"
     }
-  ]
+  ],
+  "displayTitle": "一船明月一灯影 · One Boat of Moonlight",
+  "workId": "one-boat-moonlight",
+  "edition": {
+    "status": "selected"
+  }
 }

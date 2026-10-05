@@ -3,11 +3,11 @@
   "version": 1,
   "id": "yun-hai-zhi-lian-dr-short",
   "kind": "song",
-  "title": "云海之恋 · DR Short",
+  "title": "云海之恋 · Cloud Sea Love · Archive 02",
   "localizedTitles": {
-    "zh-Hans": "云海之恋 · DR 短版",
-    "en": "Cloud Sea Love · DR Short",
-    "ja": "雲海の恋・DR短編"
+    "zh-Hans": "云海之恋 · Archive 02",
+    "en": "Cloud Sea Love · Archive 02",
+    "ja": "雲海の恋 · Archive 02"
   },
   "artist": "Musia",
   "description": "A DiffRhythm short Mandarin cloud-sea love ballad, corrected against its selected vocal render.",
@@ -15,7 +15,7 @@
   "duration": 159.985,
   "canonicalUrl": "https://fun.lazying.art/#yun-hai-zhi-lian-dr-short",
   "share": {
-    "title": "云海之恋 · DR Short - Fun Lazying Art",
+    "title": "云海之恋 · Cloud Sea Love · Archive 02 - Musia",
     "description": "A Musia DiffRhythm short cloud-sea love ballad with corrected trilingual lyrics.",
     "url": "https://fun.lazying.art/#yun-hai-zhi-lian-dr-short",
     "image": "assets/covers/yun-hai-zhi-lian-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "云海之恋 · DR Short cover",
+      "label": "云海之恋 · Cloud Sea Love · Archive 02 cover",
       "role": "cover",
       "src": "assets/covers/yun-hai-zhi-lian-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-main-zh-Hans-20260630.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -1119,5 +1120,19 @@
       "kind": "markdown",
       "path": "data/runs/yun-hai-zhi-lian-main-diffrhythm-full-160-analysis/REPORT.md"
     }
-  ]
+  ],
+  "displayTitle": "云海之恋 · Cloud Sea Love · Archive 02",
+  "workId": "yun-hai-zhi-lian",
+  "edition": {
+    "status": "archive",
+    "number": 2
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 02",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
+  }
 }

@@ -467,4 +467,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # Compatibility entry point; the reviewed bilingual catalog supersedes model suffixes.
+    from curate_fun_catalog import main as curate
+    raise SystemExit(curate(["--apply"]))

@@ -3,10 +3,10 @@
   "version": 1,
   "id": "take-care-of-yourself-hope-version",
   "kind": "song",
-  "title": "Take Care of Yourself",
+  "title": "照顾好自己 · Take Care of Yourself",
   "localizedTitles": {
-    "en": "Take Care of Yourself",
     "zh-Hans": "照顾好自己",
+    "en": "Take Care of Yourself",
     "ja": "自分を大切に"
   },
   "artist": "Musia",
@@ -16,7 +16,7 @@
   "duration": 76.032,
   "canonicalUrl": "https://fun.lazying.art/#take-care-of-yourself-hope-version",
   "share": {
-    "title": "Take Care of Yourself - Fun Lazying Art",
+    "title": "照顾好自己 · Take Care of Yourself - Musia",
     "description": "A spacious Musia song about care, courage, and hope.",
     "url": "https://fun.lazying.art/#take-care-of-yourself-hope-version",
     "image": "assets/covers/take-care-of-yourself-16x9.png",
@@ -25,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Take Care of Yourself cover",
+      "label": "照顾好自己 · Take Care of Yourself cover",
       "role": "cover",
       "src": "assets/covers/take-care-of-yourself-16x9.png",
       "mime": "image/png",
@@ -50,7 +50,8 @@
       "languageLabel": "English",
       "lyricSetId": "en-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/take-care-of-yourself-hope-en.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "English"
     },
     "alternateAudio": [
       {
@@ -62,7 +63,8 @@
         "languageLabel": "日本語",
         "lyricSetId": "ja-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/take-care-of-yourself-hope-ja.mp3",
-        "mime": "audio/mpeg"
+        "mime": "audio/mpeg",
+        "selectorLabel": "日本語"
       },
       {
         "id": "take-care-hope-zh",
@@ -73,7 +75,8 @@
         "languageLabel": "中文",
         "lyricSetId": "zh-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/take-care-of-yourself-hope-zh-Hans.mp3",
-        "mime": "audio/mpeg"
+        "mime": "audio/mpeg",
+        "selectorLabel": "中文"
       }
     ]
   },
@@ -400,5 +403,10 @@
   "playback": {
     "defaultMode": "single",
     "reason": "Standard ACE-selected version should loop by default for listening and recording."
+  },
+  "displayTitle": "照顾好自己 · Take Care of Yourself",
+  "workId": "take-care-of-yourself",
+  "edition": {
+    "status": "selected"
   }
 }

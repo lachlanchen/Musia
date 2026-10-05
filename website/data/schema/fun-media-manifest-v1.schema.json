@@ -10,6 +10,8 @@
     "id": {"type": "string"},
     "kind": {"enum": ["song", "localized-song", "mv", "short-film", "video", "youtube-video"]},
     "title": {"type": "string"},
+    "displayTitle": {"type": "string", "description": "Stable bilingual listener-facing title across vocal languages."},
+    "workId": {"type": "string", "description": "Groups selected and archived recordings of the same work."},
     "artist": {"type": "string"},
     "subtitle": {"type": "string"},
     "description": {"type": "string"},

@@ -3,11 +3,11 @@
   "version": 1,
   "id": "meng-you-tian-mu-kai-xin-yan-original-lines",
   "kind": "song",
-  "title": "梦游天姥吟留别 · 开心颜原文段",
+  "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 03",
   "localizedTitles": {
-    "zh-Hans": "梦游天姥吟留别 · 开心颜原文段",
-    "en": "Dreaming of Tianmu · Kaixinyan Original-Text Excerpt",
-    "ja": "夢遊天姥吟留別・開心顔原文段"
+    "zh-Hans": "梦游天姥吟留别 · Archive 03",
+    "en": "Dreaming of Tianmu · Archive 03",
+    "ja": "夢遊天姥吟留別 · Archive 03"
   },
   "artist": "Musia",
   "description": "An ACE-Step Mandarin original-text excerpt song from the ending of Li Bai's 梦游天姥吟留别, using only source poem wording and ASR-corrected timing.",
@@ -15,7 +15,7 @@
   "duration": 126.0,
   "canonicalUrl": "https://fun.lazying.art/#meng-you-tian-mu-kai-xin-yan-original-lines",
   "share": {
-    "title": "梦游天姥吟留别 · 开心颜原文段 - Fun Lazying Art",
+    "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 03 - Musia",
     "description": "Musia ACE-Step original-text excerpt song from Li Bai's 梦游天姥吟留别.",
     "url": "https://fun.lazying.art/#meng-you-tian-mu-kai-xin-yan-original-lines",
     "image": "assets/covers/meng-you-tian-mu-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "梦游天姥吟留别 开心颜原文段 cover",
+      "label": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 03 cover",
       "role": "cover",
       "src": "assets/covers/meng-you-tian-mu-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/meng-you-tian-mu-kai-xin-yan-original-lines-zh-Hans-ace-turbo-seed746204-20260706.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -877,5 +878,19 @@
       "source": "Reused the existing no-text 16:9 Tianmu dream-mountain cover for this related poem-excerpt item."
     },
     "publicAudio": "meng-you-tian-mu-kai-xin-yan-original-lines-zh-Hans-ace-turbo-seed746204-20260706.mp3"
+  },
+  "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 03",
+  "workId": "meng-you-tian-mu",
+  "edition": {
+    "status": "archive",
+    "number": 3
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 03",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
   }
 }

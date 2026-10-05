@@ -3,11 +3,11 @@
   "version": 1,
   "id": "xia-ke-xing",
   "kind": "song",
-  "title": "侠客行",
+  "title": "侠客行 · Knight-Errant Ballad · Archive 01",
   "localizedTitles": {
-    "zh-Hans": "侠客行",
-    "en": "Knight-Errant Ballad",
-    "ja": "侠客行"
+    "zh-Hans": "侠客行 · Archive 01",
+    "en": "Knight-Errant Ballad · Archive 01",
+    "ja": "侠客行 · Archive 01"
   },
   "artist": "Musia",
   "description": "An ACE-Step Mandarin wuxia theme adapted from Li Bai's public-domain poem, with ASR-corrected trilingual lyrics.",
@@ -15,7 +15,7 @@
   "duration": 88.0,
   "canonicalUrl": "https://fun.lazying.art/#xia-ke-xing",
   "share": {
-    "title": "侠客行 - Fun Lazying Art",
+    "title": "侠客行 · Knight-Errant Ballad · Archive 01 - Musia",
     "description": "A Musia ACE-Step Mandarin wuxia theme adapted from Li Bai with corrected trilingual lyrics.",
     "url": "https://fun.lazying.art/#xia-ke-xing",
     "image": "assets/covers/xia-ke-xing-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "侠客行 cover",
+      "label": "侠客行 · Knight-Errant Ballad · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/xia-ke-xing-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/xia-ke-xing-zh-Hans-ace-20260630.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -606,5 +607,19 @@
     "coverSource": "assets/covers/xia-ke-xing-16x9.png",
     "publicAudio": "xia-ke-xing-zh-Hans-ace-20260630.mp3"
   },
-  "artifacts": []
+  "artifacts": [],
+  "displayTitle": "侠客行 · Knight-Errant Ballad · Archive 01",
+  "workId": "xia-ke-xing",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
+  }
 }

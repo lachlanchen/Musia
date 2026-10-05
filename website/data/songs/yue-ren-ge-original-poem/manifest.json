@@ -3,11 +3,11 @@
   "version": 1,
   "id": "yue-ren-ge-original-poem",
   "kind": "song",
-  "title": "越人歌 · 原诗版",
+  "title": "越人歌 · Song of the Yue Boatman",
   "localizedTitles": {
-    "zh-Hans": "越人歌 · 原诗版",
-    "en": "Song of the Yue Boatman · Original Poem",
-    "ja": "越人歌・原詩版"
+    "zh-Hans": "越人歌",
+    "en": "Song of the Yue Boatman",
+    "ja": "越人歌"
   },
   "artist": "Musia",
   "description": "A Musia ACE-Step Mandarin 越人歌 setting with ASR-corrected, sound-close trilingual website lyrics.",
@@ -15,7 +15,7 @@
   "duration": 100.0,
   "canonicalUrl": "https://fun.lazying.art/#yue-ren-ge-original-poem",
   "share": {
-    "title": "越人歌 · 原诗版 - Fun Lazying Art",
+    "title": "越人歌 · Song of the Yue Boatman - Musia",
     "description": "Musia original-poem song version of 越人歌.",
     "url": "https://fun.lazying.art/#yue-ren-ge-original-poem",
     "image": "assets/covers/yue-ren-ge-original-poem-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "越人歌 原诗版 cover",
+      "label": "越人歌 · Song of the Yue Boatman cover",
       "role": "cover",
       "src": "assets/covers/yue-ren-ge-original-poem-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/yue-ren-ge-original-poem-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -425,5 +426,10 @@
     "lyricCorrection": "Corrected from selected full-mix large-v3 ASR and the poem-only hook prompt. The active lyric preserves source text when word count and sound are close, and uses sound-close compromise wording only where the render clearly changes phrase structure.",
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0b88aca6cc8e98f5016a4475905be88191ab258691b27b0dea.png",
     "publicAudio": "yue-ren-ge-original-poem-zh-Hans-ace-20260701.mp3"
+  },
+  "displayTitle": "越人歌 · Song of the Yue Boatman",
+  "workId": "yue-ren-ge",
+  "edition": {
+    "status": "selected"
   }
 }

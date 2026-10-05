@@ -3,7 +3,7 @@
   "version": 1,
   "id": "shu-dao-nan-qing-tian-lu",
   "kind": "song",
-  "title": "晴天路",
+  "title": "晴天路 · Road to Clear Sky",
   "localizedTitles": {
     "zh-Hans": "晴天路",
     "en": "Road to Clear Sky",
@@ -15,7 +15,7 @@
   "duration": 84.5,
   "canonicalUrl": "https://fun.lazying.art/#shu-dao-nan-qing-tian-lu",
   "share": {
-    "title": "晴天路 - Fun Lazying Art",
+    "title": "晴天路 · Road to Clear Sky - Musia",
     "description": "An original Musia song inspired by 蜀道难, with corrected trilingual lyrics.",
     "url": "https://fun.lazying.art/#shu-dao-nan-qing-tian-lu",
     "image": "assets/covers/shu-dao-nan-qing-tian-lu-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "晴天路 cover",
+      "label": "晴天路 · Road to Clear Sky cover",
       "role": "cover",
       "src": "assets/covers/shu-dao-nan-qing-tian-lu-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/shu-dao-nan-qing-tian-lu-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -654,5 +655,10 @@
     "coverSource": "Generated 16:9 cover with Codex image generation; original saved under ~/.codex/generated_images.",
     "publicAudio": "shu-dao-nan-qing-tian-lu-zh-Hans-ace-20260701.mp3"
   },
-  "artifacts": []
+  "artifacts": [],
+  "displayTitle": "晴天路 · Road to Clear Sky",
+  "workId": "qing-tian-lu",
+  "edition": {
+    "status": "selected"
+  }
 }

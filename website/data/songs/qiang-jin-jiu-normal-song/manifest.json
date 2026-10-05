@@ -3,11 +3,11 @@
   "version": 1,
   "id": "qiang-jin-jiu-normal-song",
   "kind": "song",
-  "title": "将进酒",
+  "title": "将进酒 · Bring In the Wine · Archive 02",
   "localizedTitles": {
-    "zh-Hans": "将进酒",
-    "en": "Bring In the Wine",
-    "ja": "将進酒"
+    "zh-Hans": "将进酒 · Archive 02",
+    "en": "Bring In the Wine · Archive 02",
+    "ja": "将進酒 · Archive 02"
   },
   "artist": "Musia",
   "description": "An ACE-Step Mandarin normal-song adaptation inspired by Li Bai's 将进酒, corrected against the selected audio's own ASR evidence.",
@@ -15,7 +15,7 @@
   "duration": 112.0,
   "canonicalUrl": "https://fun.lazying.art/#qiang-jin-jiu-normal-song",
   "share": {
-    "title": "将进酒 - Fun Lazying Art",
+    "title": "将进酒 · Bring In the Wine · Archive 02 - Musia",
     "description": "A Musia Mandarin normal-song adaptation of 将进酒 with corrected trilingual lyrics.",
     "url": "https://fun.lazying.art/#qiang-jin-jiu-normal-song",
     "image": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "将进酒 cover",
+      "label": "将进酒 · Bring In the Wine · Archive 02 cover",
       "role": "cover",
       "src": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/qiang-jin-jiu-normal-song-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -858,5 +859,19 @@
     "coverSource": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
     "publicAudio": "qiang-jin-jiu-normal-song-zh-Hans-ace-20260701.mp3"
   },
-  "artifacts": []
+  "artifacts": [],
+  "displayTitle": "将进酒 · Bring In the Wine · Archive 02",
+  "workId": "qiang-jin-jiu",
+  "edition": {
+    "status": "archive",
+    "number": 2
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 02",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
+  }
 }

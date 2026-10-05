@@ -3,11 +3,11 @@
   "version": 1,
   "id": "shu-dao-nan-original-text-dr-draft",
   "kind": "song",
-  "title": "蜀道难 · 原文重组 DR Draft",
+  "title": "蜀道难 · The Hard Road to Shu · Archive 01",
   "localizedTitles": {
-    "zh-Hans": "蜀道难 · 原文重组 DR Draft",
-    "en": "Hard Road to Shu - Original Text DR Draft",
-    "ja": "蜀道難・原文再構成 DR Draft"
+    "zh-Hans": "蜀道难 · Archive 01",
+    "en": "The Hard Road to Shu · Archive 01",
+    "ja": "蜀道難 · Archive 01"
   },
   "artist": "Musia",
   "description": "An experimental DiffRhythm draft that reorganizes Li Bai source lines. The lyric track is source-close and ASR-audited, but this is not a final polished ACE render.",
@@ -16,7 +16,7 @@
   "canonicalUrl": "https://fun.lazying.art/#shu-dao-nan-original-text-dr-draft",
   "status": "experimental-draft",
   "share": {
-    "title": "蜀道难 · 原文重组 DR Draft - Fun Lazying Art",
+    "title": "蜀道难 · The Hard Road to Shu · Archive 01 - Musia",
     "description": "An experimental DiffRhythm draft that reorganizes Li Bai source lines. The lyric track is source-close and ASR-audited, but this is not a final polished ACE render.",
     "url": "https://fun.lazying.art/#shu-dao-nan-original-text-dr-draft",
     "image": "assets/covers/shu-dao-nan-original-text-dr-draft-16x9.png",
@@ -25,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "蜀道难 · 原文重组 DR Draft cover",
+      "label": "蜀道难 · The Hard Road to Shu · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/shu-dao-nan-original-text-dr-draft-16x9.png",
       "mime": "image/png",
@@ -50,7 +50,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/shu-dao-nan-original-text-dr-draft-zh-Hans-dr-20260701.mp3?v=20260701-dr",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -1033,5 +1034,19 @@
     "analysisRun": "data/runs/shu-dao-nan-original-text-dr-hook-95-b-analysis",
     "coverSource": "assets/covers/shu-dao-nan-16x9.png",
     "lyricsPolicy": "source-close correction against ASR/listening; draft items must stay labeled DR Draft"
+  },
+  "displayTitle": "蜀道难 · The Hard Road to Shu · Archive 01",
+  "workId": "shu-dao-nan",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
   }
 }

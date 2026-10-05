@@ -3,11 +3,11 @@
   "version": 1,
   "id": "qiang-jin-jiu-original-poem",
   "kind": "song",
-  "title": "将进酒 · 原诗版",
+  "title": "将进酒 · Bring In the Wine",
   "localizedTitles": {
-    "zh-Hans": "将进酒 · 原诗版",
-    "en": "Bring In the Wine · Original Poem",
-    "ja": "将進酒・原詩版"
+    "zh-Hans": "将进酒",
+    "en": "Bring In the Wine",
+    "ja": "将進酒"
   },
   "artist": "Musia",
   "description": "A new ACE-Step Mandarin song render that treats Li Bai's original 将进酒 poem as the lyric source, with same-audio ASR-corrected timing.",
@@ -15,7 +15,7 @@
   "duration": 186.0,
   "canonicalUrl": "https://fun.lazying.art/#qiang-jin-jiu-original-poem",
   "share": {
-    "title": "将进酒 · 原诗版 - Fun Lazying Art",
+    "title": "将进酒 · Bring In the Wine - Musia",
     "description": "Musia ACE-Step original-poem version of Li Bai's 将进酒.",
     "url": "https://fun.lazying.art/#qiang-jin-jiu-original-poem",
     "image": "assets/covers/qiang-jin-jiu-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "将进酒 原诗版 cover",
+      "label": "将进酒 · Bring In the Wine cover",
       "role": "cover",
       "src": "assets/covers/qiang-jin-jiu-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/qiang-jin-jiu-original-poem-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -1343,5 +1344,10 @@
     "pronunciationGuide": "data/creative_projects/qiang-jin-jiu-original-poem-20260701/source/pronunciation-guide.md",
     "coverSource": "assets/covers/qiang-jin-jiu-16x9.png",
     "publicAudio": "qiang-jin-jiu-original-poem-zh-Hans-ace-20260701.mp3"
+  },
+  "displayTitle": "将进酒 · Bring In the Wine",
+  "workId": "qiang-jin-jiu",
+  "edition": {
+    "status": "selected"
   }
 }

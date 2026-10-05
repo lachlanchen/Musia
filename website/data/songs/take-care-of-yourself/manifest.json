@@ -3,11 +3,11 @@
   "version": 1,
   "id": "take-care-of-yourself",
   "kind": "localized-song",
-  "title": "Take Care of Yourself · SoulX Localization",
+  "title": "照顾好自己 · Take Care of Yourself · Archive 01",
   "localizedTitles": {
-    "en": "Take Care of Yourself · SoulX Localization",
-    "zh-Hans": "照顾好自己 · SoulX 本地化",
-    "yue-Hant": "照顧好自己 · SoulX 本地化"
+    "zh-Hans": "照顾好自己 · Archive 01",
+    "en": "Take Care of Yourself · Archive 01",
+    "ja": "自分を大切に · Archive 01"
   },
   "artist": "Musia",
   "subtitle": "English, Mandarin, and Cantonese vocals about care and inner light",
@@ -16,7 +16,7 @@
   "duration": 58,
   "canonicalUrl": "https://fun.lazying.art/#take-care-of-yourself",
   "share": {
-    "title": "Take Care of Yourself · SoulX Localization - Fun Lazying Art",
+    "title": "照顾好自己 · Take Care of Yourself · Archive 01 - Musia",
     "description": "A hopeful Musia song with English, Mandarin, and Cantonese vocals.",
     "url": "https://fun.lazying.art/#take-care-of-yourself",
     "image": "assets/covers/take-care-of-yourself-16x9.png",
@@ -25,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Take Care of Yourself · SoulX Localization cover",
+      "label": "照顾好自己 · Take Care of Yourself · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/take-care-of-yourself-16x9.png",
       "mime": "image/png",
@@ -43,37 +43,40 @@
     },
     "primaryAudio": {
       "id": "take-care-en",
-      "label": "English vocal",
+      "label": "English",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "en",
       "languageLabel": "English",
       "lyricSetId": "en-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/take-care-of-yourself-en.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "English"
     },
     "alternateAudio": [
       {
         "id": "take-care-zh",
-        "label": "Mandarin vocal",
+        "label": "中文",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "zh-Hans",
         "languageLabel": "中文",
         "lyricSetId": "zh-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/take-care-of-yourself-zh-Hans.mp3",
-        "mime": "audio/mpeg"
+        "mime": "audio/mpeg",
+        "selectorLabel": "中文"
       },
       {
         "id": "take-care-yue",
-        "label": "Cantonese vocal",
+        "label": "粵語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "yue-Hant",
-        "languageLabel": "廣東話",
+        "languageLabel": "粵語",
         "lyricSetId": "yue-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/take-care-of-yourself-yue-Hant.mp3",
-        "mime": "audio/mpeg"
+        "mime": "audio/mpeg",
+        "selectorLabel": "粵語"
       }
     ]
   },
@@ -532,5 +535,19 @@
         "words": []
       }
     ]
+  },
+  "displayTitle": "照顾好自己 · Take Care of Yourself · Archive 01",
+  "workId": "take-care-of-yourself",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
   }
 }

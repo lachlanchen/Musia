@@ -3,12 +3,11 @@
   "version": 1,
   "id": "aya-chan-hikari-ame",
   "kind": "song",
-  "title": "Aya Chan Hikari Ame",
+  "title": "阿芽酱，光之雨 · Aya Chan, Rain of Light",
   "localizedTitles": {
-    "ja": "アヤちゃん 光の雨",
+    "zh-Hans": "阿芽酱，光之雨",
     "en": "Aya Chan, Rain of Light",
-    "zh": "阿芽酱，光之雨",
-    "zh-Hans": "阿芽酱，光之雨"
+    "ja": "アヤちゃん 光の雨"
   },
   "artist": "Musia",
   "subtitle": "Aya Chan song in Japanese, English, and Mandarin",
@@ -17,7 +16,7 @@
   "duration": 68,
   "canonicalUrl": "https://fun.lazying.art/#aya-chan-hikari-ame",
   "share": {
-    "title": "Aya Chan, Rain of Light - Fun Lazying Art",
+    "title": "阿芽酱，光之雨 · Aya Chan, Rain of Light - Musia",
     "description": "A Musia Aya Chan song with Japanese, English, and Mandarin vocals plus synced lyrics.",
     "url": "https://fun.lazying.art/#aya-chan-hikari-ame",
     "image": "assets/covers/aya-chan-hikari-ame-16x9.png",
@@ -26,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Aya Chan Hikari Ame cover",
+      "label": "阿芽酱，光之雨 · Aya Chan, Rain of Light cover",
       "role": "cover",
       "src": "assets/covers/aya-chan-hikari-ame-16x9.png",
       "mime": "image/png",
@@ -44,7 +43,7 @@
     },
     "primaryAudio": {
       "id": "aya-hikari-ame-ja",
-      "label": "Japanese vocal",
+      "label": "日本語",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "ja",
@@ -479,12 +478,13 @@
             "confidence": 0.675
           }
         ]
-      }
+      },
+      "selectorLabel": "日本語"
     },
     "alternateAudio": [
       {
         "id": "aya-hikari-ame-en",
-        "label": "English vocal",
+        "label": "English",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "en",
@@ -891,11 +891,12 @@
               "confidence": 0.943
             }
           ]
-        }
+        },
+        "selectorLabel": "English"
       },
       {
         "id": "aya-hikari-ame-zh-Hans",
-        "label": "Mandarin vocal",
+        "label": "中文",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "zh-Hans",
@@ -1337,7 +1338,8 @@
               "confidence": 0.84
             }
           ]
-        }
+        },
+        "selectorLabel": "中文"
       }
     ]
   },
@@ -1509,5 +1511,10 @@
         "sourceText": "光の雨で踊ろう 朝が来たら小さな勇気"
       }
     ]
+  },
+  "displayTitle": "阿芽酱，光之雨 · Aya Chan, Rain of Light",
+  "workId": "aya-chan-hikari-ame",
+  "edition": {
+    "status": "selected"
   }
 }

@@ -3,13 +3,11 @@
   "version": 1,
   "id": "mars-red-sky-trilingual",
   "kind": "song",
-  "title": "Small Under the Red Sky",
+  "title": "红色天空下 · Small Under the Red Sky",
   "localizedTitles": {
-    "en": "Small Under the Red Sky",
-    "zh": "红色天空下",
     "zh-Hans": "红色天空下",
-    "ja": "赤い空の下で",
-    "yue-Hant": "紅天下好渺小"
+    "en": "Small Under the Red Sky",
+    "ja": "赤い空の下で"
   },
   "artist": "Musia",
   "subtitle": "A Mars desert song about smallness, courage, and the vast universe",
@@ -18,7 +16,7 @@
   "duration": 82,
   "canonicalUrl": "https://fun.lazying.art/#mars-red-sky-trilingual",
   "share": {
-    "title": "Small Under the Red Sky - Fun Lazying Art",
+    "title": "红色天空下 · Small Under the Red Sky - Musia",
     "description": "A cinematic Musia Mars desert song: lonely, vast, sad, and encouraging.",
     "url": "https://fun.lazying.art/#mars-red-sky-trilingual",
     "image": "assets/covers/mars-red-sky-16x9.png",
@@ -27,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Small Under the Red Sky cover",
+      "label": "红色天空下 · Small Under the Red Sky cover",
       "role": "cover",
       "src": "assets/covers/mars-red-sky-16x9.png",
       "mime": "image/png",
@@ -45,7 +43,7 @@
     },
     "primaryAudio": {
       "id": "mars-en",
-      "label": "English full song",
+      "label": "English",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "en",
@@ -167,12 +165,13 @@
             "degree": ""
           }
         ]
-      }
+      },
+      "selectorLabel": "English"
     },
     "alternateAudio": [
       {
         "id": "mars-zh",
-        "label": "Mandarin full song",
+        "label": "中文",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "zh-Hans",
@@ -372,11 +371,12 @@
               "degree": ""
             }
           ]
-        }
+        },
+        "selectorLabel": "中文"
       },
       {
         "id": "mars-ja",
-        "label": "Japanese full song",
+        "label": "日本語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "ja",
@@ -684,19 +684,21 @@
               "degree": ""
             }
           ]
-        }
+        },
+        "selectorLabel": "日本語"
       },
       {
         "id": "mars-yue",
-        "label": "Cantonese vocal",
+        "label": "粵語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "yue-Hant",
-        "languageLabel": "廣東話",
+        "languageLabel": "粵語",
         "lyricSetId": "yue-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/mars-red-sky-yue-Hant.mp3",
         "mime": "audio/mpeg",
-        "guide": "English vocal guide"
+        "guide": "English vocal guide",
+        "selectorLabel": "粵語"
       }
     ]
   },
@@ -1053,5 +1055,10 @@
         "end": 72.73
       }
     ]
+  },
+  "displayTitle": "红色天空下 · Small Under the Red Sky",
+  "workId": "mars-red-sky",
+  "edition": {
+    "status": "selected"
   }
 }

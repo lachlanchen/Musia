@@ -3,11 +3,11 @@
   "version": 1,
   "id": "luoshui-zhaoying-preview",
   "kind": "song",
-  "title": "洛水照影 · Preview",
+  "title": "洛水照影 · Reflections on the Luoshui",
   "localizedTitles": {
-    "zh-Hans": "洛水照影 · 试听",
-    "en": "Reflections on the Luoshui · Preview",
-    "ja": "洛水の面影・プレビュー"
+    "zh-Hans": "洛水照影",
+    "en": "Reflections on the Luoshui",
+    "ja": "洛水の面影"
   },
   "artist": "Musia",
   "description": "An unlisted two-candidate listening preview of an original cinematic Mandarin Luoshui ballad.",
@@ -22,7 +22,7 @@
     "note": "Direct-link listening candidate; excluded from the default catalog and playback queue."
   },
   "share": {
-    "title": "洛水照影 · Preview - Fun Lazying Art",
+    "title": "洛水照影 · Reflections on the Luoshui - Musia",
     "description": "Compare the Music First and Lyrics First listening candidates for Musia's original Luoshui ballad.",
     "url": "https://fun.lazying.art/?preview=1#luoshui-zhaoying-preview",
     "image": "assets/covers/luoshui-zhaoying-preview-16x9.png",
@@ -31,7 +31,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "洛水照影 preview cover",
+      "label": "洛水照影 · Reflections on the Luoshui cover",
       "role": "cover",
       "src": "assets/covers/luoshui-zhaoying-preview-16x9.png",
       "mime": "image/png",
@@ -3254,5 +3254,10 @@
       "music-first": "luoshui-zhaoying-preview-music-first-seed829213-20260729.mp3",
       "lyric-first": "luoshui-zhaoying-preview-lyric-first-seed812401-20260729.mp3"
     }
+  },
+  "displayTitle": "洛水照影 · Reflections on the Luoshui",
+  "workId": "luoshui-zhaoying",
+  "edition": {
+    "status": "preview"
   }
 }

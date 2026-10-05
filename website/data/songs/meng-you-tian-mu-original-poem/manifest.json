@@ -3,11 +3,11 @@
   "version": 1,
   "id": "meng-you-tian-mu-original-poem",
   "kind": "song",
-  "title": "梦游天姥吟留别 · 原诗版",
+  "title": "梦游天姥吟留别 · Dreaming of Tianmu",
   "localizedTitles": {
-    "zh-Hans": "梦游天姥吟留别 · 原诗版",
-    "en": "Dreaming of Tianmu · Original Poem",
-    "ja": "夢遊天姥吟留別・原詩版"
+    "zh-Hans": "梦游天姥吟留别",
+    "en": "Dreaming of Tianmu",
+    "ja": "夢遊天姥吟留別"
   },
   "artist": "Musia",
   "description": "A Mandarin ACE-Step original-poem render using Li Bai's 梦游天姥吟留别 as the lyric source, with large-v3 ASR-corrected timing.",
@@ -15,7 +15,7 @@
   "duration": 296.0,
   "canonicalUrl": "https://fun.lazying.art/#meng-you-tian-mu-original-poem",
   "share": {
-    "title": "梦游天姥吟留别 · 原诗版 - Fun Lazying Art",
+    "title": "梦游天姥吟留别 · Dreaming of Tianmu - Musia",
     "description": "Musia ACE-Step original-poem version of Li Bai's 梦游天姥吟留别.",
     "url": "https://fun.lazying.art/#meng-you-tian-mu-original-poem",
     "image": "assets/covers/meng-you-tian-mu-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "梦游天姥吟留别 原诗版 cover",
+      "label": "梦游天姥吟留别 · Dreaming of Tianmu cover",
       "role": "cover",
       "src": "assets/covers/meng-you-tian-mu-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/meng-you-tian-mu-original-poem-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -2447,5 +2448,10 @@
     "pronunciationGuide": "data/creative_projects/meng-you-tian-mu-original-poem-20260701/source/pronunciation-guide.md",
     "coverSource": "assets/covers/meng-you-tian-mu-16x9.png",
     "publicAudio": "meng-you-tian-mu-original-poem-zh-Hans-ace-20260701.mp3"
+  },
+  "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu",
+  "workId": "meng-you-tian-mu",
+  "edition": {
+    "status": "selected"
   }
 }

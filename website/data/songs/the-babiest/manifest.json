@@ -3,10 +3,10 @@
   "version": 1,
   "id": "the-babiest",
   "kind": "song",
-  "title": "The Babiest",
+  "title": "最宝宝的宝宝 · The Babiest",
   "localizedTitles": {
-    "en": "The Babiest",
     "zh-Hans": "最宝宝的宝宝",
+    "en": "The Babiest",
     "ja": "ザ・ベイビエスト"
   },
   "artist": "Musia",
@@ -15,7 +15,7 @@
   "duration": 72.0,
   "canonicalUrl": "https://fun.lazying.art/#the-babiest",
   "share": {
-    "title": "The Babiest - Fun Lazying Art",
+    "title": "最宝宝的宝宝 · The Babiest - Musia",
     "description": "A Musia mixed-language bedroom-pop song with corrected synced lyrics, translations, pinyin, furigana, chords, and stems.",
     "url": "https://fun.lazying.art/#the-babiest",
     "image": "assets/covers/the-babiest-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "The Babiest cover",
+      "label": "最宝宝的宝宝 · The Babiest cover",
       "role": "cover",
       "src": "assets/covers/the-babiest-16x9.png",
       "mime": "image/png",
@@ -42,14 +42,15 @@
     },
     "primaryAudio": {
       "id": "the-babiest-mixed",
-      "label": "Mixed",
+      "label": "English · 中文 · 日本語",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "mul",
-      "languageLabel": "Mixed",
+      "languageLabel": "English · 中文 · 日本語",
       "lyricSetId": "mixed-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/the-babiest-mixed-ace-xl-turbo-seed770711-20260707.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "English · 中文 · 日本語"
     },
     "alternateAudio": []
   },
@@ -618,5 +619,10 @@
       "label": "Stems",
       "path": "data/runs/the-babiest-20260707-seed770711-analysis/stems"
     }
-  ]
+  ],
+  "displayTitle": "最宝宝的宝宝 · The Babiest",
+  "workId": "the-babiest",
+  "edition": {
+    "status": "selected"
+  }
 }

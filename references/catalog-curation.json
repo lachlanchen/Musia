@@ -1,0 +1,417 @@
+{
+  "schema": "musia.catalog.curation.v1",
+  "version": 1,
+  "groups": [
+    {
+      "id": "ban-qu-chang-an",
+      "titles": {
+        "zh-Hans": "半曲长安",
+        "en": "The Melody I Left in Chang'an",
+        "ja": "長安に残した調べ"
+      },
+      "selected": "ban-qu-chang-an-ace-changfeng",
+      "archives": [
+        "ban-qu-chang-an"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "xing-bian-shi-jian",
+      "titles": {
+        "zh-Hans": "行遍世间",
+        "en": "Every Road in the World",
+        "ja": "世界のすべての道"
+      },
+      "selected": "xing-bian-shi-jian",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "luoshenfu",
+      "titles": {
+        "zh-Hans": "洛神赋",
+        "en": "Ode to the Goddess of the Luo",
+        "ja": "洛神賦"
+      },
+      "selected": "luoshenfu-original-excerpt-preview",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "luoshui-zhaoying",
+      "titles": {
+        "zh-Hans": "洛水照影",
+        "en": "Reflections on the Luoshui",
+        "ja": "洛水の面影"
+      },
+      "selected": null,
+      "archives": [],
+      "previews": [
+        "luoshui-zhaoying-preview"
+      ],
+      "companions": []
+    },
+    {
+      "id": "best-am-i",
+      "titles": {
+        "zh-Hans": "我是天下第一等",
+        "en": "Best Am I",
+        "ja": "Best Am I"
+      },
+      "selected": "best-am-i",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "one-boat-moonlight",
+      "titles": {
+        "zh-Hans": "一船明月一灯影",
+        "en": "One Boat of Moonlight",
+        "ja": "一船の明月、一つの灯影"
+      },
+      "selected": "one-boat-moonlight-one-lamp",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "gong-bai-tou",
+      "titles": {
+        "zh-Hans": "共白头",
+        "en": "Snow We Share",
+        "ja": "同じ雪の下で"
+      },
+      "selected": "gong-bai-tou-snow-we-share",
+      "archives": [
+        "gong-bai-tou-snow-we-share-native"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "gong-yin-chang-jiang-shui",
+      "titles": {
+        "zh-Hans": "共饮长江水",
+        "en": "Same River",
+        "ja": "同じ川の水"
+      },
+      "selected": "gong-yin-chang-jiang-shui-mixed",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "wu-xia-yue",
+      "titles": {
+        "zh-Hans": "巫峡月",
+        "en": "Moon Over Wu Gorge",
+        "ja": "巫峡の月"
+      },
+      "selected": "wu-xia-yue-mixed",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "ku-chao-qing-heng",
+      "titles": {
+        "zh-Hans": "哭晁卿衡",
+        "en": "Moon Over the Blue Sea",
+        "ja": "碧海の月"
+      },
+      "selected": "ku-chao-qing-heng-mixed",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "the-babiest",
+      "titles": {
+        "zh-Hans": "最宝宝的宝宝",
+        "en": "The Babiest",
+        "ja": "ザ・ベイビエスト"
+      },
+      "selected": "the-babiest",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "wei-ji-fen",
+      "titles": {
+        "zh-Hans": "微积分",
+        "en": "Calculus of Us",
+        "ja": "微積分の恋"
+      },
+      "selected": "wei-ji-fen",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "sha-sha",
+      "titles": {
+        "zh-Hans": "沙沙",
+        "en": "Sha Sha",
+        "ja": "さらさら"
+      },
+      "selected": "sha-sha",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "one-sky-three-lights",
+      "titles": {
+        "zh-Hans": "一片天空，三道光",
+        "en": "One Sky, Three Lights",
+        "ja": "ひとつの空、三つの光"
+      },
+      "selected": "one-sky-three-lights-mixed",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "animal-no-di-liu-gan",
+      "titles": {
+        "zh-Hans": "动物的第六感",
+        "en": "Animal's Sixth Sense",
+        "ja": "アニマルの第六感"
+      },
+      "selected": "animal-no-di-liu-gan",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "liang-zhou-ci",
+      "titles": {
+        "zh-Hans": "凉州词",
+        "en": "Songs of Liangzhou",
+        "ja": "涼州詞"
+      },
+      "selected": "liang-zhou-ci-double-original-poem",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "chi-le-ge",
+      "titles": {
+        "zh-Hans": "敕勒歌",
+        "en": "Song of the Chile Plains",
+        "ja": "敕勒歌"
+      },
+      "selected": "chi-le-ge-original-poem",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "kagirohi-to-hana",
+      "titles": {
+        "zh-Hans": "晨曦与花",
+        "en": "Dawnlight and Blossoms",
+        "ja": "かぎろひと花"
+      },
+      "selected": "kagirohi-to-hana",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "yue-ren-ge",
+      "titles": {
+        "zh-Hans": "越人歌",
+        "en": "Song of the Yue Boatman",
+        "ja": "越人歌"
+      },
+      "selected": "yue-ren-ge-original-poem",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "xia-ke-xing",
+      "titles": {
+        "zh-Hans": "侠客行",
+        "en": "Knight-Errant Ballad",
+        "ja": "侠客行"
+      },
+      "selected": "xia-ke-xing-original-poem",
+      "archives": [
+        "xia-ke-xing"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "yun-hai-zhi-lian",
+      "titles": {
+        "zh-Hans": "云海之恋",
+        "en": "Cloud Sea Love",
+        "ja": "雲海の恋"
+      },
+      "selected": "yun-hai-zhi-lian-haifeng-duange",
+      "archives": [
+        "yun-hai-zhi-lian-legacy",
+        "yun-hai-zhi-lian-dr-short",
+        "yun-hai-zhi-lian"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "star-bucks",
+      "titles": {
+        "zh-Hans": "星鹿之海",
+        "en": "Star Bucks",
+        "ja": "星の鹿"
+      },
+      "selected": "star-bucks",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "meng-you-tian-mu",
+      "titles": {
+        "zh-Hans": "梦游天姥吟留别",
+        "en": "Dreaming of Tianmu",
+        "ja": "夢遊天姥吟留別"
+      },
+      "selected": "meng-you-tian-mu-original-poem",
+      "archives": [
+        "meng-you-tian-mu",
+        "meng-you-tian-mu-yin-liu-bie",
+        "meng-you-tian-mu-kai-xin-yan-original-lines"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "shu-dao-nan",
+      "titles": {
+        "zh-Hans": "蜀道难",
+        "en": "The Hard Road to Shu",
+        "ja": "蜀道難"
+      },
+      "selected": "shu-dao-nan",
+      "archives": [
+        "shu-dao-nan-original-text-dr-draft"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "qing-tian-lu",
+      "titles": {
+        "zh-Hans": "晴天路",
+        "en": "Road to Clear Sky",
+        "ja": "晴天への道"
+      },
+      "selected": "shu-dao-nan-qing-tian-lu",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "xing-lu-nan",
+      "titles": {
+        "zh-Hans": "行路难",
+        "en": "Hard Is the Road",
+        "ja": "行路難"
+      },
+      "selected": null,
+      "archives": [
+        "xing-lu-nan-original-poem-draft"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "qiang-jin-jiu",
+      "titles": {
+        "zh-Hans": "将进酒",
+        "en": "Bring In the Wine",
+        "ja": "将進酒"
+      },
+      "selected": "qiang-jin-jiu-original-poem",
+      "archives": [
+        "qiang-jin-jiu",
+        "qiang-jin-jiu-normal-song"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "xiao-xiao-zhu",
+      "titles": {
+        "zh-Hans": "你是一只猪",
+        "en": "You Little Piggy",
+        "ja": "きみはこぶた"
+      },
+      "selected": "xiao-xiao-zhu-trilingual",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "aya-chan-hikari-ame",
+      "titles": {
+        "zh-Hans": "阿芽酱，光之雨",
+        "en": "Aya Chan, Rain of Light",
+        "ja": "アヤちゃん 光の雨"
+      },
+      "selected": "aya-chan-hikari-ame",
+      "archives": [],
+      "previews": [],
+      "companions": [
+        "aya-chan-hikari-ame-full-mv"
+      ]
+    },
+    {
+      "id": "take-care-of-yourself",
+      "titles": {
+        "zh-Hans": "照顾好自己",
+        "en": "Take Care of Yourself",
+        "ja": "自分を大切に"
+      },
+      "selected": "take-care-of-yourself-hope-version",
+      "archives": [
+        "take-care-of-yourself"
+      ],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "mars-red-sky",
+      "titles": {
+        "zh-Hans": "红色天空下",
+        "en": "Small Under the Red Sky",
+        "ja": "赤い空の下で"
+      },
+      "selected": "mars-red-sky-trilingual",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    },
+    {
+      "id": "rain-day",
+      "titles": {
+        "zh-Hans": "雨夜",
+        "en": "Rain Day",
+        "ja": "雨の夜"
+      },
+      "selected": "rain-day-full-song-trilingual",
+      "archives": [],
+      "previews": [],
+      "companions": []
+    }
+  ]
+}

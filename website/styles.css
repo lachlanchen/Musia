@@ -3171,8 +3171,17 @@ body.capture-mode.capture-portrait.capture-full-lyrics .full-row.instrumental-ro
     padding: 12px;
   }
   .site-header {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header-actions {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  body:not(.capture-mode) .title-row h1 {
+    font-size: 24px;
+    line-height: 1.22;
+    overflow-wrap: anywhere;
   }
   .brand small {
     display: none;

@@ -101,24 +101,25 @@ Do not duplicate ruby by also putting pronunciation into the visible native text
 - set `assets.cover`, `assets.poster`, and `share.image`;
 - record the cover prompt/source in `manifest.provenance` or the song production note.
 
-Apply the public version naming rule before publishing:
+Catalog naming (owner update, October 5, 2026) supersedes model suffixes:
+use `Chinese title · English title`, one selected recording per work.
+Hide alternatives as `Chinese title · English title · Archive 01`; keep IDs,
+audio URLs and old direct links. Never put ACE, MiniMax, DR, SoulX or V2 in
+listener-facing names. Keep multilingual vocals and companion MVs; same-language
+alternate takes are archive-only. Unlisted previews are not silently promoted.
 
-- standard selected ACE/ACE-Step version: pure song name, no suffix;
-- older ACE/ACE-Step candidate: `ACE Legacy`;
-- DiffRhythm variants: visible `DR` suffix, such as `DR Short` or
-  `DR Full Lyrics`;
-- lower-quality localization, SVC, or model-transfer routes: visible method
-  suffix, such as `SoulX Localization`;
-- only the standard selected ACE version should carry
-  `manifest.playback.defaultMode: "single"` when the user wants default
-  looping. Other variants should omit the playback hint unless intentionally
-  requested.
-
-For the current Fun catalog naming pass, rerun:
+Read Musia's `references/catalog-presentation-policy.md` and update its reviewed
+`references/catalog-curation.json` when adding a song. Apply/check with:
 
 ```bash
-PYTHONNOUSERSITE=1 conda run -n musia python scripts/apply_fun_version_naming.py
+PYTHONNOUSERSITE=1 conda run -n musia python scripts/curate_fun_catalog.py --apply
+PYTHONNOUSERSITE=1 conda run -n musia python scripts/curate_fun_catalog.py
 ```
+
+For naming-only work, preserve lyric/timing/music data instead of regenerating
+it. Deploy both Fun Pages and the sanitized Musia learning catalog. Installed
+apps fetch these names; a catalog-only change does not require a store build.
+Keep existing playback preferences unless separately requested.
 
 7. Validate and audit:
 

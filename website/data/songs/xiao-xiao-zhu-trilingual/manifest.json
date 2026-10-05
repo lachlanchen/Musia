@@ -3,7 +3,7 @@
   "version": 1,
   "id": "xiao-xiao-zhu-trilingual",
   "kind": "song",
-  "title": "你是一只猪",
+  "title": "你是一只猪 · You Little Piggy",
   "localizedTitles": {
     "zh-Hans": "你是一只猪",
     "en": "You Little Piggy",
@@ -16,7 +16,7 @@
   "duration": 92.0,
   "canonicalUrl": "https://fun.lazying.art/#xiao-xiao-zhu-trilingual",
   "share": {
-    "title": "你是一只猪 / You Little Piggy - Fun Lazying Art",
+    "title": "你是一只猪 · You Little Piggy - Musia",
     "description": "A cute Musia comfort song with Mandarin, English, and Japanese vocals.",
     "url": "https://fun.lazying.art/#xiao-xiao-zhu-trilingual",
     "image": "assets/covers/xiao-xiao-zhu-16x9.png",
@@ -25,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "你是一只猪 cover",
+      "label": "你是一只猪 · You Little Piggy cover",
       "role": "cover",
       "src": "assets/covers/xiao-xiao-zhu-16x9.png",
       "mime": "image/png",
@@ -43,11 +43,11 @@
     },
     "primaryAudio": {
       "id": "xiao-xiao-zhu-zh",
-      "label": "Mandarin vocal",
+      "label": "中文",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "zh-Hans",
-      "languageLabel": "Mandarin Chinese",
+      "languageLabel": "中文",
       "languageNativeLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/xiao-xiao-zhu-zh-Hans.mp3",
@@ -891,12 +891,13 @@
             "confidence": 0.715
           }
         ]
-      }
+      },
+      "selectorLabel": "中文"
     },
     "alternateAudio": [
       {
         "id": "xiao-xiao-zhu-en",
-        "label": "English vocal",
+        "label": "English",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "en",
@@ -1646,15 +1647,16 @@
               "confidence": 0.7
             }
           ]
-        }
+        },
+        "selectorLabel": "English"
       },
       {
         "id": "xiao-xiao-zhu-ja",
-        "label": "Japanese vocal",
+        "label": "日本語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "ja",
-        "languageLabel": "Japanese",
+        "languageLabel": "日本語",
         "languageNativeLabel": "日本語",
         "lyricSetId": "ja-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/xiao-xiao-zhu-ja.mp3",
@@ -2050,7 +2052,8 @@
               "confidence": 0.62
             }
           ]
-        }
+        },
+        "selectorLabel": "日本語"
       }
     ]
   },
@@ -3174,5 +3177,10 @@
       "label": "Idea and lyrics",
       "href": "https://github.com/lachlanchen/Musia/tree/main/ideas-and-inspirations/xiao-xiao-zhu"
     }
-  ]
+  ],
+  "displayTitle": "你是一只猪 · You Little Piggy",
+  "workId": "xiao-xiao-zhu",
+  "edition": {
+    "status": "selected"
+  }
 }

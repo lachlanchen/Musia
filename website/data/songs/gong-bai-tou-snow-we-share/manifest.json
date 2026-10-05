@@ -3,11 +3,11 @@
   "version": 1,
   "id": "gong-bai-tou-snow-we-share",
   "kind": "song",
-  "title": "共白头 · Snow We Share · 雪中回声",
+  "title": "共白头 · Snow We Share",
   "localizedTitles": {
-    "zh-Hans": "共白头 · 雪中回声",
-    "en": "Snow We Share · Snow Echo",
-    "ja": "同じ雪の下で · 雪のこだま"
+    "zh-Hans": "共白头",
+    "en": "Snow We Share",
+    "ja": "同じ雪の下で"
   },
   "artist": "Musia",
   "description": "A mixed English, Japanese romaji, and Mandarin pinyin snow-memory ballad about shared snow, old longing, and the wish to grow white-haired together.",
@@ -15,7 +15,7 @@
   "duration": 82.0,
   "canonicalUrl": "https://fun.lazying.art/#gong-bai-tou-snow-we-share",
   "share": {
-    "title": "共白头 · Snow We Share · 雪中回声 - Fun Lazying Art",
+    "title": "共白头 · Snow We Share - Musia",
     "description": "A Musia mixed-language snow-memory ballad with synced lyrics, translations, pinyin, furigana, chords, and stems.",
     "url": "https://fun.lazying.art/#gong-bai-tou-snow-we-share",
     "image": "assets/covers/gong-bai-tou-snow-we-share-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Snow We Share cover",
+      "label": "共白头 · Snow We Share cover",
       "role": "cover",
       "src": "assets/covers/gong-bai-tou-snow-we-share-16x9.png",
       "mime": "image/png",
@@ -42,14 +42,15 @@
     },
     "primaryAudio": {
       "id": "gong-bai-tou-snow-we-share",
-      "label": "Mixed",
+      "label": "English · 中文 · 日本語",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "mul",
-      "languageLabel": "Mixed",
+      "languageLabel": "English · 中文 · 日本語",
       "lyricSetId": "mixed-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/gong-bai-tou-snow-we-share-ace-xl-turbo-seed790972-20260709.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "English · 中文 · 日本語"
     },
     "alternateAudio": []
   },
@@ -534,5 +535,10 @@
       "label": "Stems",
       "path": "data/runs/gong-bai-tou-snow-we-share-20260709-analysis/stems"
     }
-  ]
+  ],
+  "displayTitle": "共白头 · Snow We Share",
+  "workId": "gong-bai-tou",
+  "edition": {
+    "status": "selected"
+  }
 }

@@ -3,11 +3,11 @@
   "version": 1,
   "id": "liang-zhou-ci-double-original-poem",
   "kind": "song",
-  "title": "凉州词 · 双阕原诗版",
+  "title": "凉州词 · Songs of Liangzhou",
   "localizedTitles": {
-    "zh-Hans": "凉州词 · 双阕原诗版",
-    "en": "Liangzhou Ci · Two Original Poems",
-    "ja": "涼州詞・二首原詩版"
+    "zh-Hans": "凉州词",
+    "en": "Songs of Liangzhou",
+    "ja": "涼州詞"
   },
   "artist": "Musia",
   "description": "A frontier-ballad ACE-Step render combining the original Liangzhou Ci lines by Wang Zhihuan and Wang Han, with ASR-audited trilingual lyrics.",
@@ -15,7 +15,7 @@
   "duration": 96.0,
   "canonicalUrl": "https://fun.lazying.art/#liang-zhou-ci-double-original-poem",
   "share": {
-    "title": "凉州词 · 双阕原诗版 - Fun Lazying Art",
+    "title": "凉州词 · Songs of Liangzhou - Musia",
     "description": "Musia ACE frontier ballad from two original Liangzhou Ci poems.",
     "url": "https://fun.lazying.art/#liang-zhou-ci-double-original-poem",
     "image": "assets/covers/liang-zhou-ci-double-original-poem-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "凉州词 双阕原诗版 cover",
+      "label": "凉州词 · Songs of Liangzhou cover",
       "role": "cover",
       "src": "assets/covers/liang-zhou-ci-double-original-poem-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/liang-zhou-ci-double-original-poem-zh-Hans-ace-xl-turbo-seed747323-20260704.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -754,5 +755,10 @@
     "lyricCorrection": "Active Mandarin text restores original Liangzhou Ci lines where the selected vocal is sound-close. The first early hook omits 葡萄美酒夜光杯 because separated-vocal ASR did not support a clear line there. Translations follow the corrected active-vocal line structure.",
     "coverSource": "No-text 16:9 AgInTi/image-generation frontier landscape cover, visually selected for Liangzhou Ci before publication.",
     "publicAudio": "liang-zhou-ci-double-original-poem-zh-Hans-ace-xl-turbo-seed747323-20260704.mp3"
+  },
+  "displayTitle": "凉州词 · Songs of Liangzhou",
+  "workId": "liang-zhou-ci",
+  "edition": {
+    "status": "selected"
   }
 }

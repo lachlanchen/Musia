@@ -3,11 +3,11 @@
   "version": 1,
   "id": "meng-you-tian-mu-yin-liu-bie",
   "kind": "song",
-  "title": "梦游天姥吟留别 · 青云梯改编版",
+  "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 02",
   "localizedTitles": {
-    "zh-Hans": "梦游天姥吟留别 · 青云梯改编版",
-    "en": "Dreaming of Tianmu · Blue Cloud Ladder Adaptation",
-    "ja": "夢遊天姥吟留別・青雲梯改編版"
+    "zh-Hans": "梦游天姥吟留别 · Archive 02",
+    "en": "Dreaming of Tianmu · Archive 02",
+    "ja": "夢遊天姥吟留別 · Archive 02"
   },
   "artist": "Musia",
   "description": "A hook-focused Mandarin ACE-Step art-pop adaptation inspired by Li Bai's dream journey to Mount Tianmu. This is the Qingyun Ladder adaptation, not the original-poem version.",
@@ -15,7 +15,7 @@
   "duration": 82.0,
   "canonicalUrl": "https://fun.lazying.art/#meng-you-tian-mu-yin-liu-bie",
   "share": {
-    "title": "梦游天姥吟留别 · 青云梯改编版 - Fun Lazying Art",
+    "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 02 - Musia",
     "description": "Musia hook-focused Mandarin adaptation inspired by Li Bai's dream journey to Tianmu.",
     "url": "https://fun.lazying.art/#meng-you-tian-mu-yin-liu-bie",
     "image": "assets/covers/meng-you-tian-mu-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "梦游天姥吟留别 青云梯改编版 cover",
+      "label": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 02 cover",
       "role": "cover",
       "src": "assets/covers/meng-you-tian-mu-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/meng-you-tian-mu-yin-liu-bie-zh-Hans-ace-xl-turbo-hook-seed741402-20260706.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -662,5 +663,19 @@
     "beats": "data/runs/meng-you-tian-mu-yin-liu-bie-selected-hook-741402-analysis/analysis/beats.csv",
     "chords": "data/runs/meng-you-tian-mu-yin-liu-bie-selected-hook-741402-analysis/analysis/chords.csv",
     "asr": "data/runs/meng-you-tian-mu-yin-liu-bie-selected-hook-741402-analysis/analysis/lyrics.json"
+  },
+  "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 02",
+  "workId": "meng-you-tian-mu",
+  "edition": {
+    "status": "archive",
+    "number": 2
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 02",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
   }
 }

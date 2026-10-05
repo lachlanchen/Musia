@@ -3,7 +3,7 @@
   "version": 1,
   "id": "shu-dao-nan",
   "kind": "song",
-  "title": "蜀道难",
+  "title": "蜀道难 · The Hard Road to Shu",
   "localizedTitles": {
     "zh-Hans": "蜀道难",
     "en": "The Hard Road to Shu",
@@ -15,7 +15,7 @@
   "duration": 100.0,
   "canonicalUrl": "https://fun.lazying.art/#shu-dao-nan",
   "share": {
-    "title": "蜀道难 - Fun Lazying Art",
+    "title": "蜀道难 · The Hard Road to Shu - Musia",
     "description": "A Musia Mandarin adaptation of Li Bai's 蜀道难 with corrected trilingual lyrics.",
     "url": "https://fun.lazying.art/#shu-dao-nan",
     "image": "assets/covers/shu-dao-nan-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "蜀道难 cover",
+      "label": "蜀道难 · The Hard Road to Shu cover",
       "role": "cover",
       "src": "assets/covers/shu-dao-nan-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/shu-dao-nan-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -890,5 +891,10 @@
     "coverSource": "Generated 16:9 cover with Codex image generation; original saved under ~/.codex/generated_images.",
     "publicAudio": "shu-dao-nan-zh-Hans-ace-20260701.mp3"
   },
-  "artifacts": []
+  "artifacts": [],
+  "displayTitle": "蜀道难 · The Hard Road to Shu",
+  "workId": "shu-dao-nan",
+  "edition": {
+    "status": "selected"
+  }
 }

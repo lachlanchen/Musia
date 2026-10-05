@@ -3,11 +3,11 @@
   "version": 1,
   "id": "yun-hai-zhi-lian-legacy",
   "kind": "song",
-  "title": "云海之恋 · ACE Legacy",
+  "title": "云海之恋 · Cloud Sea Love · Archive 01",
   "localizedTitles": {
-    "zh-Hans": "云海之恋 · ACE Legacy",
-    "en": "Cloud Sea Love · ACE Legacy",
-    "ja": "雲海の恋・ACE Legacy"
+    "zh-Hans": "云海之恋 · Archive 01",
+    "en": "Cloud Sea Love · Archive 01",
+    "ja": "雲海の恋 · Archive 01"
   },
   "artist": "Musia",
   "description": "An earlier ACE-Step ocean-and-sky love ballad candidate with Mandarin, English, and Japanese vocals.",
@@ -15,7 +15,7 @@
   "duration": 64.0,
   "canonicalUrl": "https://fun.lazying.art/#yun-hai-zhi-lian-legacy",
   "share": {
-    "title": "云海之恋 · ACE Legacy - Fun Lazying Art",
+    "title": "云海之恋 · Cloud Sea Love · Archive 01 - Musia",
     "description": "A Musia ocean-and-sky love ballad with corrected multilingual lyric sets.",
     "url": "https://fun.lazying.art/#yun-hai-zhi-lian-legacy",
     "image": "assets/covers/yun-hai-zhi-lian-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "云海之恋 · ACE Legacy cover",
+      "label": "云海之恋 · Cloud Sea Love · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/yun-hai-zhi-lian-16x9.png",
       "mime": "image/png",
@@ -42,37 +42,40 @@
     },
     "primaryAudio": {
       "id": "yun-hai-legacy-zh",
-      "label": "Mandarin vocal - Legacy",
+      "label": "中文",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "zh-Hans",
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-legacy-zh-Hans.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": [
       {
         "id": "yun-hai-legacy-en",
-        "label": "English vocal - Legacy",
+        "label": "English",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "en",
         "languageLabel": "English",
         "lyricSetId": "en-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-legacy-en.mp3",
-        "mime": "audio/mpeg"
+        "mime": "audio/mpeg",
+        "selectorLabel": "English"
       },
       {
         "id": "yun-hai-legacy-ja",
-        "label": "Japanese vocal - Legacy",
+        "label": "日本語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "ja",
         "languageLabel": "日本語",
         "lyricSetId": "ja-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-legacy-ja.mp3",
-        "mime": "audio/mpeg"
+        "mime": "audio/mpeg",
+        "selectorLabel": "日本語"
       }
     ]
   },
@@ -532,5 +535,19 @@
     },
     "legacyOf": "yun-hai-zhi-lian"
   },
-  "artifacts": []
+  "artifacts": [],
+  "displayTitle": "云海之恋 · Cloud Sea Love · Archive 01",
+  "workId": "yun-hai-zhi-lian",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
+  }
 }

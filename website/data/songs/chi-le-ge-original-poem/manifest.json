@@ -3,11 +3,11 @@
   "version": 1,
   "id": "chi-le-ge-original-poem",
   "kind": "song",
-  "title": "敕勒歌 · 原文版",
+  "title": "敕勒歌 · Song of the Chile Plains",
   "localizedTitles": {
-    "zh-Hans": "敕勒歌 · 原文版",
-    "en": "Chile Song · Original Poem Version",
-    "ja": "敕勒歌・原文版"
+    "zh-Hans": "敕勒歌",
+    "en": "Song of the Chile Plains",
+    "ja": "敕勒歌"
   },
   "artist": "Musia",
   "description": "A northern grassland folk-song render of 敕勒歌 using only original poem lines with repetition and ASR-corrected timing.",
@@ -15,7 +15,7 @@
   "duration": 72,
   "canonicalUrl": "https://fun.lazying.art/#chi-le-ge-original-poem",
   "share": {
-    "title": "敕勒歌 · 原文版 - Fun Lazying Art",
+    "title": "敕勒歌 · Song of the Chile Plains - Musia",
     "description": "Musia ACE-Step grassland folk render from the original 敕勒歌 lines.",
     "url": "https://fun.lazying.art/#chi-le-ge-original-poem",
     "image": "assets/covers/chi-le-ge-original-poem-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "敕勒歌 grassland cover",
+      "label": "敕勒歌 · Song of the Chile Plains cover",
       "role": "cover",
       "src": "assets/covers/chi-le-ge-original-poem-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/chi-le-ge-original-poem-zh-Hans-ace-xl-turbo-seed748143-20260706.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -630,5 +631,10 @@
       "source": "Generated no-text 16:9 grassland cover via image generation; cropped to 1600x900."
     },
     "publicAudio": "chi-le-ge-original-poem-zh-Hans-ace-xl-turbo-seed748143-20260706.mp3"
+  },
+  "displayTitle": "敕勒歌 · Song of the Chile Plains",
+  "workId": "chi-le-ge",
+  "edition": {
+    "status": "selected"
   }
 }

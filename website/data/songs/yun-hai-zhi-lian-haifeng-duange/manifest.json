@@ -3,7 +3,7 @@
   "version": 1,
   "id": "yun-hai-zhi-lian-haifeng-duange",
   "kind": "song",
-  "title": "云海之恋",
+  "title": "云海之恋 · Cloud Sea Love",
   "localizedTitles": {
     "zh-Hans": "云海之恋",
     "en": "Cloud Sea Love",
@@ -15,7 +15,7 @@
   "duration": 90.0,
   "canonicalUrl": "https://fun.lazying.art/#yun-hai-zhi-lian-haifeng-duange",
   "share": {
-    "title": "云海之恋 - Fun Lazying Art",
+    "title": "云海之恋 · Cloud Sea Love - Musia",
     "description": "A Musia ACE-Step Mandarin cloud-sea love ballad with corrected trilingual lyrics.",
     "url": "https://fun.lazying.art/#yun-hai-zhi-lian-haifeng-duange",
     "image": "assets/covers/yun-hai-zhi-lian-haifeng-duange-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "云海之恋 cover",
+      "label": "云海之恋 · Cloud Sea Love cover",
       "role": "cover",
       "src": "assets/covers/yun-hai-zhi-lian-haifeng-duange-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-haifeng-duange-zh-Hans-ace-20260630.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -478,5 +479,10 @@
   "playback": {
     "defaultMode": "single",
     "reason": "Standard ACE-selected version should loop by default for listening and recording."
+  },
+  "displayTitle": "云海之恋 · Cloud Sea Love",
+  "workId": "yun-hai-zhi-lian",
+  "edition": {
+    "status": "selected"
   }
 }

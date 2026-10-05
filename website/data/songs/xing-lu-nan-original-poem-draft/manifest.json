@@ -3,11 +3,11 @@
   "version": 1,
   "id": "xing-lu-nan-original-poem-draft",
   "kind": "song",
-  "title": "行路难 · 原文重组 DR Draft",
+  "title": "行路难 · Hard Is the Road · Archive 01",
   "localizedTitles": {
-    "zh-Hans": "行路难 · 原文重组 DR Draft",
-    "en": "Hard Is the Road - Original Text DR Draft",
-    "ja": "行路難・原文再構成 DR Draft"
+    "zh-Hans": "行路难 · Archive 01",
+    "en": "Hard Is the Road · Archive 01",
+    "ja": "行路難 · Archive 01"
   },
   "artist": "Musia",
   "description": "An experimental DiffRhythm draft that starts from Li Bai's hope-first original-poem ordering. The lyric track follows the source text where the sound is close and stays marked as draft.",
@@ -16,7 +16,7 @@
   "canonicalUrl": "https://fun.lazying.art/#xing-lu-nan-original-poem-draft",
   "status": "experimental-draft",
   "share": {
-    "title": "行路难 · 原文重组 DR Draft - Fun Lazying Art",
+    "title": "行路难 · Hard Is the Road · Archive 01 - Musia",
     "description": "An experimental DiffRhythm draft that starts from Li Bai's hope-first original-poem ordering. The lyric track follows the source text where the sound is close and stays marked as draft.",
     "url": "https://fun.lazying.art/#xing-lu-nan-original-poem-draft",
     "image": "assets/covers/xing-lu-nan-original-poem-draft-16x9.png",
@@ -25,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "行路难 · 原文重组 DR Draft cover",
+      "label": "行路难 · Hard Is the Road · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/xing-lu-nan-original-poem-draft-16x9.png",
       "mime": "image/png",
@@ -50,7 +50,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/xing-lu-nan-original-poem-draft-zh-Hans-dr-20260701.mp3?v=20260701-dr",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -805,5 +806,19 @@
     "analysisRun": "data/runs/xing-lu-nan-original-poem-hope-first-draft-analysis",
     "coverSource": "assets/covers/qiang-jin-jiu-normal-song-16x9.png",
     "lyricsPolicy": "source-close correction against ASR/listening; draft items must stay labeled DR Draft"
+  },
+  "displayTitle": "行路难 · Hard Is the Road · Archive 01",
+  "workId": "xing-lu-nan",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
   }
 }

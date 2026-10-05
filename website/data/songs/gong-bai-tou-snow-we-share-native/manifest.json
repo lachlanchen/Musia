@@ -3,11 +3,11 @@
   "version": 1,
   "id": "gong-bai-tou-snow-we-share-native",
   "kind": "song",
-  "title": "共白头 · Snow We Share",
+  "title": "共白头 · Snow We Share · Archive 01",
   "localizedTitles": {
-    "zh-Hans": "共白头",
-    "en": "Snow We Share",
-    "ja": "同じ雪の下で"
+    "zh-Hans": "共白头 · Archive 01",
+    "en": "Snow We Share · Archive 01",
+    "ja": "同じ雪の下で · Archive 01"
   },
   "artist": "Musia",
   "description": "A source-line Mandarin autumn-and-snow ballad using only the poem lines: 忽有故人心上过，回首山河已入秋，他朝若是同淋雪，此生也算共白头。",
@@ -15,7 +15,7 @@
   "duration": 92.0,
   "canonicalUrl": "https://fun.lazying.art/#gong-bai-tou-snow-we-share-native",
   "share": {
-    "title": "共白头 · Snow We Share - Fun Lazying Art",
+    "title": "共白头 · Snow We Share · Archive 01 - Musia",
     "description": "A Musia source-line Mandarin autumn-and-snow ballad with synced lyrics, translations, pinyin, furigana, chords, and stems.",
     "url": "https://fun.lazying.art/#gong-bai-tou-snow-we-share-native",
     "image": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Snow We Share cover",
+      "label": "共白头 · Snow We Share · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/gong-bai-tou-snow-we-share-native-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/gong-bai-tou-snow-we-share-native-zh-yuerenge-style-seed791401-20260710.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -498,5 +499,19 @@
     "beats": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/analysis/beats.csv",
     "chords": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/analysis/chords.csv",
     "asr": "data/runs/gong-bai-tou-snow-we-share-native-20260710-analysis/analysis/lyrics.json"
+  },
+  "displayTitle": "共白头 · Snow We Share · Archive 01",
+  "workId": "gong-bai-tou",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
   }
 }

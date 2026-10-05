@@ -3,10 +3,10 @@
   "version": 1,
   "id": "ku-chao-qing-heng-mixed",
   "kind": "song",
-  "title": "哭晁卿衡 · Moon Over The Blue Sea",
+  "title": "哭晁卿衡 · Moon Over the Blue Sea",
   "localizedTitles": {
-    "zh-Hans": "哭晁卿衡 · 碧海明月",
-    "en": "Moon Over The Blue Sea",
+    "zh-Hans": "哭晁卿衡",
+    "en": "Moon Over the Blue Sea",
     "ja": "碧海の月"
   },
   "artist": "Musia",
@@ -15,7 +15,7 @@
   "duration": 74.0,
   "canonicalUrl": "https://fun.lazying.art/#ku-chao-qing-heng-mixed",
   "share": {
-    "title": "哭晁卿衡 · Moon Over The Blue Sea - Fun Lazying Art",
+    "title": "哭晁卿衡 · Moon Over the Blue Sea - Musia",
     "description": "A Musia mixed-language Li Bai ocean elegy with corrected synced lyrics, pinyin, furigana, chords, and stems.",
     "url": "https://fun.lazying.art/#ku-chao-qing-heng-mixed",
     "image": "assets/covers/ku-chao-qing-heng-mixed-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Moonlit sea cover",
+      "label": "哭晁卿衡 · Moon Over the Blue Sea cover",
       "role": "cover",
       "src": "assets/covers/ku-chao-qing-heng-mixed-16x9.png",
       "mime": "image/png",
@@ -42,14 +42,15 @@
     },
     "primaryAudio": {
       "id": "ku-chao-qing-heng-mixed",
-      "label": "Mixed",
+      "label": "English · 中文 · 日本語",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "mul",
-      "languageLabel": "Mixed",
+      "languageLabel": "English · 中文 · 日本語",
       "lyricSetId": "mixed-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/ku-chao-qing-heng-mixed-ace-xl-turbo-seed780824-20260708.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "English · 中文 · 日本語"
     },
     "alternateAudio": []
   },
@@ -636,5 +637,10 @@
       "label": "Stems",
       "path": "data/runs/ku-chao-qing-heng-mixed-20260708-seed780824-analysis/stems"
     }
-  ]
+  ],
+  "displayTitle": "哭晁卿衡 · Moon Over the Blue Sea",
+  "workId": "ku-chao-qing-heng",
+  "edition": {
+    "status": "selected"
+  }
 }

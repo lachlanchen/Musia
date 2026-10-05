@@ -3,13 +3,11 @@
   "version": 1,
   "id": "rain-day-full-song-trilingual",
   "kind": "song",
-  "title": "Rain Day Full Song",
+  "title": "雨夜 · Rain Day",
   "localizedTitles": {
-    "en": "Rain Day Full Song",
-    "zh": "雨夜完整歌",
-    "zh-Hans": "雨夜完整歌",
-    "ja": "雨の日のフルソング",
-    "yue-Hant": "雨天全曲"
+    "zh-Hans": "雨夜",
+    "en": "Rain Day",
+    "ja": "雨の夜"
   },
   "artist": "Musia",
   "subtitle": "A rainy-day song in English, Mandarin, Japanese, and Cantonese",
@@ -18,7 +16,7 @@
   "duration": 78,
   "canonicalUrl": "https://fun.lazying.art/#rain-day-full-song-trilingual",
   "share": {
-    "title": "Rain Day Full Song - Fun Lazying Art",
+    "title": "雨夜 · Rain Day - Musia",
     "description": "A full Musia rain-day song with multilingual vocals and synced lyrics.",
     "url": "https://fun.lazying.art/#rain-day-full-song-trilingual",
     "image": "assets/covers/rain-day-full-song-16x9.png",
@@ -27,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Rain Day Full Song cover",
+      "label": "雨夜 · Rain Day cover",
       "role": "cover",
       "src": "assets/covers/rain-day-full-song-16x9.png",
       "mime": "image/png",
@@ -45,7 +43,7 @@
     },
     "primaryAudio": {
       "id": "full-zh",
-      "label": "Mandarin full song",
+      "label": "中文",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "zh-Hans",
@@ -449,12 +447,13 @@
             "degree": ""
           }
         ]
-      }
+      },
+      "selectorLabel": "中文"
     },
     "alternateAudio": [
       {
         "id": "full-en",
-        "label": "English full song",
+        "label": "English",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "en",
@@ -666,11 +665,12 @@
               "degree": ""
             }
           ]
-        }
+        },
+        "selectorLabel": "English"
       },
       {
         "id": "full-ja",
-        "label": "Japanese full song",
+        "label": "日本語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "ja",
@@ -948,19 +948,21 @@
               "degree": ""
             }
           ]
-        }
+        },
+        "selectorLabel": "日本語"
       },
       {
         "id": "full-yue",
-        "label": "Cantonese vocal",
+        "label": "粵語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "yue-Hant",
-        "languageLabel": "廣東話",
+        "languageLabel": "粵語",
         "lyricSetId": "yue-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/rain-day-full-song-yue-Hant.mp3",
         "mime": "audio/mpeg",
-        "guide": "Japanese vocal guide"
+        "guide": "Japanese vocal guide",
+        "selectorLabel": "粵語"
       }
     ]
   },
@@ -1365,5 +1367,10 @@
         }
       ]
     }
-  ]
+  ],
+  "displayTitle": "雨夜 · Rain Day",
+  "workId": "rain-day",
+  "edition": {
+    "status": "selected"
+  }
 }

@@ -3,11 +3,11 @@
   "version": 1,
   "id": "qiang-jin-jiu",
   "kind": "song",
-  "title": "将进酒 · ACE Poetry Demo",
+  "title": "将进酒 · Bring In the Wine · Archive 01",
   "localizedTitles": {
-    "zh-Hans": "将进酒 · ACE 诗歌版",
-    "en": "Bring In the Wine · ACE Poetry Demo",
-    "ja": "将進酒・ACE詩歌版"
+    "zh-Hans": "将进酒 · Archive 01",
+    "en": "Bring In the Wine · Archive 01",
+    "ja": "将進酒 · Archive 01"
   },
   "artist": "Musia",
   "description": "An ACE-Step female Mandarin poetry-song using Li Bai's original 将进酒 text, with pronunciation notes and ASR-corrected trilingual lyric timing.",
@@ -15,7 +15,7 @@
   "duration": 180.0,
   "canonicalUrl": "https://fun.lazying.art/#qiang-jin-jiu",
   "share": {
-    "title": "将进酒 · ACE Poetry Demo - Fun Lazying Art",
+    "title": "将进酒 · Bring In the Wine · Archive 01 - Musia",
     "description": "A Musia ACE-Step female Mandarin poetry-song from Li Bai's 将进酒.",
     "url": "https://fun.lazying.art/#qiang-jin-jiu",
     "image": "assets/covers/qiang-jin-jiu-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "将进酒 cover",
+      "label": "将进酒 · Bring In the Wine · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/qiang-jin-jiu-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/qiang-jin-jiu-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -1343,5 +1344,19 @@
     "coverSource": "assets/covers/qiang-jin-jiu-16x9.png",
     "publicAudio": "qiang-jin-jiu-zh-Hans-ace-20260701.mp3"
   },
-  "artifacts": []
+  "artifacts": [],
+  "displayTitle": "将进酒 · Bring In the Wine · Archive 01",
+  "workId": "qiang-jin-jiu",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
+  }
 }

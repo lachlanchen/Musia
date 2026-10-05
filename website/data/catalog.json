@@ -11,7 +11,7 @@
     {
       "id": "ban-qu-chang-an-ace-changfeng",
       "kind": "song",
-      "title": "半曲长安 · ACE · 长风",
+      "title": "半曲长安 · The Melody I Left in Chang'an",
       "artist": "Musia",
       "summary": "Half a melody waits in Chang'an. Across the Yellow River and red mountains, a rider carries the promise of playing it again beside the one she loves.",
       "manifest": "data/songs/ban-qu-chang-an-ace-changfeng/manifest.json",
@@ -34,12 +34,17 @@
         "Yellow River",
         "homecoming",
         "chords"
-      ]
+      ],
+      "displayTitle": "半曲长安 · The Melody I Left in Chang'an",
+      "workId": "ban-qu-chang-an",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "ban-qu-chang-an",
       "kind": "song",
-      "title": "半曲长安 · MiniMax",
+      "title": "半曲长安 · The Melody I Left in Chang'an · Archive 01",
       "artist": "Musia",
       "summary": "Half a melody waits in Chang'an; the other half travels across the Yellow River and red mountains, carrying a promise to return.",
       "manifest": "data/songs/ban-qu-chang-an/manifest.json",
@@ -63,12 +68,21 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "半曲长安 · The Melody I Left in Chang'an · Archive 01",
+      "workId": "ban-qu-chang-an",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hidden": true,
+      "hiddenLabel": "Archive 01",
+      "hiddenReason": "Earlier recording; retained for listening history and direct links."
     },
     {
       "id": "xing-bian-shi-jian",
       "kind": "song",
-      "title": "行遍世间",
+      "title": "行遍世间 · Every Road in the World",
       "artist": "Musia",
       "summary": "Across snow, tides, mountains, and years, every road leads to one long-awaited meeting.",
       "manifest": "data/songs/xing-bian-shi-jian/manifest.json",
@@ -90,12 +104,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "行遍世间 · Every Road in the World",
+      "workId": "xing-bian-shi-jian",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "luoshenfu-original-excerpt-preview",
       "kind": "song",
-      "title": "洛神赋 · 原文选段",
+      "title": "洛神赋 · Ode to the Goddess of the Luo",
       "artist": "Musia",
       "summary": "Two cinematic Mandarin settings of selected original lines from Cao Zhi's Luoshenfu.",
       "manifest": "data/songs/luoshenfu-original-excerpt-preview/manifest.json",
@@ -115,12 +134,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "洛神赋 · Ode to the Goddess of the Luo",
+      "workId": "luoshenfu",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "luoshui-zhaoying-preview",
       "kind": "song",
-      "title": "洛水照影 · Preview",
+      "title": "洛水照影 · Reflections on the Luoshui",
       "artist": "Musia",
       "summary": "An unlisted two-candidate preview for choosing between stronger musical expression and fuller lyric coverage.",
       "manifest": "data/songs/luoshui-zhaoying-preview/manifest.json",
@@ -146,12 +170,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "洛水照影 · Reflections on the Luoshui",
+      "workId": "luoshui-zhaoying",
+      "edition": {
+        "status": "preview"
+      }
     },
     {
       "id": "best-am-i",
       "kind": "song",
-      "title": "Best Am I · 我是天下第一等",
+      "title": "我是天下第一等 · Best Am I",
       "artist": "Musia",
       "summary": "A mixed English, Mandarin pinyin, and Japanese romaji motivational art-pop anthem about self-belief and becoming.",
       "manifest": "data/songs/best-am-i/manifest.json",
@@ -171,7 +200,12 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "我是天下第一等 · Best Am I",
+      "workId": "best-am-i",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "one-boat-moonlight-one-lamp",
@@ -197,12 +231,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "一船明月一灯影 · One Boat of Moonlight",
+      "workId": "one-boat-moonlight",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "gong-bai-tou-snow-we-share",
       "kind": "song",
-      "title": "共白头 · Snow We Share · 雪中回声",
+      "title": "共白头 · Snow We Share",
       "artist": "Musia",
       "summary": "A mixed English, Japanese romaji, and Mandarin pinyin snow-memory ballad about shared snow, old longing, and the wish to grow white-haired together.",
       "manifest": "data/songs/gong-bai-tou-snow-we-share/manifest.json",
@@ -222,12 +261,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "共白头 · Snow We Share",
+      "workId": "gong-bai-tou",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "gong-bai-tou-snow-we-share-native",
       "kind": "song",
-      "title": "共白头 · Snow We Share · Hidden Variant",
+      "title": "共白头 · Snow We Share · Archive 01",
       "artist": "Musia",
       "summary": "A source-line Mandarin autumn-and-snow ballad using only the poem lines: 忽有故人心上过，回首山河已入秋，他朝若是同淋雪，此生也算共白头。",
       "manifest": "data/songs/gong-bai-tou-snow-we-share-native/manifest.json",
@@ -248,8 +292,14 @@
         "chords"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; keep the older published Snow We Share / 雪中回声 item visible.",
-      "hiddenLabel": "Hidden Variant"
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "hiddenLabel": "Archive 01",
+      "displayTitle": "共白头 · Snow We Share · Archive 01",
+      "workId": "gong-bai-tou",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      }
     },
     {
       "id": "gong-yin-chang-jiang-shui-mixed",
@@ -274,7 +324,12 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "共饮长江水 · Same River",
+      "workId": "gong-yin-chang-jiang-shui",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "wu-xia-yue-mixed",
@@ -300,12 +355,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "巫峡月 · Moon Over Wu Gorge",
+      "workId": "wu-xia-yue",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "ku-chao-qing-heng-mixed",
       "kind": "song",
-      "title": "哭晁卿衡 · Moon Over The Blue Sea",
+      "title": "哭晁卿衡 · Moon Over the Blue Sea",
       "artist": "Musia",
       "summary": "A mixed English, Japanese romaji, and Mandarin pinyin Li Bai ocean elegy with source-only Chinese poem anchors.",
       "manifest": "data/songs/ku-chao-qing-heng-mixed/manifest.json",
@@ -325,12 +385,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "哭晁卿衡 · Moon Over the Blue Sea",
+      "workId": "ku-chao-qing-heng",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "the-babiest",
       "kind": "song",
-      "title": "The Babiest",
+      "title": "最宝宝的宝宝 · The Babiest",
       "artist": "Musia",
       "summary": "A cute mixed English, Mandarin, and Japanese bedroom-pop song with corrected synced lyrics and chord timing.",
       "manifest": "data/songs/the-babiest/manifest.json",
@@ -349,12 +414,17 @@
         "pinyin",
         "furigana",
         "chords"
-      ]
+      ],
+      "displayTitle": "最宝宝的宝宝 · The Babiest",
+      "workId": "the-babiest",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "wei-ji-fen",
       "kind": "song",
-      "title": "微积分",
+      "title": "微积分 · Calculus of Us",
       "artist": "Musia",
       "summary": "A Mandarin breakup ballad where tiny accumulated hurts become calculus, orbit, frequency, and distance.",
       "manifest": "data/songs/wei-ji-fen/manifest.json",
@@ -372,12 +442,17 @@
         "ACE-Step",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "微积分 · Calculus of Us",
+      "workId": "wei-ji-fen",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "sha-sha",
       "kind": "song",
-      "title": "沙沙",
+      "title": "沙沙 · Sha Sha",
       "artist": "Musia",
       "summary": "A soft Mandarin beach-sunset song about sea sand, desert sand, Chiba wind, Loulan dream, and two people walking home.",
       "manifest": "data/songs/sha-sha/manifest.json",
@@ -395,12 +470,17 @@
         "ACE-Step",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "沙沙 · Sha Sha",
+      "workId": "sha-sha",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "one-sky-three-lights-mixed",
       "kind": "song",
-      "title": "One Sky, Three Lights",
+      "title": "一片天空，三道光 · One Sky, Three Lights",
       "artist": "Musia",
       "summary": "A bright multilingual song about shared light, with synced lyrics, translations, and chord timing.",
       "manifest": "data/songs/one-sky-three-lights-mixed/manifest.json",
@@ -419,12 +499,17 @@
         "lyrics",
         "chords",
         "Cantonese"
-      ]
+      ],
+      "displayTitle": "一片天空，三道光 · One Sky, Three Lights",
+      "workId": "one-sky-three-lights",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "animal-no-di-liu-gan",
       "kind": "song",
-      "title": "Animal の 第六感",
+      "title": "动物的第六感 · Animal's Sixth Sense",
       "artist": "Musia",
       "summary": "A mixed-language sixth-sense hook with corrected lyrics, translations, chords, and guitar fingering.",
       "manifest": "data/songs/animal-no-di-liu-gan/manifest.json",
@@ -444,12 +529,17 @@
         "chords",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "动物的第六感 · Animal's Sixth Sense",
+      "workId": "animal-no-di-liu-gan",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "liang-zhou-ci-double-original-poem",
       "kind": "song",
-      "title": "凉州词 · 双阕原诗版",
+      "title": "凉州词 · Songs of Liangzhou",
       "artist": "Musia",
       "summary": "A frontier-ballad ACE-Step render from two Liangzhou Ci poems, with ASR-audited trilingual lyrics, pinyin, furigana, chords, and beats.",
       "manifest": "data/songs/liang-zhou-ci-double-original-poem/manifest.json",
@@ -468,12 +558,17 @@
         "original-poem",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "凉州词 · Songs of Liangzhou",
+      "workId": "liang-zhou-ci",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "chi-le-ge-original-poem",
       "kind": "song",
-      "title": "敕勒歌 · 原文版",
+      "title": "敕勒歌 · Song of the Chile Plains",
       "artist": "Musia",
       "summary": "A northern grassland ACE-Step render from the original 敕勒歌 lines, with ASR-corrected trilingual lyrics, pinyin, furigana, chords, and beats.",
       "manifest": "data/songs/chi-le-ge-original-poem/manifest.json",
@@ -493,12 +588,17 @@
         "original-poem",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "敕勒歌 · Song of the Chile Plains",
+      "workId": "chi-le-ge",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "kagirohi-to-hana",
       "kind": "song",
-      "title": "かぎろひと花",
+      "title": "晨曦与花 · Dawnlight and Blossoms",
       "artist": "Musia",
       "summary": "A Japanese waka art-pop song from selected Manyoshu and Kokin Wakashu lines, with ASR-corrected trilingual lyrics.",
       "manifest": "data/songs/kagirohi-to-hana/manifest.json",
@@ -517,12 +617,17 @@
         "ACE-Step",
         "furigana",
         "pinyin"
-      ]
+      ],
+      "displayTitle": "晨曦与花 · Dawnlight and Blossoms",
+      "workId": "kagirohi-to-hana",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "yue-ren-ge-original-poem",
       "kind": "song",
-      "title": "越人歌 · 原诗版",
+      "title": "越人歌 · Song of the Yue Boatman",
       "artist": "Musia",
       "manifest": "data/songs/yue-ren-ge-original-poem/manifest.json",
       "cover": "assets/covers/yue-ren-ge-original-poem-16x9.png",
@@ -540,12 +645,17 @@
         "zh-Hans",
         "en",
         "ja"
-      ]
+      ],
+      "displayTitle": "越人歌 · Song of the Yue Boatman",
+      "workId": "yue-ren-ge",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "xia-ke-xing-original-poem",
       "kind": "song",
-      "title": "侠客行 · 原诗版",
+      "title": "侠客行 · Knight-Errant Ballad",
       "artist": "Musia",
       "manifest": "data/songs/xia-ke-xing-original-poem/manifest.json",
       "cover": "assets/covers/xia-ke-xing-original-poem-16x9.png",
@@ -562,12 +672,17 @@
         "zh-Hans",
         "en",
         "ja"
-      ]
+      ],
+      "displayTitle": "侠客行 · Knight-Errant Ballad",
+      "workId": "xia-ke-xing",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "yun-hai-zhi-lian-haifeng-duange",
       "kind": "song",
-      "title": "云海之恋",
+      "title": "云海之恋 · Cloud Sea Love",
       "artist": "Musia",
       "summary": "The standard ACE-Step Mandarin cloud-sea love ballad with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/yun-hai-zhi-lian-haifeng-duange/manifest.json",
@@ -586,12 +701,17 @@
         "standard",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "云海之恋 · Cloud Sea Love",
+      "workId": "yun-hai-zhi-lian",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "star-bucks",
       "kind": "song",
-      "title": "Star Bucks",
+      "title": "星鹿之海 · Star Bucks",
       "artist": "Musia",
       "summary": "An original English ocean anthem about a sailor, luminous star-deer, and carrying on, with corrected lyrics, translations, chords, and guitar fingering.",
       "manifest": "data/songs/star-bucks/manifest.json",
@@ -611,12 +731,17 @@
         "chords",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "星鹿之海 · Star Bucks",
+      "workId": "star-bucks",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "xia-ke-xing",
       "kind": "song",
-      "title": "侠客行",
+      "title": "侠客行 · Knight-Errant Ballad · Archive 01",
       "artist": "Musia",
       "summary": "An ACE-Step Mandarin wuxia theme adapted from Li Bai's public-domain poem, with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/xia-ke-xing/manifest.json",
@@ -635,12 +760,21 @@
         "poetry",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "侠客行 · Knight-Errant Ballad · Archive 01",
+      "workId": "xia-ke-xing",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hidden": true,
+      "hiddenLabel": "Archive 01",
+      "hiddenReason": "Earlier recording; retained for listening history and direct links."
     },
     {
       "id": "meng-you-tian-mu-yin-liu-bie",
       "kind": "song",
-      "title": "梦游天姥吟留别 · 青云梯改编版",
+      "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 02",
       "artist": "Musia",
       "summary": "A hook-focused ACE-Step Mandarin art-pop adaptation inspired by Li Bai's dream journey to Tianmu; it is not the original-poem version.",
       "manifest": "data/songs/meng-you-tian-mu-yin-liu-bie/manifest.json",
@@ -661,12 +795,19 @@
         "furigana"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; only original-poem version remains visible."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 02",
+      "workId": "meng-you-tian-mu",
+      "edition": {
+        "status": "archive",
+        "number": 2
+      },
+      "hiddenLabel": "Archive 02"
     },
     {
       "id": "meng-you-tian-mu-kai-xin-yan-original-lines",
       "kind": "song",
-      "title": "梦游天姥吟留别 · 开心颜原文段",
+      "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 03",
       "artist": "Musia",
       "summary": "An ACE-Step Mandarin original-text excerpt from Li Bai's 梦游天姥吟留别 ending, with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/meng-you-tian-mu-kai-xin-yan-original-lines/manifest.json",
@@ -688,12 +829,19 @@
         "furigana"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; only original-poem version remains visible."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 03",
+      "workId": "meng-you-tian-mu",
+      "edition": {
+        "status": "archive",
+        "number": 3
+      },
+      "hiddenLabel": "Archive 03"
     },
     {
       "id": "meng-you-tian-mu-original-poem",
       "kind": "song",
-      "title": "梦游天姥吟留别 · 原诗版",
+      "title": "梦游天姥吟留别 · Dreaming of Tianmu",
       "artist": "Musia",
       "summary": "A long-form ACE-Step Mandarin original-poem version of Li Bai's 梦游天姥吟留别, with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/meng-you-tian-mu-original-poem/manifest.json",
@@ -713,12 +861,17 @@
         "xianxia",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu",
+      "workId": "meng-you-tian-mu",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "meng-you-tian-mu",
       "kind": "song",
-      "title": "梦游天姥吟留别 · 旧梦版",
+      "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 01",
       "artist": "Musia",
       "summary": "A legacy cinematic ACE-Step Mandarin normal-song adaptation of Li Bai's dream journey to Mount Tianmu, with corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/meng-you-tian-mu/manifest.json",
@@ -740,12 +893,19 @@
         "furigana"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; only original-poem version remains visible."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 01",
+      "workId": "meng-you-tian-mu",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hiddenLabel": "Archive 01"
     },
     {
       "id": "shu-dao-nan",
       "kind": "song",
-      "title": "蜀道难",
+      "title": "蜀道难 · The Hard Road to Shu",
       "artist": "Musia",
       "summary": "A cinematic ACE-Step Mandarin normal-song adaptation of Li Bai's 蜀道难, with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/shu-dao-nan/manifest.json",
@@ -764,12 +924,17 @@
         "xianxia",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "蜀道难 · The Hard Road to Shu",
+      "workId": "shu-dao-nan",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "shu-dao-nan-qing-tian-lu",
       "kind": "song",
-      "title": "晴天路",
+      "title": "晴天路 · Road to Clear Sky",
       "artist": "Musia",
       "summary": "An original Mandarin clear-sky road song inspired by 蜀道难, with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/shu-dao-nan-qing-tian-lu/manifest.json",
@@ -788,12 +953,17 @@
         "hope",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "晴天路 · Road to Clear Sky",
+      "workId": "qing-tian-lu",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "shu-dao-nan-original-text-dr-draft",
       "kind": "song",
-      "title": "蜀道难 · 原文重组 DR Draft",
+      "title": "蜀道难 · The Hard Road to Shu · Archive 01",
       "artist": "Musia",
       "summary": "An experimental DiffRhythm draft that reorganizes Li Bai source lines. The lyric track is source-close and ASR-audited, but this is not a final polished ACE render.",
       "manifest": "data/songs/shu-dao-nan-original-text-dr-draft/manifest.json",
@@ -814,12 +984,19 @@
         "original-text"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; 原文重组 DR Draft route was judged low-quality and should remain review-only."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "蜀道难 · The Hard Road to Shu · Archive 01",
+      "workId": "shu-dao-nan",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hiddenLabel": "Archive 01"
     },
     {
       "id": "xing-lu-nan-original-poem-draft",
       "kind": "song",
-      "title": "行路难 · 原文重组 DR Draft",
+      "title": "行路难 · Hard Is the Road · Archive 01",
       "artist": "Musia",
       "summary": "An experimental DiffRhythm draft that starts from Li Bai's hope-first original-poem ordering. The lyric track follows the source text where the sound is close and stays marked as draft.",
       "manifest": "data/songs/xing-lu-nan-original-poem-draft/manifest.json",
@@ -840,12 +1017,19 @@
         "original-poem"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; 原文重组 DR Draft route was judged low-quality and should remain review-only."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "行路难 · Hard Is the Road · Archive 01",
+      "workId": "xing-lu-nan",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hiddenLabel": "Archive 01"
     },
     {
       "id": "qiang-jin-jiu-normal-song",
       "kind": "song",
-      "title": "将进酒 · Hidden Variant",
+      "title": "将进酒 · Bring In the Wine · Archive 02",
       "artist": "Musia",
       "summary": "The normal-song ACE-Step Mandarin adaptation of Li Bai's 将进酒, with corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/qiang-jin-jiu-normal-song/manifest.json",
@@ -866,13 +1050,19 @@
         "furigana"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; only original-poem version remains visible.",
-      "hiddenLabel": "Hidden Variant"
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "hiddenLabel": "Archive 02",
+      "displayTitle": "将进酒 · Bring In the Wine · Archive 02",
+      "workId": "qiang-jin-jiu",
+      "edition": {
+        "status": "archive",
+        "number": 2
+      }
     },
     {
       "id": "qiang-jin-jiu-original-poem",
       "kind": "song",
-      "title": "将进酒 · 原诗版",
+      "title": "将进酒 · Bring In the Wine",
       "artist": "Musia",
       "summary": "A new ACE-Step Mandarin original-poem version of Li Bai's 将进酒, with ASR-corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/qiang-jin-jiu-original-poem/manifest.json",
@@ -891,12 +1081,17 @@
         "original-poem",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "将进酒 · Bring In the Wine",
+      "workId": "qiang-jin-jiu",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "qiang-jin-jiu",
       "kind": "song",
-      "title": "将进酒 · ACE Poetry Demo",
+      "title": "将进酒 · Bring In the Wine · Archive 01",
       "artist": "Musia",
       "summary": "A female Mandarin ACE-Step poetry-song from Li Bai's original 将进酒, with pinyin, furigana, translations, and chord timing.",
       "manifest": "data/songs/qiang-jin-jiu/manifest.json",
@@ -917,12 +1112,19 @@
         "furigana"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; only original-poem version remains visible."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "将进酒 · Bring In the Wine · Archive 01",
+      "workId": "qiang-jin-jiu",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hiddenLabel": "Archive 01"
     },
     {
       "id": "yun-hai-zhi-lian-dr-short",
       "kind": "song",
-      "title": "云海之恋 · DR Short",
+      "title": "云海之恋 · Cloud Sea Love · Archive 02",
       "artist": "Musia",
       "summary": "A compact DiffRhythm Mandarin cloud-sea route with ASR-corrected trilingual lyrics and chord timing.",
       "manifest": "data/songs/yun-hai-zhi-lian-dr-short/manifest.json",
@@ -944,12 +1146,19 @@
         "furigana"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; suffix/variant version."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "云海之恋 · Cloud Sea Love · Archive 02",
+      "workId": "yun-hai-zhi-lian",
+      "edition": {
+        "status": "archive",
+        "number": 2
+      },
+      "hiddenLabel": "Archive 02"
     },
     {
       "id": "yun-hai-zhi-lian",
       "kind": "song",
-      "title": "云海之恋 · DR Full Lyrics",
+      "title": "云海之恋 · Cloud Sea Love · Archive 03",
       "artist": "Musia",
       "summary": "A full-length DiffRhythm Mandarin cloud-sea route with corrected trilingual lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/yun-hai-zhi-lian/manifest.json",
@@ -971,12 +1180,19 @@
         "full-lyrics"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; suffix/variant version."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "云海之恋 · Cloud Sea Love · Archive 03",
+      "workId": "yun-hai-zhi-lian",
+      "edition": {
+        "status": "archive",
+        "number": 3
+      },
+      "hiddenLabel": "Archive 03"
     },
     {
       "id": "yun-hai-zhi-lian-legacy",
       "kind": "song",
-      "title": "云海之恋 · ACE Legacy",
+      "title": "云海之恋 · Cloud Sea Love · Archive 01",
       "artist": "Musia",
       "summary": "An earlier ACE-Step cloud-sea love ballad candidate preserved for comparison.",
       "manifest": "data/songs/yun-hai-zhi-lian-legacy/manifest.json",
@@ -995,12 +1211,19 @@
         "legacy"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; suffix/variant version."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "云海之恋 · Cloud Sea Love · Archive 01",
+      "workId": "yun-hai-zhi-lian",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hiddenLabel": "Archive 01"
     },
     {
       "id": "xiao-xiao-zhu-trilingual",
       "kind": "song",
-      "title": "你是一只猪",
+      "title": "你是一只猪 · You Little Piggy",
       "artist": "Musia",
       "summary": "A cute, slightly whiny comfort song with Mandarin, English, and Japanese vocals, synced lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/xiao-xiao-zhu-trilingual/manifest.json",
@@ -1020,12 +1243,17 @@
         "Japanese",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "你是一只猪 · You Little Piggy",
+      "workId": "xiao-xiao-zhu",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "aya-chan-hikari-ame",
       "kind": "song",
-      "title": "Aya Chan Hikari Ame",
+      "title": "阿芽酱，光之雨 · Aya Chan, Rain of Light",
       "artist": "Musia",
       "summary": "A warm Aya Chan rain-of-light character song with Japanese, English, and Mandarin vocals, synced lyrics, pinyin, furigana, and chord timing.",
       "manifest": "data/songs/aya-chan-hikari-ame/manifest.json",
@@ -1044,12 +1272,17 @@
         "light",
         "pinyin",
         "furigana"
-      ]
+      ],
+      "displayTitle": "阿芽酱，光之雨 · Aya Chan, Rain of Light",
+      "workId": "aya-chan-hikari-ame",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "aya-chan-hikari-ame-full-mv",
       "kind": "mv",
-      "title": "Aya Chan Hikari Ame Full MV",
+      "title": "阿芽酱，光之雨 · Aya Chan, Rain of Light · MV",
       "artist": "Musia",
       "summary": "A hopeful LALACHAN music video for Aya Chan Hikari Ame with synced Japanese lyrics, English and Chinese translations, furigana, pinyin, and chord timing.",
       "manifest": "data/songs/aya-chan-hikari-ame-full-mv/manifest.json",
@@ -1071,12 +1304,17 @@
         "furigana",
         "pinyin",
         "chords"
-      ]
+      ],
+      "displayTitle": "阿芽酱，光之雨 · Aya Chan, Rain of Light · MV",
+      "workId": "aya-chan-hikari-ame",
+      "edition": {
+        "status": "companion"
+      }
     },
     {
       "id": "take-care-of-yourself",
       "kind": "localized-song",
-      "title": "Take Care of Yourself · SoulX Localization",
+      "title": "照顾好自己 · Take Care of Yourself · Archive 01",
       "artist": "Musia",
       "summary": "The earlier SoulX/localization-route self-care song with English, Mandarin, and Cantonese vocals.",
       "manifest": "data/songs/take-care-of-yourself/manifest.json",
@@ -1097,12 +1335,19 @@
         "Cantonese"
       ],
       "hidden": true,
-      "hiddenReason": "Hidden by quality curation; SoulX Localization route is kept review-only while the standard Take Care of Yourself version remains visible."
+      "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+      "displayTitle": "照顾好自己 · Take Care of Yourself · Archive 01",
+      "workId": "take-care-of-yourself",
+      "edition": {
+        "status": "archive",
+        "number": 1
+      },
+      "hiddenLabel": "Archive 01"
     },
     {
       "id": "take-care-of-yourself-hope-version",
       "kind": "song",
-      "title": "Take Care of Yourself",
+      "title": "照顾好自己 · Take Care of Yourself",
       "artist": "Musia",
       "summary": "The standard spacious hope song in English, Japanese, and Mandarin, centered on care, courage, and light.",
       "manifest": "data/songs/take-care-of-yourself-hope-version/manifest.json",
@@ -1121,12 +1366,17 @@
         "English",
         "Japanese",
         "Mandarin"
-      ]
+      ],
+      "displayTitle": "照顾好自己 · Take Care of Yourself",
+      "workId": "take-care-of-yourself",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "mars-red-sky-trilingual",
       "kind": "song",
-      "title": "Small Under the Red Sky",
+      "title": "红色天空下 · Small Under the Red Sky",
       "artist": "Musia",
       "summary": "A cinematic Mars desert song with English, Mandarin, Japanese, and Cantonese vocals, synced lyrics, and chord timing.",
       "manifest": "data/songs/mars-red-sky-trilingual/manifest.json",
@@ -1146,12 +1396,17 @@
         "Mandarin",
         "Japanese",
         "Cantonese"
-      ]
+      ],
+      "displayTitle": "红色天空下 · Small Under the Red Sky",
+      "workId": "mars-red-sky",
+      "edition": {
+        "status": "selected"
+      }
     },
     {
       "id": "rain-day-full-song-trilingual",
       "kind": "song",
-      "title": "Rain Day Full Song",
+      "title": "雨夜 · Rain Day",
       "artist": "Musia",
       "summary": "A rainy-day cinematic pop song with English, Mandarin, Japanese, and Cantonese vocals plus synced lyrics.",
       "manifest": "data/songs/rain-day-full-song-trilingual/manifest.json",
@@ -1169,7 +1424,12 @@
         "Mandarin",
         "Japanese",
         "Cantonese"
-      ]
+      ],
+      "displayTitle": "雨夜 · Rain Day",
+      "workId": "rain-day",
+      "edition": {
+        "status": "selected"
+      }
     }
   ]
 }

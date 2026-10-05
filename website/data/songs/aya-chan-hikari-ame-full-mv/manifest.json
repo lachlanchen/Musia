@@ -3,12 +3,11 @@
   "version": 1,
   "id": "aya-chan-hikari-ame-full-mv",
   "kind": "mv",
-  "title": "Aya Chan Hikari Ame Full MV",
+  "title": "阿芽酱，光之雨 · Aya Chan, Rain of Light · MV",
   "localizedTitles": {
-    "ja": "アヤちゃん 光の雨 フルMV",
-    "en": "Aya Chan Hikari Ame Full MV",
-    "zh": "阿芽酱，光之雨完整MV",
-    "zh-Hans": "阿芽酱，光之雨完整MV"
+    "zh-Hans": "阿芽酱，光之雨 · MV",
+    "en": "Aya Chan, Rain of Light · MV",
+    "ja": "アヤちゃん 光の雨 · MV"
   },
   "artist": "Musia",
   "subtitle": "A full LALACHAN music video for Aya Chan Hikari Ame",
@@ -30,7 +29,7 @@
   },
   "canonicalUrl": "https://fun.lazying.art/#aya-chan-hikari-ame-full-mv",
   "share": {
-    "title": "Aya Chan Hikari Ame Full MV - Fun Lazying Art",
+    "title": "阿芽酱，光之雨 · Aya Chan, Rain of Light · MV - Musia",
     "description": "A hopeful LALACHAN music video with Japanese lyrics, English and Chinese translations, and chord timing.",
     "url": "https://fun.lazying.art/#aya-chan-hikari-ame-full-mv",
     "image": "assets/covers/aya-chan-hikari-ame-16x9.png",
@@ -39,7 +38,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "Aya Chan Hikari Ame cover",
+      "label": "阿芽酱，光之雨 · Aya Chan, Rain of Light · MV cover",
       "role": "cover",
       "src": "assets/covers/aya-chan-hikari-ame-16x9.png",
       "mime": "image/png",
@@ -1051,5 +1050,10 @@
     "coverSource": "Reuses website/assets/covers/aya-chan-hikari-ame-16x9.png from the existing Aya Chan Hikari Ame song item.",
     "lyricCorrection": "Reuses the existing pure song Japanese vocal lyric set, previously prepared with listening/ASR-style correction policy and reviewed timing; MV video is song-locked to that audio.",
     "subtitlePolicy": "Display Japanese lyrics with real reading metadata from the pure song item, plus English and Simplified Chinese translations; do not use the weaker LazyEdit MV furigana export because it had empty furigana_pairs."
+  },
+  "displayTitle": "阿芽酱，光之雨 · Aya Chan, Rain of Light · MV",
+  "workId": "aya-chan-hikari-ame",
+  "edition": {
+    "status": "companion"
   }
 }

@@ -3,14 +3,11 @@
   "version": 1,
   "id": "one-sky-three-lights-mixed",
   "kind": "song",
-  "title": "One Sky, Three Lights",
+  "title": "一片天空，三道光 · One Sky, Three Lights",
   "localizedTitles": {
-    "mul": "One Sky, Three Lights",
-    "en": "One Sky, Three Lights",
-    "zh": "一片天空，三道光",
     "zh-Hans": "一片天空，三道光",
-    "ja": "ひとつの空、三つの光",
-    "yue-Hant": "一片天三盞燈"
+    "en": "One Sky, Three Lights",
+    "ja": "ひとつの空、三つの光"
   },
   "artist": "Musia",
   "subtitle": "A multilingual song with trilingual lyric display",
@@ -19,7 +16,7 @@
   "duration": 64.032,
   "canonicalUrl": "https://fun.lazying.art/#one-sky-three-lights-mixed",
   "share": {
-    "title": "One Sky, Three Lights - Fun Lazying Art",
+    "title": "一片天空，三道光 · One Sky, Three Lights - Musia",
     "description": "A multilingual Musia song with synchronized lyrics, translations, and chord timing.",
     "url": "https://fun.lazying.art/#one-sky-three-lights-mixed",
     "image": "assets/covers/one-sky-three-lights-16x9.png",
@@ -28,7 +25,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "One Sky, Three Lights cover",
+      "label": "一片天空，三道光 · One Sky, Three Lights cover",
       "role": "cover",
       "src": "assets/covers/one-sky-three-lights-16x9.png",
       "mime": "image/png",
@@ -46,11 +43,11 @@
     },
     "primaryAudio": {
       "id": "one-sky-mixed",
-      "label": "Mixed vocal",
+      "label": "English · 中文 · 日本語",
       "roleLabel": "Vocal",
       "role": "vocal",
       "languageCode": "mul",
-      "languageLabel": "Mixed",
+      "languageLabel": "English · 中文 · 日本語",
       "lyricSetId": "mixed-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/one-sky-three-lights-mixed.mp3",
       "mime": "audio/mpeg",
@@ -300,20 +297,22 @@
             "degree": ""
           }
         ]
-      }
+      },
+      "selectorLabel": "English · 中文 · 日本語"
     },
     "alternateAudio": [
       {
         "id": "one-sky-yue",
-        "label": "Cantonese vocal",
+        "label": "粵語",
         "roleLabel": "Vocal",
         "role": "vocal",
         "languageCode": "yue-Hant",
-        "languageLabel": "廣東話",
+        "languageLabel": "粵語",
         "lyricSetId": "yue-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/one-sky-three-lights-yue-Hant.mp3",
         "mime": "audio/mpeg",
-        "guide": "Mixed vocal guide"
+        "guide": "Mixed vocal guide",
+        "selectorLabel": "粵語"
       }
     ]
   },
@@ -511,5 +510,10 @@
         "sourceText": "Three lights, one dream alive"
       }
     ]
+  },
+  "displayTitle": "一片天空，三道光 · One Sky, Three Lights",
+  "workId": "one-sky-three-lights",
+  "edition": {
+    "status": "selected"
   }
 }

@@ -909,6 +909,7 @@ function publicAssetRole(asset) {
 }
 
 function displayTitleForAsset(asset = activePlayableAsset()) {
+  if (state.manifest?.displayTitle) return state.manifest.displayTitle;
   const titles = state.manifest?.localizedTitles || {};
   const code = asset?.languageCode || activeTimingTrack()?.language?.code || "";
   return titles[code] || titles[languageKey(code)] || state.manifest?.title || "Fun Lazying Art";
@@ -1192,6 +1193,7 @@ function playableAssets(manifest) {
     if (embedUrl) result.push({ ...item, id: item.id || item.label || embedUrl, label: item.label || "External", type: "external-video", embedUrl, url: provider === "youtube" ? youtubeWatchUrl(item) : (item.url || embedUrl) });
   }
   for (const item of assets.alternateAudio || []) {
+    if (item.hidden && !state.showAllMedia && !state.hiddenOnlyMedia) continue;
     if (item.src) result.push({ ...item, id: item.id || item.label || item.src, label: item.label || item.id || "Audio", type: "audio", src: item.src });
   }
   return result;

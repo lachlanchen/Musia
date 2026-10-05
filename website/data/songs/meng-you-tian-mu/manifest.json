@@ -3,11 +3,11 @@
   "version": 1,
   "id": "meng-you-tian-mu",
   "kind": "song",
-  "title": "梦游天姥吟留别 · 旧梦版",
+  "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 01",
   "localizedTitles": {
-    "zh-Hans": "梦游天姥吟留别 · 旧梦版",
-    "en": "Dreaming of Tianmu · Legacy Adaptation",
-    "ja": "夢遊天姥吟留別・旧夢版"
+    "zh-Hans": "梦游天姥吟留别 · Archive 01",
+    "en": "Dreaming of Tianmu · Archive 01",
+    "ja": "夢遊天姥吟留別 · Archive 01"
   },
   "artist": "Musia",
   "description": "A legacy ACE-Step Mandarin normal-song adaptation inspired by Li Bai's 梦游天姥吟留别, with ASR-corrected trilingual lyrics.",
@@ -15,7 +15,7 @@
   "duration": 112.0,
   "canonicalUrl": "https://fun.lazying.art/#meng-you-tian-mu",
   "share": {
-    "title": "梦游天姥吟留别 · 旧梦版 - Fun Lazying Art",
+    "title": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 01 - Musia",
     "description": "A legacy Musia Mandarin normal-song adaptation of Li Bai's dream journey to Mount Tianmu.",
     "url": "https://fun.lazying.art/#meng-you-tian-mu",
     "image": "assets/covers/meng-you-tian-mu-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "梦游天姥吟留别 旧梦版 cover",
+      "label": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/meng-you-tian-mu-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/meng-you-tian-mu-zh-Hans-ace-20260701.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -925,5 +926,19 @@
     "coverSource": "/home/lachlan/.codex/generated_images/019f0842-25ba-7bd2-9d4b-0b1c60d8a951/ig_0ff40dcbca0516cf016a43fbcd8d548191a22a32fd11247aec.png",
     "publicAudio": "meng-you-tian-mu-zh-Hans-ace-20260701.mp3"
   },
-  "artifacts": []
+  "artifacts": [],
+  "displayTitle": "梦游天姥吟留别 · Dreaming of Tianmu · Archive 01",
+  "workId": "meng-you-tian-mu",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
+  }
 }

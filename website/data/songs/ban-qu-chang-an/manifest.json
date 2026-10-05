@@ -3,25 +3,25 @@
   "version": 1,
   "id": "ban-qu-chang-an",
   "kind": "song",
-  "title": "半曲长安 · MiniMax",
+  "title": "半曲长安 · The Melody I Left in Chang'an · Archive 01",
   "artist": "Musia",
   "localizedTitles": {
-    "zh-Hans": "半曲长安 · MiniMax",
-    "en": "The Melody I Left in Chang'an · MiniMax",
-    "ja": "長安に残した調べ · MiniMax"
+    "zh-Hans": "半曲长安 · Archive 01",
+    "en": "The Melody I Left in Chang'an · Archive 01",
+    "ja": "長安に残した調べ · Archive 01"
   },
   "description": "Half a melody waits in Chang'an; the other half travels across the Yellow River and red mountains, carrying a promise to return.",
   "caption": "半首琴声留在长安，一半随她越过千山。",
-  "generationCredit": "AI-generated music · MiniMax-Music3",
+  "generationCredit": "AI-generated music",
   "duration": 158.476190476,
   "canonicalUrl": "https://fun.lazying.art/#ban-qu-chang-an",
   "publication": {
-    "visibility": "public",
-    "stage": "published",
-    "listed": true
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
   },
   "share": {
-    "title": "半曲长安 · MiniMax | Musia",
+    "title": "半曲长安 · The Melody I Left in Chang'an · Archive 01 - Musia",
     "description": "Half a melody waits in Chang'an; the other half travels across the Yellow River and red mountains, carrying a promise to return.",
     "url": "https://fun.lazying.art/#ban-qu-chang-an",
     "image": "assets/covers/ban-qu-chang-an-16x9.png",
@@ -30,7 +30,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "半曲长安 cover",
+      "label": "半曲长安 · The Melody I Left in Chang'an · Archive 01 cover",
       "role": "cover",
       "src": "assets/covers/ban-qu-chang-an-16x9.png",
       "mime": "image/png",
@@ -3215,5 +3215,14 @@
         }
       ]
     }
-  }
+  },
+  "displayTitle": "半曲长安 · The Melody I Left in Chang'an · Archive 01",
+  "workId": "ban-qu-chang-an",
+  "edition": {
+    "status": "archive",
+    "number": 1
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 01",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links."
 }

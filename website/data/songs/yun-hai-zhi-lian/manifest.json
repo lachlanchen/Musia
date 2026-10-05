@@ -3,11 +3,11 @@
   "version": 1,
   "id": "yun-hai-zhi-lian",
   "kind": "song",
-  "title": "云海之恋 · DR Full Lyrics",
+  "title": "云海之恋 · Cloud Sea Love · Archive 03",
   "localizedTitles": {
-    "zh-Hans": "云海之恋 · DR 完整歌词版",
-    "en": "Cloud Sea Love · DR Full Lyrics",
-    "ja": "雲海の恋・DR完全歌詞版"
+    "zh-Hans": "云海之恋 · Archive 03",
+    "en": "Cloud Sea Love · Archive 03",
+    "ja": "雲海の恋 · Archive 03"
   },
   "artist": "Musia",
   "description": "A full-length DiffRhythm Mandarin cloud-sea love ballad with LRC-conditioned lyrics corrected against ASR evidence.",
@@ -15,7 +15,7 @@
   "duration": 284.955,
   "canonicalUrl": "https://fun.lazying.art/#yun-hai-zhi-lian",
   "share": {
-    "title": "云海之恋 · DR Full Lyrics - Fun Lazying Art",
+    "title": "云海之恋 · Cloud Sea Love · Archive 03 - Musia",
     "description": "A full-length Musia DiffRhythm Mandarin cloud-sea love ballad with corrected trilingual lyrics.",
     "url": "https://fun.lazying.art/#yun-hai-zhi-lian",
     "image": "assets/covers/yun-hai-zhi-lian-16x9.png",
@@ -24,7 +24,7 @@
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "云海之恋 · DR Full Lyrics cover",
+      "label": "云海之恋 · Cloud Sea Love · Archive 03 cover",
       "role": "cover",
       "src": "assets/covers/yun-hai-zhi-lian-16x9.png",
       "mime": "image/png",
@@ -49,7 +49,8 @@
       "languageLabel": "中文",
       "lyricSetId": "zh-vocal",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/yun-hai-zhi-lian-yunhai-changge-diffrhythm-full-285-20260630.mp3",
-      "mime": "audio/mpeg"
+      "mime": "audio/mpeg",
+      "selectorLabel": "中文"
     },
     "alternateAudio": []
   },
@@ -1377,5 +1378,19 @@
       "kind": "markdown",
       "path": "data/runs/yun-hai-zhi-lian-diffrhythm-full-285-clean-analysis/REPORT.md"
     }
-  ]
+  ],
+  "displayTitle": "云海之恋 · Cloud Sea Love · Archive 03",
+  "workId": "yun-hai-zhi-lian",
+  "edition": {
+    "status": "archive",
+    "number": 3
+  },
+  "hidden": true,
+  "hiddenLabel": "Archive 03",
+  "hiddenReason": "Earlier recording; retained for listening history and direct links.",
+  "publication": {
+    "visibility": "hidden",
+    "stage": "legacy",
+    "listed": false
+  }
 }
