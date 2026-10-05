@@ -57,9 +57,10 @@ def main():
                 page.wait_for_function("state.manifest?.id === 'luoshenfu-original-excerpt-preview'")
                 assert page.evaluate("playableAssets(state.manifest).filter(a=>a.type==='audio').length") == 2
                 page.goto(origin + "/#aya-chan-hikari-ame", wait_until="domcontentloaded")
-                page.wait_for_function("state.manifest?.id === 'aya-chan-hikari-ame'")
+                page.wait_for_function("state.activeAssetId === 'aya-hikari-ame-ja' && document.querySelector('#media-title').textContent === state.manifest.displayTitle")
                 before = page.locator("#media-title").inner_text()
                 page.select_option("#vocal-language-select", "aya-hikari-ame-en")
+                page.wait_for_function("state.activeAssetId === 'aya-hikari-ame-en'")
                 assert page.locator("#media-title").inner_text() == before
                 assert page.evaluate("playableAssets(state.manifest).filter(a=>a.type==='audio').length") == 3
                 assert not errors, errors
