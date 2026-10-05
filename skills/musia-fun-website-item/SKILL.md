@@ -103,7 +103,9 @@ Do not duplicate ruby by also putting pronunciation into the visible native text
 
 Catalog naming (owner update, October 5, 2026) supersedes model suffixes:
 use `Chinese title · English title`, one selected recording per work.
-Hide alternatives as `Chinese title · English title · Archive 01`; keep IDs,
+For Japanese originals, `Japanese title · English title` is also allowed; set
+`titleLanguage: "ja"` in the reviewed work-family map, not from the vocal toggle.
+Hide alternatives by appending ` · Archive 01` to the bilingual title; keep IDs,
 audio URLs and old direct links. Never put ACE, MiniMax, DR, SoulX or V2 in
 listener-facing names. Keep multilingual vocals and companion MVs; same-language
 alternate takes are archive-only. Unlisted previews are not silently promoted.

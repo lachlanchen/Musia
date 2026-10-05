@@ -35,6 +35,20 @@ class CatalogCurationTest(unittest.TestCase):
         self.assertTrue(old["hidden"])
         self.assertEqual(old["label"], "中文 · Archive 01")
 
+    def test_japanese_original_title_and_archive(self):
+        self.group["titleLanguage"] = "ja"
+        before = copy.deepcopy(musical_identity(self.manifest))
+        apply_entry(self.item, self.manifest, self.group, "selected")
+        self.assertEqual(self.item["title"], "テスト · Test Song")
+        apply_entry(self.item, self.manifest, self.group, "archive", 1)
+        self.assertEqual(self.item["title"], "テスト · Test Song · Archive 01")
+        self.assertEqual(before, musical_identity(self.manifest))
+
+    def test_unknown_title_language_is_rejected(self):
+        self.group["titleLanguage"] = "en"
+        with self.assertRaisesRegex(ValueError, "Unsupported catalog title language"):
+            apply_entry(self.item, self.manifest, self.group, "selected")
+
     def test_archive_is_idempotent_and_keeps_url(self):
         apply_entry(self.item, self.manifest, self.group, "archive", 2)
         before = copy.deepcopy((self.item, self.manifest))
@@ -63,7 +77,7 @@ class CatalogCurationTest(unittest.TestCase):
         songs = [i for i in visible if i["kind"] != "mv"]
         self.assertEqual(len(songs), len({i["workId"] for i in songs}))
         for item in catalog["items"]:
-            self.assertRegex(item["title"], r"[\u4e00-\u9fff].* · [A-Za-z]")
+            self.assertRegex(item["title"], r"[\u3040-\u30ff\u4e00-\u9fff].* · [A-Za-z]")
             self.assertIsNone(re.search(r"\b(?:ACE|MiniMax|SoulX|DiffRhythm|DR|V\d+)\b", item["title"], re.I))
             self.assertEqual(item["title"], updates[ROOT / "website" / item["manifest"]]["title"])
         self.assertIn("ban-qu-chang-an-ace-changfeng", {i["id"] for i in visible})

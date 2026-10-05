@@ -2,7 +2,11 @@
 
 The October 5, 2026 owner request supersedes model-based public suffixes.
 Use **Chinese title · English title** in the main library, player, native apps,
-share title and Atlas. Do not display ACE, MiniMax, DR, SoulX, V2, generation
+share title and Atlas. Japanese originals may use **Japanese title · English title**;
+set `titleLanguage: "ja"` on their work group (default: `zh-Hans`). This is a
+per-work title choice, not a switch on each vocal language. Aya Chan, Rain of
+Light and Dawnlight and Blossoms use their Japanese titles.
+Do not display ACE, MiniMax, DR, SoulX, V2, generation
 seeds, or workflow labels as part of a song's public title.
 
 ## Selection and Archives

@@ -32,7 +32,10 @@ def musical_identity(manifest):
 
 def apply_entry(item, manifest, group, status, number=0):
     before = copy.deepcopy(musical_identity(manifest))
-    base = f"{group['titles']['zh-Hans']} · {group['titles']['en']}"
+    title_language = group.get("titleLanguage", "zh-Hans")
+    if title_language not in {"zh-Hans", "ja"}:
+        raise ValueError(f"Unsupported catalog title language: {title_language}")
+    base = f"{group['titles'][title_language]} · {group['titles']['en']}"
     suffix = f" · Archive {number:02d}" if status == "archive" else " · MV" if status == "companion" else ""
     title = base + suffix
     for obj in (item, manifest):
