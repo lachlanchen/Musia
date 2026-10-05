@@ -83,10 +83,13 @@ def export_catalog(learning, target):
             asset_id, language = asset["id"], asset["language"]
             assets.append({"id": asset_id, "label": asset["label"], "languageCode": language,
                            "src": asset["audioUrl"], "duration": asset["duration"], "lyricSetId": asset_id})
-            lyric_path = f"lyrics/{asset_id}.json"
-            manifest["lyricSets"].append({"id": asset_id, "languageCode": language,
-                                          "textTracks": [{"code": language, "path": lyric_path}]})
-            write_json(directory / lyric_path, {"language": {"code": language}, "lines": asset["lyrics"]})
+            tracks = []
+            for track in asset["lyricTracks"]:
+                code = track["language"]
+                lyric_path = f"lyrics/{asset_id}/{code}.json"
+                tracks.append({"code": code, "path": lyric_path})
+                write_json(directory / lyric_path, {"language": {"code": code}, "lines": track["lines"]})
+            manifest["lyricSets"].append({"id": asset_id, "languageCode": language, "textTracks": tracks})
             study["assets"][asset_id] = {
                 "src": asset["audioUrl"], "languageCode": language, "duration": asset["duration"],
                 "bpm": asset["bpm"], "timeSignature": asset["timeSignature"],

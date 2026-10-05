@@ -73,6 +73,28 @@ def _id(value: Any) -> str:
     return value if isinstance(value, str) and ID_PATTERN.fullmatch(value) else ""
 
 
+def pinyin_tones(value: str) -> str:
+    """Format supplied pronunciation only; never infer a character's reading."""
+    def syllable(match):
+        letters = match[1].replace("u:", "ü").replace("U:", "Ü").replace("v", "ü").replace("V", "Ü")
+        tone = int(match[2])
+        if tone in (0, 5):
+            return letters
+        lower = letters.lower()
+        index = next((lower.index(v) for v in ("a", "e") if v in lower), -1)
+        if index < 0 and "ou" in lower:
+            index = lower.index("o")
+        if index < 0:
+            index = next((i for i in range(len(lower) - 1, -1, -1) if lower[i] in "iouü"), -1)
+        if index < 0:
+            return match[0]
+        mark = {"a": "āáǎà", "e": "ēéěè", "i": "īíǐì", "o": "ōóǒò", "u": "ūúǔù", "ü": "ǖǘǚǜ"}[lower[index]][tone - 1]
+        if letters[index].isupper():
+            mark = mark.upper()
+        return letters[:index] + mark + letters[index + 1:]
+    return re.sub(r"([A-Za-züÜ:]+)([0-5])", syllable, value)
+
+
 def _number(value: Any, low: float = 0, high: float = MAX_DURATION) -> float | None:
     if isinstance(value, bool) or not isinstance(value, (int, float)):
         return None
@@ -228,7 +250,7 @@ class PublicLibrary:
             return None
         return {"id": item["id"], "title": title, "artist": artist, "coverUrl": cover}
 
-    def lyrics(self, song_id: str, manifest: dict, asset: dict, duration: float) -> list[dict]:
+    def lyric_tracks(self, song_id: str, manifest: dict, asset: dict, duration: float) -> list[dict]:
         sets = _rows(manifest.get("lyricSets"), MAX_ASSETS)
         language = asset.get("languageCode")
         if asset.get("lyricSetId"):
@@ -243,10 +265,24 @@ class PublicLibrary:
             tracks = selected[0].get("textTracks", selected[0].get("tracks"))
         else:
             tracks = manifest.get("textTracks")
-        matches = [t for t in _rows(tracks, 32) if t.get("code") == language and _listed(t)]
-        if len(matches) != 1:
-            return []
-        path = matches[0].get("path")
+        candidates = [t for t in _rows(tracks, 32) if _id(t.get("code")) and _listed(t)]
+        result = []
+        for candidate in candidates:
+            code = candidate["code"]
+            # Ambiguous tracks must not silently borrow another vocal's translation.
+            if sum(t["code"] == code for t in candidates) != 1:
+                continue
+            lines = self.lyric_lines(song_id, candidate, duration)
+            if lines:
+                result.append({"language": code, "lines": lines})
+        return result
+
+    def lyrics(self, song_id: str, manifest: dict, asset: dict, duration: float) -> list[dict]:
+        return next((t["lines"] for t in self.lyric_tracks(song_id, manifest, asset, duration)
+                     if t["language"] == asset.get("languageCode")), [])
+
+    def lyric_lines(self, song_id: str, descriptor: dict, duration: float) -> list[dict]:
+        path, language = descriptor.get("path"), descriptor["code"]
         if not isinstance(path, str) or not path.startswith("lyrics/") or not path.endswith(".json"):
             return []
         track = _json(self.root, f"website/data/songs/{song_id}/{path}")
@@ -267,7 +303,7 @@ class PublicLibrary:
                     clean = {"text": word, **timing}
                     reading = _text(token.get("reading"), 256) or _text(token.get("pinyin"), 256)
                     if reading:
-                        clean["reading"] = reading
+                        clean["reading"] = pinyin_tones(reading) if language.startswith("zh") else reading
                     tokens.append(clean)
             result.append({"id": line_id, **span, "text": text, "tokens": sorted(tokens, key=lambda t: t["start"])})
             seen.add(line_id)
@@ -305,7 +341,8 @@ class PublicLibrary:
                 if span and note and len(melody) < MAX_EVENTS:
                     melody.append({**span, "note": note, "numberNote": _text(token.get("numberNote"), 32),
                                    "text": _text(token.get("text"), 256)})
-        lyrics = self.lyrics(song_id, manifest, source, duration)
+        tracks = self.lyric_tracks(song_id, manifest, source, duration)
+        lyrics = next((t["lines"] for t in tracks if t["language"] == source.get("languageCode")), [])
         signature = study.get("timeSignature", musical.get("timeSignature"))
         if not isinstance(signature, str) or not re.fullmatch(r"[1-9][0-9]?/(?:1|2|4|8|16|32)", signature):
             signature = None
@@ -318,6 +355,7 @@ class PublicLibrary:
                            "chords": _confidence(study.get("chordConfidence"), chords),
                            "melody": "analysis" if melody else "unavailable"},
             "beats": beats, "chords": sorted(chords, key=lambda c: c["start"]), "lyrics": lyrics,
+            "lyricTracks": tracks,
             "phrases": [{key: line[key] for key in ("id", "start", "end", "text")} for line in lyrics],
             "melody": sorted(melody, key=lambda m: m["start"]),
         }
@@ -352,7 +390,7 @@ def first_pulse(base_url: str) -> dict:
         "beats": [{"time": beat, "index": beat} for beat in range(20)],
         "chords": [{"start": start, "end": end, "name": name, "confidence": 1.0}
                    for start, end, name in EXERCISE_BARS],
-        "lyrics": [], "melody": [],
+        "lyrics": [], "lyricTracks": [], "melody": [],
         "phrases": [{"id": f"bar-{i + 1}", "start": start, "end": end, "text": name}
                     for i, (start, end, name) in enumerate(EXERCISE_BARS)],
     }

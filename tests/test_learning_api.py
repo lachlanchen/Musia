@@ -106,7 +106,7 @@ class LearningAPITest(unittest.TestCase):
         self.assertEqual(song["coverUrl"], "https://fun.lazying.art/assets/covers/public-song.png")
         for asset in song["assets"]:
             self.assertEqual(set(asset), {"id", "label", "language", "audioUrl", "duration", "bpm", "timeSignature",
-                                          "confidence", "beats", "chords", "lyrics", "phrases", "melody"})
+                                          "confidence", "beats", "chords", "lyrics", "lyricTracks", "phrases", "melody"})
             self.assertEqual(asset["confidence"], {"beats": "analysis", "chords": "analysis", "melody": "analysis"})
             self.assertTrue(all(set(beat) == {"time"} for beat in asset["beats"]))
             self.assertEqual(set(asset["melody"][0]), {"start", "end", "note", "numberNote", "text"})
@@ -125,6 +125,39 @@ class LearningAPITest(unittest.TestCase):
         self.assertEqual(en["phrases"], [{"id": "en-1", "start": 1, "end": 3, "text": "Sun"}])
         self.assertEqual(ja["beats"][0], {"time": 2})
         self.assertEqual(ja["chords"][0]["name"], "Am")
+
+    def test_translations_belong_to_selected_vocal(self):
+        en, ja = self.song()["assets"]
+        tracks = {t["language"]: t["lines"] for t in en["lyricTracks"]}
+        self.assertEqual(tracks["en"], en["lyrics"])
+        self.assertEqual(tracks["ja"][0]["text"], "TRANSLATION")
+        self.assertEqual(tracks["ja"][0]["start"], 9)
+        self.assertEqual(ja["lyricTracks"], [{"language": "ja", "lines": ja["lyrics"]}])
+
+    def test_translation_tracks_fail_closed(self):
+        descriptor = self.manifest["lyricSets"][0]["tracks"][1]
+        for change in ({"hidden": True}, {"path": "../../private.json"}, {"code": "zh-Hans"}):
+            saved = copy.deepcopy(descriptor)
+            descriptor.update(change)
+            self.save_sources()
+            self.assertEqual([t["language"] for t in self.song()["assets"][0]["lyricTracks"]], ["en"])
+            descriptor.clear()
+            descriptor.update(saved)
+        self.manifest["lyricSets"][0]["tracks"].append(copy.deepcopy(descriptor))
+        self.save_sources()
+        self.assertEqual([t["language"] for t in self.song()["assets"][0]["lyricTracks"]], ["en"])
+
+    def test_chinese_pronunciation_formats_without_inference(self):
+        self.assertEqual(learning.pinyin_tones("chuang1 bian1 nu:3 lve4 shui3 liu2 ou3 ma5"),
+                         "chuāng biān nǚ lüè shuǐ liú ǒu ma")
+        self.assertEqual(learning.pinyin_tones("窓 まど shēn"), "窓 まど shēn")
+        self.manifest["lyricSets"][0]["tracks"].append({"code": "zh-Hans", "path": "lyrics/en-vocal/zh.json"})
+        self.write_json("website/data/songs/public-song/lyrics/en-vocal/zh.json", {
+            "language": {"code": "zh-Hans"}, "lines": [{"id": "en-1", "start": 1, "end": 3,
+            "text": "身", "tokens": [{"text": "身", "start": 1, "end": 2, "pinyin": "shen1"}]}]})
+        self.save_sources()
+        track = self.song()["assets"][0]["lyricTracks"][-1]
+        self.assertEqual(track["lines"][0]["tokens"][0]["reading"], "shēn")
 
     def test_hidden_and_preview_checks_apply_to_detail_and_library(self):
         original_item, original_manifest = copy.deepcopy(self.item), copy.deepcopy(self.manifest)
