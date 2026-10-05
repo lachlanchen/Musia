@@ -51,3 +51,12 @@
   Prefer the documented universal archive/productbuild flow. Never treat an
   altool exit-zero result as success without checking its JSON product-errors
   and success-message. Preserve the separate beta CLI's formal-review guards.
+- The next native update is **0.1.2**, Apple build4 / Android code3. Read
+  `native-update-2026-10-05.md` for exact artifacts and provider readback. Do not
+  confuse `release.json`'s next candidate with the currently public/reviewed
+  0.1.1 builds. The owner explicitly chose **keep current Apple reviews;
+  prepare the next update**. Do not withdraw or replace either Apple review.
+- For multilingual/practice updates, retain per-vocal en/zh/ja selection,
+  pinyin/kana ruby, Settings > History and audio-clock synchronization. Ear
+  training scores are not microphone pitch or instrument-performance grades.
+  New permissions or grading claims require separate implementation and QA.
