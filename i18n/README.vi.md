@@ -13,6 +13,33 @@
 
 Musia là một nguyên mẫu nghiên cứu local-first cho bản địa hóa âm nhạc bằng AI. MVP hiện tại nhận một bài hát đầu vào, tách thành bốn stem Demucs `bass`, `drums`, `vocals`, `other`, tạo bản trộn `instrumental`, đặt bí danh giọng hát là `human_sound`, chép lời, ước lượng nhịp và tạo các đoạn hợp âm kiểu Chordify.
 
+## Ứng Dụng Musia
+
+[![Tải Musia trên Google Play](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [Mở ứng dụng web](https://musia.lazying.art)
+
+Android 0.1.1 đã có mặt với giá **2,99 USD**. Học qua nghe nhạc, luyện nhịp, sơ đồ hợp âm guitar, điều chỉnh tốc độ mà giữ nguyên cao độ và lặp từng câu nhạc. Không cần tài khoản hay thuê bao.
+
+[![Trang Google Play công khai, chụp ngày 5 tháng 10 năm 2026. Giá có thể khác theo khu vực.](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*Trang Google Play công khai, chụp ngày 5 tháng 10 năm 2026. Giá có thể khác theo khu vực.*
+
+### Bên Trong Ứng Dụng Android
+
+| Thư viện bài hát | Luyện tập có hướng dẫn |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="Thư viện bài hát"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="Luyện tập có hướng dẫn"> |
+
+Ảnh chụp thật của ứng dụng Android đã phát hành, không phải bản mô phỏng.
+
+<details>
+<summary>Xem trước ứng dụng macOS gốc (đang xét duyệt)</summary>
+
+Ứng dụng iOS và macOS gốc đã được gửi xét duyệt, chưa phát hành công khai tính đến ngày 5 tháng 10 năm 2026.
+
+![Không gian luyện tập Mac gốc với lời bài hát, tốc độ và thế bấm guitar](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ Nếu dùng Musia trong nghiên cứu, hãy trích dẫn repo này. GitHub đọ
 ## Trạng Thái
 
 Musia là phần mềm nghiên cứu giai đoạn đầu. Pipeline cục bộ dùng được cho thử nghiệm và tạo artifact, nhưng bộ nhận diện hợp âm vẫn là baseline nhẹ và lớp hát lại có thể hát được chưa sẵn sàng cho sản xuất. Hãy dùng bài hát bạn sở hữu, bài public-domain, bài có giấy phép hoặc nội dung do creator tải lên.
-

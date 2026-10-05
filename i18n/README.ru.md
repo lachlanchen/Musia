@@ -13,6 +13,33 @@
 
 Musia — локальный исследовательский прототип для AI-локализации музыки. Текущий MVP принимает песню, разделяет ее на четыре Demucs-stems `bass`, `drums`, `vocals` и `other`, создает микс `instrumental`, сохраняет вокал как `human_sound`, транскрибирует текст, оценивает биты и создает сегменты аккордов в стиле Chordify.
 
+## Приложение Musia
+
+[![Скачать Musia в Google Play](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [Открыть веб-приложение](https://musia.lazying.art)
+
+Android 0.1.1 доступен за **2,99 доллара США**. Учитесь с помощью прослушивания, упражнений на ритм, схем гитарных аккордов, изменения скорости без изменения высоты тона и повторения фраз. Учётная запись и подписка не нужны.
+
+[![Публичная страница Google Play, снимок от 5 октября 2026 года. Цена может различаться по регионам.](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*Публичная страница Google Play, снимок от 5 октября 2026 года. Цена может различаться по регионам.*
+
+### Внутри Android-приложения
+
+| Библиотека песен | Практика с подсказками |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="Библиотека песен"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="Практика с подсказками"> |
+
+Настоящие скриншоты опубликованного Android-приложения, не макеты.
+
+<details>
+<summary>Нативная версия macOS (на рассмотрении)</summary>
+
+Нативные приложения для iOS и macOS отправлены на проверку и ещё не опубликованы по состоянию на 5 октября 2026 года.
+
+![Нативный экран практики Mac с текстом песни, скоростью и аппликатурами гитары](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ song upload
 ## Статус
 
 Musia — раннее исследовательское ПО. Локальный pipeline работает для тестов и артефактов, но детектор аккордов остается легкой базовой версией, а слой исполнимого re-singing еще не готов к production. Используйте собственные песни, public-domain, лицензированные песни или материалы, загруженные авторами.
-

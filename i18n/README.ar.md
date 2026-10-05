@@ -13,6 +13,33 @@
 
 Musia هو نموذج بحثي محلي أولا لتوطين الموسيقى بالذكاء الاصطناعي. يأخذ MVP الحالي أغنية إدخال، ويفصلها إلى مسارات Demucs الأربعة `bass` و`drums` و`vocals` و`other`، وينشئ مزيج `instrumental`، ويحفظ الصوت البشري باسم `human_sound`، ثم يستخرج الكلمات والإيقاعات ومقاطع الأوتار بأسلوب Chordify.
 
+## تطبيق Musia
+
+[![احصل على Musia من Google Play](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [افتح تطبيق الويب](https://musia.lazying.art)
+
+يتوفر Android 0.1.1 بسعر **2.99 دولار أمريكي**. تعلّم بالاستماع، والتدرّب على الإيقاع، ومخططات أوتار الغيتار، وتغيير السرعة مع الحفاظ على طبقة الصوت، وتكرار المقاطع. لا يلزم حساب أو اشتراك.
+
+[![صفحة Google Play العامة، التُقطت في 5 أكتوبر 2026. قد تختلف الأسعار حسب المنطقة.](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*صفحة Google Play العامة، التُقطت في 5 أكتوبر 2026. قد تختلف الأسعار حسب المنطقة.*
+
+### داخل تطبيق Android
+
+| مكتبة الأغاني | تدريب موجّه |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="مكتبة الأغاني"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="تدريب موجّه"> |
+
+لقطات حقيقية لتطبيق Android من الإصدار المنشور، وليست تصاميم تجريبية.
+
+<details>
+<summary>معاينة تطبيق macOS الأصلي (قيد المراجعة)</summary>
+
+تطبيقَا iOS وmacOS الأصليان مقدّمان للمراجعة، ولم يُطرحا للعامة بعد حتى 5 أكتوبر 2026.
+
+![مساحة التدريب الأصلية على Mac مع الكلمات والسرعة ووضع الأصابع على الغيتار](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ song upload
 ## الحالة
 
 Musia برنامج بحثي مبكر. تعمل القناة المحلية للاختبار وإنتاج الملفات، لكن كاشف الأوتار ما زال خط أساس خفيفا، وطبقة إعادة الغناء القابلة للغناء ليست جاهزة للإنتاج بعد. استخدم الأغاني التي تملكها، أو أغاني النطاق العام، أو الأغاني المرخصة، أو المواد التي يرفعها أصحابها.
-

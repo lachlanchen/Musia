@@ -13,6 +13,33 @@
 
 Musia ist ein lokales Forschungsprototyp für KI-Musiklokalisierung. Das aktuelle MVP nimmt einen Song, trennt ihn in die vier Demucs-Stems `bass`, `drums`, `vocals` und `other`, erstellt einen `instrumental`-Mix, benennt die Stimme zusätzlich als `human_sound`, transkribiert Lyrics, schätzt Beats und erzeugt Chordify-artige Akkordsegmente.
 
+## Die Musia-App
+
+[![Musia bei Google Play herunterladen](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [Web-App öffnen](https://musia.lazying.art)
+
+Android 0.1.1 ist für **2,99 US-Dollar** erhältlich. Lerne mit Hörübungen, Rhythmustraining, Gitarrenakkord-Diagrammen, tonhöhenerhaltender Geschwindigkeitsregelung und Phrasenschleifen. Kein Konto oder Abonnement erforderlich.
+
+[![Öffentliche Google-Play-Seite, aufgenommen am 5. Oktober 2026. Regionale Preise können abweichen.](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*Öffentliche Google-Play-Seite, aufgenommen am 5. Oktober 2026. Regionale Preise können abweichen.*
+
+### In der Android-App
+
+| Songbibliothek | Geführtes Üben |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="Songbibliothek"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="Geführtes Üben"> |
+
+Echte Screenshots der veröffentlichten Android-App, keine Mockups.
+
+<details>
+<summary>Native macOS-Vorschau (in Prüfung)</summary>
+
+Die nativen iOS- und macOS-Apps sind zur Prüfung eingereicht und am 5. Oktober 2026 noch nicht öffentlich veröffentlicht.
+
+![Nativer Mac-Übungsbereich mit Liedtext, Wiedergabegeschwindigkeit und Gitarrengriffen](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ Wenn du Musia in Forschung nutzt, zitiere dieses Repository. GitHub liest [`CITA
 ## Status
 
 Musia ist frühe Forschungssoftware. Die lokale Pipeline funktioniert für Tests und Artefakte, aber der Akkorddetektor ist eine leichte Basislinie und die singbare Re-Singing-Schicht ist noch nicht produktionsreif. Nutze eigene Songs, Public-Domain-Material, lizenzierte Songs oder von Creators hochgeladene Inhalte.
-

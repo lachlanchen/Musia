@@ -13,6 +13,33 @@
 
 Musia는 로컬 우선 AI 음악 로컬라이제이션 연구 프로토타입입니다. 현재 MVP는 입력 곡을 Demucs의 네 스템 `bass`, `drums`, `vocals`, `other`로 분리하고, `instrumental` 믹스를 만들며, 보컬을 `human_sound`로 별칭 저장하고, 가사 전사, 비트 추정, Chordify 스타일 코드 구간을 생성합니다.
 
+## Musia 앱
+
+[![Google Play에서 Musia 받기](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [웹 앱 열기](https://musia.lazying.art)
+
+Android 0.1.1을 **US$2.99**에 이용할 수 있습니다. 듣기, 리듬 연습, 기타 코드 다이어그램, 음정을 유지하는 속도 조절과 구간 반복으로 배워 보세요. 계정이나 구독은 필요하지 않습니다.
+
+[![2026년 10월 5일에 촬영한 Google Play 공개 페이지입니다. 가격은 지역에 따라 다를 수 있습니다.](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*2026년 10월 5일에 촬영한 Google Play 공개 페이지입니다. 가격은 지역에 따라 다를 수 있습니다.*
+
+### Android 앱 화면
+
+| 노래 라이브러리 | 단계별 연습 |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="노래 라이브러리"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="단계별 연습"> |
+
+출시된 Android 앱의 실제 스크린샷이며 목업이 아닙니다.
+
+<details>
+<summary>네이티브 macOS 미리 보기 (심사 중)</summary>
+
+네이티브 iOS 및 macOS 앱은 심사에 제출되었으며, 2026년 10월 5일 기준 아직 공개 출시되지 않았습니다.
+
+![가사, 재생 속도 및 기타 운지법이 있는 네이티브 Mac 연습 화면](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ song upload
 ## 상태
 
 Musia는 초기 연구 소프트웨어입니다. 로컬 파이프라인은 테스트와 산출물 생성에 사용할 수 있지만, 코드 감지기는 가벼운 기준선이며 부를 수 있는 재가창 계층은 아직 프로덕션 준비가 되지 않았습니다. 본인 소유, 퍼블릭 도메인, 라이선스가 있는 곡 또는 창작자가 업로드한 자료를 사용하세요.
-

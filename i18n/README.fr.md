@@ -13,6 +13,33 @@
 
 Musia est un prototype de recherche local-first pour la localisation musicale par IA. Le MVP actuel prend une chanson, la sépare en quatre pistes Demucs `bass`, `drums`, `vocals` et `other`, crée un mix `instrumental`, expose la voix comme `human_sound`, transcrit les paroles, estime les temps et produit des segments d'accords de type Chordify.
 
+## L’Application Musia
+
+[![Télécharger Musia sur Google Play](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [Ouvrir l’application web](https://musia.lazying.art)
+
+Android 0.1.1 est disponible à **2,99 $US**. Apprenez grâce à l’écoute, aux exercices rythmiques, aux diagrammes d’accords de guitare, à la vitesse réglable sans modifier la hauteur et aux boucles de phrases. Aucun compte ni abonnement requis.
+
+[![Fiche publique Google Play, capturée le 5 octobre 2026. Le prix peut varier selon la région.](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*Fiche publique Google Play, capturée le 5 octobre 2026. Le prix peut varier selon la région.*
+
+### Dans l’Application Android
+
+| Bibliothèque musicale | Pratique guidée |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="Bibliothèque musicale"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="Pratique guidée"> |
+
+Captures réelles de l’application Android publiée, et non des maquettes.
+
+<details>
+<summary>Aperçu natif macOS (en cours d’examen)</summary>
+
+Les applications natives iOS et macOS ont été soumises à l’examen et ne sont pas encore publiques au 5 octobre 2026.
+
+![Espace de pratique natif Mac avec paroles, vitesse et doigtés de guitare](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ Si vous utilisez Musia en recherche, citez le dépôt. GitHub lit [`CITATION.cff
 ## Statut
 
 Musia est un logiciel de recherche précoce. La chaîne locale fonctionne pour les tests et les artefacts, mais le détecteur d'accords reste une base légère et la couche de re-chant chantable n'est pas encore prête pour la production. Utilisez des chansons que vous possédez, du domaine public, licenciées ou fournies par leurs créateurs.
-

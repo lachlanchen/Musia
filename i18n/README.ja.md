@@ -13,6 +13,33 @@
 
 Musia はローカル優先の AI 音楽ローカライズ研究プロトタイプです。現在の MVP は入力曲を受け取り、Demucs の 4 ステム `bass`、`drums`、`vocals`、`other` に分離し、`instrumental` ミックスを作り、ボーカルを `human_sound` として別名保存し、歌詞転写、ビート推定、Chordify 風のコード区間を生成します。
 
+## Musia アプリ
+
+[![Google Play で Musia を入手](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [ウェブアプリを開く](https://musia.lazying.art)
+
+Android 0.1.1 を **US$2.99** で公開しています。リスニング、リズム練習、ギターコード図、音程を保った速度調整、フレーズの繰り返しで学べます。アカウントや定期購入は不要です。
+
+[![2026年10月5日に撮影した Google Play の公開ページです。価格は地域により異なります。](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*2026年10月5日に撮影した Google Play の公開ページです。価格は地域により異なります。*
+
+### Android アプリの画面
+
+| 曲のライブラリ | ガイド付き練習 |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="曲のライブラリ"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="ガイド付き練習"> |
+
+公開済み Android アプリの実際の画面です。モックアップではありません。
+
+<details>
+<summary>ネイティブ macOS 版のプレビュー（審査中）</summary>
+
+ネイティブ iOS・macOS アプリは審査に提出済みで、2026年10月5日時点では一般公開されていません。
+
+![歌詞、再生速度、ギターの運指を表示するネイティブ Mac 練習画面](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ song upload
 ## 状態
 
 Musia は初期段階の研究ソフトウェアです。ローカルパイプラインはテストと成果物生成に使えますが、コード検出器は軽量ベースラインであり、歌えるリシング層はまだ本番品質ではありません。自分が権利を持つ曲、パブリックドメイン、ライセンス済み、または制作者がアップロードした素材を使ってください。
-

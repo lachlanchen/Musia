@@ -13,6 +13,33 @@
 
 Musia 是一个本地优先的 AI 音乐本地化研究原型。当前 MVP 接收一首输入歌曲，分离出 Demucs 的四个分轨 `bass`、`drums`、`vocals`、`other`，生成 `instrumental` 伴奏混音，把人声别名为 `human_sound`，并输出歌词转写、节拍和类似 Chordify 的和弦片段。
 
+## Musia 应用
+
+[![在 Google Play 下载 Musia](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [打开网页版](https://musia.lazying.art)
+
+Android 0.1.1 已上架，售价 **US$2.99**。通过聆听、节奏练习、吉他和弦指法图、保留音高的变速播放和乐句循环，逐步理解音乐。无需账号或订阅。
+
+[![Google Play 公开商店页面，截图于 2026 年 10 月 5 日。各地区价格可能不同。](../store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
+
+*Google Play 公开商店页面，截图于 2026 年 10 月 5 日。各地区价格可能不同。*
+
+### Android 应用实景
+
+| 歌曲库 | 引导练习 |
+| :---: | :---: |
+| <img src="../store/assets/readme/android-library.png" width="260" alt="歌曲库"> | <img src="../store/assets/readme/android-practice.png" width="260" alt="引导练习"> |
+
+已发布 Android 应用的真实截图，非界面模型图。
+
+<details>
+<summary>原生 macOS 预览（审核中）</summary>
+
+原生 iOS 和 macOS 应用已提交审核，截至 2026 年 10 月 5 日尚未正式公开发布。
+
+![原生 Mac 练习界面，包含歌词、播放速度和吉他指法](../store/assets/macos/03-song.png)
+
+</details>
+
 | Donate | PayPal | Stripe |
 | --- | --- | --- |
 | [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
@@ -120,4 +147,3 @@ song upload
 ## 状态
 
 Musia 仍是早期研究软件。本地流水线可以用于测试和生成分析产物，但和弦检测器仍是轻量基线，真正可演唱的重唱层尚未达到生产状态。请使用自有歌曲、公版歌曲、已授权歌曲或创作者上传的材料。
-
