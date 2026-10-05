@@ -1,5 +1,12 @@
 # Store Defaults
 
+- Current Apple formal state: read `apple-resubmission-2026-10-06.md` first.
+  Both 0.1.1 submissions were rejected for 4.3/4.2.6; all nine questions were
+  answered with evidence in each thread. Owner authorized the latest builds:
+  iOS and Mac **0.1.2 (4)** are now WAITING_FOR_REVIEW with exact build IDs in
+  that record. Preserve these queues. The October5 instruction to keep 0.1.1
+  pending applied before rejection and was superseded by this explicit request.
+  Do not represent accepted resubmission as Apple agreeing the issue is resolved.
 - The owner confirmed paid pricing of **USD 2.99** for both Apple and Google
   on 2026-09-26, also as the default for future releases. `release.json` is the
   machine-readable authority. Do not reuse another app's price or an earlier

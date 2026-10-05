@@ -1,5 +1,10 @@
 # Musia 0.1.2 Internal Testing
 
+October 6 follow-up: these same Apple builds are now formally resubmitted after
+the 0.1.1 rejection. Internal access is unchanged. See
+[the resubmission record](apple-resubmission-2026-10-06.md); the October 5
+review-preservation observations below are historical.
+
 The owner explicitly authorized TestFlight/internal distribution while the
 existing iOS and macOS 0.1.1 App Store reviews continue. Internal testing must
 not replace the formal version's attached build or cancel its review.

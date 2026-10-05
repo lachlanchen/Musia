@@ -1,5 +1,8 @@
 # Native 0.1.2 Update
 
+Current Apple review state is in [the October 6 resubmission record](apple-resubmission-2026-10-06.md).
+The implementation and October 5 delivery evidence below remain unchanged.
+
 ## Release Scope
 
 Native iPhone/iPad, macOS and Android now include:

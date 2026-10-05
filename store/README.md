@@ -7,6 +7,13 @@ a native worker is building.
 
 ## Actual State
 
+**2026-10-06:** Apple rejected both 0.1.1 submissions under 4.3/4.2.6. Detailed
+answers and evidence were sent in both review threads, latest **0.1.2 (4)**
+builds replaced the old attachments, and both iOS/iPad and Mac are now
+**WAITING_FOR_REVIEW**. This is not approval. See
+[the resubmission record](apple-resubmission-2026-10-06.md). Existing TestFlight
+access continues; Google Play was not changed in this task.
+
 **2026-10-05:** Google Play **0.1.1 (2) is published**, with Production Active
 in 172 countries/regions. The public US listing is verified at **USD 2.99**.
 Managed publishing remains enabled for future changes. Apple iOS/macOS remain

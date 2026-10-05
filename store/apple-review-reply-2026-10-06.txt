@@ -1,0 +1,21 @@
+Thank you. We have attached full answers to all nine questions, a build-specific walkthrough, and genuine native screenshots. We understand that a version-number change alone does not resolve 4.3/4.2.6.
+
+1. Musia helps a beginner connect a song's beat, sung phrases and guitar chord changes. Our founder practiced chords for about three years but still could not confidently enter on time or sing along. Musia puts the recording, phrase loops, timed words, chord transitions and finger positions on one audio clock; a synthesized Em/Am exercise supplies a known starting reference.
+
+2. Intended users are adult beginners/returning guitar hobbyists who can form some chords but struggle to hear timing or melody. They can start by listening and repeating, without singing, reading a score, recording a microphone or opening another app.
+
+3. The specific combination is a known beginner reference, phrase-by-phrase practice on our music, and per-recording multilingual sung words/readings. We do not claim loops or metronomes are unique. Unlike a static chord sheet or book reader, the learning context follows the actual audio playhead, including slowed playback and loops. Analyzed song data is explicitly not a guaranteed score.
+
+4. This is a small founder-led beta, not a claimed large study. iPhone TestFlight feedback identified obscured navigation and missing chords. Submitted 0.1.1 fixed mini-player placement and all 24 major/minor shapes; the owner confirmed audible/locked-screen playback. Later feedback produced 0.1.2 (4): EN/ZH/JA multi-select lyrics, pinyin/furigana, History under Settings, Do Re Mi listening quizzes and an audio-clocked 40-160 BPM metronome with Em/Am changes. Both Apple platforms have that internal build. Native UI/core/audio checks and their limits are detailed in the attachment, separate from human feedback.
+
+5. Musia is standalone, not a language/song-specific clone or a dependency of another app. The attachment compares every other company app record. In brief: Bunko reads books; OnlyIdeas handles research papers; EchoMind handles AI/social conversations; AiMemo handles notes; L & N/ClearPair teach speech/letter contrasts; LazyEdit edits video; LazyOracle/Auspice explore symbolic systems; remaining products concern games, stories, glasses or community/credit records. Musia teaches listening and guitar timing with songs.
+
+6. Adding media playback to one of those apps would not deliver Musia's synchronized music-practice instrument, local musical reference synthesis and practice state. Implementing that whole workflow there would add an unrelated music product, not a content pack. All music languages and recordings are consolidated in Musia.
+
+7. iOS and Mac share MusiaCore, playback, catalog and practice views within this same app record. Company build/signing/store/hosting infrastructure is reused, not another product's app shell. GlassAgent's internal integration workspace references the Musia repo; that is disclosed in the attachment. Proposed shared-company login is not shipped. The source/target audit and its limitations are included.
+
+8. Native targets use Apple frameworks and Musia-owned modules, without a third-party app/template runtime. Separate desktop tools such as ACE-Step produce recordings/data; their code/models are not bundled in this app. Our contribution is the native synchronized practice workflow and local exercises, not an AI generator wrapper.
+
+9. This is our own concept, branding and creator-curated catalog, submitted directly by LazyingArt LLC, not on behalf of a template-service client. The owner confirmed commercial distribution rights. Some recordings set public-domain poems; we do not claim those historical texts as our writing.
+
+Please review the answers and the substantial 0.1.2 feature evidence. We will follow your requested clarification process rather than blindly resubmitting the same rejected binary.
