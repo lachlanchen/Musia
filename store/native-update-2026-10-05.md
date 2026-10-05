@@ -21,13 +21,17 @@ leaving the lesson or backgrounding the app.
 | Platform | Version | SHA-256 | Delivery |
 | --- | --- | --- | --- |
 | Android | 0.1.2 (3) | `0bd51cd813effb9082a297a0e310dbdfa5495dcf361f19df1a7b1c7a22b639e3` | Internal testing available; production changes in review |
-| iOS | 0.1.2 (4) | `10c1d046df2970a99995ece42b1ea670b855817e20b1b2dac37135e37721ddb7` | Signed IPA prepared; not uploaded |
-| macOS | 0.1.2 (4) | `8b851ea56603eec7d50f84584a8175ec3b29abcdc2fd7d41df34b23ce2187807` | Signed universal PKG prepared; not uploaded |
+| iOS | 0.1.2 (4) | `10c1d046df2970a99995ece42b1ea670b855817e20b1b2dac37135e37721ddb7` | TestFlight internal: VALID, IN_BETA_TESTING |
+| macOS | 0.1.2 (4) | `8b851ea56603eec7d50f84584a8175ec3b29abcdc2fd7d41df34b23ce2187807` | TestFlight internal: VALID, IN_BETA_TESTING |
 
 The owner explicitly chose to preserve the Apple review queues. Fresh API
 readback on October 5 still shows **iOS 0.1.1 and macOS 0.1.1 WAITING_FOR_REVIEW**.
-Neither submission was withdrawn, replaced or resubmitted. Preparation of 0.1.2
-does not mean that version is in TestFlight or App Store review.
+Neither submission was withdrawn, replaced or resubmitted. The owner then
+authorized internal distribution: both 0.1.2 packages were uploaded once and
+attached to the existing TestFlight group. Final API readback at 08:18 UTC
+confirmed installable internal states and unchanged 0.1.1 review attachments.
+This does not submit 0.1.2 for App Store review. See
+[the delivery record and tester checklist](testflight-0.1.2.md).
 
 Google 0.1.1 (2) remains the public production release while 0.1.2 is reviewed.
 Code 3 was uploaded once, qualified against the exact signed artifact, and

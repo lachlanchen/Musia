@@ -56,6 +56,18 @@
   confuse `release.json`'s next candidate with the currently public/reviewed
   0.1.1 builds. The owner explicitly chose **keep current Apple reviews;
   prepare the next update**. Do not withdraw or replace either Apple review.
+- The owner subsequently authorized distributing 0.1.2 to **TestFlight and
+  internal testing while those formal reviews continue**. Preserve reviewed
+  version/build attachments, but do not hold an authorized internal beta merely
+  because a prior App Store version is in review. Confirm VALID processing and
+  the existing internal group's exact build relationship before calling it ready.
+- This delivery is complete: iOS/Mac 0.1.2 (4) are VALID, IN_BETA_TESTING;
+  Android 0.1.2 (3) is available internally. Read `testflight-0.1.2.md` before
+  any retry. Final October 5 readback preserved both 0.1.1 review attachments.
+- Apple build lookup must include platform. iOS and macOS may both use build4;
+  verify each build's prerelease platform/version instead of treating the number
+  alone as app-wide identity. Unknown platform and repeated uploads still fail
+  closed. Both altool exit status and its JSON success must be checked.
 - For multilingual/practice updates, retain per-vocal en/zh/ja selection,
   pinyin/kana ruby, Settings > History and audio-clock synchronization. Ear
   training scores are not microphone pitch or instrument-performance grades.

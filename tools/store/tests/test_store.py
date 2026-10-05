@@ -83,6 +83,30 @@ class StoreTests(unittest.TestCase):
         with self.assertRaises(s.GuardError):
             cli.apple_owner_tester(api, "musia", "owner@example.test")
 
+    def test_apple_same_build_number_is_scoped_to_platform(self):
+        from unittest.mock import Mock
+        api = Mock()
+        ios = {"id": "ios-4", "attributes": {"version": "4"}}
+        mac = {"id": "mac-4", "attributes": {"version": "4"}}
+        api.rows.return_value = [mac, ios]
+        api.request.side_effect = lambda method, path: {"data": {"attributes": {
+            "version": "0.1.2", "platform": "MAC_OS" if "/mac-4/" in path else "IOS"}}}
+        self.assertEqual(s.apple_platform_builds(api, "musia", "4", "IOS"), [ios])
+        self.assertEqual(s.apple_platform_builds(api, "musia", "4", "MAC_OS"), [mac])
+        self.assertIn("filter%5Bapp%5D=musia", api.rows.call_args.args[0])
+        api.request.assert_called_with("GET", "/v1/builds/ios-4/preReleaseVersion")
+
+    def test_apple_build_lookup_fails_closed_on_unknown_identity(self):
+        from unittest.mock import Mock
+        api = Mock()
+        api.rows.return_value = [{"id": "unverified", "attributes": {"version": "4"}}]
+        api.request.return_value = {"data": {"attributes": {"version": "0.1.2"}}}
+        with self.assertRaises(s.GuardError):
+            s.apple_platform_builds(api, "musia", "4", "IOS")
+        api.rows.return_value[0]["attributes"]["version"] = "5"
+        with self.assertRaises(s.GuardError):
+            s.apple_platform_builds(api, "musia", "4", "IOS")
+
     def test_other_app_identity_and_formal_submit_are_rejected(self):
         for field, value in (("bundle_id", "art.lazying.bunko"), ("formal_submission_enabled", True),
                              ("google_developer_id", "123")):

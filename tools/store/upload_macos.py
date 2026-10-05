@@ -9,7 +9,7 @@ import plistlib
 import sys
 import tempfile
 
-from storelib import BUNDLE, TEAM, Apple, RUNTIME, config, digest, lock, now, require, run, write_private
+from storelib import BUNDLE, TEAM, Apple, RUNTIME, apple_platform_builds, config, digest, lock, now, require, run, write_private
 
 
 def check_altool_result(raw):
@@ -83,7 +83,7 @@ def main():
             return
         require(not (folder / "upload-started.json").exists(), "Upload attempted already; reconcile provider before any retry")
         app = Apple().app()
-        existing = Apple().rows(f"/v1/builds?filter[app]={app['id']}&filter[version]={args.build}&include=preReleaseVersion")
+        existing = apple_platform_builds(Apple(), app["id"], args.build, "MAC_OS")
         require(not existing, "Build number exists on this app; reconcile before uploading")
         write_private(folder / "upload-started.json", receipt)
         uploaded = run(["xcrun", "altool", "--upload-app", *common], env=env, log=folder / "upload.json")

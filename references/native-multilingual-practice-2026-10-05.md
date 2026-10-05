@@ -126,9 +126,13 @@ Backend tests: 32 passed. Deployment tests: 8 passed. Store-tool tests: 40 passe
 Private screenshots, native results and hash-bound QA receipts are retained under
 `store/.runtime/practice-012/`; Apple xcresults also remain on their test Macs.
 
-iOS and universal macOS 0.1.2 (4) packages are signed and prepared. This is not an
-Apple review submission or TestFlight delivery. Preserve 0.1.1's existing review
-queues. See `store/native-update-2026-10-05.md` for provider state.
+iOS and universal macOS 0.1.2 (4) packages subsequently reached VALID and
+IN_BETA_TESTING after the owner authorized internal delivery. Android 0.1.2 (3)
+remains available to internal testers. Apple's 0.1.1 review queues and attached
+builds were preserved. The delivery tools now distinguish iOS and Mac builds
+with the same number; 42 release-tool tests pass. See
+[the internal-testing record](../store/testflight-0.1.2.md) for exact provider
+state and the tester checklist. This is not a new Apple production submission.
 
 ## Scope of the First Beginner Tools
 

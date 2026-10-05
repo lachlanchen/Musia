@@ -11,7 +11,8 @@ import sys
 import urllib.parse
 
 from build_native import build, check_profile, decode_profile, inspect_android, inspect_ios
-from storelib import Apple, BUNDLE, GuardError, RUNTIME, TEAM, check_qa, config, digest, lock, now, private_dir, private_file, read_json, release, require, run, snapshot_artifact, write_private
+from storelib import Apple, BUNDLE, GuardError, RUNTIME, TEAM, apple_platform_builds, check_qa, config, digest, lock, now, private_dir, private_file, read_json, release, require, run, snapshot_artifact, write_private
+from upload_macos import check_altool_result
 
 
 def apple_inventory():
@@ -111,8 +112,7 @@ def upload_apple(args):
     require(candidate["platform"] == "ios", "Wrong candidate platform")
     cfg, api = config(), Apple()
     app = api.app()
-    existing = api.rows("/v1/builds?" + urllib.parse.urlencode({"filter[app]": app["id"],
-                          "filter[version]": candidate["build_number"], "limit": 200}))
+    existing = apple_platform_builds(api, app["id"], candidate["build_number"], "IOS")
     require(not existing, "Build number already exists; reconcile processing instead of uploading again")
     if not args.confirm_upload:
         return {"state": "qualified_upload_plan", "app_id": app["id"], "sha256": candidate["artifact_sha256"]}
@@ -123,10 +123,12 @@ def upload_apple(args):
         key = private_file(cfg["asc_key_path"])
         require(key.name == "AuthKey_" + cfg["asc_key_id"] + ".p8", "altool API key filename mismatch")
         env = dict(os.environ, DEVELOPER_DIR=cfg["xcode_developer_dir"], API_PRIVATE_KEYS_DIR=str(key.parent))
-        common = ["--type", "ios", "--file", candidate["artifact"], "--apiKey", cfg["asc_key_id"], "--apiIssuer", cfg["asc_issuer"]]
-        run(["/usr/bin/xcrun", "altool", "--validate-app", *common], env=env, log=RUNTIME / "apple/validate.log")
+        common = ["--type", "ios", "--file", candidate["artifact"], "--apiKey", cfg["asc_key_id"], "--apiIssuer", cfg["asc_issuer"], "--output-format", "json"]
+        checked = run(["/usr/bin/xcrun", "altool", "--validate-app", *common], env=env, log=RUNTIME / "apple/validate.log")
+        check_altool_result(checked)
         write_private(journal, {"state": "started", "at": now(), "sha256": candidate["artifact_sha256"], "app_id": app["id"]})
-        run(["/usr/bin/xcrun", "altool", "--upload-app", *common], env=env, log=RUNTIME / "apple/upload.log")
+        uploaded = run(["/usr/bin/xcrun", "altool", "--upload-app", *common], env=env, log=RUNTIME / "apple/upload.log")
+        check_altool_result(uploaded)
         write_private(journal, {"state": "upload_accepted_processing_unverified", "at": now(),
                                 "sha256": candidate["artifact_sha256"], "app_id": app["id"]})
         return {"state": "upload_accepted_processing_unverified", "submitted_for_review": False}
@@ -154,7 +156,7 @@ def invite_apple(args):
     upload = read_json(private_file(journal))
     require(upload["state"] == "upload_accepted_processing_unverified" and upload["app_id"] == app["id"],
             "No upload receipt binding this IPA to Musia")
-    builds = api.rows("/v1/builds?" + urllib.parse.urlencode({"filter[app]": app["id"], "filter[version]": candidate["build_number"], "limit": 200}))
+    builds = apple_platform_builds(api, app["id"], candidate["build_number"], "IOS")
     require(len(builds) == 1 and builds[0]["attributes"]["processingState"] == "VALID", "Exact build not VALID")
     selected = builds[0]
     owner = api.request("GET", f"/v1/builds/{selected['id']}/app")["data"]

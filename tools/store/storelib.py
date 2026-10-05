@@ -237,6 +237,22 @@ class Apple:
         return app
 
 
+def apple_platform_builds(api, app_id, build_number, platform):
+    """Build numbers can overlap between an app's iOS and macOS trains."""
+    require(platform in {"IOS", "MAC_OS"}, "Unsupported Musia Apple platform")
+    query = urllib.parse.urlencode({"filter[app]": app_id, "filter[version]": str(build_number), "limit": 200})
+    selected = []
+    for row in api.rows("/v1/builds?" + query):
+        require(row.get("attributes", {}).get("version") == str(build_number), "Apple build filter mismatch")
+        prerelease = api.request("GET", f"/v1/builds/{row['id']}/preReleaseVersion")["data"]
+        attributes = prerelease.get("attributes", {})
+        require(attributes.get("platform") in {"IOS", "MAC_OS", "TV_OS", "VISION_OS"}
+                and bool(attributes.get("version")), "Build platform/version could not be verified")
+        if attributes["platform"] == platform:
+            selected.append(row)
+    return selected
+
+
 def check_qa(build_path, qa_path, *, internal_beta=False):
     build_path = private_file(build_path)
     build = read_json(build_path)
