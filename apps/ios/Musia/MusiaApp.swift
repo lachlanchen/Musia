@@ -47,8 +47,8 @@ struct RootView: View {
                 .tabItem { Label("Library", systemImage: "music.note.list") }
             page { LessonsView(showPractice: $showPractice) }
                 .tabItem { Label("Lessons", systemImage: "book") }
-            page { HistoryView() }
-                .tabItem { Label("History", systemImage: "clock.arrow.circlepath") }
+            page { SettingsView() }
+                .tabItem { Label("Settings", systemImage: "gearshape") }
         }
     }
 

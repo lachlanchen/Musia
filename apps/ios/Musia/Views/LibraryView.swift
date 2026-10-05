@@ -34,6 +34,7 @@ struct LibraryView: View {
                         showPractice = true
                     } label: { LibraryRow(item: item) }
                     .buttonStyle(.plain)
+                    .accessibilityIdentifier("library.song.\(item.id)")
                 }
                 if !catalog.loadingLibrary && catalog.libraryError == nil && filtered.isEmpty {
                     ContentUnavailableView(search.isEmpty ? "No songs yet" : "No matching songs",

@@ -2,6 +2,32 @@ import MusiaCore
 import SwiftUI
 import UniformTypeIdentifiers
 
+struct SettingsView: View {
+    @AppStorage("lyricLanguages") private var lyricLanguages = LyricLanguages.defaults
+
+    var body: some View {
+        List {
+            Section {
+                NavigationLink { HistoryView() } label: {
+                    Label("Practice history", systemImage: "clock.arrow.circlepath")
+                }
+            }
+            Section("Lyric languages") {
+                ForEach(["en", "zh", "ja"], id: \.self) { code in
+                    Toggle(LyricLanguages.label(code), isOn: Binding(
+                        get: { LyricLanguages.selected(code, in: lyricLanguages) },
+                        set: { lyricLanguages = LyricLanguages.setting(code, enabled: $0, in: lyricLanguages) }))
+                }
+            }
+            Section("Musia") {
+                Link("Privacy policy", destination: URL(string: "https://musia.lazying.art/privacy")!)
+                Link("Support", destination: URL(string: "https://musia.lazying.art/support")!)
+            }
+        }
+        .navigationTitle("Settings")
+    }
+}
+
 private struct HistoryDocument: FileDocument {
     static var readableContentTypes: [UTType] { [.json] }
     var data: Data

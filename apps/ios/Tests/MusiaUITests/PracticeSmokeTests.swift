@@ -2,6 +2,73 @@ import XCTest
 
 final class PracticeSmokeTests: XCTestCase {
     @MainActor
+    func testBeginnerPracticeAndSettings() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-lyricLanguages", "en,zh,ja"]
+        app.launch()
+        defer { app.terminate() }
+        func capture(_ name: String) {
+            let image = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            image.name = name; image.lifetime = .keepAlways; add(image)
+        }
+        let lessons = app.buttons.matching(NSPredicate(format: "label == 'Lessons'")).firstMatch
+        XCTAssertTrue(lessons.waitForExistence(timeout: 15)); lessons.tap()
+        let pitch = app.buttons["lesson.pitch"]
+        XCTAssertTrue(pitch.waitForExistence(timeout: 10)); pitch.tap()
+        let doNote = app.buttons["pitch.note.0"]
+        XCTAssertTrue(doNote.waitForExistence(timeout: 5)); doNote.tap()
+        XCTAssertTrue(app.staticTexts.containing(NSPredicate(format: "label CONTAINS '261.6 Hz'")).firstMatch.waitForExistence(timeout: 5))
+        capture("pitch-learn")
+        app.segmentedControls.buttons["Quiz"].tap()
+        XCTAssertFalse(doNote.isEnabled)
+        app.buttons["pitch.listen"].tap()
+        XCTAssertTrue(doNote.isEnabled); doNote.tap()
+        XCTAssertFalse(doNote.isEnabled)
+        capture("pitch-score")
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        let metronome = app.buttons["lesson.metronome"]
+        XCTAssertTrue(metronome.waitForExistence(timeout: 5)); metronome.tap()
+        let start = app.buttons["metronome.startStop"]
+        XCTAssertTrue(start.waitForExistence(timeout: 5)); start.tap()
+        XCTAssertTrue(app.buttons["metronome.tap"].isEnabled)
+        app.buttons["metronome.tap"].tap()
+        capture("metronome-running")
+        start.tap()
+        XCTAssertFalse(app.buttons["metronome.tap"].isEnabled)
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        let settings = app.buttons.matching(NSPredicate(format: "label == 'Settings'")).firstMatch
+        settings.tap()
+        XCTAssertTrue(app.buttons["Practice history"].waitForExistence(timeout: 5))
+        capture("settings-languages")
+        app.buttons["Practice history"].tap()
+        XCTAssertTrue(app.navigationBars["History"].waitForExistence(timeout: 5))
+    }
+
+    @MainActor
+    func testLiveMultilingualLyrics() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-lyricLanguages", "en,zh,ja"]
+        app.launch()
+        defer { app.terminate() }
+        let search = app.searchFields.firstMatch
+        if !search.isHittable { app.swipeDown() }
+        XCTAssertTrue(search.waitForExistence(timeout: 15)); search.tap(); search.typeText("Rain of Light")
+        let song = app.buttons["library.song.aya-chan-hikari-ame"]
+        XCTAssertTrue(song.waitForExistence(timeout: 30)); song.tap()
+        let languages = app.buttons["practice.lyricLanguages"]
+        for _ in 0..<5 { if languages.isHittable { break }; app.swipeUp(velocity: .slow) }
+        XCTAssertTrue(languages.waitForExistence(timeout: 15))
+        let image = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        image.name = "multilingual-lyrics"; image.lifetime = .keepAlways; add(image)
+        languages.tap()
+        let jp = app.buttons["日本語"]
+        XCTAssertTrue(jp.waitForExistence(timeout: 5))
+        jp.tap()
+        let menu = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        menu.name = "lyric-language-selection"; menu.lifetime = .keepAlways; add(menu)
+    }
+
+    @MainActor
     func testStoreScreenshots() {
         let app = XCUIApplication()
         app.launchArguments = ["-musia.mode.v1", "Listen", "-musia.rate.v1", "1",
@@ -87,7 +154,7 @@ final class PracticeSmokeTests: XCTestCase {
                 orientation == .portrait ? app.frame.height > app.frame.width : app.frame.width > app.frame.height
             }
             XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: rotated, object: nil)], timeout: 10), .completed)
-            for name in ["History", "Lessons", "Library"] {
+            for name in ["Settings", "Lessons", "Library"] {
                 // iPad exposes its top floating tabs as buttons, not a TabBar.
                 let tab = app.buttons.matching(NSPredicate(format: "label == %@", name)).firstMatch
                 XCTAssertTrue(tab.waitForExistence(timeout: 5))

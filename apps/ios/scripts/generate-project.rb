@@ -8,8 +8,8 @@ project.object_version = '56' if project.respond_to?(:object_version=)
 project.build_configurations.each do |config|
   config.build_settings.merge!({
     'SWIFT_VERSION' => '5.0', 'IPHONEOS_DEPLOYMENT_TARGET' => '17.0',
-    'TARGETED_DEVICE_FAMILY' => '1,2', 'MARKETING_VERSION' => '0.1.1',
-    'CURRENT_PROJECT_VERSION' => '2', 'DEVELOPMENT_TEAM' => '', 'CODE_SIGN_STYLE' => 'Manual',
+    'TARGETED_DEVICE_FAMILY' => '1,2', 'MARKETING_VERSION' => '0.1.2',
+    'CURRENT_PROJECT_VERSION' => '4', 'DEVELOPMENT_TEAM' => '', 'CODE_SIGN_STYLE' => 'Manual',
     'ENABLE_USER_SCRIPT_SANDBOXING' => 'YES', 'CLANG_ENABLE_MODULES' => 'YES',
     'SWIFT_OPTIMIZATION_LEVEL' => config.name == 'Debug' ? '-Onone' : '-O',
     'ENABLE_TESTABILITY' => config.name == 'Debug' ? 'YES' : 'NO'

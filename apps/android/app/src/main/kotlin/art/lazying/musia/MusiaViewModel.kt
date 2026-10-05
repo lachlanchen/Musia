@@ -166,6 +166,8 @@ class MusiaViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
     }
+
+    fun pauseForLesson() { controller?.pause() }
     fun retryPlayback() {
         if (controller == null) connect() else configure(playback.loop, playback.positionMs, true)
     }
@@ -196,6 +198,12 @@ class MusiaViewModel(application: Application) : AndroidViewModel(application) {
         tapFeedback = null
     }
     fun calibration(value: Int) { store.preferences(store.data.value.preferences.copy(tapCalibrationMs = value)) }
+    fun lyricLanguage(code: String) {
+        val current = store.data.value.preferences
+        val key = lyricLanguageKey(code)
+        val selected = if (key in current.lyricLanguages) current.lyricLanguages - key else current.lyricLanguages + key
+        store.preferences(current.copy(lyricLanguages = selected))
+    }
     fun tap() {
         val audio = asset ?: return
         val player = controller ?: return

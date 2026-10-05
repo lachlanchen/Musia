@@ -6,7 +6,7 @@ project = Xcodeproj::Project.new(File.join(root, 'Musia.xcodeproj'))
 project.build_configurations.each do |config|
   config.build_settings.merge!({
     'SWIFT_VERSION' => '5.0', 'MACOSX_DEPLOYMENT_TARGET' => '14.0',
-    'MARKETING_VERSION' => '0.1.1', 'CURRENT_PROJECT_VERSION' => '3',
+    'MARKETING_VERSION' => '0.1.2', 'CURRENT_PROJECT_VERSION' => '4',
     'DEVELOPMENT_TEAM' => 'Q8M2S2FY77', 'CODE_SIGN_STYLE' => 'Manual',
     'ENABLE_USER_SCRIPT_SANDBOXING' => 'YES', 'CLANG_ENABLE_MODULES' => 'YES',
     'SWIFT_OPTIMIZATION_LEVEL' => config.name == 'Debug' ? '-Onone' : '-O',

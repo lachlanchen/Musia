@@ -3,7 +3,7 @@
 set -euo pipefail
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 root="${MUSIA_ROOT:-$HOME/Projects/Musia}"
-release="${MUSIA_MAC_RELEASE:-0.1.1-3}"
+release="${MUSIA_MAC_RELEASE:-0.1.2-4}"
 out="$root/store/.runtime/macos-$release"
 keychain="${MUSIA_KEYCHAIN:-$HOME/Library/Keychains/landn-release.keychain-db}"
 passfile="${MUSIA_KEYCHAIN_PASSWORD_FILE:-$HOME/.config/echomind/apple/release-keychain.pass}"

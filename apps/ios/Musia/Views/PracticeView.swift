@@ -1,12 +1,46 @@
 import MusiaCore
 import SwiftUI
 
+// Keep each annotation with its base text, wrapping at token boundaries.
+private struct RubyFlowLayout: Layout {
+    var spacing: CGFloat
+    var rowSpacing: CGFloat
+
+    private func arrange(width: CGFloat, subviews: Subviews) -> (CGSize, [CGRect]) {
+        var x: CGFloat = 0, y: CGFloat = 0, rowHeight: CGFloat = 0
+        var frames: [CGRect] = []
+        for view in subviews {
+            let size = view.sizeThatFits(ProposedViewSize(width: width, height: nil))
+            if x > 0 && x + size.width > width {
+                x = 0; y += rowHeight + rowSpacing; rowHeight = 0
+            }
+            frames.append(CGRect(origin: CGPoint(x: x, y: y), size: size))
+            x += size.width + spacing
+            rowHeight = max(rowHeight, size.height)
+        }
+        return (CGSize(width: width, height: y + rowHeight), frames)
+    }
+
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        arrange(width: proposal.width ?? 320, subviews: subviews).0
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        let frames = arrange(width: bounds.width, subviews: subviews).1
+        for (view, frame) in zip(subviews, frames) {
+            view.place(at: CGPoint(x: bounds.minX + frame.minX, y: bounds.minY + frame.minY),
+                       proposal: ProposedViewSize(frame.size))
+        }
+    }
+}
+
 struct PracticeView: View {
     @EnvironmentObject private var player: PlaybackController
     @Environment(\.dismiss) private var dismiss
     @Environment(\.dynamicTypeSize) private var dynamicType
     @State private var scrubbing = false
     @State private var scrubPosition = 0.0
+    @AppStorage("lyricLanguages") private var lyricLanguages = LyricLanguages.defaults
 
     var body: some View {
         ScrollView {
@@ -192,45 +226,78 @@ struct PracticeView: View {
     }
 
     private func lyrics(_ asset: SongAsset) -> some View {
-        let line = Timeline.current(in: asset.lyrics, at: player.position)
-        let next = Timeline.next(in: asset.lyrics, at: player.position)
-        let rendering = line.map { LyricRendering(line: $0) }
-        let token = rendering?.hasMatchedTokens == true
-            ? line.flatMap { Timeline.current(in: $0.tokens, at: player.position) } : nil
+        let tracks = asset.displayLyricTracks
+        let selected = tracks.filter { LyricLanguages.selected($0.language, in: lyricLanguages) }
         return VStack(alignment: .leading, spacing: 12) {
-            if let rendering {
-                Text(highlighted(rendering)).font(.title2.weight(.semibold))
-                    .fixedSize(horizontal: false, vertical: true)
-                if let token {
-                    HStack(alignment: .firstTextBaseline, spacing: 8) {
-                        Text(token.text).font(.title3.bold()).foregroundStyle(Palette.teal)
-                        if let reading = token.reading, !reading.isEmpty {
-                            Text(reading).font(.body).foregroundStyle(.secondary)
+            HStack {
+                Text("Lyrics").font(.headline)
+                Spacer()
+                if !tracks.isEmpty {
+                    Menu {
+                        ForEach(tracks) { track in
+                            Toggle(LyricLanguages.label(track.language), isOn: Binding(
+                                get: { LyricLanguages.selected(track.language, in: lyricLanguages) },
+                                set: { lyricLanguages = LyricLanguages.setting(track.language, enabled: $0, in: lyricLanguages) }
+                            ))
                         }
+                    } label: { Label("Languages", systemImage: "character.bubble") }
+                    .accessibilityIdentifier("practice.lyricLanguages")
+                }
+            }
+            if tracks.isEmpty {
+                Label("No timed lyrics", systemImage: "music.note").foregroundStyle(.secondary)
+            } else if selected.isEmpty {
+                Text("Lyrics hidden").foregroundStyle(.secondary)
+            } else {
+                if selected.allSatisfy({ Timeline.current(in: $0.lines, at: player.position) == nil }) {
+                    Label("Instrumental / lyric gap", systemImage: "music.note").foregroundStyle(.secondary)
+                }
+                ForEach(selected) { track in
+                    let line = Timeline.current(in: track.lines, at: player.position)
+                    let next = Timeline.next(in: track.lines, at: player.position)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(LyricLanguages.label(track.language)).font(.caption.weight(.semibold)).foregroundStyle(.secondary)
+                        if let line { lyricLine(line, upcoming: false) }
+                        if let next { lyricLine(next, upcoming: true) }
                     }
-                    .accessibilityElement(children: .combine)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .accessibilityIdentifier("practice.lyrics.\(track.language)")
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 60, alignment: .leading)
+    }
+
+    @ViewBuilder private func lyricLine(_ line: LyricLine, upcoming: Bool) -> some View {
+        let rendering = LyricRendering(line: line)
+        let hasRuby = rendering.parts.contains { !($0.reading ?? "").isEmpty }
+        Group {
+            if hasRuby {
+                RubyFlowLayout(spacing: 4, rowSpacing: 8) {
+                    ForEach(Array(rendering.parts.enumerated()), id: \.offset) { _, part in
+                        VStack(spacing: 2) {
+                            Text(part.reading ?? " ").font(.caption).foregroundStyle(.secondary)
+                            Text(part.text).font(upcoming ? .body : .title2.weight(.semibold))
+                                .foregroundStyle(!upcoming && part.isActive(at: player.position) ? Palette.teal : Palette.ink)
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
+                    }
                 }
             } else {
-                Label(asset.lyrics.isEmpty ? "No timed lyrics" : "Instrumental / lyric gap", systemImage: "music.note")
-                    .font(.headline).foregroundStyle(.secondary)
-            }
-            if let next {
-                Text("Next: \(next.text)").font(.body).foregroundStyle(.secondary)
+                Text(highlighted(rendering, upcoming: upcoming)).font(upcoming ? .body : .title2.weight(.semibold))
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
-#if os(macOS)
-        .frame(maxWidth: .infinity, minHeight: 60, alignment: .leading)
-#else
-        .frame(maxWidth: .infinity, minHeight: 92, alignment: .leading)
-#endif
+        .opacity(upcoming ? 0.65 : 1)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel((upcoming ? "Next: " : "") + line.text)
     }
 
-    private func highlighted(_ rendering: LyricRendering) -> AttributedString {
+    private func highlighted(_ rendering: LyricRendering, upcoming: Bool) -> AttributedString {
         var text = AttributedString()
         for part in rendering.parts {
             var piece = AttributedString(part.text)
-            piece.foregroundColor = part.isActive(at: player.position) ? Palette.teal : Palette.ink
+            piece.foregroundColor = !upcoming && part.isActive(at: player.position) ? Palette.teal : Palette.ink
             text.append(piece)
         }
         return text

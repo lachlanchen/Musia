@@ -2,6 +2,30 @@ import XCTest
 @testable import MusiaCore
 
 final class LyricRenderingTests: XCTestCase {
+    func testRubyStaysWithItsTimedText() {
+        let line = LyricLine(id: "ja", start: 1, end: 3, text: "月の光", tokens: [
+            LyricToken(text: "月", start: 1, end: 2, reading: "つき"),
+            LyricToken(text: "の", start: 2, end: 2.5, reading: nil),
+            LyricToken(text: "光", start: 2.5, end: 3, reading: "ひかり")])
+        let parts = LyricRendering(line: line).parts
+        XCTAssertEqual(parts.map(\.reading), ["つき", nil, "ひかり"])
+        XCTAssertEqual(parts.map(\.text).joined(), line.text)
+        XCTAssertFalse(parts[0].isActive(at: 0.9))
+        XCTAssertTrue(parts[0].isActive(at: 1.5))
+    }
+
+    func testLanguageSelectionIsIndependentAndAllowsNone() {
+        var preference = LyricLanguages.defaults
+        XCTAssertTrue(["en", "zh-Hans", "ja"].allSatisfy { LyricLanguages.selected($0, in: preference) })
+        preference = LyricLanguages.setting("ja", enabled: false, in: preference)
+        XCTAssertFalse(LyricLanguages.selected("ja", in: preference))
+        XCTAssertTrue(LyricLanguages.selected("zh-Hans", in: preference))
+        preference = LyricLanguages.setting("zh-Hans", enabled: false, in: preference)
+        preference = LyricLanguages.setting("en", enabled: false, in: preference)
+        XCTAssertEqual(preference, "")
+        XCTAssertEqual(LyricLanguages.label("ja"), "日本語")
+    }
+
     private func line(_ text: String, tokens: [String]) throws -> LyricLine {
         let payload: [String: Any] = [
             "id": "line", "start": 0, "end": 20, "text": text,

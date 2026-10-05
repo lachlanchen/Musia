@@ -9,7 +9,8 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.decodeFromString
 
 @Serializable enum class PracticeMode { Listen, Tap, Play }
-@Serializable data class Preferences(val speed: Float = 1f, val mode: PracticeMode = PracticeMode.Listen, val tapCalibrationMs: Int = 0)
+@Serializable data class Preferences(val speed: Float = 1f, val mode: PracticeMode = PracticeMode.Listen, val tapCalibrationMs: Int = 0,
+                                    val lyricLanguages: Set<String> = defaultLyricLanguages)
 @Serializable data class PracticeSession(
     val id: String, val songId: String, val assetId: String, val title: String,
     val startedAt: Long, val mode: PracticeMode, val playedMs: Long = 0,

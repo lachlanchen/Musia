@@ -1,5 +1,17 @@
 package art.lazying.musia
 
+val defaultLyricLanguages = setOf("en", "zh", "ja")
+fun lyricLanguageKey(code: String): String = code.substringBefore('-')
+fun lyricLanguageRank(code: String): Int = listOf("en", "zh", "ja", "mul", "yue").indexOf(lyricLanguageKey(code)).let { if (it < 0) 5 else it }
+fun lyricLanguageLabel(code: String): String = when (lyricLanguageKey(code)) {
+    "en" -> "English"
+    "zh" -> "中文"
+    "ja" -> "日本語"
+    "mul" -> "Original"
+    "yue" -> "粵語"
+    else -> java.util.Locale.forLanguageTag(code).getDisplayLanguage(java.util.Locale.getDefault()).ifBlank { code }
+}
+
 data class LyricPart(val text: String, val token: Token? = null)
 
 fun lyricParts(line: Lyric): List<LyricPart> {

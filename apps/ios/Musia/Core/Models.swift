@@ -85,6 +85,13 @@ public struct SongAsset: Decodable, Identifiable, Sendable {
     public let lyrics: [LyricLine]
     public let phrases: [Phrase]
     public let melody: [MelodyNote]
+    public let lyricTracks: [LyricTrack]?
+
+    public var displayLyricTracks: [LyricTrack] {
+        let tracks = lyricTracks?.filter { !$0.lines.isEmpty } ?? []
+        return (tracks.isEmpty && !lyrics.isEmpty ? [LyricTrack(language: language, lines: lyrics)] : tracks)
+            .sorted { LyricLanguages.rank($0.language) < LyricLanguages.rank($1.language) }
+    }
 
     public var loopPhrases: [Phrase] {
         if !phrases.isEmpty { return phrases }
@@ -104,7 +111,16 @@ public struct SongAsset: Decodable, Identifiable, Sendable {
         guard Set(lyrics.map(\.id)).count == lyrics.count,
               Set(phrases.map(\.id)).count == phrases.count
         else { throw ContractError.invalid("phrase identifiers") }
-        for line in lyrics {
+        let tracks = lyricTracks ?? []
+        guard Set(tracks.map(\.language)).count == tracks.count,
+              tracks.allSatisfy({ !$0.language.isEmpty })
+        else { throw ContractError.invalid("lyric languages") }
+        for track in tracks {
+            try validateIntervals(track.lines)
+            guard Set(track.lines.map(\.id)).count == track.lines.count
+            else { throw ContractError.invalid("translation identifiers") }
+        }
+        for line in lyrics + tracks.flatMap(\.lines) {
             guard line.tokens.allSatisfy({ $0.start >= line.start && $0.end <= line.end })
             else { throw ContractError.invalid("lyric tokens") }
             try validateIntervals(line.tokens)
@@ -142,6 +158,12 @@ public struct LyricLine: Codable, TimedInterval, Identifiable, Sendable {
     public let end: Double
     public let text: String
     public let tokens: [LyricToken]
+}
+
+public struct LyricTrack: Codable, Identifiable, Sendable {
+    public let language: String
+    public let lines: [LyricLine]
+    public var id: String { language }
 }
 
 public struct LyricToken: Codable, TimedInterval, Sendable {

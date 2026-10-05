@@ -47,13 +47,14 @@ private data class Destination(val name: String, val icon: ImageVector)
 private val destinations = listOf(
     Destination("Songs", Icons.Default.LibraryMusic),
     Destination("Practice", Icons.Default.School),
-    Destination("History", Icons.Default.History),
     Destination("Settings", Icons.Default.Settings)
 )
 
 @Composable fun MusiaApp(vm: MusiaViewModel = viewModel()) {
     var destination by rememberSaveable { mutableStateOf("Songs") }
     var playerOpen by rememberSaveable { mutableStateOf(false) }
+    var historyOpen by rememberSaveable { mutableStateOf(false) }
+    var training by rememberSaveable { mutableStateOf<String?>(null) }
     val local by vm.store.data.collectAsStateWithLifecycle()
     val lifecycle = LocalLifecycleOwner.current
     val snackbar = remember { SnackbarHostState() }
@@ -65,18 +66,19 @@ private val destinations = listOf(
     LaunchedEffect(vm.notice) {
         vm.notice?.let { snackbar.showSnackbar(it); vm.clearNotice() }
     }
-    BackHandler(playerOpen) { playerOpen = false }
+    fun back() { if (playerOpen) playerOpen = false else if (training != null) training = null else historyOpen = false }
+    BackHandler(playerOpen || historyOpen || training != null) { back() }
     val open: (String) -> Unit = { vm.openSong(it); playerOpen = true }
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
-            TopAppBar(title = { Text(if (playerOpen) "Now playing" else "Musia", style = MaterialTheme.typography.headlineMedium) },
-                navigationIcon = { if (playerOpen) IconAction("Back", Icons.AutoMirrored.Filled.ArrowBack) { playerOpen = false } },
-                actions = { if (!playerOpen && destination in listOf("Songs", "Practice")) IconAction("Refresh", Icons.Default.Refresh) { vm.reloadLibrary(); if (destination == "Practice") vm.reloadLessons() } })
+            TopAppBar(title = { Text(if (playerOpen) "Now playing" else training ?: if (historyOpen) "History" else "Musia", style = MaterialTheme.typography.headlineMedium) },
+                navigationIcon = { if (playerOpen || historyOpen || training != null) IconAction("Back", Icons.AutoMirrored.Filled.ArrowBack) { back() } },
+                actions = { if (!playerOpen && training == null && destination in listOf("Songs", "Practice")) IconAction("Refresh", Icons.Default.Refresh) { vm.reloadLibrary(); if (destination == "Practice") vm.reloadLessons() } })
         },
         bottomBar = {
             Column {
-                if (!playerOpen && vm.song.value != null) {
+                if (!playerOpen && training == null && vm.song.value != null) {
                     HorizontalDivider()
                     Row(Modifier.fillMaxWidth().clickable { playerOpen = true }.padding(start = 16.dp, end = 8.dp), verticalAlignment = Alignment.CenterVertically) {
                         Cover(vm.song.value?.coverUrl, vm.song.value?.title.orEmpty(), Modifier.size(48.dp))
@@ -89,7 +91,7 @@ private val destinations = listOf(
                 }
                 NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
                     destinations.forEach { item ->
-                        NavigationBarItem(selected = destination == item.name, onClick = { destination = item.name; playerOpen = false },
+                        NavigationBarItem(selected = destination == item.name, onClick = { destination = item.name; playerOpen = false; historyOpen = false; training = null },
                             icon = { Icon(item.icon, item.name) }, label = { Text(item.name, maxLines = 2) })
                     }
                 }
@@ -101,21 +103,31 @@ private val destinations = listOf(
             val width = Modifier.widthIn(max = 880.dp).fillMaxWidth()
             when {
                 playerOpen -> PlayerScreen(vm, local.preferences, width)
+                training != null -> BeginnerPracticeScreen(training == "Metronome", width)
                 destination == "Songs" -> LibraryScreen(vm, false, open, width)
-                destination == "Practice" -> LibraryScreen(vm, true, open, width)
-                destination == "History" -> HistoryScreen(local, vm.store.recoveryWarning, open, width)
-                else -> SettingsScreen(vm, local, width)
+                destination == "Practice" -> LibraryScreen(vm, true, open, width) { vm.pauseForLesson(); training = it }
+                historyOpen -> HistoryScreen(local, vm.store.recoveryWarning, open, width)
+                else -> SettingsScreen(vm, local, { historyOpen = true }, width)
             }
         }
     }
 }
 
-@Composable private fun LibraryScreen(vm: MusiaViewModel, exercises: Boolean, open: (String) -> Unit, modifier: Modifier) {
+@Composable private fun LibraryScreen(vm: MusiaViewModel, exercises: Boolean, open: (String) -> Unit, modifier: Modifier, train: (String) -> Unit = {}) {
     var query by rememberSaveable(exercises) { mutableStateOf("") }
     val state = vm.library
     val entries = state.value?.items.orEmpty().filter { it.isExercise == exercises && (it.title.contains(query, true) || it.artist.contains(query, true)) }
         .sortedBy { if (it.id == "first-pulse") 0 else 1 }
     LazyColumn(modifier, contentPadding = PaddingValues(bottom = 24.dp)) {
+        if (exercises) item {
+            Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("Start here", style = MaterialTheme.typography.titleLarge)
+                ListItem(headlineContent = { Text("Do Re Mi · Listen and learn") }, leadingContent = { Icon(Icons.Default.Hearing, null) },
+                    trailingContent = { Icon(Icons.Default.ChevronRight, null) }, modifier = Modifier.clickable { train("Do Re Mi") })
+                ListItem(headlineContent = { Text("Metronome & chord changes") }, leadingContent = { Icon(Icons.Default.Timer, null) },
+                    trailingContent = { Icon(Icons.Default.ChevronRight, null) }, modifier = Modifier.clickable { train("Metronome") })
+            }
+        }
         item {
             Column(Modifier.padding(horizontal = 20.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(if (exercises) "Exercises & lessons" else "Song library", style = MaterialTheme.typography.headlineLarge)
@@ -181,7 +193,6 @@ private val destinations = listOf(
         return
     }
     val time = playback.positionMs / 1000.0
-    val lyric = currentInterval(asset.lyrics, time, { it.start }, { it.end })
     val chord = currentInterval(asset.chords, time, { it.start }, { it.end })
     val upcoming = asset.chords.firstOrNull { it.start > time }
     val note = currentInterval(asset.melody, time, { it.start }, { it.end })
@@ -221,6 +232,15 @@ private val destinations = listOf(
             }
         }
         item {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                if (playback.buffering) LinearProgressIndicator(Modifier.fillMaxWidth())
+                playback.error?.let { ErrorNotice(it) { vm.retryPlayback() } }
+                if (!playback.connected && playback.error == null) Text("Connecting to playback service")
+                Transport(vm, asset)
+                SpeedControl(preferences.speed, vm::speed)
+            }
+        }
+        item {
             Column(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceVariant).padding(16.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                     ChordReadout("Current chord", chord?.name ?: "--", Modifier.weight(1f))
@@ -228,23 +248,7 @@ private val destinations = listOf(
                 }
                 Text("Chords: ${if (asset.chords.isEmpty()) "Unavailable" else confidenceLabel(asset.confidence.chords)}", style = MaterialTheme.typography.bodySmall)
                 HorizontalDivider()
-                if (lyric == null) Text(if (asset.lyrics.isEmpty()) "No timed lyrics" else "No lyric at this position", color = MaterialTheme.colorScheme.onSurfaceVariant)
-                else {
-                    val parts = remember(lyric) { lyricParts(lyric) }
-                    val color = MaterialTheme.colorScheme.primary
-                    Text(buildAnnotatedString {
-                        parts.forEach { part ->
-                            val active = part.token?.let { time >= it.start && time < it.end } == true
-                            withStyle(SpanStyle(color = if (active) color else Color.Unspecified, fontWeight = if (active) FontWeight.Bold else FontWeight.Normal)) {
-                                append(part.text)
-                            }
-                        }
-                    }, style = MaterialTheme.typography.headlineMedium)
-                    parts.firstOrNull { it.token?.let { token -> time >= token.start && time < token.end } == true }
-                        ?.token?.reading?.takeIf { it.isNotBlank() }?.let { reading ->
-                            Text(reading, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                    }
-                }
+                MultilingualLyrics(asset, time, preferences.lyricLanguages, vm::lyricLanguage)
                 if (preferences.mode == PracticeMode.Play) {
                     Text("Melody: ${note?.let { listOf(it.note, it.numberNote, it.text).filter { part -> part.isNotBlank() }.joinToString(" / ") } ?: "--"}")
                     Text("Melody: ${if (asset.melody.isEmpty()) "Unavailable" else confidenceLabel(asset.confidence.melody)}", style = MaterialTheme.typography.bodySmall)
@@ -254,15 +258,6 @@ private val destinations = listOf(
         }
         if (preferences.mode == PracticeMode.Play) item { GuitarDiagram(chord?.name ?: upcoming?.name, upcoming = chord == null) }
         item { BeatPulse(song.id, asset, playback) }
-        item {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                if (playback.buffering) LinearProgressIndicator(Modifier.fillMaxWidth())
-                playback.error?.let { ErrorNotice(it) { vm.retryPlayback() } }
-                if (!playback.connected && playback.error == null) Text("Connecting to playback service")
-                Transport(vm, asset)
-                SpeedControl(preferences.speed, vm::speed)
-            }
-        }
         if (preferences.mode == PracticeMode.Tap) item {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Button(onClick = vm::tap, enabled = playback.playing && withinBeatRange(asset.beats, playback.positionMs) && asset.confidence.beats in setOf("verified", "analysis", "estimated"),
@@ -387,13 +382,84 @@ private val destinations = listOf(
     }
 }
 
-@Composable private fun SettingsScreen(vm: MusiaViewModel, local: LocalData, modifier: Modifier) {
+@Composable private fun MultilingualLyrics(asset: Asset, time: Double, languages: Set<String>, toggle: (String) -> Unit) {
+    val tracks = asset.displayLyricTracks
+    val selected = tracks.filter { lyricLanguageKey(it.language) in languages }
+    var menu by remember { mutableStateOf(false) }
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Text("Lyrics", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+        if (tracks.isNotEmpty()) Box {
+            TextButton(onClick = { menu = true }) { Icon(Icons.Default.Translate, null); Spacer(Modifier.width(8.dp)); Text("Languages") }
+            DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                tracks.forEach { track ->
+                    DropdownMenuItem(text = { Text(lyricLanguageLabel(track.language)) }, onClick = { toggle(track.language) },
+                        leadingIcon = { Checkbox(checked = lyricLanguageKey(track.language) in languages, onCheckedChange = null) })
+                }
+            }
+        }
+    }
+    if (tracks.isEmpty()) Text("No timed lyrics", color = MaterialTheme.colorScheme.onSurfaceVariant)
+    else if (selected.isEmpty()) Text("Lyrics hidden", color = MaterialTheme.colorScheme.onSurfaceVariant)
+    else {
+        if (selected.all { currentInterval(it.lines, time, { l -> l.start }, { l -> l.end }) == null }) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Default.MusicNote, null); Spacer(Modifier.width(8.dp)); Text("Instrumental / lyric gap")
+            }
+        }
+        selected.forEach { track ->
+            Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(lyricLanguageLabel(track.language), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                currentInterval(track.lines, time, { it.start }, { it.end })?.let { RubyLyric(it, time, false) }
+                track.lines.firstOrNull { it.start > time }?.let { RubyLyric(it, time, true) }
+            }
+        }
+    }
+}
+
+@Composable private fun RubyLyric(line: Lyric, time: Double, upcoming: Boolean) {
+    val parts = remember(line) { lyricParts(line) }
+    val base = if (upcoming) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface
+    val activeColor = MaterialTheme.colorScheme.primary
+    val style = if (upcoming) MaterialTheme.typography.bodyLarge else MaterialTheme.typography.titleLarge
+    if (parts.any { !it.token?.reading.isNullOrBlank() }) {
+        FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(4.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            parts.forEach { part ->
+                val active = !upcoming && part.token?.let { time >= it.start && time < it.end } == true
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(part.token?.reading ?: " ", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(part.text, style = style, color = if (active) activeColor else base, fontWeight = if (active) FontWeight.Bold else FontWeight.Normal)
+                }
+            }
+        }
+    } else Text(buildAnnotatedString {
+        parts.forEach { part ->
+            val active = !upcoming && part.token?.let { time >= it.start && time < it.end } == true
+            withStyle(SpanStyle(color = if (active) activeColor else base, fontWeight = if (active) FontWeight.Bold else FontWeight.Normal)) { append(part.text) }
+        }
+    }, style = style)
+}
+
+@Composable private fun SettingsScreen(vm: MusiaViewModel, local: LocalData, openHistory: () -> Unit, modifier: Modifier) {
     var resetDialog by remember { mutableStateOf(false) }
     var calibration by remember(local.preferences.tapCalibrationMs) { mutableFloatStateOf(local.preferences.tapCalibrationMs.toFloat()) }
     val export = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { it?.let(vm::export) }
     val links = LocalUriHandler.current
     LazyColumn(modifier, contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
         item { Text("Settings", style = MaterialTheme.typography.headlineLarge) }
+        item {
+            ListItem(headlineContent = { Text("Practice history") }, leadingContent = { Icon(Icons.Default.History, null) },
+                trailingContent = { Icon(Icons.Default.ChevronRight, null) }, modifier = Modifier.clickable(onClick = openHistory))
+        }
+        item {
+            Text("Lyric languages", style = MaterialTheme.typography.titleLarge)
+            listOf("en", "zh", "ja").forEach { code ->
+                Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                    Text(lyricLanguageLabel(code), Modifier.weight(1f))
+                    Switch(code in local.preferences.lyricLanguages, { vm.lyricLanguage(code) },
+                        modifier = Modifier.semantics { contentDescription = lyricLanguageLabel(code) + " lyrics" })
+                }
+            }
+        }
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("Tap calibration", style = MaterialTheme.typography.titleLarge)
@@ -429,7 +495,7 @@ private val destinations = listOf(
                 Text("Preferences and up to 200 recent sessions stay on this device. Android cloud backup is disabled. Reset stops playback and clears local records. Exports remain in the destination you choose.")
                 Text("Library, lessons, covers and audio are requested over HTTPS. Musia and media hosts receive your IP address and ordinary request metadata. Practice history and taps are not uploaded.")
                 Text("Tap offsets compare touch timing with the supplied beat timeline. Bluetooth, device latency and unverified timelines affect them. Positive calibration subtracts from a late offset. No singing or guitar accuracy is assessed.")
-                Text("Musia 0.1.0", style = MaterialTheme.typography.bodySmall)
+                Text("Musia", style = MaterialTheme.typography.bodySmall)
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     TextButton(onClick = { links.openUri("https://musia.lazying.art/privacy") }) { Icon(Icons.Default.PrivacyTip, null); Spacer(Modifier.width(8.dp)); Text("Privacy policy") }
                     TextButton(onClick = { links.openUri("https://musia.lazying.art/support") }) { Icon(Icons.Default.HelpOutline, null); Spacer(Modifier.width(8.dp)); Text("Support") }

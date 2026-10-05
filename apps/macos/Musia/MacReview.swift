@@ -70,8 +70,8 @@ enum MacReview {
             await catalog.loadLessons(force: true)
             checks["lesson_count"] = catalog.lessons.count
             try await capture(window, "04-lessons", directory)
-            navigation.section = .history
-            try await capture(window, "05-history", directory)
+            navigation.section = .settings
+            try await capture(window, "05-settings", directory)
             checks["history_export_bytes"] = try history.export().count
             window.setContentSize(NSSize(width: 1040, height: 680))
             navigation.section = .practice

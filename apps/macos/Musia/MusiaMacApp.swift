@@ -3,14 +3,14 @@ import MusiaCore
 import SwiftUI
 
 enum MacSection: String, CaseIterable, Identifiable {
-    case library = "Library", practice = "Practice", lessons = "Lessons", history = "History"
+    case library = "Library", practice = "Practice", lessons = "Lessons", settings = "Settings"
     var id: String { rawValue }
     var symbol: String {
         switch self {
         case .library: "music.note.list"
         case .practice: "guitars"
         case .lessons: "book"
-        case .history: "clock.arrow.circlepath"
+        case .settings: "gearshape"
         }
     }
 }
@@ -113,7 +113,7 @@ struct MacRootView: View {
                     switch navigation.section ?? .library {
                     case .library: LibraryView(showPractice: showPractice)
                     case .lessons: LessonsView(showPractice: showPractice)
-                    case .history: HistoryView()
+                    case .settings: SettingsView()
                     case .practice:
                         if player.hasSelection { PracticeView() }
                         else {

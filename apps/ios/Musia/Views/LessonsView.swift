@@ -8,6 +8,16 @@ struct LessonsView: View {
 
     var body: some View {
         List {
+            Section("Start here") {
+                NavigationLink { BeginnerPracticeView(rhythm: false) } label: {
+                    Label("Do Re Mi · Listen and learn", systemImage: "ear")
+                }
+                .accessibilityIdentifier("lesson.pitch")
+                NavigationLink { BeginnerPracticeView(rhythm: true) } label: {
+                    Label("Metronome & chord changes", systemImage: "metronome")
+                }
+                .accessibilityIdentifier("lesson.metronome")
+            }
             Section("Pulse practice") {
                 Button {
                     player.open(id: FirstPulse.id, localExercise: true)

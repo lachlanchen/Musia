@@ -294,6 +294,7 @@ final class PlaybackController: ObservableObject {
         history.reset()
         UserDefaults.standard.removeObject(forKey: "musia.rate.v1")
         UserDefaults.standard.removeObject(forKey: "musia.mode.v1")
+        UserDefaults.standard.removeObject(forKey: "lyricLanguages")
         rate = 1; mode = .listen; clearLoop(); resetTap()
         updateNowPlaying()
     }

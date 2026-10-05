@@ -44,6 +44,15 @@ final class ContractTests: XCTestCase {
         XCTAssertEqual(asset.melody.first?.note.text, "60")
         XCTAssertEqual(asset.lyrics.first?.tokens.first?.reading, "heh-loh")
         XCTAssertEqual(asset.loopPhrases.first?.text, "Hello")
+        XCTAssertEqual(asset.displayLyricTracks.map(\.language), ["en"])
+        XCTAssertEqual(asset.displayLyricTracks.first?.lines.first?.text, "Hello")
+        var dto = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(json.utf8)) as? [String: Any])
+        var assets = try XCTUnwrap(dto["assets"] as? [[String: Any]])
+        assets[0]["lyricTracks"] = [["language": "ja", "lines": [["id": "l", "start": 0, "end": 2,
+            "text": "光", "tokens": [["text": "光", "start": 0, "end": 2, "reading": "ひかり"]]]]]]
+        dto["assets"] = assets
+        let updated = try JSONDecoder().decode(Song.self, from: JSONSerialization.data(withJSONObject: dto)).validated()
+        XCTAssertEqual(updated.defaultAsset?.displayLyricTracks.first?.lines.first?.tokens.first?.reading, "ひかり")
         let invalid = json.replacingOccurrences(of: "\"end\":2", with: "\"end\":20")
         XCTAssertThrowsError(try JSONDecoder().decode(Song.self, from: Data(invalid.utf8)).validated())
         let wrongVersion = json.replacingOccurrences(of: "\"version\":1", with: "\"version\":2")

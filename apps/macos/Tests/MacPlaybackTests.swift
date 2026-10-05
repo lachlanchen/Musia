@@ -5,6 +5,19 @@ import XCTest
 
 final class MacPlaybackTests: XCTestCase {
     @MainActor
+    func testBeginnerReferenceAudioAndMetronomeClock() async throws {
+        let sound = PracticeSound()
+        defer { sound.stop() }
+        XCTAssertTrue(sound.play(BeginnerPractice.tone(0)))
+        try await waitFor { sound.time > 0.2 }
+        try await waitFor { !sound.playing }
+        XCTAssertTrue(sound.play(BeginnerPractice.metronome(bpm: 120, chords: true), loop: true))
+        try await waitFor { sound.time > 2.1 }
+        XCTAssertEqual(Int(sound.time / 0.5) / 4, 1, "Am starts at the fifth beat")
+        sound.stop()
+        XCTAssertFalse(sound.playing)
+    }
+    @MainActor
     private func waitFor(_ condition: () -> Bool) async throws {
         for _ in 0..<150 {
             if condition() { return }
@@ -70,7 +83,15 @@ final class MacPlaybackTests: XCTestCase {
             throw XCTSkip("Set MUSIA_LIVE_TESTS=1 for the real catalog/audio test")
         }
         let items = try await APIClient().library()
-        let item = try XCTUnwrap(items.first)
+        let item = try XCTUnwrap(items.first { $0.id == "aya-chan-hikari-ame" })
+        let song = try await APIClient().song(id: item.id)
+        for asset in song.assets {
+            XCTAssertEqual(Set(asset.displayLyricTracks.map { LyricLanguages.key($0.language) }), Set(["en", "zh", "ja"]))
+            for language in ["zh", "ja"] {
+                let track = try XCTUnwrap(asset.displayLyricTracks.first { LyricLanguages.key($0.language) == language })
+                XCTAssertTrue(track.lines.flatMap(\.tokens).contains { !($0.reading ?? "").isEmpty })
+            }
+        }
         let player = PlaybackController(history: LocalStore())
         defer { player.pause() }
         player.open(id: item.id)

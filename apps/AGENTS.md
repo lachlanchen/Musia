@@ -26,3 +26,13 @@
   The Debug-only review harness never ships. Keep archive signing and local
   test signing separate; do not weaken the production hardened runtime to fix
   an ad-hoc XCTest loading problem.
+- Native lyric languages are independently multi-selected, default en/zh/ja;
+  the vocal/audio selector stays single. Use each asset's own `lyricTracks`,
+  supplied Chinese pinyin and Japanese kana ruby. Never synthesize a missing
+  translation or move a lyric highlight off the actual media clock.
+- History belongs under Settings. Beginner Do/Re/Mi scores measure first-answer
+  listening identification only, not microphone/singing accuracy. Practice
+  tones and the metronome must stop on leaving/backgrounding the lesson;
+  normal song background playback must remain supported.
+- For the current 0.1.2 update, preserve the owner's explicitly retained Apple
+  iOS/macOS 0.1.1 review queues. Preparation/upload is not formal submission.

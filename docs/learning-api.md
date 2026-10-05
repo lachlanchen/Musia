@@ -60,6 +60,8 @@ is first. Song duration is the default asset's duration.
    beats: [{time, index?}],
    chords: [{start, end, name, confidence?}],
    lyrics: [{id, start, end, text, tokens: [{text, start, end, reading?}]}],
+   lyricTracks: [{language, lines: [{id, start, end, text,
+     tokens: [{text, start, end, reading?}]}]}],
    phrases: [{id, start, end, text}],
    melody: [{start, end, note, numberNote, text}]}
 ], defaultAssetId}
@@ -80,6 +82,13 @@ is first. Song duration is the default asset's duration.
   Study source URL and language must match the audio asset. An explicit missing
   lyric-set reference never falls back to another vocal or a translation.
   Mandarin `pinyin` and existing pronunciation `reading` normalize to `reading`.
+- `lyricTracks` is an additive v1 field containing the available translations
+  from that exact vocal's lyric set. Its line/token schema and clock match
+  `lyrics`. Duplicate languages, private fields and instrumental rows are
+  excluded. Numeric `pinyin_tones` is formatted with tone marks; Japanese kana
+  readings are preserved. Missing translations are not borrowed from another
+  vocal. Older clients may continue to use `lyrics` and `phrases`; newer clients
+  fall back to `lyrics` if `lyricTracks` is absent.
 - Song phrases are the selected vocal's corrected lyric lines without tokens.
   Instrumental lyric rows are omitted. Empty arrays mean unavailable data.
 - Duration uses asset metadata, then matching study metadata, then the legacy

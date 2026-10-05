@@ -24,7 +24,7 @@ public enum FirstPulse {
             duration: duration, bpm: 60, timeSignature: "4/4",
             confidence: Confidence(beats: .verified, chords: .verified, melody: .unavailable),
             beats: (0..<20).map { Beat(time: Double($0)) }, chords: chords, lyrics: [],
-            phrases: phrases, melody: []
+            phrases: phrases, melody: [], lyricTracks: nil
         )
         return try Song(version: 1, id: id, title: item.title, artist: item.artist,
                         coverUrl: nil, assets: [asset], defaultAssetId: id).validated()
