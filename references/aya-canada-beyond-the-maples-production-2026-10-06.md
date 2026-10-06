@@ -125,3 +125,15 @@ node bin/musia.js fun-audit --media-id aya-canada-beyond-the-maples --strict
 Reusable helpers added: `review_ace_candidate_audio.py` (screening only), `transcribe_song_windows.py` (unconditioned focused ASR), and `export_reviewed_japanese_lyrics.py` (source/hash-bound reviewed lyrics). `test_export_reviewed_japanese_lyrics.py` checks anchors, source replacements, rejected unreviewed changes and ruby overrides. The browser regression helper now selects the actual vocal language rather than hardcoding Mandarin.
 
 The preparation script does not push. Publish the scoped MusiaSongs audio/index commit first, verify audio range playback, then the scoped Musia website/script/reference commit and Pages deployment. Do not include unrelated worktree lyrics. Retain the catalog's existing default song and all other catalog decisions.
+
+## Verified Publication
+
+- MusiaSongs commit `2fa6a2b`; Pages run `37446111996` succeeded. MP3 range GET returned 206 with CORS enabled and the expected 6,242,033-byte file length.
+- Musia website/song commit `a99ec25`; Pages run `37446340660` succeeded.
+- Public MP3 SHA-256: `623ececbae9ee3f19b4dd9ce9c93e4413459e1890f6ca618df5c9510d7326692`.
+- Live manifest, Atlas study and all three lyric JSONs were fetched and compared equal to the reviewed local payloads.
+- Local and live Playwright checks passed at 1440x1000 and 390x844: ready audio, duration, actual playback clock, seeking, four lyric checkpoints, active words, moving/visible current chord, loaded cover, ruby and no horizontal overflow or page errors. Evidence is under the project's `review/website/`; browsers and local test server closed afterward.
+- Six sweep tests, seven Japanese review-export tests, 32 learning API tests and nine web/core/guitar tests passed. Strict song audit, full website schema validation and whitespace checks passed.
+- Learning catalog deployed from a clean `a99ec25` source snapshot, not the dirty workspace. The existing verified lucide vendor file and shared runtime cache were reused. This was a data/backend deployment, not an app-store build or submission.
+- Native/web learning origin: `https://musia.lazying.art`. Transaction `20261006T175731-8c57a319c180`, release hash `8c57a319c1809c54ebc633a09564d0546879774824d0ae2d0d4d965434ea7353`. Public acceptance passed; song detail returns the Japanese asset and JA/EN/ZH tracks with 36 lines each. Private deployment receipts remain under `deploy/learning/.work/`.
+- No generation jobs or new GUI/noVNC stacks remain. The pre-existing Musia learning service and other projects' runtimes were not stopped.

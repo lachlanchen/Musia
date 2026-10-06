@@ -3,7 +3,7 @@
 Written 2026-10-06 for the request: Aya-chan travels in Canada, and the narrator
 misses her. Japanese-only song, not the usual mixed-language default because
 the user specifically requested Japanese. Status: **six complete renders,
-seed 100604 selected, lyric audit and website package prepared**.
+seed 100604 selected, lyric audit complete, website and learning catalog published**.
 
 Listen: https://fun.lazying.art/#aya-canada-beyond-the-maples
 
@@ -97,4 +97,5 @@ The earlier `sweep/` was a dry run before the final pre-chorus wording polish;
    a small human-scale focal point within a vast landscape/megastructure.
 7. Only after selecting and auditing audio: publish audio in MusiaSongs, then
    the Fun manifest/catalog/lyric data. Run strict audits and playback checks.
-   No website item, social post or recording is implied by this lyric draft.
+   The user subsequently requested generation and website publication. No
+   social post or recording was made as part of that request.
