@@ -27,7 +27,7 @@ def audio_digest(path: Path) -> str:
     return value.hexdigest()
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lyrics", type=Path, required=True)
     parser.add_argument("--caption", type=Path, required=True)
@@ -36,7 +36,11 @@ def main():
     parser.add_argument("--duration", type=int, default=150)
     parser.add_argument("--bpm", type=int, default=104)
     parser.add_argument("--key", default="D minor")
-    args = parser.parse_args()
+    parser.add_argument("--language", choices=("zh", "ja", "en", "unknown"), default="zh",
+                        help="Sung language; use unknown for mixed-language lyrics")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Prepare and validate request/config files without loading a model")
+    args = parser.parse_args(argv)
     if len(set(args.seeds)) != len(args.seeds) or not 30 <= args.duration <= 240 or not 40 <= args.bpm <= 240:
         parser.error("Seeds must be unique; duration must be 30..240 seconds and BPM 40..240")
     out = args.output_dir.resolve()
@@ -46,12 +50,16 @@ def main():
     if not lyrics or not caption:
         parser.error("Empty lyric or caption")
     identity = {"lyrics": lyrics, "caption": caption, "duration": args.duration, "bpm": args.bpm,
-                "key": args.key, "seeds": args.seeds,
+                "key": args.key, "seeds": args.seeds, "vocal_language": args.language,
                 "model": "acestep-v15-xl-turbo", "steps": 8,
                 "aceCommit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ACE, text=True).strip()}
     request = out / "request.json"
-    if request.exists() and json.loads(request.read_text()) != identity:
-        raise ValueError("Preserve this sweep; different inputs require a new output directory")
+    if request.exists():
+        previous = json.loads(request.read_text())
+        # Earlier sweeps always used zh, even though the request omitted it.
+        previous.setdefault("vocal_language", "zh")
+        if previous != identity:
+            raise ValueError("Preserve this sweep; different inputs require a new output directory")
     save_json(request, identity)
     (out / "lyrics-input.txt").write_text(lyrics + "\n", encoding="utf-8")
     env = {**os.environ, "CUDA_VISIBLE_DEVICES": os.environ.get("CUDA_VISIBLE_DEVICES", "0"),
@@ -80,13 +88,16 @@ def main():
             "save_dir": str(batch), "config_path": identity["model"], "task_type": "text2music",
             "caption": caption, "lyrics": str(out / "lyrics-input.txt"),
             "duration": args.duration, "bpm": args.bpm, "keyscale": args.key,
-            "timesignature": "4", "vocal_language": "zh", "thinking": False,
+            "timesignature": "4", "vocal_language": args.language, "thinking": False,
             "use_cot_lyrics": False, "use_cot_caption": False, "use_cot_language": False,
             "use_cot_metas": False, "inference_steps": 8, "guidance_scale": 1.0,
             "use_random_seed": False, "seeds": seeds, "batch_size": len(seeds), "audio_format": "wav",
         }
         config_path = batch / "ace.toml"
         config_path.write_text("\n".join(f"{key} = {json.dumps(value, ensure_ascii=False)}" for key, value in config.items()) + "\n", encoding="utf-8")
+        if args.dry_run:
+            print(f"Prepared {config_path}", flush=True)
+            continue
         print(f"Generating ACE batch {seeds}", flush=True)
         log = batch / "generation.log"
         with log.open("w", encoding="utf-8") as handle:
@@ -106,8 +117,11 @@ def main():
         results.extend(records)
         save_json(out / "candidates.json", results)
         print(f"Completed {seeds}", flush=True)
-    save_json(out / "candidates.json", results)
-    print(out / "candidates.json", flush=True)
+    if args.dry_run:
+        print(f"Dry run complete; no audio generated: {request}", flush=True)
+    else:
+        save_json(out / "candidates.json", results)
+        print(out / "candidates.json", flush=True)
 
 
 if __name__ == "__main__":

@@ -36,7 +36,8 @@ def main():
     song_dir = ROOT / f"website/data/songs/{media_id}"
     manifest = json.loads((song_dir / "manifest.json").read_text())
     lyric_set = next(s for s in manifest["lyricSets"] if s["id"] == manifest["assets"]["primaryAudio"]["lyricSetId"])
-    track = next(t for t in lyric_set["tracks"] if t["code"] == "zh-Hans")
+    active_language = manifest["assets"]["primaryAudio"]["languageCode"]
+    track = next(t for t in lyric_set["tracks"] if t["code"] == active_language)
     lines = json.loads((song_dir / track["path"]).read_text())["lines"]
     checkpoints = []
     for i in (0, len(lines) // 3, 2 * len(lines) // 3, len(lines) - 1):

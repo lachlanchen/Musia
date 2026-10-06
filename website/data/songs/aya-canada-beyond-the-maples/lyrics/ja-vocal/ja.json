@@ -1,0 +1,1406 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "aya-canada-beyond-the-maples",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 11.09,
+      "end": 14.61,
+      "text": "カナダから届く写真",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "カナダ",
+          "start": 11.09,
+          "end": 11.65,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "から",
+          "start": 11.65,
+          "end": 12.11,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "届く",
+          "start": 12.11,
+          "end": 13.89,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "とどく"
+        },
+        {
+          "text": "写真",
+          "start": 13.89,
+          "end": 14.61,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "しゃしん"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 16.27,
+      "end": 19.89,
+      "text": "赤い葉越しに笑う君",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "赤い",
+          "start": 16.27,
+          "end": 17.23,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あかい"
+        },
+        {
+          "text": "葉",
+          "start": 17.23,
+          "end": 17.33,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "は"
+        },
+        {
+          "text": "越し",
+          "start": 17.33,
+          "end": 18.13,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ごし"
+        },
+        {
+          "text": "に",
+          "start": 18.13,
+          "end": 18.37,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "笑う",
+          "start": 18.37,
+          "end": 19.45,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "わらう"
+        },
+        {
+          "text": "君",
+          "start": 19.45,
+          "end": 19.89,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きみ"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 21.63,
+      "end": 25.15,
+      "text": "こちらはもう深い夜",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "こちらはもう",
+          "start": 21.63,
+          "end": 23.13,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "深い",
+          "start": 23.13,
+          "end": 24.63,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ふかい"
+        },
+        {
+          "text": "夜",
+          "start": 24.63,
+          "end": 25.15,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "よる"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 26.67,
+      "end": 30.51,
+      "text": "そちらはまだ青い朝",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "そちらはまだ",
+          "start": 26.67,
+          "end": 29.03,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "青い",
+          "start": 29.03,
+          "end": 30.17,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あおい"
+        },
+        {
+          "text": "朝",
+          "start": 30.17,
+          "end": 30.51,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あさ"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 32.01,
+      "end": 37.17,
+      "text": "楽しんでねに変えてみる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "楽し",
+          "start": 32.01,
+          "end": 33.09,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "たのし"
+        },
+        {
+          "text": "んでねに",
+          "start": 33.09,
+          "end": 34.45,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "変え",
+          "start": 35.31,
+          "end": 36.017,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かえ"
+        },
+        {
+          "text": "てみる",
+          "start": 36.017,
+          "end": 37.17,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 37.17,
+      "end": 40.47,
+      "text": "遠い街が君の目に",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "遠い",
+          "start": 37.17,
+          "end": 38.53,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "とおい"
+        },
+        {
+          "text": "街",
+          "start": 38.53,
+          "end": 38.95,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "まち"
+        },
+        {
+          "text": "が",
+          "start": 38.95,
+          "end": 39.45,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "君",
+          "start": 39.45,
+          "end": 39.81,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きみ"
+        },
+        {
+          "text": "の",
+          "start": 39.81,
+          "end": 40.07,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "目に",
+          "start": 40.07,
+          "end": 40.47,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "めに"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 40.47,
+      "end": 43.11,
+      "text": "どんな色で映るだろう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "どんな",
+          "start": 40.47,
+          "end": 41.19,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "色",
+          "start": 41.19,
+          "end": 41.71,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "いろ"
+        },
+        {
+          "text": "で",
+          "start": 41.71,
+          "end": 42.05,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "映る",
+          "start": 42.05,
+          "end": 42.69,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "うつる"
+        },
+        {
+          "text": "だろう",
+          "start": 42.69,
+          "end": 43.11,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 43.11,
+      "end": 45.69,
+      "text": "嬉しそうなその顔に",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "嬉しそ",
+          "start": 43.11,
+          "end": 44.26,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "うれしそ"
+        },
+        {
+          "text": "うなその",
+          "start": 44.26,
+          "end": 45.03,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "顔",
+          "start": 45.03,
+          "end": 45.51,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かお"
+        },
+        {
+          "text": "に",
+          "start": 45.51,
+          "end": 45.69,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 45.69,
+      "end": 49.07,
+      "text": "寂しいなんて言えなくて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "寂しい",
+          "start": 45.69,
+          "end": 46.59,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "さみしい"
+        },
+        {
+          "text": "なんて",
+          "start": 46.59,
+          "end": 47.29,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "言え",
+          "start": 47.29,
+          "end": 47.83,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "いえ"
+        },
+        {
+          "text": "なくて",
+          "start": 47.83,
+          "end": 49.07,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 50.34,
+      "end": 53.2,
+      "text": "会いたいな会いたいな",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "会い",
+          "start": 50.34,
+          "end": 50.99,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あい"
+        },
+        {
+          "text": "たいな",
+          "start": 50.99,
+          "end": 51.74,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "会い",
+          "start": 51.74,
+          "end": 52.45,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あい"
+        },
+        {
+          "text": "たいな",
+          "start": 52.45,
+          "end": 53.2,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 53.32,
+      "end": 55.58,
+      "text": "街が風に揺れる頃",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "街",
+          "start": 53.32,
+          "end": 53.64,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "まち"
+        },
+        {
+          "text": "が",
+          "start": 53.64,
+          "end": 53.92,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "風",
+          "start": 53.92,
+          "end": 54.24,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かぜ"
+        },
+        {
+          "text": "に",
+          "start": 54.24,
+          "end": 54.6,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "揺れ",
+          "start": 54.6,
+          "end": 55.08,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ゆれ"
+        },
+        {
+          "text": "る",
+          "start": 55.08,
+          "end": 55.18,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "頃",
+          "start": 55.18,
+          "end": 55.58,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ころ"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 55.58,
+      "end": 58.12,
+      "text": "同じ空のどこかで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同じ",
+          "start": 55.58,
+          "end": 56.52,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "おなじ"
+        },
+        {
+          "text": "空",
+          "start": 56.52,
+          "end": 56.94,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "そら"
+        },
+        {
+          "text": "のどこかで",
+          "start": 56.94,
+          "end": 58.12,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 58.56,
+      "end": 61.08,
+      "text": "君も笑っていて欲しい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 58.56,
+          "end": 58.9,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きみ"
+        },
+        {
+          "text": "も",
+          "start": 58.9,
+          "end": 59.2,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "笑っ",
+          "start": 59.2,
+          "end": 59.83,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "わらっ"
+        },
+        {
+          "text": "ていて",
+          "start": 59.83,
+          "end": 60.42,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "欲しい",
+          "start": 60.42,
+          "end": 61.08,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ほしい"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 61.08,
+      "end": 63.78,
+      "text": "帰り道急がないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帰り道",
+          "start": 61.08,
+          "end": 62.22,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かえりみち"
+        },
+        {
+          "text": "急が",
+          "start": 62.22,
+          "end": 63.1,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "いそが"
+        },
+        {
+          "text": "ないで",
+          "start": 63.1,
+          "end": 63.78,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 63.78,
+      "end": 66.04,
+      "text": "まだ知らない景色を見て",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "まだ",
+          "start": 63.78,
+          "end": 64.2,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "知ら",
+          "start": 64.2,
+          "end": 64.54,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "しら"
+        },
+        {
+          "text": "ない",
+          "start": 64.54,
+          "end": 64.86,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "景色",
+          "start": 64.86,
+          "end": 65.42,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "けしき"
+        },
+        {
+          "text": "を",
+          "start": 65.42,
+          "end": 65.78,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "見て",
+          "start": 65.78,
+          "end": 66.04,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "みて"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 66.04,
+      "end": 69.18,
+      "text": "寂しさはここに置いて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "寂しさ",
+          "start": 66.04,
+          "end": 67.32,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "さみしさ"
+        },
+        {
+          "text": "はここに",
+          "start": 67.32,
+          "end": 68.5,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "置い",
+          "start": 68.5,
+          "end": 68.98,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "おい"
+        },
+        {
+          "text": "て",
+          "start": 68.98,
+          "end": 69.18,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 69.18,
+      "end": 72.32,
+      "text": "お土産は君の話",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "お",
+          "start": 69.18,
+          "end": 69.88,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "土産",
+          "start": 69.88,
+          "end": 70.28,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "みやげ"
+        },
+        {
+          "text": "は",
+          "start": 70.28,
+          "end": 70.76,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "君",
+          "start": 70.76,
+          "end": 71.42,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きみ"
+        },
+        {
+          "text": "の",
+          "start": 71.42,
+          "end": 71.8,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "話",
+          "start": 71.8,
+          "end": 72.32,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "はなし"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 73.8,
+      "end": 77.82,
+      "text": "一人分のコーヒーに",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "一人分",
+          "start": 73.8,
+          "end": 75.18,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ひとりぶん"
+        },
+        {
+          "text": "の",
+          "start": 75.18,
+          "end": 75.7,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "コーヒー",
+          "start": 75.7,
+          "end": 77.4,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "に",
+          "start": 77.4,
+          "end": 77.82,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 79.26,
+      "end": 83.46,
+      "text": "二つのカップ出してまう",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "二つ",
+          "start": 79.26,
+          "end": 80.2,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ふたつ"
+        },
+        {
+          "text": "の",
+          "start": 80.2,
+          "end": 80.46,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "カップ",
+          "start": 80.46,
+          "end": 81.14,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "出し",
+          "start": 81.14,
+          "end": 81.95,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "だし"
+        },
+        {
+          "text": "てまう",
+          "start": 81.95,
+          "end": 83.46,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 84.3,
+      "end": 88.38,
+      "text": "君のいない食卓で",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 84.3,
+          "end": 85.1,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きみ"
+        },
+        {
+          "text": "のいない",
+          "start": 85.1,
+          "end": 86.06,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "食卓",
+          "start": 86.06,
+          "end": 87.94,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "しょくたく"
+        },
+        {
+          "text": "で",
+          "start": 87.94,
+          "end": 88.38,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 91.78,
+      "end": 93.92,
+      "text": "写真を開いてる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "写真",
+          "start": 91.78,
+          "end": 92.78,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "しゃしん"
+        },
+        {
+          "text": "を",
+          "start": 92.78,
+          "end": 93.02,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "開い",
+          "start": 93.02,
+          "end": 93.37,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ひらい"
+        },
+        {
+          "text": "てる",
+          "start": 93.37,
+          "end": 93.92,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 95.0,
+      "end": 97.88,
+      "text": "帰ってきたその夜は",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帰っ",
+          "start": 95.0,
+          "end": 95.94,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かえっ"
+        },
+        {
+          "text": "てきたその",
+          "start": 95.94,
+          "end": 97.12,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "夜",
+          "start": 97.12,
+          "end": 97.4,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "よる"
+        },
+        {
+          "text": "は",
+          "start": 97.4,
+          "end": 97.88,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 97.88,
+      "end": 100.52,
+      "text": "時差ぼけのままでいい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "時差",
+          "start": 97.88,
+          "end": 98.58,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "じさ"
+        },
+        {
+          "text": "ぼけのままでいい",
+          "start": 98.58,
+          "end": 100.52,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 100.52,
+      "end": 102.96,
+      "text": "話し疲れて眠るまで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "話し",
+          "start": 100.52,
+          "end": 101.42,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "はなし"
+        },
+        {
+          "text": "疲れ",
+          "start": 101.42,
+          "end": 101.82,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "つかれ"
+        },
+        {
+          "text": "て",
+          "start": 101.82,
+          "end": 101.96,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "眠る",
+          "start": 101.96,
+          "end": 102.52,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ねむる"
+        },
+        {
+          "text": "まで",
+          "start": 102.52,
+          "end": 102.96,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 102.96,
+      "end": 105.56,
+      "text": "君の旅を聞かせてよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 102.96,
+          "end": 103.56,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きみ"
+        },
+        {
+          "text": "の",
+          "start": 103.56,
+          "end": 103.88,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "旅",
+          "start": 103.88,
+          "end": 104.22,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "たび"
+        },
+        {
+          "text": "を",
+          "start": 104.22,
+          "end": 104.4,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "聞か",
+          "start": 104.4,
+          "end": 104.84,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きか"
+        },
+        {
+          "text": "せてよ",
+          "start": 104.84,
+          "end": 105.56,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 105.56,
+      "end": 108.58,
+      "text": "会いたいな会いたいな",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "会い",
+          "start": 105.56,
+          "end": 106.39,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あい"
+        },
+        {
+          "text": "たいな",
+          "start": 106.39,
+          "end": 107.14,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "会い",
+          "start": 107.4,
+          "end": 107.85,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あい"
+        },
+        {
+          "text": "たいな",
+          "start": 107.85,
+          "end": 108.58,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 108.58,
+      "end": 110.98,
+      "text": "街が風に揺れる頃",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "街",
+          "start": 108.58,
+          "end": 109.02,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "まち"
+        },
+        {
+          "text": "が",
+          "start": 109.02,
+          "end": 109.3,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "風",
+          "start": 109.3,
+          "end": 109.62,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かぜ"
+        },
+        {
+          "text": "に",
+          "start": 109.62,
+          "end": 110.06,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "揺れ",
+          "start": 110.06,
+          "end": 110.51,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ゆれ"
+        },
+        {
+          "text": "る",
+          "start": 110.51,
+          "end": 110.6,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "頃",
+          "start": 110.6,
+          "end": 110.98,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ころ"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 110.98,
+      "end": 113.54,
+      "text": "同じ空のどこかで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "同じ",
+          "start": 110.98,
+          "end": 111.9,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "おなじ"
+        },
+        {
+          "text": "空",
+          "start": 111.9,
+          "end": 112.32,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "そら"
+        },
+        {
+          "text": "のどこかで",
+          "start": 112.32,
+          "end": 113.54,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 113.54,
+      "end": 116.46,
+      "text": "君も笑っていて欲しい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "start": 113.54,
+          "end": 114.28,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "きみ"
+        },
+        {
+          "text": "も",
+          "start": 114.28,
+          "end": 114.6,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "笑っ",
+          "start": 114.6,
+          "end": 115.21,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "わらっ"
+        },
+        {
+          "text": "ていて",
+          "start": 115.21,
+          "end": 115.8,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "欲しい",
+          "start": 115.8,
+          "end": 116.46,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "ほしい"
+        }
+      ]
+    },
+    {
+      "id": "l30",
+      "start": 116.46,
+      "end": 119.16,
+      "text": "帰り道急がないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "帰り道",
+          "start": 116.46,
+          "end": 117.64,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かえりみち"
+        },
+        {
+          "text": "急が",
+          "start": 117.64,
+          "end": 118.5,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "いそが"
+        },
+        {
+          "text": "ないで",
+          "start": 118.5,
+          "end": 119.16,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l31",
+      "start": 119.16,
+      "end": 121.44,
+      "text": "まだ知らない景色を見て",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "まだ",
+          "start": 119.16,
+          "end": 119.58,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "知ら",
+          "start": 119.58,
+          "end": 119.96,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "しら"
+        },
+        {
+          "text": "ない",
+          "start": 119.96,
+          "end": 120.24,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "景色",
+          "start": 120.24,
+          "end": 120.82,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "けしき"
+        },
+        {
+          "text": "を",
+          "start": 120.82,
+          "end": 121.14,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "見て",
+          "start": 121.14,
+          "end": 121.44,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "みて"
+        }
+      ]
+    },
+    {
+      "id": "l32",
+      "start": 121.44,
+      "end": 124.66,
+      "text": "寂しさも愛しさも",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "寂しさ",
+          "start": 121.44,
+          "end": 122.72,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "さみしさ"
+        },
+        {
+          "text": "も",
+          "start": 122.72,
+          "end": 123.06,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "愛し",
+          "start": 123.06,
+          "end": 123.98,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "いとし"
+        },
+        {
+          "text": "さも",
+          "start": 123.98,
+          "end": 124.66,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l33",
+      "start": 124.66,
+      "end": 128.02,
+      "text": "お帰りの声に変えて",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "お",
+          "start": 124.66,
+          "end": 125.2,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "帰り",
+          "start": 125.2,
+          "end": 125.88,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かえり"
+        },
+        {
+          "text": "の",
+          "start": 125.88,
+          "end": 126.02,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "声",
+          "start": 126.02,
+          "end": 126.88,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "こえ"
+        },
+        {
+          "text": "に",
+          "start": 126.88,
+          "end": 127.18,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "変え",
+          "start": 127.18,
+          "end": 127.68,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "かえ"
+        },
+        {
+          "text": "て",
+          "start": 127.68,
+          "end": 128.02,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l34",
+      "start": 131.88,
+      "end": 134.66,
+      "text": "次に会えたら",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "次に",
+          "start": 131.88,
+          "end": 133.16,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "つぎに"
+        },
+        {
+          "text": "会え",
+          "start": 133.16,
+          "end": 134.02,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あえ"
+        },
+        {
+          "text": "たら",
+          "start": 134.02,
+          "end": 134.66,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l35",
+      "start": 142.1,
+      "end": 145.22,
+      "text": "ああ次に会えたら",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ああ",
+          "start": 142.1,
+          "end": 142.86,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "次に",
+          "start": 142.86,
+          "end": 144.1,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "つぎに"
+        },
+        {
+          "text": "会え",
+          "start": 144.1,
+          "end": 144.62,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "あえ"
+        },
+        {
+          "text": "たら",
+          "start": 144.62,
+          "end": 145.22,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l36",
+      "start": 145.98,
+      "end": 149.32,
+      "text": "何も言わず抱きしめたい",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "何も",
+          "start": 145.98,
+          "end": 146.8,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "なにも"
+        },
+        {
+          "text": "言わ",
+          "start": 146.8,
+          "end": 147.52,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "いわ"
+        },
+        {
+          "text": "ず",
+          "start": 147.52,
+          "end": 147.92,
+          "alignment": "reviewed-asr-span-approximation"
+        },
+        {
+          "text": "抱き",
+          "start": 147.92,
+          "end": 148.58,
+          "alignment": "reviewed-asr-span-approximation",
+          "reading": "だき"
+        },
+        {
+          "text": "しめたい",
+          "start": 148.58,
+          "end": 149.32,
+          "alignment": "reviewed-asr-span-approximation"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "audioSha256": "c2fc9a35a255d3dbe9ac1e069879f5d17aa30d9e4abb491210c87e9b3fdecd44",
+    "correction": "Cross-checked native reference, large-v3 full/stem VAD and no-VAD, focused windows, and independent MOSS-Music transcription; no human listening sign-off",
+    "timing": "Selected-render ASR word anchors, approximate within-word subdivision; companion highlights are line-relative",
+    "releaseStage": "published",
+    "notes": "The unsung 寒くない line and missing また are not restored. 街 replaces the planned 楓 in both choruses because every independent pass recognizes machi, not kaede. 出してまう retains the sung contraction. The ending repeats 次に会えたら. The short VAD-only お土産 duplicate is rejected. Nonlexical instrumental sound is not lyric data."
+  }
+}
