@@ -1,9 +1,9 @@
 import { deflateSync } from 'node:zlib';
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { exportNativeIcons } from '../../shared/scripts/export-icons.mjs';
 
-// Deterministic raster source art: four pulse bars with a coral downbeat.
-// No fonts, network downloads, SDKs, or image-generation dependencies.
+// Keep the First Pulse exercise artwork; the app icon uses the shared master.
 function crc32(bytes) {
   let crc = 0xffffffff;
   for (const byte of bytes) {
@@ -47,5 +47,5 @@ function render(size, isIcon) {
   ]);
 }
 const root = new URL('../Musia/Resources/Assets.xcassets/', import.meta.url);
-writeFileSync(fileURLToPath(new URL('AppIcon.appiconset/AppIcon.png', root)), render(1024, true));
+exportNativeIcons(['ios']);
 writeFileSync(fileURLToPath(new URL('FirstPulseCover.imageset/FirstPulseCover.png', root)), render(512, false));

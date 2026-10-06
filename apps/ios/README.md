@@ -122,7 +122,9 @@ For maintainer-only regeneration, use `xcodegen generate --spec project.yml`,
 or Ruby `xcodeproj` 1.27 with `ruby scripts/generate-project.rb`. The checked-in
 project uses a native `MusiaCore.framework`, while `Package.swift` exposes the
 same source to command-line tests. No third-party runtime dependencies.
-Raster source art can be reproduced with `node scripts/generate-assets.mjs`.
+Raster exports can be reproduced with `node scripts/generate-assets.mjs`
+(ImageMagick required for icon resizing). The generated ribbon masters live in
+`apps/shared/brand/`; do not replace them with the First Pulse exercise bars.
 
 ## Signing and Export
 

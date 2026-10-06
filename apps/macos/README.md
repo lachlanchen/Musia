@@ -40,8 +40,10 @@ ruby apps/macos/scripts/generate-project.rb
 python3 apps/macos/scripts/generate-assets.py
 ```
 
-The asset generator uses macOS `sips` and the existing Musia native icon; it does
-not download new artwork. The app contains only outgoing-network and
+The asset generator calls the shared Node/ImageMagick exporter, using the
+generated rounded Musia master with transparent outside corners and Dock padding;
+it does not download or regenerate artwork. Normal builds use the checked-in
+PNGs and need neither ImageMagick nor image generation. The app contains only outgoing-network and
 user-selected-file-export sandbox entitlements. No microphone, camera,
 incoming server or broad filesystem access is requested.
 
