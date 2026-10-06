@@ -2,6 +2,34 @@ import XCTest
 
 final class PracticeSmokeTests: XCTestCase {
     @MainActor
+    func testStageLayoutAndPracticeSwitch() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-lyricLanguages", "en,zh,ja"]
+        app.launch()
+        defer { app.terminate(); XCUIDevice.shared.orientation = .portrait }
+        let exercise = app.buttons["library.localFirstPulse"]
+        XCTAssertTrue(exercise.waitForExistence(timeout: 15)); exercise.tap()
+        let views = app.segmentedControls["player.view"]
+        XCTAssertTrue(views.waitForExistence(timeout: 10))
+        views.buttons["Stage"].tap()
+        let play = app.buttons["practice.transport.play"]
+        for orientation in [UIDeviceOrientation.portrait, .landscapeRight] {
+            XCUIDevice.shared.orientation = orientation
+            XCTAssertTrue(play.waitForExistence(timeout: 5))
+            XCTAssertTrue(play.isHittable)
+            XCTAssertTrue(app.frame.contains(play.frame))
+            // The transport must remain tappable even when the stage is scrolled.
+            app.swipeUp(velocity: .slow)
+            XCTAssertTrue(play.isHittable)
+            let image = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            image.name = "stage-\(orientation.rawValue)"; image.lifetime = .keepAlways; add(image)
+            app.swipeDown(velocity: .slow)
+        }
+        views.buttons["Practice"].tap()
+        XCTAssertTrue(app.segmentedControls["practice.mode"].waitForExistence(timeout: 5))
+    }
+
+    @MainActor
     func testBeginnerPracticeAndSettings() {
         let app = XCUIApplication()
         app.launchArguments = ["-lyricLanguages", "en,zh,ja"]
@@ -51,6 +79,8 @@ final class PracticeSmokeTests: XCTestCase {
         app.launch()
         defer { app.terminate() }
         let search = app.searchFields.firstMatch
+        // iPad's native toolbar initially collapses search into its icon.
+        if !search.exists, app.buttons["Search"].exists { app.buttons["Search"].tap() }
         if !search.isHittable { app.swipeDown() }
         XCTAssertTrue(search.waitForExistence(timeout: 15)); search.tap(); search.typeText("Rain of Light")
         let song = app.buttons["library.song.aya-chan-hikari-ame"]

@@ -1,5 +1,9 @@
 # Store Defaults
 
+- The October 6 Stage-player update is **test distribution only**, version
+  0.1.3, Apple build 5 / Android code 4. The owner wants to accumulate updates.
+  Read `testflight-0.1.3.md` for delivery state and real QA limitations; preserve
+  the 0.1.2 formal reviews. A candidate in `release.json` is not a public release.
 - Current Apple formal state: read `apple-resubmission-2026-10-06.md` first.
   Both 0.1.1 submissions were rejected for 4.3/4.2.6; all nine questions were
   answered with evidence in each thread. Owner authorized the latest builds:

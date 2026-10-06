@@ -3,10 +3,11 @@ import SwiftUI
 
 struct GuitarDiagram: View {
     let shape: GuitarShape
+    var compact = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("\(shape.name) fingering").font(.headline)
+            if !compact { Text("\(shape.name) fingering").font(.headline) }
             Canvas { context, size in
                 let left: CGFloat = 34
                 let right = size.width - 24
@@ -62,15 +63,17 @@ struct GuitarDiagram: View {
             }
             .aspectRatio(1.15, contentMode: .fit)
 #if os(macOS)
-            .frame(maxWidth: 250)
+            .frame(maxWidth: compact ? 190 : 250)
 #else
-            .frame(maxWidth: 320)
+            .frame(maxWidth: compact ? 190 : 320)
 #endif
             .accessibilityHidden(true)
+            if !compact {
             Text("Low E to high E - Standard tuning")
                 .font(.subheadline).foregroundStyle(.secondary)
             Text("Fingers: 1 index / 2 middle / 3 ring / 4 little")
                 .font(.caption).foregroundStyle(.secondary)
+            }
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(shape.accessibleText)
