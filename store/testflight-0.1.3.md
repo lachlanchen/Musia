@@ -9,14 +9,23 @@ See [the Stage design](../references/native-stage-player-2026-10-06.md).
 | Platform | Candidate | Latest verified state |
 | --- | --- | --- |
 | Android | 0.1.3 (4) | Available to internal testers, October 6 |
-| iPhone / iPad | 0.1.3 (5) | Upload accepted; processing/readback pending |
-| macOS | 0.1.3 (5) | Signed universal package; validation/upload underway |
+| iPhone / iPad | 0.1.3 (5) | VALID, IN_BETA_TESTING, existing Musia Internal group |
+| macOS | 0.1.3 (5) | VALID, IN_BETA_TESTING, existing Musia Internal group |
 
 Existing Android testers use the same
 [internal test link](https://play.google.com/apps/internaltest/4701000336240069263).
 No production release, price, region, invitation recipient or review attachment
 is changed by this update. Apple upload acceptance, VALID processing and internal
-group availability are separate checks; the table must reflect actual readback.
+group availability were checked separately. Final Apple readback at 13:31 UTC
+on October 6 confirms both exact builds available and both 0.1.2 (4) formal
+versions still WAITING_FOR_REVIEW with unchanged attachments.
+
+Open TestFlight > Musia > Update on iPhone, iPad or Mac. The existing owner
+tester is retained; no duplicate invitation was sent, and email delivery is
+not independently verified. iOS build ID:
+`504af54f-9565-4a4f-a517-85eea8e1a4b3`; Mac build ID:
+`2e4871bb-ff71-42b9-b586-8514118f0531`.
+Implementation is committed as `0b6ea4d`.
 
 ## Changes
 
@@ -68,6 +77,9 @@ Private receipts, native captures, failed and passing logs, provider readback
 and source-bound QA live under `store/.runtime/stage-013/`. Packages, signing
 material and browser state stay out of Git. Earlier intermediate Android
 packages were not uploaded; only the final safe-area-corrected AAB was selected.
+Owned emulator, simulators, debug app and build/upload processes are stopped.
+The shared noVNC browser/profile is preserved; the exact owned Play tab was
+closed after release readback. No idle Musia GUI stack is retained.
 
 ## Owner Check
 
