@@ -1,5 +1,10 @@
 # Store Defaults
 
+- The subsequent ribbon-icon test update uses **iOS 0.1.3 (6)** and
+  **Android 0.1.3 (5)**. Read `testflight-0.1.3-icon.md` before any retry.
+  Both are confirmed available internally as of October 6, 15:29 UTC.
+  Mac stays on the existing 0.1.3 (5) beta; no Mac rebuild or production action
+  was requested. Keep both 0.1.2 (4) formal Apple attachments unchanged.
 - The October 6 Stage-player update is **test distribution only**, version
   0.1.3, Apple build 5 / Android code 4. The owner wants to accumulate updates.
   Read `testflight-0.1.3.md` for delivery state and real QA limitations; preserve

@@ -4,6 +4,10 @@ The owner requested test distribution only on October 6, 2026: accumulate
 updates without replacing the existing production review submissions.
 See [the Stage design](../references/native-stage-player-2026-10-06.md).
 
+The later [icon test update](testflight-0.1.3-icon.md) supersedes the iOS and
+Android packages below. This document retains the original Stage delivery and
+Mac evidence; do not re-upload these older packages.
+
 ## Delivery
 
 | Platform | Candidate | Latest verified state |

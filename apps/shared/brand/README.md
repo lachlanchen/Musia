@@ -35,8 +35,10 @@ Ordinary native builds use committed assets with no image-tool dependency.
 - Play listing: `store/branding/musia-icon-512.png`, opaque RGB; prepared only,
   not uploaded to change an existing listing automatically.
 
-This artwork is for the next accumulated native update. It does not modify the
-already-delivered 0.1.3 beta packages or current formal review attachments.
+This artwork is included in the subsequent iOS 0.1.3 (6) and Android 0.1.3 (5)
+test candidates. See the [delivery record](../../../store/testflight-0.1.3-icon.md)
+for provider availability. Older binaries and formal review attachments are
+unchanged. The Mac export is prepared, but Mac 0.1.3 (5) was not rebuilt for it.
 First Pulse artwork and the separate Fun Lazying Art website logo stay unchanged.
 
 ## Verification
@@ -46,7 +48,8 @@ icons contain visible colored detail, Mac/fallback corners are transparent,
 and Android's colored mark fits within a 30.1dp radius (below its 33dp safe
 radius). Android debug resource compilation and lint passed; the icon was
 visually checked in the native API34 launcher. Apple asset validators passed;
-no new Apple binary was uploaded for this artwork-only change.
+the artwork-only commit itself did not upload a new Apple binary. Subsequent
+test packaging and provider delivery are recorded separately above.
 
 `store/.runtime/icon-20261006/launcher.png` holds the private native screenshot.
 Regenerating the iOS assets was also checked to leave First Pulse unchanged.
