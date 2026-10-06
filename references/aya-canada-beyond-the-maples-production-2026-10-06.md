@@ -11,7 +11,10 @@
 - Local selected master: `data/creative_projects/aya-canada-beyond-the-maples-20261006/selected/aya-canada-beyond-the-maples-ja.wav` and `.mp3`.
 - Corrected publishing lyrics: `website/data/songs/aya-canada-beyond-the-maples/lyrics/ja-vocal/ja.json`.
 - Corrected text/LRC: `data/creative_projects/aya-canada-beyond-the-maples-20261006/selected/lyrics/`.
-- No recording or external social/music-platform publication was requested for this release.
+- After the website release, the owner approved the song and requested standard
+  portrait video publication plus Shipinhao Music. The scoped handoff and
+  verified platform results are maintained in
+  [publication handoff](../handoff/lazyedit/aya-canada-beyond-the-maples/README.md).
 
 ## Production Choice
 
@@ -26,7 +29,7 @@ Selection: **100604**, after signal-health checks, APEX screening, and deeper vo
 - Selected WAV SHA-256: `c2fc9a35a255d3dbe9ac1e069879f5d17aa30d9e4abb491210c87e9b3fdecd44`.
 - Duration/sample format: 156 seconds, 48 kHz stereo.
 - WAV and 320-kbps MP3 measured approximately -12.7 LUFS and -0.8 dBTP, with no clipping/nonfinite samples and a quiet ending.
-- Human listening approval: **not yet provided**. Do not represent automated screening as a human audition.
+- Human listening approval: **owner approved on 2026-10-06**, saying the song is very good and requesting video and Shipinhao Music publication. This approval followed the original website release; automated screening alone was not a human audition.
 
 ## Why the First ASR Was Insufficient
 
@@ -102,6 +105,9 @@ A fresh 16:9 generated illustration: a traveller in a russet coat beneath red/go
 
 - Retained generation: `data/creative_projects/aya-canada-beyond-the-maples-20261006/cover-16x9.png`.
 - Public copy: `website/assets/covers/aya-canada-beyond-the-maples-16x9.png`.
+- Music publication cover: a newly generated square composition of the same
+  theme, `data/creative_projects/aya-canada-beyond-the-maples-20261006/cover-square.png`.
+  One reviewed 1254x1254 artwork was prepared; this is not nine distinct covers.
 
 ## Reproduction
 

@@ -1,0 +1,29 @@
+{
+  "platforms": {
+    "shipinhao": true,
+    "youtube": true,
+    "instagram": true,
+    "douyin": true
+  },
+  "persistSettings": false,
+  "options": {
+    "burnSubtitles": false,
+    "translationLanguages": [],
+    "publicationMode": "override",
+    "autoCorrectSubtitles": false,
+    "useCorrectionPromptForMetadata": false,
+    "metadataPrompt": "",
+    "publishCategory": "musia",
+    "burnLayout": {
+      "portraitBlurFill": { "enabled": false }
+    },
+    "logo": {
+      "enabled": true,
+      "logoPath": "/home/lachlan/DiskMech/Projects/lazyedit/DATA/ui_assets/logos/logo-w-text-the-art-of-lazying.png",
+      "heightRatio": 0.028,
+      "position": "top-right",
+      "bgOpacity": 0.5,
+      "bgShape": "circle"
+    }
+  }
+}

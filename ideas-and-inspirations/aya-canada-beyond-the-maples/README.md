@@ -9,9 +9,10 @@ Listen: https://fun.lazying.art/#aya-canada-beyond-the-maples
 
 See [production and full phrase audit](../../references/aya-canada-beyond-the-maples-production-2026-10-06.md)
 and [source-bound reviewed lyrics](reviewed-lyrics.json). The input below is the
-generation reference, not the authoritative publishing transcript. Human
-listening approval is still pending; automated health and transcription checks
-are recorded separately. No video was recorded for this request.
+generation reference, not the authoritative publishing transcript. The owner
+approved the song on 2026-10-06 and then requested the standard portrait video
+and video/music publication. Automated checks and human approval are recorded
+separately.
 
 ## Story and lyric choices
 
