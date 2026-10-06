@@ -278,6 +278,15 @@ function catalogItems({
     : items.filter((item) => !isHiddenCatalogItem(item) && !isPreviewCatalogItem(item));
 }
 
+function initialMediaItem(requestedId, random = Math.random) {
+  const requested = state.catalog?.items?.find((item) => item.id === requestedId);
+  if (requested) return requested;
+  const visible = catalogItems();
+  const songs = visible.filter((item) => item.kind === "song" || item.kind === "localized-song");
+  const candidates = songs.length ? songs : visible;
+  return candidates[Math.floor(random() * candidates.length)];
+}
+
 function hiddenCatalogCount() {
   return (state.catalog?.items || []).filter(isHiddenCatalogItem).length;
 }
@@ -2340,10 +2349,7 @@ async function boot() {
   startLibraryPeekLoop();
   const requestedId = atlasMediaIdFromPath() || params.get("media") || params.get("id") || window.location.hash.replace(/^#/, "");
   const hashId = decodeURIComponent(requestedId);
-  const item = state.catalog.items.find((entry) => entry.id === hashId)
-    || catalogItems().find((entry) => entry.id === state.catalog.defaultMedia)
-    || catalogItems()[0]
-    || state.catalog.items[0];
+  const item = initialMediaItem(hashId);
   await loadMediaItem(item);
   drawVisualizer();
 }

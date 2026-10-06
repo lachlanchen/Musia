@@ -30,6 +30,22 @@ not deleted. The Archive number is an identifier, not a quality score.
 The normal library/search/playback queue hides archives. Existing `?hidden`,
 `?hided` and `?showall` links and the library's Legacy control remain supported.
 
+## Opening the Website
+
+As requested on October 6, 2026, opening Fun without a valid media selection
+chooses a random visible song or localized song, rather than `defaultMedia`.
+If the selected library mode contains no songs, choose another item from that
+same visible mode; never fall back to a hidden or preview item in the normal
+library. An empty eligible library has no initial selection.
+
+Explicit `#song-id`, `?media=song-id`, `?id=song-id`, and `/atlas/song-id/`
+links still open that exact item, including archive links. Review modes
+(`?hidden`, `?preview`, `?showall`) keep their existing eligibility rules.
+Random startup does not autoplay audio or change the user's repeat/shuffle
+preference. The bare homepage stays unpinned, so another visit can choose again;
+random selection may occasionally pick the same song. Keep catalog `defaultMedia`
+for other consumers; this behavior is specific to the Fun web player.
+
 ## Apply and Verify
 
 ```sh
