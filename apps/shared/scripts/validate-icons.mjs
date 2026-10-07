@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { inspectRoundedIcon } from './icon-geometry.mjs';
 
 const root = fileURLToPath(new URL('../../../', import.meta.url));
 const convert = ['magick', 'convert'].find(command => spawnSync(command, ['-version']).status === 0);
@@ -19,6 +20,13 @@ function check(file, size, rounded) {
   assert.equal(decoded.status, 0, file);
   const pixels = decoded.stdout;
   assert.equal(pixels.length, size * size * 4, file);
+  if (rounded && size >= 32) {
+    try {
+      inspectRoundedIcon(pixels, size, { maxExtent: file.includes('/macos/') ? .94 : 1 });
+    } catch (error) {
+      throw new Error(`${file}: ${error.message}`);
+    }
+  }
   for (const [x, y] of [[0, 0], [size - 1, 0], [0, size - 1], [size - 1, size - 1]]) {
     assert.equal(pixels[(y * size + x) * 4 + 3], rounded ? 0 : 255, `Corner alpha: ${file}`);
   }

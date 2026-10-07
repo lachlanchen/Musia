@@ -1,5 +1,9 @@
 # Musia Icon Test Update
 
+Mac's later [rounded-icon build 6](testflight-macos-icon-2026-10-07.md) supersedes
+the unchanged Mac build 5 below. The iOS/Android deliveries in this record remain
+current; do not re-upload them.
+
 The owner requested iOS and Android test builds on October 6, 2026, after
 approving the coral/cyan ribbon icon and rounded-corner treatment. This is
 **test distribution only**. Preserve both Apple 0.1.2 (4) formal submissions,

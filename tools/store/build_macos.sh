@@ -3,7 +3,7 @@
 set -euo pipefail
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 root="${MUSIA_ROOT:-$HOME/Projects/Musia}"
-release="${MUSIA_MAC_RELEASE:-0.1.3-5}"
+release="${MUSIA_MAC_RELEASE:-0.1.3-6}"
 out="$root/store/.runtime/macos-$release"
 keychain="${MUSIA_KEYCHAIN:-$HOME/Library/Keychains/landn-release.keychain-db}"
 passfile="${MUSIA_KEYCHAIN_PASSWORD_FILE:-$HOME/.config/echomind/apple/release-keychain.pass}"
@@ -41,6 +41,7 @@ test "$(plutil -extract CFBundleIdentifier raw -o - "$app/Contents/Info.plist")"
 chmod -R a+rX "$app"
 lipo "$app/Contents/MacOS/Musia" -verify_arch arm64 x86_64
 codesign --verify --deep --strict "$app"
+swift tools/store/inspect_macos_icon.swift "$app" "$out/icon-evidence" > "$out/icon-inspection.json"
 # The shared keychain can auto-lock during the universal archive.
 password=$(tr -d '\r\n' < "$passfile")
 security unlock-keychain -p "$password" "$keychain"

@@ -18,6 +18,7 @@ node apps/shared/scripts/export-icons.mjs ios
 node apps/shared/scripts/export-icons.mjs macos
 node apps/shared/scripts/export-icons.mjs android
 node apps/shared/scripts/validate-icons.mjs
+node --test apps/shared/scripts/icon-geometry.test.mjs
 ```
 
 Requires Node and ImageMagick (`magick` or `convert`) for maintainer exports.
@@ -38,7 +39,9 @@ Ordinary native builds use committed assets with no image-tool dependency.
 This artwork is included in the subsequent iOS 0.1.3 (6) and Android 0.1.3 (5)
 test candidates. See the [delivery record](../../../store/testflight-0.1.3-icon.md)
 for provider availability. Older binaries and formal review attachments are
-unchanged. The Mac export is prepared, but Mac 0.1.3 (5) was not rebuilt for it.
+unchanged. Mac 0.1.3 (5) was not rebuilt for it; the subsequent
+[Mac build 6 correction](../../../store/testflight-macos-icon-2026-10-07.md)
+packages the ribbon and verifies the compiled/native-rendered icon.
 First Pulse artwork and the separate Fun Lazying Art website logo stay unchanged.
 
 ## Verification
@@ -53,3 +56,7 @@ test packaging and provider delivery are recorded separately above.
 
 `store/.runtime/icon-20261006/launcher.png` holds the private native screenshot.
 Regenerating the iOS assets was also checked to leave First Pulse unchanged.
+
+October 7 validation additionally rejects padded square silhouettes. Mac
+build/upload tools inspect the signed artifact and native icon lookup, so
+correct source PNGs cannot silently stand in for an older packaged icon.

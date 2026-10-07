@@ -1,5 +1,13 @@
 # Store Defaults
 
+- The October 7 Mac rounded-icon correction is **Mac 0.1.3 (6)**, testing only.
+  Read `testflight-macos-icon-2026-10-07.md` for actual availability before retry.
+  It is confirmed VALID and IN_BETA_TESTING at October 7, 19:55 Hong Kong time.
+  iOS 0.1.3 (6) and Android 0.1.3 (5) already package the latest ribbon icon;
+  do not upload duplicate unchanged mobile binaries. Validate the compiled Mac
+  icon and native icon lookup, not only the source asset catalog. Preserve both
+  Apple 0.1.2 (4) formal submissions. Coordination notes now default to
+  `/home/lachlan/Nutstore Files/OneTimeSync/Musia/`.
 - The subsequent ribbon-icon test update uses **iOS 0.1.3 (6)** and
   **Android 0.1.3 (5)**. Read `testflight-0.1.3-icon.md` before any retry.
   Both are confirmed available internally as of October 6, 15:29 UTC.

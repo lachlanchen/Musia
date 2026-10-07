@@ -79,6 +79,11 @@ Store profile and existing authorized signing keychain. Keychain unlocking uses
 an owner-only password file, never a committed value. It refuses to overwrite
 an existing archive and does not revoke certificates or change keychain ACLs.
 The signed archive is packaged with Apple's `productbuild --component` flow.
+The archive and extracted installer also pass `inspect_macos_icon.swift`:
+actual compiled ICNS and macOS-resolved icon images must have a rounded visible
+silhouette, transparent corners, balanced padding and visible colored artwork.
+Transparent canvas corners alone do not qualify a square tile. Native 64px and
+512px renders and JSON measurements are retained with the private package.
 Only the generated app's permissions are normalized for installed-user access;
 private build logs, signing sources and the enclosing runtime remain private.
 `ExportOptions.plist` is retained for Xcode Organizer/export use when needed.

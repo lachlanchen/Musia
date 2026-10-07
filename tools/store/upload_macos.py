@@ -68,6 +68,9 @@ def main():
                 if not path.is_symlink():
                     required = 0o055 if path.is_dir() else 0o044
                     require(path.stat().st_mode & required == required, "Installed bundle has private-only permissions")
+            icon = run(["xcrun", "swift", Path(__file__).with_name("inspect_macos_icon.swift"),
+                        app, folder / "icon-evidence"], log=folder / "icon-inspection.json")
+            require(json.loads(icon).get("state") == "passed", "Packaged Mac icon failed inspection")
         receipt = {"at": now(), "platform": "MAC_OS", "bundle_id": BUNDLE, "version": args.version,
                    "build": args.build, "package_sha256": args.sha256, "signer_sha1": signer,
                    "architectures": ["arm64", "x86_64"], "entitlements": entitlements}
