@@ -30,6 +30,7 @@ final class CreatorStore: ObservableObject {
     private var revoking = false
     private weak var player: PlaybackController?
     private var mediaGeneration = UUID()
+    private var cachedAudio: URL?
     private let mediaDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         .appendingPathComponent("MusiaCreatorAudio", isDirectory: true)
 
@@ -149,25 +150,40 @@ final class CreatorStore: ObservableObject {
             var next = self.pendingByOwner; next[pending.owner] = pending
             try CreatorKeychain.write(next, key: "pending-renders")
             self.pendingByOwner = next; self.pending = pending
-            try await self.submit(pending, captured: captured)
+            try await self.submit(pending, captured: captured, initial: true)
         }
     }
     func reconnectRender() async {
         guard let pending, pending.canRetry(owner: account?.id) else { return }
-        await perform { try await self.submit(pending, captured: self.snapshot()) }
+        await perform { try await self.submit(pending, captured: self.snapshot(), initial: false) }
     }
-    private func submit(_ pending: PendingCreatorRender, captured: SessionSnapshot) async throws {
+    private func submit(_ pending: PendingCreatorRender, captured: SessionSnapshot, initial: Bool) async throws {
         guard pending.canRetry(owner: captured.identity.owner) else { throw CreatorError.sessionChanged }
-        // Even errors retain identity: retry only the same key/body. No automatic resubmission.
-        let receipt: CreatorJobReceipt = try await api.request("/api/jobs", method: "POST", token: captured.token,
-            body: CreatorAPI.body(pending.request), idempotencyKey: pending.key)
-        try requireCurrent(captured)
-        var next = pendingByOwner; next.removeValue(forKey: pending.owner)
-        try CreatorKeychain.write(next, key: "pending-renders")
-        pendingByOwner = next; self.pending = nil
+        let receipt: CreatorJobReceipt
+        do {
+            receipt = try await api.request("/api/jobs", method: "POST", token: captured.token,
+                body: CreatorAPI.body(pending.request), idempotencyKey: pending.key)
+        } catch {
+            try requireCurrent(captured)
+            // A retry's 422 cannot disprove an earlier unknown acceptance.
+            if pending.canDiscard(after: error, initial: initial) {
+                try clearPending(pending, captured: captured)
+            }
+            throw error
+        }
+        try clearPending(pending, captured: captured)
         jobs.removeAll { $0.id == receipt.job.id }; jobs.insert(receipt.job, at: 0)
         notice = "Render request received. Refresh jobs to follow its progress."
         await refresh()
+    }
+    private func clearPending(_ pending: PendingCreatorRender, captured: SessionSnapshot) throws {
+        try requireCurrent(captured)
+        guard pendingByOwner[pending.owner] == pending, self.pending == pending else {
+            throw CreatorError.sessionChanged
+        }
+        var next = pendingByOwner; next.removeValue(forKey: pending.owner)
+        try CreatorKeychain.write(next, key: "pending-renders")
+        pendingByOwner = next; self.pending = nil
     }
     func cancel(_ job: CreatorJob) async {
         guard job.canCancel else { return }
@@ -225,6 +241,7 @@ final class CreatorStore: ObservableObject {
         credential = nil; hasSession = false; account = nil; jobs = []; pending = nil
         brief = CreatorBrief(); agentMessage = nil; busy = false; refreshing = false
         player?.clearCreatorSelection()
+        cachedAudio = nil
         try? FileManager.default.removeItem(at: mediaDirectory)
         // Pending renders remain protected and bound to their original owner.
     }
@@ -232,30 +249,42 @@ final class CreatorStore: ObservableObject {
     func play(_ song: CreatorSong) async {
         await perform {
             guard let source = song.audioUrl else { throw CreatorError.unavailable("Audio is not ready yet.") }
+            guard let player = self.player else { throw CreatorError.unavailable("The player is not ready yet.") }
             let url = try CreatorAPI.mediaURL(source)
             let epoch = self.generation
-            let playbackGeneration = self.player?.selectionGeneration
+            let playbackGeneration = player.selectionGeneration
             let mediaEpoch = UUID(); self.mediaGeneration = mediaEpoch
+            var stagedAudio: URL?
+            defer {
+                if let stagedAudio { try? FileManager.default.removeItem(at: stagedAudio) }
+            }
             let playbackURL: URL
-            if song.visibility == .private {
+            if song.requiresAuthenticatedPlayback {
                 let captured = try self.snapshot()
-                let temporary = try await self.api.downloadAudio(url, token: captured.token)
-                defer { try? FileManager.default.removeItem(at: temporary) }
+                let download = try await self.api.downloadAudio(url, token: captured.token)
+                defer { try? FileManager.default.removeItem(at: download.file) }
                 try self.requireCurrent(captured)
                 guard mediaEpoch == self.mediaGeneration else { throw CancellationError() }
                 try FileManager.default.createDirectory(at: self.mediaDirectory, withIntermediateDirectories: true,
                     attributes: [.posixPermissions: 0o700])
-                playbackURL = self.mediaDirectory.appendingPathComponent(UUID().uuidString + ".audio")
-                try FileManager.default.moveItem(at: temporary, to: playbackURL)
+                playbackURL = self.mediaDirectory.appendingPathComponent(UUID().uuidString)
+                    .appendingPathExtension(download.suffix)
+                try FileManager.default.moveItem(at: download.file, to: playbackURL)
+                stagedAudio = playbackURL
                 try FileManager.default.setAttributes([.posixPermissions: 0o600], ofItemAtPath: playbackURL.path)
 #if os(iOS)
                 // Allow the existing background audio transport after first unlock.
                 try FileManager.default.setAttributes([.protectionKey: FileProtectionType.completeUntilFirstUserAuthentication], ofItemAtPath: playbackURL.path)
 #endif
             } else { playbackURL = url }
+            try Task.checkCancellation()
             guard epoch == self.generation else { throw CreatorError.sessionChanged }
-            guard playbackGeneration == self.player?.selectionGeneration else { throw CancellationError() }
-            self.player?.openCreator(try song.playbackSong(audioURL: playbackURL))
+            guard playbackGeneration == player.selectionGeneration else { throw CancellationError() }
+            player.openCreator(try song.playbackSong(audioURL: playbackURL))
+            let previous = self.cachedAudio
+            self.cachedAudio = stagedAudio
+            stagedAudio = nil
+            if let previous { try? FileManager.default.removeItem(at: previous) }
         }
     }
 

@@ -38,7 +38,13 @@ public struct CreatorBrief: Codable, Equatable, Sendable {
     public var key = "C major"
     public init() {}
     public var isRenderable: Bool {
-        [title, lyrics, caption].allSatisfy { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        // Pydantic counts Unicode code points, not graphemes or UTF-16 units.
+        let lengthsValid = title.unicodeScalars.count <= 120 && idea.unicodeScalars.count <= 4000
+            && lyrics.unicodeScalars.count <= 6000 && caption.unicodeScalars.count <= 1600
+        let keyValid = key.range(of: #"^[A-G](?:#|b)? (?:major|minor)$"#, options: .regularExpression)
+            == (key.startIndex..<key.endIndex)
+        return lengthsValid && keyValid
+        && [title, lyrics, caption].allSatisfy { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
         && ["en", "zh", "ja", "mixed"].contains(language)
         && (30...180).contains(duration) && (40...200).contains(bpm)
     }
@@ -74,6 +80,11 @@ public struct PendingCreatorRender: Codable, Equatable, Sendable {
         self.owner = owner; self.key = key; self.request = request
     }
     public func canRetry(owner: String?) -> Bool { self.owner == owner }
+    public func canDiscard(after error: Error, initial: Bool) -> Bool {
+        guard initial, let failure = error as? CreatorError else { return false }
+        if case .server(422, "invalid_request") = failure { return true }
+        return false
+    }
 }
 
 public struct CreatorIdentity: Equatable, Sendable {
@@ -147,6 +158,10 @@ public struct CreatorSong: Decodable, Identifiable, Sendable {
     public let liked: Bool
     public let saved: Bool
     public let likes: Int
+
+    public var requiresAuthenticatedPlayback: Bool {
+        visibility != .public || moderation != "approved"
+    }
 
     /// Only completed audio's supplied timed lines enter the learning player.
     /// No beat, chord or pitch estimates are invented for a generated song.

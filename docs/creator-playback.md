@@ -24,7 +24,10 @@ lyrics to create that derivative.
   non-cacheable.
 - Native private playback downloads through the authenticated API, stores audio
   in an owner-protected app cache and removes it on sign-out. The extension is
-  not an authorization decision; clients must support both WAV and MP3.
+  not an authorization decision; clients must support both WAV and MP3. Preserve
+  an appropriate file extension based on the verified response MIME type when
+  moving a temporary download into the cache. Do not use an arbitrary `.audio`
+  suffix or infer the format from this extensionless API endpoint.
 
 Backfill an already reviewed song without regenerating or approving it again:
 
@@ -57,3 +60,18 @@ position to advance and private playback to disappear after sign-out.
 Record genuine device/simulator results separately from unit-test fixtures.
 Successful download alone is not audible-output, background-audio, or purchase
 qualification.
+
+## Native Format Regression
+
+October 9 native AVFoundation probes used three byte-identical copies of the
+90-second QA MP3. Both `.audio` paths returned `isPlayable=false` and duration
+loading failed with `AVFoundationErrorDomain -11828`, underlying
+`NSOSStatusErrorDomain -12847`. The `.mp3` path returned `isPlayable=true` and
+duration 90.0 seconds. File digests and sizes matched; the original was unchanged
+and temporary probe copies were removed. This is evidence for a cache suffix
+fix, not permission to relabel unsupported content as MP3.
+
+Keep MIME mapping and rejection tests alongside the native contract. Then test
+actual authenticated download, native decoding and an advancing playback clock.
+The initial simulator failure remains evidence: a complete download and a visible
+mini-player did not establish playable audio.

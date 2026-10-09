@@ -56,15 +56,29 @@ public final class CreatorAPI: @unchecked Sendable {
         guard data.count < 12_000_000 else { throw APIError.tooLarge }
         return data
     }
-    public func downloadAudio(_ url: URL, token: String?) async throws -> URL {
+    public func downloadAudio(_ url: URL, token: String?) async throws -> (file: URL, suffix: String) {
         _ = try Self.mediaURL(url.absoluteString)
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 120)
         request.setValue("1", forHTTPHeaderField: "X-Musia-Request")
         if let token { request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization") }
         let (temporary, response) = try await session.download(for: request)
-        do { try Self.validate(response, data: Data()); try Task.checkCancellation() }
+        do {
+            try Self.validate(response, data: Data())
+            try Task.checkCancellation()
+            let suffix = try Self.playbackFileSuffix(contentType:
+                (response as? HTTPURLResponse)?.value(forHTTPHeaderField: "Content-Type"))
+            return (file: temporary, suffix: suffix)
+        }
         catch { try? FileManager.default.removeItem(at: temporary); throw error }
-        return temporary
+    }
+    static func playbackFileSuffix(contentType: String?) throws -> String {
+        let mediaType = contentType?.components(separatedBy: ";").first?
+            .trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        switch mediaType {
+        case "audio/mpeg": return "mp3"
+        case "audio/wav", "audio/x-wav", "audio/wave", "audio/vnd.wave": return "wav"
+        default: throw CreatorError.unavailable("The server returned an unsupported audio format.")
+        }
     }
     private static func validate(_ response: URLResponse, data: Data) throws {
         guard let http = response as? HTTPURLResponse else { throw URLError(.badServerResponse) }

@@ -12,7 +12,7 @@ may omit Origin. Never embed confidential issuer/provider keys.
 - The live invitation-gated pilot uses registered `musia-server` shared password
   sign-in at `https://musia.lazying.art/creator/`. Apple, Google and GitHub are
   centrally unavailable. Active creator app/relay release:
-  `4c61355dc154f7fe3afa51d2db72c3af889018c64bf11e2b76369bb30074110c`.
+  `195577afad66325019362828f3206d0b164a15f5f8c167d02a7409a725e11016`.
   The edge remains on `421bd8c4...` with identical guard/policy bytes; exact
   component hashes are in [deployment status](creator-deployment.md).
 - Real native PKCE protocol roundtrips passed for `apple` and `android`, including
@@ -25,15 +25,12 @@ may omit Origin. Never embed confidential issuer/provider keys.
   existing owner tester verified. No Play installation, physical-device listening,
   audible emulator output or purchase is proven.
   [Exact artifact and delivery evidence](../store/creator-android-20261009.md).
-- SwiftUI and Compose creator/account/billing clients exist. Apple iOS/macOS
-  0.2.0 (7) artifacts are signed and validated, **not uploaded**. The universal
-  Mac PKG passed Apple revalidation; upload never started because the KVM Python
-  runtime lacks PyJWT, with repair underway before upload. Actual iOS 27 testing
-  on the owned Mac mini simulator is progressing, not yet a passed qualification.
-  KVM-hosted isolated macOS debug QA passed Keychain, capabilities, library and minimized
-  playback checks, but is not production-ID or signed-in creator-flow proof.
-  Apple native UI sign-in and app-specific product lookup remain unverified.
-  [Apple evidence and limits](../store/creator-apple-20261009.md).
+- SwiftUI and Compose creator/account/billing clients exist. Mac 0.2.0 (7) is
+  available in internal TestFlight. Real iOS browser sign-in, protected-session
+  relaunch and app-specific product lookup passed. Private playback testing
+  found the mini-player missing on pushed Apple song pages, so build 8 is being
+  requalified with a navigation-stack correction. Current artifacts, delivery
+  and test limitations are in [Apple evidence](../store/creator-apple-20261009.md).
 - A real synthetic user completed live registration, login, consent, invitation
   and terms, a `deepseek-v4-pro` draft, a 90-second ACE XL Turbo render, large-v3
   cross-window ASR and actual `gpt-audio-1.5` audio review. Approval used 18
@@ -43,7 +40,8 @@ may omit Origin. Never embed confidential issuer/provider keys.
 - Live social QA passed private/pending guest denial, approved public range
   playback, likes/saves, comment moderation/deletion, report resolution and
   unsharing. The temporary public synthetic QA song was returned to private.
-- Apple/Google draft products match the US$9.99/US$29.99 targets. App-specific
+- Apple/Google products match the US$9.99/US$29.99 targets. Google base plans
+  are ACTIVE; Apple review metadata is being completed. App-specific
   test verification and restore configuration is connected, with key paths
   validated; sales and test checkout are both off. No real Musia sandbox
   purchase has passed. This is not a public paid service.
@@ -112,18 +110,64 @@ POST `/api/agent` `{message, brief?}` -> `{message, brief}`. Editable brief:
 bpm:40..200,key:"C major"}`. Empty draft title/lyrics/caption allowed only for
 agent requests; actual render requires all three. Never auto-render an agent reply.
 
+Brief limits are inclusive: title 1..120, idea 0..4000, lyrics 1..6000 and
+caption 1..1600 Unicode code points. Agent drafts may have empty title, lyrics
+and caption, but retain the same maxima. Apple counts the raw strings with
+`unicodeScalars.count`, matching Pydantic rather than grapheme clusters, UTF-16
+units or UTF-8 bytes; combining marks count separately and supplementary scalars
+count once. Length checks do not trim or normalize the submitted text. Apple
+also requires non-whitespace title, lyrics and caption before rendering.
+Language must be `en`, `zh`, `ja` or `mixed`; integer duration is 30..180 seconds
+and integer bpm is 40..200. Key must fully match
+`^[A-G](?:#|b)? (?:major|minor)$`: uppercase note, optional ASCII `#` or `b`,
+one space, then lowercase `major` or `minor`. Leading/trailing whitespace,
+including a trailing newline, and Unicode sharp/flat symbols are invalid.
+
 POST `/api/jobs`, `Idempotency-Key` persisted before sending, body
 `{brief,rights_confirmed:true,visibility:"private"|"public"}`. Reuse exact key/body
 on unknown response, bound to original owner. GET `/api/jobs` -> `{jobs:[...]}`;
 POST `/api/jobs/{id}/cancel` `{}` only while queued. No background re-render.
 
+Apple durably freezes the owner, key and request before initial transmission.
+A valid job acknowledgement clears that pending request. The only rejection
+that permits discard is the **initial** submission's exact HTTP 422 with
+`detail: "invalid_request"`. Before clearing, verify the captured current
+identity/session token and exact pending request; write the updated owner map
+to Keychain before clearing in-memory state. A storage failure retains pending
+state. Timeouts, network failures, cancellation, malformed acknowledgements,
+5xx, 409 and other rejections retain the frozen key/body. **Every retry rejection,
+including that same 422, retains pending state**: a changed server contract
+cannot disprove an earlier unknown acceptance. Neither a failed jobs refresh
+nor logout proves non-acceptance; pending requests survive logout in protected,
+owner-bound storage and may reconnect only for that owner.
+
 GET `/api/songs?mode=public|mine|saved` -> `{songs:[...]}`; GET `/api/songs/{id}`.
 Song: `{id,title,language,duration,author:{id,name},mine,visibility,moderation,
 lyrics,lyricLines:[{start,end,text,language}],audioUrl,sharePath,liked,saved,likes}`.
-Audio URL is an ACL-checked endpoint: private playback must attach native bearer
-headers or download to an owner-protected local file (erase at logout).
-Public audio remains anonymous. Use existing native AVFoundation/Media3 playback.
+Audio URL is an ACL-checked endpoint. Only `visibility: "public"` together with
+`moderation: "approved"` permits anonymous playback. All other states require
+native bearer authentication or an authenticated download to an owner-protected
+local file (erase at logout). In particular, an owner's public-but-pending song
+uses authenticated playback; `mine` alone does not determine the transport.
+Authentication does not bypass server ACLs. Use existing native
+AVFoundation/Media3 playback.
 Never use planned lyrics as completed audio's transcript.
+
+The endpoint may return `audio/mpeg` for a verified full-length playback copy
+or `audio/wav` for the original fallback. Do not assume WAV from the URL. Both
+represent the same reviewed song and retain the same access controls.
+
+Apple downloads protected audio into `MusiaCreatorAudio` with directory mode
+0700 and file mode 0600, plus iOS file protection after first unlock. Temporary
+downloads and newly staged files are cleaned up on failure or cancellation;
+identity and selection-generation checks prevent stale completion from replacing
+the current selection. The previous cached file remains until the new Creator
+selection is opened, then is removed; switching to approved public playback
+also releases that previous file. Startup and session clearing remove the cache
+directory, and session clearing clears Creator playback. File removal is best
+effort. Opening a selection is not proof of asynchronous AVPlayer readiness or
+audible playback. The local `.audio` suffix is unchanged; no decoder-quality or
+extension-compatibility claim follows from a successful download.
 
 POST `/api/songs/{id}/reactions/like|save` `{active:true|false}`.
 POST `/api/songs/{id}/visibility` `{visibility}`. Public sharing enters moderation.
@@ -180,6 +224,37 @@ No native debug backend bypass in release. Preserve current formal reviews and
 Google production 3 (0.1.2), held under managed publishing. Android 0.2.0 (6) is
 already delivered for internal testing; Apple 0.2.0 (7) remains unuploaded.
 Internal distribution does not qualify the new surface for production.
+
+### Apple Source Notes and Test Intent
+
+The iOS mini-player's bottom `safeAreaInset` is attached to each tab's entire
+`NavigationStack`, not only its root content. It must remain within app bounds,
+above and non-overlapping the tab buttons, on a pushed Creator song detail,
+after returning from the player, at the Community root and after reopening the
+detail. macOS likewise attaches the inset to the detail `NavigationStack`, not
+the inner `Group`; it remains hidden in the dedicated Practice section.
+
+Source: `apps/ios/Musia/Core/CreatorModels.swift`,
+`apps/ios/Musia/Services/CreatorStore.swift`, `apps/ios/Musia/MusiaApp.swift` and
+`apps/macos/Musia/MusiaMacApp.swift`. The four added cases in
+`apps/ios/Tests/MusiaCoreTests/CreatorCoreTests.swift` express these core checks:
+
+- `testRenderLengthsMatchServerCodePointBounds`: exact/over-limit ASCII,
+  combining marks and supplementary scalars for all four bounded fields.
+- `testRenderRequiresExactServerKeyAndNumericRanges`: valid/invalid full keys
+  and duration/bpm boundaries.
+- `testOnlyInitialExactInvalidRequestCanDiscardFrozenRender`: initial exact
+  rejection only; retry 422 and unknown outcomes retain the unchanged key/body.
+- `testOnlyApprovedPublicSongsMayPlayWithoutAuthentication`: visibility and
+  moderation combinations, independent of the `mine` flag.
+
+`tools/store/CreatorNativeUITests.swift`'s `testSignedInPrivatePlayback` is
+intended to check readiness and advancing playback position, mini-player bounds
+and reachable controls across that navigation sequence, then logout with the
+Creator selection cleared. Core classification tests do not establish Keychain
+persistence, filesystem cleanup or actual device playback. These source notes
+do **not** claim the new XCTest cases or final native QA passed; exact-artifact
+results and remaining qualification belong in the Apple evidence record above.
 
 Remaining qualification includes Android Play-installed execution and audible
 output, Apple native UI sign-in/private playback, remaining cold/warm return

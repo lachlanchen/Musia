@@ -59,6 +59,118 @@ final class CreatorCoreTests: XCTestCase {
         brief.bpm = 40; brief.language = "unknown"; XCTAssertFalse(brief.isRenderable)
         brief.language = "mixed"; brief.lyrics = " \n "; XCTAssertFalse(brief.isRenderable)
     }
+    func testRenderLengthsMatchServerCodePointBounds() {
+        let fields: [(WritableKeyPath<CreatorBrief, String>, Int)] = [
+            (\.title, 120), (\.idea, 4000), (\.lyrics, 6000), (\.caption, 1600)
+        ]
+        for (field, limit) in fields {
+            var brief = renderableBrief()
+            brief[keyPath: field] = String(repeating: "x", count: limit)
+            XCTAssertTrue(brief.isRenderable)
+            brief[keyPath: field] += "x"
+            XCTAssertFalse(brief.isRenderable)
+            brief[keyPath: field] = String(repeating: "e\u{301}", count: limit / 2)
+            XCTAssertEqual(brief[keyPath: field].unicodeScalars.count, limit)
+            XCTAssertTrue(brief.isRenderable, "Combining marks count individually")
+            brief[keyPath: field] += "\u{301}"
+            XCTAssertFalse(brief.isRenderable, "One grapheme can exceed the scalar bound")
+            brief[keyPath: field] = String(repeating: "\u{1F3B5}", count: limit)
+            XCTAssertTrue(brief.isRenderable, "Supplementary scalars are not two code points")
+            brief[keyPath: field] += "\u{1F3B5}"
+            XCTAssertFalse(brief.isRenderable)
+        }
+    }
+    func testRenderRequiresExactServerKeyAndNumericRanges() {
+        var brief = renderableBrief()
+        for note in ["A", "B", "C", "D", "E", "F", "G"] {
+            for accidental in ["", "#", "b"] {
+                for mode in ["major", "minor"] {
+                    brief.key = "\(note)\(accidental) \(mode)"
+                    XCTAssertTrue(brief.isRenderable, brief.key)
+                }
+            }
+        }
+        for key in ["", "C", "c major", "H minor", "C  major", "C Major", " C major", "C major ",
+                    "C major\n", "C major\r\n", "C\u{266F} major", "C major; command"] {
+            brief.key = key
+            XCTAssertFalse(brief.isRenderable, key)
+        }
+        brief.key = "C major"
+        for duration in [29, 30, 180, 181] {
+            brief.duration = duration
+            XCTAssertEqual(brief.isRenderable, (30...180).contains(duration))
+        }
+        brief.duration = 90
+        for bpm in [39, 40, 200, 201] {
+            brief.bpm = bpm
+            XCTAssertEqual(brief.isRenderable, (40...200).contains(bpm))
+        }
+    }
+    func testOnlyInitialExactInvalidRequestCanDiscardFrozenRender() throws {
+        let pending = PendingCreatorRender(owner: "owner", key: "unchanged-key",
+                                          request: .init(brief: renderableBrief(), visibility: .private))
+        let body = try CreatorAPI.body(pending.request)
+        XCTAssertTrue(pending.canDiscard(after: CreatorError.server(422, "invalid_request"), initial: true))
+        let retained: [Error] = [
+            CreatorError.server(422, "request_failed"), CreatorError.server(400, "invalid_request"),
+            CreatorError.server(401, "invalid_request"), CreatorError.server(403, "invalid_request"),
+            CreatorError.server(409, "idempotency_conflict"), CreatorError.server(409, "invalid_request"),
+            CreatorError.server(429, "monthly_generation_limit"), CreatorError.server(500, "invalid_request"),
+            CreatorError.server(503, "queue_full"), URLError(.timedOut), URLError(.networkConnectionLost),
+            CancellationError(), CreatorError.sessionChanged, CreatorError.storage,
+            ContractError.invalid("render acknowledgement")
+        ]
+        for error in retained {
+            XCTAssertFalse(pending.canDiscard(after: error, initial: true), String(describing: error))
+        }
+        for error in retained + [CreatorError.server(422, "invalid_request")] {
+            XCTAssertFalse(pending.canDiscard(after: error, initial: false), "Retries must retain unknown outcomes")
+        }
+        XCTAssertEqual(pending.key, "unchanged-key")
+        XCTAssertEqual(try CreatorAPI.body(pending.request), body)
+    }
+    func testOnlyApprovedPublicSongsMayPlayWithoutAuthentication() throws {
+        for visibility in ["private", "public"] {
+            for moderation in ["private", "pending", "approved", "rejected", "future"] {
+                for mine in [true, false] {
+                    let song: CreatorSong = try decode("""
+                    {"id":"song-1","title":"Song","language":"en","duration":60,
+                    "author":{"id":"a","name":"Author"},"mine":\(mine),
+                    "visibility":"\(visibility)","moderation":"\(moderation)",
+                    "lyrics":"","lyricLines":[],"audioUrl":"/creator/api/songs/song-1/audio",
+                    "sharePath":null,"liked":false,"saved":false,"likes":0}
+                    """)
+                    XCTAssertEqual(song.requiresAuthenticatedPlayback,
+                                   visibility != "public" || moderation != "approved")
+                }
+            }
+        }
+    }
+    func testPlaybackSuffixUsesMPEGMIMEIncludingCaseAndParameters() throws {
+        for contentType in ["audio/mpeg", "Audio/MPEG", "audio/mpeg; charset=binary",
+                            " AUDIO/MPEG ; charset=binary; name=song.wav "] {
+            XCTAssertEqual(try CreatorAPI.playbackFileSuffix(contentType: contentType), "mp3")
+        }
+    }
+    func testPlaybackSuffixPreservesSupportedWAVFallbacks() throws {
+        for contentType in ["audio/wav", "audio/x-wav", "audio/wave", "audio/vnd.wave"] {
+            XCTAssertEqual(try CreatorAPI.playbackFileSuffix(contentType: contentType), "wav")
+            XCTAssertEqual(try CreatorAPI.playbackFileSuffix(contentType:
+                " " + contentType.uppercased() + "; codecs=1; name=song.mp3"), "wav")
+        }
+    }
+    func testPlaybackSuffixRejectsMissingAndUnexpectedContentTypes() {
+        let unsupported: [String?] = [nil, "", " ", "; audio/mpeg", "text/html", "application/json",
+            "application/octet-stream", "audio/ogg", "audio/mp4", "audio/mp3", "video/mpeg",
+            "audio/mpeg, text/html", "audio/mpeg-extra", "text/html; name=song.mp3"]
+        for contentType in unsupported {
+            XCTAssertThrowsError(try CreatorAPI.playbackFileSuffix(contentType: contentType)) { error in
+                guard case CreatorError.unavailable = error else {
+                    XCTFail("Expected an unsupported audio format error, got \(error)"); return
+                }
+            }
+        }
+    }
     func testPurchaseGateFailsClosedForPendingPaidThroughAndUnknownStates() {
         let identity = CreatorIdentity(owner: "a", generation: UUID())
         func permits(_ state: String, pending: Bool = false, sales: Bool = true, purchase: Bool = true,
@@ -159,5 +271,10 @@ final class CreatorCoreTests: XCTestCase {
     }
     private func decode<T: Decodable>(_ json: String) throws -> T {
         try JSONDecoder().decode(T.self, from: Data(json.utf8))
+    }
+    private func renderableBrief() -> CreatorBrief {
+        var brief = CreatorBrief()
+        brief.title = "Song"; brief.lyrics = "Line"; brief.caption = "Piano"
+        return brief
     }
 }

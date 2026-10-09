@@ -64,14 +64,15 @@ struct RootView: View {
 
     private func page<Content: View>(@ViewBuilder content: () -> Content) -> some View {
         NavigationStack {
-            // Reserve space inside each tab, never outside TabView's navigation safe area.
-            content().safeAreaInset(edge: .bottom, spacing: 0) {
-                if player.hasSelection {
-                    MiniPlayer(showPractice: $showPractice)
-                }
-            }
-            .toolbarBackground(.visible, for: .tabBar)
-            .toolbarBackground(Color(.systemBackground), for: .tabBar)
+            content()
         }
+        // Cover pushed destinations too, while staying inside the tab's safe area.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            if player.hasSelection {
+                MiniPlayer(showPractice: $showPractice)
+            }
+        }
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarBackground(Color(.systemBackground), for: .tabBar)
     }
 }

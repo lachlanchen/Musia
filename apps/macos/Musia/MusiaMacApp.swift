@@ -138,10 +138,10 @@ struct MacRootView: View {
                         }
                     }
                 }
-                .safeAreaInset(edge: .bottom, spacing: 0) {
-                    if player.hasSelection && navigation.section != .practice {
-                        MiniPlayer(showPractice: showPractice)
-                    }
+            }
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                if player.hasSelection && navigation.section != .practice {
+                    MiniPlayer(showPractice: showPractice)
                 }
             }
         }

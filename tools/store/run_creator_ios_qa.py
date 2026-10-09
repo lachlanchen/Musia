@@ -11,10 +11,20 @@ from capture_ios_review import run
 from storelib import ROOT, RUNTIME, digest, lock, now, private_dir, require, source_sha, write_private
 
 
+CASES = {
+    "account": "testCreatorAccountAndCommunity",
+    "products": "testCreatorProducts",
+    "private-playback": "testSignedInPrivatePlayback",
+}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--device", required=True)
     parser.add_argument("--attempt", required=True, type=int)
+    parser.add_argument("--case", choices=CASES, default="account",
+                        help="account: signed out -> signed in; products: capture real prices, preserve session; "
+                             "private-playback: signed in -> signed out; no case purchases")
     parser.add_argument("--build-receipt", required=True, type=Path)
     parser.add_argument("--developer-dir", type=Path,
                         help="Existing Xcode; otherwise use DEVELOPER_DIR or xcode-select")
@@ -47,6 +57,7 @@ def main():
     receipt = {"at": now(), "device": matches[0], "source_sha256": before,
                "build_receipt_sha256": digest(build_path), "artifact_sha256": build["artifact_sha256"],
                "ui_test_sha256": digest(ROOT / "tools/store/CreatorNativeUITests.swift"),
+               "case": args.case,
                "state": "started", "visually_reviewed": False, "production_qualified": False,
                "purchase_attempted": False, "upload_attempted": False}
     with lock("creator-ios-ui"):
@@ -63,8 +74,10 @@ def main():
                  "-destination", f"platform=iOS Simulator,id={args.device}",
                  "-derivedDataPath", str(out / "DerivedData"), "-resultBundlePath", str(result),
                  "-jobs", "2", "-parallel-testing-enabled", "NO",
+                 "-collect-test-diagnostics", "never", "-test-timeouts-enabled", "YES",
+                 "-maximum-test-execution-time-allowance", "420",
                  "-maximum-concurrent-test-simulator-destinations", "1",
-                 "-only-testing:MusiaUITests/CreatorNativeUITests/testCreatorAccountAndCommunity",
+                 "-only-testing:MusiaUITests/CreatorNativeUITests/" + CASES[args.case],
                  "CODE_SIGNING_ALLOWED=YES", "CODE_SIGNING_REQUIRED=YES", "CODE_SIGN_IDENTITY=-",
                  "ONLY_ACTIVE_ARCH=YES",
                  "COMPILER_INDEX_STORE_ENABLE=NO"], out / "test.log", 720)
