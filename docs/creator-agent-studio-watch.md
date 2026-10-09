@@ -1,5 +1,8 @@
 # Agent, Studio and Watch
 
+Owner-deferred qualification work is tracked in
+[Creator follow-up](creator-followup.md). It must not be silently marked done.
+
 ## Workspace Contract
 
 The owner asked for conversational music creation by default, with a structured

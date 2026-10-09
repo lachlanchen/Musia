@@ -1972,7 +1972,7 @@ function drawVisualizer() {
     const barWidth = width / bars * 0.56;
     const x = i * (width / bars) + (width / bars - barWidth) / 2;
     const barHeight = Math.max(10, value * height * 0.42);
-    ctx.fillStyle = `rgba(55, 132, 122, ${0.16 + value * 0.36})`;
+    ctx.fillStyle = `rgba(${i % 3 === 0 ? "120, 198, 234" : "245, 111, 112"}, ${0.16 + value * 0.36})`;
     ctx.fillRect(x, height - barHeight - 18, barWidth, barHeight);
   }
   requestAnimationFrame(drawVisualizer);

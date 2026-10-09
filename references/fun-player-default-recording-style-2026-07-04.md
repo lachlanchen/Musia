@@ -5,6 +5,21 @@ Date: 2026-07-04
 This is the default Musia publication recording style unless the user asks for
 another layout.
 
+## Palette Update: October 9, 2026
+
+Use the shared Fun player's coral/salmon red and light sky-blue palette.
+Playback progress, the active chord and guitar finger markers use warm red;
+the remaining progress rail and guitar panel use light sky blue. Dark labels
+on salmon and darker coral lyric highlights preserve readable contrast.
+Do not restore the green-to-gold gradient in a recorder-specific override.
+This is a color change only: preserve layout, font sizing, capture clock,
+corrected lyrics and source-audio mux timing. It applies to future captures;
+existing MP4s are not recolored or republished automatically.
+
+Visual regression: `scripts/test_fun_recording_theme.py` checks normal desktop,
+mobile and native 2160x3840 publication frames, contrast, active-state timing
+and layout bounds. Evidence stays under `.runtime/fun-recording-theme/`.
+
 ## Visual Layout
 
 - 4K portrait output, normally `2160x3840`.
@@ -45,6 +60,8 @@ PYTHONNOUSERSITE=1 conda run -n musia python scripts/record_fun_player_realtime.
   --advanced \
   --no-guitar-focus \
   --lyrics-guitar \
+  --publication-layout \
+  --capture-clock \
   --crf 12 \
   --preset ultrafast
 ```
