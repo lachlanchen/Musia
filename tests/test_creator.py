@@ -4,10 +4,12 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
+from musia.creator import media
 from musia.creator.api import Settings, create_app
 from musia.creator.contracts import AgentReply, Brief, Chat, CreatorError, Generate
 from musia.creator.review import audio_digest, validate_audit
@@ -352,6 +354,148 @@ class ApiTests(Base):
         self.assertIn("no-store",response.headers["cache-control"])
         self.store.visibility(self.owner,song,"private")
         self.assertEqual(self.client.get(url,headers={"Range":"bytes=0-3"}).status_code,404)
+
+    def playback_fixture(self, visibility="private"):
+        song = self.reviewed(visibility=visibility)
+        source = self.root / "artifacts" / song / "song.wav"
+        source.parent.chmod(0o700)
+        playback = source.with_name("song.mp3")
+        playback.write_bytes(b"ID3-playback-fixture-0123456789")
+        playback.chmod(0o600)
+        for target in ("musia.creator.media.prepare_playback", "subprocess.Popen"):
+            guard = patch(target, side_effect=AssertionError("HTTP must not prepare media or spawn processes"))
+            guard.start()
+            self.addCleanup(guard.stop)
+        return song, source, playback
+
+    def assert_audio_response(self, response, payload, *, status=200, filename="song.mp3"):
+        self.assertEqual(response.status_code, status)
+        self.assertEqual(response.content, payload)
+        self.assertEqual(response.headers["content-type"], "audio/mpeg" if filename.endswith(".mp3") else "audio/wav")
+        self.assertEqual(response.headers["content-disposition"], f'inline; filename="{filename}"')
+        self.assertEqual(response.headers["accept-ranges"], "bytes")
+        self.assertIn("no-store", response.headers["cache-control"])
+        self.assertEqual(response.headers["x-content-type-options"], "nosniff")
+
+    def test_playback_private_owner_mime_head_and_byte_ranges(self):
+        song, source, playback = self.playback_fixture()
+        url, payload = f"/creator/api/songs/{song}/audio", playback.read_bytes()
+        with patch.object(media, "playback_path", return_value=playback) as lookup:
+            response = self.client.get(url)
+            self.assert_audio_response(response, payload)
+            self.assertEqual(int(response.headers["content-length"]), len(payload))
+            lookup.assert_called_once_with(source, audio_digest(source))
+            response = self.client.head(url)
+            self.assert_audio_response(response, b"")
+            self.assertEqual(int(response.headers["content-length"]), len(payload))
+            for byte_range, start, end in (("bytes=0-3", 0, 3),
+                                           ("bytes=5-", 5, len(payload) - 1),
+                                           ("bytes=-5", len(payload) - 5, len(payload) - 1)):
+                with self.subTest(byte_range=byte_range):
+                    response = self.client.get(url, headers={"Range": byte_range})
+                    self.assert_audio_response(response, payload[start:end + 1], status=206)
+                    self.assertEqual(response.headers["content-range"], f"bytes {start}-{end}/{len(payload)}")
+                    self.assertEqual(int(response.headers["content-length"]), end - start + 1)
+            response = self.client.get(url, headers={"Range": f"bytes={len(payload)}-"})
+            self.assertEqual(response.status_code, 416)
+            self.assertEqual(response.headers["content-range"], f"bytes */{len(payload)}")
+            self.assertIn("no-store", response.headers["cache-control"])
+
+    def test_playback_private_acl_precedes_lookup_for_get_head_and_range(self):
+        song, source, playback = self.playback_fixture()
+        url = f"/creator/api/songs/{song}/audio"
+        self.client.cookies.clear()
+        with patch.object(media, "playback_path", return_value=playback) as lookup:
+            for token in (None, self.btoken, "invalid-session"):
+                for method, extra in (("GET", {}), ("HEAD", {}), ("GET", {"Range": "bytes=0-3"})):
+                    with self.subTest(token=token, method=method, extra=extra):
+                        headers = {"Authorization": "Bearer " + token} if token else {}
+                        response = self.client.request(method, url, headers={**headers, **extra})
+                        self.assertEqual(response.status_code, 404)
+                        self.assertIn("no-store", response.headers["cache-control"])
+                        lookup.assert_not_called()
+            response = self.client.get(url, headers={"Authorization": "Bearer " + self.token, "Range": "bytes=0-3"})
+            self.assert_audio_response(response, playback.read_bytes()[:4], status=206)
+            lookup.assert_called_once_with(source, audio_digest(source))
+
+    def test_playback_public_requires_moderation_then_allows_guest_and_other_account(self):
+        song, source, playback = self.playback_fixture(visibility="public")
+        url, payload = f"/creator/api/songs/{song}/audio", playback.read_bytes()
+        self.client.cookies.clear()
+        with patch.object(media, "playback_path", return_value=playback) as lookup:
+            for token in (None, self.btoken):
+                headers = {"Authorization": "Bearer " + token} if token else {}
+                self.assertEqual(self.client.get(url, headers={**headers, "Range": "bytes=0-3"}).status_code, 404)
+            lookup.assert_not_called()
+            self.store.moderate("song", song, True)
+            for token in (None, self.btoken):
+                headers = {"Authorization": "Bearer " + token} if token else {}
+                for method, extra, status, body in (("GET", {}, 200, payload), ("HEAD", {}, 200, b""),
+                                                    ("GET", {"Range": "bytes=0-3"}, 206, payload[:4])):
+                    with self.subTest(token=token, method=method, extra=extra):
+                        self.assert_audio_response(self.client.request(method, url, headers={**headers, **extra}),
+                                                   body, status=status)
+                        lookup.assert_called_with(source, audio_digest(source))
+
+    def test_playback_unshare_revokes_guest_other_and_cached_ranges_but_not_owner(self):
+        song, source, playback = self.playback_fixture(visibility="public")
+        self.store.moderate("song", song, True)
+        url = f"/creator/api/songs/{song}/audio"
+        self.client.cookies.clear()
+        with patch.object(media, "playback_path", return_value=playback) as lookup:
+            response = self.client.get(url)
+            self.assert_audio_response(response, playback.read_bytes())
+            etag = response.headers["etag"]
+            owner_headers = {**self.headers, "Authorization": "Bearer " + self.token}
+            response = self.client.post(f"/creator/api/songs/{song}/visibility",
+                                        json={"visibility": "private"}, headers=owner_headers)
+            self.assertEqual(response.status_code, 200)
+            lookup.reset_mock()
+            for token in (None, self.btoken):
+                headers = {"Authorization": "Bearer " + token} if token else {}
+                for method, extra in (("GET", {}), ("HEAD", {}),
+                                      ("GET", {"Range": "bytes=0-3", "If-Range": etag})):
+                    with self.subTest(token=token, method=method, extra=extra):
+                        response = self.client.request(method, url, headers={**headers, **extra})
+                        self.assertEqual(response.status_code, 404)
+                        self.assertIn("no-store", response.headers["cache-control"])
+                        lookup.assert_not_called()
+            self.assert_audio_response(self.client.get(url, headers={**owner_headers, "Range": "bytes=0-3"}),
+                                       playback.read_bytes()[:4], status=206)
+            lookup.assert_called_once_with(source, audio_digest(source))
+            response = self.client.post(f"/creator/api/songs/{song}/visibility",
+                                        json={"visibility": "public"}, headers=owner_headers)
+            self.assertEqual(response.status_code, 200)
+            lookup.reset_mock()
+            self.assertEqual(self.client.get(url, headers={"Range": "bytes=0-3"}).status_code, 404)
+            lookup.assert_not_called()
+
+    def test_playback_invalid_manifest_uses_wav_mime_head_and_ranges_without_repair(self):
+        song, source, playback = self.playback_fixture()
+        manifest = source.with_name("playback.json")
+        manifest.write_bytes(b'{"schema":')
+        manifest.chmod(0o600)
+        before = [path.read_bytes() for path in (source, playback, manifest)]
+        url, payload = f"/creator/api/songs/{song}/audio", source.read_bytes()
+        with patch.object(media, "playback_path", wraps=media.playback_path) as lookup:
+            response = self.client.get(url)
+            self.assert_audio_response(response, payload, filename="song.wav")
+            self.assertEqual(int(response.headers["content-length"]), len(payload))
+            response = self.client.head(url)
+            self.assert_audio_response(response, b"", filename="song.wav")
+            self.assertEqual(int(response.headers["content-length"]), len(payload))
+            response = self.client.get(url, headers={"Range": "bytes=0-3"})
+            self.assert_audio_response(response, payload[:4], status=206, filename="song.wav")
+            self.assertEqual(response.headers["content-range"], f"bytes 0-3/{len(payload)}")
+            self.assertEqual(int(response.headers["content-length"]), 4)
+            self.assertEqual(lookup.call_count, 3)
+            lookup.assert_called_with(source, audio_digest(source))
+            self.client.cookies.clear()
+            lookup.reset_mock()
+            self.assertEqual(self.client.get(url, headers={"Range": "bytes=0-3"}).status_code, 404)
+            lookup.assert_not_called()
+        self.assertEqual([path.read_bytes() for path in (source, playback, manifest)], before)
+        self.assertEqual(set(source.parent.iterdir()), {source, playback, manifest})
 
     def test_audio_not_exposed_before_approval(self):
         job = self.submit()["id"]

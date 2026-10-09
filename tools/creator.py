@@ -39,6 +39,8 @@ def main():
     moderate.add_argument("target")
     moderate.add_argument("decision", choices=["approve", "reject"])
     sub.add_parser("work-once")
+    playback = sub.add_parser("prepare-playback", help="Add a small full-length playback file; keep the audited WAV")
+    playback.add_argument("job")
     supervise = sub.add_parser("supervise", help="Run an explicitly bounded, private queue configuration")
     supervise.add_argument("--config", type=Path, required=True)
     supervise.add_argument("--once", action="store_true")
@@ -88,6 +90,23 @@ def main():
     elif args.action == "work-once":
         from musia.creator.worker import work_once
         print("Processed one job" if work_once(store) else "No approved queued job")
+    elif args.action == "prepare-playback":
+        import fcntl
+        import re
+        from musia.creator.media import prepare_playback
+        if not re.fullmatch(r"[a-f0-9]{32}", args.job):
+            parser.error("Invalid job identifier")
+        with (store.directory / "worker.lock").open("a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            with store.db() as db:
+                row = db.execute("SELECT audio,audio_hash FROM jobs WHERE id=? AND state IN ('ready','review')",
+                                 (args.job,)).fetchone()
+            source = store.directory / "artifacts" / args.job / "song.wav"
+            if not row or row["audio"] != str(source):
+                parser.error("No completed source audio for this job")
+            output = prepare_playback(source, row["audio_hash"])
+            print(json.dumps({"job": args.job, "playbackBytes": output.stat().st_size,
+                              "sourcePreserved": True}))
     elif args.action == "supervise":
         import signal
         import threading

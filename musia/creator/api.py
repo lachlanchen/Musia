@@ -299,8 +299,13 @@ def create_app(settings=None, *, store=None, auth=None, producer=None, billing=N
         path = cfg.directory / "artifacts" / song / "song.wav"
         if not row or path.is_symlink() or not path.is_file() or path.resolve() != path.absolute() or str(path) != row["audio"]:
             raise CreatorError("audio_unavailable", 404)
+        from .media import playback_path
+        playback = playback_path(path, row["audio_hash"])
+        if playback is not None:
+            path = playback
         # No bucket URL bypass: visibility checked on every request, including ranges.
-        return FileResponse(path, media_type="audio/wav", filename="song.wav", content_disposition_type="inline")
+        return FileResponse(path, media_type="audio/mpeg" if playback else "audio/wav",
+                            filename=path.name, content_disposition_type="inline")
 
     @app.post("/api/songs/{song}/visibility")
     def visibility(song: str, body: Visibility, request: Request):

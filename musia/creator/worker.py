@@ -146,6 +146,17 @@ def work_once(store):
             checksum = audio_digest(audio)
             if checksum != candidates[0]["sha256"]:
                 raise ValueError("Worker audio digest changed")
+            from .media import prepare_playback
+            try:
+                prepare_playback(audio, checksum)
+            except (OSError, ValueError, subprocess.SubprocessError) as error:
+                if audio_digest(audio) != checksum:
+                    raise ValueError("Original changed during playback preparation") from error
+                try:
+                    (folder / "playback-error.json").write_text(json.dumps({
+                        "errorType": type(error).__name__, "fallback": "original_wav"}) + "\n")
+                except OSError:
+                    pass  # A diagnostic failure must not reject an intact WAV.
             brief = Brief.model_validate_json(job["brief"])
             # Mixed vocals require per-phrase multilingual follow-up before approval.
             # This blind full-mix pass is evidence, never automatic lyric truth.

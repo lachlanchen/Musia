@@ -1,5 +1,29 @@
 # Creator Billing Acceptance
 
+## Later Parent And Test-Lane Evidence
+
+At 06:42:37 UTC both Google `monthly` base plans were activated and read back
+as **ACTIVE**, with the approved US-only USD9.99/USD29.99 monthly configuration.
+Musia public and owner-test checkout remain off. This changed no app release.
+Private receipt: `store/.runtime/creator-google-catalog/activation-readback.json`.
+The guarded catalog tool reconciles existing ACTIVE plans without repeating
+activation and accepts an empty HTTP 204 only for the provider's offers-list GET.
+
+October 9: both actual Apple subscription products appear in the native iOS
+simulator account screen. No purchase was attempted. macOS 0.2.0 (7) is now
+available in internal TestFlight; iOS upload is pending. Google Console License
+testing was inspected through the existing authorized session: the configured
+Musia self-tester is a member of a selected list, and selection persisted after
+reload. Protected receipt: `store/.runtime/creator-license-testing-20261009/result.json`.
+No license settings were changed. The newly owned tab was closed and peer tabs
+preserved. Enrollment is no longer a blocker, but the installing Play account,
+storefront, actual no-charge instrument and purchase lifecycle still need proof.
+
+The earlier read-only checkpoint below is retained as dated evidence, not a
+claim that products or license enrollment remain unverified.
+
+## Earlier Checkpoint
+
 Read-only checkpoint: 2026-10-09, 05:46-05:50 UTC (13:46-13:50 HKT).
 App `6816265930`; bundle/package `art.lazying.musia`. **Not accepted yet:**
 no actual Musia provider purchase, restore, or renewal was exercised here.
