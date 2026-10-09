@@ -2,6 +2,7 @@
 import base64
 import contextlib
 import copy
+from datetime import datetime, timezone
 import hashlib
 import io
 import json
@@ -14,7 +15,7 @@ import time
 import types
 import unittest
 from unittest.mock import patch
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlencode, urlsplit
 import zlib
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -33,6 +34,15 @@ def png_fixture(color=(255, 0, 0)):
     rows = (b"\x00" + bytes(color) * 8) * 16
     return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", 8, 16, 8, 2, 0, 0, 0))
             + chunk(b"IDAT", zlib.compress(rows)) + chunk(b"IEND", b""))
+
+
+def sigv4_fixture(**overrides):
+    date = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    query = {"X-Amz-Algorithm": "AWS4-HMAC-SHA256", "X-Amz-Date": date, "X-Amz-Expires": "604800",
+             "X-Amz-Credential": f"FIXTURE/{date[:8]}/us-east-1/s3/aws4_request", "X-Amz-SignedHeaders": "host",
+             "X-Amz-Signature": "a" * 64, "partNumber": "1", "uploadId": "fixture", "apple-asset-repo-correlation-key": "fixture"}
+    query.update(overrides)
+    return "https://northamerica-1.object-storage.apple.com/fixture/asset/image?" + urlencode(query)
 
 
 class Response:
@@ -133,7 +143,7 @@ class Server:
         path, query = parsed.path, parse_qs(parsed.query)
         if parsed.hostname != "api.appstoreconnect.apple.com":
             self.case.assertEqual(method, "PUT")
-            self.case.assertEqual(parsed.hostname, "store-030.blobstore.apple.com")
+            self.case.assertIn(parsed.hostname, {"store-030.blobstore.apple.com", "northamerica-1.object-storage.apple.com"})
             self.case.assertNotIn("authorization", {key.lower() for key in kwargs["headers"]})
             self.case.assertNotIn("fixture-jwt", json.dumps(kwargs["headers"]))
             record = s.read_json(m.journal_path(self.case.tier))
@@ -209,6 +219,7 @@ class ScreenshotTests(unittest.TestCase):
         self.addCleanup(temporary.cleanup)
         self.root = Path(temporary.name)
         self.runtime = self.root / "store/.runtime"
+        self.runtime.parent.mkdir(mode=0o700)
         self.tier = "creator"
         self.payload = png_fixture()
         self.sha = hashlib.sha256(self.payload).hexdigest()
@@ -234,8 +245,8 @@ class ScreenshotTests(unittest.TestCase):
         stack.enter_context(patch.object(m.jwt, "encode", return_value="fixture-jwt"))
         self.sessions = stack.enter_context(patch.object(m.requests, "Session", side_effect=lambda: Session(self.server)))
 
-    def upload(self, confirm=False):
-        return m.upload(self.tier, self.png, self.sha, confirm)
+    def upload(self, confirm=False, resume=None):
+        return m.upload(self.tier, self.png, self.sha, confirm, resume)
 
     def assert_refused(self):
         with self.assertRaises((s.GuardError, OSError, ValueError, TypeError, KeyError)):
@@ -289,6 +300,32 @@ class ScreenshotTests(unittest.TestCase):
         self.assertTrue(self.upload(confirm=True)["processingComplete"])
         self.assertFalse(self.server.mutations)
         self.assertFalse(m.journal_path(self.tier).exists())
+
+    def test_empty_pre_upload_checksum_is_accepted_but_still_requires_md5_commit(self):
+        self.server.on_reserve = lambda image: image["attributes"].update(sourceFileChecksum="")
+        self.assertTrue(self.upload(confirm=True)["processingComplete"])
+        self.assertEqual(s.read_json(m.journal_path(self.tier))["readback"]["attributes"]["sourceFileChecksum"], self.md5)
+        self.assertEqual([c[0] for c in self.server.mutations], ["POST", "PUT", "PUT", "PATCH"])
+
+    def test_awaiting_reservation_readback_reports_exact_resource_without_mutation(self):
+        for checksum in [None, "", self.md5]:
+            self.server.images[self.tier] = self.server.make_image(self.tier)
+            self.server.images[self.tier]["attributes"]["sourceFileChecksum"] = checksum
+            result = self.upload(confirm=True)
+            self.assertEqual(result["state"], "AWAITING_UPLOAD")
+            self.assertEqual(result["screenshotId"], "image-creator")
+            self.assertEqual(result["action"], "reservation_readback_only")
+            self.assertFalse(result["processingComplete"])
+            self.assertFalse(result["providerMutationsThisRun"])
+            self.assertFalse(result["automaticRetryAuthorized"])
+            self.assertFalse(self.server.mutations)
+            self.assertFalse(m.journal_path(self.tier).exists())
+
+    def test_empty_checksum_cannot_qualify_uploaded_or_complete_image(self):
+        for state in ["UPLOAD_COMPLETE", "COMPLETE"]:
+            self.server.images[self.tier] = self.server.make_image(self.tier, state)
+            self.server.images[self.tier]["attributes"]["sourceFileChecksum"] = ""
+            self.assert_refused()
 
     def test_missing_relationship_200_null_is_read_only_plan(self):
         self.server.missing_status = 200
@@ -360,7 +397,6 @@ class ScreenshotTests(unittest.TestCase):
         original = self.server.make_image(self.tier, "COMPLETE")
         for field, value in [("fileName", "other.png"), ("fileSize", 1), ("sourceFileChecksum", "0" * 32),
                              ("sourceFileChecksum", None), ("assetDeliveryState", {"state": "FAILED"}),
-                             ("assetDeliveryState", {"state": "AWAITING_UPLOAD"}),
                              ("assetDeliveryState", {"state": "UNKNOWN"}),
                              ("assetDeliveryState", {"state": "COMPLETE", "errors": [{"code": "FAILED"}]})]:
             self.server.images[self.tier] = copy.deepcopy(original)
@@ -399,6 +435,53 @@ class ScreenshotTests(unittest.TestCase):
                     m.upload_operations(image, self.payload)
         self.assertFalse(self.server.calls)
 
+    def test_observed_apple_sigv4_upload_shape_accepts_empty_checksum_and_exact_png(self):
+        def modern(image):
+            image["attributes"].update(sourceFileChecksum="", uploadOperations=[{
+                "method": "PUT", "url": sigv4_fixture(), "offset": 0, "length": len(self.payload),
+                "requestHeaders": [{"name": "Content-Type", "value": "image/png"}]}])
+        self.server.on_reserve = modern
+        self.assertTrue(self.upload(confirm=True)["processingComplete"])
+        self.assertEqual([c[0] for c in self.server.mutations], ["POST", "PUT", "PATCH"])
+        self.assertEqual(self.server.parts[1], self.payload)
+
+    def test_sigv4_exact_host_and_path_guards(self):
+        good = sigv4_fixture()
+        self.assertEqual(m.asset_url(good), good)
+        bad = [good.replace("https:", "http:"), good.replace("northamerica-1", "northamerica-2"),
+               good.replace(".apple.com", ".apple.com.evil.test"), good.replace(".apple.com", ".amazonaws.com"),
+               good.replace("northamerica-1", "user@northamerica-1"), good.replace(".com/", ".com:80/"),
+               good.replace("/fixture/", "/../"), good.replace("/fixture/", "/%2e%2e/"),
+               good.replace("/fixture/", "//"), good + "#fragment", good + "\\bad", good + "\n"]
+        for url in bad:
+            with self.subTest(url=url), self.assertRaises((s.GuardError, ValueError)):
+                m.asset_url(url)
+
+    def test_sigv4_scope_signature_dates_and_expiry_fail_closed(self):
+        date = datetime.now(timezone.utc).strftime("%Y%m%d")
+        invalid = [{"X-Amz-Algorithm": "other"}, {"X-Amz-SignedHeaders": "authorization;host"},
+                   {"X-Amz-SignedHeaders": "content-type;host"}, {"X-Amz-Signature": "a" * 63},
+                   {"X-Amz-Signature": "A" * 64}, {"X-Amz-Credential": "secret"},
+                   {"X-Amz-Credential": f"FIXTURE/{date}/us-east-1/sts/aws4_request"},
+                   {"X-Amz-Credential": f"FIXTURE/20000101/us-east-1/s3/aws4_request"},
+                   {"X-Amz-Date": "20261399T000000Z", "X-Amz-Credential": "FIXTURE/20261399/region/s3/aws4_request"},
+                   {"X-Amz-Date": "20000101T000000Z", "X-Amz-Credential": "FIXTURE/20000101/region/s3/aws4_request"},
+                   {"X-Amz-Date": "20990101T000000Z", "X-Amz-Credential": "FIXTURE/20990101/region/s3/aws4_request"},
+                   {"X-Amz-Expires": "0"}, {"X-Amz-Expires": "604801"}, {"X-Amz-Expires": "1e6"},
+                   {"partNumber": "0"}, {"uploadId": ""}, {"Signature": "legacy"}]
+        for fields in invalid:
+            with self.subTest(fields=fields), self.assertRaises(s.GuardError):
+                m.asset_url(sigv4_fixture(**fields))
+        for suffix in ["&X-Amz-Signature=duplicate", "&other=value"]:
+            with self.assertRaises(s.GuardError):
+                m.asset_url(sigv4_fixture() + suffix)
+        with self.assertRaises(s.GuardError):
+            m.asset_url(sigv4_fixture().replace("X-Amz-Signature=", "Missing-Signature="))
+
+    def test_legacy_host_cannot_use_modern_signature(self):
+        with self.assertRaises(s.GuardError):
+            m.asset_url(sigv4_fixture().replace("northamerica-1.object-storage.apple.com/fixture/", "store-030.blobstore.apple.com/assets-fixture/"))
+
     def test_correct_part_length_and_md5_headers_are_preserved(self):
         image = self.server.make_image(self.tier)
         for part in image["attributes"]["uploadOperations"]:
@@ -429,15 +512,21 @@ class ScreenshotTests(unittest.TestCase):
         self.assertEqual([c[0] for c in self.server.mutations], ["POST"])
         self.assertEqual(s.read_json(m.journal_path(self.tier))["state"], "unknown")
 
-    def assert_failed_attempt_never_retried(self, failure, expected_methods, complete=False):
+    def assert_failed_attempt_never_retried(self, failure, expected_methods, complete=False, awaiting=False):
         self.server.failure = failure
         with self.assertRaisesRegex(s.GuardError, "outcome unconfirmed"):
             self.upload(confirm=True)
         self.assertEqual([c[0] for c in self.server.mutations], expected_methods)
         self.assertEqual(s.read_json(m.journal_path(self.tier))["state"], "unknown")
+        before = m.journal_path(self.tier).read_bytes()
         self.server.failure = None
         if complete:
             self.assertTrue(self.upload(confirm=True)["processingComplete"])
+        elif awaiting:
+            result = self.upload(confirm=True)
+            self.assertEqual(result["state"], "AWAITING_UPLOAD")
+            self.assertFalse(result["processingComplete"])
+            self.assertEqual(before, m.journal_path(self.tier).read_bytes())
         else:
             with self.assertRaises(s.GuardError):
                 self.upload(confirm=True)
@@ -447,18 +536,268 @@ class ScreenshotTests(unittest.TestCase):
         self.assert_failed_attempt_never_retried("reserve_before", ["POST"])
 
     def test_reservation_timeout_after_acceptance_is_readback_only(self):
-        self.assert_failed_attempt_never_retried("reserve_after", ["POST"])
+        self.assert_failed_attempt_never_retried("reserve_after", ["POST"], awaiting=True)
 
     def test_non_json_reservation_is_unknown_and_never_reposts(self):
         self.server.reserve_response = Response(content=b"non-json private provider response", status=201)
-        self.assert_failed_attempt_never_retried(None, ["POST"])
+        self.assert_failed_attempt_never_retried(None, ["POST"], awaiting=True)
 
     def test_asset_timeout_never_reuploads_or_commits(self):
-        self.assert_failed_attempt_never_retried("asset", ["POST", "PUT"])
+        self.assert_failed_attempt_never_retried("asset", ["POST", "PUT"], awaiting=True)
 
     def test_asset_redirect_is_not_followed_and_never_committed(self):
         self.server.asset_status = 302
-        self.assert_failed_attempt_never_retried(None, ["POST", "PUT"])
+        self.assert_failed_attempt_never_retried(None, ["POST", "PUT"], awaiting=True)
+
+    def test_old_unknown_reserve_journal_reconciles_empty_checksum_without_rewriting(self):
+        self.server.failure = "reserve_after"
+        with self.assertRaises(s.GuardError):
+            self.upload(confirm=True)
+        path = m.journal_path(self.tier)
+        record = s.read_json(path)
+        record.pop("last_diagnostic")
+        self.assertNotIn("reservation", record)
+        s.write_private(path, record)
+        original = path.read_bytes()
+        self.server.images[self.tier]["attributes"]["sourceFileChecksum"] = ""
+        self.assertEqual(self.upload()["screenshotId"], "image-creator")
+        self.assertEqual(path.read_bytes(), original)
+        self.assertEqual([c[0] for c in self.server.mutations], ["POST"])
+
+    def seed_old_reservation(self):
+        self.server.failure = "reserve_after"
+        with self.assertRaises(s.GuardError):
+            self.upload(confirm=True)
+        path = m.journal_path(self.tier)
+        record = s.read_json(path)
+        record.pop("last_diagnostic")
+        s.write_private(path, record)
+        self.server.images[self.tier]["attributes"]["sourceFileChecksum"] = ""
+        self.server.failure = None
+        return path
+
+    def test_explicit_resume_plan_is_read_only_and_preserves_unknown_journal(self):
+        path = self.seed_old_reservation()
+        original = path.read_bytes()
+        result = self.upload(resume="image-creator")
+        self.assertEqual(result["action"], "would_resume")
+        self.assertEqual(result["remainingParts"], 2)
+        self.assertFalse(result["providerMutationsThisRun"])
+        self.assertEqual(path.read_bytes(), original)
+        self.assertEqual([c[0] for c in self.server.mutations], ["POST"])
+
+    def test_explicit_resume_uses_existing_reservation_without_post_or_delete(self):
+        self.seed_old_reservation()
+        self.server.calls.clear()
+        result = self.upload(confirm=True, resume="image-creator")
+        self.assertTrue(result["processingComplete"])
+        self.assertEqual(result["action"], "resumed_readback")
+        self.assertEqual([c[0] for c in self.server.mutations], ["PUT", "PUT", "PATCH"])
+        self.assertEqual(self.server.images[self.tier]["attributes"]["sourceFileChecksum"], self.md5)
+
+    def test_studio_sigv4_resume_matches_actual_empty_checksum_protocol(self):
+        self.tier = "studio"
+        self.seed_old_reservation()
+        self.server.images[self.tier]["attributes"]["uploadOperations"] = [{
+            "method": "PUT", "url": sigv4_fixture(), "offset": 0, "length": len(self.payload),
+            "requestHeaders": [{"name": "Content-Type", "value": "image/png"}]}]
+        self.server.calls.clear()
+        self.assertEqual(self.upload(resume="image-studio")["remainingParts"], 1)
+        self.assertTrue(self.upload(confirm=True, resume="image-studio")["processingComplete"])
+        self.assertEqual([c[0] for c in self.server.mutations], ["PUT", "PATCH"])
+
+    def test_resume_cli_without_confirm_only_plans_then_confirm_completes_same_id(self):
+        path = self.seed_old_reservation()
+        original = path.read_bytes()
+        args = ["--tier", self.tier, "--png", str(self.png), "--sha256", self.sha,
+                "--resume-reservation", "image-creator"]
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertEqual(m.main(args), 0)
+        self.assertEqual(json.loads(output.getvalue())["action"], "would_resume")
+        self.assertEqual(path.read_bytes(), original)
+        self.server.calls.clear()
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(m.main(args + ["--confirm-upload"]), 0)
+        self.assertEqual([c[0] for c in self.server.mutations], ["PUT", "PUT", "PATCH"])
+
+    def test_resume_wrong_id_missing_journal_or_absent_resource_never_mutates(self):
+        self.seed_old_reservation()
+        self.server.calls.clear()
+        with self.assertRaises(s.GuardError):
+            self.upload(confirm=True, resume="other-image")
+        image = self.server.images.pop(self.tier)
+        with self.assertRaises(s.GuardError):
+            self.upload(confirm=True, resume="image-creator")
+        self.server.images[self.tier] = image
+        m.journal_path(self.tier).unlink()
+        with self.assertRaises(s.GuardError):
+            self.upload(confirm=True, resume="image-creator")
+        self.assertFalse(self.server.mutations)
+
+    def test_resume_unknown_asset_outcome_stays_readback_only(self):
+        self.server.failure = "asset"
+        with self.assertRaises(s.GuardError):
+            self.upload(confirm=True)
+        path = m.journal_path(self.tier)
+        original = path.read_bytes()
+        self.server.calls.clear()
+        self.server.failure = None
+        with self.assertRaisesRegex(s.GuardError, "part outcome"):
+            self.upload(confirm=True, resume="image-creator")
+        self.assertFalse(self.server.mutations)
+        self.assertEqual(path.read_bytes(), original)
+
+    def test_resume_cannot_bypass_unknown_diagnostic_or_attempted_part_marker(self):
+        path = self.seed_old_reservation()
+        base = s.read_json(path)
+        variants = [dict(base, part=0), dict(base, last_diagnostic={"phase": "upload_started"}),
+                    dict(base, last_diagnostic={"phase": "commit_started"}),
+                    dict(base, state="upload_started"), dict(base, state="commit_started")]
+        self.server.calls.clear()
+        for record in variants:
+            s.write_private(path, record)
+            original = path.read_bytes()
+            with self.assertRaises(s.GuardError):
+                self.upload(confirm=True, resume="image-creator")
+            self.assertEqual(path.read_bytes(), original)
+        self.assertFalse(self.server.mutations)
+
+    def test_resume_fresh_ownership_or_id_change_blocks_all_asset_operations(self):
+        path = self.seed_old_reservation()
+        self.server.calls.clear()
+        reads = []
+        def change_second_read(tier):
+            reads.append(tier)
+            if len(reads) == 2:
+                self.server.images[tier]["id"] = "other-image"
+        self.server.on_screenshot_get = change_second_read
+        with self.assertRaises(s.GuardError):
+            self.upload(confirm=True, resume="image-creator")
+        self.assertFalse(self.server.mutations)
+        self.assertEqual(s.read_json(path)["state"], "unknown")
+
+    def seed_successful_part_checkpoint(self, index=0):
+        path = self.seed_old_reservation()
+        record = s.read_json(path)
+        image = self.server.images[self.tier]
+        parts = m.upload_operations(image, self.payload)
+        record.update(state="part_uploaded", screenshot_id=image["id"], reservation=image,
+                      upload_plan=m.part_plan(parts, self.payload), part=index)
+        s.write_private(path, record)
+        for i in range(index + 1):
+            part = parts[i]
+            self.server.parts[i] = self.payload[part["offset"]:part["offset"] + part["length"]]
+        self.server.calls.clear()
+        return path
+
+    def test_resume_sends_only_journal_proven_unattempted_parts(self):
+        self.seed_successful_part_checkpoint()
+        self.assertEqual(self.upload(resume="image-creator")["nextPart"], 1)
+        self.assertTrue(self.upload(confirm=True, resume="image-creator")["processingComplete"])
+        self.assertEqual([c[0] for c in self.server.mutations], ["PUT", "PATCH"])
+        self.assertEqual(self.server.mutations[0][2]["data"], self.payload[len(self.payload) // 2:])
+
+    def test_all_parts_checkpoint_resumes_only_exact_md5_commit(self):
+        self.seed_successful_part_checkpoint(index=1)
+        self.assertEqual(self.upload(resume="image-creator")["remainingParts"], 0)
+        self.assertTrue(self.upload(confirm=True, resume="image-creator")["processingComplete"])
+        self.assertEqual([c[0] for c in self.server.mutations], ["PATCH"])
+
+    def test_checkpoint_changed_plan_or_unknown_commit_never_resumes(self):
+        path = self.seed_successful_part_checkpoint()
+        base = s.read_json(path)
+        for state in ["upload_started", "unknown", "commit_started"]:
+            record = dict(base, state=state)
+            s.write_private(path, record)
+            with self.assertRaises(s.GuardError):
+                self.upload(confirm=True, resume="image-creator")
+        base["upload_plan"][0]["length"] += 1
+        s.write_private(path, base)
+        with self.assertRaisesRegex(s.GuardError, "plan changed"):
+            self.upload(confirm=True, resume="image-creator")
+        self.assertFalse(self.server.mutations)
+
+    def test_resume_submitted_subscription_never_uploads_bytes(self):
+        self.seed_old_reservation()
+        self.server.calls.clear()
+        self.server.products[0]["attributes"]["state"] = "WAITING_FOR_REVIEW"
+        for confirm in [False, True]:
+            with self.assertRaises(s.GuardError):
+                self.upload(confirm=confirm, resume="image-creator")
+        self.assertFalse(self.server.mutations)
+
+    def test_http_error_diagnostics_retain_only_codes_status_and_known_field(self):
+        error = {"status": "409", "code": "ENTITY_ERROR.ATTRIBUTE.INVALID", "id": "private-id",
+                 "title": "Bearer fixture-jwt", "detail": self.server.operations(len(self.payload))[0]["url"],
+                 "source": {"pointer": "/data/attributes/fileName", "parameter": "private-param"},
+                 "meta": {"token": "private-token"}}
+        self.server.reserve_response = Response({"errors": [error]}, 409)
+        with self.assertRaises(m.ScreenshotError) as caught:
+            self.upload(confirm=True)
+        record = s.read_json(m.journal_path(self.tier))
+        diagnostic = record["last_diagnostic"]
+        self.assertEqual(diagnostic["http"], 409)
+        self.assertEqual(diagnostic["method"], "POST")
+        self.assertEqual(diagnostic["phase"], "reserve_started")
+        self.assertEqual(diagnostic["failure"], "http_status")
+        self.assertEqual(diagnostic["provider_errors"], [{"status": "409", "code": "ENTITY_ERROR.ATTRIBUTE.INVALID",
+                                                       "pointer": "/data/attributes/fileName", "message_redacted": True}])
+        output = str(caught.exception) + json.dumps(diagnostic)
+        for private in ["fixture-jwt", "https://", "Signature=", "private-id", "private-param", "private-token"]:
+            self.assertNotIn(private, output)
+        self.assertEqual(self.upload()["state"], "AWAITING_UPLOAD")
+        self.assertEqual([c[0] for c in self.server.mutations], ["POST"])
+
+    def test_diagnostic_error_payloads_are_bounded_and_free_text_is_never_retained(self):
+        errors = [{"status": "Bearer token", "code": "eyJhbGciOiJFUzI1NiJ9.payload.signature",
+                   "source": {"pointer": "https://store-030.blobstore.apple.com/assets-x?Signature=secret"},
+                   "detail": "secret"}, {"source": {"pointer": []}}, "unexpected"] * 10
+        diagnostic, _ = m.response_diagnostic(Response({"errors": errors}, 400))
+        self.assertEqual(diagnostic["provider_error_count"], 30)
+        self.assertLessEqual(len(diagnostic["provider_errors"]), 10)
+        for private in ["secret", "Bearer", "eyJ", "https://"]:
+            self.assertNotIn(private, json.dumps(diagnostic))
+
+    def test_non_json_and_transport_failures_keep_status_without_raw_response(self):
+        self.server.reserve_response = Response(content=b"non-json private provider response", status=201)
+        with self.assertRaises(m.ScreenshotError):
+            self.upload(confirm=True)
+        diagnostic = s.read_json(m.journal_path(self.tier))["last_diagnostic"]
+        self.assertEqual(diagnostic["http"], 201)
+        self.assertEqual(diagnostic["response"], "non_json")
+        self.assertNotIn("private provider response", json.dumps(diagnostic))
+
+    def test_transport_diagnostic_never_copies_exception_message(self):
+        self.server.failure = "reserve_before"
+        with self.assertRaises(m.ScreenshotError):
+            self.upload(confirm=True)
+        diagnostic = s.read_json(m.journal_path(self.tier))["last_diagnostic"]
+        self.assertIsNone(diagnostic["http"])
+        self.assertEqual(diagnostic["failure"], "transport")
+        self.assertEqual(diagnostic["exception_type"], "TimeoutError")
+        self.assertNotIn("private provider response", json.dumps(diagnostic))
+
+    def test_local_checksum_failure_retains_success_http_and_guard_reason(self):
+        self.server.on_reserve = lambda image: image["attributes"].update(sourceFileChecksum="wrong")
+        with self.assertRaises(m.ScreenshotError):
+            self.upload(confirm=True)
+        diagnostic = s.read_json(m.journal_path(self.tier))["last_diagnostic"]
+        self.assertEqual(diagnostic["http"], 201)
+        self.assertEqual(diagnostic["failure"], "local_validation")
+        self.assertEqual(diagnostic["guard"], "checksum_mismatch")
+        self.assertEqual([c[0] for c in self.server.mutations], ["POST"])
+
+    def test_asset_http_failure_records_code_but_never_signed_url(self):
+        self.server.asset_status = 403
+        with self.assertRaises(m.ScreenshotError) as caught:
+            self.upload(confirm=True)
+        diagnostic = s.read_json(m.journal_path(self.tier))["last_diagnostic"]
+        self.assertEqual(diagnostic["http"], 403)
+        self.assertEqual(diagnostic["method"], "PUT")
+        self.assertEqual(diagnostic["phase"], "upload_started")
+        self.assertNotIn("https://", str(caught.exception))
+        self.assertNotIn("Signature=", json.dumps(diagnostic))
 
     def test_uncertain_commit_can_be_reconciled_by_matching_complete_readback(self):
         self.assert_failed_attempt_never_retried("commit_after", ["POST", "PUT", "PUT", "PATCH"], complete=True)
