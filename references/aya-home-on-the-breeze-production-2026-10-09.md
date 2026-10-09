@@ -199,5 +199,19 @@ no JavaScript errors. Screenshots were visually checked. Evidence is under
 strict item audit and JavaScript syntax checks pass. Timing remains ASR-based,
 not a human-certified word alignment.
 
-Website deployment and live verification receipts follow after publication.
+Website publication commit `54eed0ef730127c28823472cead4801cc9802b1c` deployed
+successfully in Pages run `37938083335`. Live desktop and mobile playback tests
+passed at 18.18, 70.38, 120.86 and 176.11 seconds, including the final sung line.
+Live catalog, manifest, study data, all three lyric JSON files and cover match
+the local reviewed files byte-for-byte. Evidence: `review/website/live-checks.json`
+and `live-{desktop,mobile}.png` in the creative project.
+
+Listen: https://fun.lazying.art/#aya-home-on-the-breeze
+
+Atlas: https://fun.lazying.art/atlas/aya-home-on-the-breeze/
+
+This request publishes the song and website only. No player video recording,
+social-platform upload, music-platform submission or native-app release was
+performed. Temporary browser checks closed their own browser instances; no
+new GUI or development-server runtime is left running.
 

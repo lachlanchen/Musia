@@ -1,6 +1,6 @@
 # ただいま、風のなか · Home on the Breeze
 
-Status: generated, selected and ASR-audited; website release package prepared.
+Status: generated, selected, ASR-audited and published on Fun Lazying Art.
 Written October 9, 2026. Artist: Musia. Intended vocal language: Japanese.
 
 ## Owner's Intention
