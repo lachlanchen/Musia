@@ -245,8 +245,8 @@ class ScreenshotTests(unittest.TestCase):
         stack.enter_context(patch.object(m.jwt, "encode", return_value="fixture-jwt"))
         self.sessions = stack.enter_context(patch.object(m.requests, "Session", side_effect=lambda: Session(self.server)))
 
-    def upload(self, confirm=False, resume=None):
-        return m.upload(self.tier, self.png, self.sha, confirm, resume)
+    def upload(self, confirm=False, resume=None, reconcile=False):
+        return m.upload(self.tier, self.png, self.sha, confirm, resume, reconcile)
 
     def assert_refused(self):
         with self.assertRaises((s.GuardError, OSError, ValueError, TypeError, KeyError)):
@@ -300,6 +300,188 @@ class ScreenshotTests(unittest.TestCase):
         self.assertTrue(self.upload(confirm=True)["processingComplete"])
         self.assertFalse(self.server.mutations)
         self.assertFalse(m.journal_path(self.tier).exists())
+
+    def seed_processed_source(self):
+        self.upload(confirm=True)
+        path = m.journal_path(self.tier)
+        record = s.read_json(path)
+        record.pop("commit_observation")
+        record.update(state="unknown", last_diagnostic={"method": "PATCH", "http": 200,
+                      "phase": "commit_started", "guard": "checksum_mismatch", "failure": "local_validation"})
+        s.write_private(path, record)
+        self.server.images[self.tier]["attributes"]["fileName"] = "SOURCE"
+        self.server.calls.clear()
+        return path
+
+    def test_actual_source_normalization_reconciles_pinned_complete_readback_only(self):
+        self.tier = "studio"
+        path = self.seed_processed_source()
+        before = path.read_bytes()
+        result = self.upload()
+        self.assertEqual(result["state"], "COMPLETE")
+        self.assertTrue(result["processingComplete"])
+        self.assertTrue(result["checksumVerified"])
+        self.assertFalse(result["journalReconciled"])
+        self.assertFalse(result["providerMutationsThisRun"])
+        self.assertEqual(path.read_bytes(), before)
+        result = self.upload(reconcile=True)
+        self.assertTrue(result["journalReconciled"])
+        after = s.read_json(path)
+        self.assertEqual(after["state"], "complete")
+        self.assertEqual(after["last_diagnostic"], json.loads(before)["last_diagnostic"])
+        self.assertEqual(after["request"], json.loads(before)["request"])
+        self.assertEqual(after["readback"]["attributes"]["fileName"], "SOURCE")
+        self.assertEqual(after["reconciliation"]["from_state"], "unknown")
+        self.assertEqual(after["reconciliation"]["method"], "GET")
+        self.assertFalse(self.server.mutations)
+
+    def test_source_normalization_requires_pinned_id_owner_size_and_exact_md5(self):
+        path = self.seed_processed_source()
+        before = path.read_bytes()
+        original = copy.deepcopy(self.server.images[self.tier])
+        changes = [lambda image: image.update(id="different-image"),
+                   lambda image: image["relationships"].update(subscription=m.relationship("subscriptions", "studio")),
+                   lambda image: image["relationships"].clear(),
+                   lambda image: image["attributes"].update(fileSize=1),
+                   lambda image: image["attributes"].update(sourceFileChecksum="0" * 32),
+                   lambda image: image["attributes"].update(sourceFileChecksum=None),
+                   lambda image: image["attributes"].update(sourceFileChecksum=""),
+                   lambda image: image["attributes"].update(sourceFileChecksum=self.md5.upper()),
+                   lambda image: image["attributes"].update(fileName="other-normalized.png")]
+        for change in changes:
+            self.server.images[self.tier] = copy.deepcopy(original)
+            change(self.server.images[self.tier])
+            with self.assertRaises(s.GuardError):
+                self.upload(reconcile=True)
+            self.assertEqual(path.read_bytes(), before)
+        self.server.images[self.tier] = original
+        record = json.loads(before)
+        record.pop("screenshot_id")
+        s.write_private(path, record)
+        with self.assertRaises(s.GuardError):
+            self.upload(reconcile=True)
+        path.unlink()
+        with self.assertRaises(s.GuardError):
+            self.upload()
+        self.assertFalse(self.server.mutations)
+
+    def test_normalized_filename_cannot_bypass_pending_reservation_guard(self):
+        path = self.seed_processed_source()
+        before = path.read_bytes()
+        for state in ["AWAITING_UPLOAD", "UPLOAD_COMPLETE"]:
+            for checksum in [None, "", self.md5]:
+                self.server.images[self.tier]["attributes"].update(
+                    assetDeliveryState={"state": state}, sourceFileChecksum=checksum)
+                with self.assertRaises(s.GuardError):
+                    self.upload(confirm=True, resume="image-creator")
+                self.assertEqual(path.read_bytes(), before)
+        self.assertFalse(self.server.mutations)
+
+    def test_immediate_missing_checksum_can_resolve_via_fresh_complete_source_readback(self):
+        committed = self.server.make_image(self.tier, "UPLOAD_COMPLETE")
+        committed["attributes"]["sourceFileChecksum"] = ""
+        self.server.commit_response = Response({"data": committed})
+        self.server.on_commit = lambda image: image["attributes"].update(fileName="SOURCE")
+        result = self.upload(confirm=True)
+        self.assertTrue(result["processingComplete"])
+        self.assertEqual(result["state"], "COMPLETE")
+        record = s.read_json(m.journal_path(self.tier))
+        self.assertEqual(record["commit_observation"]["sourceFileChecksum"], "")
+        self.assertEqual(record["commit_observation"]["state"], "UPLOAD_COMPLETE")
+        self.assertEqual(record["readback"]["attributes"]["sourceFileChecksum"], self.md5)
+        self.assertEqual([c[0] for c in self.server.mutations], ["POST", "PUT", "PUT", "PATCH"])
+
+    def test_missing_postcommit_checksum_is_processing_not_passed_and_never_retried(self):
+        self.server.commit_state = "UPLOAD_COMPLETE"
+        self.server.on_commit = lambda image: image["attributes"].update(sourceFileChecksum="")
+        result = self.upload(confirm=True)
+        self.assertEqual(result["state"], "CHECKSUM_PENDING")
+        self.assertEqual(result["providerState"], "UPLOAD_COMPLETE")
+        self.assertEqual(result["action"], "processing_readback")
+        self.assertFalse(result["processingComplete"])
+        self.assertFalse(result["checksumVerified"])
+        self.assertFalse(result["automaticRetryAuthorized"])
+        path = m.journal_path(self.tier)
+        self.assertEqual(s.read_json(path)["state"], "processing")
+        self.server.calls.clear()
+        before = path.read_bytes()
+        self.assertEqual(self.upload()["state"], "CHECKSUM_PENDING")
+        self.assertEqual(path.read_bytes(), before)
+        self.assertEqual(self.upload(confirm=True, resume="image-creator")["state"], "CHECKSUM_PENDING")
+        self.assertEqual(self.upload(reconcile=True)["state"], "CHECKSUM_PENDING")
+        self.assertFalse(self.server.mutations)
+        self.server.images[self.tier]["attributes"].update(fileName="SOURCE", sourceFileChecksum=self.md5,
+                                                         assetDeliveryState={"state": "COMPLETE"})
+        self.assertTrue(self.upload(reconcile=True)["processingComplete"])
+        self.assertEqual(s.read_json(path)["state"], "complete")
+        self.assertFalse(self.server.mutations)
+
+    def test_complete_state_without_checksum_never_claims_complete(self):
+        self.server.on_commit = lambda image: image["attributes"].update(sourceFileChecksum=None)
+        result = self.upload(confirm=True)
+        self.assertEqual(result["state"], "CHECKSUM_PENDING")
+        self.assertEqual(result["providerState"], "COMPLETE")
+        self.assertFalse(result["processingComplete"])
+        self.assertFalse(result["checksumVerified"])
+        self.assertEqual(s.read_json(m.journal_path(self.tier))["state"], "processing")
+
+    def test_checksum_pending_requires_exact_protected_commit_intent(self):
+        path = self.seed_processed_source()
+        base = s.read_json(path)
+        self.server.images[self.tier]["attributes"].update(
+            fileName=base["identity"]["fileName"], sourceFileChecksum="", assetDeliveryState={"state": "UPLOAD_COMPLETE"})
+        changes = [lambda record: record.pop("screenshot_id"),
+                   lambda record: record["request"].update(method="POST"),
+                   lambda record: record["request"].update(path=m.RESOURCE + "/different-id"),
+                   lambda record: record["request"]["body"]["data"]["attributes"].update(sourceFileChecksum="wrong")]
+        for change in changes:
+            record = copy.deepcopy(base)
+            change(record)
+            s.write_private(path, record)
+            before = path.read_bytes()
+            with self.assertRaises(s.GuardError):
+                self.upload(reconcile=True)
+            self.assertEqual(path.read_bytes(), before)
+        self.assertFalse(self.server.mutations)
+
+    def test_nonempty_checksum_mismatch_never_becomes_processing_pending(self):
+        path = self.seed_processed_source()
+        before = path.read_bytes()
+        image = self.server.images[self.tier]
+        for checksum in ["0" * 32, "not-a-digest", self.md5.upper()]:
+            image["attributes"].update(fileName=json.loads(before)["identity"]["fileName"], sourceFileChecksum=checksum,
+                                       assetDeliveryState={"state": "UPLOAD_COMPLETE"})
+            with self.assertRaisesRegex(s.GuardError, "checksum mismatch"):
+                self.upload(reconcile=True)
+            self.assertEqual(path.read_bytes(), before)
+        self.assertFalse(self.server.mutations)
+
+    def test_reconcile_mode_cannot_reserve_resume_or_use_confirm(self):
+        with self.assertRaises(s.GuardError):
+            self.upload(reconcile=True)
+        with self.assertRaises(s.GuardError):
+            self.upload(reconcile=True, confirm=True)
+        with self.assertRaises(s.GuardError):
+            self.upload(reconcile=True, resume="image-creator")
+        self.assertFalse(self.server.mutations)
+        self.assertFalse(m.journal_path(self.tier).exists())
+        self.seed_processed_source()
+        self.server.images.clear()
+        with self.assertRaises(s.GuardError):
+            self.upload(reconcile=True)
+        self.assertFalse(self.server.mutations)
+
+    def test_reconcile_cli_only_updates_local_journal_and_blocks_confirm_combination(self):
+        path = self.seed_processed_source()
+        args = ["--tier", self.tier, "--png", str(self.png), "--sha256", self.sha, "--reconcile-journal"]
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertEqual(m.main(args), 0)
+        self.assertTrue(json.loads(output.getvalue())["journalReconciled"])
+        self.assertEqual(s.read_json(path)["state"], "complete")
+        with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            m.main(args + ["--confirm-upload"])
+        self.assertFalse(self.server.mutations)
 
     def test_empty_pre_upload_checksum_is_accepted_but_still_requires_md5_commit(self):
         self.server.on_reserve = lambda image: image["attributes"].update(sourceFileChecksum="")

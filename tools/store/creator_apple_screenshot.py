@@ -8,6 +8,7 @@ Existing intents are readback-only unless --resume-reservation pins the exact
 readback ID and --confirm-upload is supplied. Only journal-proven unattempted
 parts may resume; unknown PUT/commit outcomes remain readback-only. Never remove
 journals to retry. COMPLETE proves asset processing, not billing QA.
+--reconcile-journal only reads the provider and updates an existing local journal.
 
 Protocol: https://developer.apple.com/documentation/appstoreconnectapi/uploading-assets-to-app-store-connect
 Only unexpired signed Apple blobstore URLs and the exact observed Apple
@@ -225,22 +226,33 @@ def screenshot(api, sid):
     return value
 
 
-def check_screenshot(value, identity, screenshot_id=None):
+def check_screenshot(value, identity, screenshot_id=None, allow_pending_checksum=False):
     require(isinstance(value, dict) and value.get("type") == KIND, "Wrong screenshot resource")
     sid = identifier(value.get("id"))
     require(screenshot_id is None or sid == screenshot_id, "Screenshot reservation changed")
     attrs = value.get("attributes", {})
-    require(attrs.get("fileName") == identity["fileName"] and attrs.get("fileSize") == identity["fileSize"],
-            "Existing screenshot differs; replacement is not authorized")
     checksum = attrs.get("sourceFileChecksum")
     state = attrs.get("assetDeliveryState", {}).get("state")
     require(state in {"AWAITING_UPLOAD", "UPLOAD_COMPLETE", "COMPLETE", "FAILED"}, "Unknown screenshot processing state")
-    require(checksum in {None, identity["md5"]} or (state == "AWAITING_UPLOAD" and checksum == ""),
-            "Screenshot checksum mismatch")
-    if state in {"UPLOAD_COMPLETE", "COMPLETE"}:
-        require(checksum == identity["md5"], "Processed screenshot must have the exact source MD5")
+    owned = value.get("relationships", {}).get("subscription", {}).get("data") == relationship("subscriptions", identity["subscription"])["data"]
+    pinned = screenshot_id is not None and owned
+    # ASC's verified Studio readback normalized the completed filename to SOURCE.
+    # Never use this exception for pending reservations or unpinned resources.
+    normalized = state == "COMPLETE" and pinned and checksum == identity["md5"] and attrs.get("fileName") == "SOURCE"
+    require(attrs.get("fileSize") == identity["fileSize"]
+            and (attrs.get("fileName") == identity["fileName"] or normalized),
+            "Existing screenshot differs; replacement is not authorized")
     require(state != "FAILED" and not attrs.get("assetDeliveryState", {}).get("errors"),
             "Screenshot processing failed; no replacement or retry authorized")
+    missing_checksum = checksum is None or checksum == ""
+    pending_checksum = allow_pending_checksum and pinned and state in {"UPLOAD_COMPLETE", "COMPLETE"} and missing_checksum
+    require(checksum == identity["md5"] or checksum is None
+            or (state == "AWAITING_UPLOAD" and checksum == "") or pending_checksum,
+            "Screenshot checksum mismatch")
+    if state in {"UPLOAD_COMPLETE", "COMPLETE"}:
+        require(checksum == identity["md5"] or pending_checksum, "Processed screenshot must have the exact source MD5")
+    if pending_checksum:
+        return "CHECKSUM_PENDING"
     return state
 
 
@@ -374,9 +386,18 @@ def resume_index(record, existing, identity, plan):
     return 0
 
 
-def upload(tier, png, sha256, confirm=False, resume_reservation=None):
+def has_commit_intent(record, identity):
+    if not record or not record.get("screenshot_id"):
+        return False
+    sid = identifier(record["screenshot_id"])
+    return record.get("request") == {"method": "PATCH", "path": RESOURCE + "/" + sid,
+        "body": {"data": {"type": KIND, "id": sid, "attributes": {"uploaded": True, "sourceFileChecksum": identity["md5"]}}}}
+
+
+def upload(tier, png, sha256, confirm=False, resume_reservation=None, reconcile=False):
     payload = png_input(png, sha256)
     require(tier in PLANS, "Unapproved subscription")
+    require(not reconcile or (not confirm and resume_reservation is None), "Journal reconciliation is provider-read-only")
     if resume_reservation is not None:
         identifier(resume_reservation)
     with lock("creator-apple-review-screenshot"):
@@ -388,6 +409,7 @@ def upload(tier, png, sha256, confirm=False, resume_reservation=None):
                     "fileName": f"musia-{tier}-review-{sha256}.png", "fileSize": len(payload)}
         path = journal_path(tier)
         previous = read_json(private_file(path)) if path.exists() else None
+        require(not reconcile or previous is not None, "Journal reconciliation requires an existing protected journal")
         if previous is not None:
             require(previous.get("schema") == 1 and previous.get("identity") == identity
                     and previous.get("state") in {"reserve_started", "reserved", "upload_started", "part_uploaded",
@@ -398,16 +420,24 @@ def upload(tier, png, sha256, confirm=False, resume_reservation=None):
                   "appReviewChanged": False, "subscriptionReviewSubmitted": False, "purchasesAuthorized": False}
         start = 0
         if existing is not None:
-            state = check_screenshot(existing, identity, previous.get("screenshot_id") if previous else None)
+            state = check_screenshot(existing, identity, previous.get("screenshot_id") if previous else None,
+                                     allow_pending_checksum=has_commit_intent(previous, identity))
             require(resume_reservation is None or existing["id"] == resume_reservation, "Resume reservation ID mismatch")
             if state == "AWAITING_UPLOAD" and resume_reservation is None:
                 return dict(result, state=state, screenshotId=existing["id"], action="reservation_readback_only",
                             providerMutationsThisRun=False, automaticRetryAuthorized=False)
             if state != "AWAITING_UPLOAD":
-                if previous and confirm:
+                if previous and (confirm or reconcile):
+                    previous["reconciliation"] = {"at": now(), "from_state": previous["state"], "method": "GET",
+                                                  "http": api.last_diagnostic["http"], "provider_state": existing["attributes"]["assetDeliveryState"]["state"],
+                                                  "checksum_verified": state != "CHECKSUM_PENDING"}
                     previous.update(state="complete" if state == "COMPLETE" else "processing", at=now(), readback=existing)
                     write_private(path, previous)
-                return dict(result, state=state, processingComplete=state == "COMPLETE", action="verified_readback")
+                return dict(result, state=state, processingComplete=state == "COMPLETE",
+                            action="processing_readback" if state == "CHECKSUM_PENDING" else "verified_readback",
+                            screenshotId=existing["id"], providerState=existing["attributes"]["assetDeliveryState"]["state"],
+                            checksumVerified=state != "CHECKSUM_PENDING", providerMutationsThisRun=False,
+                            automaticRetryAuthorized=False, journalReconciled=bool(previous and (confirm or reconcile)))
             parts = upload_operations(existing, payload)
             plan = part_plan(parts, payload)
             start = resume_index(previous, existing, identity, plan)
@@ -464,14 +494,22 @@ def upload(tier, png, sha256, confirm=False, resume_reservation=None):
             record.update(state="commit_started", at=now(), request={"method": "PATCH", "path": commit_path, "body": commit})
             write_private(path, record)
             committed = api.request("PATCH", commit_path, commit, operation=path)["data"]
-            require(check_screenshot(committed, identity, reserved["id"]) in {"UPLOAD_COMPLETE", "COMPLETE"}, "Commit unconfirmed")
+            attrs = committed.get("attributes", {})
+            record["commit_observation"] = {"id": committed.get("id"), "fileName": attrs.get("fileName"),
+                "fileSize": attrs.get("fileSize"), "sourceFileChecksum": attrs.get("sourceFileChecksum"),
+                "state": attrs.get("assetDeliveryState", {}).get("state"), "http": api.last_diagnostic["http"]}
+            write_private(path, record)
+            require(check_screenshot(committed, identity, reserved["id"], allow_pending_checksum=True)
+                    in {"UPLOAD_COMPLETE", "COMPLETE", "CHECKSUM_PENDING"}, "Commit unconfirmed")
             fresh = screenshot(api, sid)
-            state = check_screenshot(fresh, identity, reserved["id"])
-            require(state in {"UPLOAD_COMPLETE", "COMPLETE"}, "Commit readback unconfirmed")
+            state = check_screenshot(fresh, identity, reserved["id"], allow_pending_checksum=True)
+            require(state in {"UPLOAD_COMPLETE", "COMPLETE", "CHECKSUM_PENDING"}, "Commit readback unconfirmed")
             record.update(state="complete" if state == "COMPLETE" else "processing", at=now(), readback=fresh)
             write_private(path, record)
             return dict(result, state=state, processingComplete=state == "COMPLETE",
-                        action="resumed_readback" if resume_reservation else "uploaded_readback", screenshotId=reserved["id"])
+                        action="processing_readback" if state == "CHECKSUM_PENDING" else ("resumed_readback" if resume_reservation else "uploaded_readback"),
+                        screenshotId=reserved["id"], checksumVerified=state != "CHECKSUM_PENDING",
+                        providerState=fresh["attributes"]["assetDeliveryState"]["state"], automaticRetryAuthorized=False)
         except Exception as error:
             diagnostic = failure_diagnostic(error, getattr(api, "last_diagnostic", None))
             diagnostic = dict(diagnostic, phase=record["state"])
@@ -485,11 +523,13 @@ def main(argv=None):
     parser.add_argument("--tier", choices=tuple(PLANS), required=True)
     parser.add_argument("--png", type=Path, required=True)
     parser.add_argument("--sha256", required=True)
-    parser.add_argument("--confirm-upload", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--confirm-upload", action="store_true")
+    mode.add_argument("--reconcile-journal", action="store_true", help="GET only; update the existing protected journal from readback")
     parser.add_argument("--resume-reservation", help="Exact reconciled screenshot ID; defaults to a read-only resume plan")
     args = parser.parse_args(argv)
     try:
-        print(json.dumps(upload(args.tier, args.png, args.sha256, args.confirm_upload, args.resume_reservation), indent=2))
+        print(json.dumps(upload(args.tier, args.png, args.sha256, args.confirm_upload, args.resume_reservation, args.reconcile_journal), indent=2))
         return 0
     except Exception as error:
         print(str(error) if isinstance(error, GuardError) else "Invalid screenshot/config/provider input; no retry authorized", file=sys.stderr)
