@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#087f78" />
+    <title>Musia · Create</title>
+    <link rel="icon" href="/assets/brand.png" />
+    <link rel="stylesheet" href="/creator/styles.css" />
+    <script src="/vendor/lucide.js" defer></script>
+    <script type="module" src="/creator/app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="/"
+        ><img src="/assets/brand.png" alt="" /><strong>Musia</strong></a
+      ><span class="header-divider"></span><span>Creator</span>
+      <div class="header-actions">
+        <button id="plans-button">
+          <i data-lucide="layers"></i><span>Plans</span></button
+        ><button id="account-button">
+          <i data-lucide="user-round"></i><span id="account-name">Sign in</span>
+        </button>
+      </div>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <nav aria-label="Creator navigation">
+          <button data-tab="create" aria-current="page">
+            <i data-lucide="audio-lines"></i>Create</button
+          ><button data-tab="public">
+            <i data-lucide="compass"></i>Discover</button
+          ><button data-tab="mine"><i data-lucide="disc-3"></i>My music</button
+          ><button data-tab="saved"><i data-lucide="bookmark"></i>Saved</button
+          ><a href="/"><i data-lucide="guitar"></i>Practice</a>
+        </nav>
+        <div class="allowance">
+          <span>This month</span><strong id="usage">Free listening</strong
+          ><small id="usage-period">Public songs are open to everyone.</small>
+        </div>
+        <a class="support" href="mailto:contact@lazying.art"
+          >Contact &amp; safety</a
+        >
+      </aside>
+      <main>
+        <div id="notice" role="status" hidden></div>
+        <section id="create-view">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">YOUR NEXT SONG</p>
+              <h1>Make something yours.</h1>
+            </div>
+            <span class="status" id="connection">Checking connection</span>
+          </div>
+          <div class="creator-grid">
+            <section class="conversation" aria-label="Song conversation">
+              <div id="messages" aria-live="polite">
+                <div class="agent-message">
+                  <span class="speaker">Musia</span>
+                  <p>What should this song make someone feel?</p>
+                </div>
+              </div>
+              <form id="chat-form" class="composer">
+                <label for="message">Your direction</label
+                ><textarea
+                  id="message"
+                  rows="3"
+                  maxlength="4000"
+                  required
+                  placeholder="A warm Japanese song about missing someone far away…"
+                ></textarea>
+                <div>
+                  <span id="chat-status">Private draft</span
+                  ><button
+                    id="send"
+                    class="primary"
+                    type="submit"
+                    title="Refine song brief"
+                  >
+                    <i data-lucide="arrow-up"></i><span>Refine</span>
+                  </button>
+                </div>
+              </form>
+            </section>
+            <section class="brief-section">
+              <div class="brief-heading">
+                <h2>Song brief</h2>
+                <button
+                  id="export"
+                  class="icon"
+                  title="Export draft"
+                  aria-label="Export draft"
+                >
+                  <i data-lucide="download"></i>
+                </button>
+              </div>
+              <form id="brief-form">
+                <label
+                  >Title<input
+                    name="title"
+                    maxlength="120"
+                    required
+                    placeholder="A name for your song"
+                /></label>
+                <div class="form-row">
+                  <label
+                    >Vocal language<select name="language">
+                      <option value="mixed">Multilingual</option>
+                      <option value="zh">中文</option>
+                      <option value="ja">日本語</option>
+                      <option value="en">English</option>
+                    </select></label
+                  ><label
+                    >Length<select name="duration">
+                      <option value="60">1 minute</option>
+                      <option value="90" selected>1½ minutes</option>
+                      <option value="120">2 minutes</option>
+                      <option value="180">3 minutes</option>
+                    </select></label
+                  >
+                </div>
+                <label
+                  >Lyrics<textarea
+                    name="lyrics"
+                    rows="9"
+                    maxlength="6000"
+                    required
+                    placeholder="[Verse]&#10;A first line…&#10;&#10;[Chorus]"
+                  ></textarea>
+                </label>
+                <label
+                  >Sound &amp; feeling<textarea
+                    name="caption"
+                    rows="3"
+                    maxlength="1600"
+                    required
+                    placeholder="Warm piano, clear intimate vocal, a hopeful chorus"
+                  ></textarea>
+                </label>
+                <details>
+                  <summary>Musical direction</summary>
+                  <label
+                    >Idea<textarea
+                      name="idea"
+                      rows="2"
+                      maxlength="4000"
+                    ></textarea>
+                  </label>
+                  <div class="form-row">
+                    <label
+                      >Tempo · BPM<input
+                        name="bpm"
+                        type="number"
+                        min="40"
+                        max="200"
+                        value="100"
+                        required /></label
+                    ><label
+                      >Key<select name="key">
+                        <option>C major</option>
+                        <option>A minor</option>
+                        <option>G major</option>
+                        <option>E minor</option>
+                        <option>D major</option>
+                        <option>D minor</option>
+                        <option>F major</option>
+                      </select></label
+                    >
+                  </div>
+                </details>
+                <div class="generation">
+                  <label
+                    >Visibility<select id="visibility">
+                      <option value="private">Only me</option>
+                      <option value="public">Public · after review</option>
+                    </select></label
+                  ><label class="check"
+                    ><input id="rights" type="checkbox" required /><span
+                      >I have permission to use these lyrics and
+                      materials.</span
+                    ></label
+                  ><button id="generate" class="primary" type="submit">
+                    <i data-lucide="sparkles"></i
+                    ><span>Create song · 1 render</span>
+                  </button>
+                  <p id="generation-status" class="muted">
+                    Failed renders do not use your allowance.
+                  </p>
+                </div>
+              </form>
+            </section>
+          </div>
+          <section class="jobs-section">
+            <div class="section-heading">
+              <h2>Your renders</h2>
+              <button
+                id="refresh-jobs"
+                class="icon"
+                title="Refresh renders"
+                aria-label="Refresh renders"
+              >
+                <i data-lucide="refresh-cw"></i>
+              </button>
+            </div>
+            <div id="jobs"><p class="muted">No renders yet.</p></div>
+          </section>
+        </section>
+        <section id="library-view" hidden>
+          <div class="section-heading">
+            <h1 id="library-title">Discover</h1>
+            <button
+              id="refresh-library"
+              class="icon"
+              title="Refresh music"
+              aria-label="Refresh music"
+            >
+              <i data-lucide="refresh-cw"></i>
+            </button>
+          </div>
+          <div id="songs"></div>
+          <section id="song-detail" hidden></section>
+        </section>
+      </main>
+    </div>
+    <dialog id="plans-dialog">
+      <div class="dialog-head">
+        <h2>Room to create</h2>
+        <button
+          data-close="plans-dialog"
+          class="icon"
+          title="Close"
+          aria-label="Close"
+        >
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <p>Listening, sharing, hearts, comments and saved songs stay free.</p>
+      <div id="plans"></div>
+      <p class="muted">
+        Approved launch plans. Subscriptions are not on sale yet. Each render is
+        one song up to 3 minutes. Allowances reset monthly in UTC; no rollover.
+      </p>
+    </dialog>
+    <dialog id="account-dialog">
+      <div class="dialog-head">
+        <h2>Your account</h2>
+        <button
+          data-close="account-dialog"
+          class="icon"
+          title="Close"
+          aria-label="Close"
+        >
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div id="account-content"></div>
+    </dialog>
+    <dialog id="terms-dialog">
+      <h2>Before you create</h2>
+      <p>
+        Only use material you have permission to use. No impersonation, abusive
+        content or unauthorized voice cloning. Songs stay private unless you
+        choose public sharing.
+      </p>
+      <p>
+        Your submitted lyrics and direction are processed by Musia's configured
+        AI providers. Public songs and comments are reviewed; you can report
+        content or block its author.
+      </p>
+      <p>
+        <a href="/creator/terms" target="_blank" rel="noopener"
+          >Creator terms &amp; privacy</a
+        >
+      </p>
+      <div class="dialog-actions">
+        <button data-close="terms-dialog">Not now</button
+        ><button id="accept-terms" class="primary">Agree &amp; continue</button>
+      </div>
+    </dialog>
+  </body>
+</html>

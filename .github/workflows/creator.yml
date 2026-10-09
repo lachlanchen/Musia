@@ -1,0 +1,27 @@
+name: Creator Boundary
+on:
+  pull_request:
+    paths: ['musia/creator/**', 'apps/web/creator/**', 'tools/creator.py', 'tests/test_creator.py', 'requirements-creator.txt', '.github/workflows/creator.yml']
+  push:
+    paths: ['musia/creator/**', 'apps/web/creator/**', 'tools/creator.py', 'tests/test_creator.py', 'requirements-creator.txt', '.github/workflows/creator.yml']
+permissions:
+  contents: read
+jobs:
+  creator:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - run: python -m pip install -r requirements-creator.txt
+      - run: python -m unittest discover -s tests -p test_creator.py
+      - run: python -m unittest discover -s tests -p test_learning_api.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check apps/web/creator/app.js
+      - run: node --check bin/musia.js

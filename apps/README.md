@@ -11,6 +11,16 @@ player are independent of this learning app.
 | iOS | `ios/`, SwiftUI and AVFoundation |
 | Shared catalog | `../musia/learning.py`, read-only FastAPI |
 
+## Creator Pilot
+
+The next creator feature has a separate agent/community API and web workspace:
+`node bin/musia.js creator serve --port 8796`, then open
+<http://127.0.0.1:8796/creator/>. It is disconnected by default and does not
+change the currently shipped native app or production learning service.
+See [Creator implementation and rollout gates](../docs/musia-creator-agent.md)
+for approved tiers, identity integration, private/public music, moderation,
+quality review, usage accounting and the remaining native/payment work.
+
 ## Run Locally
 
 Use the existing `musia` conda environment; do not duplicate model environments.

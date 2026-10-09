@@ -1,0 +1,6 @@
+# Public creator server: use Python 3.11+ for the separately installed private
+# LazyingArt adapter. GPU worker continues to use the existing musia conda env.
+-r requirements-learning.txt
+openai==1.109.1
+# Install the reviewed LazyingArtLinkPrivate checkout separately for live login.
+# No private dependency URL, credentials or sibling app configuration belongs here.

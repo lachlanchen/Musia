@@ -36,6 +36,8 @@ Web app:
   musia studio [--host 127.0.0.1] [--port 8766]
   musia studio --tmux
   musia web [...same as studio]
+  musia creator serve [--port 8796]   creator preview (source checkout)
+  musia creator --help               creator queue and moderation operations
 
 Creative CLI:
   musia setup
@@ -282,6 +284,13 @@ function main() {
   }
   if (command === "studio" || command === "web") {
     runStudio(rest);
+    return;
+  }
+  if (command === "creator") {
+    if (!fs.existsSync(path.join(ROOT, "tools/creator.py"))) {
+      fail("Creator is a source-checkout pilot. Run this command from the Musia repository; the current npm package does not bundle the service.");
+    }
+    runPython("tools/creator.py", rest);
     return;
   }
   if (command === "bootstrap") {
