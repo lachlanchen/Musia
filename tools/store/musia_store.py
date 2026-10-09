@@ -10,7 +10,7 @@ import secrets
 import sys
 import urllib.parse
 
-from build_native import build, check_profile, decode_profile, inspect_android, inspect_ios
+from build_native import WATCH_BUNDLE, build, check_profile, decode_profile, inspect_android, inspect_ios
 from storelib import Apple, BUNDLE, GuardError, RUNTIME, TEAM, apple_platform_builds, check_qa, config, digest, lock, now, private_dir, private_file, read_json, release, require, run, snapshot_artifact, write_private
 from upload_macos import check_altool_result
 
@@ -22,45 +22,57 @@ def apple_inventory():
             "bundle_id_resources": [x["id"] for x in result["bundle_ids"]]}
 
 
-def apple_setup(confirm):
+def apple_setup(confirm, watch=False):
     cfg, api = config(), Apple()
     inventory = api.inventory()
+    bundle_id = WATCH_BUNDLE if watch else BUNDLE
+    name = "Musia Watch" if watch else "Musia"
+    profile_name = name + " App Store"
+    operation = "musia-watch" if watch else "musia"
+    bundles = inventory["bundle_ids"]
+    if watch:
+        require(len(inventory["bundle_ids"]) == 1 and len(inventory["apps"]) == 1,
+                "Watch requires the existing exact Musia companion and app")
+        query = urllib.parse.urlencode({"filter[identifier]": bundle_id, "limit": 200})
+        bundles = [b for b in api.rows("/v1/bundleIds?" + query)
+                   if b["attributes"]["identifier"] == bundle_id]
+        require(len(bundles) <= 1, "Multiple exact Watch bundle IDs")
     certificate = api.request("GET", "/v1/certificates/" + cfg["apple_certificate_id"])["data"]
     attributes = certificate["attributes"]
     cert = base64.b64decode(attributes["certificateContent"])
     require(attributes["certificateType"] in {"DISTRIBUTION", "IOS_DISTRIBUTION"}
             and hashlib.sha1(cert).hexdigest().upper() == cfg["apple_certificate_sha1"], "Account certificate pin mismatch")
     if not confirm:
-        return {"state": "setup_plan_only", "register_bundle": not inventory["bundle_ids"],
-                "profile_name": "Musia App Store", "creates_app_record": False}
+        return {"state": "setup_plan_only", "register_bundle": not bundles,
+                "bundle_id": bundle_id, "profile_name": profile_name, "creates_app_record": False}
     with lock("apple-setup"):
-        if inventory["bundle_ids"]:
-            bundle = inventory["bundle_ids"][0]
+        if bundles:
+            bundle = bundles[0]
         else:
             bundle = api.request("POST", "/v1/bundleIds", {"data": {"type": "bundleIds", "attributes": {
-                "identifier": BUNDLE, "name": "Musia", "platform": "IOS"}}}, operation="register-musia-bundle")["data"]
-        require(bundle["attributes"]["identifier"] == BUNDLE, "Created bundle identity mismatch")
+                "identifier": bundle_id, "name": name, "platform": "IOS"}}}, operation="register-" + operation + "-bundle")["data"]
+        require(bundle["attributes"]["identifier"] == bundle_id, "Created bundle identity mismatch")
         profiles = api.rows(f"/v1/bundleIds/{bundle['id']}/profiles?limit=200")
-        matches = [p for p in profiles if p["attributes"]["name"] == "Musia App Store"
+        matches = [p for p in profiles if p["attributes"]["name"] == profile_name
                    and p["attributes"]["profileType"] == "IOS_APP_STORE" and p["attributes"]["profileState"] == "ACTIVE"]
         require(len(matches) <= 1, "Multiple Musia profiles; review rather than replace")
         if matches:
             profile = api.request("GET", "/v1/profiles/" + matches[0]["id"])["data"]
         else:
             profile = api.request("POST", "/v1/profiles", {"data": {"type": "profiles", "attributes": {
-                "name": "Musia App Store", "profileType": "IOS_APP_STORE"}, "relationships": {
+                "name": profile_name, "profileType": "IOS_APP_STORE"}, "relationships": {
                     "bundleId": {"data": {"type": "bundleIds", "id": bundle["id"]}},
                     "certificates": {"data": [{"type": "certificates", "id": certificate["id"]}]}}}},
-                                  operation="create-musia-app-store-profile")["data"]
-        target = RUNTIME / "apple/Musia_App_Store.mobileprovision"
+                                  operation="create-" + operation + "-app-store-profile")["data"]
+        target = RUNTIME / "apple" / (profile_name.replace(" ", "_") + ".mobileprovision")
         raw = base64.b64decode(profile["attributes"]["profileContent"])
         require(not target.exists() or target.read_bytes() == raw, "Existing profile differs; no overwrite")
         write_private(target, raw)
-        decoded = check_profile(decode_profile(target), cfg)
-        result = {"at": now(), "bundle_id": BUNDLE, "bundle_resource_id": bundle["id"], "profile_id": profile["id"],
+        decoded = check_profile(decode_profile(target), cfg, bundle_id)
+        result = {"at": now(), "bundle_id": bundle_id, "bundle_resource_id": bundle["id"], "profile_id": profile["id"],
                   "profile_uuid": decoded["UUID"], "profile_sha256": digest(target), "team": TEAM,
                   "certificate_sha1": cfg["apple_certificate_sha1"], "app_record_created": False}
-        write_private(RUNTIME / "apple/setup.json", result)
+        write_private(RUNTIME / "apple" / ("watch-setup.json" if watch else "setup.json"), result)
         return result
 
 
@@ -192,7 +204,7 @@ def invite_apple(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["inventory-apple", "inventory-play", "setup-apple", "setup-android-key",
+    parser.add_argument("command", choices=["inventory-apple", "inventory-play", "setup-apple", "setup-apple-watch", "setup-android-key",
                                             "build-ios", "build-android", "qualify", "upload-apple", "upload-play", "invite-self", "invite-play-self"])
     parser.add_argument("--confirm-setup", action="store_true")
     parser.add_argument("--execute-build", action="store_true")
@@ -211,6 +223,8 @@ def main():
         result = inventory()
     elif args.command == "setup-apple":
         result = apple_setup(args.confirm_setup)
+    elif args.command == "setup-apple-watch":
+        result = apple_setup(args.confirm_setup, watch=True)
     elif args.command == "setup-android-key":
         result = android_key(args.confirm_setup)
     elif args.command.startswith("build-"):

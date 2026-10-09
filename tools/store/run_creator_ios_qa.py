@@ -15,6 +15,7 @@ CASES = {
     "account": "testCreatorAccountAndCommunity",
     "products": "testCreatorProducts",
     "private-playback": "testSignedInPrivatePlayback",
+    "workspace": "testAgentStudioWorkspace",
 }
 
 

@@ -10,7 +10,58 @@ let capabilities,
 let songRequest = 0,
   libraryRequest = 0;
 const DRAFT = "musia.creator.draft.v1",
+  CHAT = "musia.creator.chat.v1",
   PENDING = "musia.creator.pending.v1";
+const briefFields = ["title", "idea", "lyrics", "caption", "language", "duration", "bpm", "key"];
+const emptyBrief = brief();
+let messages = [], agentRequest = null, renderReview = null;
+let workspaceReady = false;
+form.inert = true;
+$("message").disabled = true;
+function workspaceKey(prefix) {
+  return `${prefix}:${account ? "owner:" + encodeURIComponent(account.id) : "guest"}`;
+}
+function boundedHistory(value) {
+  const history = (Array.isArray(value) ? value : [])
+    .filter((m) => m && ["user", "assistant"].includes(m.role) && typeof m.content === "string" && m.content.trim())
+    .map((m) => ({ role: m.role, content: m.content.slice(0, 4000) })).slice(-12);
+  while (history.reduce((size, m) => size + m.content.length, 0) > 16000) history.shift();
+  return history;
+}
+function agentPayload(message, currentBrief) {
+  const payload = { message, brief: currentBrief, history: boundedHistory(messages) };
+  while (new TextEncoder().encode(JSON.stringify(payload)).length > 45000) {
+    if (!payload.history.length) throw new Error("This message and draft are too long to send. Shorten them and try again.");
+    payload.history.shift();
+  }
+  return payload;
+}
+function persistConversation() {
+  save(workspaceKey(CHAT), { messages, input: $("message").value });
+}
+function renderMessages() {
+  $("messages").replaceChildren();
+  if (!messages.length) addMessage("What would you like to make?", "Musia");
+  for (const m of messages) addMessage(m.content, m.role === "user" ? "You" : "Musia");
+}
+function loadWorkspace() {
+  const saved = read(workspaceKey(CHAT));
+  messages = boundedHistory(saved?.messages);
+  $("message").value = typeof saved?.input === "string" ? saved.input.slice(0, 4000) : "";
+  fill({ ...emptyBrief, ...(read(workspaceKey(DRAFT)) || (!account && read(DRAFT)) || {}) });
+  renderMessages();
+  setMode("agent");
+}
+function setMode(mode, focus = false) {
+  for (const button of document.querySelectorAll("[data-mode]")) {
+    const selected = button.dataset.mode === mode;
+    button.setAttribute("aria-selected", String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    if (selected && focus) button.focus();
+  }
+  $("agent-panel").hidden = mode !== "agent";
+  $("studio-panel").hidden = mode !== "studio";
+}
 function read(key) {
   try {
     return JSON.parse(localStorage.getItem(key) || "null");
@@ -114,7 +165,16 @@ function fill(data) {
       field.add(new Option(String(v), String(v)));
     field.value = v;
   }
-  save(DRAFT, brief());
+  save(workspaceKey(DRAFT), brief());
+  $("draft-title").textContent = brief().title;
+}
+function validBrief(data, draft = false) {
+  return ["title", "idea", "lyrics", "caption"].every((k) => typeof data[k] === "string") &&
+    data.title.length <= 120 && data.idea.length <= 4000 && data.lyrics.length <= 6000 && data.caption.length <= 1600 &&
+    (draft || [data.title, data.lyrics, data.caption].every((s) => s.trim())) &&
+    ["en", "zh", "ja", "mixed"].includes(data.language) && Number.isInteger(data.duration) &&
+    data.duration >= 30 && data.duration <= 180 && Number.isInteger(data.bpm) && data.bpm >= 40 && data.bpm <= 200 &&
+    /^[A-G](?:#|b)? (?:major|minor)$/.test(data.key);
 }
 function authRequired() {
   if (!account) {
@@ -129,11 +189,11 @@ function authRequired() {
 }
 function refreshControls() {
   const pending = read(PENDING);
-  $("send").disabled = busy || !capabilities?.agent;
-  $("generate").disabled = busy || !capabilities?.generation;
+  $("send").disabled = !workspaceReady || busy || !capabilities?.agent || !$("message").value.trim() || !validBrief(brief(), true);
+  $("generate").disabled = !workspaceReady || busy || !capabilities?.generation || (!pending && !validBrief(brief()));
   $("generate").querySelector("span").textContent = pending
     ? "Recover pending render"
-    : "Create song · 1 render";
+    : "Generate song · 1 render";
   $("account-name").textContent = account?.name || "Sign in";
   $("usage").textContent = account
     ? `${account.usage.remaining} of ${account.usage.limit} renders left`
@@ -146,12 +206,18 @@ function refreshControls() {
     : capabilities?.login ? "Connected · rendering unavailable" : "Creator preview · service not connected";
   $("generation-status").textContent = pending
     ? "Your previous request will be recovered without a second charge."
-    : "Failed renders do not use your allowance.";
+    : !validBrief(brief()) ? "Complete the title, lyrics and musical direction before generating." : "Failed renders do not use your allowance.";
+  $("chat-status").textContent = agentRequest ? "Musia is thinking..." : "Private draft";
 }
 async function refreshAccount() {
   const data = await api("/api/me");
-  if (account?.id !== data.account?.id) accountEpoch++;
+  const changed = account?.id !== data.account?.id;
+  if (changed) { accountEpoch++; busy = false; agentRequest = null; renderReview = null; $("render-dialog").close(); }
   account = data.account;
+  if (changed) loadWorkspace();
+  workspaceReady = true;
+  form.inert = false;
+  $("message").disabled = false;
   refreshControls();
   if ($("account-dialog").open) openAccount();
 }
@@ -235,8 +301,10 @@ function openAccount() {
         await api("/auth/logout", {});
         accountEpoch++;
         account = null;
+        busy = false; agentRequest = null; renderReview = null;
+        $("render-dialog").close();
         song = null;
-        $("messages").replaceChildren();
+        loadWorkspace();
         $("jobs").replaceChildren();
         $("songs").replaceChildren();
         $("song-detail").replaceChildren();
@@ -275,6 +343,8 @@ function openAccount() {
           )
             return;
           await api("/api/me", {}, "DELETE");
+          localStorage.removeItem(workspaceKey(DRAFT));
+          localStorage.removeItem(workspaceKey(CHAT));
           accountEpoch++;
           account = null;
           $("account-dialog").close();
@@ -296,36 +366,69 @@ function addMessage(text, person) {
   );
   row.append(element("span", person, "speaker"), element("p", text));
   $("messages").append(row);
-  row.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  $("messages").scrollTop = $("messages").scrollHeight;
 }
 $("chat-form").onsubmit = (e) => {
   e.preventDefault();
   guard(async () => {
-    if (!authRequired()) return;
+    if (busy || !authRequired()) return;
     const epoch = accountEpoch;
+    const message = $("message").value.trim(), currentBrief = brief();
+    if (!message || message.length > 4000 || !validBrief(currentBrief, true)) return;
+    const payload = agentPayload(message, currentBrief);
+    const request = { edited: new Set() };
+    agentRequest = request;
     busy = true;
-    refreshControls();
-    const message = $("message").value;
-    addMessage(message, "You");
+    messages = boundedHistory([...messages, { role: "user", content: message }]);
+    $("message").value = "";
+    persistConversation(); renderMessages(); refreshControls();
     try {
-      const data = await api("/api/agent", { message, brief: brief() });
+      const data = await api("/api/agent", payload);
       if (epoch !== accountEpoch) return;
-      fill(data.brief);
-      addMessage(data.message, "Musia");
-      $("message").value = "";
-      notice("");
+      if (!validBrief(data.brief, true) || typeof data.message !== "string" || !data.message.trim()) throw new Error(errors.agent_response_unavailable);
+      const current = brief();
+      fill(Object.fromEntries(briefFields.map((key) => [key, request.edited.has(key) ? current[key] : data.brief[key]])));
+      messages = boundedHistory([...messages, { role: "assistant", content: data.message }]);
+      persistConversation(); renderMessages();
+      notice(request.edited.size ? "Your Studio edits were kept." : "");
+    } catch (error) {
+      if (epoch === accountEpoch) throw error;
     } finally {
-      busy = false;
-      refreshControls();
+      if (epoch === accountEpoch) { busy = false; agentRequest = null; refreshControls(); }
     }
   });
 };
-form.addEventListener("input", () => save(DRAFT, brief()));
-form.onsubmit = (e) => {
-  e.preventDefault();
+$("message").addEventListener("input", () => { persistConversation(); refreshControls(); });
+form.addEventListener("input", (event) => {
+  if (briefFields.includes(event.target.name)) agentRequest?.edited.add(event.target.name);
+  save(workspaceKey(DRAFT), brief());
+  $("draft-title").textContent = brief().title;
+  refreshControls();
+});
+form.onsubmit = (e) => e.preventDefault();
+$("rights").onchange = () => { $("confirm-render").disabled = !$("rights").checked; };
+$("generate").onclick = () => guard(async () => {
+  if (busy || !authRequired() || !capabilities?.generation) return;
+  const pending = read(PENDING);
+  if (pending) { await submitRender(); return; }
+  if (!validBrief(brief())) return;
+  renderReview = { owner: account.id, epoch: accountEpoch, body: { brief: brief(), rights_confirmed: true, visibility: $("visibility").value } };
+  $("render-summary").textContent = `${renderReview.body.brief.title} · ${renderReview.body.brief.duration} seconds · ${renderReview.body.visibility}`;
+  $("rights").checked = false;
+  $("confirm-render").disabled = true;
+  $("render-dialog").showModal();
+});
+$("confirm-render").onclick = () => guard(async () => {
+  if (!$("rights").checked || !renderReview || busy) return;
+  $("render-dialog").close();
+  await submitRender();
+});
+async function submitRender() {
   guard(async () => {
-    if (!authRequired()) return;
+    if (busy || !authRequired() || !capabilities?.generation) return;
+    const epoch = accountEpoch;
     let pending = read(PENDING);
+    const initial = !pending;
     if (pending && pending.owner !== account.id) {
       notice(
         "A pending render belongs to another account. Sign back into that account to recover it.",
@@ -333,34 +436,33 @@ form.onsubmit = (e) => {
       return;
     }
     if (!pending) {
+      if (!renderReview || renderReview.owner !== account.id || renderReview.epoch !== epoch || !$("rights").checked) return;
       pending = {
         owner: account.id,
         key: crypto.randomUUID(),
-        body: {
-          brief: brief(),
-          rights_confirmed: $("rights").checked,
-          visibility: $("visibility").value,
-        },
+        body: renderReview.body,
       };
       save(PENDING, pending);
     }
     busy = true;
+    renderReview = null;
     refreshControls();
     try {
       await api("/api/jobs", pending.body, "POST", pending.key);
+      if (epoch !== accountEpoch) return;
       localStorage.removeItem(PENDING);
       notice("Render queued for safety review.");
       await refreshJobs();
       await refreshAccount();
     } catch (error) {
-      if (error.status && error.status < 500) localStorage.removeItem(PENDING);
+      if (epoch !== accountEpoch) return;
+      if (initial && [400, 401, 403, 422, 429].includes(error.status)) localStorage.removeItem(PENDING);
       throw error;
     } finally {
-      busy = false;
-      refreshControls();
+      if (epoch === accountEpoch) { busy = false; refreshControls(); }
     }
   });
-};
+}
 async function refreshJobs() {
   if (!account) return;
   const data = await api("/api/jobs");
@@ -659,7 +761,8 @@ $("export").onclick = () => {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 };
 async function start() {
-  fill(read(DRAFT));
+  icons();
+  loadWorkspace();
   capabilities = await api("/api/capabilities");
   for (const plan of capabilities.plans) {
     const row = element("div", undefined, "plan-row");
@@ -687,3 +790,11 @@ async function start() {
   icons();
 }
 guard(start);
+for (const button of document.querySelectorAll("[data-mode]")) {
+  button.onclick = () => setMode(button.dataset.mode);
+  button.onkeydown = (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    setMode(event.key === "Home" ? "agent" : event.key === "End" ? "studio" : button.dataset.mode === "agent" ? "studio" : "agent", true);
+  };
+}

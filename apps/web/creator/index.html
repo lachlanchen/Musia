@@ -47,21 +47,24 @@
         <section id="create-view">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">YOUR NEXT SONG</p>
-              <h1>Make something yours.</h1>
+              <h1>Create</h1>
             </div>
             <span class="status" id="connection">Checking connection</span>
           </div>
+          <div class="creator-modes" role="tablist" aria-label="Creation mode">
+            <button id="agent-tab" role="tab" aria-selected="true" aria-controls="agent-panel" data-mode="agent"><i data-lucide="messages-square"></i>Agent</button>
+            <button id="studio-tab" role="tab" aria-selected="false" aria-controls="studio-panel" tabindex="-1" data-mode="studio"><i data-lucide="sliders-horizontal"></i>Studio</button>
+          </div>
           <div class="creator-grid">
-            <section class="conversation" aria-label="Song conversation">
+            <section id="agent-panel" class="conversation" role="tabpanel" aria-labelledby="agent-tab">
               <div id="messages" aria-live="polite">
                 <div class="agent-message">
                   <span class="speaker">Musia</span>
-                  <p>What should this song make someone feel?</p>
+                  <p>What would you like to make?</p>
                 </div>
               </div>
               <form id="chat-form" class="composer">
-                <label for="message">Your direction</label
+                <label for="message">Message Musia</label
                 ><textarea
                   id="message"
                   rows="3"
@@ -73,16 +76,17 @@
                   <span id="chat-status">Private draft</span
                   ><button
                     id="send"
-                    class="primary"
+                    class="primary icon"
                     type="submit"
-                    title="Refine song brief"
+                    title="Send message"
+                    aria-label="Send message"
                   >
-                    <i data-lucide="arrow-up"></i><span>Refine</span>
+                    <i data-lucide="arrow-up"></i>
                   </button>
                 </div>
               </form>
             </section>
-            <section class="brief-section">
+            <section id="studio-panel" class="brief-section" role="tabpanel" aria-labelledby="studio-tab" hidden>
               <div class="brief-heading">
                 <h2>Song brief</h2>
                 <button
@@ -168,28 +172,24 @@
                     >
                   </div>
                 </details>
+              </form>
+            </section>
+          </div>
                 <div class="generation">
+                  <strong id="draft-title"></strong>
                   <label
                     >Visibility<select id="visibility">
                       <option value="private">Only me</option>
                       <option value="public">Public · after review</option>
                     </select></label
-                  ><label class="check"
-                    ><input id="rights" type="checkbox" required /><span
-                      >I have permission to use these lyrics and
-                      materials.</span
-                    ></label
-                  ><button id="generate" class="primary" type="submit">
+                  ><button id="generate" class="primary" type="button">
                     <i data-lucide="sparkles"></i
-                    ><span>Create song · 1 render</span>
+                    ><span>Generate song · 1 render</span>
                   </button>
                   <p id="generation-status" class="muted">
                     Failed renders do not use your allowance.
                   </p>
                 </div>
-              </form>
-            </section>
-          </div>
           <section class="jobs-section">
             <div class="section-heading">
               <h2>Your renders</h2>
@@ -222,6 +222,13 @@
         </section>
       </main>
     </div>
+    <dialog id="render-dialog">
+      <h2>Generate this song?</h2>
+      <p id="render-summary"></p>
+      <p>This reserves one render from your allowance. Public songs enter moderation before sharing.</p>
+      <label class="check"><input id="rights" type="checkbox" /><span>I have permission to use these lyrics and materials, including any voice permissions. I accept the creator terms.</span></label>
+      <div class="dialog-actions"><button data-close="render-dialog">Keep editing</button><button id="confirm-render" class="primary" disabled>Confirm generate</button></div>
+    </dialog>
     <dialog id="plans-dialog">
       <div class="dialog-head">
         <h2>Room to create</h2>

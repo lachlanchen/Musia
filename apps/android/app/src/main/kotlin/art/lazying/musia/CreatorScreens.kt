@@ -54,17 +54,66 @@ private fun Context.activity(): Activity? = when (this) {
 }
 
 @Composable fun CreatorScreen(vm: CreatorViewModel, openAccount: () -> Unit, modifier: Modifier = Modifier) {
-    var prompt by rememberSaveable(vm.accountEpoch) { mutableStateOf("") }
+    var studio by rememberSaveable(vm.accountEpoch) { mutableStateOf(false) }
     var visibility by rememberSaveable(vm.accountEpoch) { mutableStateOf("private") }
     var confirm by remember(vm.accountEpoch) { mutableStateOf(false) }
     var rights by remember(vm.accountEpoch) { mutableStateOf(false) }
     LaunchedEffect(vm.accountEpoch) { vm.refreshJobs() }
     LazyColumn(modifier, contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        item { Text("Create a song", style = MaterialTheme.typography.headlineLarge) }
-        item { AccountSummary(vm, openAccount) }
+        item {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Text("Create", style = MaterialTheme.typography.titleLarge)
+                OutlinedButton(onClick = openAccount) { Icon(Icons.Default.AccountCircle, null); Spacer(Modifier.width(8.dp)); Text("Account") }
+            }
+            TabRow(selectedTabIndex = if (studio) 1 else 0) {
+                Tab(selected = !studio, onClick = { studio = false }, text = { Text("Agent") }, icon = { Icon(Icons.Default.ChatBubbleOutline, null) })
+                Tab(selected = studio, onClick = { studio = true }, text = { Text("Studio") }, icon = { Icon(Icons.Default.Tune, null) })
+            }
+        }
+        item { CreatorNotice(vm) }
+        if (!studio) {
+            if (vm.agentMessages.isEmpty()) item { Text("What would you like to make?", style = MaterialTheme.typography.titleLarge) }
+            items(vm.agentMessages) { entry ->
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(if (entry.role == "user") "You" else "Musia", style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.primary)
+                    Text(entry.content)
+                }
+            }
+            item {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedTextField(vm.agentInput, vm::editAgentInput, Modifier.fillMaxWidth(), label = { Text("Message Musia") }, minLines = 3)
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                        FilledIconButton(onClick = vm::askAgent,
+                            enabled = vm.canCreate && vm.capabilities?.agent == true && vm.agentInput.isNotBlank() && vm.brief.valid(true),
+                            modifier = Modifier.semantics { contentDescription = "Send message" }) { Icon(Icons.Default.ArrowUpward, null) }
+                    }
+                    if (vm.account == null) OutlinedButton(onClick = openAccount) { Text("Sign in to chat") }
+                    if (!vm.brief.valid(true)) Text("Check the duration, tempo and key in Studio before sending.")
+                }
+            }
+        }
+        if (studio) item {
+            val brief = vm.brief
+            val locked = vm.busy && !vm.agentBusy
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                BriefField("Title", brief.title, 120, locked) { vm.edit(vm.brief.copy(title = it)) }
+                BriefField("Idea", brief.idea, 4000, locked, 2) { vm.edit(vm.brief.copy(idea = it)) }
+                BriefField("Lyrics", brief.lyrics, 6000, locked, 5) { vm.edit(vm.brief.copy(lyrics = it)) }
+                BriefField("Arrangement and voice direction", brief.caption, 1600, locked, 3) { vm.edit(vm.brief.copy(caption = it)) }
+                Text("Vocal language", style = MaterialTheme.typography.titleMedium)
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    listOf("en" to "English", "zh" to "中文", "ja" to "日本語", "mixed" to "Mixed").forEach { (code, label) ->
+                        FilterChip(selected = brief.language == code, onClick = { vm.edit(vm.brief.copy(language = code)) }, label = { Text(label) }, enabled = !locked)
+                    }
+                }
+                NumberField("Duration in seconds (30–180)", brief.duration, brief.duration in 30..180, !locked) { vm.edit(vm.brief.copy(duration = it)) }
+                NumberField("Tempo in BPM (40–200)", brief.bpm, brief.bpm in 40..200, !locked) { vm.edit(vm.brief.copy(bpm = it)) }
+                BriefField("Key, for example C major or A minor", brief.key, 12, locked) { vm.edit(vm.brief.copy(key = it)) }
+            }
+        }
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                CreatorNotice(vm)
                 if (vm.capabilities == null) Text("Creator availability has not been confirmed. Refresh to connect.")
                 if (vm.capabilities?.agent == false) Text("The song assistant is not connected.")
                 if (vm.capabilities?.generation == false) Text("Song rendering is not available yet.")
@@ -73,34 +122,10 @@ private fun Context.activity(): Activity? = when (this) {
             }
         }
         item {
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                Text("Song assistant", style = MaterialTheme.typography.titleLarge)
-                Text("Describe your idea. The assistant edits this brief for you to review; it never starts a render.")
-                OutlinedTextField(prompt, { if (it.length <= 4000) prompt = it }, Modifier.fillMaxWidth(), label = { Text("Your idea or requested revision") }, minLines = 3)
-                Button(onClick = { vm.askAgent(prompt) }, enabled = vm.canCreate && vm.capabilities?.agent == true && prompt.isNotBlank() && vm.brief.valid(true)) {
-                    Icon(Icons.Default.AutoAwesome, null); Spacer(Modifier.width(8.dp)); Text("Refine song brief")
-                }
-                if (vm.agentReply.isNotEmpty()) Text(vm.agentReply)
-            }
-        }
-        item {
             val brief = vm.brief
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                Text("Your song brief", style = MaterialTheme.typography.titleLarge)
-                Text("Draft lyrics are creative instructions. Completed audio may differ.")
-                BriefField("Title", brief.title, 120, vm.busy) { vm.edit(brief.copy(title = it)) }
-                BriefField("Idea", brief.idea, 4000, vm.busy, 2) { vm.edit(brief.copy(idea = it)) }
-                BriefField("Lyrics", brief.lyrics, 6000, vm.busy, 5) { vm.edit(brief.copy(lyrics = it)) }
-                BriefField("Arrangement and voice direction", brief.caption, 1600, vm.busy, 3) { vm.edit(brief.copy(caption = it)) }
-                Text("Vocal language", style = MaterialTheme.typography.titleMedium)
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    listOf("en" to "English", "zh" to "中文", "ja" to "日本語", "mixed" to "Mixed").forEach { (code, label) ->
-                        FilterChip(selected = brief.language == code, onClick = { vm.edit(brief.copy(language = code)) }, label = { Text(label) }, enabled = !vm.busy)
-                    }
-                }
-                NumberField("Duration in seconds (30–180)", brief.duration, brief.duration in 30..180, !vm.busy) { vm.edit(brief.copy(duration = it)) }
-                NumberField("Tempo in BPM (40–200)", brief.bpm, brief.bpm in 40..200, !vm.busy) { vm.edit(brief.copy(bpm = it)) }
-                BriefField("Key, for example C major or A minor", brief.key, 12, vm.busy) { vm.edit(brief.copy(key = it)) }
+                if (!studio && brief.title.isNotBlank()) Text(brief.title, style = MaterialTheme.typography.titleMedium)
+                vm.account?.usage?.let { Text("${it.remaining} of ${it.limit} renders remaining", style = MaterialTheme.typography.bodySmall) }
                 Text("Visibility", style = MaterialTheme.typography.titleMedium)
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     FilterChip(visibility == "private", { visibility = "private" }, label = { Text("Private") }, leadingIcon = { Icon(Icons.Default.Lock, null) })
@@ -109,7 +134,7 @@ private fun Context.activity(): Activity? = when (this) {
                 if (!brief.valid()) Text("Complete the title, lyrics, arrangement, valid key, duration and tempo before rendering.")
                 Button(onClick = { rights = false; confirm = true }, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
                     enabled = vm.canCreate && vm.capabilities?.generation == true && (vm.account?.usage?.remaining ?: 0) > 0 && brief.valid() && vm.pending == null) {
-                    Icon(Icons.Default.MusicNote, null); Spacer(Modifier.width(8.dp)); Text("Review and render")
+                    Icon(Icons.Default.MusicNote, null); Spacer(Modifier.width(8.dp)); Text("Generate song")
                 }
             }
         }
@@ -147,7 +172,7 @@ private fun Context.activity(): Activity? = when (this) {
                 Text("I have the rights to these lyrics and instructions, including any voice permissions. I accept the creator terms.", Modifier.weight(1f))
             }
         }
-    }, confirmButton = { TextButton(onClick = { confirm = false; vm.render(visibility) }, enabled = rights && vm.canCreate) { Text("Confirm render") } },
+    }, confirmButton = { TextButton(onClick = { confirm = false; vm.render(visibility) }, enabled = rights && vm.canCreate && vm.brief.valid()) { Text("Confirm render") } },
         dismissButton = { TextButton(onClick = { confirm = false }) { Text("Keep editing") } })
 }
 

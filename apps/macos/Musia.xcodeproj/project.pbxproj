@@ -7,88 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		028ECA6D742013C920B86F66 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F807B89869DD7C0CEDA979 /* LocalStore.swift */; };
-		05D146910B3DE0A795F75B8F /* LyricRenderingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7602830ECB28E95EB405170C /* LyricRenderingTests.swift */; };
-		05F8074AA0A75BC80DCE7376 /* GuitarDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7AA6AAE6AEB1362E2A6981 /* GuitarDiagram.swift */; };
-		07B23A9D1D09E45B967F1877 /* PlaybackIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25359F41780E9439C0E9071C /* PlaybackIntegrationTests.swift */; };
-		07BAC94316D854FA45B358F8 /* LyricRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072588E27DF47B5EC161ED74 /* LyricRendering.swift */; };
-		1E8EBDC235D9FEB2DFC9F24D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB8F859A8391928B3069D95 /* Cocoa.framework */; };
-		22534F86DCAE1949544280F1 /* CreatorCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC72BAA53DB8D9403804076 /* CreatorCommunityView.swift */; };
-		268C1DCC6CDB7687C46F58EE /* PracticeGuidanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AADE24237A7449010E80B7C /* PracticeGuidanceTests.swift */; };
-		2AE431E8311CB2642154C1CC /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C086EE9E4542BB33F8032 /* LessonsView.swift */; };
-		35E6AC2827F20ABFDA368237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB37E5D30908908791558ADE /* Assets.xcassets */; };
-		4257684F76F99EA84836D1A0 /* MacReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B586732B0F18AA6F0819DE0 /* MacReview.swift */; };
-		435BC397B51C2BABA5499FAA /* CreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFE528AA54752D27AE4FC4 /* CreatorView.swift */; };
-		43B35C58CDBAA57503BE3DAE /* CreatorCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC6EFD587EE349550ADC77 /* CreatorCoreTests.swift */; };
-		4409B8AC7C0925B24C97A431 /* MusiaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA6197BA3CF43D65787B8C /* MusiaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		45E88F780E2DD87D58897149 /* FirstPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E810112138C038E47B9143AF /* FirstPulse.swift */; };
-		46C44121E49FEFE0920C952D /* CreatorAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE94DA20ADF63F91701E5CFE /* CreatorAuthentication.swift */; };
-		4D36D6BF479150F5B73F0BEC /* MacPlaybackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26090EDFBD1AA08BFF4890E /* MacPlaybackTests.swift */; };
-		4DF05F65BFC53AE9C71BEC2A /* PlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CA535FEB54183AFBD4FA9 /* PlaybackController.swift */; };
-		54F5661610AD74038FCFCCE9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2021CFB3887438C739C410C /* APIClient.swift */; };
-		62ABD401DF74F36E8ED4332F /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C881BE2100BFD5E22B9707B /* PracticeView.swift */; };
-		6678A8974EBB540BCF6A31D2 /* BeginnerPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E135BDB197D8727FC0F1DC /* BeginnerPractice.swift */; };
-		7A42E03D4AA58C9DCC47752C /* MusiaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA6197BA3CF43D65787B8C /* MusiaCore.framework */; };
-		7CAEF211C67C41449D2EF03B /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42633BE4EEEC7C636F38FD /* History.swift */; };
-		801DE102ECF4A8E4E99211FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB8F859A8391928B3069D95 /* Cocoa.framework */; };
-		8585B6BDAEA3A3CD0D7AC3D1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52310B74D66268F4009EA0 /* Timeline.swift */; };
-		868FED705B02DD8C421214B5 /* MusiaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA6197BA3CF43D65787B8C /* MusiaCore.framework */; };
-		88F30B48565509653D79A0D4 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884493A6C414738FB25EEB08 /* HistoryView.swift */; };
-		8BAD775FDBD5069C6CA4E732 /* BeginnerPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064F9122F872E10C6F647445 /* BeginnerPracticeView.swift */; };
-		8C6A0DA960BCA97FCCD20C1B /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A577D9F4CC2D90C783F318 /* APIClientTests.swift */; };
-		91880C563075DCA361C04D43 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCE90DFB17542A33C464BF /* Models.swift */; };
-		9341A0A656827A934F2E1BC9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 73639B5716CB6C49029F5FFD /* PrivacyInfo.xcprivacy */; };
-		9944687C20458B48EEB42EDA /* TimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862A48EDDC75102B79A311F /* TimelineTests.swift */; };
-		9B29D1801A6AA3DD908AC962 /* CreatorBillingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920167BCC3F44D8A9784EA2C /* CreatorBillingStore.swift */; };
-		AA5FBA1EC8517190589B6896 /* MusiaMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA412DB26AA7FDB994C654 /* MusiaMacApp.swift */; };
-		AC55E5652F482BCE19CACD46 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB143DBC5059B406401C8145 /* LibraryView.swift */; };
-		B4303F6549C70DC124F8A10B /* CatalogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD9A814CB2D422F234B05E /* CatalogStore.swift */; };
-		B459D3E28A64EFF361A34E7D /* BeginnerPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481FA92F2973130E7ABB110 /* BeginnerPracticeTests.swift */; };
-		B871EC5B623D74FCADD64D90 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12A8D7928BB3D640F2EE7A /* Components.swift */; };
-		BDCD12886215C4E4664B9469 /* PracticeGuidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEF89D0B674304E4731030 /* PracticeGuidance.swift */; };
-		C159BAB13C126BF11806E065 /* GuitarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4D206AF0EE137F4EC2EA1 /* GuitarShape.swift */; };
-		C2D2137BE9ACA12BC68AD35F /* LiveContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DE834126B14A037931047 /* LiveContractTests.swift */; };
-		C5236750AD4763AD63AAB704 /* CreatorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2817B177E5A84A6CA567D98B /* CreatorAPI.swift */; };
-		C6567A8859F795F67671CAAF /* CreatorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC38C6C089A3E9B951CDF4 /* CreatorModels.swift */; };
-		C6F4B0EAF9B17345E6B4F795 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB8F859A8391928B3069D95 /* Cocoa.framework */; };
-		E114066FFEA40895E0262818 /* CreatorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318B24011477E793688BBC2 /* CreatorStore.swift */; };
-		E438A9010868EC6D53334068 /* CreatorAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988017DFF268BD304FB047 /* CreatorAccountView.swift */; };
-		EA0F7F882F2E9E06834EE158 /* ContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA8D5C54565A6B93C77C0A7 /* ContractTests.swift */; };
-		FB487F07640D56145B41FC13 /* CreatorAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ACE6D6E824F986892A8334 /* CreatorAPITests.swift */; };
+		05153300080850EDDE957551 /* MusiaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB151926766559618A20E8A /* MusiaCore.framework */; };
+		0B19B6305969E39A1D80065C /* BeginnerPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84176BE8A185A5928B023220 /* BeginnerPractice.swift */; };
+		0FE7CC857BA507FBFE8C36F6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6818BD05D7ABCB49A07F3C74 /* Cocoa.framework */; };
+		10ACFC5982D381A4E78EB70D /* CreatorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1B95B6324CE7C2C2E61F5 /* CreatorAPI.swift */; };
+		13009D2634D2F0BBFF71756A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C620DBD56A3A52D00480CFF /* APIClient.swift */; };
+		15AEF08E953102C928620387 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6818BD05D7ABCB49A07F3C74 /* Cocoa.framework */; };
+		1C726127778A0C14EAFE3108 /* FirstPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D00B8AF0E95FB18A913E9 /* FirstPulse.swift */; };
+		1CD222CC8865767F1022A49F /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F34806F93252166237026CC /* HistoryView.swift */; };
+		1D0A704186D812120C175472 /* CreatorAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A4ED6412B12D850BF533AA /* CreatorAccountView.swift */; };
+		1D0E77796AB3E4652C0E3099 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27238C8E9BA1202710E324 /* Timeline.swift */; };
+		1ECBF5EDD4C326BE4F8E66EC /* MacPlaybackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F9BE2C397D5746E5D16EC9 /* MacPlaybackTests.swift */; };
+		215B00F9F74437D1C057D037 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8204341F5FD7EEB3889D5CE /* APIClientTests.swift */; };
+		264320A79FF3C3C7912A0169 /* PracticeGuidanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D83059DEE702ADA1F21C52 /* PracticeGuidanceTests.swift */; };
+		33AF721CCD90A9A0E21BD337 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0320F8966894F4096EC0E /* History.swift */; };
+		34493349E0E7F9BFC94DC63A /* ContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8B528CD4CD7095DAA5D263 /* ContractTests.swift */; };
+		39BD5FB0C764AA69734420FC /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9127BB56A75C972F5DE0E /* LessonsView.swift */; };
+		439A0F23A2DF8D1ED18D37B9 /* LiveContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB173E93F6E1AC53F1F179 /* LiveContractTests.swift */; };
+		44C0EAADB92831C1F495D292 /* LyricRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E83AF89CB7277EDF0C05FE /* LyricRendering.swift */; };
+		4C31B78645D681F132533FE0 /* GuitarDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196248AC7A6733545B884330 /* GuitarDiagram.swift */; };
+		5535A9FD6AEC9F417DD25E71 /* WatchCompanionBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD802A3A8B7C9B4B74EDC4D /* WatchCompanionBridge.swift */; };
+		57A1AA8174007669B098D99C /* CreatorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0B96F142A7E53C682ABBC /* CreatorStore.swift */; };
+		59F6707B3EE6409A2F9F1167 /* CreatorAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F204615208E24DBEA43ED /* CreatorAPITests.swift */; };
+		5DC8A1C36609DD994AABDBC5 /* LyricRenderingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211018D36814A75BBD68DE55 /* LyricRenderingTests.swift */; };
+		5E601FFA23897FA80055A072 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A708F53E3E9A072B52BD07 /* LibraryView.swift */; };
+		63BEA7954AC37DBBD18D305E /* MusiaMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524974E5E767CDA31340B647 /* MusiaMacApp.swift */; };
+		653135B851DFC6331EEA5C11 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25C2B5F9B4F00B6F40A90DD /* Models.swift */; };
+		7642EF834EB5F7608245BD8D /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5B2E1A53766B9C68A509D /* LocalStore.swift */; };
+		770BD339DB4EE6A912D9815A /* CatalogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C84AABBB5A112963F6B05FC /* CatalogStore.swift */; };
+		77DA7362E6C15606B4D4DCA1 /* MacReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1A376917DD83D889669AE /* MacReview.swift */; };
+		7908A84B90BE221141C16946 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71642E1AC0F6C43B512C137E /* Components.swift */; };
+		88287562E807666D62BC42C0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 67487650E079CC9924BA0866 /* PrivacyInfo.xcprivacy */; };
+		8C0F467B735F83FE57DAC999 /* GuitarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766774039DA8E40C6494F58 /* GuitarShape.swift */; };
+		8E083EA6D3D3F081E24B2654 /* CreatorBillingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB062311DED61AAEF205227D /* CreatorBillingStore.swift */; };
+		987066D3C0F9E79C1DDF2960 /* MusiaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB151926766559618A20E8A /* MusiaCore.framework */; };
+		A2D19BACFFA44DD64ECAAA2B /* CreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F239986CF8F20F1FCFC665 /* CreatorView.swift */; };
+		A8BE996593DBC00AD24E88B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57EBCE3735AE64FB117C0AB5 /* Assets.xcassets */; };
+		BBC0411FEB7912B188CDC9C7 /* PlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546CCE5034F8FBEC6A21CD52 /* PlaybackController.swift */; };
+		C4BA2C2DCF6683B97B010B40 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6818BD05D7ABCB49A07F3C74 /* Cocoa.framework */; };
+		CEC5D49B8DB8BE43B10514ED /* PlaybackIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C4F02F62DEA7FB7E721FCE /* PlaybackIntegrationTests.swift */; };
+		D6D168BD86B0470398CBD637 /* CreatorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AED7BAA519BA16979FE8318 /* CreatorModels.swift */; };
+		D912EC6733594F05335F0E90 /* CreatorAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026F0D2690F6DD73C4E47A56 /* CreatorAuthentication.swift */; };
+		DA955160898E840A3FFDAD45 /* CreatorConversationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02483E3A1F649B5449A8D97E /* CreatorConversationTests.swift */; };
+		E48927CC573E7F29C33D1E4F /* CreatorCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF3377B0DEC7278F8D309D5 /* CreatorCoreTests.swift */; };
+		E4BB2A6371009E89277BBA36 /* TimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3584EA0E063BFE116F9C8A /* TimelineTests.swift */; };
+		E91EAB78C12F4142BB1B6B4B /* PracticeGuidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CC4DF49A29C9DEBE3ECFC /* PracticeGuidance.swift */; };
+		E997202AF799607C23628449 /* CreatorCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77D1F5B75F84B626930861 /* CreatorCommunityView.swift */; };
+		F41331815F64A72311250BE0 /* BeginnerPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA75EF5C35168E1DF339277 /* BeginnerPracticeTests.swift */; };
+		F77056D2952D1264798C5C88 /* MusiaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEB151926766559618A20E8A /* MusiaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCA03FAB47EED1D1ADB7BE0A /* BeginnerPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F0D8DA73ADB7D8D70FEBF /* BeginnerPracticeView.swift */; };
+		FFA548A350423CCA8A6FC831 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520C508E7C4BD1132154C1D /* PracticeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1248471E38876AE5DF3C75D0 /* PBXContainerItemProxy */ = {
+		2555AEE04727CCCC5951A0AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3463D3A5220E9427C5AB7E68 /* Project object */;
+			containerPortal = 7FA9C4A6DD117AE7B258DFED /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 40376A9ED30C807D81869246;
+			remoteGlobalIDString = 2B2F5066A7D49708B192254C;
 			remoteInfo = Musia;
 		};
-		7FA37862ADAE1A7E36156903 /* PBXContainerItemProxy */ = {
+		355787C185D15377F1FBF91E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3463D3A5220E9427C5AB7E68 /* Project object */;
+			containerPortal = 7FA9C4A6DD117AE7B258DFED /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9902676B2E99036CA05483A3;
+			remoteGlobalIDString = 622125791CF21EF4C40F0BC1;
 			remoteInfo = MusiaCore;
 		};
-		8C45575E8538883BE96D7831 /* PBXContainerItemProxy */ = {
+		3690643AC52EA39FBBCF39AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3463D3A5220E9427C5AB7E68 /* Project object */;
+			containerPortal = 7FA9C4A6DD117AE7B258DFED /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9902676B2E99036CA05483A3;
+			remoteGlobalIDString = 622125791CF21EF4C40F0BC1;
 			remoteInfo = MusiaCore;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1729A09263F093D141F7F4C4 /* Embed Frameworks */ = {
+		E5CC7D1773EE398C23EA16BF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4409B8AC7C0925B24C97A431 /* MusiaCore.framework in Embed Frameworks */,
+				F77056D2952D1264798C5C88 /* MusiaCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,240 +98,244 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0481FA92F2973130E7ABB110 /* BeginnerPracticeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BeginnerPracticeTests.swift; sourceTree = "<group>"; };
-		04A577D9F4CC2D90C783F318 /* APIClientTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
-		064F9122F872E10C6F647445 /* BeginnerPracticeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BeginnerPracticeView.swift; sourceTree = "<group>"; };
-		072588E27DF47B5EC161ED74 /* LyricRendering.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LyricRendering.swift; sourceTree = "<group>"; };
-		08EA6197BA3CF43D65787B8C /* MusiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C42633BE4EEEC7C636F38FD /* History.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		0DB8F859A8391928B3069D95 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		1862A48EDDC75102B79A311F /* TimelineTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimelineTests.swift; sourceTree = "<group>"; };
-		1AADE24237A7449010E80B7C /* PracticeGuidanceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PracticeGuidanceTests.swift; sourceTree = "<group>"; };
-		25359F41780E9439C0E9071C /* PlaybackIntegrationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaybackIntegrationTests.swift; sourceTree = "<group>"; };
-		2817B177E5A84A6CA567D98B /* CreatorAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAPI.swift; sourceTree = "<group>"; };
-		2C6DE834126B14A037931047 /* LiveContractTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LiveContractTests.swift; sourceTree = "<group>"; };
-		32ACE6D6E824F986892A8334 /* CreatorAPITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAPITests.swift; sourceTree = "<group>"; };
-		33F807B89869DD7C0CEDA979 /* LocalStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
-		3D12A8D7928BB3D640F2EE7A /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		3DC72BAA53DB8D9403804076 /* CreatorCommunityView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorCommunityView.swift; sourceTree = "<group>"; };
-		4318B24011477E793688BBC2 /* CreatorStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorStore.swift; sourceTree = "<group>"; };
-		45E135BDB197D8727FC0F1DC /* BeginnerPractice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BeginnerPractice.swift; sourceTree = "<group>"; };
-		59988017DFF268BD304FB047 /* CreatorAccountView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAccountView.swift; sourceTree = "<group>"; };
-		5AA8D5C54565A6B93C77C0A7 /* ContractTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContractTests.swift; sourceTree = "<group>"; };
-		5B586732B0F18AA6F0819DE0 /* MacReview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MacReview.swift; sourceTree = "<group>"; };
-		64C4DAFEED43F6B4E683F3A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6ADC38C6C089A3E9B951CDF4 /* CreatorModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorModels.swift; sourceTree = "<group>"; };
-		6D7AA6AAE6AEB1362E2A6981 /* GuitarDiagram.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuitarDiagram.swift; sourceTree = "<group>"; };
-		6DBC6EFD587EE349550ADC77 /* CreatorCoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorCoreTests.swift; sourceTree = "<group>"; };
-		72BCE90DFB17542A33C464BF /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		73639B5716CB6C49029F5FFD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		7602830ECB28E95EB405170C /* LyricRenderingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LyricRenderingTests.swift; sourceTree = "<group>"; };
-		7C881BE2100BFD5E22B9707B /* PracticeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
-		884493A6C414738FB25EEB08 /* HistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		90AFE528AA54752D27AE4FC4 /* CreatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorView.swift; sourceTree = "<group>"; };
-		920167BCC3F44D8A9784EA2C /* CreatorBillingStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorBillingStore.swift; sourceTree = "<group>"; };
-		AB143DBC5059B406401C8145 /* LibraryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
-		ADD74CEF572FA02C860AA098 /* MusiaMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiaMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2021CFB3887438C739C410C /* APIClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		B47F14C48B075B155D540A7A /* Musia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musia.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3DEF89D0B674304E4731030 /* PracticeGuidance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PracticeGuidance.swift; sourceTree = "<group>"; };
-		C4456054E89B0935E1470B4A /* Musia.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = Musia.entitlements; sourceTree = "<group>"; };
-		CD52310B74D66268F4009EA0 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		CE94DA20ADF63F91701E5CFE /* CreatorAuthentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAuthentication.swift; sourceTree = "<group>"; };
-		D26090EDFBD1AA08BFF4890E /* MacPlaybackTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MacPlaybackTests.swift; sourceTree = "<group>"; };
-		D3C4D206AF0EE137F4EC2EA1 /* GuitarShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuitarShape.swift; sourceTree = "<group>"; };
-		DC4C086EE9E4542BB33F8032 /* LessonsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
-		DF1CA535FEB54183AFBD4FA9 /* PlaybackController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaybackController.swift; sourceTree = "<group>"; };
-		E810112138C038E47B9143AF /* FirstPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FirstPulse.swift; sourceTree = "<group>"; };
-		EB37E5D30908908791558ADE /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EDBD9A814CB2D422F234B05E /* CatalogStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogStore.swift; sourceTree = "<group>"; };
-		EDFA412DB26AA7FDB994C654 /* MusiaMacApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MusiaMacApp.swift; sourceTree = "<group>"; };
+		02483E3A1F649B5449A8D97E /* CreatorConversationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorConversationTests.swift; sourceTree = "<group>"; };
+		026F0D2690F6DD73C4E47A56 /* CreatorAuthentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAuthentication.swift; sourceTree = "<group>"; };
+		0F3584EA0E063BFE116F9C8A /* TimelineTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimelineTests.swift; sourceTree = "<group>"; };
+		12F9127BB56A75C972F5DE0E /* LessonsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		1520C508E7C4BD1132154C1D /* PracticeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		196248AC7A6733545B884330 /* GuitarDiagram.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuitarDiagram.swift; sourceTree = "<group>"; };
+		20B5B2E1A53766B9C68A509D /* LocalStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		211018D36814A75BBD68DE55 /* LyricRenderingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LyricRenderingTests.swift; sourceTree = "<group>"; };
+		220F204615208E24DBEA43ED /* CreatorAPITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAPITests.swift; sourceTree = "<group>"; };
+		2C8CC4DF49A29C9DEBE3ECFC /* PracticeGuidance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PracticeGuidance.swift; sourceTree = "<group>"; };
+		3ABB173E93F6E1AC53F1F179 /* LiveContractTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LiveContractTests.swift; sourceTree = "<group>"; };
+		41C4F02F62DEA7FB7E721FCE /* PlaybackIntegrationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaybackIntegrationTests.swift; sourceTree = "<group>"; };
+		43D1A376917DD83D889669AE /* MacReview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MacReview.swift; sourceTree = "<group>"; };
+		474A617533784E18470CA4A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524974E5E767CDA31340B647 /* MusiaMacApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MusiaMacApp.swift; sourceTree = "<group>"; };
+		546CCE5034F8FBEC6A21CD52 /* PlaybackController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaybackController.swift; sourceTree = "<group>"; };
+		56F9BE2C397D5746E5D16EC9 /* MacPlaybackTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MacPlaybackTests.swift; sourceTree = "<group>"; };
+		5766774039DA8E40C6494F58 /* GuitarShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuitarShape.swift; sourceTree = "<group>"; };
+		57A708F53E3E9A072B52BD07 /* LibraryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		57EBCE3735AE64FB117C0AB5 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		588F7AB84AEC2950DD5FDC91 /* Musia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AED7BAA519BA16979FE8318 /* CreatorModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorModels.swift; sourceTree = "<group>"; };
+		5D77D1F5B75F84B626930861 /* CreatorCommunityView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorCommunityView.swift; sourceTree = "<group>"; };
+		66E83AF89CB7277EDF0C05FE /* LyricRendering.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LyricRendering.swift; sourceTree = "<group>"; };
+		67487650E079CC9924BA0866 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6818BD05D7ABCB49A07F3C74 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		6C84AABBB5A112963F6B05FC /* CatalogStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogStore.swift; sourceTree = "<group>"; };
+		71642E1AC0F6C43B512C137E /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		73328EC43FEF7C418BAE8E4A /* MusiaMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiaMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		764D00B8AF0E95FB18A913E9 /* FirstPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FirstPulse.swift; sourceTree = "<group>"; };
+		7C620DBD56A3A52D00480CFF /* APIClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7DA75EF5C35168E1DF339277 /* BeginnerPracticeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BeginnerPracticeTests.swift; sourceTree = "<group>"; };
+		84176BE8A185A5928B023220 /* BeginnerPractice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BeginnerPractice.swift; sourceTree = "<group>"; };
+		8A27238C8E9BA1202710E324 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		8F34806F93252166237026CC /* HistoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		968F0D8DA73ADB7D8D70FEBF /* BeginnerPracticeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BeginnerPracticeView.swift; sourceTree = "<group>"; };
+		98B0B96F142A7E53C682ABBC /* CreatorStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorStore.swift; sourceTree = "<group>"; };
+		9BD802A3A8B7C9B4B74EDC4D /* WatchCompanionBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WatchCompanionBridge.swift; sourceTree = "<group>"; };
+		A25C2B5F9B4F00B6F40A90DD /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A8204341F5FD7EEB3889D5CE /* APIClientTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		AEB151926766559618A20E8A /* MusiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8B528CD4CD7095DAA5D263 /* ContractTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContractTests.swift; sourceTree = "<group>"; };
+		CB062311DED61AAEF205227D /* CreatorBillingStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorBillingStore.swift; sourceTree = "<group>"; };
+		CFA452EB65D245CB35384093 /* Musia.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = Musia.entitlements; sourceTree = "<group>"; };
+		D3F239986CF8F20F1FCFC665 /* CreatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorView.swift; sourceTree = "<group>"; };
+		D4D0320F8966894F4096EC0E /* History.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		EEF3377B0DEC7278F8D309D5 /* CreatorCoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorCoreTests.swift; sourceTree = "<group>"; };
+		F8A4ED6412B12D850BF533AA /* CreatorAccountView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAccountView.swift; sourceTree = "<group>"; };
+		F9A1B95B6324CE7C2C2E61F5 /* CreatorAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreatorAPI.swift; sourceTree = "<group>"; };
+		F9D83059DEE702ADA1F21C52 /* PracticeGuidanceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PracticeGuidanceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37E3C71A4C84B523A3951E57 /* Frameworks */ = {
+		1177BE9CE1D41707F889C476 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E8EBDC235D9FEB2DFC9F24D /* Cocoa.framework in Frameworks */,
-				7A42E03D4AA58C9DCC47752C /* MusiaCore.framework in Frameworks */,
+				0FE7CC857BA507FBFE8C36F6 /* Cocoa.framework in Frameworks */,
+				987066D3C0F9E79C1DDF2960 /* MusiaCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C3C4CBD39C5EEB2D71B9D38 /* Frameworks */ = {
+		B4CFA75DB55195F0382138BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6F4B0EAF9B17345E6B4F795 /* Cocoa.framework in Frameworks */,
+				15AEF08E953102C928620387 /* Cocoa.framework in Frameworks */,
+				05153300080850EDDE957551 /* MusiaCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDF80FBBE3428F20F02984E6 /* Frameworks */ = {
+		B4EF67BD29AEEB68EED7C812 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801DE102ECF4A8E4E99211FF /* Cocoa.framework in Frameworks */,
-				868FED705B02DD8C421214B5 /* MusiaCore.framework in Frameworks */,
+				C4BA2C2DCF6683B97B010B40 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		175F79B957D8A6A6973760E5 /* Musia */ = {
+		1C725D305C4D3FEEB46D363D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5B586732B0F18AA6F0819DE0 /* MacReview.swift */,
-				EDFA412DB26AA7FDB994C654 /* MusiaMacApp.swift */,
-			);
-			name = Musia;
-			path = Musia;
-			sourceTree = "<group>";
-		};
-		19E2017219E8CC7D82B33B4A /* ../ios/Musia/Services */ = {
-			isa = PBXGroup;
-			children = (
-				EDBD9A814CB2D422F234B05E /* CatalogStore.swift */,
-				CE94DA20ADF63F91701E5CFE /* CreatorAuthentication.swift */,
-				920167BCC3F44D8A9784EA2C /* CreatorBillingStore.swift */,
-				4318B24011477E793688BBC2 /* CreatorStore.swift */,
-				33F807B89869DD7C0CEDA979 /* LocalStore.swift */,
-				DF1CA535FEB54183AFBD4FA9 /* PlaybackController.swift */,
-			);
-			name = ../ios/Musia/Services;
-			path = ../ios/Musia/Services;
-			sourceTree = "<group>";
-		};
-		2B4253781EA77B51D6F67732 /* Shared Resources */ = {
-			isa = PBXGroup;
-			children = (
-				73639B5716CB6C49029F5FFD /* PrivacyInfo.xcprivacy */,
-			);
-			name = "Shared Resources";
-			path = ../ios/Musia/Resources;
-			sourceTree = "<group>";
-		};
-		3CBF0F44C8D583EAABB8804C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				64C4DAFEED43F6B4E683F3A0 /* Info.plist */,
-				C4456054E89B0935E1470B4A /* Musia.entitlements */,
-				EB37E5D30908908791558ADE /* Assets.xcassets */,
+				474A617533784E18470CA4A8 /* Info.plist */,
+				CFA452EB65D245CB35384093 /* Musia.entitlements */,
+				57EBCE3735AE64FB117C0AB5 /* Assets.xcassets */,
 			);
 			name = Resources;
 			path = Musia/Resources;
 			sourceTree = "<group>";
 		};
-		49534A5192599799FB6C7B32 /* ../ios/Musia/Core */ = {
+		27C13D9097543B34CDA995C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2021CFB3887438C739C410C /* APIClient.swift */,
-				45E135BDB197D8727FC0F1DC /* BeginnerPractice.swift */,
-				2817B177E5A84A6CA567D98B /* CreatorAPI.swift */,
-				6ADC38C6C089A3E9B951CDF4 /* CreatorModels.swift */,
-				E810112138C038E47B9143AF /* FirstPulse.swift */,
-				D3C4D206AF0EE137F4EC2EA1 /* GuitarShape.swift */,
-				0C42633BE4EEEC7C636F38FD /* History.swift */,
-				072588E27DF47B5EC161ED74 /* LyricRendering.swift */,
-				72BCE90DFB17542A33C464BF /* Models.swift */,
-				C3DEF89D0B674304E4731030 /* PracticeGuidance.swift */,
-				CD52310B74D66268F4009EA0 /* Timeline.swift */,
+				588F7AB84AEC2950DD5FDC91 /* Musia.app */,
+				AEB151926766559618A20E8A /* MusiaCore.framework */,
+				73328EC43FEF7C418BAE8E4A /* MusiaMacTests.xctest */,
 			);
-			name = ../ios/Musia/Core;
-			path = ../ios/Musia/Core;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		6C09D2D9A52F0F987B9E74A1 /* Tests */ = {
+		29586D8E3CEA393EA73FF838 /* Shared Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D26090EDFBD1AA08BFF4890E /* MacPlaybackTests.swift */,
+				67487650E079CC9924BA0866 /* PrivacyInfo.xcprivacy */,
+			);
+			name = "Shared Resources";
+			path = ../ios/Musia/Resources;
+			sourceTree = "<group>";
+		};
+		2FA5006DFB1ECFFA87407204 /* ../ios/Musia/Services */ = {
+			isa = PBXGroup;
+			children = (
+				6C84AABBB5A112963F6B05FC /* CatalogStore.swift */,
+				026F0D2690F6DD73C4E47A56 /* CreatorAuthentication.swift */,
+				CB062311DED61AAEF205227D /* CreatorBillingStore.swift */,
+				98B0B96F142A7E53C682ABBC /* CreatorStore.swift */,
+				20B5B2E1A53766B9C68A509D /* LocalStore.swift */,
+				546CCE5034F8FBEC6A21CD52 /* PlaybackController.swift */,
+				9BD802A3A8B7C9B4B74EDC4D /* WatchCompanionBridge.swift */,
+			);
+			name = ../ios/Musia/Services;
+			path = ../ios/Musia/Services;
+			sourceTree = "<group>";
+		};
+		322A71427C99CD53BE1BDF0D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				56F9BE2C397D5746E5D16EC9 /* MacPlaybackTests.swift */,
 			);
 			name = Tests;
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		A1DEC4F6233085C5DD05E717 /* Frameworks */ = {
+		69F7998E04F1DDA537544B4B /* ../ios/Tests/MusiaCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				AACC870375001DDF527E0204 /* OS X */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AACC870375001DDF527E0204 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				0DB8F859A8391928B3069D95 /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		AE3C950D93115970978DBC76 /* ../ios/Tests/MusiaCoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				04A577D9F4CC2D90C783F318 /* APIClientTests.swift */,
-				0481FA92F2973130E7ABB110 /* BeginnerPracticeTests.swift */,
-				5AA8D5C54565A6B93C77C0A7 /* ContractTests.swift */,
-				32ACE6D6E824F986892A8334 /* CreatorAPITests.swift */,
-				6DBC6EFD587EE349550ADC77 /* CreatorCoreTests.swift */,
-				2C6DE834126B14A037931047 /* LiveContractTests.swift */,
-				7602830ECB28E95EB405170C /* LyricRenderingTests.swift */,
-				25359F41780E9439C0E9071C /* PlaybackIntegrationTests.swift */,
-				1AADE24237A7449010E80B7C /* PracticeGuidanceTests.swift */,
-				1862A48EDDC75102B79A311F /* TimelineTests.swift */,
+				A8204341F5FD7EEB3889D5CE /* APIClientTests.swift */,
+				7DA75EF5C35168E1DF339277 /* BeginnerPracticeTests.swift */,
+				BA8B528CD4CD7095DAA5D263 /* ContractTests.swift */,
+				220F204615208E24DBEA43ED /* CreatorAPITests.swift */,
+				02483E3A1F649B5449A8D97E /* CreatorConversationTests.swift */,
+				EEF3377B0DEC7278F8D309D5 /* CreatorCoreTests.swift */,
+				3ABB173E93F6E1AC53F1F179 /* LiveContractTests.swift */,
+				211018D36814A75BBD68DE55 /* LyricRenderingTests.swift */,
+				41C4F02F62DEA7FB7E721FCE /* PlaybackIntegrationTests.swift */,
+				F9D83059DEE702ADA1F21C52 /* PracticeGuidanceTests.swift */,
+				0F3584EA0E063BFE116F9C8A /* TimelineTests.swift */,
 			);
 			name = ../ios/Tests/MusiaCoreTests;
 			path = ../ios/Tests/MusiaCoreTests;
 			sourceTree = "<group>";
 		};
-		B570BFC3AA3321A38450F640 /* Products */ = {
+		6C1755EBB8403BD4C5DDDA2C /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				B47F14C48B075B155D540A7A /* Musia.app */,
-				08EA6197BA3CF43D65787B8C /* MusiaCore.framework */,
-				ADD74CEF572FA02C860AA098 /* MusiaMacTests.xctest */,
+				6818BD05D7ABCB49A07F3C74 /* Cocoa.framework */,
 			);
-			name = Products;
+			name = "OS X";
 			sourceTree = "<group>";
 		};
-		BF764E99A3A29F56E0BE8EF3 /* ../ios/Musia/Views */ = {
+		71D10F089D50303D50E2270F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				064F9122F872E10C6F647445 /* BeginnerPracticeView.swift */,
-				3D12A8D7928BB3D640F2EE7A /* Components.swift */,
-				59988017DFF268BD304FB047 /* CreatorAccountView.swift */,
-				3DC72BAA53DB8D9403804076 /* CreatorCommunityView.swift */,
-				90AFE528AA54752D27AE4FC4 /* CreatorView.swift */,
-				6D7AA6AAE6AEB1362E2A6981 /* GuitarDiagram.swift */,
-				884493A6C414738FB25EEB08 /* HistoryView.swift */,
-				DC4C086EE9E4542BB33F8032 /* LessonsView.swift */,
-				AB143DBC5059B406401C8145 /* LibraryView.swift */,
-				7C881BE2100BFD5E22B9707B /* PracticeView.swift */,
+				6C1755EBB8403BD4C5DDDA2C /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA5393A5310A40150EEDECF0 /* Musia */ = {
+			isa = PBXGroup;
+			children = (
+				43D1A376917DD83D889669AE /* MacReview.swift */,
+				524974E5E767CDA31340B647 /* MusiaMacApp.swift */,
+			);
+			name = Musia;
+			path = Musia;
+			sourceTree = "<group>";
+		};
+		BEC729C8AEDFD2D68F09C916 = {
+			isa = PBXGroup;
+			children = (
+				27C13D9097543B34CDA995C9 /* Products */,
+				71D10F089D50303D50E2270F /* Frameworks */,
+				C65DC4784D276F9E05E2435E /* ../ios/Musia/Core */,
+				2FA5006DFB1ECFFA87407204 /* ../ios/Musia/Services */,
+				F46009F1408AF9690B48F9C9 /* ../ios/Musia/Views */,
+				BA5393A5310A40150EEDECF0 /* Musia */,
+				69F7998E04F1DDA537544B4B /* ../ios/Tests/MusiaCoreTests */,
+				322A71427C99CD53BE1BDF0D /* Tests */,
+				1C725D305C4D3FEEB46D363D /* Resources */,
+				29586D8E3CEA393EA73FF838 /* Shared Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		C65DC4784D276F9E05E2435E /* ../ios/Musia/Core */ = {
+			isa = PBXGroup;
+			children = (
+				7C620DBD56A3A52D00480CFF /* APIClient.swift */,
+				84176BE8A185A5928B023220 /* BeginnerPractice.swift */,
+				F9A1B95B6324CE7C2C2E61F5 /* CreatorAPI.swift */,
+				5AED7BAA519BA16979FE8318 /* CreatorModels.swift */,
+				764D00B8AF0E95FB18A913E9 /* FirstPulse.swift */,
+				5766774039DA8E40C6494F58 /* GuitarShape.swift */,
+				D4D0320F8966894F4096EC0E /* History.swift */,
+				66E83AF89CB7277EDF0C05FE /* LyricRendering.swift */,
+				A25C2B5F9B4F00B6F40A90DD /* Models.swift */,
+				2C8CC4DF49A29C9DEBE3ECFC /* PracticeGuidance.swift */,
+				8A27238C8E9BA1202710E324 /* Timeline.swift */,
+			);
+			name = ../ios/Musia/Core;
+			path = ../ios/Musia/Core;
+			sourceTree = "<group>";
+		};
+		F46009F1408AF9690B48F9C9 /* ../ios/Musia/Views */ = {
+			isa = PBXGroup;
+			children = (
+				968F0D8DA73ADB7D8D70FEBF /* BeginnerPracticeView.swift */,
+				71642E1AC0F6C43B512C137E /* Components.swift */,
+				F8A4ED6412B12D850BF533AA /* CreatorAccountView.swift */,
+				5D77D1F5B75F84B626930861 /* CreatorCommunityView.swift */,
+				D3F239986CF8F20F1FCFC665 /* CreatorView.swift */,
+				196248AC7A6733545B884330 /* GuitarDiagram.swift */,
+				8F34806F93252166237026CC /* HistoryView.swift */,
+				12F9127BB56A75C972F5DE0E /* LessonsView.swift */,
+				57A708F53E3E9A072B52BD07 /* LibraryView.swift */,
+				1520C508E7C4BD1132154C1D /* PracticeView.swift */,
 			);
 			name = ../ios/Musia/Views;
 			path = ../ios/Musia/Views;
 			sourceTree = "<group>";
 		};
-		F7AE8601962159C91C10B6B3 = {
-			isa = PBXGroup;
-			children = (
-				B570BFC3AA3321A38450F640 /* Products */,
-				A1DEC4F6233085C5DD05E717 /* Frameworks */,
-				49534A5192599799FB6C7B32 /* ../ios/Musia/Core */,
-				19E2017219E8CC7D82B33B4A /* ../ios/Musia/Services */,
-				BF764E99A3A29F56E0BE8EF3 /* ../ios/Musia/Views */,
-				175F79B957D8A6A6973760E5 /* Musia */,
-				AE3C950D93115970978DBC76 /* ../ios/Tests/MusiaCoreTests */,
-				6C09D2D9A52F0F987B9E74A1 /* Tests */,
-				3CBF0F44C8D583EAABB8804C /* Resources */,
-				2B4253781EA77B51D6F67732 /* Shared Resources */,
-			);
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E1933D54F46381B3D72DAD39 /* Headers */ = {
+		7BBA36DC6BB3F2790352BFFA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,52 +345,52 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		40376A9ED30C807D81869246 /* Musia */ = {
+		2B2F5066A7D49708B192254C /* Musia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2DE1BE23E690E0270FA733E /* Build configuration list for PBXNativeTarget "Musia" */;
+			buildConfigurationList = 6ECD36F9EDAAF12912FBB5FE /* Build configuration list for PBXNativeTarget "Musia" */;
 			buildPhases = (
-				306E25494EA2B2C14F5AF1D5 /* Sources */,
-				37E3C71A4C84B523A3951E57 /* Frameworks */,
-				9A0A6F298D3AFB4350C7B0C5 /* Resources */,
-				1729A09263F093D141F7F4C4 /* Embed Frameworks */,
+				A6FA8C0155D1A8280333EFD4 /* Sources */,
+				1177BE9CE1D41707F889C476 /* Frameworks */,
+				13B76A8FEF6B4F0E80E84B01 /* Resources */,
+				E5CC7D1773EE398C23EA16BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				07A30E6DACE1D5FA0F3F0684 /* PBXTargetDependency */,
+				1A8D928096FAE952979A8A5A /* PBXTargetDependency */,
 			);
 			name = Musia;
 			productName = Musia;
-			productReference = B47F14C48B075B155D540A7A /* Musia.app */;
+			productReference = 588F7AB84AEC2950DD5FDC91 /* Musia.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77EF521C946C89AED0399CDC /* MusiaMacTests */ = {
+		4C1515A349F493AAC8266AC4 /* MusiaMacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48E3EA0B036BB7CDB4F44482 /* Build configuration list for PBXNativeTarget "MusiaMacTests" */;
+			buildConfigurationList = 63AC5C20E3068D065AD447CD /* Build configuration list for PBXNativeTarget "MusiaMacTests" */;
 			buildPhases = (
-				38A5DC257D127C68B652A08B /* Sources */,
-				EDF80FBBE3428F20F02984E6 /* Frameworks */,
-				DE3C6A72A053ED30F7FC4469 /* Resources */,
+				1B7C1B50BAF95B4C3CEF83B5 /* Sources */,
+				B4CFA75DB55195F0382138BE /* Frameworks */,
+				A4893B8D59CBD3A1D56307CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				33C98ED7FEA1BE4A864C48E7 /* PBXTargetDependency */,
-				4836BD50128F7DD54FB369D0 /* PBXTargetDependency */,
+				87E132FA410C15E14FC35E81 /* PBXTargetDependency */,
+				8D6FC9DFE4E79DD1EF38C7E5 /* PBXTargetDependency */,
 			);
 			name = MusiaMacTests;
 			productName = MusiaMacTests;
-			productReference = ADD74CEF572FA02C860AA098 /* MusiaMacTests.xctest */;
+			productReference = 73328EC43FEF7C418BAE8E4A /* MusiaMacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9902676B2E99036CA05483A3 /* MusiaCore */ = {
+		622125791CF21EF4C40F0BC1 /* MusiaCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83AD56E9D496AB296071CB7D /* Build configuration list for PBXNativeTarget "MusiaCore" */;
+			buildConfigurationList = 9DBBB3C7180535643A9C3DD8 /* Build configuration list for PBXNativeTarget "MusiaCore" */;
 			buildPhases = (
-				E1933D54F46381B3D72DAD39 /* Headers */,
-				C747C4179ADD47DEB25FEC9E /* Sources */,
-				9C3C4CBD39C5EEB2D71B9D38 /* Frameworks */,
-				7BB30B23F565330A1534837C /* Resources */,
+				7BBA36DC6BB3F2790352BFFA /* Headers */,
+				701F4FD99945D44AF248B394 /* Sources */,
+				B4EF67BD29AEEB68EED7C812 /* Frameworks */,
+				056A5CB4C2F19192C17B3901 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -392,19 +398,19 @@
 			);
 			name = MusiaCore;
 			productName = MusiaCore;
-			productReference = 08EA6197BA3CF43D65787B8C /* MusiaCore.framework */;
+			productReference = AEB151926766559618A20E8A /* MusiaCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3463D3A5220E9427C5AB7E68 /* Project object */ = {
+		7FA9C4A6DD117AE7B258DFED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 			};
-			buildConfigurationList = 7E0C062CAE2B66E19068DAFB /* Build configuration list for PBXProject "Musia" */;
+			buildConfigurationList = A610BBEB5A3E8861E008149F /* Build configuration list for PBXProject "Musia" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -412,38 +418,38 @@
 				en,
 				Base,
 			);
-			mainGroup = F7AE8601962159C91C10B6B3;
+			mainGroup = BEC729C8AEDFD2D68F09C916;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 100;
-			productRefGroup = B570BFC3AA3321A38450F640 /* Products */;
+			productRefGroup = 27C13D9097543B34CDA995C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40376A9ED30C807D81869246 /* Musia */,
-				9902676B2E99036CA05483A3 /* MusiaCore */,
-				77EF521C946C89AED0399CDC /* MusiaMacTests */,
+				2B2F5066A7D49708B192254C /* Musia */,
+				622125791CF21EF4C40F0BC1 /* MusiaCore */,
+				4C1515A349F493AAC8266AC4 /* MusiaMacTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7BB30B23F565330A1534837C /* Resources */ = {
+		056A5CB4C2F19192C17B3901 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A0A6F298D3AFB4350C7B0C5 /* Resources */ = {
+		13B76A8FEF6B4F0E80E84B01 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35E6AC2827F20ABFDA368237 /* Assets.xcassets in Resources */,
-				9341A0A656827A934F2E1BC9 /* PrivacyInfo.xcprivacy in Resources */,
+				A8BE996593DBC00AD24E88B4 /* Assets.xcassets in Resources */,
+				88287562E807666D62BC42C0 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE3C6A72A053ED30F7FC4469 /* Resources */ = {
+		A4893B8D59CBD3A1D56307CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,109 +459,116 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		306E25494EA2B2C14F5AF1D5 /* Sources */ = {
+		1B7C1B50BAF95B4C3CEF83B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4303F6549C70DC124F8A10B /* CatalogStore.swift in Sources */,
-				46C44121E49FEFE0920C952D /* CreatorAuthentication.swift in Sources */,
-				9B29D1801A6AA3DD908AC962 /* CreatorBillingStore.swift in Sources */,
-				E114066FFEA40895E0262818 /* CreatorStore.swift in Sources */,
-				028ECA6D742013C920B86F66 /* LocalStore.swift in Sources */,
-				4DF05F65BFC53AE9C71BEC2A /* PlaybackController.swift in Sources */,
-				8BAD775FDBD5069C6CA4E732 /* BeginnerPracticeView.swift in Sources */,
-				B871EC5B623D74FCADD64D90 /* Components.swift in Sources */,
-				E438A9010868EC6D53334068 /* CreatorAccountView.swift in Sources */,
-				22534F86DCAE1949544280F1 /* CreatorCommunityView.swift in Sources */,
-				435BC397B51C2BABA5499FAA /* CreatorView.swift in Sources */,
-				05F8074AA0A75BC80DCE7376 /* GuitarDiagram.swift in Sources */,
-				88F30B48565509653D79A0D4 /* HistoryView.swift in Sources */,
-				2AE431E8311CB2642154C1CC /* LessonsView.swift in Sources */,
-				AC55E5652F482BCE19CACD46 /* LibraryView.swift in Sources */,
-				62ABD401DF74F36E8ED4332F /* PracticeView.swift in Sources */,
-				4257684F76F99EA84836D1A0 /* MacReview.swift in Sources */,
-				AA5FBA1EC8517190589B6896 /* MusiaMacApp.swift in Sources */,
+				215B00F9F74437D1C057D037 /* APIClientTests.swift in Sources */,
+				F41331815F64A72311250BE0 /* BeginnerPracticeTests.swift in Sources */,
+				34493349E0E7F9BFC94DC63A /* ContractTests.swift in Sources */,
+				59F6707B3EE6409A2F9F1167 /* CreatorAPITests.swift in Sources */,
+				DA955160898E840A3FFDAD45 /* CreatorConversationTests.swift in Sources */,
+				E48927CC573E7F29C33D1E4F /* CreatorCoreTests.swift in Sources */,
+				439A0F23A2DF8D1ED18D37B9 /* LiveContractTests.swift in Sources */,
+				5DC8A1C36609DD994AABDBC5 /* LyricRenderingTests.swift in Sources */,
+				CEC5D49B8DB8BE43B10514ED /* PlaybackIntegrationTests.swift in Sources */,
+				264320A79FF3C3C7912A0169 /* PracticeGuidanceTests.swift in Sources */,
+				E4BB2A6371009E89277BBA36 /* TimelineTests.swift in Sources */,
+				1ECBF5EDD4C326BE4F8E66EC /* MacPlaybackTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38A5DC257D127C68B652A08B /* Sources */ = {
+		701F4FD99945D44AF248B394 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C6A0DA960BCA97FCCD20C1B /* APIClientTests.swift in Sources */,
-				B459D3E28A64EFF361A34E7D /* BeginnerPracticeTests.swift in Sources */,
-				EA0F7F882F2E9E06834EE158 /* ContractTests.swift in Sources */,
-				FB487F07640D56145B41FC13 /* CreatorAPITests.swift in Sources */,
-				43B35C58CDBAA57503BE3DAE /* CreatorCoreTests.swift in Sources */,
-				C2D2137BE9ACA12BC68AD35F /* LiveContractTests.swift in Sources */,
-				05D146910B3DE0A795F75B8F /* LyricRenderingTests.swift in Sources */,
-				07B23A9D1D09E45B967F1877 /* PlaybackIntegrationTests.swift in Sources */,
-				268C1DCC6CDB7687C46F58EE /* PracticeGuidanceTests.swift in Sources */,
-				9944687C20458B48EEB42EDA /* TimelineTests.swift in Sources */,
-				4D36D6BF479150F5B73F0BEC /* MacPlaybackTests.swift in Sources */,
+				13009D2634D2F0BBFF71756A /* APIClient.swift in Sources */,
+				0B19B6305969E39A1D80065C /* BeginnerPractice.swift in Sources */,
+				10ACFC5982D381A4E78EB70D /* CreatorAPI.swift in Sources */,
+				D6D168BD86B0470398CBD637 /* CreatorModels.swift in Sources */,
+				1C726127778A0C14EAFE3108 /* FirstPulse.swift in Sources */,
+				8C0F467B735F83FE57DAC999 /* GuitarShape.swift in Sources */,
+				33AF721CCD90A9A0E21BD337 /* History.swift in Sources */,
+				44C0EAADB92831C1F495D292 /* LyricRendering.swift in Sources */,
+				653135B851DFC6331EEA5C11 /* Models.swift in Sources */,
+				E91EAB78C12F4142BB1B6B4B /* PracticeGuidance.swift in Sources */,
+				1D0E77796AB3E4652C0E3099 /* Timeline.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C747C4179ADD47DEB25FEC9E /* Sources */ = {
+		A6FA8C0155D1A8280333EFD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F5661610AD74038FCFCCE9 /* APIClient.swift in Sources */,
-				6678A8974EBB540BCF6A31D2 /* BeginnerPractice.swift in Sources */,
-				C5236750AD4763AD63AAB704 /* CreatorAPI.swift in Sources */,
-				C6567A8859F795F67671CAAF /* CreatorModels.swift in Sources */,
-				45E88F780E2DD87D58897149 /* FirstPulse.swift in Sources */,
-				C159BAB13C126BF11806E065 /* GuitarShape.swift in Sources */,
-				7CAEF211C67C41449D2EF03B /* History.swift in Sources */,
-				07BAC94316D854FA45B358F8 /* LyricRendering.swift in Sources */,
-				91880C563075DCA361C04D43 /* Models.swift in Sources */,
-				BDCD12886215C4E4664B9469 /* PracticeGuidance.swift in Sources */,
-				8585B6BDAEA3A3CD0D7AC3D1 /* Timeline.swift in Sources */,
+				770BD339DB4EE6A912D9815A /* CatalogStore.swift in Sources */,
+				D912EC6733594F05335F0E90 /* CreatorAuthentication.swift in Sources */,
+				8E083EA6D3D3F081E24B2654 /* CreatorBillingStore.swift in Sources */,
+				57A1AA8174007669B098D99C /* CreatorStore.swift in Sources */,
+				7642EF834EB5F7608245BD8D /* LocalStore.swift in Sources */,
+				BBC0411FEB7912B188CDC9C7 /* PlaybackController.swift in Sources */,
+				5535A9FD6AEC9F417DD25E71 /* WatchCompanionBridge.swift in Sources */,
+				FCA03FAB47EED1D1ADB7BE0A /* BeginnerPracticeView.swift in Sources */,
+				7908A84B90BE221141C16946 /* Components.swift in Sources */,
+				1D0A704186D812120C175472 /* CreatorAccountView.swift in Sources */,
+				E997202AF799607C23628449 /* CreatorCommunityView.swift in Sources */,
+				A2D19BACFFA44DD64ECAAA2B /* CreatorView.swift in Sources */,
+				4C31B78645D681F132533FE0 /* GuitarDiagram.swift in Sources */,
+				1CD222CC8865767F1022A49F /* HistoryView.swift in Sources */,
+				39BD5FB0C764AA69734420FC /* LessonsView.swift in Sources */,
+				5E601FFA23897FA80055A072 /* LibraryView.swift in Sources */,
+				FFA548A350423CCA8A6FC831 /* PracticeView.swift in Sources */,
+				77DA7362E6C15606B4D4DCA1 /* MacReview.swift in Sources */,
+				63BEA7954AC37DBBD18D305E /* MusiaMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07A30E6DACE1D5FA0F3F0684 /* PBXTargetDependency */ = {
+		1A8D928096FAE952979A8A5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MusiaCore;
-			target = 9902676B2E99036CA05483A3 /* MusiaCore */;
-			targetProxy = 8C45575E8538883BE96D7831 /* PBXContainerItemProxy */;
+			target = 622125791CF21EF4C40F0BC1 /* MusiaCore */;
+			targetProxy = 3690643AC52EA39FBBCF39AF /* PBXContainerItemProxy */;
 		};
-		33C98ED7FEA1BE4A864C48E7 /* PBXTargetDependency */ = {
+		87E132FA410C15E14FC35E81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Musia;
-			target = 40376A9ED30C807D81869246 /* Musia */;
-			targetProxy = 1248471E38876AE5DF3C75D0 /* PBXContainerItemProxy */;
+			target = 2B2F5066A7D49708B192254C /* Musia */;
+			targetProxy = 2555AEE04727CCCC5951A0AB /* PBXContainerItemProxy */;
 		};
-		4836BD50128F7DD54FB369D0 /* PBXTargetDependency */ = {
+		8D6FC9DFE4E79DD1EF38C7E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MusiaCore;
-			target = 9902676B2E99036CA05483A3 /* MusiaCore */;
-			targetProxy = 7FA37862ADAE1A7E36156903 /* PBXContainerItemProxy */;
+			target = 622125791CF21EF4C40F0BC1 /* MusiaCore */;
+			targetProxy = 355787C185D15377F1FBF91E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2FB96074018391E70ECAE5BE /* Release */ = {
+		06B7EB0ED0BC11AB675C145D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Distribution";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Musia/Resources/Musia.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
-				GENERATE_INFOPLIST_FILE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Musia/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia.mactests;
+				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(MUSIA_DEBUG_PROFILE)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musia.app/Contents/MacOS/Musia";
 			};
-			name = Release;
+			name = Debug;
 		};
-		3B6A32E7076EDD4BB7A628F1 /* Debug */ = {
+		46730825111F5AA793ABB401 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
@@ -580,7 +593,7 @@
 			};
 			name = Debug;
 		};
-		47003C8BDEA3943013BED6A8 /* Release */ = {
+		48DBF9077405597B38CFDECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -615,7 +628,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Q8M2S2FY77;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -641,7 +654,7 @@
 			};
 			name = Release;
 		};
-		62625AD1E82BEFA5B40E02D7 /* Debug */ = {
+		5833A7A2649F2FE7D3E569A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -676,7 +689,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = Q8M2S2FY77;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -708,51 +721,24 @@
 			};
 			name = Debug;
 		};
-		859A72CD4DDF960CB909D60D /* Release */ = {
+		79D7063A951846A58AA5CA1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Musia/Resources/Musia.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Musia/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "$(MUSIA_MAC_PROFILE)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		8E0327E848107A92895BD85E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Musia/Resources/Musia.entitlements;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Musia/Resources/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;
+				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia.mactests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "$(MUSIA_DEBUG_PROFILE)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musia.app/Contents/MacOS/Musia";
 			};
 			name = Debug;
 		};
-		D5F7AAC1B5ACE6618E1C7CF7 /* Release */ = {
+		A45D660AABD1770939947F8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Distribution";
@@ -777,11 +763,33 @@
 			};
 			name = Release;
 		};
-		EE4F0DD8F465B93266EB6052 /* Debug */ = {
+		CB905587BCA868D818E09533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Musia/Resources/Musia.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Musia/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(MUSIA_MAC_PROFILE)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D4BAB21F9FCCBF2916F74CF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -792,48 +800,48 @@
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musia.app/Contents/MacOS/Musia";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		48E3EA0B036BB7CDB4F44482 /* Build configuration list for PBXNativeTarget "MusiaMacTests" */ = {
+		63AC5C20E3068D065AD447CD /* Build configuration list for PBXNativeTarget "MusiaMacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FB96074018391E70ECAE5BE /* Release */,
-				EE4F0DD8F465B93266EB6052 /* Debug */,
+				D4BAB21F9FCCBF2916F74CF2 /* Release */,
+				79D7063A951846A58AA5CA1D /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E0C062CAE2B66E19068DAFB /* Build configuration list for PBXProject "Musia" */ = {
+		6ECD36F9EDAAF12912FBB5FE /* Build configuration list for PBXNativeTarget "Musia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				62625AD1E82BEFA5B40E02D7 /* Debug */,
-				47003C8BDEA3943013BED6A8 /* Release */,
+				CB905587BCA868D818E09533 /* Release */,
+				06B7EB0ED0BC11AB675C145D /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83AD56E9D496AB296071CB7D /* Build configuration list for PBXNativeTarget "MusiaCore" */ = {
+		9DBBB3C7180535643A9C3DD8 /* Build configuration list for PBXNativeTarget "MusiaCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D5F7AAC1B5ACE6618E1C7CF7 /* Release */,
-				3B6A32E7076EDD4BB7A628F1 /* Debug */,
+				A45D660AABD1770939947F8D /* Release */,
+				46730825111F5AA793ABB401 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2DE1BE23E690E0270FA733E /* Build configuration list for PBXNativeTarget "Musia" */ = {
+		A610BBEB5A3E8861E008149F /* Build configuration list for PBXProject "Musia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				859A72CD4DDF960CB909D60D /* Release */,
-				8E0327E848107A92895BD85E /* Debug */,
+				5833A7A2649F2FE7D3E569A6 /* Debug */,
+				48DBF9077405597B38CFDECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3463D3A5220E9427C5AB7E68 /* Project object */;
+	rootObject = 7FA9C4A6DD117AE7B258DFED /* Project object */;
 }

@@ -17,8 +17,28 @@ final class CreatorStore: ObservableObject {
     @Published private(set) var refreshing = false
     @Published private(set) var hasSession = false
     @Published var notice: String?
-    @Published var brief = CreatorBrief()
+    @Published var brief = CreatorBrief() {
+        didSet {
+            if agentBusy {
+                for key in Self.textFields where oldValue[keyPath: key] != brief[keyPath: key] { editedText.insert(key) }
+                if oldValue.bpm != brief.bpm { editedTempo = true }
+                if oldValue.duration != brief.duration { editedDuration = true }
+            }
+            saveWorkspace()
+        }
+    }
     @Published private(set) var agentMessage: String?
+    @Published private(set) var conversation: [CreatorChatMessage] = []
+    @Published private(set) var agentBusy = false
+    @Published var agentInput = ""
+    private struct Workspace: Codable { let brief: CreatorBrief; let messages: [CreatorChatMessage] }
+    private var workspaces: [String: Workspace] = [:]
+    private var workspaceReady = false
+    private var loadingWorkspace = false
+    private static let textFields: [WritableKeyPath<CreatorBrief, String>] = [\.title, \.idea, \.lyrics, \.caption, \.language, \.key]
+    private var editedText = Set<WritableKeyPath<CreatorBrief, String>>()
+    private var editedTempo = false
+    private var editedDuration = false
     @Published private(set) var generation = UUID()
     let api = CreatorAPI()
     let authentication = CreatorAuthentication()
@@ -57,6 +77,8 @@ final class CreatorStore: ObservableObject {
         try? FileManager.default.removeItem(at: mediaDirectory)
         do {
             pendingByOwner = try CreatorKeychain.read([String: PendingCreatorRender].self, key: "pending-renders") ?? [:]
+            workspaces = try CreatorKeychain.read([String: Workspace].self, key: "creator-workspaces") ?? [:]
+            workspaceReady = true
             pendingStorageReady = true
             pendingRevocations = try CreatorKeychain.read([String].self, key: "pending-revocations") ?? []
             credential = try CreatorKeychain.read(Credential.self, key: "session")
@@ -85,7 +107,14 @@ final class CreatorStore: ObservableObject {
             guard epoch == generation else { return }
             guard let next = me.account else { try clearSession(); return }
             if let previous = account, previous.id != next.id { try clearSession(); return }
+            let firstLoad = account == nil
             account = next
+            if firstLoad {
+                loadingWorkspace = true
+                brief = workspaces[next.id]?.brief ?? CreatorBrief()
+                conversation = CreatorChatMessage.bounded(workspaces[next.id]?.messages ?? [])
+                loadingWorkspace = false
+            }
             pending = pendingByOwner[next.id]
             await refreshJobs()
         } catch CreatorError.server(401, _) {
@@ -132,12 +161,34 @@ final class CreatorStore: ObservableObject {
         await perform {
             let captured = try self.snapshot()
             let original = self.brief
+            let body = try CreatorAgentRequest(message: message, brief: original, history: self.conversation).boundedBody()
+            self.conversation = CreatorChatMessage.bounded(self.conversation + [CreatorChatMessage(role: "user", content: message)])
+            self.agentInput = ""; self.agentBusy = true
+            self.editedText.removeAll(); self.editedTempo = false; self.editedDuration = false
+            self.saveWorkspace()
+            defer { if captured.identity == self.identity { self.agentBusy = false } }
             let reply: CreatorAgentReply = try await self.api.request("/api/agent", method: "POST", token: captured.token,
-                body: CreatorAPI.body(CreatorAgentRequest(message: message, brief: original)))
+                body: body)
             try self.requireCurrent(captured)
-            guard self.brief == original else { throw CreatorError.unavailable("Your brief changed while the assistant was working. Ask again to keep your latest edits.") }
-            self.brief = reply.brief; self.agentMessage = reply.message
+            guard reply.brief.isValidDraft, !reply.message.isEmpty, reply.message.unicodeScalars.count <= 1600 else {
+                throw CreatorError.unavailable("The agent returned an invalid draft. Your edits are preserved.")
+            }
+            var merged = reply.brief
+            for key in self.editedText { merged[keyPath: key] = self.brief[keyPath: key] }
+            if self.editedTempo { merged.bpm = self.brief.bpm }
+            if self.editedDuration { merged.duration = self.brief.duration }
+            self.agentBusy = false
+            self.conversation = CreatorChatMessage.bounded(self.conversation + [CreatorChatMessage(role: "assistant", content: reply.message)])
+            self.brief = merged; self.agentMessage = reply.message
+            self.saveWorkspace()
         }
+    }
+
+    private func saveWorkspace() {
+        guard workspaceReady, !loadingWorkspace, let owner = account?.id else { return }
+        workspaces[owner] = Workspace(brief: brief, messages: conversation)
+        do { try CreatorKeychain.write(workspaces, key: "creator-workspaces") }
+        catch { notice = "Your draft could not be saved securely. Keep this screen open and try again." }
     }
 
     func render(visibility: CreatorVisibility) async {
@@ -229,6 +280,8 @@ final class CreatorStore: ObservableObject {
             retained.removeValue(forKey: captured.identity.owner)
             try CreatorKeychain.write(retained, key: "pending-renders")
             self.pendingByOwner = retained
+            self.workspaces.removeValue(forKey: captured.identity.owner)
+            try CreatorKeychain.write(self.workspaces, key: "creator-workspaces")
             try self.clearSession()
             self.notice = "Your creator account was deleted. Apple subscriptions are managed separately in the App Store."
         }
@@ -239,6 +292,7 @@ final class CreatorStore: ObservableObject {
         authentication.cancel()
         generation = UUID(); mediaGeneration = UUID()
         credential = nil; hasSession = false; account = nil; jobs = []; pending = nil
+        agentBusy = false; conversation = []; agentInput = ""
         brief = CreatorBrief(); agentMessage = nil; busy = false; refreshing = false
         player?.clearCreatorSelection()
         cachedAudio = nil

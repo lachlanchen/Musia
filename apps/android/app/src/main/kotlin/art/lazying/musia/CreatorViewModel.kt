@@ -25,7 +25,10 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
     var busy by mutableStateOf(false); private set
     var message by mutableStateOf<String?>(vault.warning); private set
     var brief by mutableStateOf(SongBrief()); private set
-    var agentReply by mutableStateOf(""); private set
+    var agentMessages by mutableStateOf<List<AgentMessage>>(emptyList()); private set
+    var agentInput by mutableStateOf(""); private set
+    var agentBusy by mutableStateOf(false); private set
+    private val agentEditedFields = mutableSetOf<String>()
     var pending by mutableStateOf<RenderPending?>(null); private set
     var jobs by mutableStateOf<List<CreatorJob>>(emptyList()); private set
     var songs by mutableStateOf(LoadState<List<CreatorSong>>()); private set
@@ -87,7 +90,10 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
                 }
                 val firstLoad = account == null
                 account = value
-                if (firstLoad) brief = vault.state.value.drafts[value.id] ?: SongBrief()
+                if (firstLoad) {
+                    brief = vault.state.value.drafts[value.id] ?: SongBrief()
+                    agentMessages = CreatorRules.boundedHistory(vault.state.value.conversations[value.id].orEmpty())
+                }
                 pending = vault.state.value.renders[value.id]
                 val data = CreatorApi.get<CreatorBilling>("/api/billing", captured)
                 requireCurrent(epoch, captured)
@@ -138,6 +144,7 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
                 accountEpoch++
                 account = value
                 brief = vault.state.value.drafts[value.id] ?: SongBrief()
+                agentMessages = CreatorRules.boundedHistory(vault.state.value.conversations[value.id].orEmpty())
                 pending = vault.state.value.renders[value.id]
                 message = "Signed in. Public listening and practice remain available to everyone."
                 refreshAccount(); refreshJobs(); refreshSongs(mode)
@@ -148,7 +155,8 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
     private fun clearAccount(notice: String) {
         vault.update { it.copy(session = null, attempt = null) }
         accountEpoch++; account = null; busy = false; brief = SongBrief(); pending = null
-        jobs = emptyList(); blocks = emptyList(); selected = null; comments = LoadState(); agentReply = ""
+        jobs = emptyList(); blocks = emptyList(); selected = null; comments = LoadState()
+        agentMessages = emptyList(); agentInput = ""; agentBusy = false; agentEditedFields.clear()
         billing.unbind(); message = notice; refreshSongs("public")
     }
     fun logout() {
@@ -172,6 +180,7 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
         CreatorApi.request("/api/me", captured, "DELETE")
         requireCurrent(epoch, captured)
         vault.update { it.copy(renders = it.renders - captured.owner, drafts = it.drafts - captured.owner,
+            conversations = it.conversations - captured.owner,
             purchases = it.purchases.filterNot { purchase -> purchase.owner == captured.owner }) }
         clearAccount("Account deleted. Store subscriptions must be cancelled separately in Google Play. Media cleanup may take time.")
     }
@@ -183,20 +192,39 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
         requireCurrent(epoch, captured); refreshAccount()
     }
     fun edit(value: SongBrief) {
-        if (busy) return
+        if (busy && !agentBusy || vault.warning != null) return
+        if (agentBusy) agentEditedFields += CreatorRules.changedFields(brief, value)
         brief = value
         account?.id?.let { owner ->
             try { vault.update { it.copy(drafts = it.drafts + (owner to value)) } } catch (e: Exception) { error(e) }
         }
     }
-    fun askAgent(message: String) = action { captured, epoch ->
+    fun editAgentInput(value: String) { if (value.length <= 4000) agentInput = value }
+    fun askAgent() = action { captured, epoch ->
         requireNotNull(captured)
-        check(CreatorRules.canCreate(account, capabilities) && capabilities?.agent == true && brief.valid(true) && message.isNotBlank() && message.length <= 4000)
-        val reply = MusiaJson.decodeFromString<AgentReply>(CreatorApi.request("/api/agent", captured, "POST", MusiaJson.encodeToString(AgentRequest(message, brief))))
-        requireCurrent(epoch, captured)
-        require(reply.brief.valid(true))
-        brief = reply.brief; agentReply = reply.message
-        vault.update { it.copy(drafts = it.drafts + (captured.owner to reply.brief)) }
+        val input = agentInput.trim()
+        check(CreatorRules.canCreate(account, capabilities) && capabilities?.agent == true && brief.valid(true) && input.isNotBlank() && input.length <= 4000)
+        val body = CreatorRules.agentBody(input, brief, agentMessages)
+        if (body == null) {
+            message = "This message and draft are too long to send. Shorten them and try again."
+            return@action
+        }
+        val sent = CreatorRules.boundedHistory(agentMessages + AgentMessage("user", input))
+        vault.update { it.copy(conversations = it.conversations + (captured.owner to sent)) }
+        agentMessages = sent; agentInput = ""; agentBusy = true; agentEditedFields.clear()
+        try {
+            val reply = MusiaJson.decodeFromString<AgentReply>(CreatorApi.request("/api/agent", captured, "POST", body))
+            requireCurrent(epoch, captured)
+            require(reply.brief.valid(true) && reply.message.isNotBlank())
+            val merged = CreatorRules.mergeAgent(brief, reply.brief, agentEditedFields)
+            val conversation = CreatorRules.boundedHistory(agentMessages + AgentMessage("assistant", reply.message))
+            vault.update { it.copy(drafts = it.drafts + (captured.owner to merged),
+                conversations = it.conversations + (captured.owner to conversation)) }
+            brief = merged; agentMessages = conversation
+            if (agentEditedFields.isNotEmpty()) message = "Your Studio edits were kept."
+        } finally {
+            if (current(epoch, captured)) { agentBusy = false; agentEditedFields.clear() }
+        }
     }
     fun render(visibility: String) = action { captured, epoch ->
         requireNotNull(captured)

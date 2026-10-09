@@ -5,8 +5,49 @@ import java.net.URLDecoder
 import java.security.MessageDigest
 import java.security.SecureRandom
 import java.util.Base64
+import kotlinx.serialization.encodeToString
 
 object CreatorRules {
+    fun boundedHistory(messages: List<AgentMessage>): List<AgentMessage> {
+        val result = messages.filter { it.role in setOf("user", "assistant") && it.content.isNotBlank() }
+            .map { it.copy(content = it.content.take(4000)) }.takeLast(12).toMutableList()
+        while (result.sumOf { it.content.length } > 16000) result.removeAt(0)
+        return result
+    }
+
+    fun agentBody(message: String, brief: SongBrief, messages: List<AgentMessage>): String? {
+        val history = boundedHistory(messages).toMutableList()
+        while (true) {
+            val body = MusiaJson.encodeToString(AgentRequest(message, brief, history))
+            if (body.toByteArray(Charsets.UTF_8).size <= 45000) return body
+            if (history.isEmpty()) return null
+            history.removeAt(0)
+        }
+    }
+
+    fun changedFields(before: SongBrief, after: SongBrief): Set<String> = buildSet {
+        if (before.title != after.title) add("title")
+        if (before.idea != after.idea) add("idea")
+        if (before.lyrics != after.lyrics) add("lyrics")
+        if (before.caption != after.caption) add("caption")
+        if (before.language != after.language) add("language")
+        if (before.duration != after.duration) add("duration")
+        if (before.bpm != after.bpm) add("bpm")
+        if (before.key != after.key) add("key")
+    }
+
+    /** Even a field edited and reverted while waiting remains under manual control. */
+    fun mergeAgent(current: SongBrief, reply: SongBrief, edited: Set<String>): SongBrief = reply.copy(
+        title = if ("title" in edited) current.title else reply.title,
+        idea = if ("idea" in edited) current.idea else reply.idea,
+        lyrics = if ("lyrics" in edited) current.lyrics else reply.lyrics,
+        caption = if ("caption" in edited) current.caption else reply.caption,
+        language = if ("language" in edited) current.language else reply.language,
+        duration = if ("duration" in edited) current.duration else reply.duration,
+        bpm = if ("bpm" in edited) current.bpm else reply.bpm,
+        key = if ("key" in edited) current.key else reply.key
+    )
+
     fun verifier(): String = Base64.getUrlEncoder().withoutPadding().encodeToString(ByteArray(32).also { SecureRandom().nextBytes(it) })
     fun challenge(verifier: String): String = Base64.getUrlEncoder().withoutPadding()
         .encodeToString(MessageDigest.getInstance("SHA-256").digest(verifier.toByteArray(Charsets.US_ASCII)))

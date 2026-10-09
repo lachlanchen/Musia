@@ -24,7 +24,8 @@ import kotlinx.serialization.json.JsonObject
         language in setOf("en", "zh", "ja", "mixed") && duration in 30..180 && bpm in 40..200 &&
         Regex("^[A-G](?:#|b)? (?:major|minor)$").matches(key)
 }
-@Serializable data class AgentRequest(val message: String, val brief: SongBrief)
+@Serializable data class AgentMessage(val role: String, val content: String)
+@Serializable data class AgentRequest(val message: String, val brief: SongBrief, val history: List<AgentMessage> = emptyList())
 @Serializable data class AgentReply(val message: String, val brief: SongBrief)
 @Serializable data class RenderRequest(val brief: SongBrief, @SerialName("rights_confirmed") val rightsConfirmed: Boolean = true,
     val visibility: String = "private")

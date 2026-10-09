@@ -42,7 +42,7 @@ struct CreatorAccountLink: View {
 struct CreatorView: View {
     @EnvironmentObject private var creator: CreatorStore
     @Environment(\.scenePhase) private var scenePhase
-    @State private var message = ""
+    @State private var mode = "Agent"
     @State private var rights = false
     @State private var visibility = CreatorVisibility.private
     @State private var confirmRender = false
@@ -51,10 +51,10 @@ struct CreatorView: View {
     var body: some View {
         Form {
             Section {
-                Label("Make room for your next song", systemImage: "sparkles")
-                    .font(.title2.bold()).foregroundStyle(Palette.teal)
-                Text("Shape an idea with the assistant, edit the brief, then choose when to render.")
-                    .foregroundStyle(.secondary)
+                Picker("Workspace", selection: $mode) {
+                    Text("Agent").tag("Agent")
+                    Text("Studio").tag("Studio")
+                }.pickerStyle(.segmented).accessibilityIdentifier("creator.workspace")
                 CreatorAccountLink()
                 if let account = creator.account {
                     LabeledContent("Remaining this period", value: "\(account.usage.remaining) of \(account.usage.limit)")
@@ -73,17 +73,37 @@ struct CreatorView: View {
                     }.disabled(creator.busy)
                 }
             }
-            Section("Creative assistant") {
-                CreatorTextField(title: "Describe your song idea or ask for a revision", text: $message, lines: 3...6)
-                Button("Develop this brief", systemImage: "sparkles") {
-                    Task { await creator.askAgent(message) }
+            if mode == "Agent" {
+            Section("Agent") {
+                if creator.conversation.isEmpty {
+                    Text("What would you like to make?").font(.title3.weight(.semibold))
                 }
-                .disabled(creator.busy || creator.account == nil || creator.capabilities?.agent != true || message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                ForEach(Array(creator.conversation.enumerated()), id: \.offset) { _, item in
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(item.role == "user" ? "You" : "Musia").font(.caption.weight(.semibold)).foregroundStyle(item.role == "user" ? Palette.ink : Palette.teal)
+                        Text(item.content).textSelection(.enabled).frame(maxWidth: .infinity, alignment: .leading)
+                    }.padding(.vertical, 6)
+                }
+                CreatorTextField(title: "Message Musia", text: $creator.agentInput, lines: 2...6)
+                Button("Send", systemImage: "arrow.up") {
+                    let input = creator.agentInput
+                    Task { await creator.askAgent(input) }
+                }
+                .disabled(creator.busy || creator.account == nil || creator.capabilities?.agent != true || creator.agentInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 if creator.capabilities?.agent != true {
                     Text("The assistant is currently unavailable. You can still edit your brief.").font(.caption).foregroundStyle(.secondary)
                 }
-                if let reply = creator.agentMessage { Text(reply).textSelection(.enabled) }
             }
+            if !creator.brief.title.isEmpty || !creator.brief.lyrics.isEmpty {
+                Section {
+                    DisclosureGroup(creator.brief.title.isEmpty ? "Current draft" : creator.brief.title) {
+                        Text(creator.brief.lyrics).textSelection(.enabled)
+                        Text(creator.brief.caption).font(.caption).foregroundStyle(.secondary)
+                        Button("Open Studio", systemImage: "slider.horizontal.3") { mode = "Studio" }
+                    }
+                }
+            }
+            } else {
             Section("Song brief") {
                 CreatorTextField(title: "Title", text: $creator.brief.title)
                 CreatorTextField(title: "Idea", text: $creator.brief.idea, lines: 2...5)
@@ -100,7 +120,8 @@ struct CreatorView: View {
                 Stepper("Duration: \(creator.brief.duration) seconds", value: $creator.brief.duration, in: 30...180, step: 5)
                 Stepper("Tempo: \(creator.brief.bpm) BPM", value: $creator.brief.bpm, in: 40...200)
                 CreatorTextField(title: "Musical key", text: $creator.brief.key)
-            }.disabled(creator.busy)
+            }.disabled(creator.busy && !creator.agentBusy)
+            }
             Section("Render") {
                 Picker("Song visibility", selection: $visibility) {
                     Text("Private").tag(CreatorVisibility.private)
@@ -143,7 +164,7 @@ struct CreatorView: View {
         .overlay(alignment: .top) { if creator.busy { ProgressView("Working…").padding(10).background(.regularMaterial, in: Capsule()) } }
         .task(id: creator.identity) { await creator.refreshJobs() }
         .onChange(of: scenePhase) { _, phase in if phase == .active { Task { await creator.refresh() } } }
-        .onChange(of: creator.identity) { _, _ in rights = false; message = "" }
+        .onChange(of: creator.identity) { _, _ in rights = false; mode = "Agent" }
         .onChange(of: creator.brief) { _, _ in rights = false }
         .confirmationDialog("Render this song?", isPresented: $confirmRender, titleVisibility: .visible) {
             Button("Render song") { Task { if rights { await creator.render(visibility: visibility) } } }

@@ -190,6 +190,15 @@ class StoreTests(unittest.TestCase):
             play_console.open_verified_prepare(tab,cfg)
         self.assertEqual(tab.call.call_count, 1)
 
+    def test_play_track_accepts_current_listing_title_only_at_exact_url(self):
+        track = f"https://play.google.com/console/u/0/developers/{s.DEVELOPER}/app/123/tracks/456?tab=releases"
+        view = {"url": track, "text": "Musia: Learn Music & Guitar\nInternal testing\n7 (0.2.0)"}
+        self.assertTrue(play_console.internal_view(view, track))
+        for url in (track.replace("/123/", "/999/"), track.replace("/456?", "/789?"), track+"&extra=1"):
+            self.assertFalse(play_console.internal_view(dict(view, url=url), track))
+        for text in ("Other App\nInternal testing", "Musia: Learn Music & Guitar\nProduction", "Prefix Musia: Learn Music & Guitar\nInternal testing"):
+            self.assertFalse(play_console.internal_view(dict(view, text=text), track))
+
     def fixture(self):
         artifact = self.runtime / "Musia.aab"
         s.write_private(artifact, b"fixture-not-a-real-signature")

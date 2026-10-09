@@ -3,7 +3,7 @@
 2026-10-09. **Live invitation-gated creator pilot, not a public paid service.**
 
 Live workspace: <https://musia.lazying.art/creator/>. Active creator app/relay:
-`4c61355dc154f7fe3afa51d2db72c3af889018c64bf11e2b76369bb30074110c`.
+`9fc0fcad53db5fb3bfef65c866c31f56dad6792ee7c732b0f6b8226f04bdcf94`.
 The edge remains on the previous release with identical guard/policy bytes.
 See [deployment status](creator-deployment.md) for component hashes, service
 ownership and the accepted main-learning release.
@@ -32,9 +32,15 @@ agent-turn limits are 10/50/150; account in-flight limits are 1/2/3. The GPU wor
 still runs only one job at a time. Higher tiers do not select an inferior or
 superior baseline model: all use the same quality route.
 
-Apple and Google subscription products now exist as drafts at the exact target
-prices above. They are not purchasable offers: payments are disabled and no real
-Musia sandbox purchase has passed.
+Apple and Google subscription products exist at the exact target prices above.
+Google's two monthly base plans are ACTIVE; both Apple review screenshots are
+COMPLETE. Google's actual no-charge Creator and Studio purchases, owner-bound
+server entitlement, renewal and cancellation/expiry passed. The two test
+subscriptions were sequential, not an upgrade or parallel subscriptions.
+Public paid checkout remains disabled and the temporary owner-test Google gate
+was closed at 08:21 UTC. Apple purchases, upgrades, refunds and remaining
+financial lifecycle cases are not qualified. Provider
+catalog state alone is not entitlement-delivery proof.
 The app download price is a separate commercial decision from generation
 subscriptions. Public web listening is free; do not silently change a store's
 app price while implementing this feature.
@@ -62,17 +68,25 @@ app price while implementing this feature.
   playback reported `PLAYING` at 9008 ms; sign-out cleared private playback.
   Android native UI and library/Stage regression passed for the exact signed
   0.2.0 (6) artifact, now available to the verified owner-only internal tester.
-  Play-installed execution, physical-device listening and audible emulator
-  output remain unverified. See [Android delivery](../store/creator-android-20261009.md).
-- SwiftUI and Compose clients exist. Apple iOS/macOS 0.2.0 (7) artifacts are
-  signed and validated, not uploaded. The signed universal Mac PKG passed Apple
-  revalidation, but upload never started; the parent is repairing the KVM Python
-  runtime's missing PyJWT dependency. Actual iOS 27 testing on the owned Mac mini
-  simulator is progressing, with results pending. KVM macOS debug QA passed
-  Keychain, capabilities, library and minimized playback checks, but the isolated QA
-  bundle is not production-ID or signed-in creator-flow proof. Apple native UI
-  sign-in and app-specific product lookup remain unverified; formal reviews
-  are preserved. See [Apple evidence](../store/creator-apple-20261009.md).
+  Later actual Play-installed code 6 passed sign-in and the no-charge Creator
+  purchase/restore flow. Physical-device listening and audible emulator output
+  remain unverified. See [Android delivery](../store/creator-android-20261009.md).
+- Latest owner test releases: iOS/macOS **0.2.0 (9)** in internal TestFlight and
+  Android **0.2.0 (7)** in Play internal testing. Agent opens by default; Studio
+  shares its editable draft. iPhone includes the Watch companion. See the
+  [workspace contract](creator-agent-studio-watch.md) for current tests and limits.
+- The preceding iOS build-8 source passed browser login, protected-session
+  relaunch, real StoreKit prices and private playback. Mini-player/tab clearance
+  on root, detail and reopened pages and logout cleanup passed. Eighteen native
+  screenshots were directly inspected; iOS and Mac 0.2.0 (8) are now VALID /
+  IN_BETA_TESTING in the existing owner group. The isolated
+  Mac debug checks are not signed-in or paid-purchase proof. Current artifacts,
+  UI results and delivery are tracked in [Apple evidence](../store/creator-apple-20261009.md).
+  Existing formal reviews remain unchanged.
+- Reviewed WAV originals now have a verified full-length 320 kbps MP3 delivery
+  derivative. Ownership and byte-range checks still apply to each request;
+  corrected lyrics remain bound to the unchanged original. See
+  [playback contract and measurements](creator-playback.md).
 - Maintenance and billing-reconciliation timers use the immutable creator
   release; maintenance succeeds while the queue is idle. The bounded generation
   service is active with stable run ID `creator-pilot-20261009` and a persistent
@@ -81,9 +95,12 @@ app price while implementing this feature.
   The generation CLI still runs from the source checkout in `musia`, not the
   immutable application release. Restarts do not replenish the budget.
 - Apple/Google app-specific test verification and restore configuration is
-  connected, with key paths validated. Sales and test checkout are both off.
-  Apple's sandbox invalid-reference response `4000006` proves HTTP authentication
-  only, not a purchase or entitlement.
+  connected, with key paths validated. Google's Creator and Studio tests returned
+  actual owner-bound verified subscriptions and renewals. Both were canceled
+  and expired, with provider/server agreement; the temporary synthetic-owner
+  checkout gate was closed at 08:21 UTC. Public sales and Apple checkout are off.
+  Apple's invalid-reference response
+  `4000006` proves authentication only, not a purchase or entitlement.
 - Main learning release
   `9dd15fbe0e9677284c2e94deecb763bc350f50bad6f98425e6ede0124e0eac08`
   was accepted in transaction `20261009T134643`. Its public Create CTA links to
@@ -93,6 +110,9 @@ app price while implementing this feature.
 
 ## What Exists
 
+- Chat-first Agent and structured Studio use one editable draft. Conversation
+  context is bounded, owner-scoped and untrusted model input; the agent cannot
+  silently start a render. See [Agent, Studio and Watch](creator-agent-studio-watch.md).
 - Separate FastAPI creator boundary and a responsive web workspace at `/creator/`.
 - Connected shared-account adapter using app-specific code/PKCE, browser binding,
   encrypted SDK token storage, introspection and durable refresh coordination.
@@ -124,14 +144,15 @@ The live pilot does not establish completion of the entire rollout.
 - Central discovery reports password=true and Apple/Google/GitHub=false. Only
   currently advertised providers may appear. Existing sibling native OAuth
   implementations do not prove those central providers are enabled.
-- No real Musia Apple/Google sandbox purchase has passed. Checkout, renewal,
-  restore, cancellation, refund/revocation and account-switch behavior still need
-  app-specific store acceptance. `salesEnabled` remains false. Stripe is not
-  implemented in the current creator billing boundary.
-- Apple native UI sign-in, broader native lifecycle checks and the complete
-  signed-in native creation journey still need qualification. Android internal
-  availability and the passed native UI/library regression do not prove a Play
-  installation, audible output or a real purchase.
+- Google's Creator purchase/restore/renewal passed, not the entire billing
+  matrix. Apple purchases, Studio, upgrades, refunds/revocations and account-switch
+  cases still need app-specific acceptance. Public paid checkout stays off;
+  temporary owner-only test checkout is not public availability. Stripe is not
+  implemented in this boundary.
+- The complete signed-in native creation journey and broader native lifecycle
+  checks still need qualification. Actual iOS simulator login/playback and
+  Play-installed Android billing are established, not physical-device audible
+  output or complete Mac TestFlight runtime acceptance.
 - Moderators currently approve both input before GPU work and output before
   publication. The queue is not an unattended general-public generation service.
 - The pilot worker renders one candidate per confirmation. Production candidate
@@ -276,11 +297,11 @@ Musia generation concurrently. Media and model artifacts remain out of Git.
 
 ## Next Release Gates
 
-1. Complete Apple UI sign-in/private playback and remaining cold/warm return,
-   expiry and account-switch cases. Verify Android installation from Play and
+1. Extend the passed Apple sign-in/private playback and Android Play installation
+   to remaining cold/warm return, expiry and account-switch cases. Verify
    physical-device listening; retain the exact-build native UI/library results
    without treating player state as audible-output proof.
-2. Qualify app-specific no-charge Apple/Google purchases and lifecycle behavior
+2. Qualify Apple no-charge purchases and remaining Google lifecycle behavior
    against the implemented verifier/restore/reconcile path. Draft products and
    pilot grants are not payment proof. Keep sales disabled until accepted, and
    keep inspection/restore/manage independent of new-purchase eligibility.
@@ -289,8 +310,8 @@ Musia generation concurrently. Media and model artifacts remain out of Git.
    commercial checkpoint permission and a pinned revision before paid rollout.
 4. Extend the passed browser creation and social QA to the complete native
    creation journey and remaining cross-platform library/practice cases. Android
-   internal 6 is already delivered: do not reupload it. Apple test uploads remain
-   separate qualification work; preserve current formal reviews and the held
+   internal 6 and Apple internal 8 are delivered: do not reupload them. New test
+   candidates require their own qualification; preserve current formal reviews and the held
    Google production release.
 
 Apple requires UGC filtering, reporting, blocking and contact mechanisms; Google

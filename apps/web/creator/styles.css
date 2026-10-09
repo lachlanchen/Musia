@@ -221,8 +221,7 @@ h3 {
   max-width: 220px;
 }
 .creator-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.95fr);
+  display: block;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -231,7 +230,7 @@ h3 {
   flex-direction: column;
   min-width: 0;
   min-height: 620px;
-  padding: 24px 28px 24px 0;
+  padding: 24px 0;
 }
 #messages {
   flex: 1;
@@ -273,9 +272,7 @@ h3 {
   color: var(--muted);
 }
 .brief-section {
-  background: white;
-  border-left: 1px solid var(--line);
-  padding: 24px;
+  padding: 24px 0;
 }
 .brief-heading {
   margin-bottom: 20px;
@@ -506,12 +503,16 @@ textarea {
   font-weight: 400;
 }
 .conversation {
-  position: sticky;
-  top: 94px;
-  align-self: start;
-  height: calc(100dvh - 235px);
-  min-height: 480px;
+  height: max(360px, calc(100dvh - 310px));
+  min-height: 360px;
 }
+.creator-modes { display: flex; gap: 8px; margin-bottom: 16px; }
+.creator-modes button { border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: transparent; }
+.creator-modes [aria-selected="true"] { border-bottom-color: var(--teal); color: var(--teal); font-weight: 650; }
+#create-view { max-width: 960px; margin: 0 auto; }
+#draft-title { display: block; margin-bottom: 12px; overflow-wrap: anywhere; }
+.generation { max-width: 640px; }
+.agent-message p, .user-message p { overflow-wrap: anywhere; }
 #messages {
   min-height: 0;
   max-height: none;
@@ -521,10 +522,10 @@ textarea {
     padding: 36px 48px;
   }
   .conversation {
-    padding-right: 40px;
+    padding-right: 0;
   }
   .brief-section {
-    padding: 28px;
+    padding: 24px 0;
   }
 }
 @media (max-width: 1050px) {
@@ -539,16 +540,15 @@ textarea {
   }
   .conversation {
     position: static;
-    height: auto;
+    height: max(330px, calc(100dvh - 310px));
     min-height: 330px;
     padding: 24px 0;
   }
   .brief-section {
     border-left: 0;
-    border-top: 1px solid var(--line);
   }
   #messages {
-    max-height: 340px;
+    max-height: none;
   }
   .sidebar {
     padding: 20px 8px;
@@ -642,7 +642,8 @@ textarea {
   }
   .conversation {
     padding-top: 20px;
-    min-height: 280px;
+    height: max(330px, calc(100dvh - 330px));
+    min-height: 330px;
   }
   .form-row {
     grid-template-columns: 1fr 1fr;

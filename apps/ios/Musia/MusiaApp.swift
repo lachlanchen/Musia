@@ -6,6 +6,7 @@ struct MusiaApp: App {
     @StateObject private var catalog = CatalogStore()
     @StateObject private var creator = CreatorStore()
     @StateObject private var billing = CreatorBillingStore()
+    @StateObject private var watch = WatchCompanionBridge()
     @StateObject private var history: LocalStore
     @StateObject private var player: PlaybackController
     @Environment(\.scenePhase) private var scenePhase
@@ -25,6 +26,7 @@ struct MusiaApp: App {
                 .environmentObject(creator)
                 .environmentObject(billing)
                 .task { await creator.start(player: player) }
+                .task { watch.start(player: player) }
                 .task(id: creator.identity) { billing.start(creator: creator); await billing.accountChanged() }
                 .tint(Palette.teal)
                 .preferredColorScheme(.light)

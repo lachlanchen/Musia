@@ -18,7 +18,8 @@ import kotlinx.serialization.encodeToString
 @Serializable data class CreatorSecrets(
     val session: CreatorSession? = null, val attempt: NativeAttempt? = null,
     val renders: Map<String, RenderPending> = emptyMap(), val drafts: Map<String, SongBrief> = emptyMap(),
-    val purchases: List<PurchaseJournal> = emptyList(), val revocations: List<String> = emptyList()
+    val purchases: List<PurchaseJournal> = emptyList(), val revocations: List<String> = emptyList(),
+    val conversations: Map<String, List<AgentMessage>> = emptyMap()
 )
 
 /** Only ciphertext is stored on disk. The AES key is non-exportable in Android Keystore. */

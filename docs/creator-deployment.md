@@ -7,8 +7,8 @@
 
 | Component | Active release or execution source |
 | --- | --- |
-| Creator app and workstation relay | `4c61355dc154f7fe3afa51d2db72c3af889018c64bf11e2b76369bb30074110c` |
-| Maintenance and billing-reconciliation units | Same immutable `4c61355...` release, including `tools/creator.py` |
+| Creator app and workstation relay | `9fc0fcad53db5fb3bfef65c866c31f56dad6792ee7c732b0f6b8226f04bdcf94` |
+| Maintenance and billing-reconciliation units | Same immutable `9fc0fcad...` release, including `tools/creator.py` |
 | Edge guard | `421bd8c4bd8ba3d880e952efa18b2404415e4a6073c7e8529839c0a17a76d1bd` |
 | Generation CLI/service | Source checkout, existing `musia` conda environment |
 | Main learning app | `9dd15fbe0e9677284c2e94deecb763bc350f50bad6f98425e6ede0124e0eac08`, accepted transaction `20261009T134643` |
@@ -26,8 +26,23 @@ The LazyEdge adapter, pin and ASGI transport wrapper also match byte-for-byte.
 These file hashes are distinct from the release manifest digest and transfer
 archive checksum; none identifies the concurrently edited checkout as immutable.
 
+The October 9 chat-first update replaces `af356bed...`, which replaced
+`195577af...`. The final transfer archive is
+`3c73a19f866aa0e9e86367bb0d91e6447f5d01bf4a78f198b35fe95051dfa475`.
+`tools/creator_local_cutover.py` switches only the four allowlisted workstation
+units, checks for active render work, verifies public capabilities and exact
+JavaScript bytes, and restores the prior units if acceptance fails. It does not
+change Caddy, the tunnel, the generation budget, credentials or payment gates.
+Agent/Studio share one draft; two real provider turns passed history, tempo-edit
+and reload checks without creating a job. See [workspace and Watch](creator-agent-studio-watch.md).
+
 ## Current Status And Limits
 
+- Latest internal releases: iOS/macOS **0.2.0 (9)** are VALID / IN_BETA_TESTING;
+  Android **0.2.0 (7)** is available to internal testers. Agent/Studio and the
+  embedded Watch companion are covered in [the workspace contract](creator-agent-studio-watch.md).
+  Build-8/6 evidence below remains the prior authentication/billing baseline,
+  not an assertion that every case was repeated in the new builds.
 - Shared password sign-in is live with the registered `musia-server` callback
   `https://musia.lazying.art/creator/auth/callback`. Apple, Google and GitHub are
   centrally unavailable; registration does not enable those providers.
@@ -45,24 +60,31 @@ archive checksum; none identifies the concurrently edited checkout as immutable.
   force-stop/relaunch. Private native Media3 reported `PLAYING` at 9008 ms and
   sign-out cleared private playback. Native UI and library/Stage regression
   passed for the exact signed Android 0.2.0 (6) artifact, now available internally
-  with the existing owner-only tester verified. Play installation and audible
-  output are not proven. [Android delivery](../store/creator-android-20261009.md).
-- Apple iOS/macOS 0.2.0 (7) artifacts are signed and validated, not uploaded.
-  The signed universal Mac PKG passed Apple revalidation, but upload never
-  started: KVM `/usr/bin/python3` lacks PyJWT. The parent is fixing that runtime
-  before upload. This is a local prerequisite failure, not an accepted upload
-  or an Apple rejection. Actual iOS 27 testing on the owned Mac mini simulator
-  is progressing; qualification results remain pending.
-  KVM macOS isolated debug QA passed Keychain, capabilities, library and minimized
-  playback; it is not production-ID, signed-in creator UI or StoreKit proof.
-  Apple native UI sign-in remains unverified. Existing formal reviews and
-  Google production 3 (0.1.2), held under managed publishing, are preserved.
-- Apple/Google products are drafts at exact US$9.99/US$29.99 monthly targets.
-  App-specific test verification and restore configuration is connected, with
-  key paths validated; reconciliation is implemented. Sales and test checkout
-  are both off. Apple Server API sandbox invalid-reference response `4000006`
-  proves HTTP authentication only, not a purchase. No real Musia sandbox
-  purchase has passed.
+  with the existing owner-only tester verified. Later actual Play installation,
+  native sign-in and no-charge Creator purchase/restore passed. Physical or
+  audible emulator output is not established.
+  [Android delivery](../store/creator-android-20261009.md).
+- Mac 0.2.0 (8) is in internal TestFlight. Final iOS build-8 source passed actual
+  browser sign-in, Keychain relaunch, StoreKit prices, advancing private playback,
+  mini-player/tab clearance and logout cleanup. Eighteen screenshots were
+  directly reviewed. Both iOS and Mac 0.2.0 (8) are VALID / IN_BETA_TESTING
+  in the existing owner group.
+  See [current Apple delivery](../store/creator-apple-20261009.md)
+  for exact artifact and runtime evidence. Existing formal reviews and Google
+  production 3 (0.1.2), held under managed publishing, are preserved.
+- Apple/Google products have exact US$9.99/US$29.99 monthly targets. Google's
+  monthly base plans are ACTIVE; both Apple review screenshots are COMPLETE.
+  Creator and Studio completed separate actual no-charge purchases, with
+  acknowledgement, owner binding and renewal independently checked against
+  Google. Both were canceled and expired; provider and server agreed by 08:21
+  UTC. The temporary owner-only Google checkout gate was closed at 08:21:09;
+  live capabilities again report `salesEnabled=false`. Public sales remain off. Apple checkout
+  is off; its invalid-reference response `4000006` proves authentication only.
+  See [billing acceptance](creator-billing-acceptance.md) for remaining cases.
+- Full-length MP3 playback derivatives reduce transfer size without changing
+  reviewed WAV originals or their lyrics. The authenticated audio endpoint
+  retains per-request visibility checks and WAV fallback. See
+  [playback verification](creator-playback.md).
 - Maintenance and billing-reconciliation timers are active and their units run
   from the immutable app release. Maintenance succeeds during idle queue polling.
 - `musia-creator-generation.service` is active with stable run ID
@@ -243,17 +265,18 @@ The staging source generates `musia-creator-maintenance.timer` and
 Maintenance purges only deleted-owner artifacts after acquiring the worker lock
 and retries central sign-out revocations. Billing reconciliation refreshes known
 bound purchases from provider truth; it does not initiate a purchase. These
-timers are live, but no real Musia sandbox transaction has been accepted.
-The generated maintenance services currently reference checkout
-`tools/creator.py`, not the immutable application release. Review source changes
-accordingly and do not describe every scheduled task as release-pinned.
+timers are live. The Google test transactions and remaining Apple qualification
+are documented in [billing acceptance](creator-billing-acceptance.md).
+Generated maintenance and reconciliation services reference the immutable
+release's `tools/creator.py`; only the explicitly bounded generation supervisor
+uses the source checkout.
 
 Validate rendered units with the target host's `systemd-analyze verify` and
 confirm all absolute executables and SDK paths are accessible under service
 hardening. Promote only verified immutable release paths; switch an optional
 `current` symlink atomically after acceptance. Application/guard units use
 immutable absolute release paths, so changing a symlink alone does not change
-a running service; the checkout-backed maintenance units are noted above.
+a running service.
 
 ## Restricted tunnel identity
 
@@ -377,10 +400,11 @@ deployment. Do not expand invitation-gated access, enable purchases or start
 unattended generation based only on ingress tests. Record exact rollback commands,
 current/previous releases, sanitized probe results and applied timestamp privately.
 Reboot persistence and live rollback are not established by the acceptance
-summary above. Apple native UI sign-in, Android Play-installed execution and
-audible-output checks, and real app-specific sandbox purchase acceptance remain
-open. Android internal 6 and the main-app Creator CTA are already delivered;
-Apple 0.2.0 artifacts remain unuploaded. Do not repeat the Android upload or
+summary above. Apple native sign-in and Android Play-installed execution passed
+as described above. Physical audible-output checks and Apple sandbox purchase
+acceptance remain open; Google's documented test cycles are not complete financial
+qualification. Android internal 7, Apple internal 9 and the main-app Creator CTA
+are delivered. Do not repeat an accepted upload or
 alter the held production release or existing formal reviews.
 
 ## Local Verification Reference

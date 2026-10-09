@@ -24,6 +24,10 @@ app.build_configurations.each do |configuration|
   configuration.build_settings['INFOPLIST_FILE'] = File.join(root, 'apps/ios/Musia/Resources/Info.plist')
   configuration.build_settings['CODE_SIGN_ENTITLEMENTS'] = entitlements
 end
+watch = project.targets.find { |target| target.name == 'MusiaWatch' }
+watch&.build_configurations&.each do |configuration|
+  configuration.build_settings['INFOPLIST_FILE'] = File.join(root, 'apps/ios/WatchResources/Info.plist')
+end
 tests.source_build_phase.files.to_a.each(&:remove_from_project)
 source = project.main_group.new_file(File.join(root, 'tools/store/CreatorNativeUITests.swift'), :absolute)
 tests.source_build_phase.add_file_reference(source)

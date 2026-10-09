@@ -7,6 +7,10 @@ let package = Package(
     products: [.library(name: "MusiaCore", targets: ["MusiaCore"])],
     targets: [
         .target(name: "MusiaCore", path: "Musia/Core"),
-        .testTarget(name: "MusiaCoreTests", dependencies: ["MusiaCore"], path: "Tests/MusiaCoreTests")
+        .target(name: "MusiaCatalog", dependencies: ["MusiaCore"], path: "Musia/Services", sources: ["CatalogStore.swift"]),
+        .testTarget(name: "MusiaCatalogTests", dependencies: ["MusiaCatalog", "MusiaCore"], path: "Tests/MusiaCatalogTests"),
+        .testTarget(name: "MusiaCoreTests", dependencies: ["MusiaCore"], path: "Tests/MusiaCoreTests"),
+        .target(name: "MusiaWatchProtocol", path: "WatchShared"),
+        .testTarget(name: "WatchProtocolTests", dependencies: ["MusiaWatchProtocol"], path: "Tests/WatchProtocolTests")
     ]
 )

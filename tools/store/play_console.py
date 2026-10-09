@@ -67,6 +67,14 @@ def inventory():
         tab.close()
 
 
+def internal_view(view, track):
+    # The Console now shows the listing title instead of the package label.
+    # Keep the exact configured app/track URL and a Musia identity signal.
+    text = view.get("text", "")
+    identity = BUNDLE in text or "Musia: Learn Music & Guitar" in text.splitlines()
+    return view.get("url") == track and identity and "Internal testing" in text
+
+
 def open_verified_prepare(tab, cfg):
     app = cfg.get("google_app_id")
     url = cfg.get("play_upload_url", "")
@@ -80,10 +88,10 @@ def open_verified_prepare(tab, cfg):
     tab.call("Page.navigate", url=track)
     for _ in range(45):
         view = tab.view()
-        if view["url"] == track and BUNDLE in view["text"] and "Internal testing" in view["text"]:
+        if internal_view(view, track):
             break
         time.sleep(1)
-    require(view["url"] == track and BUNDLE in view["text"] and "Internal testing" in view["text"],
+    require(internal_view(view, track),
             "Cannot prove this is Musia internal testing; no upload")
     tab.call("Page.navigate", url=url)
     for _ in range(45):
@@ -153,7 +161,7 @@ def test_access(build):
                 break
             time.sleep(1)
         version = re.escape(str(build["build_number"])) + r"\s*\(" + re.escape(build["version"]) + r"\)"
-        require(view["url"] == internal and BUNDLE in view["text"] and "Internal testing" in view["text"]
+        require(internal_view(view, internal)
                 and "Available to internal testers" in view["text"] and re.search(version, view["text"]),
                 "Exact Musia internal release not proven available")
         release_view = view

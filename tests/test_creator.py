@@ -47,7 +47,7 @@ class Producer:
     available = True
 
     def refine(self, request):
-        return AgentReply(message="A warm chorus with room to breathe. Review it before rendering.", brief=brief())
+        return AgentReply(message="A warm chorus with room to breathe. Review it before rendering.", brief=brief().model_dump())
 
 
 class Base(unittest.TestCase):

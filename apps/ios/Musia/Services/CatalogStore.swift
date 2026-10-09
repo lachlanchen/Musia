@@ -12,29 +12,50 @@ final class CatalogStore: ObservableObject {
     @Published private(set) var loadingLessons = false
     private var hasLibrary = false
     private var hasLessons = false
-    private let api = APIClient()
+    private let libraryLoader: () async throws -> [LibraryItem]
+    private let lessonsLoader: () async throws -> [Lesson]
+    private var libraryTask: Task<Void, Never>?
+    private var lessonsTask: Task<Void, Never>?
+
+    init(libraryLoader: @escaping () async throws -> [LibraryItem] = { try await APIClient().library() },
+         lessonsLoader: @escaping () async throws -> [Lesson] = { try await APIClient().lessons() }) {
+        self.libraryLoader = libraryLoader
+        self.lessonsLoader = lessonsLoader
+    }
 
     func loadLibrary(force: Bool = false) async {
-        guard !loadingLibrary, force || !hasLibrary else { return }
+        if let libraryTask { await libraryTask.value; return }
+        guard force || !hasLibrary else { return }
         loadingLibrary = true; libraryError = nil
-        defer { loadingLibrary = false }
-        do {
-            items = try await api.library()
-            hasLibrary = true
-        } catch is CancellationError { }
-        catch let error as URLError where error.code == .cancelled { }
-        catch { libraryError = error.localizedDescription }
+        // The store owns the request; transient SwiftUI task cancellation only
+        // cancels a waiter, not the shared catalog load.
+        let task = Task {
+            defer { loadingLibrary = false; libraryTask = nil }
+            do {
+                items = try await libraryLoader()
+                hasLibrary = true
+            } catch is CancellationError { }
+            catch let error as URLError where error.code == .cancelled { }
+            catch { libraryError = error.localizedDescription }
+        }
+        libraryTask = task
+        await task.value
     }
 
     func loadLessons(force: Bool = false) async {
-        guard !loadingLessons, force || !hasLessons else { return }
+        if let lessonsTask { await lessonsTask.value; return }
+        guard force || !hasLessons else { return }
         loadingLessons = true; lessonsError = nil
-        defer { loadingLessons = false }
-        do {
-            lessons = try await api.lessons()
-            hasLessons = true
-        } catch is CancellationError { }
-        catch let error as URLError where error.code == .cancelled { }
-        catch { lessonsError = error.localizedDescription }
+        let task = Task {
+            defer { loadingLessons = false; lessonsTask = nil }
+            do {
+                lessons = try await lessonsLoader()
+                hasLessons = true
+            } catch is CancellationError { }
+            catch let error as URLError where error.code == .cancelled { }
+            catch { lessonsError = error.localizedDescription }
+        }
+        lessonsTask = task
+        await task.value
     }
 }

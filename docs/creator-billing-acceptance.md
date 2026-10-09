@@ -1,162 +1,100 @@
 # Creator Billing Acceptance
 
-## Later Parent And Test-Lane Evidence
+## Current Acceptance
 
-At 06:42:37 UTC both Google `monthly` base plans were activated and read back
-as **ACTIVE**, with the approved US-only USD9.99/USD29.99 monthly configuration.
-Musia public and owner-test checkout remain off. This changed no app release.
-Private receipt: `store/.runtime/creator-google-catalog/activation-readback.json`.
-The guarded catalog tool reconciles existing ACTIVE plans without repeating
-activation and accepts an empty HTTP 204 only for the provider's offers-list GET.
+As of **2026-10-09, 08:21 UTC**, Play-installed Android **0.2.0 (6)** has
+completed real Google no-charge test purchases for **Creator and Studio**.
+Both purchases were independently provider-verified, acknowledged and bound to
+the intended Musia owner. The live server durably stored each verified
+entitlement; neither came from a pilot grant.
 
-October 9: both actual Apple subscription products appear in the native iOS
-simulator account screen. No purchase was attempted. macOS 0.2.0 (7) is now
-available in internal TestFlight; iOS upload is pending. Google Console License
-testing was inspected through the existing authorized session: the configured
-Musia self-tester is a member of a selected list, and selection persisted after
-reload. Protected receipt: `store/.runtime/creator-license-testing-20261009/result.json`.
-No license settings were changed. The newly owned tab was closed and peer tabs
-preserved. Enrollment is no longer a blocker, but the installing Play account,
-storefront, actual no-charge instrument and purchase lifecycle still need proof.
+The parent closed Google's temporary owner-test checkout gate at
+**08:21:09 UTC**. `test_sales_enabled=false`, public `sales_enabled=false`, and
+live capabilities report `salesEnabled=false`. The gate receipt retains
+`environment=test` and `qualified=false`: these bounded cases do not enable
+public billing or establish complete production qualification. Apple checkout
+remains disabled. Existing formal app reviews are unchanged.
 
-The earlier read-only checkpoint below is retained as dated evidence, not a
-claim that products or license enrollment remain unverified.
+### Observed Google Cases
 
-## Earlier Checkpoint
-
-Read-only checkpoint: 2026-10-09, 05:46-05:50 UTC (13:46-13:50 HKT).
-App `6816265930`; bundle/package `art.lazying.musia`. **Not accepted yet:**
-no actual Musia provider purchase, restore, or renewal was exercised here.
-No purchase, activation, credential change, native edit, browser/device action,
-upload, review change, or commit was performed.
-
-## Verified State
-
-Live `/creator/api/capabilities` reports Free 2, Creator 20 at USD9.99,
-Studio 80 at USD29.99 per month; `salesEnabled=false`. Central login is
-password-only: Apple/Google/GitHub login providers are false. These login
-providers are independent of native store billing.
-
-| Store product | Actual saved US monthly price | Provider state |
+| Case | Creator | Studio |
 | --- | --- | --- |
-| Apple `art.lazying.musia.creator.monthly` | USD9.99 | `MISSING_METADATA` |
-| Apple `art.lazying.musia.studio.monthly` | USD29.99 | `MISSING_METADATA` |
-| Google `musia_creator`, base plan `monthly` | USD9.99 | `DRAFT` |
-| Google `musia_studio`, base plan `monthly` | USD29.99 | `DRAFT` |
+| No-charge purchase | Native test sheet, always-approves test card and privately matched licensed billing account; no real payment method | Same checks; separate purchase after Creator expired, not an upgrade or parallel subscription |
+| Verified delivery | Active test entitlement, owner binding and acknowledgement confirmed at 07:59; native allowance uses `verified_subscription` | Active test entitlement, owner binding and acknowledgement confirmed at 08:09; native verified delivery observed |
+| Actual renewal | Provider expiry advanced by 300 seconds at 08:00 | Provider expiry advanced by 300 seconds in the 08:15 readback |
+| Relaunch and restore | Clean relaunch preserved the session; native restore without another purchase brought server expiry into agreement by 08:02 | A separate Studio relaunch/restore case is not established by these receipts |
+| Cancellation and expiry | Google UI cancellation observed; provider expired at 08:05; native restore showed Free and server ledger was expired by 08:07 | Google UI cancellation observed at 08:19; native returned to Free with an empty owned query; provider and server both expired in the 08:21 readback |
 
-Apple price proof is fresh GET `/v1/subscriptions/{id}/prices` with
-`filter[territory]=USA&include=subscriptionPricePoint,territory`: each saved
-price's relationship resolves to `customerPrice=9.99` or `29.99`, respectively,
-and included territory `USA` has `currency=USD`. Each has one current record,
-`startDate=null`, `preserved=false`, `planType=UPFRONT`; pagination is complete.
-This is not the catalog tool's `approvedUSD` label or `usPriceCount` alone.
-Google GET `/applications/art.lazying.musia/subscriptions/{product}` returns
-`P1M`, US-only regional configuration, USD units 9/29 plus nanos 990000000.
-`newSubscriberAvailability=true` does not override the base plan's `DRAFT` state.
+The first renewal readbacks still showed the prior server expiry. Creator's
+later restore establishes propagation; Studio's final receipt establishes
+matching expired provider/server state, not an independently verified
+active-state restore. Both native return-to-Free observations had no unresolved
+ownership notice or new purchase. The Play Billing Lab US override did not
+change the real account country. Catalog visibility, license enrollment and
+internal distribution alone were not treated as no-charge purchase proof.
 
-Apple's **confirmed missing field is the App Review screenshot on both
-subscriptions**: GET `/v1/subscriptions/{id}/appStoreReviewScreenshot` succeeds
-with `data=null`. Both have reference/product names, `ONE_MONTH`, review notes,
-en-US display names/descriptions, saved prices and USA availability. The group
-has its en-US display name; Studio level 1 and Creator level 2 are set.
-Screenshot absence explains a concrete review-metadata gap, not an exhaustive
-Apple validation result. Capture the real native paywall, upload it separately
-to each product's Review Information, then read the status again under separate
-authorization. [Apple review screenshot definition](https://developer.apple.com/help/app-store-connect/reference/in-app-purchases-and-subscriptions/in-app-purchase-information/).
+### Protected Evidence
 
-Do not make review readiness an invented sandbox gate: Apple's minimum sandbox
-product setup is reference name, product ID, localized name and price, alongside
-active membership and the Paid Applications Agreement. Product lookup on the
-actual Musia build and current agreement status remain unverified here.
-[Apple sandbox preparation](https://developer.apple.com/documentation/storekit/testing-in-app-purchases-with-sandbox?changes=_1).
+These dated receipts are private and Git-ignored. Do not copy tokens, account
+identities, transaction/order identifiers or raw provider receipts into docs.
 
-## Accounts And Blockers
+- Creator: [purchase](../store/.runtime/creator-google-billing-20261009/purchase-readback.json),
+  [renewal](../store/.runtime/creator-google-billing-20261009/renewed-readback.json),
+  [post-restore provider/server readback](../store/.runtime/creator-google-billing-20261009/post-restore-readback.json),
+  [native relaunch/restore](../store/.runtime/creator-play-readiness-20261009/native-relaunch-restore-renewal.json).
+- Creator expiry: [cancellation](../store/.runtime/creator-play-readiness-20261009/creator-cancellation.json),
+  [provider expiry](../store/.runtime/creator-google-billing-20261009/canceled-readback.json),
+  [server ledger](../store/.runtime/creator-play-readiness-20261009/creator-expired-ledger.json),
+  [native Free readback](../store/.runtime/creator-play-readiness-20261009/creator-expired-native-free.json).
+- Studio: [no-charge checkout](../store/.runtime/creator-play-readiness-20261009/studio-checkout-observation.json),
+  [purchase/delivery journal](../store/.runtime/creator-play-readiness-20261009/studio-checkout-journal.json),
+  [initial provider/server readback](../store/.runtime/creator-google-billing-20261009/studio-initial-readback.json),
+  [renewed provider expiry](../store/.runtime/creator-google-billing-20261009/studio-pre-renewal.json).
+- Studio expiry: [cancellation](../store/.runtime/creator-play-readiness-20261009/studio-cancellation.json),
+  [native Free readback](../store/.runtime/creator-play-readiness-20261009/studio-expired-native-free.json),
+  [final provider/server expiry](../store/.runtime/creator-google-billing-20261009/studio-post-cycle.json).
+- [Google test-gate closure](../store/.runtime/creator-google-billing-20261009/gate-disabled.json).
 
-- Apple GET `/v2/sandboxTesters` returns exactly one team tester: USA,
-  `interruptPurchases=false`, `MONTHLY_RENEWAL_EVERY_FIVE_MINUTES`. Its identity
-  matches `~/.config/aimemo/apple/sandbox-tester-20261003.json`; a password exists,
-  but its purpose is explicitly **AiMemo sandbox only**. This is not permission
-  to reuse it for Musia or change its settings/history. No credentials are copied.
-- Ordinary TestFlight purchases already use sandbox. A separate sandbox account
-  is needed for configurable sandbox controls, not as a prerequisite to an
-  initial TestFlight purchase. Default TestFlight renewal is daily, up to six
-  renewals. [Apple TestFlight guidance](https://developer.apple.com/help/app-store-connect/test-a-beta-version/testing-subscriptions-and-in-app-purchases-in-testflight/).
-- Apple build 7 lookup returned zero builds at 05:48 UTC. Signed 0.2.0 (7)
-  artifacts exist per `store/creator-apple-20261009.md`; the parent owns native
-  qualification/upload. Do not use the `.creatorqa` app as subscription proof.
-- Google's owning agent's saved Console receipt at 05:46:37 UTC reports
-  0.2.0 (6) available to internal testers. This investigation did not drive its
-  tab or verify installation. Protected evidence:
-  `store/.runtime/creator-android/play-code6-console/11-internal-reloaded.json`.
-- Saved Google tester metadata in
-  `~/.config/echomind/private/google-play-tester.json` matches Musia's configured
-  internal owner, but is scoped to EchoMind sign-in. Neither that match nor a
-  saved internal-test list named "license testers" proves license enrollment.
-  No confirmed license-testing selection was found in the inspected evidence;
-  no new provider account access was attempted.
-- Local `~/.config/musia/creator-runtime/billing.json` has both providers in
-  `test`, reconciliation enabled, one test owner each, `qualified=false`,
-  `sales_enabled=false`, `test_sales_enabled=false`, and no
-  `no_charge_test_setup`. Referenced keys/certificates exist and are owner-only.
-  Read-only SQLite inspection found zero subscriptions/verification operations;
-  each allowlisted Musia user is active, invited, on current terms and has no
-  active pilot grant. Account IDs and secrets are intentionally omitted.
+## Acceptance Limits
 
-## Next Authorized Test
+These results do **not** establish upgrades/downgrades, refunds/revocation,
+every account-switch or duplicate-purchase case, or Apple purchase/renewal/
+restore acceptance. Studio followed an expired Creator subscription; it is not
+upgrade evidence. No refund was requested in the documented Creator cancellation.
+Further financial cases require their own authorization and exact provider,
+environment, owner, native-delivery and durable-server evidence. Unknown purchase
+outcomes require reconciliation, never a blind second purchase.
 
-These are future operator steps, **not actions authorized or executed by this
-investigation**. Keep public sales closed and preserve existing formal reviews.
+Apple's native product lookup and completed review screenshots are catalog and
+metadata evidence only. Both screenshots are COMPLETE with exact ownership and
+checksums, while the inspected API still reports `MISSING_METADATA` without a
+specific remaining required field. Names/descriptions, group localization,
+monthly prices, USA availability and review notes were present. Business
+agreement status and subscription UI warnings remain **unobserved**; the closed
+login inspection is not a diagnosed billing or sandbox blocker. It does not
+establish a need for another account or a review mutation. See the protected
+[metadata findings](../store/.runtime/creator-apple-20261009/subscription-missing-metadata-findings.json)
+and [closed UI inspection](../store/.runtime/creator-apple-20261009/business-ui-readonly/result.json).
 
-1. **Apple:** parent qualifies/uploads the existing signed artifact and confirms
-   the exact platform/build in TestFlight. Install on an exclusively assigned
-   device, use a US storefront, sign into Musia through central password login,
-   and verify both real StoreKit products/prices. Ordinary TestFlight testing
-   needs no owner-account sign-out. For accelerated tests, first obtain scoped
-   reuse approval or create a Musia-specific US tester at App Store Connect >
-   Users and Access > Sandbox > +, using an email not already an Apple Account.
-   [Sandbox account setup](https://developer.apple.com/help/app-store-connect/test-in-app-purchases/create-a-sandbox-apple-account/).
-   On a dedicated iOS device, install TestFlight first; for sandbox controls only,
-   sign out of Media & Purchases and sign into Settings > Developer > Sandbox
-   Apple Account. Do not do this on the shared device without its owner's approval.
-   [Device setup](https://developer.apple.com/documentation/storekit/testing-in-app-purchases-with-sandbox?changes=_1).
-2. **Google:** ask the lane owner to read Play Console > Settings > License
-   testing and confirm the exact installing account is selected. Add it only
-   with authorization. Publishing-account automatic eligibility is a documented
-   alternative, but that account identity was not established here.
-   [License setup](https://support.google.com/googleplay/android-developer/answer/6062777?hl=en).
-   Separately authorize activation of both `monthly` base plans; `DRAFT` is not
-   purchasable. Activation affects the app's catalog, not just its internal
-   track, so retain Musia's server purchase gates. Read back `ACTIVE`, use the
-   US Play storefront and install code 6 through the existing internal opt-in.
-   [Base-plan states](https://developers.google.com/android-publisher/api-ref/rest/v3/monetization.subscriptions).
-3. **Backend:** after the no-charge setup is established, the parent may enable
-   only that provider's `test_sales_enabled` plus `no_charge_test_setup`, keeping
-   `environment=test`, explicit `test_owners`, reconciliation on and public
-   `sales_enabled=false`. Confirm fresh per-owner purchase capability; do not
-   bypass it with a debug client or pilot entitlement.
-4. **Purchase once:** on Apple require the exact Musia product and explicit
-   TestFlight/sandbox no-charge context. On Google require the exact account,
-   test-purchase notice and "Test instrument, always approves"; never select a
-   real payment method. Internal testing alone can charge real money. Monthly
-   Google test renewal is approximately five minutes.
-   [Google billing tests](https://developer.android.com/google/play/billing/test).
-5. **Acceptance evidence:** native delivery must call the normal
-   `/creator/api/billing/verify` with its actual transaction ID/purchase token.
-   Independently fetch fresh provider truth: correct app/product, test environment,
-   owner binding, active state and expiry; confirm durable delivery and Google
-   acknowledgement. `/api/me` must show limit 20/80 and
-   `usage.source=verified_subscription`, not a grant. Reopen/relaunch and restore
-   without another purchase; then capture an actual renewal and updated expiry.
-   Qualify each tier, cancellation/paid-through expiry, refund/revocation and
-   intended upgrade behavior separately before claiming lifecycle completion.
-   Current server purchase capability blocks accounts with unresolved ownership;
-   do not force a second subscription to manufacture upgrade evidence.
+## Historical Checkpoints
 
-Keep transaction/account identifiers and raw receipts in protected Musia
-evidence. Local StoreKit fixtures, synthetic-token HTTP errors, catalog reads,
-TEST notifications and another app's successful purchase cannot close these cases.
+These superseded observations are not current prerequisites or open work:
 
-Sources inspected: `musia/creator/billing*.py`, both `tools/store/creator_*catalog.py`
-tools, protected catalog journals, and the canonical private subscription guide
-`LazyingArtLinkPrivate/docs/subscriptions/echomind-handoff-20261004.md`.
-No native runtime, build, GUI stack or regression suite was started by this lane.
+- **05:46-05:50 UTC:** the read-only checkpoint had no actual Musia purchase,
+  restore or renewal evidence; Google plans were DRAFT and Apple review
+  screenshots were absent. All predate the evidence above.
+- **06:06 UTC:** the configured Google license tester was verified in the
+  selected Console list:
+  [license check](../store/.runtime/creator-license-testing-20261009/result.json).
+- **06:42:37 UTC:** both approved US-only monthly plans became ACTIVE at
+  USD9.99/USD29.99 with checkout gates off:
+  [activation readback](../store/.runtime/creator-google-catalog/activation-readback.json).
+  The later temporary test-gate opening and its 08:21 closure are separate events.
+- **07:30 UTC onward:** the readiness lane established the Play installation.
+  An initial disabled Subscribe control was a BillingClient ownership-check/
+  reconnection problem, not a failed payment. Fresh checks subsequently enabled
+  checkout. See the [Play installation](../store/.runtime/creator-play-readiness-20261009/play-installed-readback.json)
+  and [connection diagnostic](../store/.runtime/creator-play-readiness-20261009/billing-client-diagnostic.json).
+
+This reconciliation changed documentation only. It did not execute a purchase,
+change a checkout gate, alter a store catalog or modify a formal review.

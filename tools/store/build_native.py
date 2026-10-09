@@ -14,6 +14,14 @@ import zipfile
 
 from storelib import BUNDLE, ROOT, RUNTIME, TEAM, config, digest, lock, now, private_dir, private_file, release, require, run, source_sha, write_private
 
+WATCH_BUNDLE = BUNDLE + ".watchkitapp"
+
+
+def includes_watch(r):
+    # Build 8 remains inspectable while the first companion release is prepared.
+    require(str(r["ios_build"]).isdigit(), "Invalid iOS build selector")
+    return int(r["ios_build"]) >= 9
+
 
 def android_config(cfg):
     home = Path(cfg["java_home"])
@@ -65,11 +73,12 @@ def decode_profile(path):
     return plistlib.loads(data)
 
 
-def check_profile(profile, cfg):
+def check_profile(profile, cfg, bundle_id=BUNDLE):
     import datetime as dt
+    require(bundle_id in {BUNDLE, WATCH_BUNDLE}, "Unexpected provisioning bundle")
     require(profile.get("TeamIdentifier") == [TEAM], "Provisioning team mismatch")
     ent = profile["Entitlements"]
-    require(ent.get("application-identifier") == TEAM + "." + BUNDLE, "Provisioning is not Musia-specific")
+    require(ent.get("application-identifier") == TEAM + "." + bundle_id, "Provisioning is not Musia-specific")
     require(ent.get("get-task-allow") is False and not profile.get("ProvisionedDevices")
             and not profile.get("ProvisionsAllDevices"), "Not App Store distribution provisioning")
     expiry = profile["ExpirationDate"].replace(tzinfo=dt.timezone.utc)
@@ -77,6 +86,68 @@ def check_profile(profile, cfg):
     hashes = [hashlib.sha1(c).hexdigest().upper() for c in profile["DeveloperCertificates"]]
     require(hashes == [cfg["apple_certificate_sha1"]], "Provisioning certificate mismatch")
     return profile
+
+
+def ios_profiles(cfg, r):
+    keys = {BUNDLE: "apple_profile_path"}
+    if includes_watch(r):
+        keys[WATCH_BUNDLE] = "apple_watch_profile_path"
+    profiles = {}
+    for bundle, key in keys.items():
+        require(bool(cfg.get(key)), "Configure the approved " + key + "; no automatic provisioning")
+        path = private_file(cfg[key])
+        profiles[bundle] = (path, check_profile(decode_profile(path), cfg, bundle))
+    return profiles
+
+
+def check_watch_info(info, r):
+    require(info.get("CFBundleIdentifier") == WATCH_BUNDLE
+            and info.get("CFBundleShortVersionString") == r["version"]
+            and info.get("CFBundleVersion") == str(r["ios_build"]), "Watch identity/version mismatch")
+    require(info.get("WKApplication") is True and info.get("WKCompanionAppBundleIdentifier") == BUNDLE
+            and info.get("WKRunsIndependentlyOfCompanionApp") is False
+            and not info.get("WKWatchOnly") and "NSExtension" not in info, "Expected a single-target iPhone companion")
+    require(info.get("UIDeviceFamily") == [4] and info.get("CFBundleSupportedPlatforms") == ["WatchOS"]
+            and info.get("MinimumOSVersion") in {"10.0", "10.0.0"}, "Unexpected watchOS platform/deployment target")
+    require(not any(key.endswith("UsageDescription") for key in info)
+            and not info.get("UIBackgroundModes") and not info.get("WKBackgroundModes")
+            and "NSAppTransportSecurity" not in info, "Unexpected Watch permission/background capability")
+
+
+def embedded_watch(app, r):
+    expected = app / "Watch/MusiaWatch.app"
+    nested = set(app.rglob("*.app"))
+    require(nested == ({expected} if includes_watch(r) else set())
+            and not list(app.rglob("*.appex")), "Unexpected embedded app/extension")
+    if not includes_watch(r):
+        return None
+    require(expected.is_dir() and not list(expected.rglob("MusiaCore.framework")),
+            "Watch must not embed the iOS MusiaCore framework")
+    info = plistlib.loads((expected / "Info.plist").read_bytes())
+    check_watch_info(info, r)
+    executable = info.get("CFBundleExecutable")
+    require(isinstance(executable, str) and bool(executable) and Path(executable).name == executable
+            and (expected / executable).is_file(), "Watch executable missing/invalid")
+    return expected
+
+
+def inspect_ios_signature(app, cfg, bundle_id, certificate_prefix):
+    run(["/usr/bin/codesign", "--verify", "--deep", "--strict", app])
+    entitlements = plistlib.loads(run(["/usr/bin/codesign", "-d", "--entitlements", ":-", app]))
+    require(entitlements.get("application-identifier") == TEAM + "." + bundle_id
+            and entitlements.get("com.apple.developer.team-identifier") == TEAM
+            and not entitlements.get("get-task-allow", False), "Actual signed entitlements mismatch")
+    if bundle_id == WATCH_BUNDLE:
+        require(set(entitlements) <= {"application-identifier", "com.apple.developer.team-identifier",
+                                      "get-task-allow", "beta-reports-active", "keychain-access-groups"}
+                and set(entitlements.get("keychain-access-groups", [])) <= {TEAM + "." + WATCH_BUNDLE},
+                "Unexpected Watch signing capability")
+    profile = check_profile(decode_profile(app / "embedded.mobileprovision"), cfg, bundle_id)
+    # Check each actual signing leaf, not just certificates permitted by its profile.
+    run(["/usr/bin/codesign", "-d", "--extract-certificates=" + str(certificate_prefix), app])
+    require(hashlib.sha1(Path(str(certificate_prefix) + "0").read_bytes()).hexdigest().upper()
+            == cfg["apple_certificate_sha1"], "IPA signer differs from the pinned account distribution certificate")
+    return {"profile_uuid": profile["UUID"], "certificate_sha1": cfg["apple_certificate_sha1"]}
 
 
 def inspect_ios(artifact, cfg):
@@ -102,19 +173,12 @@ def inspect_ios(artifact, cfg):
                                            "NSSpeechRecognitionUsageDescription", "NSPhotoLibraryUsageDescription")),
                 "Unexpected capture permission")
         require(set(info.get("UIBackgroundModes", [])) <= {"audio"}, "Unexpected background capability")
-        require(not list(app.glob("PlugIns/*.appex")) and not list(app.glob("Watch/*.app")), "Unexpected embedded app/extension")
-        run(["/usr/bin/codesign", "--verify", "--deep", "--strict", app])
-        entitlements = plistlib.loads(run(["/usr/bin/codesign", "-d", "--entitlements", ":-", app]))
-        require(entitlements.get("application-identifier") == TEAM + "." + BUNDLE
-                and entitlements.get("com.apple.developer.team-identifier") == TEAM
-                and not entitlements.get("get-task-allow", False), "Actual signed entitlements mismatch")
-        profile = check_profile(decode_profile(app / "embedded.mobileprovision"), cfg)
-        # Compare the actual signing leaf, not just the allowed profile certificate.
-        prefix = root / "signer"
-        run(["/usr/bin/codesign", "-d", "--extract-certificates=" + str(prefix), app])
-        require(hashlib.sha1(Path(str(prefix) + "0").read_bytes()).hexdigest().upper() == cfg["apple_certificate_sha1"],
-                "IPA signer differs from the pinned account distribution certificate")
-        return {"profile_uuid": profile["UUID"], "certificate_sha1": cfg["apple_certificate_sha1"]}
+        watch = embedded_watch(app, r)
+        identity = inspect_ios_signature(app, cfg, BUNDLE, root / "signer")
+        if watch is not None:
+            identity["watch"] = dict(inspect_ios_signature(watch, cfg, WATCH_BUNDLE, root / "watch-signer"),
+                                     bundle_id=WATCH_BUNDLE, version=r["version"], build_number=str(r["ios_build"]))
+        return identity
 
 
 def build(platform, execute=False):
@@ -153,30 +217,34 @@ def build(platform, execute=False):
             identity.update(qa_apk=str(apk), qa_apk_sha256=digest(apk))
         else:
             require(sys.platform == "darwin", "Build iOS on echomind-kvm-macos only")
-            profile_path = private_file(cfg["apple_profile_path"])
-            profile = check_profile(decode_profile(profile_path), cfg)
+            profiles = ios_profiles(cfg, r)
             keychain = private_file(cfg["apple_keychain"])
             identities = run(["/usr/bin/security", "find-identity", "-v", "-p", "codesigning", keychain]).decode()
             require(cfg["apple_certificate_sha1"] in identities, "Configured signing identity unavailable; no shared keychain changes made")
             for directory in (Path.home() / "Library/MobileDevice/Provisioning Profiles",
                               Path.home() / "Library/Developer/Xcode/UserData/Provisioning Profiles"):
                 directory.mkdir(parents=True, exist_ok=True)
-                target = directory / (profile["UUID"] + ".mobileprovision")
-                require(not target.exists() or digest(target) == digest(profile_path), "Existing profile differs; no overwrite")
-                if not target.exists():
-                    shutil.copyfile(profile_path, target)
-                    os.chmod(target, 0o600)
+                for profile_path, profile in profiles.values():
+                    target = directory / (profile["UUID"] + ".mobileprovision")
+                    require(not target.exists() or digest(target) == digest(profile_path), "Existing profile differs; no overwrite")
+                    if not target.exists():
+                        shutil.copyfile(profile_path, target)
+                        os.chmod(target, 0o600)
             env = dict(os.environ, DEVELOPER_DIR=cfg["xcode_developer_dir"])
             archive = output / "Musia.xcarchive"
+            signing = ["MUSIA_APP_PROFILE=" + profiles[BUNDLE][1]["Name"]]
+            if WATCH_BUNDLE in profiles:
+                signing.append("MUSIA_WATCH_PROFILE=" + profiles[WATCH_BUNDLE][1]["Name"])
             run(["/usr/bin/xcodebuild", "-project", ROOT / "apps/ios/Musia.xcodeproj", "-scheme", "Musia",
                  "-configuration", "Release", "-destination", "generic/platform=iOS", "-jobs", "2",
                  "-derivedDataPath", output / "DerivedData", "-archivePath", archive,
                  "DEVELOPMENT_TEAM=" + TEAM, "CODE_SIGN_STYLE=Manual", "CODE_SIGN_IDENTITY=" + cfg["apple_certificate_sha1"],
-                 "MUSIA_APP_PROFILE=" + profile["Name"], "MARKETING_VERSION=" + r["version"],
+                 *signing, "MARKETING_VERSION=" + r["version"],
                  "CURRENT_PROJECT_VERSION=" + number, "OTHER_CODE_SIGN_FLAGS=--keychain " + str(keychain), "archive"],
                 cwd=ROOT, env=env, log=output / "archive.log")
             options = {"method": "app-store-connect", "teamID": TEAM, "signingStyle": "manual",
-                       "signingCertificate": cfg["apple_certificate_sha1"], "provisioningProfiles": {BUNDLE: profile["Name"]},
+                       "signingCertificate": cfg["apple_certificate_sha1"],
+                       "provisioningProfiles": {bundle: profile["Name"] for bundle, (_, profile) in profiles.items()},
                        "manageAppVersionAndBuildNumber": False}
             write_private(output / "ExportOptions.plist", plistlib.dumps(options))
             run(["/usr/bin/xcodebuild", "-exportArchive", "-archivePath", archive, "-exportOptionsPlist",

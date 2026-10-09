@@ -12,7 +12,7 @@ may omit Origin. Never embed confidential issuer/provider keys.
 - The live invitation-gated pilot uses registered `musia-server` shared password
   sign-in at `https://musia.lazying.art/creator/`. Apple, Google and GitHub are
   centrally unavailable. Active creator app/relay release:
-  `195577afad66325019362828f3206d0b164a15f5f8c167d02a7409a725e11016`.
+  `9fc0fcad53db5fb3bfef65c866c31f56dad6792ee7c732b0f6b8226f04bdcf94`.
   The edge remains on `421bd8c4...` with identical guard/policy bytes; exact
   component hashes are in [deployment status](creator-deployment.md).
 - Real native PKCE protocol roundtrips passed for `apple` and `android`, including
@@ -22,14 +22,19 @@ may omit Origin. Never embed confidential issuer/provider keys.
   `PLAYING` at 9008 ms; sign-out cleared private playback. Android native UI and
   library/Stage regression passed against the signed QA APK bound to the exact
   0.2.0 (6) AAB. That build is **available to internal testers**, with the one
-  existing owner tester verified. No Play installation, physical-device listening,
-  audible emulator output or purchase is proven.
+  existing owner tester verified. A later actual Play installation of code 6,
+  native login, real no-charge Creator purchase, server verification and restore,
+  and Google test renewal passed. Physical-device listening and audible emulator
+  output are not established.
   [Exact artifact and delivery evidence](../store/creator-android-20261009.md).
-- SwiftUI and Compose creator/account/billing clients exist. Mac 0.2.0 (7) is
-  available in internal TestFlight. Real iOS browser sign-in, protected-session
-  relaunch and app-specific product lookup passed. Private playback testing
-  found the mini-player missing on pushed Apple song pages, so build 8 is being
-  requalified with a navigation-stack correction. Current artifacts, delivery
+- SwiftUI and Compose creator/account/billing clients exist. Latest internal
+  releases are Apple 0.2.0 (9), including Watch, and Android 0.2.0 (7), with
+  chat-first Agent and synchronized Studio. The preceding iOS build-8 source passed real browser
+  sign-in, protected-session relaunch, app-specific product lookup and private
+  playback. Tests verify the mini-player clears all tabs on root, detail and
+  reopened pages, audio advances, and logout clears private playback. Eighteen
+  native screenshots were directly reviewed. Both iOS and Mac 0.2.0 (8) are
+  VALID / IN_BETA_TESTING in the owner group. Current artifacts, delivery
   and test limitations are in [Apple evidence](../store/creator-apple-20261009.md).
 - A real synthetic user completed live registration, login, consent, invitation
   and terms, a `deepseek-v4-pro` draft, a 90-second ACE XL Turbo render, large-v3
@@ -41,10 +46,13 @@ may omit Origin. Never embed confidential issuer/provider keys.
   playback, likes/saves, comment moderation/deletion, report resolution and
   unsharing. The temporary public synthetic QA song was returned to private.
 - Apple/Google products match the US$9.99/US$29.99 targets. Google base plans
-  are ACTIVE; Apple review metadata is being completed. App-specific
-  test verification and restore configuration is connected, with key paths
-  validated; sales and test checkout are both off. No real Musia sandbox
-  purchase has passed. This is not a public paid service.
+  are ACTIVE; both Apple review screenshots are COMPLETE. Google Creator and
+  Studio completed separate no-charge purchases, verified owner-bound delivery,
+  renewal and cancellation/expiry. By 08:21 UTC both provider and server records
+  were expired. The temporary Google owner-test checkout gate is now closed;
+  public sales remain off. Apple billing, upgrades, refunds and the remaining
+  financial cases are not qualified; see
+  [billing acceptance](creator-billing-acceptance.md). This is not a public paid service.
 
 Main learning release
 `9dd15fbe0e9677284c2e94deecb763bc350f50bad6f98425e6ede0124e0eac08`
@@ -222,8 +230,15 @@ existing playback, multilingual lyrics, practice, icon and Settings/History
 intact. Use no WebView.
 No native debug backend bypass in release. Preserve current formal reviews and
 Google production 3 (0.1.2), held under managed publishing. Android 0.2.0 (6) is
-already delivered for internal testing; Apple 0.2.0 (7) remains unuploaded.
+already delivered for internal testing, as are Apple 0.2.0 (8) builds.
 Internal distribution does not qualify the new surface for production.
+
+The delivered native test updates use chat-first **Agent** and structured **Studio**
+tabs, sharing one draft and bounded conversation history. Manual changes made
+while an agent request is running win over its response. Render confirmation
+remains separate. Local per-account conversations are not server-synchronized
+between devices. The iOS build embeds a native Apple Watch companion; see
+[implementation and qualification](creator-agent-studio-watch.md).
 
 ### Apple Source Notes and Test Intent
 
@@ -256,10 +271,12 @@ persistence, filesystem cleanup or actual device playback. These source notes
 do **not** claim the new XCTest cases or final native QA passed; exact-artifact
 results and remaining qualification belong in the Apple evidence record above.
 
-Remaining qualification includes Android Play-installed execution and audible
-output, Apple native UI sign-in/private playback, remaining cold/warm return
-and account-switch/expiry cases, the complete native creation journey, and real
-Musia sandbox purchases, restore, renewal, cancellation and refund/revocation.
+Remaining qualification includes physical audible output, remaining cold/warm
+return and account-switch/expiry cases, the complete native creation journey,
+Apple sandbox purchases and untested Google financial cases. Apple sign-in and
+private playback, Android Play installation and the documented Google
+purchase/renewal/expiry cycles have passed; do not turn historical limitations
+into current blockers.
 The passed exact-build Android UI/library and sign-out checks do not close these
 other gates. Keep sales and test checkout disabled; do not reupload internal 6
 or treat its availability as a public paid creator launch.

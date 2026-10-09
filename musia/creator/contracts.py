@@ -39,14 +39,27 @@ class Draft(Brief):
     caption: str = Field(default="", max_length=1600)
 
 
+class ChatMessage(RequestModel):
+    role: Literal["user", "assistant"]
+    content: str = Field(min_length=1, max_length=4000)
+
+
 class Chat(RequestModel):
     message: str = Field(min_length=1, max_length=4000)
     brief: Draft | None = None
+    history: list[ChatMessage] = Field(default_factory=list, max_length=12)
+
+    @field_validator("history")
+    @classmethod
+    def bounded_history(cls, value):
+        if sum(len(item.content) for item in value) > 16000:
+            raise ValueError("Conversation context is too long")
+        return value
 
 
 class AgentReply(RequestModel):
     message: str = Field(min_length=1, max_length=1600)
-    brief: Brief
+    brief: Draft
 
 
 class Visibility(RequestModel):

@@ -37,16 +37,30 @@ public struct CreatorBrief: Codable, Equatable, Sendable {
     public var bpm = 100
     public var key = "C major"
     public init() {}
-    public var isRenderable: Bool {
+    public var isValidDraft: Bool {
         // Pydantic counts Unicode code points, not graphemes or UTF-16 units.
         let lengthsValid = title.unicodeScalars.count <= 120 && idea.unicodeScalars.count <= 4000
             && lyrics.unicodeScalars.count <= 6000 && caption.unicodeScalars.count <= 1600
         let keyValid = key.range(of: #"^[A-G](?:#|b)? (?:major|minor)$"#, options: .regularExpression)
             == (key.startIndex..<key.endIndex)
         return lengthsValid && keyValid
-        && [title, lyrics, caption].allSatisfy { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
         && ["en", "zh", "ja", "mixed"].contains(language)
         && (30...180).contains(duration) && (40...200).contains(bpm)
+    }
+    public var isRenderable: Bool {
+        isValidDraft && [title, lyrics, caption].allSatisfy { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+    }
+}
+
+public struct CreatorChatMessage: Codable, Equatable, Sendable {
+    public let role: String
+    public let content: String
+    public init(role: String, content: String) { self.role = role; self.content = content }
+    public static func bounded(_ input: [Self]) -> [Self] {
+        var result = Array(input.filter { ["user", "assistant"].contains($0.role) && !$0.content.isEmpty }
+            .map { Self(role: $0.role, content: String(String.UnicodeScalarView($0.content.unicodeScalars.prefix(4000)))) }.suffix(12))
+        while result.reduce(0, { $0 + $1.content.unicodeScalars.count }) > 16000 { result.removeFirst() }
+        return result
     }
 }
 
@@ -57,7 +71,23 @@ public struct CreatorAgentReply: Decodable {
 public struct CreatorAgentRequest: Encodable {
     public let message: String
     public let brief: CreatorBrief
-    public init(message: String, brief: CreatorBrief) { self.message = message; self.brief = brief }
+    public var history: [CreatorChatMessage]
+    public init(message: String, brief: CreatorBrief, history: [CreatorChatMessage] = []) {
+        self.message = message; self.brief = brief; self.history = CreatorChatMessage.bounded(history)
+    }
+    public func boundedBody() throws -> Data {
+        guard !message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+              message.unicodeScalars.count <= 4000, brief.isValidDraft else {
+            throw CreatorError.unavailable("The message or draft is invalid. Check the Studio fields.")
+        }
+        var request = self
+        while true {
+            let body = try JSONEncoder().encode(request)
+            if body.count <= 45000 { return body }
+            guard !request.history.isEmpty else { throw CreatorError.unavailable("The message and draft are too long. Shorten them and try again.") }
+            request.history.removeFirst()
+        }
+    }
 }
 
 public enum CreatorVisibility: String, Codable, CaseIterable, Sendable { case `private`, `public` }

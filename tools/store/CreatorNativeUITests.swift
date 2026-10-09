@@ -64,6 +64,51 @@ final class CreatorNativeUITests: XCTestCase {
     }
 
     @MainActor
+    func testAgentStudioWorkspace() throws {
+        let app = XCUIApplication()
+        app.launch()
+        defer { app.terminate() }
+        XCTAssertTrue(app.buttons["library.localFirstPulse"].waitForExistence(timeout: 30))
+        app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch.tap()
+        let workspace = app.segmentedControls["creator.workspace"]
+        XCTAssertTrue(workspace.waitForExistence(timeout: 15))
+        XCTAssertTrue(workspace.buttons["Agent"].isSelected)
+        XCTAssertTrue(app.textFields["Message Musia"].exists || app.textViews["Message Musia"].exists)
+        capture(app, "workspace-agent-default")
+        workspace.buttons["Studio"].tap()
+        let title = app.textFields["Title"]
+        tapVisible(title, in: app)
+        let original = title.value as? String ?? ""
+        let marker = "Workspace Test - Morning Light"
+        title.press(forDuration: 1.1)
+        if app.menuItems["Select All"].waitForExistence(timeout: 2) { app.menuItems["Select All"].tap() }
+        else {
+            title.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: original.count))
+        }
+        title.typeText(marker)
+        app.swipeDown()
+        let done = app.toolbars.buttons["Done"]
+        if done.exists { done.tap() }
+        capture(app, "workspace-studio-edit")
+        app.terminate()
+        app.launch()
+        let create = app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch
+        XCTAssertTrue(create.waitForExistence(timeout: 30))
+        create.tap()
+        XCTAssertTrue(workspace.waitForExistence(timeout: 15))
+        XCTAssertTrue(workspace.buttons["Agent"].isSelected)
+        XCTAssertTrue(text(app, containing: marker).waitForExistence(timeout: 20))
+        capture(app, "workspace-agent-restored")
+        workspace.buttons["Studio"].tap()
+        XCTAssertTrue(title.waitForExistence(timeout: 10))
+        XCTAssertEqual(title.value as? String, marker)
+        tapVisible(title, in: app)
+        title.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: marker.count))
+        if !original.isEmpty && original != "Title" { title.typeText(original) }
+        // No Send, render, purchase or public mutation is dispatched by this test.
+    }
+
+    @MainActor
     func testCreatorProducts() throws {
         let app = XCUIApplication()
         app.launch()
@@ -72,9 +117,14 @@ final class CreatorNativeUITests: XCTestCase {
         let create = app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch
         XCTAssertTrue(create.waitForExistence(timeout: 10))
         create.tap()
-        let account = app.buttons["Account & subscriptions"]
+        guard let fixtureURL = Bundle(for: Self.self).url(forResource: "creator-qa-fixture", withExtension: "json") else {
+            XCTFail("Private login fixture missing"); return
+        }
+        let fixture = try JSONDecoder().decode(LoginFixture.self, from: Data(contentsOf: fixtureURL))
+        let account = app.buttons.matching(NSPredicate(format: "label == %@ OR label == %@",
+            "Account & subscriptions", fixture.username)).firstMatch
         XCTAssertTrue(account.waitForExistence(timeout: 15))
-        account.tap()
+        tapVisible(account, in: app)
         XCTAssertTrue(app.buttons["Refresh account"].waitForExistence(timeout: 15))
         let lookup = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
             app.buttons["Subscribe to Musia Creator"].exists || app.buttons["Reload App Store prices"].exists
@@ -114,7 +164,28 @@ final class CreatorNativeUITests: XCTestCase {
         let create = app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch
         XCTAssertTrue(create.waitForExistence(timeout: 10))
         create.tap()
-        XCTAssertTrue(text(app, containing: "Make room for your next song").waitForExistence(timeout: 15))
+        XCTAssertTrue(app.segmentedControls["creator.workspace"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.segmentedControls["creator.workspace"].buttons["Agent"].isSelected)
+        let existingFixtureURL = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "creator-qa-fixture", withExtension: "json"))
+        let existingFixture = try JSONDecoder().decode(LoginFixture.self, from: Data(contentsOf: existingFixtureURL))
+        let retainedAccount = app.buttons[existingFixture.username]
+        if retainedAccount.waitForExistence(timeout: 15) {
+            capture(app, "creator-upgrade-session-preserved")
+            retainedAccount.tap()
+            XCTAssertTrue(text(app, containing: "Renders remaining").waitForExistence(timeout: 30))
+            capture(app, "creator-account-signed-in")
+            app.terminate()
+            app.launch()
+            let settings = app.buttons.matching(NSPredicate(format: "label == 'Settings'")).firstMatch
+            XCTAssertTrue(settings.waitForExistence(timeout: 30))
+            settings.tap()
+            let restored = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", existingFixture.username)).firstMatch
+            XCTAssertTrue(restored.waitForExistence(timeout: 15))
+            restored.tap()
+            XCTAssertTrue(text(app, containing: "Renders remaining").waitForExistence(timeout: 30))
+            capture(app, "creator-account-relaunched")
+            return
+        }
         XCTAssertTrue(text(app, containing: "Sign in to create").exists)
         capture(app, "creator-signed-out")
 
