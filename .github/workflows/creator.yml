@@ -1,9 +1,9 @@
 name: Creator Boundary
 on:
   pull_request:
-    paths: ['musia/creator/**', 'apps/web/creator/**', 'tools/creator.py', 'tests/test_creator.py', 'requirements-creator.txt', '.github/workflows/creator.yml']
+    paths: ['musia/creator/**', 'apps/web/creator/**', 'tools/creator.py', 'tests/test_creator*.py', 'requirements-creator.txt', 'requirements-learning.txt', '.github/workflows/creator.yml']
   push:
-    paths: ['musia/creator/**', 'apps/web/creator/**', 'tools/creator.py', 'tests/test_creator.py', 'requirements-creator.txt', '.github/workflows/creator.yml']
+    paths: ['musia/creator/**', 'apps/web/creator/**', 'tools/creator.py', 'tests/test_creator*.py', 'requirements-creator.txt', 'requirements-learning.txt', '.github/workflows/creator.yml']
 permissions:
   contents: read
 jobs:
@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '${{ matrix.python }}'
       - run: python -m pip install -r requirements-creator.txt
-      - run: python -m unittest discover -s tests -p test_creator.py
+      - run: python -m unittest discover -s tests -p 'test_creator*.py'
       - run: python -m unittest discover -s tests -p test_learning_api.py
       - uses: actions/setup-node@v4
         with:
