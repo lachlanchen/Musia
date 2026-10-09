@@ -1,0 +1,42 @@
+{
+  "mediaId": "aya-home-on-the-breeze",
+  "title": "ただいま、風のなか · Home on the Breeze",
+  "localizedTitles": {
+    "ja": "ただいま、風のなか",
+    "en": "Home on the Breeze",
+    "zh-Hans": "风中归来"
+  },
+  "project": "data/creative_projects/aya-home-on-the-breeze-20261009",
+  "audio": "data/creative_projects/aya-home-on-the-breeze-20261009/sweep-roomier/batch-100911-100912/a912f053-5cc8-1876-29b6-975b4fe667b2.wav",
+  "review": "ideas-and-inspirations/aya-home-on-the-breeze/reviewed-lyrics.json",
+  "analysis": "data/runs/aya-home-ja-100912",
+  "assetId": "aya-home-ja-100912",
+  "publicFilename": "aya-home-on-the-breeze-ja-seed100912-20261009.mp3",
+  "description": "A maple leaf tucked into a notebook, a suitcase full of stories, and someone waving beyond the station gates. Aya comes home from Canada to Japan, slips off her down coat, and finds joy in Chiba's cool breeze and a familiar voice saying welcome home.",
+  "caption": "ただいま。ダウンを脱いだら、君のいる街の風。",
+  "tags": [
+    "music",
+    "Japanese",
+    "J-pop",
+    "Aya Chan",
+    "Canada",
+    "Chiba",
+    "homecoming",
+    "joy",
+    "reunion",
+    "chords"
+  ],
+  "provenance": {
+    "model": "acestep-v15-xl-turbo",
+    "selectedSeed": 100912,
+    "modelRevision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+    "checkpointRevision": "d4a0b288b83ebb7e25a8c0b32c573c22e134e8ee",
+    "quality": {
+      "audioHealth": "pass",
+      "humanListeningApproved": false,
+      "timing": "Large-v3 word anchors cross-checked with vocal/full-mix no-VAD and focused windows; within-word and translation highlighting are approximate",
+      "musicalAnalysis": "Estimated from this selected audio, not a musician-verified score"
+    },
+    "coverSource": "Fresh built-in image generation: joyful seaside station reunion, down coat and suitcase, coral dress, sky-blue bay and sweeping white glass-roof architecture; no text"
+  }
+}

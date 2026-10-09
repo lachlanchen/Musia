@@ -1,0 +1,676 @@
+{
+  "mediaId": "aya-home-on-the-breeze",
+  "title": "ただいま、風のなか · Home on the Breeze",
+  "vocalSet": "ja-vocal",
+  "audioSha256": "419df5ffd45640f0567f7212d3edb18f7e4f328c02e3b319ae21710dec016b40",
+  "duration": 184,
+  "reviewStatus": "Native reference cross-checked with large-v3 full/stem VAD and no-VAD, focused windows, and independent MOSS vocal transcription. No human listening sign-off.",
+  "timingStatus": "Selected-render ASR word anchors; subdivision inside recognizer words and translation highlights are approximate.",
+  "notes": "The render omits あとひと眠りで, repeats ダウンを脱いで in chorus one, sings おかえり three times in the final chorus, and ends with three distinct ただいま entrances. Focused no-VAD recovers the two missed outro entrances and corrects the stretched final-line start. Preserve sound-close native source and intended 千葉 despite imperfect nasalized pronunciation. No instrumental or nonlexical opening syllables are lyric rows.",
+  "jaReadingOverrides": {
+    "君": "きみ",
+    "千葉": "ちば",
+    "涼しい": "すずしい",
+    "葉": "は",
+    "朝": "あさ",
+    "一言": "ひとこと",
+    "二人": "ふたり",
+    "二つ": "ふたつ",
+    "行く": "ゆく",
+    "脱い": "ぬい",
+    "脱いで": "ぬいで",
+    "手帳": "てちょう",
+    "改札": "かいさつ",
+    "深呼吸": "しんこきゅう",
+    "隣": "となり",
+    "暖かい": "あたたかい",
+    "膨らむ": "ふくらむ",
+    "分": "ぶん"
+  },
+  "sources": {
+    "full": {
+      "path": "data/creative_projects/aya-home-on-the-breeze-20261009/review/100912/correction/selected-large-v3-no-vad.json",
+      "sha256": "7d2f60cadb8712423b1e2abd9bb90d4b089fed1b3369c93ce7a4d266c0c80320"
+    },
+    "stem": {
+      "path": "data/creative_projects/aya-home-on-the-breeze-20261009/review/100912/correction/vocal-stem-large-v3-no-vad.json",
+      "sha256": "e01f6c15a64650bc2d1227b6b67f2c235d80eaae5f0d506779d6861f0831497d"
+    },
+    "focus": {
+      "path": "data/creative_projects/aya-home-on-the-breeze-20261009/review/100912/focused-flat.json",
+      "sha256": "21f20361d80102b272c7e61e2da831e75e344e5f4e6dbf23ed14a1eb6604eb98"
+    }
+  },
+  "lines": [
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 1,
+          "words": [
+            0,
+            8
+          ]
+        }
+      ],
+      "ja": "カナダの赤い葉を",
+      "en": "A red leaf from Canada",
+      "zh-Hans": "加拿大的一片红叶",
+      "replacements": [
+        {
+          "words": [
+            6,
+            7
+          ],
+          "source": "羽",
+          "text": "葉",
+          "reason": "Preserve the native reference for a sound-close recognizer substitution; surrounding wording and independent passes support the phrase."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 1,
+          "words": [
+            8,
+            13
+          ]
+        }
+      ],
+      "ja": "手帳にはさんで",
+      "en": "Pressed between my notebook pages",
+      "zh-Hans": "夹进手帐的书页里",
+      "replacements": [
+        {
+          "words": [
+            3,
+            5
+          ],
+          "source": "挟んで",
+          "text": "はさんで",
+          "reason": "Kana spelling of the same hasande pronunciation, matching the native reference."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 1,
+          "words": [
+            0,
+            8
+          ]
+        }
+      ],
+      "ja": "膨らむスーツケース",
+      "en": "My suitcase is bursting",
+      "zh-Hans": "行李箱装得鼓鼓的",
+      "zhPinyinOverrides": [{"index": 4, "text": "得", "pinyin": "de5"}],
+      "replacements": [
+        {
+          "words": [
+            3,
+            8
+          ],
+          "source": "スーツケース",
+          "text": "スーツケース",
+          "reason": "Merge the recognized word across its zero-duration long-vowel subtoken, preserving the enclosing ASR bounds."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 3
+        }
+      ],
+      "ja": "やっと閉めた朝",
+      "en": "The morning I finally zip it shut",
+      "zh-Hans": "这个早晨终于把它合上",
+      "replacements": [
+        {
+          "words": [
+            2,
+            3
+          ],
+          "source": "締",
+          "text": "閉",
+          "reason": "Preserve the native reference for a sound-close recognizer substitution; surrounding wording and independent passes support the phrase."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 4
+        }
+      ],
+      "ja": "君に会えるんだ",
+      "en": "I'm going to see you",
+      "zh-Hans": "就要见到你了"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 3
+        }
+      ],
+      "ja": "時計の針は違っても",
+      "en": "Though our clocks tell different times",
+      "zh-Hans": "虽然时钟指着不同的时间"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 4
+        }
+      ],
+      "ja": "帰りたい場所はひとつ",
+      "en": "There's only one place I want to come home to",
+      "zh-Hans": "想回去的地方只有一个"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 5
+        }
+      ],
+      "ja": "窓の向こうが明るんで",
+      "en": "Beyond the window, the sky grows bright",
+      "zh-Hans": "窗外的天空渐渐亮起"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 6
+        }
+      ],
+      "ja": "胸の奥まで晴れてゆく",
+      "en": "And sunshine reaches deep into my heart",
+      "zh-Hans": "心底也慢慢放晴"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 7
+        }
+      ],
+      "ja": "ただいまただいま",
+      "en": "I'm home, I'm home",
+      "zh-Hans": "我回来了，我回来了"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 8,
+          "words": [
+            0,
+            5
+          ]
+        }
+      ],
+      "ja": "ダウンを脱いで",
+      "en": "Taking off my down coat",
+      "zh-Hans": "脱下羽绒衣",
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "段",
+          "text": "ダウン",
+          "reason": "MOSS independently recovers ダウン; source and the sung dan/daun contraction support the coat image."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 8,
+          "words": [
+            5,
+            13
+          ]
+        }
+      ],
+      "ja": "ダウンを脱いで風の中",
+      "en": "Off comes my down coat, into the breeze",
+      "zh-Hans": "脱下羽绒衣，走进风里",
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "段",
+          "text": "ダウン",
+          "reason": "Real repeated coat phrase, confirmed by full/stem ASR, focused window and MOSS."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 9,
+          "words": [
+            0,
+            8
+          ]
+        }
+      ],
+      "ja": "千葉の涼しい風が",
+      "en": "Chiba's cool breeze",
+      "zh-Hans": "千叶清凉的风",
+      "replacements": [
+        {
+          "words": [
+            0,
+            3
+          ],
+          "source": "シンバー",
+          "text": "千葉",
+          "reason": "Retain the intended Chiba place name for the sound-close nasalized シンバ reading. Pronunciation is imperfect; do not replace the lyric with an unrelated proper name."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 9,
+          "words": [
+            8,
+            16
+          ]
+        }
+      ],
+      "ja": "ふわり頬を撫でた",
+      "en": "Softly brushes my cheek",
+      "zh-Hans": "轻轻拂过脸颊"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 10,
+          "words": [
+            0,
+            8
+          ]
+        }
+      ],
+      "ja": "おかえりおかえり",
+      "en": "Welcome home, welcome home",
+      "zh-Hans": "欢迎回来，欢迎回来"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 10,
+          "words": [
+            8,
+            14
+          ]
+        }
+      ],
+      "ja": "聞きたかったその声に",
+      "en": "That voice I've longed to hear",
+      "zh-Hans": "那是我一直想听见的声音"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 11,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "ja": "遠い空を越えて",
+      "en": "Across the distant sky",
+      "zh-Hans": "越过遥远的天空"
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 7
+        }
+      ],
+      "ja": "やっと笑って会えたね",
+      "en": "At last we meet with smiles",
+      "zh-Hans": "终于能笑着相见"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 12,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "ja": "改札抜けたら",
+      "en": "Through the ticket gate",
+      "zh-Hans": "走出检票口"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 12,
+          "words": [
+            6,
+            12
+          ]
+        }
+      ],
+      "ja": "大きく振る手",
+      "en": "Your hand waves high",
+      "zh-Hans": "你用力挥着手",
+      "zhPinyinOverrides": [{"index": 4, "text": "着", "pinyin": "zhe5"}]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 13,
+          "words": [
+            0,
+            7
+          ]
+        }
+      ],
+      "ja": "名前を呼ぶ前に",
+      "en": "Before I call your name",
+      "zh-Hans": "还没来得及喊出你的名字"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 13,
+          "words": [
+            7,
+            13
+          ]
+        }
+      ],
+      "ja": "笑顔がこぼれた",
+      "en": "A smile spills out",
+      "zh-Hans": "笑意已经溢了出来"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 14,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "ja": "二つ並んだ影が",
+      "en": "Two shadows side by side",
+      "zh-Hans": "两个并肩的影子"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 14,
+          "words": [
+            6,
+            12
+          ]
+        }
+      ],
+      "ja": "いつもの道を行く",
+      "en": "Follow our familiar road",
+      "zh-Hans": "走在熟悉的路上"
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 12,
+          "words": [
+            0,
+            5
+          ]
+        }
+      ],
+      "ja": "お土産話は",
+      "en": "My stories from the journey",
+      "zh-Hans": "旅途中的那些故事"
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 12,
+          "words": [
+            5,
+            9
+          ]
+        }
+      ],
+      "ja": "後でいいかな",
+      "en": "Can they wait till later?",
+      "zh-Hans": "可不可以晚一点再讲"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 16,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "ja": "もう少しこのまま",
+      "en": "A little longer, just like this",
+      "zh-Hans": "想再这样多待一会",
+      "zhPinyinOverrides": [{"index": 5, "text": "待", "pinyin": "dai1"}]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 16,
+          "words": [
+            6,
+            11
+          ]
+        }
+      ],
+      "ja": "君と歩きたい",
+      "en": "I want to walk with you",
+      "zh-Hans": "想和你一起慢慢走"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 17
+        }
+      ],
+      "ja": "ただいまただいま",
+      "en": "I'm home, I'm home",
+      "zh-Hans": "我回来了，我回来了"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 18
+        }
+      ],
+      "ja": "ダウンを脱いで風の中",
+      "en": "Off comes my down coat, into the breeze",
+      "zh-Hans": "脱下羽绒衣，走进风里",
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "暖",
+          "text": "ダウン",
+          "reason": "Native source and MOSS confirm the same coat hook in the final chorus."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 19,
+          "words": [
+            1,
+            8
+          ]
+        }
+      ],
+      "ja": "千葉の涼しい風に",
+      "en": "In Chiba's cool breeze",
+      "zh-Hans": "在千叶清凉的风里",
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "シンバ",
+          "text": "千葉",
+          "reason": "Retain the intended Chiba place name for the sound-close nasalized シンバ reading. Pronunciation is imperfect; do not replace the lyric with an unrelated proper name."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 20
+        }
+      ],
+      "ja": "二人深呼吸した",
+      "en": "We take a deep breath together",
+      "zh-Hans": "我们一起深深呼吸"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 21
+        }
+      ],
+      "ja": "おかえりおかえりおかえり",
+      "en": "Welcome home, welcome home, welcome home",
+      "zh-Hans": "欢迎回来，欢迎回来，欢迎回来"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 22
+        }
+      ],
+      "ja": "その一言で嬉しくて",
+      "en": "Those simple words fill me with joy",
+      "zh-Hans": "只这一句话，就让我满心欢喜"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 23
+        }
+      ],
+      "ja": "遠くへ行った分だけ",
+      "en": "The farther I have traveled",
+      "zh-Hans": "走过越远的地方"
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 24
+        }
+      ],
+      "ja": "この街が好きになる",
+      "en": "The more I love this town",
+      "zh-Hans": "就越喜欢这座城"
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 14
+        }
+      ],
+      "ja": "ただいま",
+      "en": "I'm home",
+      "zh-Hans": "我回来了"
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 15
+        }
+      ],
+      "ja": "ただいま",
+      "en": "I'm home",
+      "zh-Hans": "我回来了"
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 16
+        }
+      ],
+      "ja": "ただいま",
+      "en": "I'm home",
+      "zh-Hans": "我回来了"
+    },
+    {
+      "anchors": [
+        {
+          "source": "focus",
+          "segment": 17
+        },
+        {
+          "source": "focus",
+          "segment": 18
+        }
+      ],
+      "ja": "君の隣が暖かい",
+      "en": "Here beside you, I feel warm",
+      "zh-Hans": "在你身旁，就很温暖"
+    }
+  ]
+}

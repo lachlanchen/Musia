@@ -34,7 +34,7 @@ def reviewed_words(row, sources):
     previous = -1.0
     for word in words:
         start, end = word["start"], word["end"]
-        if not all(map(math.isfinite, [start, end])) or start < previous - 0.025 or end <= start:
+        if not all(map(math.isfinite, [start, end])) or start < previous - 0.025 or end < start:
             raise ValueError(f"Invalid ASR word span: {word}")
         previous = end
     replacements = sorted(row.get("replacements", []), key=lambda r: r["words"][0])
@@ -51,6 +51,9 @@ def reviewed_words(row, sources):
         first, last = change["words"]
         words[first:last] = [{"word": visible(change["text"]), "start": words[first]["start"],
                               "end": words[last - 1]["end"], "reviewReason": change["reason"]}]
+    # A zero-length ASR subtoken is valid only inside an explicit reviewed merge.
+    if any(word["end"] <= word["start"] for word in words):
+        raise ValueError("Zero-length ASR tokens need an explicit positive-span reviewed merge")
     if "".join(visible(w["word"]) for w in words) != visible(row["ja"]):
         raise ValueError(f"Corrected Japanese does not match reviewed anchors: {row['ja']}")
     return words
@@ -80,6 +83,23 @@ def japanese_tokens(words, kakasi, overrides):
     return tokens
 
 
+def chinese_tokens(text, overrides):
+    from pypinyin import Style, lazy_pinyin
+
+    readings = lazy_pinyin(text, style=Style.TONE3, neutral_tone_with_five=True,
+                          errors=lambda span: list(span))
+    tokens = [{"text": char, **({"pinyin": reading} if re.search(r"[\u3400-\u9fff]", char) else {})}
+              for char, reading in zip(text, readings)]
+    for item in overrides:
+        index = item["index"]
+        if not 0 <= index < len(tokens) or tokens[index]["text"] != item["text"]:
+            raise ValueError("Chinese reading override does not match its source character")
+        if not re.fullmatch(r"[a-zv]+[1-5]", item["pinyin"]):
+            raise ValueError("Chinese reading override must be tone-number pinyin")
+        tokens[index]["pinyin"] = item["pinyin"]
+    return tokens
+
+
 def export(review, sources, audio, output):
     if sha256(audio) != review["audioSha256"]:
         raise ValueError("Selected audio changed after lyric review")
@@ -87,7 +107,6 @@ def export(review, sources, audio, output):
         if source.get("status") != "ok" or source.get("language") != "ja":
             raise ValueError(f"Invalid Japanese ASR evidence: {name}")
     import pykakasi
-    from pypinyin import Style, lazy_pinyin
 
     kakasi = pykakasi.kakasi()
     tracks = {code: [] for code in LANGUAGES}
@@ -103,12 +122,8 @@ def export(review, sources, audio, output):
             if code == "ja":
                 tokens = japanese_tokens(words, kakasi, review.get("jaReadingOverrides", {}))
             else:
-                tokens = [{"text": word} for word in (text.split() if code == "en" else list(text))]
-                if code == "zh-Hans":
-                    readings = lazy_pinyin(text, style=Style.TONE3, neutral_tone_with_five=True)
-                    for token, reading in zip(tokens, readings):
-                        if re.search(r"[\u3400-\u9fff]", token["text"]):
-                            token["pinyin"] = reading
+                tokens = ([{"text": word} for word in text.split()] if code == "en"
+                          else chinese_tokens(text, row.get("zhPinyinOverrides", [])))
                 for i, token in enumerate(tokens):
                     token.update(start=round(start + (end - start) * i / len(tokens), 3),
                                  end=round(start + (end - start) * (i + 1) / len(tokens), 3),

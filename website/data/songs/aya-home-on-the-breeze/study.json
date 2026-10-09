@@ -1,0 +1,4781 @@
+{
+  "schema": "https://fun.lazying.art/schemas/musia-atlas-study.v1.json",
+  "version": 1,
+  "toolName": "Musia Atlas",
+  "mediaId": "aya-home-on-the-breeze",
+  "title": "ただいま、風のなか · Home on the Breeze Atlas",
+  "summary": "Detailed practice data for corrected lyrics, chord changes, beat timing, and guitar display.",
+  "defaultAssetId": "aya-home-ja-100912",
+  "dataPolicy": [
+    "Lyrics use corrected Fun website timing JSON for each active vocal.",
+    "Chord and beat maps are analysis-grade unless explicitly marked verified.",
+    "Capo, transpose, and simplify are display-only helpers; source audio is unchanged.",
+    "Instrumental spans are UI state only and are not encoded as lyric lines."
+  ],
+  "assets": {
+    "aya-home-ja-100912": {
+      "label": "日本語",
+      "languageCode": "ja",
+      "src": "https://lazyingart.github.io/MusiaSongs/audio/aya-home-on-the-breeze-ja-seed100912-20261009.mp3",
+      "bpm": 117.454,
+      "key": "Unverified",
+      "timeSignature": "4/4",
+      "beatConfidence": "analysis",
+      "beatSource": "manifest:assets.primaryAudio.musical.beats",
+      "beats": [
+        {
+          "index": 0,
+          "time": 0.72
+        },
+        {
+          "index": 1,
+          "time": 1.231
+        },
+        {
+          "index": 2,
+          "time": 1.672
+        },
+        {
+          "index": 3,
+          "time": 2.183
+        },
+        {
+          "index": 4,
+          "time": 2.694
+        },
+        {
+          "index": 5,
+          "time": 3.204
+        },
+        {
+          "index": 6,
+          "time": 3.738
+        },
+        {
+          "index": 7,
+          "time": 4.342
+        },
+        {
+          "index": 8,
+          "time": 4.853
+        },
+        {
+          "index": 9,
+          "time": 5.387
+        },
+        {
+          "index": 10,
+          "time": 5.898
+        },
+        {
+          "index": 11,
+          "time": 6.316
+        },
+        {
+          "index": 12,
+          "time": 6.757
+        },
+        {
+          "index": 13,
+          "time": 7.198
+        },
+        {
+          "index": 14,
+          "time": 7.709
+        },
+        {
+          "index": 15,
+          "time": 8.243
+        },
+        {
+          "index": 16,
+          "time": 8.754
+        },
+        {
+          "index": 17,
+          "time": 9.265
+        },
+        {
+          "index": 18,
+          "time": 9.776
+        },
+        {
+          "index": 19,
+          "time": 10.31
+        },
+        {
+          "index": 20,
+          "time": 10.82
+        },
+        {
+          "index": 21,
+          "time": 11.331
+        },
+        {
+          "index": 22,
+          "time": 11.842
+        },
+        {
+          "index": 23,
+          "time": 12.376
+        },
+        {
+          "index": 24,
+          "time": 12.887
+        },
+        {
+          "index": 25,
+          "time": 13.398
+        },
+        {
+          "index": 26,
+          "time": 13.909
+        },
+        {
+          "index": 27,
+          "time": 14.443
+        },
+        {
+          "index": 28,
+          "time": 14.954
+        },
+        {
+          "index": 29,
+          "time": 15.488
+        },
+        {
+          "index": 30,
+          "time": 15.975
+        },
+        {
+          "index": 31,
+          "time": 16.393
+        },
+        {
+          "index": 32,
+          "time": 16.834
+        },
+        {
+          "index": 33,
+          "time": 17.299
+        },
+        {
+          "index": 34,
+          "time": 17.786
+        },
+        {
+          "index": 35,
+          "time": 18.297
+        },
+        {
+          "index": 36,
+          "time": 18.831
+        },
+        {
+          "index": 37,
+          "time": 19.365
+        },
+        {
+          "index": 38,
+          "time": 19.876
+        },
+        {
+          "index": 39,
+          "time": 20.387
+        },
+        {
+          "index": 40,
+          "time": 20.898
+        },
+        {
+          "index": 41,
+          "time": 21.432
+        },
+        {
+          "index": 42,
+          "time": 21.943
+        },
+        {
+          "index": 43,
+          "time": 22.454
+        },
+        {
+          "index": 44,
+          "time": 22.965
+        },
+        {
+          "index": 45,
+          "time": 23.499
+        },
+        {
+          "index": 46,
+          "time": 24.009
+        },
+        {
+          "index": 47,
+          "time": 24.543
+        },
+        {
+          "index": 48,
+          "time": 25.054
+        },
+        {
+          "index": 49,
+          "time": 25.565
+        },
+        {
+          "index": 50,
+          "time": 26.076
+        },
+        {
+          "index": 51,
+          "time": 26.61
+        },
+        {
+          "index": 52,
+          "time": 27.121
+        },
+        {
+          "index": 53,
+          "time": 27.632
+        },
+        {
+          "index": 54,
+          "time": 28.143
+        },
+        {
+          "index": 55,
+          "time": 28.677
+        },
+        {
+          "index": 56,
+          "time": 29.187
+        },
+        {
+          "index": 57,
+          "time": 29.698
+        },
+        {
+          "index": 58,
+          "time": 30.209
+        },
+        {
+          "index": 59,
+          "time": 30.743
+        },
+        {
+          "index": 60,
+          "time": 31.254
+        },
+        {
+          "index": 61,
+          "time": 31.788
+        },
+        {
+          "index": 62,
+          "time": 32.299
+        },
+        {
+          "index": 63,
+          "time": 32.81
+        },
+        {
+          "index": 64,
+          "time": 33.321
+        },
+        {
+          "index": 65,
+          "time": 33.831
+        },
+        {
+          "index": 66,
+          "time": 34.366
+        },
+        {
+          "index": 67,
+          "time": 34.876
+        },
+        {
+          "index": 68,
+          "time": 35.387
+        },
+        {
+          "index": 69,
+          "time": 35.898
+        },
+        {
+          "index": 70,
+          "time": 36.409
+        },
+        {
+          "index": 71,
+          "time": 36.943
+        },
+        {
+          "index": 72,
+          "time": 37.454
+        },
+        {
+          "index": 73,
+          "time": 37.965
+        },
+        {
+          "index": 74,
+          "time": 38.499
+        },
+        {
+          "index": 75,
+          "time": 39.01
+        },
+        {
+          "index": 76,
+          "time": 39.544
+        },
+        {
+          "index": 77,
+          "time": 40.054
+        },
+        {
+          "index": 78,
+          "time": 40.565
+        },
+        {
+          "index": 79,
+          "time": 41.076
+        },
+        {
+          "index": 80,
+          "time": 41.61
+        },
+        {
+          "index": 81,
+          "time": 42.121
+        },
+        {
+          "index": 82,
+          "time": 42.632
+        },
+        {
+          "index": 83,
+          "time": 43.166
+        },
+        {
+          "index": 84,
+          "time": 43.677
+        },
+        {
+          "index": 85,
+          "time": 44.188
+        },
+        {
+          "index": 86,
+          "time": 44.698
+        },
+        {
+          "index": 87,
+          "time": 45.209
+        },
+        {
+          "index": 88,
+          "time": 45.743
+        },
+        {
+          "index": 89,
+          "time": 46.254
+        },
+        {
+          "index": 90,
+          "time": 46.765
+        },
+        {
+          "index": 91,
+          "time": 47.276
+        },
+        {
+          "index": 92,
+          "time": 47.81
+        },
+        {
+          "index": 93,
+          "time": 48.321
+        },
+        {
+          "index": 94,
+          "time": 48.855
+        },
+        {
+          "index": 95,
+          "time": 49.366
+        },
+        {
+          "index": 96,
+          "time": 49.876
+        },
+        {
+          "index": 97,
+          "time": 50.387
+        },
+        {
+          "index": 98,
+          "time": 50.921
+        },
+        {
+          "index": 99,
+          "time": 51.432
+        },
+        {
+          "index": 100,
+          "time": 51.943
+        },
+        {
+          "index": 101,
+          "time": 52.454
+        },
+        {
+          "index": 102,
+          "time": 52.965
+        },
+        {
+          "index": 103,
+          "time": 53.499
+        },
+        {
+          "index": 104,
+          "time": 54.01
+        },
+        {
+          "index": 105,
+          "time": 54.52
+        },
+        {
+          "index": 106,
+          "time": 55.031
+        },
+        {
+          "index": 107,
+          "time": 55.565
+        },
+        {
+          "index": 108,
+          "time": 56.076
+        },
+        {
+          "index": 109,
+          "time": 56.587
+        },
+        {
+          "index": 110,
+          "time": 57.098
+        },
+        {
+          "index": 111,
+          "time": 57.539
+        },
+        {
+          "index": 112,
+          "time": 57.98
+        },
+        {
+          "index": 113,
+          "time": 58.421
+        },
+        {
+          "index": 114,
+          "time": 58.932
+        },
+        {
+          "index": 115,
+          "time": 59.443
+        },
+        {
+          "index": 116,
+          "time": 59.954
+        },
+        {
+          "index": 117,
+          "time": 60.488
+        },
+        {
+          "index": 118,
+          "time": 60.999
+        },
+        {
+          "index": 119,
+          "time": 61.51
+        },
+        {
+          "index": 120,
+          "time": 62.044
+        },
+        {
+          "index": 121,
+          "time": 62.555
+        },
+        {
+          "index": 122,
+          "time": 63.065
+        },
+        {
+          "index": 123,
+          "time": 63.576
+        },
+        {
+          "index": 124,
+          "time": 64.11
+        },
+        {
+          "index": 125,
+          "time": 64.621
+        },
+        {
+          "index": 126,
+          "time": 65.132
+        },
+        {
+          "index": 127,
+          "time": 65.666
+        },
+        {
+          "index": 128,
+          "time": 66.177
+        },
+        {
+          "index": 129,
+          "time": 66.688
+        },
+        {
+          "index": 130,
+          "time": 67.199
+        },
+        {
+          "index": 131,
+          "time": 67.733
+        },
+        {
+          "index": 132,
+          "time": 68.243
+        },
+        {
+          "index": 133,
+          "time": 68.754
+        },
+        {
+          "index": 134,
+          "time": 69.265
+        },
+        {
+          "index": 135,
+          "time": 69.799
+        },
+        {
+          "index": 136,
+          "time": 70.31
+        },
+        {
+          "index": 137,
+          "time": 70.821
+        },
+        {
+          "index": 138,
+          "time": 71.332
+        },
+        {
+          "index": 139,
+          "time": 71.866
+        },
+        {
+          "index": 140,
+          "time": 72.377
+        },
+        {
+          "index": 141,
+          "time": 72.911
+        },
+        {
+          "index": 142,
+          "time": 73.421
+        },
+        {
+          "index": 143,
+          "time": 73.932
+        },
+        {
+          "index": 144,
+          "time": 74.443
+        },
+        {
+          "index": 145,
+          "time": 74.954
+        },
+        {
+          "index": 146,
+          "time": 75.488
+        },
+        {
+          "index": 147,
+          "time": 75.999
+        },
+        {
+          "index": 148,
+          "time": 76.533
+        },
+        {
+          "index": 149,
+          "time": 77.044
+        },
+        {
+          "index": 150,
+          "time": 77.555
+        },
+        {
+          "index": 151,
+          "time": 78.065
+        },
+        {
+          "index": 152,
+          "time": 78.576
+        },
+        {
+          "index": 153,
+          "time": 79.11
+        },
+        {
+          "index": 154,
+          "time": 79.621
+        },
+        {
+          "index": 155,
+          "time": 80.132
+        },
+        {
+          "index": 156,
+          "time": 80.643
+        },
+        {
+          "index": 157,
+          "time": 81.177
+        },
+        {
+          "index": 158,
+          "time": 81.688
+        },
+        {
+          "index": 159,
+          "time": 82.152
+        },
+        {
+          "index": 160,
+          "time": 82.64
+        },
+        {
+          "index": 161,
+          "time": 83.104
+        },
+        {
+          "index": 162,
+          "time": 83.592
+        },
+        {
+          "index": 163,
+          "time": 84.056
+        },
+        {
+          "index": 164,
+          "time": 84.544
+        },
+        {
+          "index": 165,
+          "time": 85.055
+        },
+        {
+          "index": 166,
+          "time": 85.566
+        },
+        {
+          "index": 167,
+          "time": 86.076
+        },
+        {
+          "index": 168,
+          "time": 86.61
+        },
+        {
+          "index": 169,
+          "time": 87.098
+        },
+        {
+          "index": 170,
+          "time": 87.632
+        },
+        {
+          "index": 171,
+          "time": 88.143
+        },
+        {
+          "index": 172,
+          "time": 88.677
+        },
+        {
+          "index": 173,
+          "time": 89.188
+        },
+        {
+          "index": 174,
+          "time": 89.699
+        },
+        {
+          "index": 175,
+          "time": 90.21
+        },
+        {
+          "index": 176,
+          "time": 90.744
+        },
+        {
+          "index": 177,
+          "time": 91.254
+        },
+        {
+          "index": 178,
+          "time": 91.765
+        },
+        {
+          "index": 179,
+          "time": 92.276
+        },
+        {
+          "index": 180,
+          "time": 92.81
+        },
+        {
+          "index": 181,
+          "time": 93.321
+        },
+        {
+          "index": 182,
+          "time": 93.832
+        },
+        {
+          "index": 183,
+          "time": 94.343
+        },
+        {
+          "index": 184,
+          "time": 94.877
+        },
+        {
+          "index": 185,
+          "time": 95.388
+        },
+        {
+          "index": 186,
+          "time": 95.922
+        },
+        {
+          "index": 187,
+          "time": 96.432
+        },
+        {
+          "index": 188,
+          "time": 96.943
+        },
+        {
+          "index": 189,
+          "time": 97.454
+        },
+        {
+          "index": 190,
+          "time": 97.988
+        },
+        {
+          "index": 191,
+          "time": 98.499
+        },
+        {
+          "index": 192,
+          "time": 99.01
+        },
+        {
+          "index": 193,
+          "time": 99.521
+        },
+        {
+          "index": 194,
+          "time": 100.055
+        },
+        {
+          "index": 195,
+          "time": 100.566
+        },
+        {
+          "index": 196,
+          "time": 101.076
+        },
+        {
+          "index": 197,
+          "time": 101.587
+        },
+        {
+          "index": 198,
+          "time": 102.121
+        },
+        {
+          "index": 199,
+          "time": 102.609
+        },
+        {
+          "index": 200,
+          "time": 103.05
+        },
+        {
+          "index": 201,
+          "time": 103.491
+        },
+        {
+          "index": 202,
+          "time": 103.933
+        },
+        {
+          "index": 203,
+          "time": 104.467
+        },
+        {
+          "index": 204,
+          "time": 104.977
+        },
+        {
+          "index": 205,
+          "time": 105.488
+        },
+        {
+          "index": 206,
+          "time": 105.999
+        },
+        {
+          "index": 207,
+          "time": 106.51
+        },
+        {
+          "index": 208,
+          "time": 107.021
+        },
+        {
+          "index": 209,
+          "time": 107.532
+        },
+        {
+          "index": 210,
+          "time": 108.042
+        },
+        {
+          "index": 211,
+          "time": 108.553
+        },
+        {
+          "index": 212,
+          "time": 109.087
+        },
+        {
+          "index": 213,
+          "time": 109.621
+        },
+        {
+          "index": 214,
+          "time": 110.132
+        },
+        {
+          "index": 215,
+          "time": 110.643
+        },
+        {
+          "index": 216,
+          "time": 111.177
+        },
+        {
+          "index": 217,
+          "time": 111.688
+        },
+        {
+          "index": 218,
+          "time": 112.199
+        },
+        {
+          "index": 219,
+          "time": 112.617
+        },
+        {
+          "index": 220,
+          "time": 113.128
+        },
+        {
+          "index": 221,
+          "time": 113.615
+        },
+        {
+          "index": 222,
+          "time": 114.103
+        },
+        {
+          "index": 223,
+          "time": 114.59
+        },
+        {
+          "index": 224,
+          "time": 115.078
+        },
+        {
+          "index": 225,
+          "time": 115.566
+        },
+        {
+          "index": 226,
+          "time": 116.077
+        },
+        {
+          "index": 227,
+          "time": 116.587
+        },
+        {
+          "index": 228,
+          "time": 117.098
+        },
+        {
+          "index": 229,
+          "time": 117.632
+        },
+        {
+          "index": 230,
+          "time": 118.143
+        },
+        {
+          "index": 231,
+          "time": 118.677
+        },
+        {
+          "index": 232,
+          "time": 119.188
+        },
+        {
+          "index": 233,
+          "time": 119.722
+        },
+        {
+          "index": 234,
+          "time": 120.233
+        },
+        {
+          "index": 235,
+          "time": 120.744
+        },
+        {
+          "index": 236,
+          "time": 121.255
+        },
+        {
+          "index": 237,
+          "time": 121.765
+        },
+        {
+          "index": 238,
+          "time": 122.3
+        },
+        {
+          "index": 239,
+          "time": 122.81
+        },
+        {
+          "index": 240,
+          "time": 123.321
+        },
+        {
+          "index": 241,
+          "time": 123.832
+        },
+        {
+          "index": 242,
+          "time": 124.366
+        },
+        {
+          "index": 243,
+          "time": 124.877
+        },
+        {
+          "index": 244,
+          "time": 125.388
+        },
+        {
+          "index": 245,
+          "time": 125.922
+        },
+        {
+          "index": 246,
+          "time": 126.433
+        },
+        {
+          "index": 247,
+          "time": 126.943
+        },
+        {
+          "index": 248,
+          "time": 127.454
+        },
+        {
+          "index": 249,
+          "time": 127.965
+        },
+        {
+          "index": 250,
+          "time": 128.476
+        },
+        {
+          "index": 251,
+          "time": 128.987
+        },
+        {
+          "index": 252,
+          "time": 129.498
+        },
+        {
+          "index": 253,
+          "time": 130.032
+        },
+        {
+          "index": 254,
+          "time": 130.473
+        },
+        {
+          "index": 255,
+          "time": 130.914
+        },
+        {
+          "index": 256,
+          "time": 131.355
+        },
+        {
+          "index": 257,
+          "time": 131.866
+        },
+        {
+          "index": 258,
+          "time": 132.377
+        },
+        {
+          "index": 259,
+          "time": 132.888
+        },
+        {
+          "index": 260,
+          "time": 133.422
+        },
+        {
+          "index": 261,
+          "time": 133.933
+        },
+        {
+          "index": 262,
+          "time": 134.444
+        },
+        {
+          "index": 263,
+          "time": 134.954
+        },
+        {
+          "index": 264,
+          "time": 135.488
+        },
+        {
+          "index": 265,
+          "time": 135.999
+        },
+        {
+          "index": 266,
+          "time": 136.51
+        },
+        {
+          "index": 267,
+          "time": 137.021
+        },
+        {
+          "index": 268,
+          "time": 137.555
+        },
+        {
+          "index": 269,
+          "time": 138.066
+        },
+        {
+          "index": 270,
+          "time": 138.577
+        },
+        {
+          "index": 271,
+          "time": 139.088
+        },
+        {
+          "index": 272,
+          "time": 139.622
+        },
+        {
+          "index": 273,
+          "time": 140.132
+        },
+        {
+          "index": 274,
+          "time": 140.643
+        },
+        {
+          "index": 275,
+          "time": 141.154
+        },
+        {
+          "index": 276,
+          "time": 141.688
+        },
+        {
+          "index": 277,
+          "time": 142.199
+        },
+        {
+          "index": 278,
+          "time": 142.71
+        },
+        {
+          "index": 279,
+          "time": 143.244
+        },
+        {
+          "index": 280,
+          "time": 143.755
+        },
+        {
+          "index": 281,
+          "time": 144.266
+        },
+        {
+          "index": 282,
+          "time": 144.776
+        },
+        {
+          "index": 283,
+          "time": 145.31
+        },
+        {
+          "index": 284,
+          "time": 145.821
+        },
+        {
+          "index": 285,
+          "time": 146.355
+        },
+        {
+          "index": 286,
+          "time": 146.866
+        },
+        {
+          "index": 287,
+          "time": 147.377
+        },
+        {
+          "index": 288,
+          "time": 147.888
+        },
+        {
+          "index": 289,
+          "time": 148.399
+        },
+        {
+          "index": 290,
+          "time": 148.933
+        },
+        {
+          "index": 291,
+          "time": 149.444
+        },
+        {
+          "index": 292,
+          "time": 149.954
+        },
+        {
+          "index": 293,
+          "time": 150.465
+        },
+        {
+          "index": 294,
+          "time": 150.976
+        },
+        {
+          "index": 295,
+          "time": 151.51
+        },
+        {
+          "index": 296,
+          "time": 152.044
+        },
+        {
+          "index": 297,
+          "time": 152.555
+        },
+        {
+          "index": 298,
+          "time": 153.066
+        },
+        {
+          "index": 299,
+          "time": 153.577
+        },
+        {
+          "index": 300,
+          "time": 154.088
+        },
+        {
+          "index": 301,
+          "time": 154.622
+        },
+        {
+          "index": 302,
+          "time": 155.133
+        },
+        {
+          "index": 303,
+          "time": 155.643
+        },
+        {
+          "index": 304,
+          "time": 156.177
+        },
+        {
+          "index": 305,
+          "time": 156.688
+        },
+        {
+          "index": 306,
+          "time": 157.199
+        },
+        {
+          "index": 307,
+          "time": 157.71
+        },
+        {
+          "index": 308,
+          "time": 158.244
+        },
+        {
+          "index": 309,
+          "time": 158.755
+        },
+        {
+          "index": 310,
+          "time": 159.266
+        },
+        {
+          "index": 311,
+          "time": 159.8
+        },
+        {
+          "index": 312,
+          "time": 160.311
+        },
+        {
+          "index": 313,
+          "time": 160.821
+        },
+        {
+          "index": 314,
+          "time": 161.332
+        },
+        {
+          "index": 315,
+          "time": 161.866
+        },
+        {
+          "index": 316,
+          "time": 162.4
+        },
+        {
+          "index": 317,
+          "time": 162.911
+        },
+        {
+          "index": 318,
+          "time": 163.422
+        },
+        {
+          "index": 319,
+          "time": 163.933
+        },
+        {
+          "index": 320,
+          "time": 164.444
+        },
+        {
+          "index": 321,
+          "time": 164.955
+        },
+        {
+          "index": 322,
+          "time": 165.465
+        },
+        {
+          "index": 323,
+          "time": 165.999
+        },
+        {
+          "index": 324,
+          "time": 166.51
+        },
+        {
+          "index": 325,
+          "time": 167.021
+        },
+        {
+          "index": 326,
+          "time": 167.555
+        },
+        {
+          "index": 327,
+          "time": 168.066
+        },
+        {
+          "index": 328,
+          "time": 168.577
+        },
+        {
+          "index": 329,
+          "time": 169.088
+        },
+        {
+          "index": 330,
+          "time": 169.622
+        },
+        {
+          "index": 331,
+          "time": 170.133
+        },
+        {
+          "index": 332,
+          "time": 170.643
+        },
+        {
+          "index": 333,
+          "time": 171.178
+        },
+        {
+          "index": 334,
+          "time": 171.688
+        },
+        {
+          "index": 335,
+          "time": 172.199
+        },
+        {
+          "index": 336,
+          "time": 172.71
+        },
+        {
+          "index": 337,
+          "time": 173.244
+        },
+        {
+          "index": 338,
+          "time": 173.755
+        },
+        {
+          "index": 339,
+          "time": 174.266
+        },
+        {
+          "index": 340,
+          "time": 174.8
+        },
+        {
+          "index": 341,
+          "time": 175.311
+        },
+        {
+          "index": 342,
+          "time": 175.821
+        },
+        {
+          "index": 343,
+          "time": 176.332
+        },
+        {
+          "index": 344,
+          "time": 176.866
+        },
+        {
+          "index": 345,
+          "time": 177.354
+        },
+        {
+          "index": 346,
+          "time": 177.795
+        },
+        {
+          "index": 347,
+          "time": 178.306
+        },
+        {
+          "index": 348,
+          "time": 178.794
+        },
+        {
+          "index": 349,
+          "time": 179.258
+        },
+        {
+          "index": 350,
+          "time": 179.746
+        },
+        {
+          "index": 351,
+          "time": 180.233
+        }
+      ],
+      "chordConfidence": "analysis",
+      "chordSource": "manifest:assets.primaryAudio.musical.chords",
+      "chords": [
+        {
+          "start": 0.0,
+          "end": 0.72,
+          "name": "C#",
+          "confidence": 0.519
+        },
+        {
+          "start": 0.72,
+          "end": 1.231,
+          "name": "G",
+          "confidence": 0.74
+        },
+        {
+          "start": 1.231,
+          "end": 1.672,
+          "name": "Gm",
+          "confidence": 0.649
+        },
+        {
+          "start": 1.672,
+          "end": 2.183,
+          "name": "Dm",
+          "confidence": 0.617
+        },
+        {
+          "start": 2.183,
+          "end": 2.694,
+          "name": "D",
+          "confidence": 0.619
+        },
+        {
+          "start": 2.694,
+          "end": 3.204,
+          "name": "A",
+          "confidence": 0.653
+        },
+        {
+          "start": 3.204,
+          "end": 3.738,
+          "name": "Gm",
+          "confidence": 0.636
+        },
+        {
+          "start": 3.738,
+          "end": 4.342,
+          "name": "Dm",
+          "confidence": 0.619
+        },
+        {
+          "start": 4.342,
+          "end": 4.853,
+          "name": "D",
+          "confidence": 0.616
+        },
+        {
+          "start": 4.853,
+          "end": 6.316,
+          "name": "Am",
+          "confidence": 0.803
+        },
+        {
+          "start": 6.316,
+          "end": 6.757,
+          "name": "C#m",
+          "confidence": 0.623
+        },
+        {
+          "start": 6.757,
+          "end": 7.198,
+          "name": "D",
+          "confidence": 0.743
+        },
+        {
+          "start": 7.198,
+          "end": 7.709,
+          "name": "Abm",
+          "confidence": 0.569
+        },
+        {
+          "start": 7.709,
+          "end": 8.243,
+          "name": "Dm",
+          "confidence": 0.678
+        },
+        {
+          "start": 8.243,
+          "end": 8.754,
+          "name": "Am",
+          "confidence": 0.563
+        },
+        {
+          "start": 8.754,
+          "end": 9.265,
+          "name": "C",
+          "confidence": 0.689
+        },
+        {
+          "start": 9.265,
+          "end": 9.776,
+          "name": "Em",
+          "confidence": 0.612
+        },
+        {
+          "start": 9.776,
+          "end": 10.31,
+          "name": "Am",
+          "confidence": 0.625
+        },
+        {
+          "start": 10.31,
+          "end": 10.82,
+          "name": "F",
+          "confidence": 0.634
+        },
+        {
+          "start": 10.82,
+          "end": 11.331,
+          "name": "Dm",
+          "confidence": 0.657
+        },
+        {
+          "start": 11.331,
+          "end": 11.842,
+          "name": "Em",
+          "confidence": 0.637
+        },
+        {
+          "start": 11.842,
+          "end": 12.376,
+          "name": "A",
+          "confidence": 0.636
+        },
+        {
+          "start": 12.376,
+          "end": 12.887,
+          "name": "F#m",
+          "confidence": 0.7
+        },
+        {
+          "start": 12.887,
+          "end": 13.909,
+          "name": "Am",
+          "confidence": 0.692
+        },
+        {
+          "start": 13.909,
+          "end": 14.443,
+          "name": "Bb",
+          "confidence": 0.809
+        },
+        {
+          "start": 14.443,
+          "end": 14.954,
+          "name": "F",
+          "confidence": 0.729
+        },
+        {
+          "start": 14.954,
+          "end": 16.393,
+          "name": "C",
+          "confidence": 0.742
+        },
+        {
+          "start": 16.393,
+          "end": 16.834,
+          "name": "Bm",
+          "confidence": 0.569
+        },
+        {
+          "start": 16.834,
+          "end": 17.299,
+          "name": "D",
+          "confidence": 0.673
+        },
+        {
+          "start": 17.299,
+          "end": 18.831,
+          "name": "G",
+          "confidence": 0.878
+        },
+        {
+          "start": 18.831,
+          "end": 19.365,
+          "name": "Em",
+          "confidence": 0.585
+        },
+        {
+          "start": 19.365,
+          "end": 20.387,
+          "name": "F#m",
+          "confidence": 0.751
+        },
+        {
+          "start": 20.387,
+          "end": 21.432,
+          "name": "A",
+          "confidence": 0.831
+        },
+        {
+          "start": 21.432,
+          "end": 22.454,
+          "name": "Em",
+          "confidence": 0.967
+        },
+        {
+          "start": 22.454,
+          "end": 22.965,
+          "name": "G",
+          "confidence": 0.879
+        },
+        {
+          "start": 22.965,
+          "end": 24.009,
+          "name": "D",
+          "confidence": 0.804
+        },
+        {
+          "start": 24.009,
+          "end": 25.054,
+          "name": "Am",
+          "confidence": 0.834
+        },
+        {
+          "start": 25.054,
+          "end": 25.565,
+          "name": "F#m",
+          "confidence": 0.719
+        },
+        {
+          "start": 25.565,
+          "end": 27.632,
+          "name": "G",
+          "confidence": 0.917
+        },
+        {
+          "start": 27.632,
+          "end": 28.677,
+          "name": "F#m",
+          "confidence": 0.763
+        },
+        {
+          "start": 28.677,
+          "end": 29.698,
+          "name": "Bm",
+          "confidence": 0.78
+        },
+        {
+          "start": 29.698,
+          "end": 31.788,
+          "name": "Em",
+          "confidence": 0.83
+        },
+        {
+          "start": 31.788,
+          "end": 32.299,
+          "name": "Am",
+          "confidence": 0.758
+        },
+        {
+          "start": 32.299,
+          "end": 32.81,
+          "name": "A",
+          "confidence": 0.781
+        },
+        {
+          "start": 32.81,
+          "end": 33.831,
+          "name": "D",
+          "confidence": 0.765
+        },
+        {
+          "start": 33.831,
+          "end": 35.898,
+          "name": "G",
+          "confidence": 0.707
+        },
+        {
+          "start": 35.898,
+          "end": 36.409,
+          "name": "D",
+          "confidence": 0.63
+        },
+        {
+          "start": 36.409,
+          "end": 36.943,
+          "name": "A",
+          "confidence": 0.619
+        },
+        {
+          "start": 36.943,
+          "end": 37.454,
+          "name": "Bm",
+          "confidence": 0.703
+        },
+        {
+          "start": 37.454,
+          "end": 37.965,
+          "name": "A",
+          "confidence": 0.66
+        },
+        {
+          "start": 37.965,
+          "end": 39.01,
+          "name": "Dm",
+          "confidence": 0.738
+        },
+        {
+          "start": 39.01,
+          "end": 40.054,
+          "name": "F",
+          "confidence": 0.722
+        },
+        {
+          "start": 40.054,
+          "end": 42.121,
+          "name": "Em",
+          "confidence": 0.801
+        },
+        {
+          "start": 42.121,
+          "end": 44.188,
+          "name": "G",
+          "confidence": 0.726
+        },
+        {
+          "start": 44.188,
+          "end": 44.698,
+          "name": "Em",
+          "confidence": 0.603
+        },
+        {
+          "start": 44.698,
+          "end": 45.209,
+          "name": "F#m",
+          "confidence": 0.732
+        },
+        {
+          "start": 45.209,
+          "end": 45.743,
+          "name": "Dm",
+          "confidence": 0.603
+        },
+        {
+          "start": 45.743,
+          "end": 46.254,
+          "name": "F#m",
+          "confidence": 0.688
+        },
+        {
+          "start": 46.254,
+          "end": 47.276,
+          "name": "Em",
+          "confidence": 0.711
+        },
+        {
+          "start": 47.276,
+          "end": 48.321,
+          "name": "A",
+          "confidence": 0.748
+        },
+        {
+          "start": 48.321,
+          "end": 49.366,
+          "name": "F#m",
+          "confidence": 0.675
+        },
+        {
+          "start": 49.366,
+          "end": 50.387,
+          "name": "Bm",
+          "confidence": 0.673
+        },
+        {
+          "start": 50.387,
+          "end": 50.921,
+          "name": "Em",
+          "confidence": 0.654
+        },
+        {
+          "start": 50.921,
+          "end": 51.943,
+          "name": "C",
+          "confidence": 0.635
+        },
+        {
+          "start": 51.943,
+          "end": 52.454,
+          "name": "Dm",
+          "confidence": 0.639
+        },
+        {
+          "start": 52.454,
+          "end": 52.965,
+          "name": "G",
+          "confidence": 0.626
+        },
+        {
+          "start": 52.965,
+          "end": 53.499,
+          "name": "C",
+          "confidence": 0.629
+        },
+        {
+          "start": 53.499,
+          "end": 54.52,
+          "name": "G",
+          "confidence": 0.644
+        },
+        {
+          "start": 54.52,
+          "end": 55.031,
+          "name": "F",
+          "confidence": 0.688
+        },
+        {
+          "start": 55.031,
+          "end": 56.587,
+          "name": "G",
+          "confidence": 0.752
+        },
+        {
+          "start": 56.587,
+          "end": 57.098,
+          "name": "Am",
+          "confidence": 0.641
+        },
+        {
+          "start": 57.098,
+          "end": 57.98,
+          "name": "A",
+          "confidence": 0.695
+        },
+        {
+          "start": 57.98,
+          "end": 59.443,
+          "name": "F",
+          "confidence": 0.694
+        },
+        {
+          "start": 59.443,
+          "end": 60.488,
+          "name": "F#m",
+          "confidence": 0.741
+        },
+        {
+          "start": 60.488,
+          "end": 62.044,
+          "name": "Em",
+          "confidence": 0.692
+        },
+        {
+          "start": 62.044,
+          "end": 64.11,
+          "name": "A",
+          "confidence": 0.757
+        },
+        {
+          "start": 64.11,
+          "end": 64.621,
+          "name": "D",
+          "confidence": 0.734
+        },
+        {
+          "start": 64.621,
+          "end": 65.132,
+          "name": "Bm",
+          "confidence": 0.602
+        },
+        {
+          "start": 65.132,
+          "end": 66.177,
+          "name": "Em",
+          "confidence": 0.726
+        },
+        {
+          "start": 66.177,
+          "end": 66.688,
+          "name": "F",
+          "confidence": 0.648
+        },
+        {
+          "start": 66.688,
+          "end": 67.199,
+          "name": "Bm",
+          "confidence": 0.665
+        },
+        {
+          "start": 67.199,
+          "end": 68.243,
+          "name": "A",
+          "confidence": 0.727
+        },
+        {
+          "start": 68.243,
+          "end": 68.754,
+          "name": "Bm",
+          "confidence": 0.728
+        },
+        {
+          "start": 68.754,
+          "end": 69.265,
+          "name": "B",
+          "confidence": 0.672
+        },
+        {
+          "start": 69.265,
+          "end": 69.799,
+          "name": "G",
+          "confidence": 0.594
+        },
+        {
+          "start": 69.799,
+          "end": 70.31,
+          "name": "C",
+          "confidence": 0.569
+        },
+        {
+          "start": 70.31,
+          "end": 70.821,
+          "name": "Fm",
+          "confidence": 0.621
+        },
+        {
+          "start": 70.821,
+          "end": 71.332,
+          "name": "F",
+          "confidence": 0.742
+        },
+        {
+          "start": 71.332,
+          "end": 71.866,
+          "name": "F#m",
+          "confidence": 0.605
+        },
+        {
+          "start": 71.866,
+          "end": 72.911,
+          "name": "F",
+          "confidence": 0.706
+        },
+        {
+          "start": 72.911,
+          "end": 73.421,
+          "name": "Am",
+          "confidence": 0.679
+        },
+        {
+          "start": 73.421,
+          "end": 73.932,
+          "name": "A",
+          "confidence": 0.649
+        },
+        {
+          "start": 73.932,
+          "end": 74.954,
+          "name": "Dm",
+          "confidence": 0.667
+        },
+        {
+          "start": 74.954,
+          "end": 75.488,
+          "name": "Em",
+          "confidence": 0.724
+        },
+        {
+          "start": 75.488,
+          "end": 75.999,
+          "name": "F",
+          "confidence": 0.605
+        },
+        {
+          "start": 75.999,
+          "end": 76.533,
+          "name": "F#m",
+          "confidence": 0.65
+        },
+        {
+          "start": 76.533,
+          "end": 77.044,
+          "name": "F",
+          "confidence": 0.592
+        },
+        {
+          "start": 77.044,
+          "end": 77.555,
+          "name": "Bm",
+          "confidence": 0.618
+        },
+        {
+          "start": 77.555,
+          "end": 78.065,
+          "name": "Em",
+          "confidence": 0.664
+        },
+        {
+          "start": 78.065,
+          "end": 78.576,
+          "name": "C",
+          "confidence": 0.634
+        },
+        {
+          "start": 78.576,
+          "end": 79.11,
+          "name": "Em",
+          "confidence": 0.62
+        },
+        {
+          "start": 79.11,
+          "end": 80.132,
+          "name": "F",
+          "confidence": 0.752
+        },
+        {
+          "start": 80.132,
+          "end": 80.643,
+          "name": "Em",
+          "confidence": 0.672
+        },
+        {
+          "start": 80.643,
+          "end": 82.64,
+          "name": "C",
+          "confidence": 0.873
+        },
+        {
+          "start": 82.64,
+          "end": 83.104,
+          "name": "G",
+          "confidence": 0.662
+        },
+        {
+          "start": 83.104,
+          "end": 84.056,
+          "name": "Dm",
+          "confidence": 0.725
+        },
+        {
+          "start": 84.056,
+          "end": 84.544,
+          "name": "C",
+          "confidence": 0.606
+        },
+        {
+          "start": 84.544,
+          "end": 86.076,
+          "name": "Am",
+          "confidence": 0.77
+        },
+        {
+          "start": 86.076,
+          "end": 86.61,
+          "name": "D",
+          "confidence": 0.762
+        },
+        {
+          "start": 86.61,
+          "end": 87.098,
+          "name": "G",
+          "confidence": 0.842
+        },
+        {
+          "start": 87.098,
+          "end": 87.632,
+          "name": "Gm",
+          "confidence": 0.656
+        },
+        {
+          "start": 87.632,
+          "end": 88.143,
+          "name": "Fm",
+          "confidence": 0.597
+        },
+        {
+          "start": 88.143,
+          "end": 88.677,
+          "name": "G",
+          "confidence": 0.669
+        },
+        {
+          "start": 88.677,
+          "end": 89.188,
+          "name": "D",
+          "confidence": 0.765
+        },
+        {
+          "start": 89.188,
+          "end": 89.699,
+          "name": "Bm",
+          "confidence": 0.606
+        },
+        {
+          "start": 89.699,
+          "end": 90.21,
+          "name": "Dm",
+          "confidence": 0.735
+        },
+        {
+          "start": 90.21,
+          "end": 90.744,
+          "name": "F",
+          "confidence": 0.7
+        },
+        {
+          "start": 90.744,
+          "end": 91.254,
+          "name": "F#m",
+          "confidence": 0.674
+        },
+        {
+          "start": 91.254,
+          "end": 92.276,
+          "name": "Bm",
+          "confidence": 0.714
+        },
+        {
+          "start": 92.276,
+          "end": 92.81,
+          "name": "Dm",
+          "confidence": 0.66
+        },
+        {
+          "start": 92.81,
+          "end": 94.343,
+          "name": "Em",
+          "confidence": 0.686
+        },
+        {
+          "start": 94.343,
+          "end": 94.877,
+          "name": "F",
+          "confidence": 0.63
+        },
+        {
+          "start": 94.877,
+          "end": 95.922,
+          "name": "F#m",
+          "confidence": 0.678
+        },
+        {
+          "start": 95.922,
+          "end": 96.432,
+          "name": "Dm",
+          "confidence": 0.605
+        },
+        {
+          "start": 96.432,
+          "end": 96.943,
+          "name": "F",
+          "confidence": 0.683
+        },
+        {
+          "start": 96.943,
+          "end": 97.454,
+          "name": "F#m",
+          "confidence": 0.561
+        },
+        {
+          "start": 97.454,
+          "end": 98.499,
+          "name": "G",
+          "confidence": 0.684
+        },
+        {
+          "start": 98.499,
+          "end": 99.01,
+          "name": "Bm",
+          "confidence": 0.683
+        },
+        {
+          "start": 99.01,
+          "end": 99.521,
+          "name": "F#m",
+          "confidence": 0.649
+        },
+        {
+          "start": 99.521,
+          "end": 100.566,
+          "name": "Bm",
+          "confidence": 0.727
+        },
+        {
+          "start": 100.566,
+          "end": 101.076,
+          "name": "Dm",
+          "confidence": 0.668
+        },
+        {
+          "start": 101.076,
+          "end": 103.05,
+          "name": "Em",
+          "confidence": 0.776
+        },
+        {
+          "start": 103.05,
+          "end": 103.933,
+          "name": "A",
+          "confidence": 0.716
+        },
+        {
+          "start": 103.933,
+          "end": 104.467,
+          "name": "Dm",
+          "confidence": 0.615
+        },
+        {
+          "start": 104.467,
+          "end": 104.977,
+          "name": "Am",
+          "confidence": 0.654
+        },
+        {
+          "start": 104.977,
+          "end": 105.488,
+          "name": "Em",
+          "confidence": 0.712
+        },
+        {
+          "start": 105.488,
+          "end": 105.999,
+          "name": "C",
+          "confidence": 0.669
+        },
+        {
+          "start": 105.999,
+          "end": 107.532,
+          "name": "Em",
+          "confidence": 0.729
+        },
+        {
+          "start": 107.532,
+          "end": 109.087,
+          "name": "A",
+          "confidence": 0.85
+        },
+        {
+          "start": 109.087,
+          "end": 110.132,
+          "name": "Dm",
+          "confidence": 0.696
+        },
+        {
+          "start": 110.132,
+          "end": 110.643,
+          "name": "Bm",
+          "confidence": 0.663
+        },
+        {
+          "start": 110.643,
+          "end": 111.688,
+          "name": "D",
+          "confidence": 0.674
+        },
+        {
+          "start": 111.688,
+          "end": 112.199,
+          "name": "Bm",
+          "confidence": 0.627
+        },
+        {
+          "start": 112.199,
+          "end": 113.128,
+          "name": "F",
+          "confidence": 0.655
+        },
+        {
+          "start": 113.128,
+          "end": 113.615,
+          "name": "C#",
+          "confidence": 0.624
+        },
+        {
+          "start": 113.615,
+          "end": 115.078,
+          "name": "G",
+          "confidence": 0.839
+        },
+        {
+          "start": 115.078,
+          "end": 115.566,
+          "name": "Em",
+          "confidence": 0.727
+        },
+        {
+          "start": 115.566,
+          "end": 117.632,
+          "name": "Bm",
+          "confidence": 0.779
+        },
+        {
+          "start": 117.632,
+          "end": 119.188,
+          "name": "A",
+          "confidence": 0.922
+        },
+        {
+          "start": 119.188,
+          "end": 119.722,
+          "name": "E",
+          "confidence": 0.738
+        },
+        {
+          "start": 119.722,
+          "end": 120.233,
+          "name": "Em",
+          "confidence": 0.654
+        },
+        {
+          "start": 120.233,
+          "end": 120.744,
+          "name": "F",
+          "confidence": 0.777
+        },
+        {
+          "start": 120.744,
+          "end": 121.765,
+          "name": "Dm",
+          "confidence": 0.924
+        },
+        {
+          "start": 121.765,
+          "end": 123.832,
+          "name": "Em",
+          "confidence": 0.801
+        },
+        {
+          "start": 123.832,
+          "end": 125.922,
+          "name": "F",
+          "confidence": 0.706
+        },
+        {
+          "start": 125.922,
+          "end": 128.476,
+          "name": "Gm",
+          "confidence": 0.761
+        },
+        {
+          "start": 128.476,
+          "end": 129.498,
+          "name": "Bm",
+          "confidence": 0.647
+        },
+        {
+          "start": 129.498,
+          "end": 130.032,
+          "name": "A",
+          "confidence": 0.557
+        },
+        {
+          "start": 130.032,
+          "end": 130.914,
+          "name": "Dm",
+          "confidence": 0.704
+        },
+        {
+          "start": 130.914,
+          "end": 131.355,
+          "name": "D",
+          "confidence": 0.775
+        },
+        {
+          "start": 131.355,
+          "end": 131.866,
+          "name": "Dm",
+          "confidence": 0.738
+        },
+        {
+          "start": 131.866,
+          "end": 132.377,
+          "name": "F#m",
+          "confidence": 0.614
+        },
+        {
+          "start": 132.377,
+          "end": 132.888,
+          "name": "F#",
+          "confidence": 0.691
+        },
+        {
+          "start": 132.888,
+          "end": 133.422,
+          "name": "F#m",
+          "confidence": 0.717
+        },
+        {
+          "start": 133.422,
+          "end": 133.933,
+          "name": "C#",
+          "confidence": 0.634
+        },
+        {
+          "start": 133.933,
+          "end": 134.954,
+          "name": "Em",
+          "confidence": 0.725
+        },
+        {
+          "start": 134.954,
+          "end": 135.999,
+          "name": "A",
+          "confidence": 0.771
+        },
+        {
+          "start": 135.999,
+          "end": 136.51,
+          "name": "Dm",
+          "confidence": 0.705
+        },
+        {
+          "start": 136.51,
+          "end": 137.555,
+          "name": "D",
+          "confidence": 0.69
+        },
+        {
+          "start": 137.555,
+          "end": 138.066,
+          "name": "Dm",
+          "confidence": 0.663
+        },
+        {
+          "start": 138.066,
+          "end": 139.622,
+          "name": "Em",
+          "confidence": 0.718
+        },
+        {
+          "start": 139.622,
+          "end": 140.132,
+          "name": "F#",
+          "confidence": 0.592
+        },
+        {
+          "start": 140.132,
+          "end": 140.643,
+          "name": "F",
+          "confidence": 0.644
+        },
+        {
+          "start": 140.643,
+          "end": 141.154,
+          "name": "A",
+          "confidence": 0.712
+        },
+        {
+          "start": 141.154,
+          "end": 141.688,
+          "name": "Bm",
+          "confidence": 0.697
+        },
+        {
+          "start": 141.688,
+          "end": 142.199,
+          "name": "Em",
+          "confidence": 0.624
+        },
+        {
+          "start": 142.199,
+          "end": 143.244,
+          "name": "C",
+          "confidence": 0.703
+        },
+        {
+          "start": 143.244,
+          "end": 143.755,
+          "name": "Fm",
+          "confidence": 0.752
+        },
+        {
+          "start": 143.755,
+          "end": 144.266,
+          "name": "F",
+          "confidence": 0.763
+        },
+        {
+          "start": 144.266,
+          "end": 145.31,
+          "name": "Am",
+          "confidence": 0.662
+        },
+        {
+          "start": 145.31,
+          "end": 145.821,
+          "name": "F",
+          "confidence": 0.617
+        },
+        {
+          "start": 145.821,
+          "end": 146.355,
+          "name": "Am",
+          "confidence": 0.699
+        },
+        {
+          "start": 146.355,
+          "end": 146.866,
+          "name": "D",
+          "confidence": 0.644
+        },
+        {
+          "start": 146.866,
+          "end": 148.399,
+          "name": "Dm",
+          "confidence": 0.651
+        },
+        {
+          "start": 148.399,
+          "end": 148.933,
+          "name": "D",
+          "confidence": 0.617
+        },
+        {
+          "start": 148.933,
+          "end": 149.954,
+          "name": "F#m",
+          "confidence": 0.683
+        },
+        {
+          "start": 149.954,
+          "end": 150.465,
+          "name": "C#",
+          "confidence": 0.643
+        },
+        {
+          "start": 150.465,
+          "end": 150.976,
+          "name": "Dm",
+          "confidence": 0.566
+        },
+        {
+          "start": 150.976,
+          "end": 151.51,
+          "name": "C",
+          "confidence": 0.655
+        },
+        {
+          "start": 151.51,
+          "end": 152.044,
+          "name": "F",
+          "confidence": 0.656
+        },
+        {
+          "start": 152.044,
+          "end": 153.066,
+          "name": "A",
+          "confidence": 0.689
+        },
+        {
+          "start": 153.066,
+          "end": 153.577,
+          "name": "Bm",
+          "confidence": 0.683
+        },
+        {
+          "start": 153.577,
+          "end": 154.622,
+          "name": "Dm",
+          "confidence": 0.659
+        },
+        {
+          "start": 154.622,
+          "end": 156.177,
+          "name": "Em",
+          "confidence": 0.721
+        },
+        {
+          "start": 156.177,
+          "end": 156.688,
+          "name": "F#",
+          "confidence": 0.656
+        },
+        {
+          "start": 156.688,
+          "end": 157.71,
+          "name": "A",
+          "confidence": 0.682
+        },
+        {
+          "start": 157.71,
+          "end": 158.755,
+          "name": "Bm",
+          "confidence": 0.73
+        },
+        {
+          "start": 158.755,
+          "end": 159.266,
+          "name": "Em",
+          "confidence": 0.711
+        },
+        {
+          "start": 159.266,
+          "end": 159.8,
+          "name": "C",
+          "confidence": 0.692
+        },
+        {
+          "start": 159.8,
+          "end": 160.821,
+          "name": "F",
+          "confidence": 0.73
+        },
+        {
+          "start": 160.821,
+          "end": 161.332,
+          "name": "G",
+          "confidence": 0.607
+        },
+        {
+          "start": 161.332,
+          "end": 162.4,
+          "name": "Em",
+          "confidence": 0.684
+        },
+        {
+          "start": 162.4,
+          "end": 162.911,
+          "name": "Gm",
+          "confidence": 0.588
+        },
+        {
+          "start": 162.911,
+          "end": 163.422,
+          "name": "Dm",
+          "confidence": 0.751
+        },
+        {
+          "start": 163.422,
+          "end": 163.933,
+          "name": "D",
+          "confidence": 0.731
+        },
+        {
+          "start": 163.933,
+          "end": 165.465,
+          "name": "Dm",
+          "confidence": 0.692
+        },
+        {
+          "start": 165.465,
+          "end": 166.51,
+          "name": "F#m",
+          "confidence": 0.666
+        },
+        {
+          "start": 166.51,
+          "end": 167.021,
+          "name": "F",
+          "confidence": 0.682
+        },
+        {
+          "start": 167.021,
+          "end": 167.555,
+          "name": "A",
+          "confidence": 0.576
+        },
+        {
+          "start": 167.555,
+          "end": 168.066,
+          "name": "Em",
+          "confidence": 0.677
+        },
+        {
+          "start": 168.066,
+          "end": 169.088,
+          "name": "Am",
+          "confidence": 0.704
+        },
+        {
+          "start": 169.088,
+          "end": 169.622,
+          "name": "D",
+          "confidence": 0.701
+        },
+        {
+          "start": 169.622,
+          "end": 171.178,
+          "name": "Bm",
+          "confidence": 0.681
+        },
+        {
+          "start": 171.178,
+          "end": 172.199,
+          "name": "Em",
+          "confidence": 0.751
+        },
+        {
+          "start": 172.199,
+          "end": 173.755,
+          "name": "F",
+          "confidence": 0.701
+        },
+        {
+          "start": 173.755,
+          "end": 174.266,
+          "name": "Am",
+          "confidence": 0.746
+        },
+        {
+          "start": 174.266,
+          "end": 175.311,
+          "name": "Bm",
+          "confidence": 0.673
+        },
+        {
+          "start": 175.311,
+          "end": 177.354,
+          "name": "C",
+          "confidence": 0.724
+        },
+        {
+          "start": 177.354,
+          "end": 177.795,
+          "name": "Fm",
+          "confidence": 0.646
+        },
+        {
+          "start": 177.795,
+          "end": 178.306,
+          "name": "Em",
+          "confidence": 0.599
+        },
+        {
+          "start": 178.306,
+          "end": 178.794,
+          "name": "G",
+          "confidence": 0.595
+        },
+        {
+          "start": 178.794,
+          "end": 179.258,
+          "name": "C",
+          "confidence": 0.619
+        },
+        {
+          "start": 179.258,
+          "end": 179.746,
+          "name": "E",
+          "confidence": 0.567
+        },
+        {
+          "start": 179.746,
+          "end": 180.233,
+          "name": "Am",
+          "confidence": 0.608
+        },
+        {
+          "start": 180.233,
+          "end": 184.0,
+          "name": "Em",
+          "confidence": 0.662
+        }
+      ],
+      "melodyConfidence": "analysis",
+      "melodySource": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+      "melody": {
+        "confidence": "analysis",
+        "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+        "key": "Unverified",
+        "notation": "numbered musical notation / simple number notes",
+        "description": "Token-level median vocal F0 converted to Western note names and key-relative numbered scale degrees. Analysis-grade, not human-transcribed sheet music.",
+        "lines": [
+          {
+            "lineId": "l01",
+            "start": 16.1,
+            "end": 19.16,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "カナダ",
+                "start": 16.1,
+                "end": 17.42,
+                "midi": 60.0,
+                "note": "C4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "の",
+                "start": 17.42,
+                "end": 17.72,
+                "midi": 62.1,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "赤い",
+                "start": 17.72,
+                "end": 18.64,
+                "midi": 61.9,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "葉",
+                "start": 18.64,
+                "end": 18.9,
+                "midi": 64.1,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "を",
+                "start": 18.9,
+                "end": 19.16,
+                "midi": 68.5,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "l02",
+            "start": 19.16,
+            "end": 22.18,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": " ",
+            "tokens": [
+              {
+                "text": "手帳",
+                "start": 19.16,
+                "end": 20.64,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "にはさんで",
+                "start": 20.64,
+                "end": 22.18,
+                "midi": 63.2,
+                "note": "D#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "l03",
+            "start": 23.26,
+            "end": 26.24,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": " ",
+            "tokens": [
+              {
+                "text": "膨らむ",
+                "start": 23.26,
+                "end": 24.36,
+                "midi": 61.3,
+                "note": "C#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "D"
+              },
+              {
+                "text": "スーツケース",
+                "start": 24.36,
+                "end": 26.24,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "l04",
+            "start": 26.26,
+            "end": 29.26,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "   ",
+            "tokens": [
+              {
+                "text": "やっと",
+                "start": 26.26,
+                "end": 27.52,
+                "midi": 71.1,
+                "note": "B4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "閉め",
+                "start": 27.52,
+                "end": 28.42,
+                "midi": 72.9,
+                "note": "C#5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "た",
+                "start": 28.42,
+                "end": 28.54,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "朝",
+                "start": 28.54,
+                "end": 29.26,
+                "midi": 66.6,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "l05",
+            "start": 30.62,
+            "end": 33.62,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "  ",
+            "tokens": [
+              {
+                "text": "に",
+                "start": 31.48,
+                "end": 32.16,
+                "midi": 60.7,
+                "note": "C#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Am"
+              },
+              {
+                "text": "会え",
+                "start": 32.16,
+                "end": 32.77,
+                "midi": 64.0,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "るんだ",
+                "start": 32.77,
+                "end": 33.62,
+                "midi": 64.1,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "D"
+              }
+            ]
+          },
+          {
+            "lineId": "l06",
+            "start": 36.88,
+            "end": 40.0,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "     ",
+            "tokens": [
+              {
+                "text": "時計",
+                "start": 36.88,
+                "end": 38.02,
+                "midi": 62.0,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "の",
+                "start": 38.02,
+                "end": 38.3,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "針",
+                "start": 38.3,
+                "end": 38.6,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "は",
+                "start": 38.6,
+                "end": 38.88,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "違っ",
+                "start": 38.88,
+                "end": 39.35,
+                "midi": 65.6,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "ても",
+                "start": 39.35,
+                "end": 40.0,
+                "midi": 64.4,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "l07",
+            "start": 40.82,
+            "end": 44.66,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "   ",
+            "tokens": [
+              {
+                "text": "帰り",
+                "start": 40.82,
+                "end": 41.86,
+                "midi": 64.1,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "たい",
+                "start": 41.86,
+                "end": 42.0,
+                "midi": 67.2,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "場所",
+                "start": 42.0,
+                "end": 42.96,
+                "midi": 68.5,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "はひとつ",
+                "start": 42.96,
+                "end": 44.66,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              }
+            ]
+          },
+          {
+            "lineId": "l08",
+            "start": 45.2,
+            "end": 48.76,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "     ",
+            "tokens": [
+              {
+                "text": "窓",
+                "start": 45.2,
+                "end": 46.02,
+                "midi": 63.0,
+                "note": "D#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "の",
+                "start": 46.02,
+                "end": 46.28,
+                "midi": 64.2,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "向こう",
+                "start": 46.28,
+                "end": 46.98,
+                "midi": 64.2,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "が",
+                "start": 46.98,
+                "end": 47.34,
+                "midi": 65.9,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "明る",
+                "start": 47.34,
+                "end": 48.14,
+                "midi": 65.0,
+                "note": "F4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "んで",
+                "start": 48.14,
+                "end": 48.76,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              }
+            ]
+          },
+          {
+            "lineId": "l09",
+            "start": 48.76,
+            "end": 52.66,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "     ",
+            "tokens": [
+              {
+                "text": "胸",
+                "start": 48.76,
+                "end": 50.16,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "の",
+                "start": 50.16,
+                "end": 50.42,
+                "midi": 69.0,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "奥",
+                "start": 50.42,
+                "end": 51.04,
+                "midi": 67.8,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "まで",
+                "start": 51.04,
+                "end": 51.4,
+                "midi": 67.1,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "晴れ",
+                "start": 51.4,
+                "end": 51.87,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "てゆく",
+                "start": 51.87,
+                "end": 52.66,
+                "midi": 64.0,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l10",
+            "start": 53.42,
+            "end": 56.88,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "",
+            "tokens": [
+              {
+                "text": "ただいまただいま",
+                "start": 53.42,
+                "end": 56.88,
+                "midi": 71.9,
+                "note": "C5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              }
+            ]
+          },
+          {
+            "lineId": "l11",
+            "start": 56.88,
+            "end": 58.98,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "   ",
+            "tokens": [
+              {
+                "text": "ダウン",
+                "start": 56.88,
+                "end": 58.02,
+                "midi": 69.3,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "を",
+                "start": 58.02,
+                "end": 58.28,
+                "midi": 74.0,
+                "note": "D5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "脱い",
+                "start": 58.28,
+                "end": 58.8,
+                "midi": 70.7,
+                "note": "B4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "で",
+                "start": 58.8,
+                "end": 58.98,
+                "midi": 66.9,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "l12",
+            "start": 59.32,
+            "end": 63.02,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "      ",
+            "tokens": [
+              {
+                "text": "ダウン",
+                "start": 59.32,
+                "end": 60.54,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "を",
+                "start": 60.54,
+                "end": 60.86,
+                "midi": 68.6,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "脱い",
+                "start": 60.86,
+                "end": 61.34,
+                "midi": 65.9,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "で",
+                "start": 61.34,
+                "end": 61.54,
+                "midi": 64.5,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "風",
+                "start": 61.6,
+                "end": 61.84,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "の",
+                "start": 61.84,
+                "end": 62.46,
+                "midi": 73.7,
+                "note": "D5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "中",
+                "start": 62.46,
+                "end": 63.02,
+                "midi": 69.7,
+                "note": "A#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "l13",
+            "start": 63.8,
+            "end": 67.34,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "千葉",
+                "start": 63.8,
+                "end": 64.96,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "D"
+              },
+              {
+                "text": "の",
+                "start": 64.96,
+                "end": 65.06,
+                "midi": 64.1,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "涼しい",
+                "start": 65.06,
+                "end": 66.24,
+                "midi": 62.5,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "風",
+                "start": 66.24,
+                "end": 66.94,
+                "midi": 68.0,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "が",
+                "start": 66.94,
+                "end": 67.34,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "l14",
+            "start": 67.34,
+            "end": 71.38,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "ふわり",
+                "start": 67.34,
+                "end": 69.3,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "頬",
+                "start": 69.3,
+                "end": 70.14,
+                "midi": 59.7,
+                "note": "C4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "を",
+                "start": 70.14,
+                "end": 70.62,
+                "midi": 65.0,
+                "note": "F4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Fm"
+              },
+              {
+                "text": "撫で",
+                "start": 70.62,
+                "end": 71.1,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "た",
+                "start": 71.1,
+                "end": 71.38,
+                "midi": 64.8,
+                "note": "F4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "l15",
+            "start": 72.18,
+            "end": 74.46,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "",
+            "tokens": [
+              {
+                "text": "おかえりおかえり",
+                "start": 72.18,
+                "end": 74.46,
+                "midi": 72.1,
+                "note": "C5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Am"
+              }
+            ]
+          },
+          {
+            "lineId": "l16",
+            "start": 74.62,
+            "end": 76.94,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "   ",
+            "tokens": [
+              {
+                "text": "聞き",
+                "start": 74.62,
+                "end": 74.97,
+                "midi": 69.2,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "たかったその",
+                "start": 74.97,
+                "end": 76.16,
+                "midi": 66.5,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "声",
+                "start": 76.16,
+                "end": 76.52,
+                "midi": 70.4,
+                "note": "A#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "に",
+                "start": 76.52,
+                "end": 76.94,
+                "midi": 74.1,
+                "note": "D5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "l17",
+            "start": 76.94,
+            "end": 79.68,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "遠い",
+                "start": 76.94,
+                "end": 78.04,
+                "midi": 62.1,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "空",
+                "start": 78.04,
+                "end": 78.44,
+                "midi": 65.7,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "を",
+                "start": 78.44,
+                "end": 78.78,
+                "midi": 68.5,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "越え",
+                "start": 78.78,
+                "end": 79.33,
+                "midi": 67.2,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "て",
+                "start": 79.33,
+                "end": 79.68,
+                "midi": 69.4,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "l18",
+            "start": 80.78,
+            "end": 83.9,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "やっと",
+                "start": 80.78,
+                "end": 81.86,
+                "midi": 62.0,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "笑っ",
+                "start": 81.86,
+                "end": 82.67,
+                "midi": 59.2,
+                "note": "B3",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "て",
+                "start": 82.67,
+                "end": 82.9,
+                "midi": 62.8,
+                "note": "D#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "会え",
+                "start": 82.9,
+                "end": 83.52,
+                "midi": 69.9,
+                "note": "A#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "たね",
+                "start": 83.52,
+                "end": 83.9,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l19",
+            "start": 86.92,
+            "end": 90.04,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "  ",
+            "tokens": [
+              {
+                "text": "改札",
+                "start": 86.92,
+                "end": 88.52,
+                "midi": 68.9,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Fm"
+              },
+              {
+                "text": "抜け",
+                "start": 88.52,
+                "end": 89.46,
+                "midi": 62.2,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "D"
+              },
+              {
+                "text": "たら",
+                "start": 89.46,
+                "end": 90.04,
+                "midi": 66.8,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l20",
+            "start": 90.04,
+            "end": 92.9,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "  ",
+            "tokens": [
+              {
+                "text": "大きく",
+                "start": 90.04,
+                "end": 91.84,
+                "midi": 64.7,
+                "note": "F4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "振る",
+                "start": 91.84,
+                "end": 92.54,
+                "midi": 62.0,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "手",
+                "start": 92.54,
+                "end": 92.9,
+                "midi": 64.0,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l21",
+            "start": 95.18,
+            "end": 98.84,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "名前",
+                "start": 95.18,
+                "end": 96.74,
+                "midi": 68.8,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "を",
+                "start": 96.74,
+                "end": 97.04,
+                "midi": 65.5,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "呼ぶ",
+                "start": 97.04,
+                "end": 97.98,
+                "midi": 62.0,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "前",
+                "start": 97.98,
+                "end": 98.36,
+                "midi": 63.3,
+                "note": "D#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "G"
+              },
+              {
+                "text": "に",
+                "start": 98.36,
+                "end": 98.84,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "l22",
+            "start": 98.84,
+            "end": 101.12,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": " ",
+            "tokens": [
+              {
+                "text": "笑顔",
+                "start": 98.84,
+                "end": 99.78,
+                "midi": 71.2,
+                "note": "B4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "がこぼれた",
+                "start": 99.78,
+                "end": 101.12,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "l23",
+            "start": 103.52,
+            "end": 106.64,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "二つ",
+                "start": 103.52,
+                "end": 104.82,
+                "midi": 60.1,
+                "note": "C4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "並ん",
+                "start": 104.82,
+                "end": 105.51,
+                "midi": 60.8,
+                "note": "C#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "だ",
+                "start": 105.51,
+                "end": 105.78,
+                "midi": 61.5,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "影",
+                "start": 105.78,
+                "end": 106.22,
+                "midi": 62.4,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "が",
+                "start": 106.22,
+                "end": 106.64,
+                "midi": 64.2,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "l24",
+            "start": 106.64,
+            "end": 110.0,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "   ",
+            "tokens": [
+              {
+                "text": "いつもの",
+                "start": 106.64,
+                "end": 108.12,
+                "midi": 61.5,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "道",
+                "start": 108.12,
+                "end": 108.72,
+                "midi": 63.8,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "を",
+                "start": 108.72,
+                "end": 109.3,
+                "midi": 64.1,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "行く",
+                "start": 109.3,
+                "end": 110.0,
+                "midi": 62.1,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l25",
+            "start": 110.92,
+            "end": 113.86,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "  ",
+            "tokens": [
+              {
+                "text": "お",
+                "start": 110.92,
+                "end": 111.9,
+                "midi": 57.4,
+                "note": "A3",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "D"
+              },
+              {
+                "text": "土産話",
+                "start": 111.9,
+                "end": 113.14,
+                "midi": 61.9,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "は",
+                "start": 113.14,
+                "end": 113.86,
+                "midi": 65.0,
+                "note": "F4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C#"
+              }
+            ]
+          },
+          {
+            "lineId": "l26",
+            "start": 113.86,
+            "end": 117.42,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": " ",
+            "tokens": [
+              {
+                "text": "後で",
+                "start": 113.86,
+                "end": 116.36,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "いいかな",
+                "start": 116.36,
+                "end": 117.42,
+                "midi": 67.7,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "l27",
+            "start": 119.22,
+            "end": 123.38,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "  ",
+            "tokens": [
+              {
+                "text": "もう",
+                "start": 119.22,
+                "end": 120.18,
+                "midi": 71.9,
+                "note": "C5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "E"
+              },
+              {
+                "text": "少し",
+                "start": 120.18,
+                "end": 121.54,
+                "midi": 73.1,
+                "note": "C#5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "このまま",
+                "start": 121.54,
+                "end": 123.38,
+                "midi": 67.2,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              }
+            ]
+          },
+          {
+            "lineId": "l28",
+            "start": 123.38,
+            "end": 125.88,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "   ",
+            "tokens": [
+              {
+                "text": "君",
+                "start": 123.38,
+                "end": 124.1,
+                "midi": 64.0,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "と",
+                "start": 124.1,
+                "end": 124.56,
+                "midi": 63.1,
+                "note": "D#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "歩き",
+                "start": 124.56,
+                "end": 125.38,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              },
+              {
+                "text": "たい",
+                "start": 125.38,
+                "end": 125.88,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "l29",
+            "start": 128.42,
+            "end": 131.92,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "",
+            "tokens": [
+              {
+                "text": "ただいまただいま",
+                "start": 128.42,
+                "end": 131.92,
+                "midi": 72.2,
+                "note": "C5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l30",
+            "start": 132.8,
+            "end": 135.9,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "      ",
+            "tokens": [
+              {
+                "text": "ダウン",
+                "start": 132.8,
+                "end": 133.6,
+                "midi": 68.5,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "を",
+                "start": 133.6,
+                "end": 133.98,
+                "midi": 66.2,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C#"
+              },
+              {
+                "text": "脱い",
+                "start": 133.98,
+                "end": 134.34,
+                "midi": 64.4,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "で",
+                "start": 134.34,
+                "end": 134.5,
+                "midi": 65.9,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "風",
+                "start": 134.5,
+                "end": 134.96,
+                "midi": 66.3,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "の",
+                "start": 134.96,
+                "end": 135.44,
+                "midi": 71.3,
+                "note": "B4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "中",
+                "start": 135.44,
+                "end": 135.9,
+                "midi": 71.0,
+                "note": "B4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "l31",
+            "start": 136.82,
+            "end": 140.26,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "千葉",
+                "start": 136.82,
+                "end": 137.7,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "D"
+              },
+              {
+                "text": "の",
+                "start": 137.7,
+                "end": 138.02,
+                "midi": 64.5,
+                "note": "E4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "涼しい",
+                "start": 138.02,
+                "end": 139.1,
+                "midi": 62.1,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "風",
+                "start": 139.1,
+                "end": 139.8,
+                "midi": 68.2,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "に",
+                "start": 139.8,
+                "end": 140.26,
+                "midi": 66.0,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#"
+              }
+            ]
+          },
+          {
+            "lineId": "l32",
+            "start": 141.22,
+            "end": 144.16,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "  ",
+            "tokens": [
+              {
+                "text": "二人",
+                "start": 141.22,
+                "end": 142.24,
+                "midi": 62.1,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "深呼吸",
+                "start": 142.24,
+                "end": 143.34,
+                "midi": 62.0,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "した",
+                "start": 143.34,
+                "end": 144.16,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Fm"
+              }
+            ]
+          },
+          {
+            "lineId": "l33",
+            "start": 145.34,
+            "end": 148.54,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "",
+            "tokens": [
+              {
+                "text": "おかえりおかえりおかえり",
+                "start": 145.34,
+                "end": 148.54,
+                "midi": 72.1,
+                "note": "C5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l34",
+            "start": 148.54,
+            "end": 153.18,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "その",
+                "start": 148.54,
+                "end": 149.42,
+                "midi": 68.9,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#m"
+              },
+              {
+                "text": "一言",
+                "start": 149.42,
+                "end": 151.0,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C#"
+              },
+              {
+                "text": "で",
+                "start": 151.0,
+                "end": 151.58,
+                "midi": 65.0,
+                "note": "F4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "嬉しく",
+                "start": 151.58,
+                "end": 152.98,
+                "midi": 70.0,
+                "note": "A#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              },
+              {
+                "text": "て",
+                "start": 152.98,
+                "end": 153.18,
+                "midi": 73.0,
+                "note": "C#5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "l35",
+            "start": 153.72,
+            "end": 156.74,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "遠く",
+                "start": 153.72,
+                "end": 154.66,
+                "midi": 62.0,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              },
+              {
+                "text": "へ",
+                "start": 154.66,
+                "end": 154.82,
+                "midi": 69.0,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "行った",
+                "start": 154.82,
+                "end": 155.66,
+                "midi": 67.2,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "分",
+                "start": 155.66,
+                "end": 155.86,
+                "midi": 66.8,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "だけ",
+                "start": 155.86,
+                "end": 156.74,
+                "midi": 69.0,
+                "note": "A4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F#"
+              }
+            ]
+          },
+          {
+            "lineId": "l36",
+            "start": 158.02,
+            "end": 161.06,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "   ",
+            "tokens": [
+              {
+                "text": "街",
+                "start": 158.46,
+                "end": 159.12,
+                "midi": 60.0,
+                "note": "C4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Em"
+              },
+              {
+                "text": "が",
+                "start": 159.12,
+                "end": 159.44,
+                "midi": 61.7,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "好き",
+                "start": 159.44,
+                "end": 160.04,
+                "midi": 62.2,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "になる",
+                "start": 160.04,
+                "end": 161.06,
+                "midi": 69.8,
+                "note": "A#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "F"
+              }
+            ]
+          },
+          {
+            "lineId": "l37",
+            "start": 161.82,
+            "end": 164.58,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "",
+            "tokens": [
+              {
+                "text": "ただいま",
+                "start": 161.82,
+                "end": 164.58,
+                "midi": 66.1,
+                "note": "F#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Dm"
+              }
+            ]
+          },
+          {
+            "lineId": "l38",
+            "start": 166.14,
+            "end": 168.48,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "",
+            "tokens": [
+              {
+                "text": "ただいま",
+                "start": 166.14,
+                "end": 168.48,
+                "midi": 62.3,
+                "note": "D4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "A"
+              }
+            ]
+          },
+          {
+            "lineId": "l39",
+            "start": 170.0,
+            "end": 171.64,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "",
+            "tokens": [
+              {
+                "text": "ただいま",
+                "start": 170.0,
+                "end": 171.64,
+                "midi": 71.0,
+                "note": "B4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              }
+            ]
+          },
+          {
+            "lineId": "l40",
+            "start": 174.36,
+            "end": 180.34,
+            "key": "Unverified",
+            "confidence": "analysis",
+            "source": "data/runs/aya-home-ja-100912/analysis/melody_f0.csv",
+            "summary": "    ",
+            "tokens": [
+              {
+                "text": "君",
+                "start": 174.36,
+                "end": 175.0,
+                "midi": 74.1,
+                "note": "D5",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "Bm"
+              },
+              {
+                "text": "の",
+                "start": 175.0,
+                "end": 175.64,
+                "midi": 71.2,
+                "note": "B4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "隣",
+                "start": 175.64,
+                "end": 176.58,
+                "midi": 67.4,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "が",
+                "start": 176.58,
+                "end": 177.62,
+                "midi": 67.0,
+                "note": "G4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "C"
+              },
+              {
+                "text": "暖かい",
+                "start": 178.82,
+                "end": 180.34,
+                "midi": 68.3,
+                "note": "G#4",
+                "numberNote": "",
+                "jianpu": "",
+                "chord": "E"
+              }
+            ]
+          }
+        ]
+      },
+      "lyricEvidence": {
+        "lyricSetId": "ja-vocal",
+        "activeLanguageCode": "ja",
+        "activeTrackPath": "lyrics/ja-vocal/ja.json",
+        "trackCount": 3,
+        "tracks": [
+          {
+            "code": "ja",
+            "nativeLabel": "日本語",
+            "path": "lyrics/ja-vocal/ja.json",
+            "lineCount": 40,
+            "firstLyricStart": 16.1,
+            "lastLyricEnd": 180.34,
+            "correction": "Native reference cross-checked with large-v3 full/stem VAD and no-VAD, focused windows, and independent MOSS vocal transcription. No human listening sign-off."
+          },
+          {
+            "code": "en",
+            "nativeLabel": "English",
+            "path": "lyrics/ja-vocal/en.json",
+            "lineCount": 40,
+            "firstLyricStart": 16.1,
+            "lastLyricEnd": 180.34,
+            "correction": "Native reference cross-checked with large-v3 full/stem VAD and no-VAD, focused windows, and independent MOSS vocal transcription. No human listening sign-off."
+          },
+          {
+            "code": "zh-Hans",
+            "nativeLabel": "中文",
+            "path": "lyrics/ja-vocal/zh-Hans.json",
+            "lineCount": 40,
+            "firstLyricStart": 16.1,
+            "lastLyricEnd": 180.34,
+            "correction": "Native reference cross-checked with large-v3 full/stem VAD and no-VAD, focused windows, and independent MOSS vocal transcription. No human listening sign-off."
+          }
+        ]
+      },
+      "practice": {
+        "beginnerFocus": [
+          "C#",
+          "G",
+          "Gm",
+          "Dm",
+          "D",
+          "A",
+          "Am",
+          "C#m"
+        ],
+        "counting": "Count quarter-note pulses first, then add one strum at each chord change.",
+        "warning": "Atlas chord and beat maps are analysis-grade unless separately marked verified; use listening before formal teaching."
+      }
+    }
+  },
+  "lesson": {
+    "name": "Atlas first pass",
+    "goal": "Help a beginner follow lyrics, chord changes, and beat entry without needing to sing first.",
+    "steps": [
+      "Listen once and tap the beat lane.",
+      "Loop one phrase and speak the lyric rhythmically.",
+      "Play one strum per displayed chord change.",
+      "Only add a fuller strumming pattern after the lyric and chord entry feel stable."
+    ]
+  }
+}

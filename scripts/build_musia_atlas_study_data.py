@@ -140,17 +140,19 @@ def midi_note_name(midi: float) -> str:
     return f"{NOTE_NAMES[value % 12]}{value // 12 - 1}"
 
 
-def key_root_pc(key: str) -> int:
+def key_root_pc(key: str) -> int | None:
     match = re.search(r"\b([A-G](?:#|b|♯|♭)?)", str(key or ""))
     if not match:
-        return 0
+        return None
     root = match.group(1).replace("♯", "#").replace("♭", "b")
-    return KEY_ROOTS.get(root, 0)
+    return KEY_ROOTS.get(root)
 
 
 def jianpu_for_midi(midi: float, key: str) -> str:
     value = int(round(midi))
     root = key_root_pc(key)
+    if root is None:
+        return ""
     degree = MAJOR_JIANPU[(value - root) % 12]
     root_reference = 60 + root
     while root_reference - value > 6:

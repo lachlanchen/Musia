@@ -1,0 +1,1617 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "aya-home-on-the-breeze",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 16.1,
+      "end": 19.16,
+      "text": "A red leaf from Canada",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 16.1,
+          "end": 16.712,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "red",
+          "start": 16.712,
+          "end": 17.324,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "leaf",
+          "start": 17.324,
+          "end": 17.936,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "from",
+          "start": 17.936,
+          "end": 18.548,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "Canada",
+          "start": 18.548,
+          "end": 19.16,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 19.16,
+      "end": 22.18,
+      "text": "Pressed between my notebook pages",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Pressed",
+          "start": 19.16,
+          "end": 19.764,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "between",
+          "start": 19.764,
+          "end": 20.368,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "my",
+          "start": 20.368,
+          "end": 20.972,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "notebook",
+          "start": 20.972,
+          "end": 21.576,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "pages",
+          "start": 21.576,
+          "end": 22.18,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 23.26,
+      "end": 26.24,
+      "text": "My suitcase is bursting",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 23.26,
+          "end": 24.005,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "suitcase",
+          "start": 24.005,
+          "end": 24.75,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "is",
+          "start": 24.75,
+          "end": 25.495,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "bursting",
+          "start": 25.495,
+          "end": 26.24,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 26.26,
+      "end": 29.26,
+      "text": "The morning I finally zip it shut",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 26.26,
+          "end": 26.689,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "morning",
+          "start": 26.689,
+          "end": 27.117,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I",
+          "start": 27.117,
+          "end": 27.546,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "finally",
+          "start": 27.546,
+          "end": 27.974,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "zip",
+          "start": 27.974,
+          "end": 28.403,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "it",
+          "start": 28.403,
+          "end": 28.831,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "shut",
+          "start": 28.831,
+          "end": 29.26,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 30.62,
+      "end": 33.62,
+      "text": "I'm going to see you",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 30.62,
+          "end": 31.22,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "going",
+          "start": 31.22,
+          "end": 31.82,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "to",
+          "start": 31.82,
+          "end": 32.42,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "see",
+          "start": 32.42,
+          "end": 33.02,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "you",
+          "start": 33.02,
+          "end": 33.62,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 36.88,
+      "end": 40.0,
+      "text": "Though our clocks tell different times",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Though",
+          "start": 36.88,
+          "end": 37.4,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "our",
+          "start": 37.4,
+          "end": 37.92,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "clocks",
+          "start": 37.92,
+          "end": 38.44,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "tell",
+          "start": 38.44,
+          "end": 38.96,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "different",
+          "start": 38.96,
+          "end": 39.48,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "times",
+          "start": 39.48,
+          "end": 40.0,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 40.82,
+      "end": 44.66,
+      "text": "There's only one place I want to come home to",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "There's",
+          "start": 40.82,
+          "end": 41.204,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "only",
+          "start": 41.204,
+          "end": 41.588,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "one",
+          "start": 41.588,
+          "end": 41.972,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "place",
+          "start": 41.972,
+          "end": 42.356,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I",
+          "start": 42.356,
+          "end": 42.74,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "want",
+          "start": 42.74,
+          "end": 43.124,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "to",
+          "start": 43.124,
+          "end": 43.508,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "come",
+          "start": 43.508,
+          "end": 43.892,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 43.892,
+          "end": 44.276,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "to",
+          "start": 44.276,
+          "end": 44.66,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 45.2,
+      "end": 48.76,
+      "text": "Beyond the window, the sky grows bright",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Beyond",
+          "start": 45.2,
+          "end": 45.709,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "the",
+          "start": 45.709,
+          "end": 46.217,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "window,",
+          "start": 46.217,
+          "end": 46.726,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "the",
+          "start": 46.726,
+          "end": 47.234,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "sky",
+          "start": 47.234,
+          "end": 47.743,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "grows",
+          "start": 47.743,
+          "end": 48.251,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "bright",
+          "start": 48.251,
+          "end": 48.76,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 48.76,
+      "end": 52.66,
+      "text": "And sunshine reaches deep into my heart",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "And",
+          "start": 48.76,
+          "end": 49.317,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "sunshine",
+          "start": 49.317,
+          "end": 49.874,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "reaches",
+          "start": 49.874,
+          "end": 50.431,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "deep",
+          "start": 50.431,
+          "end": 50.989,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "into",
+          "start": 50.989,
+          "end": 51.546,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "my",
+          "start": 51.546,
+          "end": 52.103,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "heart",
+          "start": 52.103,
+          "end": 52.66,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 53.42,
+      "end": 56.88,
+      "text": "I'm home, I'm home",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 53.42,
+          "end": 54.285,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home,",
+          "start": 54.285,
+          "end": 55.15,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I'm",
+          "start": 55.15,
+          "end": 56.015,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 56.015,
+          "end": 56.88,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 56.88,
+      "end": 58.98,
+      "text": "Taking off my down coat",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Taking",
+          "start": 56.88,
+          "end": 57.3,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "off",
+          "start": 57.3,
+          "end": 57.72,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "my",
+          "start": 57.72,
+          "end": 58.14,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "down",
+          "start": 58.14,
+          "end": 58.56,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "coat",
+          "start": 58.56,
+          "end": 58.98,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 59.32,
+      "end": 63.02,
+      "text": "Off comes my down coat, into the breeze",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Off",
+          "start": 59.32,
+          "end": 59.782,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "comes",
+          "start": 59.782,
+          "end": 60.245,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "my",
+          "start": 60.245,
+          "end": 60.708,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "down",
+          "start": 60.708,
+          "end": 61.17,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "coat,",
+          "start": 61.17,
+          "end": 61.633,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "into",
+          "start": 61.633,
+          "end": 62.095,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "the",
+          "start": 62.095,
+          "end": 62.558,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "breeze",
+          "start": 62.558,
+          "end": 63.02,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 63.8,
+      "end": 67.34,
+      "text": "Chiba's cool breeze",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Chiba's",
+          "start": 63.8,
+          "end": 64.98,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "cool",
+          "start": 64.98,
+          "end": 66.16,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "breeze",
+          "start": 66.16,
+          "end": 67.34,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 67.34,
+      "end": 71.38,
+      "text": "Softly brushes my cheek",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Softly",
+          "start": 67.34,
+          "end": 68.35,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "brushes",
+          "start": 68.35,
+          "end": 69.36,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "my",
+          "start": 69.36,
+          "end": 70.37,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "cheek",
+          "start": 70.37,
+          "end": 71.38,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 72.18,
+      "end": 74.46,
+      "text": "Welcome home, welcome home",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Welcome",
+          "start": 72.18,
+          "end": 72.75,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home,",
+          "start": 72.75,
+          "end": 73.32,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "welcome",
+          "start": 73.32,
+          "end": 73.89,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 73.89,
+          "end": 74.46,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 74.62,
+      "end": 76.94,
+      "text": "That voice I've longed to hear",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "That",
+          "start": 74.62,
+          "end": 75.007,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "voice",
+          "start": 75.007,
+          "end": 75.393,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I've",
+          "start": 75.393,
+          "end": 75.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "longed",
+          "start": 75.78,
+          "end": 76.167,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "to",
+          "start": 76.167,
+          "end": 76.553,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "hear",
+          "start": 76.553,
+          "end": 76.94,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 76.94,
+      "end": 79.68,
+      "text": "Across the distant sky",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Across",
+          "start": 76.94,
+          "end": 77.625,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "the",
+          "start": 77.625,
+          "end": 78.31,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "distant",
+          "start": 78.31,
+          "end": 78.995,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "sky",
+          "start": 78.995,
+          "end": 79.68,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 80.78,
+      "end": 83.9,
+      "text": "At last we meet with smiles",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "At",
+          "start": 80.78,
+          "end": 81.3,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "last",
+          "start": 81.3,
+          "end": 81.82,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "we",
+          "start": 81.82,
+          "end": 82.34,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "meet",
+          "start": 82.34,
+          "end": 82.86,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "with",
+          "start": 82.86,
+          "end": 83.38,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "smiles",
+          "start": 83.38,
+          "end": 83.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 86.92,
+      "end": 90.04,
+      "text": "Through the ticket gate",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Through",
+          "start": 86.92,
+          "end": 87.7,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "the",
+          "start": 87.7,
+          "end": 88.48,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ticket",
+          "start": 88.48,
+          "end": 89.26,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "gate",
+          "start": 89.26,
+          "end": 90.04,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 90.04,
+      "end": 92.9,
+      "text": "Your hand waves high",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Your",
+          "start": 90.04,
+          "end": 90.755,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "hand",
+          "start": 90.755,
+          "end": 91.47,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "waves",
+          "start": 91.47,
+          "end": 92.185,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "high",
+          "start": 92.185,
+          "end": 92.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 95.18,
+      "end": 98.84,
+      "text": "Before I call your name",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Before",
+          "start": 95.18,
+          "end": 95.912,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I",
+          "start": 95.912,
+          "end": 96.644,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "call",
+          "start": 96.644,
+          "end": 97.376,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "your",
+          "start": 97.376,
+          "end": 98.108,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "name",
+          "start": 98.108,
+          "end": 98.84,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 98.84,
+      "end": 101.12,
+      "text": "A smile spills out",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 98.84,
+          "end": 99.41,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "smile",
+          "start": 99.41,
+          "end": 99.98,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "spills",
+          "start": 99.98,
+          "end": 100.55,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "out",
+          "start": 100.55,
+          "end": 101.12,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 103.52,
+      "end": 106.64,
+      "text": "Two shadows side by side",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Two",
+          "start": 103.52,
+          "end": 104.144,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "shadows",
+          "start": 104.144,
+          "end": 104.768,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "side",
+          "start": 104.768,
+          "end": 105.392,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "by",
+          "start": 105.392,
+          "end": 106.016,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "side",
+          "start": 106.016,
+          "end": 106.64,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 106.64,
+      "end": 110.0,
+      "text": "Follow our familiar road",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Follow",
+          "start": 106.64,
+          "end": 107.48,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "our",
+          "start": 107.48,
+          "end": 108.32,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "familiar",
+          "start": 108.32,
+          "end": 109.16,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "road",
+          "start": 109.16,
+          "end": 110.0,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 110.92,
+      "end": 113.86,
+      "text": "My stories from the journey",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "My",
+          "start": 110.92,
+          "end": 111.508,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "stories",
+          "start": 111.508,
+          "end": 112.096,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "from",
+          "start": 112.096,
+          "end": 112.684,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "the",
+          "start": 112.684,
+          "end": 113.272,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "journey",
+          "start": 113.272,
+          "end": 113.86,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 113.86,
+      "end": 117.42,
+      "text": "Can they wait till later?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Can",
+          "start": 113.86,
+          "end": 114.572,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "they",
+          "start": 114.572,
+          "end": 115.284,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "wait",
+          "start": 115.284,
+          "end": 115.996,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "till",
+          "start": 115.996,
+          "end": 116.708,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "later?",
+          "start": 116.708,
+          "end": 117.42,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 119.22,
+      "end": 123.38,
+      "text": "A little longer, just like this",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "A",
+          "start": 119.22,
+          "end": 119.913,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "little",
+          "start": 119.913,
+          "end": 120.607,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "longer,",
+          "start": 120.607,
+          "end": 121.3,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "just",
+          "start": 121.3,
+          "end": 121.993,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "like",
+          "start": 121.993,
+          "end": 122.687,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "this",
+          "start": 122.687,
+          "end": 123.38,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 123.38,
+      "end": 125.88,
+      "text": "I want to walk with you",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 123.38,
+          "end": 123.797,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "want",
+          "start": 123.797,
+          "end": 124.213,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "to",
+          "start": 124.213,
+          "end": 124.63,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "walk",
+          "start": 124.63,
+          "end": 125.047,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "with",
+          "start": 125.047,
+          "end": 125.463,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "you",
+          "start": 125.463,
+          "end": 125.88,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 128.42,
+      "end": 131.92,
+      "text": "I'm home, I'm home",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 128.42,
+          "end": 129.295,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home,",
+          "start": 129.295,
+          "end": 130.17,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I'm",
+          "start": 130.17,
+          "end": 131.045,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 131.045,
+          "end": 131.92,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l30",
+      "start": 132.8,
+      "end": 135.9,
+      "text": "Off comes my down coat, into the breeze",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Off",
+          "start": 132.8,
+          "end": 133.188,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "comes",
+          "start": 133.188,
+          "end": 133.575,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "my",
+          "start": 133.575,
+          "end": 133.963,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "down",
+          "start": 133.963,
+          "end": 134.35,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "coat,",
+          "start": 134.35,
+          "end": 134.738,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "into",
+          "start": 134.738,
+          "end": 135.125,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "the",
+          "start": 135.125,
+          "end": 135.513,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "breeze",
+          "start": 135.513,
+          "end": 135.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l31",
+      "start": 136.82,
+      "end": 140.26,
+      "text": "In Chiba's cool breeze",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "In",
+          "start": 136.82,
+          "end": 137.68,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "Chiba's",
+          "start": 137.68,
+          "end": 138.54,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "cool",
+          "start": 138.54,
+          "end": 139.4,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "breeze",
+          "start": 139.4,
+          "end": 140.26,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l32",
+      "start": 141.22,
+      "end": 144.16,
+      "text": "We take a deep breath together",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "We",
+          "start": 141.22,
+          "end": 141.71,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "take",
+          "start": 141.71,
+          "end": 142.2,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "a",
+          "start": 142.2,
+          "end": 142.69,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "deep",
+          "start": 142.69,
+          "end": 143.18,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "breath",
+          "start": 143.18,
+          "end": 143.67,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "together",
+          "start": 143.67,
+          "end": 144.16,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l33",
+      "start": 145.34,
+      "end": 148.54,
+      "text": "Welcome home, welcome home, welcome home",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Welcome",
+          "start": 145.34,
+          "end": 145.873,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home,",
+          "start": 145.873,
+          "end": 146.407,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "welcome",
+          "start": 146.407,
+          "end": 146.94,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home,",
+          "start": 146.94,
+          "end": 147.473,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "welcome",
+          "start": 147.473,
+          "end": 148.007,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 148.007,
+          "end": 148.54,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l34",
+      "start": 148.54,
+      "end": 153.18,
+      "text": "Those simple words fill me with joy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Those",
+          "start": 148.54,
+          "end": 149.203,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "simple",
+          "start": 149.203,
+          "end": 149.866,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "words",
+          "start": 149.866,
+          "end": 150.529,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "fill",
+          "start": 150.529,
+          "end": 151.191,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "me",
+          "start": 151.191,
+          "end": 151.854,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "with",
+          "start": 151.854,
+          "end": 152.517,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "joy",
+          "start": 152.517,
+          "end": 153.18,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l35",
+      "start": 153.72,
+      "end": 156.74,
+      "text": "The farther I have traveled",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 153.72,
+          "end": 154.324,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "farther",
+          "start": 154.324,
+          "end": 154.928,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I",
+          "start": 154.928,
+          "end": 155.532,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "have",
+          "start": 155.532,
+          "end": 156.136,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "traveled",
+          "start": 156.136,
+          "end": 156.74,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l36",
+      "start": 158.02,
+      "end": 161.06,
+      "text": "The more I love this town",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "The",
+          "start": 158.02,
+          "end": 158.527,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "more",
+          "start": 158.527,
+          "end": 159.033,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I",
+          "start": 159.033,
+          "end": 159.54,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "love",
+          "start": 159.54,
+          "end": 160.047,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "this",
+          "start": 160.047,
+          "end": 160.553,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "town",
+          "start": 160.553,
+          "end": 161.06,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l37",
+      "start": 161.82,
+      "end": 164.58,
+      "text": "I'm home",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 161.82,
+          "end": 163.2,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 163.2,
+          "end": 164.58,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l38",
+      "start": 166.14,
+      "end": 168.48,
+      "text": "I'm home",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 166.14,
+          "end": 167.31,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 167.31,
+          "end": 168.48,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l39",
+      "start": 170,
+      "end": 171.64,
+      "text": "I'm home",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 170.0,
+          "end": 170.82,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "home",
+          "start": 170.82,
+          "end": 171.64,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l40",
+      "start": 174.36,
+      "end": 180.34,
+      "text": "Here beside you, I feel warm",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Here",
+          "start": 174.36,
+          "end": 175.357,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "beside",
+          "start": 175.357,
+          "end": 176.353,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "you,",
+          "start": 176.353,
+          "end": 177.35,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "I",
+          "start": 177.35,
+          "end": 178.347,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "feel",
+          "start": 178.347,
+          "end": 179.343,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "warm",
+          "start": 179.343,
+          "end": 180.34,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "audioSha256": "419df5ffd45640f0567f7212d3edb18f7e4f328c02e3b319ae21710dec016b40",
+    "correction": "Native reference cross-checked with large-v3 full/stem VAD and no-VAD, focused windows, and independent MOSS vocal transcription. No human listening sign-off.",
+    "timing": "Selected-render ASR word anchors; subdivision inside recognizer words and translation highlights are approximate.",
+    "releaseStage": "published",
+    "notes": "The render omits あとひと眠りで, repeats ダウンを脱いで in chorus one, sings おかえり three times in the final chorus, and ends with three distinct ただいま entrances. Focused no-VAD recovers the two missed outro entrances and corrects the stretched final-line start. Preserve sound-close native source and intended 千葉 despite imperfect nasalized pronunciation. No instrumental or nonlexical opening syllables are lyric rows."
+  }
+}

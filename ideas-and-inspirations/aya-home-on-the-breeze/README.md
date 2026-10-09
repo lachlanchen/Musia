@@ -1,6 +1,6 @@
 # ただいま、風のなか · Home on the Breeze
 
-Status: lyric draft and production brief, not generated audio or a website release.
+Status: generated, selected and ASR-audited; website release package prepared.
 Written October 9, 2026. Artist: Musia. Intended vocal language: Japanese.
 
 ## Owner's Intention
@@ -29,7 +29,7 @@ new homecoming song, not a rewrite or replacement of Beyond the Maples.
   The bridge is deliberately sparse. The happy mood does not require shouting
   or a childlike voice.
 
-## Eventual Production
+## Production
 
 Use the established ACE full-song candidate route and native Japanese input,
 as in the owner-approved Beyond the Maples production. Start around 116 BPM
@@ -41,8 +41,18 @@ Model input: `lyrics.ja.txt` plus the compact `ace-caption.txt`, not this note
 or the surrounding development conversation. Keep Japanese context; only add
 targeted pronunciation controls if actual output warrants them.
 
-Before future publication: separate vocals, large-model ASR, independent
-cross-check, opening/gap/tail audit, sound-close source preservation, corrected
-JA plus EN/ZH meaning tracks with ruby, selected-audio chord/beat analysis,
-fresh current-song cover, website validation, and MusiaSongs audio publication.
-No timed lyrics, cover or audio has been fabricated for this draft.
+Selected seed 100912 from the roomier 184-second sweep after comparing ten
+candidates. `reviewed-lyrics.json` records the actual selected performance and
+ASR anchors; `lyrics.ja.txt` remains the unchanged intention document. The render
+omits `あとひと眠りで`, repeats the coat hook, and ends with three `ただいま`
+entrances. Forty public lines preserve those differences.
+
+Rebuild the package with:
+
+```bash
+PYTHONNOUSERSITE=1 conda run -n musia python scripts/prepare_reviewed_japanese_fun_item.py ideas-and-inspirations/aya-home-on-the-breeze/release.json
+```
+
+Production evidence, selection, correction decisions and publication checks:
+`references/aya-home-on-the-breeze-production-2026-10-09.md`.
+Player: https://fun.lazying.art/#aya-home-on-the-breeze
