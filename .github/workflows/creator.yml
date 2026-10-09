@@ -9,19 +9,30 @@ permissions:
 jobs:
   creator:
     runs-on: ubuntu-latest
+    env:
+      MUSIA_LAZYEDGE_ROOT: ${{ github.workspace }}/.ci/lazyedge
     strategy:
       matrix:
         python: ['3.10', '3.12']
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: lachlanchen/LazyEdge
+          ref: 1e57a903972dcc89f3f7dd91b7f2d58b6e018705
+          path: .ci/lazyedge
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node deploy/creator/inventory.mjs
+      - run: sudo apt-get update
+      - run: sudo apt-get install --no-install-recommends -y ffmpeg
       - uses: actions/setup-python@v5
         with:
           python-version: '${{ matrix.python }}'
       - run: python -m pip install -r requirements-creator.txt
       - run: python -m unittest discover -s tests -p 'test_creator*.py'
       - run: python -m unittest discover -s tests -p test_learning_api.py
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
       - run: node --check apps/web/creator/app.js
       - run: node --check bin/musia.js

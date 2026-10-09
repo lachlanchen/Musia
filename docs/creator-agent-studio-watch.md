@@ -91,6 +91,13 @@ it never purchases or generates audio. An initial attempt raced account loading
 and dispatched no provider request; the corrected run passed with two provider
 requests.
 
+Creator CI discovers all `test_creator*.py` modules on Python 3.10 and 3.12.
+Its ephemeral runner checks out the reviewed LazyEdge commit
+`1e57a903972dcc89f3f7dd91b7f2d58b6e018705` and verifies the existing file digests
+before running ingress tests. FFmpeg is installed on the runner so the actual
+playback-derivative test does not silently skip. Local verification continues
+using shared installations; no local duplicate or live gateway change is required.
+
 Native tools: `android_creator_workspace_smoke.py` verifies the actual guest UI
 and tab-shared draft; `android_stage_smoke.py` verifies timed chords, three lyric
 languages, transport bounds and an advancing audio clock. `run_creator_ios_qa.py`
