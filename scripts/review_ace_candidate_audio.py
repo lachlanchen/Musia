@@ -24,6 +24,8 @@ def main():
     parser.add_argument("--language", required=True)
     parser.add_argument("--model", default="large-v3")
     parser.add_argument("--apex", action="store_true")
+    parser.add_argument("--window-crosscheck", action="store_true",
+                        help="Independently scan the complete song without speech VAD")
     args = parser.parse_args()
     records = json.loads(args.manifest.read_text())
     for record in records:
@@ -54,6 +56,25 @@ def main():
                "model": args.model, "language": info.language, "duration": info.duration,
                "mode": "full-mix-vad-no-previous-text", "segments": rows}
         (out / "asr.json").write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n")
+        if args.window_crosscheck:
+            import numpy as np
+            from faster_whisper.audio import decode_audio
+            samples = decode_audio(record["audio"], sampling_rate=16000)
+            windows = []
+            # Two-second context overlaps avoid dropping words at window joins.
+            # Keep raw windows; a lyric audit must deduplicate those overlaps.
+            for offset in range(0, len(samples), 28*16000):
+                chunk = np.asarray(samples[offset:offset+30*16000])
+                parts, _ = model.transcribe(chunk, language=args.language, beam_size=5,
+                    vad_filter=False, condition_on_previous_text=False, word_timestamps=True)
+                shift = offset/16000
+                windows.append({"start":shift, "end":shift+len(chunk)/16000, "segments":[
+                    {"start":p.start+shift, "end":p.end+shift, "text":p.text,
+                     "words":[{"word":w.word, "start":w.start+shift, "end":w.end+shift,
+                               "probability":w.probability} for w in p.words or []]} for p in parts]})
+            (out/"asr-windows.json").write_text(json.dumps({"audioSha256":record["sha256"],
+                "model":args.model, "language":args.language, "vad":False, "prompt":None,
+                "overlapSeconds":2, "windows":windows}, ensure_ascii=False, indent=2)+"\n")
         print(f"Seed {record['seed']}: " + " / ".join(x["text"].strip() for x in rows), flush=True)
 
 

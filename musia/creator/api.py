@@ -1,20 +1,23 @@
 """Separate creator boundary; never mounts Studio or accepts worker commands."""
 
 from dataclasses import dataclass
+from html import escape
 import os
 from pathlib import Path
 import secrets
-from urllib.parse import urlsplit
+from urllib.parse import urlencode, urlsplit
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import FileResponse, JSONResponse, RedirectResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse, Response
 
 from musia.learning import ROOT, _base_url, create_app as learning_app
 from .agent import Producer
 from .auth import CentralAuth
 from .contracts import Chat, Comment, CreatorError, Generate, Invite, PLANS, Reaction, Report, TERMS_VERSION, Visibility
 from .store import Store, digest
+from .native_auth import NativeFlow, NativeStart, NativeExchange
+from .billing import Billing, Verification
 
 
 @dataclass(frozen=True)
@@ -61,7 +64,10 @@ class Boundary:
         elif scope["method"] not in ("GET", "HEAD", "POST", "DELETE"):
             error = (405, "method_not_allowed")
         elif scope["method"] in ("POST", "DELETE") and (
-            headers.get(b"origin", b"").decode() != self.origin or headers.get(b"x-musia-request") != b"1"
+            not (headers.get(b"origin", b"").decode() == self.origin or (
+                b"origin" not in headers and (headers.get(b"authorization", b"").startswith(b"Bearer ") or
+                scope["path"].removeprefix("/creator") in ("/auth/native/start", "/auth/native/exchange"))
+            )) or headers.get(b"x-musia-request") != b"1"
             or headers.get(b"content-type", b"").split(b";")[0] != b"application/json"
         ):
             error = (403, "same_origin_request_required")
@@ -86,11 +92,13 @@ class Boundary:
         await self.app(scope, replay, secure)
 
 
-def create_app(settings=None, *, store=None, auth=None, producer=None):
+def create_app(settings=None, *, store=None, auth=None, producer=None, billing=None):
     cfg = settings or Settings.environment()
     store = store or Store(cfg.directory)
     auth = auth or (CentralAuth(cfg.auth_directory, cfg.origin) if cfg.auth_directory else None)
     producer = producer or Producer()
+    native = NativeFlow(store)
+    billing = billing or Billing(store)
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None, redirect_slashes=False)
     app.add_middleware(Boundary, origin=cfg.origin)
     secure = cfg.origin.startswith("https:")
@@ -106,8 +114,16 @@ def create_app(settings=None, *, store=None, auth=None, producer=None):
         # Do not echo submitted lyrics, codes or account data in errors.
         return JSONResponse({"detail": "invalid_request"}, status_code=422)
 
+    def session_token(request):
+        authorization = request.headers.get("authorization")
+        if authorization is not None:
+            if not authorization.startswith("Bearer ") or len(authorization) > 256:
+                raise CreatorError("sign_in_required", 401)
+            return authorization[7:]
+        return request.cookies.get(cookie, "")
+
     def session(request, optional=False):
-        token = request.cookies.get(cookie, "")
+        token = session_token(request)
         if not token and optional:
             return None
         if not auth:
@@ -131,10 +147,11 @@ def create_app(settings=None, *, store=None, auth=None, producer=None):
     @app.get("/api/capabilities")
     def capabilities():
         providers = auth.providers() if auth else {}
-        return {"version": 1, "providers": providers, "login": bool(providers),
-                "generation": cfg.generation_enabled and bool(providers), "agent": producer.available and bool(providers),
-                "invitationRequired": cfg.invitation_required, "salesEnabled": False, "termsVersion": TERMS_VERSION,
-                "plans": [{"id": k, **v, "priceStatus": "approved_launch_target_not_for_sale"} for k, v in PLANS.items()]}
+        connected = any(value is True for value in providers.values())
+        return {"version": 1, "providers": providers, "login": connected,
+                "generation": cfg.generation_enabled and connected, "agent": producer.available and connected,
+                "invitationRequired": cfg.invitation_required, "salesEnabled": billing.sales_available, "termsVersion": TERMS_VERSION,
+                "plans": [{"id": k, **v, "priceStatus": "store_qualification_required"} for k, v in PLANS.items()]}
 
     @app.post("/auth/start")
     def login(request: Request):
@@ -148,6 +165,27 @@ def create_app(settings=None, *, store=None, auth=None, producer=None):
         set_cookie(response, binding_cookie, binding, 600)
         return response
 
+    @app.post("/auth/native/start")
+    def native_start(body: NativeStart, request: Request):
+        if not auth or not auth.providers():
+            raise CreatorError("sign_in_unavailable", 503)
+        attempt = native.start(body, request.client.host if request.client else "unknown")
+        return {"attempt": attempt, "url": cfg.origin + "/creator/auth/native/browser?attempt=" + attempt, "expiresIn": 600}
+
+    @app.get("/auth/native/browser")
+    def native_browser(request: Request, attempt: str = ""):
+        if not auth:
+            raise CreatorError("sign_in_unavailable", 503)
+        binding = secrets.token_urlsafe(32)
+        native.browser(attempt, binding)
+        response = RedirectResponse(auth.begin(binding), status_code=303)
+        set_cookie(response, binding_cookie, binding, 600)
+        return response
+
+    @app.post("/auth/native/exchange")
+    def native_exchange(body: NativeExchange):
+        return native.exchange(body)
+
     @app.get("/auth/callback")
     def callback(request: Request):
         if not auth:
@@ -156,14 +194,27 @@ def create_app(settings=None, *, store=None, auth=None, producer=None):
         if not binding:
             raise CreatorError("sign_in_expired", 401)
         token = auth.complete(cfg.origin + "/creator/auth/callback?" + request.url.query, binding, store)
-        response = RedirectResponse("/creator/", status_code=303)
+        completion = native.finish(binding, token)
+        if completion:
+            # End the issuer's form redirect chain on HTTPS. Redirecting directly
+            # to a custom scheme inherits its form-action CSP and is blocked.
+            destination = escape("art.lazying.musia://auth?" + urlencode(completion), quote=True)
+            response = HTMLResponse('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                '<meta name="viewport" content="width=device-width,initial-scale=1">'
+                '<title>Return to Musia</title><link rel="stylesheet" href="/creator/styles.css">'
+                '<script defer src="/creator/native-return.js"></script></head><body>'
+                '<main class="auth-return"><h1>Musia</h1><p>Sign-in complete.</p>'
+                f'<a id="native-return" href="{destination}">Return to Musia</a></main></body></html>')
+        else:
+            response = RedirectResponse("/creator/", status_code=303)
         response.delete_cookie(binding_cookie, path="/creator", secure=secure, httponly=True, samesite="lax")
-        set_cookie(response, cookie, token, 86400*7)
+        if not completion:
+            set_cookie(response, cookie, token, 86400*7)
         return response
 
     @app.post("/auth/logout")
     def logout(request: Request):
-        token = request.cookies.get(cookie, "")
+        token = session_token(request)
         try:
             current = store.session(token)
         except CreatorError:
@@ -179,6 +230,18 @@ def create_app(settings=None, *, store=None, auth=None, producer=None):
     def me(request: Request):
         account = owner(request, True)
         return {"account": store.profile(account) if account else None}
+
+    @app.get("/api/billing")
+    def billing_status(request: Request):
+        return billing.status(owner(request))
+
+    @app.post("/api/billing/verify")
+    def billing_verify(body: Verification, request: Request):
+        return billing.verify(owner(request), body)
+
+    @app.post("/api/billing/restore")
+    def billing_restore(request: Request):
+        return billing.restore(owner(request))
 
     @app.post("/api/terms")
     def terms(request: Request):
@@ -280,12 +343,13 @@ def create_app(settings=None, *, store=None, auth=None, producer=None):
     def delete_account(request: Request):
         current = session(request)
         store.delete_account(current["owner"])
-        auth.sign_out(current)
-        response = JSONResponse({"ok": True, "mediaPurge": "pending_operator_cleanup"})
+        auth.delete_links(current)
+        response = JSONResponse({"ok": True, "mediaPurge": "scheduled_after_active_render"})
         response.delete_cookie(cookie, path="/creator", secure=secure, httponly=True, samesite="lax")
         return response
 
     files = {"/": ("index.html", "text/html"), "/app.js": ("app.js", "text/javascript"),
+             "/native-return.js": ("native-return.js", "text/javascript"),
              "/styles.css": ("styles.css", "text/css"), "/terms": ("terms.html", "text/html")}
 
     def static(request: Request):

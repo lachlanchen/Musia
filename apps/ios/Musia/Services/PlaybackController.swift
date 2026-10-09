@@ -54,6 +54,7 @@ final class PlaybackController: ObservableObject {
     private var lastCheckpoint = Date()
     private var lastNowPlayingSecond = -1
     private var lastTapBeat: Double?
+    private var isCreatorSelection = false
 
     init(history: LocalStore) {
         self.history = history
@@ -74,6 +75,7 @@ final class PlaybackController: ObservableObject {
     }
 
     var hasSelection: Bool { requestedID != nil }
+    var selectionGeneration: UUID { generation }
     var beatConfidence: AnalysisConfidence { asset?.confidence.beats ?? .unavailable }
     var canTap: Bool {
         mode == .tap && isPlaying && !seeking && beatConfidence != .unavailable &&
@@ -89,6 +91,7 @@ final class PlaybackController: ObservableObject {
         generation = UUID()
         let token = generation
         requestedID = id; isLocalExercise = localExercise
+        isCreatorSelection = false
         song = nil; asset = nil; artwork = nil
         position = 0; duration = 0; loop = nil; markerA = nil
         issue = nil; loading = true; resetTap()
@@ -126,8 +129,32 @@ final class PlaybackController: ObservableObject {
     }
 
     func retry() {
+        if isCreatorSelection, let song { openCreator(song); return }
         guard let id = requestedID else { return }
         open(id: id, localExercise: isLocalExercise)
+    }
+
+    /// Reuse all native transport, audio-clock lyrics, interruptions, and remote
+    /// controls. Creator activity is not added to local learning history.
+    func openCreator(_ loaded: Song) {
+        finishRecord(); pause()
+        loadTask?.cancel(); artworkTask?.cancel(); clearItem()
+        generation = UUID(); isCreatorSelection = true
+        requestedID = loaded.id; isLocalExercise = false
+        song = loaded; asset = nil; artwork = nil
+        position = 0; duration = 0; loop = nil; markerA = nil
+        issue = nil; loading = false; resetTap()
+        if let initial = loaded.defaultAsset { selectAsset(initial.id) }
+        updateNowPlaying()
+    }
+
+    func clearCreatorSelection() {
+        guard isCreatorSelection else { return }
+        pause(); loadTask?.cancel(); artworkTask?.cancel(); clearItem()
+        generation = UUID(); requestedID = nil; isCreatorSelection = false
+        song = nil; asset = nil; artwork = nil; issue = nil; loading = false
+        position = 0; duration = 0; loop = nil; markerA = nil
+        updateNowPlaying()
     }
 
     func selectAsset(_ id: String) {
@@ -300,6 +327,7 @@ final class PlaybackController: ObservableObject {
     }
 
     private func beginRecord() {
+        guard !isCreatorSelection else { return }
         guard let song, let asset else { return }
         if record == nil {
             record = PracticeRecord(songID: song.id, title: song.title, assetID: asset.id, mode: mode, rate: rate)

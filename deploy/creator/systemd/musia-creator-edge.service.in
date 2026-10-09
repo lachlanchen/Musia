@@ -1,0 +1,36 @@
+[Unit]
+Description=Musia creator scoped edge guard
+After=network.target
+
+[Service]
+Type=simple
+User=musia-creator-edge
+Group=musia-creator-edge
+WorkingDirectory=@GUARD_RELEASE@
+Environment=MUSIA_LAZYEDGE_ROOT=@LAZYEDGE_RELEASE@
+LoadCredential=bindings:/etc/musia-creator/edge/bindings.json
+LoadCredential=relay:/etc/musia-creator/edge/relay
+ExecStart=@NODE@ @GUARD_RELEASE@/gateway.mjs %d/bindings
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_INET AF_UNIX
+IPAddressDeny=any
+IPAddressAllow=localhost
+CapabilityBoundingSet=
+LimitNOFILE=512
+TasksMax=64
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target

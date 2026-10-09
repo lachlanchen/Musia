@@ -150,11 +150,18 @@ class Store:
         self.active(db, owner)
         grant = db.execute("SELECT * FROM grants WHERE owner=? AND expires>?", (owner, self.now())).fetchone()
         tier = grant["tier"] if grant else "free"
+        paid = None
+        if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='subscriptions'").fetchone():
+            paid = db.execute("SELECT tier,expires FROM subscriptions WHERE owner=? AND state IN ('active','grace','canceled') AND expires>? AND verified>? ORDER BY CASE tier WHEN 'studio' THEN 2 ELSE 1 END DESC,expires DESC LIMIT 1",
+                              (owner,self.now(),self.now()-900)).fetchone()
+        if paid and (not grant or list(PLANS).index(paid["tier"]) >= list(PLANS).index(tier)):
+            tier = paid["tier"]
+            grant = None
         used = db.execute("SELECT count(*) FROM jobs WHERE owner=? AND period=? AND credit IN ('reserved','settled')",
                           (owner, self.period())).fetchone()[0]
         return {"tier": tier, "period": self.period(), "limit": PLANS[tier]["renders"], "used": used,
-                "remaining": max(0, PLANS[tier]["renders"]-used), "source": "pilot_grant" if grant else "free",
-                "expires": grant["expires"] if grant else None}
+                "remaining": max(0, PLANS[tier]["renders"]-used), "source": "pilot_grant" if grant else "verified_subscription" if paid else "free",
+                "expires": grant["expires"] if grant else paid["expires"] if paid else None}
 
     def profile(self, owner):
         with self.db() as db:
@@ -267,14 +274,17 @@ class Store:
             row = db.execute("SELECT * FROM jobs WHERE id=? AND lease=? AND state='running'", (job, lease)).fetchone()
             if not row:
                 raise CreatorError("worker_lease_lost", 409)
-            self.active(db, row["owner"])
-            if error:
+            # A valid lease may retire suspended-owner work, but never publish it.
+            user = db.execute("SELECT state FROM users WHERE id=?", (row["owner"],)).fetchone()
+            if error or user["state"] != "active":
                 db.execute("UPDATE jobs SET state='failed',credit='released',error='generation_failed',updated=? WHERE id=?", (self.now(), job))
             else:
                 if not audio or not audio_hash or not review:
                     raise ValueError("Audio and review evidence required")
                 db.execute("UPDATE jobs SET state='review',audio=?,audio_hash=?,review=?,updated=? WHERE id=?",
                            (audio, audio_hash, review, self.now(), job))
+        if user["state"] == "deleted" and not error:
+            raise CreatorError("sign_in_required", 401)
 
     def approve_input(self, job):
         with self.db() as db:
@@ -475,4 +485,9 @@ class Store:
                 db.execute(f"DELETE FROM {table} WHERE owner=?", (owner,))
             db.execute("DELETE FROM blocks WHERE owner=? OR target=?", (owner, owner))
             db.execute("UPDATE songs SET visibility='private',moderation='removed',lyrics='',lyric_lines='[]',title='' WHERE owner=?", (owner,))
-            db.execute("UPDATE jobs SET state='cancelled',credit='released',brief='{}',audio=NULL,review=NULL WHERE owner=?", (owner,))
+            # Scrub content now, but only the worker/reconciliation may retire a
+            # started lease; deletion must not admit another GPU job early.
+            db.execute("""UPDATE jobs SET
+                state=CASE WHEN state IN ('running','interrupted') THEN state ELSE 'cancelled' END,
+                credit=CASE WHEN state IN ('running','interrupted') THEN 'reserved' ELSE 'released' END,
+                brief='{}',audio=NULL,review=NULL WHERE owner=?""", (owner,))

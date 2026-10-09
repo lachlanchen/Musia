@@ -1,0 +1,37 @@
+[Unit]
+Description=Musia creator scoped worker guard
+After=network.target musia-creator-app.service
+
+[Service]
+Type=simple
+User=musia-creator-worker
+Group=musia-creator-worker
+WorkingDirectory=@GUARD_RELEASE@
+Environment=MUSIA_LAZYEDGE_ROOT=@LAZYEDGE_RELEASE@
+LoadCredential=bindings:/etc/musia-creator/worker/bindings.json
+LoadCredential=relay:/etc/musia-creator/worker/relay
+LoadCredential=upstream:/etc/musia-creator/worker/upstream
+ExecStart=@NODE@ @GUARD_RELEASE@/gateway.mjs %d/bindings
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_INET AF_UNIX
+IPAddressDeny=any
+IPAddressAllow=localhost
+CapabilityBoundingSet=
+LimitNOFILE=512
+TasksMax=64
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target

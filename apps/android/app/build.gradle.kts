@@ -42,8 +42,8 @@ android {
         applicationId = "art.lazying.musia"
         minSdk = 26
         targetSdk = 36
-        versionCode = 5
-        versionName = "0.1.3"
+        versionCode = 6
+        versionName = "0.2.0"
     }
     signingConfigs {
         if (privateSigning != null) create("privateRelease") {
@@ -86,6 +86,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("androidx.media3:media3-exoplayer:1.8.0")
     implementation("androidx.media3:media3-session:1.8.0")
+    implementation("androidx.media3:media3-datasource-okhttp:1.8.0")
+    implementation("androidx.browser:browser:1.9.0")
+    implementation("com.android.billingclient:billing:9.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")

@@ -39,6 +39,11 @@ def main():
     moderate.add_argument("target")
     moderate.add_argument("decision", choices=["approve", "reject"])
     sub.add_parser("work-once")
+    supervise = sub.add_parser("supervise", help="Run an explicitly bounded, private queue configuration")
+    supervise.add_argument("--config", type=Path, required=True)
+    supervise.add_argument("--once", action="store_true")
+    sub.add_parser("billing-reconcile", help="Refresh bound purchases from store truth; no new purchases")
+    sub.add_parser("maintenance", help="Purge deleted-account media and retry sign-out revocations")
     suspend = sub.add_parser("suspend")
     suspend.add_argument("owner")
     resolve = sub.add_parser("resolve-report")
@@ -83,6 +88,37 @@ def main():
     elif args.action == "work-once":
         from musia.creator.worker import work_once
         print("Processed one job" if work_once(store) else "No approved queued job")
+    elif args.action == "supervise":
+        import signal
+        import threading
+        from musia.creator.billing import private_read
+        from musia.creator.supervisor import Config, Supervisor
+        config = Config(**json.loads(private_read(args.config)))
+        # Text-provider consent has not yet been recorded separately for submitted
+        # briefs. Operator-approved inputs may run, but no inferred review consent.
+        if config.review_inputs:
+            parser.error("Automatic input review requires separately recorded provider consent; use approve-input")
+        stop = threading.Event()
+        signal.signal(signal.SIGINT, lambda *_: stop.set())
+        signal.signal(signal.SIGTERM, lambda *_: stop.set())
+        result = Supervisor(store, config).run(onepass=args.once, stop=stop)
+        print(json.dumps(result))
+        if result["status"] == "reconciliation_required":
+            raise SystemExit(2)
+    elif args.action == "billing-reconcile":
+        from musia.creator.billing import Billing
+        result = Billing(store).reconcile()
+        print(json.dumps(result))
+        if result["retry"]:
+            raise SystemExit(1)
+    elif args.action == "maintenance":
+        from musia.creator.maintenance import purge_deleted
+        result = purge_deleted(store)
+        cfg = Settings.environment()
+        if cfg.auth_directory:
+            from musia.creator.auth import CentralAuth
+            result["revocationsPending"] = CentralAuth(cfg.auth_directory,cfg.origin).reconcile_revocations()
+        print(json.dumps(result))
 
 
 if __name__ == "__main__":

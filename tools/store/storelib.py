@@ -223,6 +223,11 @@ class Apple:
         query = urllib.parse.urlencode({"filter[bundleId]": BUNDLE, "limit": 200})
         apps = self.rows("/v1/apps?" + query)
         bundles = self.rows("/v1/bundleIds?" + urllib.parse.urlencode({"filter[identifier]": BUNDLE, "limit": 200}))
+        # Apple's server filters can include prefix siblings such as .creatorqa.
+        require(all(r["attributes"]["bundleId"].startswith(BUNDLE) for r in apps), "Apple app filter mismatch")
+        require(all(r["attributes"]["identifier"].startswith(BUNDLE) for r in bundles), "Apple bundle filter mismatch")
+        apps = [r for r in apps if r["attributes"]["bundleId"] == BUNDLE]
+        bundles = [r for r in bundles if r["attributes"]["identifier"] == BUNDLE]
         require(len(apps) <= 1 and len(bundles) <= 1, "Ambiguous Musia inventory")
         require(all(r["attributes"]["bundleId"] == BUNDLE for r in apps), "Apple app filter mismatch")
         require(all(r["attributes"]["identifier"] == BUNDLE for r in bundles), "Apple bundle filter mismatch")

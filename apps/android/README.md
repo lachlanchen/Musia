@@ -1,8 +1,73 @@
 # Musia Native Android
 
-Native Kotlin + Jetpack Compose application, ID `art.lazying.musia`. No WebView,
-Capacitor, account, microphone, analytics SDK, or server-side practice progress.
+Native Kotlin + Jetpack Compose application, ID `art.lazying.musia`. Optional
+creator accounts and Google Play subscriptions; no WebView, Capacitor,
+microphone, advertising SDK, or server-side practice progress.
 Only this subtree is owned by the Android implementation.
+
+## Creator source update — 2026-10-09
+
+Create and Community are native Compose destinations. Account & subscriptions
+is available from Create and Settings. Public songs and all existing learning
+features remain usable without an account. The existing library, stage player,
+practice, multilingual lyric controls and local history remain in place.
+
+The native backend contract is `../../docs/creator-native-contract.md`; all
+creator traffic uses the fixed `/creator` boundary. Capabilities, terms,
+invitations, usage, moderation and billing entitlements come from the service.
+Unavailable capabilities stay unavailable; no release mock or debug origin is
+provided. Draft lyrics are never substituted for completed audio timing.
+
+Sign-in uses Android Custom Tabs, S256 PKCE, a fixed
+`art.lazying.musia://auth` return and strict attempt/expiry checking. The verifier
+and opaque app session use AES-GCM encryption with an Android Keystore key in an
+AtomicFile under `noBackupFilesDir`. No credentials go in preferences or media
+metadata. Logout removes the local session and retries server revocation when
+needed. Account deletion requires explicit confirmation and warns that Play
+subscriptions must be cancelled separately. Unreadable protected storage fails
+closed without discarding unresolved journals.
+
+The assistant produces an editable brief; only the separate rights/render
+confirmation submits a render. The exact body and idempotency key are encrypted
+before submission and bound to the original account. Unknown results survive
+process death and logout, and only an explicit retry sends the same request.
+There is no background re-render or destructive “forget pending” control.
+
+Creator songs use the existing Media3 service/player. Only private or
+unapproved creator audio receives a bearer header, for the exact ACL endpoint
+and original account. Its HTTP source rejects redirects and stores no audio
+cache. Logout/account changes stop private playback. Public audio retains the
+existing anonymous Media3 source. Community supports hearts, saves, moderated
+comments and comment deletion, reports, blocks/unblocks, and visibility changes.
+
+Play Billing is pinned to **9.1.0**, the current release listed in Google's
+[release notes](https://developer.android.com/google/play/billing/release-notes)
+when researched for this change. It uses the server `accountToken` as the
+obfuscated account ID. Prices come only from native ProductDetails for the
+server-specified monthly auto-renewing base plans. New sales require both the
+global and Google account capability. Restore queries owned purchases,
+including suspended subscriptions, and checks immutable account binding before
+server verification. Pending purchases grant nothing locally. Only the server
+verifies, grants and acknowledges; the client never consumes or acknowledges.
+Restore and the Play management link remain available when sales are closed.
+Unknown purchase references and interrupted launch markers remain encrypted;
+an empty owned-purchase query alone does not erase an unknown launch marker.
+Such a marker may require support reconciliation if Play never supplies a
+matching purchase or explicit cancellation callback.
+
+Source-only checks (no Gradle or device started):
+
+```bash
+bash tools/check-creator-source.sh --controllers
+```
+
+The script reuses cached Kotlin/compiler/Android dependencies, parses all Kotlin
+sources, runs focused JVM contract tests, and optionally type-checks the isolated
+creator account/billing controllers. It caps each JVM at 384 MiB or less. The
+isolated check uses cached lifecycle 2.9.0 and runtime 1.9.1 APIs; it is not a
+substitute for resolving the app's Gradle graph. Compose UI, Media3 integration,
+manifest merging and runtime behavior require the parent's sequential build,
+lint and device qualification. See `evidence/creator-source-2026-10-09.md`.
 
 ## Shared Toolchain
 
@@ -133,10 +198,14 @@ Corrupt saved data is reported and preserved until explicit reset.
 Cloud app backup is disabled, with explicit Android 12+ cloud and device-transfer
 exclusions. Covers are bounded to a 12 MiB in-memory bitmap
 cache; no persistent media cache is configured. API/audio/cover hosts receive
-normal HTTPS requests, IP addresses and request metadata. No credentials are
-sent. The merged APK requests Internet, network-state, media-playback
+normal HTTPS requests, IP addresses and request metadata. Public library/media
+requests are anonymous. Optional creator actions send the selected content and
+app bearer session to Musia; Google Play handles billing requests. The previously
+verified learning APK requests Internet, network-state, media-playback
 foreground-service, wake-lock, and AndroidX's app-scoped non-exported receiver
-permission. It requests no microphone, camera, account, or storage permission.
+permission. The creator source adds Play Billing; its merged permissions must
+be reviewed after the next build. No microphone, camera, Android account-manager,
+or storage permission is requested by app source.
 Uninstall removes app-private data.
 
 ## Verification Scope

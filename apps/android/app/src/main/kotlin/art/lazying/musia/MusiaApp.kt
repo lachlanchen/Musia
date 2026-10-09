@@ -47,18 +47,22 @@ import kotlinx.coroutines.delay
 private data class Destination(val name: String, val icon: ImageVector)
 private val destinations = listOf(
     Destination("Songs", Icons.Default.LibraryMusic),
+    Destination("Create", Icons.Default.AutoAwesome),
+    Destination("Community", Icons.Default.People),
     Destination("Practice", Icons.Default.School),
     Destination("Settings", Icons.Default.Settings)
 )
 
-@Composable fun MusiaApp(vm: MusiaViewModel = viewModel()) {
+@Composable fun MusiaApp(vm: MusiaViewModel = viewModel(), creator: CreatorViewModel = viewModel()) {
     var destination by rememberSaveable { mutableStateOf("Songs") }
     var playerOpen by rememberSaveable { mutableStateOf(false) }
     var historyOpen by rememberSaveable { mutableStateOf(false) }
+    var accountOpen by rememberSaveable { mutableStateOf(false) }
     var training by rememberSaveable { mutableStateOf<String?>(null) }
     val local by vm.store.data.collectAsStateWithLifecycle()
     val lifecycle = LocalLifecycleOwner.current
     val snackbar = remember { SnackbarHostState() }
+    LaunchedEffect(creator.accountEpoch) { vm.creatorAccountChanged(creator.account?.id) }
     LaunchedEffect(lifecycle) {
         lifecycle.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
             while (true) { vm.refreshPlayback(); delay(50) }
@@ -67,14 +71,14 @@ private val destinations = listOf(
     LaunchedEffect(vm.notice) {
         vm.notice?.let { snackbar.showSnackbar(it); vm.clearNotice() }
     }
-    fun back() { if (playerOpen) playerOpen = false else if (training != null) training = null else historyOpen = false }
-    BackHandler(playerOpen || historyOpen || training != null) { back() }
+    fun back() { if (playerOpen) playerOpen = false else if (training != null) training = null else if (accountOpen) accountOpen = false else historyOpen = false }
+    BackHandler(playerOpen || historyOpen || accountOpen || training != null) { back() }
     val open: (String) -> Unit = { vm.openSong(it); playerOpen = true }
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
-            TopAppBar(title = { Text(if (playerOpen) "Now playing" else training ?: if (historyOpen) "History" else "Musia", style = MaterialTheme.typography.headlineMedium) },
-                navigationIcon = { if (playerOpen || historyOpen || training != null) IconAction("Back", Icons.AutoMirrored.Filled.ArrowBack) { back() } },
+            TopAppBar(title = { Text(if (playerOpen) "Now playing" else training ?: if (accountOpen) "Account" else if (historyOpen) "History" else "Musia", style = MaterialTheme.typography.headlineMedium) },
+                navigationIcon = { if (playerOpen || historyOpen || accountOpen || training != null) IconAction("Back", Icons.AutoMirrored.Filled.ArrowBack) { back() } },
                 actions = { if (!playerOpen && training == null && destination in listOf("Songs", "Practice")) IconAction("Refresh", Icons.Default.Refresh) { vm.reloadLibrary(); if (destination == "Practice") vm.reloadLessons() } })
         },
         bottomBar = {
@@ -92,7 +96,7 @@ private val destinations = listOf(
                 }
                 if (!playerOpen) NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
                     destinations.forEach { item ->
-                        NavigationBarItem(selected = destination == item.name, onClick = { destination = item.name; playerOpen = false; historyOpen = false; training = null },
+                        NavigationBarItem(selected = destination == item.name, onClick = { destination = item.name; playerOpen = false; historyOpen = false; accountOpen = false; training = null },
                             icon = { Icon(item.icon, item.name) }, label = { Text(item.name, maxLines = 2) })
                     }
                 }
@@ -105,10 +109,15 @@ private val destinations = listOf(
             when {
                 playerOpen -> PlayerScreen(vm, local.preferences, width)
                 training != null -> BeginnerPracticeScreen(training == "Metronome", width)
+                accountOpen -> CreatorAccountScreen(creator, width)
+                destination == "Create" -> CreatorScreen(creator, { accountOpen = true }, width)
+                destination == "Community" -> CreatorCommunityScreen(creator, { accountOpen = true }, { song, session ->
+                    vm.openCreatorSong(song, session); playerOpen = true
+                }, width)
                 destination == "Songs" -> LibraryScreen(vm, false, open, width)
                 destination == "Practice" -> LibraryScreen(vm, true, open, width) { vm.pauseForLesson(); training = it }
                 historyOpen -> HistoryScreen(local, vm.store.recoveryWarning, open, width)
-                else -> SettingsScreen(vm, local, { historyOpen = true }, width)
+                else -> SettingsScreen(vm, local, { historyOpen = true }, width, { accountOpen = true })
             }
         }
     }
@@ -547,7 +556,7 @@ private val destinations = listOf(
     }, style = style)
 }
 
-@Composable private fun SettingsScreen(vm: MusiaViewModel, local: LocalData, openHistory: () -> Unit, modifier: Modifier) {
+@Composable private fun SettingsScreen(vm: MusiaViewModel, local: LocalData, openHistory: () -> Unit, modifier: Modifier, openAccount: () -> Unit) {
     var resetDialog by remember { mutableStateOf(false) }
     var calibration by remember(local.preferences.tapCalibrationMs) { mutableFloatStateOf(local.preferences.tapCalibrationMs.toFloat()) }
     val export = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { it?.let(vm::export) }
@@ -599,7 +608,9 @@ private val destinations = listOf(
             HorizontalDivider()
             Column(Modifier.padding(top = 20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text("Privacy", style = MaterialTheme.typography.titleLarge)
-                Text("No account. No microphone. No advertising or analytics SDK.")
+                Text("Optional creator account. No microphone. No advertising or analytics SDK.")
+                OutlinedButton(onClick = openAccount) { Icon(Icons.Default.AccountCircle, null); Spacer(Modifier.width(8.dp)); Text("Account & subscriptions") }
+                Text("Creating and community actions send the content you choose to the creator service. Sign-in and pending requests are encrypted on this device. Public listening and practice do not require an account.")
                 Text("Preferences and up to 200 recent sessions stay on this device. Android cloud backup is disabled. Reset stops playback and clears local records. Exports remain in the destination you choose.")
                 Text("Library, lessons, covers and audio are requested over HTTPS. Musia and media hosts receive your IP address and ordinary request metadata. Practice history and taps are not uploaded.")
                 Text("Tap offsets compare touch timing with the supplied beat timeline. Bluetooth, device latency and unverified timelines affect them. Positive calibration subtracts from a late offset. No singing or guitar accuracy is assessed.")

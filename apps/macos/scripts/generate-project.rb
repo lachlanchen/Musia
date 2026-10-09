@@ -2,11 +2,20 @@
 require 'xcodeproj'
 
 root = File.expand_path('..', __dir__)
+# Register the native authentication callback when regenerating the Mac project.
+# ASWebAuthenticationSession owns callback handling; no embedded browser is used.
+info_path = File.join(root, 'Musia/Resources/Info.plist')
+info = Xcodeproj::Plist.read_from_path(info_path)
+info['CFBundleURLTypes'] = [{
+  'CFBundleURLName' => 'art.lazying.musia.auth',
+  'CFBundleURLSchemes' => ['art.lazying.musia'], 'CFBundleTypeRole' => 'Editor'
+}]
+Xcodeproj::Plist.write_to_path(info, info_path)
 project = Xcodeproj::Project.new(File.join(root, 'Musia.xcodeproj'))
 project.build_configurations.each do |config|
   config.build_settings.merge!({
     'SWIFT_VERSION' => '5.0', 'MACOSX_DEPLOYMENT_TARGET' => '14.0',
-    'MARKETING_VERSION' => '0.1.3', 'CURRENT_PROJECT_VERSION' => '6',
+    'MARKETING_VERSION' => '0.2.0', 'CURRENT_PROJECT_VERSION' => '7',
     'DEVELOPMENT_TEAM' => 'Q8M2S2FY77', 'CODE_SIGN_STYLE' => 'Manual',
     'ENABLE_USER_SCRIPT_SANDBOXING' => 'YES', 'CLANG_ENABLE_MODULES' => 'YES',
     'SWIFT_OPTIMIZATION_LEVEL' => config.name == 'Debug' ? '-Onone' : '-O',
@@ -48,7 +57,7 @@ app.build_configurations.each do |config|
     'CODE_SIGN_ENTITLEMENTS' => 'Musia/Resources/Musia.entitlements',
     'ENABLE_APP_SANDBOX' => 'YES', 'ENABLE_HARDENED_RUNTIME' => 'YES',
     'ASSETCATALOG_COMPILER_APPICON_NAME' => 'AppIcon',
-    'PROVISIONING_PROFILE_SPECIFIER' => config.name == 'Debug' ? '' : '$(MUSIA_MAC_PROFILE)'
+    'PROVISIONING_PROFILE_SPECIFIER' => config.name == 'Debug' ? '$(MUSIA_DEBUG_PROFILE)' : '$(MUSIA_MAC_PROFILE)'
   })
 end
 core.build_configurations.each do |config|

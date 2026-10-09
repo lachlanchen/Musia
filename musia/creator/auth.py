@@ -65,3 +65,18 @@ class CentralAuth:
             # The SDK durably revokes locally before any remote request.
             # Its revocation_pending record remains for operator reconciliation.
             pass
+
+    def delete_links(self, session):
+        subject = session["user"]["subject"]
+        with self.vault.transaction() as db:
+            links = [row[0] for row in db.execute("SELECT id FROM sessions WHERE subject=? AND state!='revoked'", (subject,))]
+        for link in links:
+            self.sign_out({"link_id":link,"user":{"subject":subject}})
+
+    def reconcile_revocations(self):
+        with self.vault.transaction() as db:
+            pending = list(db.execute("SELECT id,subject FROM sessions WHERE state='revocation_pending'"))
+        for link, subject in pending:
+            self.sign_out({"link_id":link,"user":{"subject":subject}})
+        with self.vault.transaction() as db:
+            return db.execute("SELECT count(*) FROM sessions WHERE state='revocation_pending'").fetchone()[0]

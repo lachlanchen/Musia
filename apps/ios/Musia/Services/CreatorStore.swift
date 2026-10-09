@@ -1,0 +1,273 @@
+import Combine
+import Foundation
+import MusiaCore
+
+@MainActor
+final class CreatorStore: ObservableObject {
+    struct SessionSnapshot {
+        let identity: CreatorIdentity
+        let token: String
+    }
+    private struct Credential: Codable { let token: String; let expiresAt: Date }
+    @Published private(set) var capabilities: CreatorCapabilities?
+    @Published private(set) var account: CreatorAccount?
+    @Published private(set) var jobs: [CreatorJob] = []
+    @Published private(set) var pending: PendingCreatorRender?
+    @Published private(set) var busy = false
+    @Published private(set) var refreshing = false
+    @Published private(set) var hasSession = false
+    @Published var notice: String?
+    @Published var brief = CreatorBrief()
+    @Published private(set) var agentMessage: String?
+    @Published private(set) var generation = UUID()
+    let api = CreatorAPI()
+    let authentication = CreatorAuthentication()
+    private var credential: Credential?
+    private var initialized = false
+    private var pendingStorageReady = false
+    private var pendingByOwner: [String: PendingCreatorRender] = [:]
+    private var pendingRevocations: [String] = []
+    private var revoking = false
+    private weak var player: PlaybackController?
+    private var mediaGeneration = UUID()
+    private let mediaDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        .appendingPathComponent("MusiaCreatorAudio", isDirectory: true)
+
+    var identity: CreatorIdentity? {
+        account.map { CreatorIdentity(owner: $0.id, generation: generation) }
+    }
+    var canRender: Bool {
+        capabilities?.generation == true && account?.termsAccepted == true
+        && (capabilities?.invitationRequired == false || account?.invited == true)
+        && (account?.usage.remaining ?? 0) > 0 && pending == nil && pendingStorageReady
+    }
+    func snapshot() throws -> SessionSnapshot {
+        guard let identity, let credential, credential.expiresAt > Date() else { throw CreatorError.signInRequired }
+        return SessionSnapshot(identity: identity, token: credential.token)
+    }
+    func requireCurrent(_ snapshot: SessionSnapshot) throws {
+        guard snapshot.identity.accepts(identity), snapshot.token == credential?.token else { throw CreatorError.sessionChanged }
+    }
+
+    func start(player: PlaybackController) async {
+        self.player = player
+        guard !initialized else { return }
+        initialized = true
+        try? FileManager.default.removeItem(at: mediaDirectory)
+        do {
+            pendingByOwner = try CreatorKeychain.read([String: PendingCreatorRender].self, key: "pending-renders") ?? [:]
+            pendingStorageReady = true
+            pendingRevocations = try CreatorKeychain.read([String].self, key: "pending-revocations") ?? []
+            credential = try CreatorKeychain.read(Credential.self, key: "session")
+            if let credential, credential.expiresAt <= Date() {
+                try CreatorKeychain.remove("session"); self.credential = nil
+            }
+            hasSession = credential != nil
+        } catch { notice = error.localizedDescription }
+        await refresh()
+    }
+
+    func refresh() async {
+        guard !refreshing else { return }
+        refreshing = true
+        let epoch = generation
+        defer { if epoch == generation { refreshing = false } }
+        await revokePendingSessions()
+        do {
+            let loaded: CreatorCapabilities = try await api.request("/api/capabilities")
+            guard epoch == generation else { return }
+            capabilities = loaded
+        } catch { if epoch == generation { capabilities = nil; notice = error.localizedDescription } }
+        guard let credential, epoch == generation else { return }
+        do {
+            let me: CreatorMe = try await api.request("/api/me", token: credential.token)
+            guard epoch == generation else { return }
+            guard let next = me.account else { try clearSession(); return }
+            if let previous = account, previous.id != next.id { try clearSession(); return }
+            account = next
+            pending = pendingByOwner[next.id]
+            await refreshJobs()
+        } catch CreatorError.server(401, _) {
+            guard epoch == generation else { return }
+            do { try clearSession() } catch { notice = error.localizedDescription }
+            notice = "Your session expired. Sign in to reconnect your account."
+        } catch { if epoch == generation { notice = error.localizedDescription } }
+    }
+
+    func signIn() async {
+        guard !busy, credential == nil, capabilities?.login == true else { return }
+        busy = true; notice = nil
+        let epoch = generation
+        defer { if epoch == generation { busy = false } }
+        do {
+            let response = try await authentication.signIn(api: api)
+            guard epoch == generation else { return }
+            let next = Credential(token: response.token, expiresAt: Date().addingTimeInterval(response.expiresIn))
+            try CreatorKeychain.write(next, key: "session")
+            credential = next; hasSession = true
+            await refresh()
+        } catch is CancellationError { }
+        catch { if epoch == generation { notice = error.localizedDescription } }
+    }
+
+    func refreshJobs() async {
+        guard let captured = try? snapshot() else { return }
+        do {
+            let result: CreatorJobs = try await api.request("/api/jobs", token: captured.token)
+            try requireCurrent(captured); jobs = result.jobs
+        } catch { if captured.identity == identity { notice = error.localizedDescription } }
+    }
+
+    func accountAction(_ path: String, body: Data = Data("{}".utf8)) async {
+        await perform {
+            let captured = try self.snapshot()
+            _ = try await self.api.send(path, token: captured.token, body: body)
+            try self.requireCurrent(captured)
+            await self.refresh()
+        }
+    }
+    func askAgent(_ message: String) async {
+        guard capabilities?.agent == true else { return }
+        await perform {
+            let captured = try self.snapshot()
+            let original = self.brief
+            let reply: CreatorAgentReply = try await self.api.request("/api/agent", method: "POST", token: captured.token,
+                body: CreatorAPI.body(CreatorAgentRequest(message: message, brief: original)))
+            try self.requireCurrent(captured)
+            guard self.brief == original else { throw CreatorError.unavailable("Your brief changed while the assistant was working. Ask again to keep your latest edits.") }
+            self.brief = reply.brief; self.agentMessage = reply.message
+        }
+    }
+
+    func render(visibility: CreatorVisibility) async {
+        guard canRender, brief.isRenderable else { return }
+        await perform {
+            let captured = try self.snapshot()
+            let pending = PendingCreatorRender(owner: captured.identity.owner,
+                request: CreatorRenderRequest(brief: self.brief, visibility: visibility))
+            // Securely save BEFORE transmission, including the exact frozen request.
+            var next = self.pendingByOwner; next[pending.owner] = pending
+            try CreatorKeychain.write(next, key: "pending-renders")
+            self.pendingByOwner = next; self.pending = pending
+            try await self.submit(pending, captured: captured)
+        }
+    }
+    func reconnectRender() async {
+        guard let pending, pending.canRetry(owner: account?.id) else { return }
+        await perform { try await self.submit(pending, captured: self.snapshot()) }
+    }
+    private func submit(_ pending: PendingCreatorRender, captured: SessionSnapshot) async throws {
+        guard pending.canRetry(owner: captured.identity.owner) else { throw CreatorError.sessionChanged }
+        // Even errors retain identity: retry only the same key/body. No automatic resubmission.
+        let receipt: CreatorJobReceipt = try await api.request("/api/jobs", method: "POST", token: captured.token,
+            body: CreatorAPI.body(pending.request), idempotencyKey: pending.key)
+        try requireCurrent(captured)
+        var next = pendingByOwner; next.removeValue(forKey: pending.owner)
+        try CreatorKeychain.write(next, key: "pending-renders")
+        pendingByOwner = next; self.pending = nil
+        jobs.removeAll { $0.id == receipt.job.id }; jobs.insert(receipt.job, at: 0)
+        notice = "Render request received. Refresh jobs to follow its progress."
+        await refresh()
+    }
+    func cancel(_ job: CreatorJob) async {
+        guard job.canCancel else { return }
+        await accountAction("/api/jobs/\((try? CreatorAPI.segment(job.id)) ?? "")/cancel")
+    }
+
+    func logout() async {
+        guard !busy else { return }
+        do {
+            if let token = credential?.token {
+                var next = pendingRevocations
+                if !next.contains(token) { next.append(token) }
+                try CreatorKeychain.write(next, key: "pending-revocations")
+                pendingRevocations = next
+            }
+            try clearSession()
+        } catch { notice = error.localizedDescription; return }
+        let epoch = generation
+        await revokePendingSessions()
+        if epoch == generation && !pendingRevocations.isEmpty {
+            notice = "Signed out on this device. Server sign-out is awaiting a connection and will retry when you refresh."
+        }
+    }
+    private func revokePendingSessions() async {
+        guard !revoking else { return }
+        revoking = true; defer { revoking = false }
+        for token in pendingRevocations {
+            do {
+                do { _ = try await api.send("/auth/logout", token: token) }
+                catch CreatorError.server(401, _) { /* Already revoked or expired. */ }
+                let next = pendingRevocations.filter { $0 != token }
+                try CreatorKeychain.write(next, key: "pending-revocations")
+                pendingRevocations = next
+            } catch { return }
+        }
+    }
+    func deleteAccount() async {
+        await perform {
+            let captured = try self.snapshot()
+            _ = try await self.api.send("/api/me", method: "DELETE", token: captured.token)
+            try self.requireCurrent(captured)
+            var retained = self.pendingByOwner
+            retained.removeValue(forKey: captured.identity.owner)
+            try CreatorKeychain.write(retained, key: "pending-renders")
+            self.pendingByOwner = retained
+            try self.clearSession()
+            self.notice = "Your creator account was deleted. Apple subscriptions are managed separately in the App Store."
+        }
+    }
+    private func clearSession() throws {
+        // If Keychain is locked, do not pretend durable logout succeeded.
+        try CreatorKeychain.remove("session")
+        authentication.cancel()
+        generation = UUID(); mediaGeneration = UUID()
+        credential = nil; hasSession = false; account = nil; jobs = []; pending = nil
+        brief = CreatorBrief(); agentMessage = nil; busy = false; refreshing = false
+        player?.clearCreatorSelection()
+        try? FileManager.default.removeItem(at: mediaDirectory)
+        // Pending renders remain protected and bound to their original owner.
+    }
+
+    func play(_ song: CreatorSong) async {
+        await perform {
+            guard let source = song.audioUrl else { throw CreatorError.unavailable("Audio is not ready yet.") }
+            let url = try CreatorAPI.mediaURL(source)
+            let epoch = self.generation
+            let playbackGeneration = self.player?.selectionGeneration
+            let mediaEpoch = UUID(); self.mediaGeneration = mediaEpoch
+            let playbackURL: URL
+            if song.visibility == .private {
+                let captured = try self.snapshot()
+                let temporary = try await self.api.downloadAudio(url, token: captured.token)
+                defer { try? FileManager.default.removeItem(at: temporary) }
+                try self.requireCurrent(captured)
+                guard mediaEpoch == self.mediaGeneration else { throw CancellationError() }
+                try FileManager.default.createDirectory(at: self.mediaDirectory, withIntermediateDirectories: true,
+                    attributes: [.posixPermissions: 0o700])
+                playbackURL = self.mediaDirectory.appendingPathComponent(UUID().uuidString + ".audio")
+                try FileManager.default.moveItem(at: temporary, to: playbackURL)
+                try FileManager.default.setAttributes([.posixPermissions: 0o600], ofItemAtPath: playbackURL.path)
+#if os(iOS)
+                // Allow the existing background audio transport after first unlock.
+                try FileManager.default.setAttributes([.protectionKey: FileProtectionType.completeUntilFirstUserAuthentication], ofItemAtPath: playbackURL.path)
+#endif
+            } else { playbackURL = url }
+            guard epoch == self.generation else { throw CreatorError.sessionChanged }
+            guard playbackGeneration == self.player?.selectionGeneration else { throw CancellationError() }
+            self.player?.openCreator(try song.playbackSong(audioURL: playbackURL))
+        }
+    }
+
+    /// Common action boundary. Every request still captures an identity before its
+    /// first await; late errors cannot overwrite the next account's presentation.
+    func perform(_ work: () async throws -> Void) async {
+        guard !busy else { return }
+        let epoch = generation
+        busy = true; notice = nil
+        defer { if epoch == generation { busy = false } }
+        do { try await work() }
+        catch is CancellationError { }
+        catch { if epoch == generation { notice = error.localizedDescription } }
+    }
+}

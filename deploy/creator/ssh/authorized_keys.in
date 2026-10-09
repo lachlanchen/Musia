@@ -1,0 +1,1 @@
+restrict,port-forwarding,permitlisten="127.0.0.1:18897",command="/usr/sbin/nologin" ssh-ed25519 @PUBLIC_KEY@ musia-creator-tunnel

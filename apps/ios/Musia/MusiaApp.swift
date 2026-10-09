@@ -4,6 +4,8 @@ import SwiftUI
 @MainActor
 struct MusiaApp: App {
     @StateObject private var catalog = CatalogStore()
+    @StateObject private var creator = CreatorStore()
+    @StateObject private var billing = CreatorBillingStore()
     @StateObject private var history: LocalStore
     @StateObject private var player: PlaybackController
     @Environment(\.scenePhase) private var scenePhase
@@ -20,6 +22,10 @@ struct MusiaApp: App {
                 .environmentObject(catalog)
                 .environmentObject(history)
                 .environmentObject(player)
+                .environmentObject(creator)
+                .environmentObject(billing)
+                .task { await creator.start(player: player) }
+                .task(id: creator.identity) { billing.start(creator: creator); await billing.accountChanged() }
                 .tint(Palette.teal)
                 .preferredColorScheme(.light)
                 .onChange(of: scenePhase) { _, phase in
@@ -47,6 +53,10 @@ struct RootView: View {
                 .tabItem { Label("Library", systemImage: "music.note.list") }
             page { LessonsView(showPractice: $showPractice) }
                 .tabItem { Label("Lessons", systemImage: "book") }
+            page { CreatorView() }
+                .tabItem { Label("Create", systemImage: "sparkles") }
+            page { CreatorCommunityView() }
+                .tabItem { Label("Community", systemImage: "person.2") }
             page { SettingsView() }
                 .tabItem { Label("Settings", systemImage: "gearshape") }
         }

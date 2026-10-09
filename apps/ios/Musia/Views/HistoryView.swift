@@ -7,6 +7,7 @@ struct SettingsView: View {
 
     var body: some View {
         List {
+            Section("Creator") { CreatorAccountLink() }
             Section {
                 NavigationLink { HistoryView() } label: {
                     Label("Practice history", systemImage: "clock.arrow.circlepath")

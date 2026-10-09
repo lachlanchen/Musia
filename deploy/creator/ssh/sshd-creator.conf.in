@@ -1,0 +1,19 @@
+# Draft: validate the target server's effective sshd policy before installation.
+# This account is separate from the edge guard and from existing tunnel users.
+Match User musia-creator-tunnel
+    AuthenticationMethods publickey
+    PasswordAuthentication no
+    KbdInteractiveAuthentication no
+    AllowTcpForwarding remote
+    AllowStreamLocalForwarding no
+    GatewayPorts no
+    PermitListen 127.0.0.1:18897
+    PermitOpen none
+    MaxSessions 0
+    PermitTTY no
+    X11Forwarding no
+    AllowAgentForwarding no
+    PermitTunnel no
+    PermitUserRC no
+    ForceCommand /usr/sbin/nologin
+Match all

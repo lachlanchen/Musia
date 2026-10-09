@@ -65,6 +65,58 @@ class StoreTests(unittest.TestCase):
         with self.assertRaises(s.GuardError):
             s.source_sha("android")
 
+    def test_apple_inventory_selects_exact_bundle_from_prefix_results(self):
+        api = s.Apple(cfg={})
+        app = {"id": "musia", "attributes": {"bundleId": s.BUNDLE}}
+        bundle = {"id": "musia-bundle", "attributes": {"identifier": s.BUNDLE}}
+        for suffix in (".creatorqa", ".core", "x"):
+            sibling_app = {"id": "sibling", "attributes": {"bundleId": s.BUNDLE + suffix}}
+            sibling_bundle = {"id": "sibling-bundle", "attributes": {"identifier": s.BUNDLE + suffix}}
+            with self.subTest(suffix=suffix), patch.object(api, "rows", side_effect=[
+                    [sibling_app, app], [bundle, sibling_bundle]]):
+                inventory = api.inventory()
+                self.assertEqual(inventory["apps"], [app])
+                self.assertEqual(inventory["bundle_ids"], [bundle])
+
+    def test_apple_inventory_rejects_duplicate_exact_matches(self):
+        api = s.Apple(cfg={})
+        app = {"id": "musia", "attributes": {"bundleId": s.BUNDLE}}
+        bundle = {"id": "musia-bundle", "attributes": {"identifier": s.BUNDLE}}
+        sibling = {"id": "qa", "attributes": {"identifier": s.BUNDLE + ".creatorqa"}}
+        for apps, bundles in (([app, dict(app, id="duplicate")], [bundle]),
+                              ([app], [sibling, bundle, dict(bundle, id="duplicate")])):
+            with self.subTest(apps=apps, bundles=bundles), patch.object(
+                    api, "rows", side_effect=[apps, bundles]):
+                with self.assertRaisesRegex(s.GuardError, "Ambiguous Musia inventory"):
+                    api.inventory()
+
+    def test_apple_app_requires_an_exact_app_not_a_prefix_sibling(self):
+        api = s.Apple(cfg={})
+        bundle = {"id": "bundle", "attributes": {"identifier": s.BUNDLE}}
+        for apps in ([], [{"id": "qa", "attributes": {"bundleId": s.BUNDLE + ".creatorqa"}}]):
+            with self.subTest(apps=apps), patch.object(api, "rows", side_effect=[apps, [bundle]]):
+                with self.assertRaisesRegex(s.GuardError, "Musia App Store Connect record missing"):
+                    api.app()
+
+    def test_apple_inventory_does_not_substitute_a_prefix_bundle(self):
+        api = s.Apple(cfg={})
+        sibling = {"id": "qa", "attributes": {"identifier": s.BUNDLE + ".creatorqa"}}
+        with patch.object(api, "rows", side_effect=[[], [sibling]]):
+            self.assertEqual(api.inventory()["bundle_ids"], [])
+
+    def test_apple_exact_bundle_still_requires_configured_app_id(self):
+        self.release["apple_app_id"] = "expected-app"
+        (self.root / "store/release.json").write_text(json.dumps(self.release))
+        api = s.Apple(cfg={})
+        app = {"id": "wrong-app", "attributes": {"bundleId": s.BUNDLE}}
+        bundle = {"id": "bundle", "attributes": {"identifier": s.BUNDLE}}
+        with patch.object(api, "rows", side_effect=[[app], [bundle]]):
+            with self.assertRaisesRegex(s.GuardError, "Configured Apple app ID mismatch"):
+                api.app()
+        app["id"] = "expected-app"
+        with patch.object(api, "rows", side_effect=[[app], [bundle]]):
+            self.assertEqual(api.app(), app)
+
     def test_apple_owner_tester_is_scoped_to_app(self):
         from unittest.mock import Mock
         api = Mock()
@@ -215,6 +267,12 @@ class StoreTests(unittest.TestCase):
         api = s.Apple({})
         with patch.object(api, "rows", side_effect=[[{"attributes": {"bundleId": "another.app"}}], []]):
             with self.assertRaises(s.GuardError):
+                api.inventory()
+        app = {"id": "musia", "attributes": {"bundleId": s.BUNDLE}}
+        bundle = {"id": "musia-bundle", "attributes": {"identifier": s.BUNDLE}}
+        foreign = {"id": "foreign", "attributes": {"identifier": "another.app"}}
+        with patch.object(api, "rows", side_effect=[[app], [bundle, foreign]]):
+            with self.assertRaisesRegex(s.GuardError, "Apple bundle filter mismatch"):
                 api.inventory()
 
     def test_no_unguarded_provider_mutation(self):

@@ -1,6 +1,12 @@
 # Musia Creator: Agent, Access And Community
 
-2026-10-09. **Source pilot and local preview, not a live paid service.**
+2026-10-09. **Live invitation-gated creator pilot, not a public paid service.**
+
+Live workspace: <https://musia.lazying.art/creator/>. Active creator app/relay:
+`4c61355dc154f7fe3afa51d2db72c3af889018c64bf11e2b76369bb30074110c`.
+The edge remains on the previous release with identical guard/policy bytes.
+See [deployment status](creator-deployment.md) for component hashes, service
+ownership and the accepted main-learning release.
 
 ## Product Contract
 
@@ -26,15 +32,69 @@ agent-turn limits are 10/50/150; account in-flight limits are 1/2/3. The GPU wor
 still runs only one job at a time. Higher tiers do not select an inferior or
 superior baseline model: all use the same quality route.
 
-No app download price, current subscriber contract, store review, provider product
-or billing capability was changed. The previous paid app download is a separate
-commercial decision from these generation subscriptions. Public web listening is
-free; do not silently change a store's app price while implementing this feature.
+Apple and Google subscription products now exist as drafts at the exact target
+prices above. They are not purchasable offers: payments are disabled and no real
+Musia sandbox purchase has passed.
+The app download price is a separate commercial decision from generation
+subscriptions. Public web listening is free; do not silently change a store's
+app price while implementing this feature.
+
+## Live Acceptance
+
+- Shared password sign-in uses the registered `musia-server` client and exact
+  HTTPS callback. Apple, Google and GitHub remain centrally unavailable.
+- A synthetic test user completed real registration, login, consent, invitation
+  redemption and terms acceptance through the live services, not a database seed.
+- That account completed a `deepseek-v4-pro` draft, one 90-second ACE XL Turbo
+  render, large-v3 cross-window ASR and an actual `gpt-audio-1.5` audio review.
+  The selected output was approved with 18 corrected timed lyric lines, and
+  authenticated private browser audio playback passed. Audio-model review is
+  evidence, not a claim of human listening or automatic publication.
+- Live social QA passed private guest denial (404), public-pending guest denial
+  (404), approved public audio range playback (206), likes/saves, comment
+  moderation/deletion, report resolution and guest denial after unsharing (404).
+  `store/.runtime/creator-social-qa.json` records these checks without requiring
+  private identifiers here. The temporary public synthetic QA song is private again.
+- Real native PKCE protocol roundtrips passed for both `apple` and `android`,
+  including one-use exchange, replay rejection and logout. Android native Chrome
+  Custom Tabs sign-in returned the account successfully. Keystore-backed account
+  state and My Songs survived force-stop/relaunch, and private native Media3
+  playback reported `PLAYING` at 9008 ms; sign-out cleared private playback.
+  Android native UI and library/Stage regression passed for the exact signed
+  0.2.0 (6) artifact, now available to the verified owner-only internal tester.
+  Play-installed execution, physical-device listening and audible emulator
+  output remain unverified. See [Android delivery](../store/creator-android-20261009.md).
+- SwiftUI and Compose clients exist. Apple iOS/macOS 0.2.0 (7) artifacts are
+  signed and validated, not uploaded. The signed universal Mac PKG passed Apple
+  revalidation, but upload never started; the parent is repairing the KVM Python
+  runtime's missing PyJWT dependency. Actual iOS 27 testing on the owned Mac mini
+  simulator is progressing, with results pending. KVM macOS debug QA passed
+  Keychain, capabilities, library and minimized playback checks, but the isolated QA
+  bundle is not production-ID or signed-in creator-flow proof. Apple native UI
+  sign-in and app-specific product lookup remain unverified; formal reviews
+  are preserved. See [Apple evidence](../store/creator-apple-20261009.md).
+- Maintenance and billing-reconciliation timers use the immutable creator
+  release; maintenance succeeds while the queue is idle. The bounded generation
+  service is active with stable run ID `creator-pilot-20261009` and a persistent
+  10-dispatch budget. Input and output approval remain manual. Each dispatch
+  invokes the one-shot worker; the ingress worker service is a separate relay.
+  The generation CLI still runs from the source checkout in `musia`, not the
+  immutable application release. Restarts do not replenish the budget.
+- Apple/Google app-specific test verification and restore configuration is
+  connected, with key paths validated. Sales and test checkout are both off.
+  Apple's sandbox invalid-reference response `4000006` proves HTTP authentication
+  only, not a purchase or entitlement.
+- Main learning release
+  `9dd15fbe0e9677284c2e94deecb763bc350f50bad6f98425e6ede0124e0eac08`
+  was accepted in transaction `20261009T134643`. Its public Create CTA links to
+  `/creator/`, with HTTP 200 verified. Local brief editing/export is unchanged;
+  the October 9 creator privacy disclosures remain served at
+  <https://musia.lazying.art/privacy>.
 
 ## What Exists
 
 - Separate FastAPI creator boundary and a responsive web workspace at `/creator/`.
-- Optional shared-account adapter using app-specific code/PKCE, browser binding,
+- Connected shared-account adapter using app-specific code/PKCE, browser binding,
   encrypted SDK token storage, introspection and durable refresh coordination.
 - Three inspectable approved plans, pilot grants with explicit expiry, account
   generation limits, bounded invitation redemption, durable idempotent jobs.
@@ -43,29 +103,35 @@ free; do not silently change a store's app price while implementing this feature
 - Explicit consent before sending a brief; explicit render confirmation before
   reserving credit. Local drafts survive reload and connection failure.
 - Fixed-command, one-shot ACE XL Turbo worker adapter reusing the existing sweep
-  and large-v3 ASR review scripts. No arbitrary model, path, URL, shell or tool
-  execution is accepted from a client or model response.
+  and large-v3 cross-window ASR review scripts. No arbitrary model, path, URL,
+  shell or tool execution is accepted from a client or model response.
 - Private audio access checks, public-after-review sharing, hearts, private saved
   lists, moderated comments, deletion, reports, mutual blocking and suspension.
 - Mandatory selected-audio digest, timed corrected lyrics and input/ASR/listening/
   gap-tail/content checks before a render becomes a playable library song.
-- Operator CLI and isolated ledger/API/browser tests. No GPU run or paid AI call
-  was performed to claim this feature's acceptance.
+- Apple/Google server-side verification, immutable purchase-owner binding,
+  restore and reconciliation, plus native StoreKit/Play Billing clients. Source
+  and fixture coverage do not establish real purchase acceptance.
+- Deleted-account media purge and retry of pending central revocations, with
+  live maintenance scheduling; billing reconciliation is scheduled separately.
+- Operator CLI and isolated ledger/API/browser tests, separate from the real
+  live acceptance recorded above.
 
 ## What Is Not Live Or Complete
 
-This is the first app-owned implementation, not completion of the entire rollout.
+The live pilot does not establish completion of the entire rollout.
 
-- Musia's central client/HTTPS callback is not yet registered or qualified.
-- Fresh public discovery on 2026-10-09 returned password=true and Apple/Google/
-  GitHub=false. Only currently advertised providers may appear. Existing sibling
-  native OAuth implementations do not prove those central providers are enabled.
-- No Apple, Google or Stripe products, receipt verification, checkout, renewal,
-  refunds or restore integration is implemented by this change. Prices are
-  approved targets, not purchasable offers. `salesEnabled` remains false.
-- Native SwiftUI and Compose creator/account/billing views are still to build.
-  Do not wrap this web page in a WebView and call it the native implementation.
-- No production ingress, production account, store binary or public review changed.
+- Central discovery reports password=true and Apple/Google/GitHub=false. Only
+  currently advertised providers may appear. Existing sibling native OAuth
+  implementations do not prove those central providers are enabled.
+- No real Musia Apple/Google sandbox purchase has passed. Checkout, renewal,
+  restore, cancellation, refund/revocation and account-switch behavior still need
+  app-specific store acceptance. `salesEnabled` remains false. Stripe is not
+  implemented in the current creator billing boundary.
+- Apple native UI sign-in, broader native lifecycle checks and the complete
+  signed-in native creation journey still need qualification. Android internal
+  availability and the passed native UI/library regression do not prove a Play
+  installation, audible output or a real purchase.
 - Moderators currently approve both input before GPU work and output before
   publication. The queue is not an unattended general-public generation service.
 - The pilot worker renders one candidate per confirmation. Production candidate
@@ -74,9 +140,10 @@ This is the first app-owned implementation, not completion of the entire rollout
 - Timed sung lines are validated, but multilingual translations, word-level ruby,
   chords/Atlas, personalized covers, object storage, catalog-wide social actions,
   pagination, automated retention and native account export are follow-up work.
-- Deleted-account media becomes inaccessible immediately; private file purge and
-  revocation reconciliation still require an operator. This must be automated
-  and qualified before public signup or paid rollout.
+- Deleted-account media becomes inaccessible immediately. Maintenance now purges
+  owned job files after the worker lock is released and retries pending central
+  revocations. Retention/export scope and operational failure recovery still need
+  rollout review; live timers do not prove every deletion scenario.
 
 ## Reuse And Ownership
 
@@ -123,6 +190,7 @@ Configuration (server-only environment, never a frontend bundle):
 | `MUSIA_CREATOR_TEXT_MODEL` | Explicitly verified available model name |
 | `MUSIA_CREATOR_TEXT_API_KEY` | Musia-owned provider credential |
 | `MUSIA_CREATOR_TEXT_BASE_URL` | `https://api.openai.com/v1` or `https://api.deepseek.com` |
+| `MUSIA_CREATOR_BILLING_CONFIG` | Protected app-specific provider configuration; connected test verification/restore does not enable sales |
 
 The current `musia` conda environment is Python 3.10. Guest preview, tests and the
 GPU worker run there. The private shared-account SDK declares Python 3.11+;
@@ -132,14 +200,13 @@ Install `requirements-creator.txt` and a reviewed pinned private SDK checkout in
 that server environment. Do not vendor secrets or the private repository into
 the public npm package. The worker stays in `musia`.
 
-This workstation's prepared service interpreter is
+The live service uses the separate service interpreter at
 `/home/lachlan/.local/share/musia/creator-server/venv/bin/python` (Python 3.12).
-The SDK was installed from the clean pinned private checkout above. The disabled
-Musia-specific configuration is under `/home/lachlan/.config/musia/creator-auth`;
-only paths are recorded in the private OneTimeSync handoff, not key values.
-Staging does not register the client or enable any login provider.
+The SDK was installed from the pinned private checkout above. Musia-specific
+configuration is under `/home/lachlan/.config/musia/creator-auth`; credential
+values, test-account identifiers and session evidence stay out of this document.
 
-Desired registration, subject to the issuer owner's acceptance:
+Registered browser callback contract:
 
 ```text
 issuer:   https://chat.lazying.art
@@ -149,13 +216,16 @@ callback: https://musia.lazying.art/creator/auth/callback
 scope:    profile
 ```
 
-Use SDK disabled onboarding with private path-only coordination. Do not borrow
-AiMemo/Bunko keys, invent social-provider readiness or enable an unregistered
-callback. Deploy proxy request limits and disable callback query/access logging.
-All writes require exact origin, JSON and a custom header; session cookies are
-HttpOnly, Secure on HTTPS and scoped to `/creator`. The public API serves media
-through an ACL-checked range endpoint rather than handing out a permanent private
-bucket URL. Already downloaded public copies cannot be recalled.
+Do not borrow AiMemo/Bunko keys or infer social-provider readiness from registration.
+Keep proxy limits and callback query/access-log suppression. Browser writes
+require exact origin, JSON and `X-Musia-Request: 1`; native bearer writes and
+native start/exchange permit an absent Origin but still require JSON and that
+header. Session cookies are HttpOnly, Secure on HTTPS and scoped to `/creator`.
+Native completion ends the issuer redirect chain with an HTTPS 200 bridge before
+opening `art.lazying.musia://auth`; see [the native contract](creator-native-contract.md).
+The public API serves media through an ACL-checked range endpoint rather than
+handing out a permanent private bucket URL. Already downloaded public copies
+cannot be recalled.
 
 ## Operator Workflow
 
@@ -174,6 +244,8 @@ node bin/musia.js creator --data /private/musia-creator moderate song JOB approv
 node bin/musia.js creator --data /private/musia-creator moderate comment COMMENT approve
 node bin/musia.js creator --data /private/musia-creator suspend ACCOUNT
 node bin/musia.js creator --data /private/musia-creator resolve-report REPORT
+node bin/musia.js creator --data /private/musia-creator maintenance
+node bin/musia.js creator --data /private/musia-creator billing-reconcile
 ```
 
 Before `approve-input`, review rights, consent, abusive content and unsafe
@@ -184,34 +256,42 @@ remain empty. The audit has `audioSha256`, actual `duration`, ordered `lines`
 with `start/end/text/language`, and boolean acknowledgements `listeningPassed`,
 `inputCompared`, `asrCompared`, `gapsAndTailChecked`, `contentApproved`.
 
-For mixed vocals the worker's first full-mix English ASR pass is only a first
-source. Follow up each Chinese/Japanese phrase separately; never approve it as a
-complete multilingual transcript. This adapter does not solve that audit by
-blindly copying an English-only transcript or the planned lyrics.
+The worker runs large-v3 with `--window-crosscheck`. For mixed vocals its
+English-configured ASR remains only a first source. Follow up each
+Chinese/Japanese phrase separately; never approve it as a complete multilingual
+transcript. This adapter does not solve that audit by blindly copying an
+English-only transcript or the planned lyrics.
 
-The worker checks RAM/swap and refuses an occupied GPU. It takes a private
-process lock and a durable unique job claim. It does not reclaim a crashed
-running job automatically. Reconcile any existing output/provider outcome before
+`tools/creator_audio_review.py` can explicitly send the selected audio and intended
+lyrics to OpenAI for independent review; it defaults to `gpt-audio-1.5` and is not
+automatically called by `work-once`. Its report is private model evidence, not an
+automatic approval or human-listening attestation.
+
+The worker checks RAM/swap and requires an idle selected GPU with at least
+22 GiB and 90% free VRAM; small idle resident services need not block it. It takes
+a private process lock and a durable unique job claim. It does not reclaim a
+crashed running job automatically. Reconcile existing output/provider outcome before
 recovering a stuck job; no blind second render or quota reset. Do not run another
 Musia generation concurrently. Media and model artifacts remain out of Git.
 
 ## Next Release Gates
 
-1. Register and qualify exact browser callback, state/S256/replay/refresh/logout,
-   correct-account persistence and provider readiness; then native system-browser
-   authorization plus secure native sessions/app links.
-2. Bind real Apple/Google/Stripe receipts to immutable Musia owners and products.
-   Implement durable notification inbox/reconciliation, paid-through cancellation,
-   renewal, upgrade, restore and revocation. Current pilot grants are not payment
-   proof. Keep inspection/restore/manage independent of fresh purchase capability.
-3. Complete deletion/export/retention, automated moderation escalation, abuse
-   controls, reporting operations, isolated worker credentials and resource/storage
-   limits. Select a commercially permitted checkpoint and pin its revision.
-4. Run the full real account -> approved prompt -> ACE -> independent ASR/listening
-   -> corrected media -> private playback -> deliberate public share journey.
-5. Integrate with native library/recording view, maintain EN/ZH/JA ruby/highlights,
-   test provider purchase flows in app-specific no-charge environments, then ship
-   successor internal test builds. Preserve current reviews unless asked otherwise.
+1. Complete Apple UI sign-in/private playback and remaining cold/warm return,
+   expiry and account-switch cases. Verify Android installation from Play and
+   physical-device listening; retain the exact-build native UI/library results
+   without treating player state as audible-output proof.
+2. Qualify app-specific no-charge Apple/Google purchases and lifecycle behavior
+   against the implemented verifier/restore/reconcile path. Draft products and
+   pilot grants are not payment proof. Keep sales disabled until accepted, and
+   keep inspection/restore/manage independent of new-purchase eligibility.
+3. Qualify retention/export, deletion failure recovery, moderation escalation,
+   reporting operations, worker isolation and resource/storage limits. Confirm
+   commercial checkpoint permission and a pinned revision before paid rollout.
+4. Extend the passed browser creation and social QA to the complete native
+   creation journey and remaining cross-platform library/practice cases. Android
+   internal 6 is already delivered: do not reupload it. Apple test uploads remain
+   separate qualification work; preserve current formal reviews and the held
+   Google production release.
 
 Apple requires UGC filtering, reporting, blocking and contact mechanisms; Google
 also requires responsible handling and reporting of AI-generated content. These
@@ -219,10 +299,16 @@ controls are implemented in the pilot, but operational moderation and store
 qualification remain necessary. [Apple guidelines](https://developer.apple.com/app-store/review/guidelines/#user-generated-content),
 [Google AI-generated content policy](https://support.google.com/googleplay/android-developer/answer/14094294?hl=en).
 
-## Verification
+## Verification Scope
+
+The live acceptance summary above is distinct from fixture tests. Relevant
+repeatable checks include:
 
 ```bash
 conda run --no-capture-output -n musia python -m unittest discover -s tests -p test_creator.py
+conda run --no-capture-output -n musia python -m unittest discover -s tests -p test_creator_native_billing.py
+conda run --no-capture-output -n musia python -m unittest discover -s tests -p test_creator_worker.py
+conda run --no-capture-output -n musia python -m unittest discover -s tests -p test_creator_ingress.py
 conda run --no-capture-output -n musia python -m unittest discover -s tests -p test_learning_api.py
 node --check apps/web/creator/app.js
 node --check bin/musia.js
@@ -232,9 +318,11 @@ conda run --no-capture-output -n musia python tools/test_creator_ui.py
 Browser test requires the local preview on 8796. Identity/agent interactions in
 that test are explicitly browser fixtures, not real authentication or generation.
 The backend tests independently exercise real SQLite/HTTP logic in temporary
-private directories. No synthetic account is inserted in production.
+private directories. The separately accepted live synthetic user was registered
+through the real account flow; it was not inserted as a fixture account.
 
-Verified on 2026-10-09:
+Earlier local-preview evidence recorded on 2026-10-09 (not current suite totals
+or proof of the newer native/billing surfaces):
 
 - 39 creator tests passed on Python 3.10 and Python 3.12.
 - 32 existing learning API tests passed; shared-account adoption guard passed.
@@ -246,3 +334,4 @@ Verified on 2026-10-09:
 - JavaScript syntax and diff whitespace checks passed.
 - Screenshots are private generated evidence under `store/.runtime/creator-ui/`,
   not proof of real sign-in, generation, checkout or production deployment.
+  Live account/audio and protocol acceptance are recorded separately above.

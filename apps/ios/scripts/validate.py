@@ -18,7 +18,15 @@ assert "NSAppTransportSecurity" not in info
 with (resources / "PrivacyInfo.xcprivacy").open("rb") as source:
     privacy = plistlib.load(source)
 assert privacy["NSPrivacyTracking"] is False
-assert privacy["NSPrivacyCollectedDataTypes"] == []
+collected = privacy["NSPrivacyCollectedDataTypes"]
+assert {item["NSPrivacyCollectedDataType"] for item in collected} == {
+    "NSPrivacyCollectedDataTypeName", "NSPrivacyCollectedDataTypeUserID",
+    "NSPrivacyCollectedDataTypeOtherUserContent", "NSPrivacyCollectedDataTypePurchaseHistory",
+    "NSPrivacyCollectedDataTypeProductInteraction",
+}
+assert all(item["NSPrivacyCollectedDataTypeLinked"] and not item["NSPrivacyCollectedDataTypeTracking"]
+           and item["NSPrivacyCollectedDataTypePurposes"] == ["NSPrivacyCollectedDataTypePurposeAppFunctionality"]
+           for item in collected)
 assert privacy["NSPrivacyAccessedAPITypes"] == [{
     "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
     "NSPrivacyAccessedAPITypeReasons": ["CA92.1"],

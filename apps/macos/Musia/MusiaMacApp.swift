@@ -3,13 +3,15 @@ import MusiaCore
 import SwiftUI
 
 enum MacSection: String, CaseIterable, Identifiable {
-    case library = "Library", practice = "Practice", lessons = "Lessons", settings = "Settings"
+    case library = "Library", practice = "Practice", lessons = "Lessons", create = "Create", community = "Community", settings = "Settings"
     var id: String { rawValue }
     var symbol: String {
         switch self {
         case .library: "music.note.list"
         case .practice: "guitars"
         case .lessons: "book"
+        case .create: "sparkles"
+        case .community: "person.2"
         case .settings: "gearshape"
         }
     }
@@ -24,6 +26,8 @@ final class MacNavigation: ObservableObject {
 @MainActor
 struct MusiaMacApp: App {
     @StateObject private var catalog = CatalogStore()
+    @StateObject private var creator = CreatorStore()
+    @StateObject private var billing = CreatorBillingStore()
     @StateObject private var history: LocalStore
     @StateObject private var player: PlaybackController
     @StateObject private var navigation = MacNavigation()
@@ -41,6 +45,10 @@ struct MusiaMacApp: App {
                 .environmentObject(history)
                 .environmentObject(player)
                 .environmentObject(navigation)
+                .environmentObject(creator)
+                .environmentObject(billing)
+                .task { await creator.start(player: player) }
+                .task(id: creator.identity) { billing.start(creator: creator); await billing.accountChanged() }
                 .tint(Palette.teal)
                 .preferredColorScheme(.light)
                 .frame(minWidth: 1040, minHeight: 680)
@@ -50,7 +58,7 @@ struct MusiaMacApp: App {
 #if DEBUG
                 .task {
                     if ProcessInfo.processInfo.arguments.contains("--musia-review") {
-                        await MacReview.run(catalog: catalog, history: history, player: player, navigation: navigation)
+                        await MacReview.run(catalog: catalog, history: history, player: player, navigation: navigation, creator: creator)
                     }
                 }
 #endif
@@ -114,6 +122,8 @@ struct MacRootView: View {
                     case .library: LibraryView(showPractice: showPractice)
                     case .lessons: LessonsView(showPractice: showPractice)
                     case .settings: SettingsView()
+                    case .create: CreatorView()
+                    case .community: CreatorCommunityView()
                     case .practice:
                         if player.hasSelection { PracticeView() }
                         else {

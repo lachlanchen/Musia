@@ -2,5 +2,9 @@
 # LazyingArt adapter. GPU worker continues to use the existing musia conda env.
 -r requirements-learning.txt
 openai==1.109.1
+cryptography>=45.0.7
+app-store-server-library==3.1.2
+google-auth>=2.0,<3
+requests>=2.32,<3
 # Install the reviewed LazyingArtLinkPrivate checkout separately for live login.
 # No private dependency URL, credentials or sibling app configuration belongs here.

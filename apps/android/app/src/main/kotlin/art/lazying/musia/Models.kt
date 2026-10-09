@@ -4,6 +4,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 val MusiaJson = Json { ignoreUnknownKeys = true; encodeDefaults = true }
+data class LoadState<T>(val value: T? = null, val loading: Boolean = false, val error: String? = null)
 
 @Serializable data class Library(val version: Int, val items: List<LibraryItem>)
 @Serializable data class LibraryItem(

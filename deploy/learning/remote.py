@@ -285,7 +285,18 @@ def replace_site(original, block):
     if BEGIN in original:
         assert original.count(BEGIN) == original.count(END) == 1
         before, rest = original.split(BEGIN)
-        _, after = rest.split(END)
+        previous, after = rest.split(END)
+        # Creator is an independently deployed, authenticated boundary. A catalog
+        # update may replace the read-only routes, never this owned handler.
+        start, finish = "    # BEGIN MUSIA CREATOR SCOPED", "    # END MUSIA CREATOR SCOPED\n"
+        if start in previous or finish in previous:
+            assert previous.count(start) == previous.count(finish) == 1, "Malformed creator boundary"
+            assert start not in block and "musia_creator" not in before + after
+            fragment = start + previous.split(start, 1)[1].split(finish, 1)[0] + finish
+            assert "    @musia_not_creator not path /creator /creator/*\n" in fragment
+            anchor = '    request_body {\n        max_size 1KB\n    }\n'
+            assert block.count(anchor) == 1, "Cannot preserve creator in this candidate"
+            block = block.replace(anchor, fragment + anchor.replace("request_body {", "request_body @musia_not_creator {"), 1)
         return before + block.rstrip("\n") + after
     assert HOST not in original, "Existing unmanaged hostname"
     return original + "\n" + block

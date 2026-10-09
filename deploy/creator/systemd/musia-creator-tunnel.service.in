@@ -1,0 +1,31 @@
+[Unit]
+Description=Musia creator single restricted reverse SSH tunnel
+After=network-online.target musia-creator-worker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=musia-creator-tunnel
+Group=musia-creator-tunnel
+LoadCredential=ssh-key:/etc/musia-creator/tunnel/id_ed25519
+# Pin EDGE_IP and the separately verified edge host key. -F ignores user config.
+ExecStart=/usr/bin/ssh -F /dev/null -N -T -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/etc/musia-creator/tunnel/known_hosts -o GlobalKnownHostsFile=/dev/null -o HostKeyAlias=musia-creator-edge -o PasswordAuthentication=no -o KbdInteractiveAuthentication=no -o ExitOnForwardFailure=yes -o ServerAliveInterval=20 -o ServerAliveCountMax=3 -o ConnectTimeout=10 -o ConnectionAttempts=1 -o ForwardAgent=no -o ForwardX11=no -o ControlMaster=no -o PermitLocalCommand=no -i %d/ssh-key -p @SSH_PORT@ -R 127.0.0.1:18897:127.0.0.1:18898 musia-creator-tunnel@@EDGE_IP@
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+RestrictAddressFamilies=AF_INET AF_UNIX
+IPAddressDeny=any
+IPAddressAllow=localhost
+IPAddressAllow=@EDGE_IP@/32
+CapabilityBoundingSet=
+TasksMax=16
+MemoryMax=64M
+
+[Install]
+WantedBy=multi-user.target

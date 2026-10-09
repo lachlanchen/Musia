@@ -26,7 +26,6 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-data class LoadState<T>(val value: T? = null, val loading: Boolean = false, val error: String? = null)
 data class PlaybackState(
     val connected: Boolean = false, val playing: Boolean = false,
     val buffering: Boolean = false, val positionMs: Long = 0,
@@ -54,6 +53,7 @@ class MusiaViewModel(application: Application) : AndroidViewModel(application) {
     var notice by mutableStateOf<String?>(null)
         private set
     private var requestedId: String? = null
+    private var creatorOwner: String? = null
     private var songJob: Job? = null
     private var controller: MediaController? = null
     private var controllerFuture: ListenableFuture<MediaController>? = null
@@ -81,7 +81,7 @@ class MusiaViewModel(application: Application) : AndroidViewModel(application) {
                     controller = future.get().also { it.addListener(listener) }
                     val activeId = controller?.currentMediaItem?.mediaMetadata?.extras?.getString("songId")
                     refreshPlayback()
-                    if (activeId != null && requestedId == null) openSong(activeId, restore = true)
+                    if (activeId != null && requestedId == null && !activeId.startsWith("creator:")) openSong(activeId, restore = true)
                 } catch (_: Exception) { playback = playback.copy(error = "Playback service unavailable. Reconnect.") }
             }
         }, ContextCompat.getMainExecutor(app))
@@ -104,6 +104,11 @@ class MusiaViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
     fun openSong(id: String, restore: Boolean = false) {
+        if (id.startsWith("creator:")) {
+            notice = "Open this song from Community to check its current access."
+            return
+        }
+        creatorOwner = null
         songJob?.cancel()
         requestedId = id
         song = LoadState(loading = true)
@@ -120,6 +125,23 @@ class MusiaViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
     fun retrySong() { requestedId?.let { openSong(it) } }
+    fun openCreatorSong(value: CreatorSong, session: CreatorSession?) {
+        val converted = value.asLearningSong()
+        CreatorAudio.register(value, session)
+        songJob?.cancel()
+        controller?.stop(); controller?.clearMediaItems()
+        requestedId = converted.id; creatorOwner = session?.owner
+        song = LoadState(value = converted); assetId = converted.assets.first().id
+        playback = playback.copy(loop = null, positionMs = 0, error = null); tapFeedback = null
+        configure(null, 0, true)
+    }
+    fun creatorAccountChanged(owner: String?) {
+        if (creatorOwner != null && creatorOwner != owner) {
+            controller?.stop(); controller?.clearMediaItems()
+            creatorOwner = null; requestedId = null; song = LoadState(); assetId = null
+            playback = playback.copy(loop = null, positionMs = 0, error = null); tapFeedback = null
+        }
+    }
     fun selectAsset(id: String) {
         if (id == assetId || song.value?.assets?.none { it.id == id } != false) return
         controller?.stop(); controller?.clearMediaItems()
@@ -133,6 +155,7 @@ class MusiaViewModel(application: Application) : AndroidViewModel(application) {
         val audio = asset ?: return null
         val extras = Bundle().apply {
             putString("songId", value.id); putString("assetId", audio.id)
+            creatorOwner?.let { putString("creatorOwner", it) }
             putLong("loopStartMs", loop?.startMs ?: 0); putLong("loopEndMs", loop?.endMs ?: -1)
         }
         val metadata = MediaMetadata.Builder().setTitle(value.title).setArtist(value.artist).setExtras(extras)

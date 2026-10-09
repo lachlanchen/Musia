@@ -1,0 +1,26 @@
+    # BEGIN MUSIA CREATOR SCOPED
+    @musia_creator path /creator /creator/*
+    handle @musia_creator {
+        request_body {
+            max_size 48000
+        }
+        reverse_proxy 127.0.0.1:18896 {
+            header_up Host musia.lazying.art
+            # Replace spoofable client headers at the trusted TLS boundary.
+            header_up -X-LazyEdge-*
+            header_up -X-Musia-Upstream-Authorization
+            header_up X-Musia-Client-Authorization {http.request.header.Authorization}
+            header_up X-Musia-Ingress-IP {http.request.remote.host}
+            header_up -Authorization
+            header_up -Forwarded
+            header_up -X-Real-IP
+            transport http {
+                dial_timeout 2s
+                response_header_timeout 150s
+                read_timeout 150s
+                write_timeout 150s
+            }
+        }
+    }
+    @musia_not_creator not path /creator /creator/*
+    # END MUSIA CREATOR SCOPED

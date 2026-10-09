@@ -1,0 +1,36 @@
+[Unit]
+Description=Musia creator application with private transport authentication
+After=network-online.target
+
+[Service]
+Type=simple
+User=@APP_USER@
+Group=@APP_GROUP@
+WorkingDirectory=@APP_RELEASE@
+Environment=PYTHONNOUSERSITE=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=MUSIA_CREATOR_ORIGIN=https://musia.lazying.art
+Environment=MUSIA_CREATOR_DATA=@DATA@
+Environment=MUSIA_CREATOR_AUTH_DIR=@AUTH_DIRECTORY@
+Environment=MUSIA_CREATOR_UPSTREAM_SECRET_FILE=%d/upstream
+# Generation remains a separate, parent-owned qualification and worker decision.
+Environment=MUSIA_CREATOR_GENERATION=0
+LoadCredential=upstream:/etc/musia-creator/app/upstream
+ExecStart=@CREATOR_PYTHON@ -m uvicorn deploy.creator.upstream:create_app --factory --host 127.0.0.1 --port 8797 --workers 1 --no-proxy-headers --no-access-log --timeout-keep-alive 5
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=@DATA@ @AUTH_DIRECTORY@
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+TasksMax=128
+MemoryMax=768M
+
+[Install]
+WantedBy=multi-user.target

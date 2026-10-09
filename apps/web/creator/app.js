@@ -143,7 +143,7 @@ function refreshControls() {
     : "Public songs are open to everyone.";
   $("connection").textContent = capabilities?.generation
     ? "Creator pilot"
-    : "Creator preview · service not connected";
+    : capabilities?.login ? "Connected · rendering unavailable" : "Creator preview · service not connected";
   $("generation-status").textContent = pending
     ? "Your previous request will be recovered without a second charge."
     : "Failed renders do not use your allowance.";
@@ -153,6 +153,7 @@ async function refreshAccount() {
   if (account?.id !== data.account?.id) accountEpoch++;
   account = data.account;
   refreshControls();
+  if ($("account-dialog").open) openAccount();
 }
 async function login() {
   const result = await api("/auth/start", {});

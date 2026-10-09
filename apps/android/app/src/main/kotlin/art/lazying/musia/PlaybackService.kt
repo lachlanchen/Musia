@@ -12,6 +12,12 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
+import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.launch
 
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 class PlaybackService : MediaSessionService() {
@@ -23,6 +29,7 @@ class PlaybackService : MediaSessionService() {
     private var journalKey: String? = null
     private var clock = PlaybackClock()
     private var lastSave = 0L
+    private val accountScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
     private val tick = object : Runnable {
         override fun run() {
             journal()
@@ -33,7 +40,9 @@ class PlaybackService : MediaSessionService() {
     override fun onCreate() {
         super.onCreate()
         store = LocalStore.get(this)
-        player = ExoPlayer.Builder(this).build().apply {
+        val vault = CreatorVault.get(this)
+        player = ExoPlayer.Builder(this)
+            .setMediaSourceFactory(DefaultMediaSourceFactory(CreatorAudio.Sources(this, vault))).build().apply {
             setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA).setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), true)
             setHandleAudioBecomingNoisy(true)
             setWakeMode(C.WAKE_MODE_NETWORK)
@@ -47,6 +56,12 @@ class PlaybackService : MediaSessionService() {
         }
         val intent = PendingIntent.getActivity(this, 0, Intent(this, MainActivity::class.java), PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
         session = MediaSession.Builder(this, player).setSessionActivity(intent).build()
+        accountScope.launch {
+            vault.state.collect { state ->
+                val owner = player.currentMediaItem?.mediaMetadata?.extras?.getString("creatorOwner")
+                if (owner != null && owner != state.session?.owner) { player.stop(); player.clearMediaItems() }
+            }
+        }
         handler.post(tick)
     }
 
@@ -76,6 +91,7 @@ class PlaybackService : MediaSessionService() {
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? = session
 
     override fun onDestroy() {
+        accountScope.cancel()
         handler.removeCallbacks(tick)
         player.pause()
         journal(forceSave = true)

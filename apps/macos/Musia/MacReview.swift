@@ -15,7 +15,7 @@ enum MacReview {
     }
 
     static func run(catalog: CatalogStore, history: LocalStore, player: PlaybackController,
-                    navigation: MacNavigation) async {
+                    navigation: MacNavigation, creator: CreatorStore) async {
         guard !started else { return }
         started = true
         let directory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
@@ -76,7 +76,22 @@ enum MacReview {
             window.setContentSize(NSSize(width: 1040, height: 680))
             navigation.section = .practice
             try await capture(window, "06-minimum-window", directory)
+            await creator.refresh()
+            checks["creator_live_capabilities"] = creator.capabilities?.login == true
+            // Isolated sentinel: never read or overwrite a real session in QA.
+            let key = "review-sentinel-" + UUID().uuidString
+            try CreatorKeychain.write("sentinel", key: key)
+            checks["creator_keychain"] = try CreatorKeychain.read(String.self, key: key) == "sentinel"
+            try CreatorKeychain.remove(key)
+            checks["creator_keychain_removed"] = try CreatorKeychain.read(String.self, key: key) == nil
+            navigation.section = .create
+            try await capture(window, "07-creator", directory)
+            navigation.section = .community
+            try await capture(window, "08-community", directory)
             checks["passed"] = checks["minimized_playback"] as? Bool == true && !catalog.lessons.isEmpty
+                && checks["creator_live_capabilities"] as? Bool == true
+                && checks["creator_keychain"] as? Bool == true
+                && checks["creator_keychain_removed"] as? Bool == true
         } catch {
             checks["passed"] = false
             checks["error"] = error.localizedDescription
