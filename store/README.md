@@ -7,6 +7,12 @@ a native worker is building.
 
 ## Actual State
 
+**2026-10-10:** Google Play **0.1.2 (3) is published**, Production Active in
+172 countries/regions. Its single approved change was released with owner
+authorization; the ready-to-publish queue is empty. Internal **0.2.0 (7)** and
+Apple reviews were not changed. Public US listing remains USD 2.99. See the
+[release record](google-release-2026-10-10.md).
+
 **2026-10-06:** Apple rejected both 0.1.1 submissions under 4.3/4.2.6. Detailed
 answers and evidence were sent in both review threads, latest **0.1.2 (4)**
 builds replaced the old attachments, and both iOS/iPad and Mac are now

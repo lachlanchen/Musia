@@ -1,5 +1,10 @@
 # Store Defaults
 
+- Google **0.1.2 (3)** was published on October 10 with explicit owner
+  authorization. Fresh Console readback shows Production Active in 172 regions,
+  no ready-to-publish changes, and internal **0.2.0 (7)** unchanged. Read
+  `google-release-2026-10-10.md`; do not replay this release or promote the beta.
+  Managed publishing stays on. Apple state was not checked or changed in this task.
 - The October 7 Mac rounded-icon correction is **Mac 0.1.3 (6)**, testing only.
   Read `testflight-macos-icon-2026-10-07.md` for actual availability before retry.
   It is confirmed VALID and IN_BETA_TESTING at October 7, 19:55 Hong Kong time.
