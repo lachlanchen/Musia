@@ -1,7 +1,7 @@
 # Musia for macOS
 
 **0.1.2 (4)** passed review and was released on October 12, 2026. Apple reports
-Ready for Sale; public storefront propagation is pending verification.
+Ready for Sale; the public US listing is verified at USD 2.99.
 [Mac App Store](https://apps.apple.com/app/id6816265930?mt=12) ·
 [Release record](../../store/macos-release-2026-10-12.md).
 Later TestFlight builds are separate from this approved production release.

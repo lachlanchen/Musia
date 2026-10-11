@@ -19,7 +19,7 @@ Musia is a local-first research prototype for AI music localization. The current
 [![Musia on the Mac App Store](https://img.shields.io/badge/Mac_App_Store-Musia-087BC1?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/id6816265930?mt=12)
 [![Get Musia on Google Play](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [Open the web app](https://musia.lazying.art)
 
-Android 0.1.2 is available for **US$2.99**. Mac 0.1.2 (4) passed review and was released on October 12, 2026: Apple reports **Ready for Sale**, with public storefront propagation pending. Learn with listening, rhythm practice, guitar chord diagrams, pitch-preserving speed controls and phrase loops. No account or subscription is required for the learning app. Regional prices may differ.
+Musia 0.1.2 is available on **Mac and Android for US$2.99**. Learn with listening, rhythm practice, guitar chord diagrams, pitch-preserving speed controls and phrase loops. No account or subscription is required for the learning app. Regional prices may differ.
 
 [![Public Google Play listing, captured October 5, 2026. Regional prices may differ.](store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
 

@@ -28,11 +28,13 @@ This release does not include later beta-only changes.
 ## Public Availability
 
 - [Mac App Store listing](https://apps.apple.com/app/id6816265930?mt=12).
-- Saved app price is USD 2.99; regional prices vary. Public price is not yet
-  independently verified for Mac.
-- Initial unauthenticated US listing returned HTTP 404 and Apple's US lookup
-  API returned zero results immediately after release. Provider release is
-  confirmed; storefront propagation and a fresh public installation are not.
+- The public US page is **HTTP 200** after a short propagation delay. Its
+  SoftwareApplication JSON-LD independently confirms Musia: Learn Music & Guitar,
+  LazyingArt LLC, Mac, macOS 14.0+, and **USD 2.99**. Regional prices vary.
+- Initial listing was HTTP 404; the separate US/HK iTunes lookup API still
+  returned zero results when the page became available. Do not mistake that
+  cache lag for a failed release. Version/build are verified through Apple's
+  authenticated API; a fresh public purchase/install was not performed.
 - Apple says a manually released version can take up to 24 hours to appear.
   [Apple release guidance](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/select-an-app-store-version-release-option).
 - Do not resubmit or repeat the release request to resolve propagation.

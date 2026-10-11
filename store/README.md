@@ -9,8 +9,8 @@ a native worker is building.
 
 **2026-10-12:** Mac **0.1.2 (4)** passed review and was manually released with
 owner authorization. Apple accepted the release request and reports
-**READY_FOR_SALE**. Public storefront propagation is still pending; this is
-not yet a verified public install. iOS **0.1.2 (4)** remains
+**READY_FOR_SALE**. The public US Mac listing is live at **USD 2.99**, with
+correct app identity and compatibility. A new purchase/install was not tested. iOS **0.1.2 (4)** remains
 **WAITING_FOR_REVIEW**, with its exact build unchanged. No beta or Google
 release was changed. See the [Mac release record](macos-release-2026-10-12.md).
 
