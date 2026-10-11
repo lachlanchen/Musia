@@ -62,6 +62,41 @@ build preflight and an owner-only journal written before dispatch. The beta
 helper's formal-mutation prohibition remains unchanged. An unknown response
 must be reconciled before any retry.
 
-README, store status and web download links are updated separately from the
-native binary. Web deployment and final storefront evidence are recorded below
-after verification.
+README and store status now include the live download link. A genuine public
+storefront screenshot, visually reviewed with the icon and Mac captures
+rendered, is at `store/assets/readme/mac-app-store.png`. It shows the approved
+production artwork, not a newer TestFlight icon. The public page's HTML/JSON-LD
+evidence is in private `public-page.json`; platform/build preservation is in
+`readback.json`.
+
+## Website Follow-through
+
+Download links are committed in `apps/web/support.html`; desktop navigation
+points to its app section. They are **not deployed to the live learning site
+yet**. The existing site and catalog are healthy and unchanged.
+
+- Clean source: `56cceb3`, excluding all unrelated dirty lyric/source changes.
+- Prepared archive SHA-256:
+  `15763296685180db8a249febc493455c7167c6cdd557561ecc312486c1d7a0f8`.
+- Retained artifact: `deploy/learning/.work/build-20261012T065233/`.
+- 32 backend tests, 9 web tests, 8 deployment guard tests, 24 chord-shape checks
+  and 73 staged HTTP acceptance checks passed (32 catalog items).
+- Staged Playwright checks passed for the exact Mac/Google links, desktop
+  navigation, and no horizontal overflow at 1440x1000 and 390x844. Both support
+  screenshots were visually reviewed; the temporary HTTP server/browser closed.
+- First preflight saw 147 MiB against the unchanged 180 MiB safety minimum.
+  After three idle-connection checks, only `musia-learning.service` was briefly
+  stopped, with a 180-second automatic recovery timer. Preflight still saw
+  176 MiB, refused deployment, and the service was immediately restored.
+- A subsequent maintenance attempt required at least 170 MiB before pausing;
+  that preliminary check refused, so no second pause occurred. Recovery timers
+  were removed. Later administrator SSH probes timed out; public `/healthz`
+  still returned HTTP 200 with `{"status":"ok"}`.
+- No other service was stopped, no memory guard was lowered, and no firewall,
+  creator process, credentials, catalog or native binary was changed.
+
+Resume only the clean-source website deployment after SSH/memory recovery. Do
+not replay the successful Apple release. Recheck catalog/source hashes before
+deployment, preserve other projects, and verify desktop/mobile links afterward.
+The temporary clean worktree and ephemeral browser were removed after capture;
+recreate a detached worktree at the recorded source commit when needed.

@@ -38,6 +38,10 @@ Native Android screenshots from the published release, not mockups.
 
 Native SwiftUI and AVFoundation for macOS 14 or later, on Apple silicon and Intel. The iPhone/iPad version remains **Waiting for Review**, checked October 12, 2026. See the [Mac release record](store/macos-release-2026-10-12.md) for the exact build and availability checks.
 
+[![Public Mac App Store listing, captured October 12, 2026](store/assets/readme/mac-app-store.png)](https://apps.apple.com/app/id6816265930?mt=12)
+
+*Public US Mac listing and its approved production screenshots. Newer TestFlight artwork and features are separate from this release.*
+
 ![Musia native Mac practice workspace with lyrics, playback speed and guitar fingering](store/assets/macos/03-song.png)
 
 </details>
