@@ -1,5 +1,11 @@
 # Musia for macOS
 
+**0.1.2 (4)** passed review and was released on October 12, 2026. Apple reports
+Ready for Sale; public storefront propagation is pending verification.
+[Mac App Store](https://apps.apple.com/app/id6816265930?mt=12) ·
+[Release record](../../store/macos-release-2026-10-12.md).
+Later TestFlight builds are separate from this approved production release.
+
 Native SwiftUI and AVFoundation app for **macOS 14 or later**, built for Intel
 and Apple silicon. No Catalyst, WebView, local server or bundled browser.
 The Mac target shares MusiaCore, catalog, playback, lyrics, guitar diagrams,

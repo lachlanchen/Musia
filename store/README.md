@@ -7,6 +7,13 @@ a native worker is building.
 
 ## Actual State
 
+**2026-10-12:** Mac **0.1.2 (4)** passed review and was manually released with
+owner authorization. Apple accepted the release request and reports
+**READY_FOR_SALE**. Public storefront propagation is still pending; this is
+not yet a verified public install. iOS **0.1.2 (4)** remains
+**WAITING_FOR_REVIEW**, with its exact build unchanged. No beta or Google
+release was changed. See the [Mac release record](macos-release-2026-10-12.md).
+
 **2026-10-10:** Google Play **0.1.2 (3) is published**, Production Active in
 172 countries/regions. Its single approved change was released with owner
 authorization; the ready-to-publish queue is empty. Internal **0.2.0 (7)** and

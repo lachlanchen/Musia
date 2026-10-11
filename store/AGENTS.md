@@ -1,5 +1,12 @@
 # Store Defaults
 
+- Mac **0.1.2 (4)** passed review and was released on October 12 with owner
+  authorization. Apple reports **READY_FOR_SALE** after the single accepted
+  manual release request. Read `macos-release-2026-10-12.md` for public-listing
+  propagation evidence; do not submit another release request or promote a beta.
+  iOS **0.1.2 (4)** remains **WAITING_FOR_REVIEW** with its existing build.
+  Google and test tracks were untouched. Older pending-review notes below are
+  historical, not authority to replace this released Mac version.
 - Google **0.1.2 (3)** was published on October 10 with explicit owner
   authorization. Fresh Console readback shows Production Active in 172 regions,
   no ready-to-publish changes, and internal **0.2.0 (7)** unchanged. Read

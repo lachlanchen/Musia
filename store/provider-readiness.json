@@ -1,7 +1,8 @@
 {
-  "observed_date": "2026-10-06",
+  "observed_date": "2026-10-12",
   "bundle_id": "art.lazying.musia",
   "apple": {
+    "observed_date": "2026-10-12",
     "initial_inventory": "No matching app or bundle identifier",
     "bundle_identifier": "REGISTERED",
     "bundle_resource_id": "X6JCGYAZQS",
@@ -25,7 +26,7 @@
     "binary_uploaded": true,
     "formal_review_submitted": true,
     "formal_version_id": "f4337c74-f5d9-4613-879c-df5fb3712e9e",
-    "formal_status": "WAITING_FOR_REVIEW; 0.1.2 (4) resubmitted after 0.1.1 rejection under 4.3/4.2.6; nine-question response and evidence sent; manual release unchanged",
+    "formal_status": "IOS WAITING_FOR_REVIEW; fresh October 12 API readback; exact 0.1.2 (4) attachment and manual release unchanged. Mac is separately released; see macos below",
     "formal_submission_id": "8aef616c-53e3-41b8-b96b-0f95df8b2ee0",
     "formal_submitted_at": "2026-10-05T22:19:56.474Z",
     "formal_remaining": [],
@@ -34,7 +35,7 @@
     "age_rating": "13+ calculated; questionnaire saved",
     "device_playback": "Owner confirmed iPhone audible and locked-screen playback for 0.1.1. Do not relabel that as a new owner acceptance test of every 0.1.2 feature",
     "macos": {
-      "observed_date": "2026-10-06",
+      "observed_date": "2026-10-12",
       "implementation": "Native SwiftUI/AVFoundation; no Catalyst or WebView",
       "version": "0.1.2 (4)",
       "minimum_os": "14.0",
@@ -45,15 +46,19 @@
       "formal_version_id": "252606cc-493d-4385-b901-dd4cf7f659f0",
       "formal_submission_id": "cdb09c5a-7833-45a5-bba0-ffba95107a46",
       "formal_submitted_at": "2026-10-05T22:12:47.984Z",
-      "formal_status": "WAITING_FOR_REVIEW",
+      "formal_status": "READY_FOR_SALE",
       "formal_review_submitted": true,
       "release_type": "MANUAL",
+      "release_request_status": "ACCEPTED; one exact approved Mac version release request; no beta promotion",
+      "released_at": "2026-10-11T22:43:17.169885+00:00",
       "package_sha256": "8b851ea56603eec7d50f84584a8175ec3b29abcdc2fd7d41df34b23ce2187807",
       "qualification": "Exact universal signed 0.1.2 artifact, retained native/core and physical Mac audio evidence; 42 store-tool tests. See native-update-2026-10-05.md and apple-resubmission-2026-10-06.md for test-host limitations; no claim every test passed",
       "listing_screenshots": "3 genuine 1280x800 native Mac captures, all COMPLETE",
       "price": {"currency": "USD", "amount": "2.99", "state": "FRESH_API_VERIFIED_SHARED_APP_PRICE"},
       "publicly_available": false,
-      "record": "store/apple-resubmission-2026-10-06.md"
+      "public_listing_url": "https://apps.apple.com/app/id6816265930?mt=12",
+      "public_listing_verification": "Initial US HTTP 404 and iTunes macSoftware lookup returned zero results after release; storefront propagation pending, not a provider release failure",
+      "record": "store/macos-release-2026-10-12.md"
     }
   },
   "google": {
@@ -95,7 +100,7 @@
   "website_qa": "29 backend, 9 web logic, 8 deployment tests and public Playwright passed; 24 chord shapes and 12 viewport/text-scale cases pass; live catalog 32 items/45 audio versions has no unsupported chord symbols. Not a native qualification receipt.",
   "android_signed_build": "0.1.1 (2) APK/AAB internally published; 36 release unit tests, release lint, signature/identity checks, exact signed APK emulator phone/tablet/enlarged-text navigation and playback/background/screen-off state checks passed",
   "ios_build": "0.1.2 (4) IPA, exact previously uploaded/TestFlight artifact selected for formal resubmission. SHA and retained source/native/core evidence in testflight-0.1.2.md. Fresh beginner UI test passed; additional October6 tests interrupted by Mac tunnel loss, not counted as passed. Earlier owner audible/locked-screen confirmation belongs to 0.1.1. No app code or signed binary altered in this resubmission task.",
-  "qualification_scope": "Owner authorized latest-build resubmission after Apple rejected both 0.1.1 platforms under 4.3/4.2.6. Detailed responses, native evidence and updated listing supplied; iOS/Mac 0.1.2 (4) now WAITING_FOR_REVIEW, not approved. Google untouched this task. Original artifact receipts/API guards preserved. Shared-account integration remains disabled.",
+  "qualification_scope": "October 12 owner authorized post-review Mac release. Exact approved MAC_OS 0.1.2 (4) manually released and Apple reports READY_FOR_SALE; public storefront propagation pending. iOS remains WAITING_FOR_REVIEW, exact build unchanged. Google and betas untouched. Original artifact qualification and beta API guards preserved; no new binary, native QA or billing qualification claimed.",
   "store_tool_tests": "42 local guard tests passed, including platform-specific Apple build identity, provider result, QA, screenshot ownership and timeout guards",
   "latest_internal_testing": {
     "observed_at": "2026-10-05T08:18:48.254596+00:00",

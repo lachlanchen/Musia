@@ -16,9 +16,10 @@ Musia is a local-first research prototype for AI music localization. The current
 
 ## Musia App
 
+[![Musia on the Mac App Store](https://img.shields.io/badge/Mac_App_Store-Musia-087BC1?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/app/id6816265930?mt=12)
 [![Get Musia on Google Play](https://img.shields.io/badge/Google_Play-Download-00875F?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=art.lazying.musia) · [Open the web app](https://musia.lazying.art)
 
-Android 0.1.1 is available for **US$2.99**. Learn with listening, rhythm practice, guitar chord diagrams, pitch-preserving speed controls and phrase loops. No account or subscription is required.
+Android 0.1.2 is available for **US$2.99**. Mac 0.1.2 (4) passed review and was released on October 12, 2026: Apple reports **Ready for Sale**, with public storefront propagation pending. Learn with listening, rhythm practice, guitar chord diagrams, pitch-preserving speed controls and phrase loops. No account or subscription is required for the learning app. Regional prices may differ.
 
 [![Public Google Play listing, captured October 5, 2026. Regional prices may differ.](store/assets/readme/google-play.png)](https://play.google.com/store/apps/details?id=art.lazying.musia)
 
@@ -33,9 +34,9 @@ Android 0.1.1 is available for **US$2.99**. Learn with listening, rhythm practic
 Native Android screenshots from the published release, not mockups.
 
 <details>
-<summary>Native macOS preview (in review)</summary>
+<summary>Inside the native Mac app</summary>
 
-The native iOS and macOS apps are submitted for review, not yet publicly released as of October 5, 2026.
+Native SwiftUI and AVFoundation for macOS 14 or later, on Apple silicon and Intel. The iPhone/iPad version remains **Waiting for Review**, checked October 12, 2026. See the [Mac release record](store/macos-release-2026-10-12.md) for the exact build and availability checks.
 
 ![Musia native Mac practice workspace with lyrics, playback speed and guitar fingering](store/assets/macos/03-song.png)
 
