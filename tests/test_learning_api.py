@@ -92,6 +92,52 @@ class LearningAPITest(unittest.TestCase):
         self.assertEqual(response.status_code, 200, response.text)
         return response.json()
 
+    def test_public_validators_compression_and_source_invalidation(self):
+        url = "/api/v1/songs/public-song"
+        original = self.client.get(url, headers={"Accept-Encoding": "identity"})
+        zipped = self.client.get(url, headers={"Accept-Encoding": "gzip"})
+        self.assertEqual(zipped.content, original.content)
+        self.assertEqual(zipped.headers["content-encoding"], "gzip")
+        self.assertLess(int(zipped.headers["content-length"]), len(original.content))
+        self.assertEqual(zipped.headers["etag"], original.headers["etag"])
+        for validator in (original.headers["etag"], original.headers["etag"][2:], "*",
+                          '"another", ' + original.headers["etag"]):
+            cached = self.client.get(url, headers={"If-None-Match": validator})
+            self.assertEqual(cached.status_code, 304)
+            self.assertEqual(cached.content, b"")
+            self.assertEqual(cached.headers["vary"], "Accept-Encoding")
+            self.assertEqual(cached.headers["x-content-type-options"], "nosniff")
+        self.en_lyrics["lines"][0]["text"] = "Updated lyric"
+        self.write_json("website/data/songs/public-song/lyrics/en-vocal/en.json", self.en_lyrics)
+        updated = self.client.get(url, headers={"If-None-Match": original.headers["etag"]})
+        self.assertEqual(updated.status_code, 200)
+        self.assertNotEqual(updated.headers["etag"], original.headers["etag"])
+
+    def test_encoding_negotiation_head_and_audio_ranges(self):
+        url = "/api/v1/songs/public-song"
+        for encoding in ("gzip;q=0", "gzip;q=0, *;q=1", "gzip;q=bad", "gzip;q=nan", "identity"):
+            response = self.client.get(url, headers={"Accept-Encoding": encoding})
+            self.assertNotIn("content-encoding", response.headers)
+        get = self.client.get(url)
+        head = self.client.head(url)
+        self.assertEqual(head.content, b"")
+        for key in ("etag", "content-length", "content-encoding", "vary"):
+            self.assertEqual(get.headers[key], head.headers[key])
+        ranged = self.client.get("/api/v1/exercises/first-pulse/audio.wav",
+                                 headers={"Range": "bytes=0-43", "Accept-Encoding": "gzip"})
+        self.assertEqual(ranged.status_code, 206)
+        self.assertEqual(len(ranged.content), 44)
+        self.assertNotIn("content-encoding", ranged.headers)
+        for url in ("/healthz", "/missing"):
+            response = self.client.get(url, headers={"If-None-Match": "*"})
+            self.assertNotEqual(response.status_code, 304)
+            self.assertEqual(response.headers["cache-control"], "no-store")
+
+    def test_static_files_have_validators(self):
+        response = self.client.get("/styles.css")
+        cached = self.client.get("/styles.css", headers={"If-None-Match": response.headers["etag"]})
+        self.assertEqual(cached.status_code, 304)
+
     def test_health_library_and_exact_contract(self):
         self.assertEqual(self.client.get("/healthz").json(), {"status": "ok"})
         library = self.client.get("/api/v1/library").json()

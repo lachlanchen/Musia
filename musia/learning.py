@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import io
+import gzip
+import hashlib
 import json
 import math
 import os
@@ -465,11 +467,45 @@ LESSONS = [
 ]
 
 
-def _json_response(payload: dict, cache: str = "public, max-age=30, must-revalidate") -> Response:
+def _public_response(content: bytes, media_type: str, request: Request | None,
+                     cache: str = "public, max-age=30, must-revalidate") -> Response:
+    headers = {"Cache-Control": cache}
+    if "public" not in cache or request is None:
+        return Response(content, media_type=media_type, headers=headers)
+    # Weak validator is shared by identity and gzip representations. No persistent
+    # response cache: edited lyric files must immediately invalidate the validator.
+    tag = 'W/"' + hashlib.sha256(content).hexdigest() + '"'
+    headers.update({"ETag": tag, "Vary": "Accept-Encoding"})
+    validators = request.headers.get("if-none-match", "")[:8192].split(",")
+    if any(v.strip() == "*" or v.strip().removeprefix("W/") == tag[2:] for v in validators):
+        return Response(status_code=304, headers=headers)
+    encodings = {}
+    for part in request.headers.get("accept-encoding", "")[:4096].lower().split(","):
+        name, *parameters = part.strip().split(";")
+        quality = 1.0
+        for parameter in parameters:
+            key, _, value = parameter.strip().partition("=")
+            if key == "q":
+                try:
+                    quality = float(value)
+                except ValueError:
+                    quality = 0.0
+        encodings[name.strip()] = quality if 0 <= quality <= 1 else 0.0
+    compressible = media_type.startswith("text/") or media_type == "application/json"
+    if compressible and len(content) >= 1024 and encodings.get("gzip", encodings.get("*", 0)) > 0:
+        compressed = gzip.compress(content, compresslevel=1, mtime=0)
+        if len(compressed) < len(content):
+            content = compressed
+            headers["Content-Encoding"] = "gzip"
+    return Response(content, media_type=media_type, headers=headers)
+
+
+def _json_response(payload: dict, cache: str = "public, max-age=30, must-revalidate",
+                   request: Request | None = None) -> Response:
     content = json.dumps(payload, ensure_ascii=False, allow_nan=False, separators=(",", ":")).encode("utf-8")
     if len(content) > MAX_JSON_BYTES:
         return JSONResponse({"detail": "Public data exceeds response limit"}, status_code=503)
-    return Response(content, media_type="application/json", headers={"Cache-Control": cache})
+    return _public_response(content, "application/json", request, cache)
 
 
 class PublicBoundary:
@@ -541,7 +577,7 @@ def create_app(root: Path | None = None, public_base_url: str | None = None) -> 
         return _json_response({"status": "ok"}, "no-store")
 
     @app.api_route("/api/v1/library", methods=["GET", "HEAD"])
-    def get_library():
+    def get_library(request: Request):
         exercise = first_pulse(base_url)
         items = [{**{key: exercise[key] for key in ("id", "title", "artist", "coverUrl")},
                   "duration": EXERCISE_SECONDS, "kind": "exercise"}]
@@ -555,22 +591,22 @@ def create_app(root: Path | None = None, public_base_url: str | None = None) -> 
                 items.append({**{key: song[key] for key in ("id", "title", "artist", "coverUrl")},
                               "duration": default["duration"], "kind": "song"})
                 seen.add(item["id"])
-        return _json_response({"version": 1, "items": items})
+        return _json_response({"version": 1, "items": items}, request=request)
 
     @app.api_route("/api/v1/songs/{song_id}", methods=["GET", "HEAD"])
-    def get_song(song_id: str):
+    def get_song(song_id: str, request: Request):
         if song_id == "first-pulse":
-            return _json_response(first_pulse(base_url))
+            return _json_response(first_pulse(base_url), request=request)
         if _id(song_id):
             item = next((item for item in library.entries() if item["id"] == song_id), None)
             song = library.song(item) if item else None
             if song:
-                return _json_response(song)
+                return _json_response(song, request=request)
         raise HTTPException(404, "Song not found")
 
     @app.api_route("/api/v1/lessons", methods=["GET", "HEAD"])
-    def lessons():
-        return _json_response({"lessons": LESSONS}, "public, max-age=300, must-revalidate")
+    def lessons(request: Request):
+        return _json_response({"lessons": LESSONS}, "public, max-age=300, must-revalidate", request)
 
     @app.api_route("/api/v1/capabilities", methods=["GET", "HEAD"])
     def capabilities():
@@ -604,7 +640,7 @@ def create_app(root: Path | None = None, public_base_url: str | None = None) -> 
             content = _read(root, relative, MAX_STATIC_BYTES)
         except (OSError, ValueError):
             raise HTTPException(404, "Public file not found") from None
-        return Response(content, media_type=media_type, headers={"Cache-Control": "public, max-age=300, must-revalidate"})
+        return _public_response(content, media_type, request, "public, max-age=300, must-revalidate")
 
     for route in STATIC_FILES:
         app.add_api_route(route, serve_static, methods=["GET", "HEAD"], include_in_schema=False)
