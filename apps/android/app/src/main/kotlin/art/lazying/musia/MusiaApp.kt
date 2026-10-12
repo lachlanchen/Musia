@@ -108,7 +108,7 @@ private val destinations = listOf(
             val width = Modifier.widthIn(max = 880.dp).fillMaxWidth()
             when {
                 playerOpen -> PlayerScreen(vm, local.preferences, width)
-                training != null -> BeginnerPracticeScreen(training == "Metronome", width)
+                training != null -> BeginnerPracticeScreen(training != "Do Re Mi", width, if (training == "Chords") 1 else 0)
                 accountOpen -> CreatorAccountScreen(creator, width)
                 destination == "Create" -> CreatorScreen(creator, { accountOpen = true }, width)
                 destination == "Community" -> CreatorCommunityScreen(creator, { accountOpen = true }, { song, session ->
@@ -134,8 +134,10 @@ private val destinations = listOf(
                 Text("Start here", style = MaterialTheme.typography.titleLarge)
                 ListItem(headlineContent = { Text("Do Re Mi · Listen and learn") }, leadingContent = { Icon(Icons.Default.Hearing, null) },
                     trailingContent = { Icon(Icons.Default.ChevronRight, null) }, modifier = Modifier.clickable { train("Do Re Mi") })
-                ListItem(headlineContent = { Text("Metronome & chord changes") }, leadingContent = { Icon(Icons.Default.Timer, null) },
+                ListItem(headlineContent = { Text("First Pulse · Rhythm workshop") }, leadingContent = { Icon(Icons.Default.Timer, null) },
                     trailingContent = { Icon(Icons.Default.ChevronRight, null) }, modifier = Modifier.clickable { train("Metronome") })
+                ListItem(headlineContent = { Text("Chord changes · Play along") }, leadingContent = { Icon(Icons.Default.MusicNote, null) },
+                    trailingContent = { Icon(Icons.Default.ChevronRight, null) }, modifier = Modifier.clickable { train("Chords") })
             }
         }
         item {
@@ -158,34 +160,6 @@ private val destinations = listOf(
                 modifier = Modifier.clickable { open(entry.id) }
             )
             HorizontalDivider(Modifier.padding(horizontal = 20.dp), color = MaterialTheme.colorScheme.surfaceVariant)
-        }
-        if (exercises) {
-            item {
-                Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text("Lessons", style = MaterialTheme.typography.titleLarge)
-                    if (vm.lessons.loading) LinearProgressIndicator(Modifier.fillMaxWidth())
-                    vm.lessons.error?.let { ErrorNotice(it, vm.lessons.value != null) { vm.reloadLessons() } }
-                    if (vm.lessons.value?.lessons?.isEmpty() == true) Text("No lessons published")
-                }
-            }
-            items(vm.lessons.value?.lessons.orEmpty()) { lesson ->
-                var expanded by rememberSaveable(lesson.id) { mutableStateOf(false) }
-                Column(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Row(Modifier.fillMaxWidth().clickable { expanded = !expanded }, verticalAlignment = Alignment.CenterVertically) {
-                        Column(Modifier.weight(1f)) {
-                            Text(lesson.title, style = MaterialTheme.typography.titleMedium)
-                            Text(lesson.focus, color = MaterialTheme.colorScheme.secondary)
-                        }
-                        IconAction(if (expanded) "Collapse lesson" else "Expand lesson", if (expanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore) { expanded = !expanded }
-                    }
-                    if (expanded) {
-                        Text(lesson.body, style = MaterialTheme.typography.bodyLarge)
-                        lesson.steps.forEachIndexed { index, step -> Text("${index + 1}. $step") }
-                        Button(onClick = { open(lesson.exerciseId) }) { Icon(Icons.Default.PlayArrow, null); Spacer(Modifier.width(8.dp)); Text("Start exercise") }
-                    }
-                    HorizontalDivider()
-                }
-            }
         }
     }
 }

@@ -6,6 +6,8 @@ import SwiftUI
 final class PracticeSound: NSObject, ObservableObject, AVAudioPlayerDelegate {
     private var audio: AVAudioPlayer?
     @Published var playing = false
+    @Published var preparing = false
+    private var preparation: Task<Void, Never>?
     @Published var issue: String?
     var time: Double { audio?.currentTime ?? 0 }
 
@@ -25,7 +27,16 @@ final class PracticeSound: NSObject, ObservableObject, AVAudioPlayerDelegate {
             return true
         } catch { issue = "Could not play the practice sound. Try again."; return false }
     }
-    func stop() { audio?.stop(); audio = nil; playing = false }
+    func play(plan: PracticePlan) {
+        stop(); preparing = true
+        preparation = Task {
+            let data = await Task.detached(priority: .userInitiated) { plan.audio() }.value
+            guard !Task.isCancelled else { return }
+            preparation = nil; preparing = false
+            play(data, loop: true)
+        }
+    }
+    func stop() { preparation?.cancel(); preparation = nil; preparing = false; audio?.stop(); audio = nil; playing = false }
     nonisolated func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         Task { @MainActor [weak self, weak player] in
             guard let self, self.audio === player else { return }
@@ -39,26 +50,38 @@ struct BeginnerPracticeView: View {
     @Environment(\.scenePhase) private var scenePhase
     @StateObject private var sound = PracticeSound()
     @State private var count = 3
-    @State private var quiz = false
+    @State private var pitchMode = 0
+    private var quiz: Bool { pitchMode == 1 }
     @State private var explored: Int?
     @State private var round = PitchRound(targets: [0, 1, 2, 0, 1, 2].shuffled())
     @State private var heard = false
     @State private var bpm = 60.0
-    @State private var chords = false
-    @State private var tapping = [Double]()
-    @State private var lastTapTime = -1.0
+    @State private var beats = 4
+    @State private var subdivision = 1
+    @State private var progression: Int
+    @State private var pattern = PracticePattern.hold
+    @State private var feedback = RhythmFeedback()
+    @State private var tapTempo = TapTempo()
     let rhythm: Bool
+
+    init(rhythm: Bool, progression: Int = 0) {
+        self.rhythm = rhythm
+        _progression = State(initialValue: progression)
+    }
+    private var plan: PracticePlan {
+        PracticePlan(bpm: Int(bpm), beats: beats, subdivision: subdivision, progression: progression, pattern: pattern)
+    }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
-                Text(rhythm ? "Find your pulse" : "Hear Do, Re, Mi").font(.largeTitle.bold())
+                Text(rhythm ? "First Pulse" : "Hear Do, Re, Mi").font(.largeTitle.bold())
                 if let issue = sound.issue { Text(issue).foregroundStyle(Palette.coral) }
                 if rhythm { metronome } else { pitch }
             }
             .frame(maxWidth: 680, alignment: .leading).padding(24).frame(maxWidth: .infinity)
         }
-        .navigationTitle(rhythm ? "Metronome" : "Do Re Mi")
+        .navigationTitle(rhythm ? "Rhythm workshop" : "Do Re Mi")
         .onAppear { player.pause() }
         .onDisappear { sound.stop() }
         .onChange(of: player.isPlaying) { _, playing in if playing { sound.stop() } }
@@ -73,11 +96,15 @@ struct BeginnerPracticeView: View {
 
     private var pitch: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("Start by listening, not singing. In this exercise Do is C. Re and Mi are the next two steps up.")
-            Picker("Activity", selection: $quiz) {
-                Text("Learn").tag(false)
-                Text("Quiz").tag(true)
-            }.pickerStyle(.segmented).onChange(of: quiz) { _, _ in reset() }
+            Picker("Activity", selection: $pitchMode) {
+                Text("Listen").tag(0)
+                Text("Recognize").tag(1)
+                Text("Sing").tag(2)
+            }.pickerStyle(.segmented).onChange(of: pitchMode) { _, _ in reset() }
+            if pitchMode == 2 {
+                PitchMatchView(sound: sound)
+            } else {
+            Text("In this exercise Do is C. Re and Mi are the next two steps up.")
             Picker("Notes", selection: $count) {
                 Text("Do Re Mi").tag(3)
                 Text("Full octave").tag(8)
@@ -126,6 +153,7 @@ struct BeginnerPracticeView: View {
             }
             Text("Score counts your first answer to each listening question. It is not a singing or guitar grade.")
                 .font(.footnote).foregroundStyle(.secondary)
+            }
         }
     }
 
@@ -139,60 +167,81 @@ struct BeginnerPracticeView: View {
 
     private var metronome: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("BPM means beats per minute. At 60 BPM, each click is one second apart. Count 1, 2, 3, 4; the stronger click is 1.")
-            LabeledContent("Tempo", value: "\(Int(bpm)) BPM").font(.title2.bold())
-            Slider(value: $bpm, in: 40...160, step: 5, onEditingChanged: { editing in
-                if editing { sound.stop(); tapping = [] } else { lastTapTime = -1 }
-            }).accessibilityLabel("Tempo in beats per minute")
-            Toggle("Em / Am chord practice", isOn: $chords).onChange(of: chords) { _, _ in sound.stop(); tapping = [] }
-            TimelineView(.periodic(from: .now, by: 0.05)) { _ in
-                let beat = sound.playing ? Int(sound.time / (60 / bpm)) : -1
-                HStack(spacing: 12) {
-                    ForEach(0..<4) { index in
-                        Text("\(index + 1)").font(.title.bold()).frame(maxWidth: .infinity, minHeight: 64)
-                            .foregroundStyle(beat % 4 == index ? Color.white : Palette.ink)
-                            .background(beat % 4 == index ? Palette.teal : Palette.mint, in: RoundedRectangle(cornerRadius: 8))
-                    }
-                }
-                if chords {
-                    Text(beat < 0 || beat < 4 ? "Em" : "Am").font(.largeTitle.bold()).foregroundStyle(Palette.teal)
-                    if let shape = GuitarShape.known(beat < 0 || beat < 4 ? "Em" : "Am") {
-                        GuitarDiagram(shape: shape)
-                    }
-                }
-            }
-            if chords { Text("Start with one gentle down-strum on beat 1. Hold for four clicks, then change chord. You do not need to sing.") }
+            Stepper(value: $bpm, in: 30...240, step: 1) {
+                Text("\(Int(bpm)) BPM").font(.largeTitle.bold()).monospacedDigit()
+            }.onChange(of: bpm) { _, _ in resetRhythm() }
+            Slider(value: $bpm, in: 30...240, step: 1).accessibilityLabel("Tempo in beats per minute")
+            Button {
+                resetRhythm()
+                if let tempo = tapTempo.tap(at: ProcessInfo.processInfo.systemUptime) { bpm = Double(tempo) }
+            } label: { Label("Tap tempo", systemImage: "hand.tap") }.buttonStyle(.bordered)
             ViewThatFits(in: .horizontal) {
                 HStack { rhythmButtons }
                 VStack(alignment: .leading, spacing: 12) { rhythmButtons }
             }
-            if !tapping.isEmpty {
-                Text("\(tapping.count) taps · average offset \(Int((tapping.reduce(0, +) / Double(tapping.count)).rounded())) ms")
-                    .font(.headline).monospacedDigit()
+            Picker("Beats per bar", selection: $beats) {
+                ForEach([2, 3, 4, 6], id: \.self) { Text("\($0)/4").tag($0) }
+            }.pickerStyle(.segmented).onChange(of: beats) { _, _ in resetRhythm() }
+            Picker("Clicks per beat", selection: $subdivision) {
+                Text("Beat").tag(1); Text("Eighths").tag(2); Text("Triplets").tag(3)
+            }.pickerStyle(.segmented).onChange(of: subdivision) { _, _ in resetRhythm() }
+            Picker("Progression", selection: $progression) {
+                ForEach(0..<PracticePlan.progressions.count, id: \.self) { Text(PracticePlan.progressions[$0]).tag($0) }
+            }.onChange(of: progression) { _, _ in resetRhythm() }
+            if progression > 0 {
+                Picker("Pattern", selection: $pattern) {
+                    ForEach(PracticePattern.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                }.pickerStyle(.segmented).onChange(of: pattern) { _, _ in resetRhythm() }
             }
-            Text("Tap timing is measured against the playback clock. Speaker and Bluetooth delay can affect it. Chords here are synthesized reference sounds, not an analysis of your playing.")
+            TimelineView(.periodic(from: .now, by: 0.05)) { _ in
+                let beat = sound.playing ? plan.beat(at: sound.time) : -1
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: beats > 4 ? 3 : beats), spacing: 12) {
+                    ForEach(0..<beats, id: \.self) { index in
+                        Text("\(index + 1)").font(.title.bold()).frame(maxWidth: .infinity, minHeight: 60)
+                            .foregroundStyle(beat == index ? Color.white : Palette.ink)
+                            .background(beat == index ? Palette.coral : Palette.mint, in: RoundedRectangle(cornerRadius: 8))
+                    }
+                }
+                if let chord = plan.chord(at: sound.time), let shape = GuitarShape.known(chord) {
+                    Text(chord).font(.largeTitle.bold()).foregroundStyle(Palette.coral)
+                    GuitarDiagram(shape: shape)
+                }
+            }
+            if progression > 0 {
+                Text(pattern == .hold ? "Strum once on 1. Let it ring, prepare the next shape, then change on the next 1."
+                     : pattern == .strum ? "One relaxed down-strum per beat. Keep the pulse moving while you change shape."
+                     : "Listen to the chord tones one at a time. Pick slowly and evenly; the reference is synthesized, not a recording of guitar strings.")
+            }
+            if !feedback.offsets.isEmpty {
+                Text("\(feedback.offsets.count) taps · average offset \(Int(feedback.averageOffset.rounded())) ms")
+                    .font(.headline).monospacedDigit()
+                if let score = feedback.inTimePercent(bpm: Int(bpm)) {
+                    Text("\(score)% within the timing window").font(.title2.bold()).foregroundStyle(Palette.coral)
+                    Text(abs(feedback.bias) < 25 ? "Your taps are centered on the beat. Keep the motion relaxed."
+                         : feedback.bias > 0 ? "Mostly after the click. Prepare your next tap a little sooner."
+                         : "Mostly before the click. Listen for the click and ease back slightly.")
+                }
+            }
+            Text("BPM is beats per minute; 60 BPM is one beat per second. Tap feedback uses a window of 8% of a beat, at least 40 ms. Bluetooth and touch latency can affect the result. This is tap timing, not a guitar performance grade.")
                 .font(.footnote).foregroundStyle(.secondary)
         }
     }
 
     @ViewBuilder private var rhythmButtons: some View {
                 Button {
-                    if sound.playing { sound.stop() }
-                    else { player.pause(); tapping = []; lastTapTime = -1; sound.play(BeginnerPractice.metronome(bpm: Int(bpm), chords: chords), loop: true) }
-                } label: { Label(sound.playing ? "Stop" : "Start", systemImage: sound.playing ? "stop.fill" : "play.fill") }
+                    if sound.playing || sound.preparing { sound.stop() }
+                    else { player.pause(); feedback = RhythmFeedback(); sound.play(plan: plan) }
+                } label: { Label(sound.preparing ? "Preparing" : sound.playing ? "Stop" : "Start", systemImage: sound.playing || sound.preparing ? "stop.fill" : "play.fill") }
                     .buttonStyle(.borderedProminent)
                     .accessibilityIdentifier("metronome.startStop")
                 Button {
-                    let time = sound.time
-                    guard abs(time - lastTapTime) > 0.12 else { return }
-                    lastTapTime = time
-                    let beat = 60 / bpm
-                    tapping.append(abs(time - (time / beat).rounded() * beat) * 1000)
-                    tapping = Array(tapping.suffix(32))
+                    feedback.tap(playback: sound.time, monotonic: ProcessInfo.processInfo.systemUptime, bpm: Int(bpm))
                 } label: { Label("Tap the beat", systemImage: "hand.tap") }
                     .buttonStyle(.bordered).disabled(!sound.playing)
                     .accessibilityIdentifier("metronome.tap")
     }
+
+    private func resetRhythm() { sound.stop(); feedback = RhythmFeedback() }
 
     private func reset() {
         round = PitchRound(targets: (count == 3 ? [0, 1, 2, 0, 1, 2] : Array(0..<8)).shuffled())

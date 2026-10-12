@@ -11,6 +11,7 @@ class MainActivity : ComponentActivity() {
     private val creator: CreatorViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MusiaApi.configurePublicCache(applicationContext)
         enableEdgeToEdge()
         intent?.dataString?.let(creator::completeLogin)
         setContent { MusiaTheme { MusiaApp(creator = creator) } }

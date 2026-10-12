@@ -10,12 +10,15 @@ resources = ROOT / "Musia/Resources"
 info = plistlib.loads((resources / "Info.plist").read_bytes())
 assert info["LSApplicationCategoryType"] == "public.app-category.music"
 assert info["ITSAppUsesNonExemptEncryption"] is False
-assert "NSMicrophoneUsageDescription" not in info
+assert info["NSMicrophoneUsageDescription"] == (
+    "Match a note measures a three-second sung or hummed note on your device. "
+    "The take is deleted after measurement and is never uploaded.")
 assert "NSAppTransportSecurity" not in info
 assert plistlib.loads((resources / "Musia.entitlements").read_bytes()) == {
     "com.apple.security.app-sandbox": True,
     "com.apple.security.network.client": True,
     "com.apple.security.files.user-selected.read-write": True,
+    "com.apple.security.device.audio-input": True,
 }
 project = (ROOT / "Musia.xcodeproj/project.pbxproj").read_text()
 assert "PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;" in project

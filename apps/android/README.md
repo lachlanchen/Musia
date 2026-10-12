@@ -2,7 +2,8 @@
 
 Native Kotlin + Jetpack Compose application, ID `art.lazying.musia`. Optional
 creator accounts and Google Play subscriptions; no WebView, Capacitor,
-microphone, advertising SDK, or server-side practice progress.
+advertising SDK, or server-side practice progress. Optional Match a note uses
+three seconds of microphone input in memory, on explicit request, without upload.
 Only this subtree is owned by the Android implementation.
 
 ## Creator source update — 2026-10-09
@@ -162,7 +163,8 @@ looping has not been claimed.
 Listen shows current lyrics/tokens and current/upcoming chords. Tap reports
 local touch offsets against supplied beats in real-time milliseconds, corrected
 for playback speed. Play adds the available melody guide and remains self-guided.
-No guitar, singing, pitch, or microphone accuracy is measured.
+Song play-along does not grade guitar or singing. The separate Match a note
+exercise estimates a single sung/hummed pitch against a reference, not vocal quality.
 Word highlighting matches tokens sequentially within the original lyric text;
 it never reconstructs whitespace or punctuation. If any token cannot be matched,
 the entire original line displays without word highlighting. Active-token
@@ -197,15 +199,17 @@ Corrupt saved data is reported and preserved until explicit reset.
 
 Cloud app backup is disabled, with explicit Android 12+ cloud and device-transfer
 exclusions. Covers are bounded to a 12 MiB in-memory bitmap
-cache; no persistent media cache is configured. API/audio/cover hosts receive
+cache; public catalog/artwork requests additionally use a bounded 16 MiB HTTP
+cache. No persistent audio cache is configured. API/audio/cover hosts receive
 normal HTTPS requests, IP addresses and request metadata. Public library/media
 requests are anonymous. Optional creator actions send the selected content and
 app bearer session to Musia; Google Play handles billing requests. The previously
 verified learning APK requests Internet, network-state, media-playback
 foreground-service, wake-lock, and AndroidX's app-scoped non-exported receiver
 permission. The creator source adds Play Billing; its merged permissions must
-be reviewed after the next build. No microphone, camera, Android account-manager,
-or storage permission is requested by app source.
+be reviewed after the next build. Match a note adds optional RECORD_AUDIO, requested
+only on the user's recording action. No camera, Android account-manager or storage
+permission is requested by app source. Denying microphone access preserves listening.
 Uninstall removes app-private data.
 
 ## Verification Scope

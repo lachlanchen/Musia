@@ -63,24 +63,30 @@ private class PracticeAudio(context: Context) {
     }
 }
 
-@Composable fun BeginnerPracticeScreen(rhythm: Boolean, modifier: Modifier = Modifier) {
+@Composable fun BeginnerPracticeScreen(rhythm: Boolean, modifier: Modifier = Modifier, initialProgression: Int = 0) {
     val context = LocalContext.current
     val sound = remember { PracticeAudio(context.applicationContext) }
     val scope = rememberCoroutineScope()
     val lifecycle = LocalLifecycleOwner.current
     var count by remember { mutableIntStateOf(3) }
-    var quiz by remember { mutableStateOf(false) }
+    var pitchMode by remember { mutableIntStateOf(0) }
+    val quiz = pitchMode == 1
     var explored by remember { mutableStateOf<Int?>(null) }
     var round by remember { mutableStateOf(PitchRound(listOf(0, 1, 2, 0, 1, 2).shuffled())) }
     var heard by remember { mutableStateOf(false) }
     var bpm by remember { mutableFloatStateOf(60f) }
-    var chords by remember { mutableStateOf(false) }
+    var beats by remember { mutableIntStateOf(4) }
+    var subdivision by remember { mutableIntStateOf(1) }
+    var progression by remember { mutableIntStateOf(initialProgression) }
+    var pattern by remember { mutableStateOf(PracticePattern.HOLD) }
+    val tempoTap = remember { TapTempo() }
+    var feedback by remember { mutableStateOf(RhythmFeedback()) }
+    var feedbackRevision by remember { mutableIntStateOf(0) }
     var time by remember { mutableDoubleStateOf(0.0) }
-    var taps by remember { mutableStateOf(emptyList<Double>()) }
-    var lastTap by remember { mutableDoubleStateOf(-1.0) }
     var issue by remember { mutableStateOf<String?>(null) }
     var pending by remember { mutableStateOf<Job?>(null) }
     fun stop() { pending?.cancel(); pending = null; sound.stop() }
+    fun resetRhythm() { stop(); feedback = RhythmFeedback(); feedbackRevision++ }
     fun play(loop: Boolean = false, onPlayed: () -> Unit = {}, samples: () -> ShortArray) {
         stop()
         pending = scope.launch {
@@ -102,14 +108,18 @@ private class PracticeAudio(context: Context) {
     }
     LaunchedEffect(sound.playing) { while (sound.playing) { time = sound.time; delay(30) } }
     Column(modifier.verticalScroll(rememberScrollState()).padding(24.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        Text(if (rhythm) "Find your pulse" else "Hear Do, Re, Mi", style = MaterialTheme.typography.headlineLarge)
+        Text(if (rhythm) "First Pulse" else "Hear Do, Re, Mi", style = MaterialTheme.typography.headlineLarge)
         issue?.let { Text(it, color = MaterialTheme.colorScheme.error) }
         if (!rhythm) {
-            Text("Start by listening, not singing. In this exercise Do is C. Re and Mi are the next two steps up.")
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                FilterChip(selected = !quiz, onClick = { quiz = false; reset() }, label = { Text("Learn") })
-                FilterChip(selected = quiz, onClick = { quiz = true; reset() }, label = { Text("Quiz") })
+                listOf("Listen", "Recognize", "Sing").forEachIndexed { i, label ->
+                    FilterChip(selected = pitchMode == i, onClick = { pitchMode = i; reset() }, label = { Text(label) })
+                }
             }
+            if (pitchMode == 2) {
+                PitchMatchPanel(sound.playing, { stop() }) { note, lower -> play { BeginnerPractice.tone(note, lower) } }
+            } else {
+            Text("In this exercise Do is C. Re and Mi are the next two steps up.")
             FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 listOf(3 to "Do Re Mi", 8 to "Full octave").forEach { (size, label) ->
                     FilterChip(selected = count == size, onClick = { count = size; reset() }, label = { Text(label) })
@@ -147,47 +157,78 @@ private class PracticeAudio(context: Context) {
                 }
             }
             Text("Score counts your first answer to each listening question. It is not a singing or guitar grade.", style = MaterialTheme.typography.bodySmall)
-        } else {
-            Text("BPM means beats per minute. At 60 BPM each click is one second apart. Count 1, 2, 3, 4; the stronger click is 1.")
-            Text("${bpm.roundToInt()} BPM", style = MaterialTheme.typography.headlineMedium)
-            Slider(value = bpm, onValueChange = { stop(); bpm = it; taps = emptyList() }, valueRange = 40f..160f, steps = 23,
-                modifier = Modifier.semantics { contentDescription = "Tempo in beats per minute" })
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Em / Am chord practice", Modifier.weight(1f))
-                Switch(chords, { stop(); chords = it; taps = emptyList() },
-                    modifier = Modifier.semantics { contentDescription = "Chord accompaniment" })
             }
-            val beat = if (sound.playing) (time / (60 / bpm)).toInt() else -1
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                (0..3).forEach { index ->
-                    Box(Modifier.weight(1f).height(64.dp).background(if (beat % 4 == index) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant), contentAlignment = Alignment.Center) {
-                        Text("${index + 1}", style = MaterialTheme.typography.headlineMedium, color = if (beat % 4 == index) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface)
+        } else {
+            val plan = PracticePlan(bpm.roundToInt(), beats, subdivision, progression, pattern)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("${bpm.roundToInt()} BPM", Modifier.weight(1f), style = MaterialTheme.typography.headlineLarge)
+                IconButton(onClick = { resetRhythm(); bpm = (bpm - 1).coerceAtLeast(30f) }) { Icon(Icons.Default.Remove, "Slower") }
+                IconButton(onClick = { resetRhythm(); bpm = (bpm + 1).coerceAtMost(240f) }) { Icon(Icons.Default.Add, "Faster") }
+            }
+            Slider(value = bpm, onValueChange = { resetRhythm(); bpm = it.roundToInt().toFloat() }, valueRange = 30f..240f, steps = 209,
+                modifier = Modifier.semantics { contentDescription = "Tempo in beats per minute" })
+            OutlinedButton(onClick = {
+                resetRhythm()
+                tempoTap.tap(android.os.SystemClock.elapsedRealtime() / 1000.0)?.let { bpm = it.toFloat() }
+            }) { Icon(Icons.Default.TouchApp, null); Text("Tap tempo") }
+            Text("Beats per bar", style = MaterialTheme.typography.titleMedium)
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                listOf(2, 3, 4, 6).forEach { n -> FilterChip(beats == n, { resetRhythm(); beats = n }, label = { Text("$n/4") }) }
+            }
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                listOf("Beat", "Eighths", "Triplets").forEachIndexed { i, label ->
+                    FilterChip(subdivision == i + 1, { resetRhythm(); subdivision = i + 1 }, label = { Text(label) })
+                }
+            }
+            Text("Progression", style = MaterialTheme.typography.titleMedium)
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                PracticePlan.progressions.forEachIndexed { i, label ->
+                    FilterChip(progression == i, { resetRhythm(); progression = i }, label = { Text(label) })
+                }
+            }
+            if (progression > 0) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                PracticePattern.entries.forEach { p -> FilterChip(pattern == p, { resetRhythm(); pattern = p }, label = { Text(p.label) }) }
+            }
+            val beat = if (sound.playing) plan.beat(time) else -1
+            (0 until beats).toList().chunked(if (beats > 4) 3 else beats).forEach { row ->
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    row.forEach { index ->
+                        Box(Modifier.weight(1f).height(60.dp).background(if (beat == index) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant), contentAlignment = Alignment.Center) {
+                            Text("${index + 1}", style = MaterialTheme.typography.headlineMedium, color = if (beat == index) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface)
+                        }
                     }
                 }
             }
-            if (chords) {
-                GuitarDiagram(if (beat < 4) "Em" else "Am")
-                Text("Start with one gentle down-strum on beat 1. Hold for four clicks, then change chord. You do not need to sing.")
+            plan.chord(if (sound.playing) time else 0.0)?.let { chord ->
+                GuitarDiagram(chord)
+                Text(when (pattern) {
+                    PracticePattern.HOLD -> "Strum once on 1. Let it ring, prepare the next shape, then change on the next 1."
+                    PracticePattern.STRUM -> "One relaxed down-strum per beat. Keep the pulse moving while you change shape."
+                    PracticePattern.PICKING -> "Listen to the chord tones one at a time. Pick slowly and evenly; the reference is synthesized, not a recording of guitar strings."
+                })
             }
             FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 Button(onClick = {
-                    if (sound.playing) stop() else {
-                        taps = emptyList(); lastTap = -1.0
-                        val tempo = bpm.roundToInt(); val accompaniment = chords
-                        play(true) { BeginnerPractice.metronome(tempo, accompaniment) }
+                    if (sound.playing || pending?.isActive == true) stop() else {
+                        feedback = RhythmFeedback(); feedbackRevision++
+                        play(true) { plan.audio() }
                     }
-                }) { Icon(if (sound.playing) Icons.Default.Stop else Icons.Default.PlayArrow, null); Text(if (sound.playing) "Stop" else "Start") }
+                }) { Icon(if (sound.playing) Icons.Default.Stop else Icons.Default.PlayArrow, null); Text(if (sound.playing) "Stop" else if (pending?.isActive == true) "Preparing" else "Start") }
                 OutlinedButton(onClick = {
-                    val now = sound.time
-                    if (abs(now - lastTap) > .12) {
-                        lastTap = now
-                        val seconds = 60 / bpm
-                        taps = (taps + abs(now - (now / seconds).roundToInt() * seconds) * 1000).takeLast(32)
-                    }
+                    feedback.tap(sound.time, android.os.SystemClock.elapsedRealtime() / 1000.0, bpm.roundToInt())
+                    feedbackRevision++
                 }, enabled = sound.playing) { Icon(Icons.Default.TouchApp, null); Text("Tap the beat") }
             }
-            if (taps.isNotEmpty()) Text("${taps.size} taps · average offset ${taps.average().roundToInt()} ms", style = MaterialTheme.typography.titleMedium)
-            Text("Tap timing uses the playback clock. Speaker and Bluetooth delay can affect it. Chords are synthesized references, not an analysis of your playing.", style = MaterialTheme.typography.bodySmall)
+            if (feedbackRevision >= 0 && feedback.offsets.isNotEmpty()) {
+                Text("${feedback.offsets.size} taps · average offset ${feedback.averageOffset.roundToInt()} ms", style = MaterialTheme.typography.titleMedium)
+                feedback.inTimePercent(bpm.roundToInt())?.let { score ->
+                    Text("$score% within the timing window", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.primary)
+                    Text(if (abs(feedback.bias) < 25) "Your taps are centered on the beat. Keep the motion relaxed."
+                    else if (feedback.bias > 0) "Mostly after the click. Prepare your next tap a little sooner."
+                    else "Mostly before the click. Listen for the click and ease back slightly.")
+                }
+            }
+            Text("BPM is beats per minute; 60 BPM is one beat per second. Tap feedback uses a window of 8% of a beat, at least 40 ms. Bluetooth and touch latency can affect the result. This is tap timing, not a guitar performance grade.", style = MaterialTheme.typography.bodySmall)
         }
     }
 }

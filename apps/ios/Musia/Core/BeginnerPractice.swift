@@ -11,8 +11,8 @@ public enum BeginnerPractice {
         440 * pow(2, Double(midi[min(7, max(0, index))] - 69) / 12)
     }
 
-    public static func tone(_ index: Int) -> Data {
-        let hz = frequency(index)
+    public static func tone(_ index: Int, lowerOctave: Bool = false) -> Data {
+        let hz = frequency(index) / (lowerOctave ? 2 : 1)
         let frames = sampleRate
         return wav((0..<frames).map { i in
             let time = Double(i) / Double(sampleRate)
@@ -41,7 +41,7 @@ public enum BeginnerPractice {
         })
     }
 
-    private static func wav(_ samples: [Double]) -> Data {
+    static func wav(_ samples: [Double]) -> Data {
         var data = Data()
         func append<T: FixedWidthInteger>(_ value: T) {
             var little = value.littleEndian

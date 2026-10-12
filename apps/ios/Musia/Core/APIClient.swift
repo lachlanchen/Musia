@@ -44,7 +44,7 @@ public struct APIClient {
         else { throw APIError.insecureMedia }
         components.percentEncodedPath += "/" + path
         guard let url = components.url else { throw URLError(.badURL) }
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 25)
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 25)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         let (data, response) = try await session.data(for: request)
         try Task.checkCancellation()

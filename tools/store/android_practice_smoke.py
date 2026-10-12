@@ -5,6 +5,7 @@ Install the exact signed QA APK first. This checks UI/audio-clock behavior,
 not physical-speaker audibility or microphone pitch grading.
 """
 import json
+import argparse
 import re
 import subprocess
 import time
@@ -56,6 +57,13 @@ def swipe(up=True):
 
 
 def main():
+    global OUT
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--output', type=Path, default=OUT)
+    parser.add_argument('--silent-microphone', action='store_true',
+                        help='Only on a silent QA emulator with microphone permission already granted')
+    args = parser.parse_args()
+    OUT = args.output.expanduser().absolute()
     assert adb("emu", "avd", "name").decode().startswith("Musia_")
     adb("shell", "am", "force-stop", "art.lazying.musia")
     adb("shell", "am", "start", "-n", "art.lazying.musia/.MainActivity")
@@ -70,14 +78,22 @@ def main():
     tap("Practice")
     tap("Do Re Mi · Listen and learn")
     tap("Do"); find("Do · C4 · 261.6 Hz"); capture("pitch-learn")
-    tap("Quiz"); tap("Listen to the note"); tap("Do")
+    tap("Recognize"); tap("Listen to the note"); tap("Do")
     texts = [n.get("text", "") for n in tree().iter("node")]
     assert any("/ 1 correct" in t for t in texts)
     capture("pitch-score")
-    tap("Back"); tap("Metronome & chord changes")
-    find("60 BPM"); tap("Start"); tap("Tap the beat")
+    tap("Sing"); find("Match a note"); capture("pitch-match")
+    if args.silent_microphone:
+        assert 'android.permission.RECORD_AUDIO: granted=true' in adb('shell', 'dumpsys', 'package', 'art.lazying.musia').decode()
+        tap("Sing · 3 seconds")
+        time.sleep(6)
+        find("Not enough clear, steady voice to score. Try a quiet room, a comfortable pitch, and a gentle hum.")
+        capture("pitch-abstains-on-silence")
+    tap("Back"); tap("First Pulse · Rhythm workshop")
+    find("60 BPM")
+    swipe(); tap("Start"); tap("Tap the beat")
     capture("metronome")
-    tap("Stop"); tap("Chord accompaniment")
+    tap("Stop"); tap("Em · Am")
     swipe(); tap("Start")
     shapes = set()
     for _ in range(6):
@@ -101,8 +117,9 @@ def main():
     find("Playback position", timeout=30)
     capture("aya-transport")
     write_private(OUT / "smoke.json", {"at": now(), "state": "passed", "serial": SERIAL,
-        "checks": ["default languages", "Settings history", "reference note", "first-answer quiz score",
+        "checks": ["default languages", "Settings history", "reference note", "first-answer quiz score", "Match a note UI",
                    "metronome tap", "audio-clock Em/Am transitions", "background stops practice", "live Aya loaded"],
+        "silentMicrophoneAbstention": args.silent_microphone,
         "limitations": ["Emulator UI and audio-clock verification; not a physical listening test"]})
     print(OUT / "smoke.json")
 

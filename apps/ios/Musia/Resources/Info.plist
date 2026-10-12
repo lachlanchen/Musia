@@ -19,6 +19,7 @@
         <key>CFBundleTypeRole</key><string>Editor</string>
     </dict></array>
     <key>ITSAppUsesNonExemptEncryption</key><false/>
+    <key>NSMicrophoneUsageDescription</key><string>Match a note measures a three-second sung or hummed note on your device. The take is deleted after measurement and is never uploaded.</string>
     <key>UIBackgroundModes</key><array><string>audio</string></array>
     <key>UIApplicationSceneManifest</key>
     <dict><key>UIApplicationSupportsMultipleScenes</key><false/></dict>

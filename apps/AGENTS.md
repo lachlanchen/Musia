@@ -31,7 +31,11 @@
   supplied Chinese pinyin and Japanese kana ruby. Never synthesize a missing
   translation or move a lyric highlight off the actual media clock.
 - History belongs under Settings. Beginner Do/Re/Mi scores measure first-answer
-  listening identification only, not microphone/singing accuracy. Practice
+  listening identification only. The separate, explicit Match a note exercise
+  estimates monophonic pitch locally, never singing quality or guitar ability.
+  Request microphone access only on capture; stop on interruption/background,
+  delete the three-second take, and never upload it. Abstain on unclear input.
+  Synthetic pitch tests are not physical-voice validation. Practice
   tones and the metronome must stop on leaving/backgrounding the lesson;
   normal song background playback must remain supported.
 - For the current 0.1.2 update, preserve the owner's explicitly retained Apple

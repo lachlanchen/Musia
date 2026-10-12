@@ -8,10 +8,10 @@ object BeginnerPractice {
     val midi = listOf(60, 62, 64, 65, 67, 69, 71, 72)
     const val sampleRate = 24000
     fun frequency(index: Int): Double = 440.0 * 2.0.pow((midi[index.coerceIn(0, 7)] - 69) / 12.0)
-    fun tone(index: Int): ShortArray = ShortArray(sampleRate) { frame ->
+    fun tone(index: Int, lowerOctave: Boolean = false): ShortArray = ShortArray(sampleRate) { frame ->
         val time = frame.toDouble() / sampleRate
         val envelope = min(1.0, time / .02) * min(1.0, (1 - time) / .08)
-        (0.24 * envelope * sin(2 * PI * frequency(index) * time) * 32767).roundToInt().toShort()
+        (0.24 * envelope * sin(2 * PI * frequency(index) / (if (lowerOctave) 2 else 1) * time) * 32767).roundToInt().toShort()
     }
     fun metronome(bpm: Int, chords: Boolean): ShortArray {
         val beatSeconds = 60.0 / bpm.coerceIn(40, 160)

@@ -315,6 +315,15 @@ class StoreTests(unittest.TestCase):
         with self.assertRaisesRegex(s.GuardError, "complete shared JDK"):
             android_config({"java_home": str(self.root / "missing-jdk")})
 
+    def test_pitch_microphone_is_optional_and_other_capture_stays_forbidden(self):
+        xml = '<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="art.lazying.musia" android:versionCode="1" android:versionName="0.1.0"><uses-permission android:name="android.permission.RECORD_AUDIO"/><uses-feature android:name="android.hardware.microphone" android:required="false"/><application/></manifest>'
+        self.assertEqual(android_manifest(xml), {"android.permission.RECORD_AUDIO"})
+        for invalid in (xml.replace('required="false"', 'required="true"'),
+                        xml.replace(' android:required="false"', ''),
+                        xml.replace('RECORD_AUDIO', 'CAMERA')):
+            with self.assertRaises(s.GuardError):
+                android_manifest(invalid)
+
     def test_store_view_allows_body_not_yet_attached(self):
         tab = object.__new__(OwnedTab)
         with patch.object(tab, "evaluate", return_value={"url": "about:blank", "text": ""}) as evaluate:

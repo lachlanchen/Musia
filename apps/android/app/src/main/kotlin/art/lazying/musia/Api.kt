@@ -1,19 +1,30 @@
 package art.lazying.musia
 
 import java.io.IOException
+import java.io.File
+import android.content.Context
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.decodeFromString
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.OkHttpClient
+import okhttp3.Cache
 import okhttp3.Request
 
 object MusiaApi {
     const val ORIGIN = "https://musia.lazying.art"
-    val client = OkHttpClient.Builder().connectTimeout(12, TimeUnit.SECONDS)
+    @Volatile var client = OkHttpClient.Builder().connectTimeout(12, TimeUnit.SECONDS)
         .readTimeout(20, TimeUnit.SECONDS).callTimeout(30, TimeUnit.SECONDS)
         .followSslRedirects(false).build()
+        private set
+
+    @Synchronized fun configurePublicCache(context: Context) {
+        if (client.cache != null) return
+        // Only anonymous catalog/artwork uses this client; creator sessions and
+        // private media retain their separate no-cache clients.
+        client = client.newBuilder().cache(Cache(File(context.cacheDir, "public-http"), 16L * 1024 * 1024)).build()
+    }
 
     fun httpsUrl(value: String): String {
         val url = ORIGIN.toHttpUrl().resolve(value) ?: throw IOException("Invalid media URL")

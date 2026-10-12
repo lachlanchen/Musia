@@ -43,9 +43,13 @@ def android_manifest(xml):
     require(manifest.get("package") == BUNDLE and manifest.get(ns + "versionName") == r["version"]
             and manifest.get(ns + "versionCode") == str(r["android_version_code"]), "AAB identity/version mismatch")
     permissions = {node.get(ns + "name") for node in manifest.findall("uses-permission")}
-    forbidden = {"android.permission.RECORD_AUDIO", "android.permission.CAMERA", "android.permission.READ_CONTACTS",
+    forbidden = {"android.permission.CAMERA", "android.permission.READ_CONTACTS",
                  "android.permission.GET_ACCOUNTS", "com.google.android.gms.permission.AD_ID"}
     require(not permissions & forbidden, "Unexpected permission for initial Musia scope")
+    if "android.permission.RECORD_AUDIO" in permissions:
+        microphones = [n for n in manifest.findall("uses-feature") if n.get(ns + "name") == "android.hardware.microphone"]
+        require(len(microphones) == 1 and microphones[0].get(ns + "required") == "false",
+                "Pitch microphone must remain optional; listening must work without it")
     application = manifest.find("application")
     require(application is not None and application.get(ns + "debuggable", "false") == "false", "Release is debuggable")
     return permissions
@@ -169,9 +173,13 @@ def inspect_ios(artifact, cfg):
         r = release()
         require(info.get("CFBundleIdentifier") == BUNDLE and info.get("CFBundleShortVersionString") == r["version"]
                 and info.get("CFBundleVersion") == r["ios_build"], "IPA identity/version mismatch")
-        require(not any(k in info for k in ("NSMicrophoneUsageDescription", "NSCameraUsageDescription",
+        require(not any(k in info for k in ("NSCameraUsageDescription",
                                            "NSSpeechRecognitionUsageDescription", "NSPhotoLibraryUsageDescription")),
                 "Unexpected capture permission")
+        if "NSMicrophoneUsageDescription" in info:
+            require(info["NSMicrophoneUsageDescription"] ==
+                    "Match a note measures a three-second sung or hummed note on your device. The take is deleted after measurement and is never uploaded.",
+                    "Only the explicitly scoped, on-device pitch microphone is supported")
         require(set(info.get("UIBackgroundModes", [])) <= {"audio"}, "Unexpected background capability")
         watch = embedded_watch(app, r)
         identity = inspect_ios_signature(app, cfg, BUNDLE, root / "signer")
