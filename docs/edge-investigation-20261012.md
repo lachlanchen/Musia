@@ -122,10 +122,20 @@ They qualify bounded service reads, not every feature or a new financial flow.
 | LALACHAN/common-story/WeSticker | Catalog, decoded image assets and read-only app routes | No repair needed |
 | LazyArtCoin | Health, canonical read-only wallet balance and auth boundaries | No repair needed; no transaction performed |
 | EchoMind | Central status, provider discovery and support catalog on its separate host | Owner enabled the disabled central web boot unit without restarting its live process; future reboot of that separate host remains untested |
-| LazyOracle | 29 read-only HTTP checks and existing synthetic report reads | Fallback URL incorrectly targets shared Caddy; owner and LazyTunnel are coordinating a qualified private replacement |
+| LazyOracle | 29 read-only HTTP checks and existing synthetic report reads | Wrong fallback target repaired through a restricted private tunnel; owner reports both restarted Oracle services pass model-list reads, all 29 public checks pass again, and report data hashes are unchanged |
 | LightMind | Musia directly verified enabled/running cloud units, recovered local tunnel, protected Tour health/capabilities 200 and anonymous 401 | No repair needed for these checks; physical-device/provider generation not tested |
 | SHI | Public HTML and its actual JavaScript asset | Static-delivery acceptance only |
 
 No peer was killed for capacity and no bulk restart, TLS bypass, account reset,
 paid generation or purchase was used as a health test. Native Apple sandbox
 qualification remains separate and incomplete; see the billing acceptance doc.
+
+The later Oracle repair was accepted by its owner at 01:21:55 UTC. It changed only
+Oracle's fallback URL via scoped overrides, preserving primary provider priority,
+tokens and model choices. The infrastructure owner verified loopback binding,
+existing-token model reads, missing/wrong-token rejection and SSH restrictions
+against shells, arbitrary targets and reverse forwarding. Its persistent tunnel
+uses about 1.5 MiB; future reboot recovery of this new unit is configured, not
+reboot-tested. Only the two idle Oracle services restarted for this repair;
+shared Caddy and firewall remained unchanged. No inference or charge was used
+as acceptance. Remaining endpoint transport problems are not marked repaired.
