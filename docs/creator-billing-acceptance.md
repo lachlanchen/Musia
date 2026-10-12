@@ -27,6 +27,25 @@ sign the shared production account out, or borrow another app's transaction.
 The historical acceptance below remains valid in its dated scope. Authorization
 and catalog inspection are not newly completed payment cases.
 
+### Actual 12 October Attempt
+
+After the peer's explicit Mini handback, the existing native Mac TestFlight
+0.2.0(9) was opened. Native products displayed Creator USD9.99/month and
+Studio USD29.99/month. The app was signed out; its one sign-in attempt remained
+at the initial backend flow state and no authentication sheet became visible.
+The owned RFB transport later disconnected during the cloud reboot interval. These observations
+do not identify the cause of the native authentication problem.
+
+Neither checkout gate was opened. No purchase, restore, sync, renewal or
+cancellation was attempted; no credentials were entered or accounts reset.
+Public sales remain disabled, and the prior Google evidence is unchanged.
+Temporary input/forward controllers are stopped and port 15944 has no listener.
+Normal Quit of the exact owned Mac process returned success, but subsequent
+transport failures prevented confirming process absence. The actual handback
+and that limit are recorded in OneTimeSync/Musia; do not infer closure or a
+new GUI reservation. Resume native sign-in and sandbox acceptance only in a
+new coordinated lane, preserving existing reviews and all closed public gates.
+
 ## Current Acceptance
 
 As of **2026-10-09, 08:21 UTC**, Play-installed Android **0.2.0 (6)** has

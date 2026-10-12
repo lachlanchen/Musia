@@ -2,8 +2,9 @@
 
 ## Observed, Not Assumed
 
-12 October 2026 HKT, owner-coordinated with LazyTunnel, LazyEdit and EchoMind.
-The Huanayun edge has 961 MiB RAM and no swap. Available RAM fluctuated roughly
+Historical pre-upgrade observations on 12 October 2026 HKT, owner-coordinated with
+LazyTunnel, LazyEdit and EchoMind. The Huanayun edge had 961 MiB RAM and no swap.
+Available RAM fluctuated roughly
 146-182 MiB across samples, usually below Musia's unchanged 180 MiB deploy guard.
 The sampled CPU load, memory pressure and traffic do not demonstrate saturation
 or an OOM. Short samples cannot establish peak capacity or exclude transient loss.
@@ -67,7 +68,7 @@ Local transfer measurements:
 These are transfer savings, not measured server RAM savings or bandwidth-saturation
 evidence. The native clients must receive a later build to gain their local cache.
 
-## Deployment State
+## Earlier Capacity Block
 
 Clean source `91374e7` produced release archive
 `e862a50033e0793360953c107525fbd98e0404222ead2560d081c64b26c4288e`,
@@ -81,7 +82,50 @@ no release was uploaded/activated by that attempt. The previous API was promptly
 restarted, health returned200, and the temporary recovery timer was stopped.
 No repeated stop/restart loop or lowered safety threshold is appropriate.
 
-Existing production stays healthy. Deployment remains pending capacity: increase
-RAM or agree an architectural move of Musia's app process behind the existing
-tunnel. Do not disable another app to claim completion. The owner was asked to
-choose a capacity direction; no paid hosting-plan change was made.
+At that checkpoint deployment was pending capacity. The owner subsequently
+upgraded the host; the accepted release below supersedes this blocked state.
+No agent purchased a second plan change or disabled another app.
+
+## Verified Upgrade And Deployment
+
+The owner upgraded to 2 CPUs/2 GiB and reported 5 Mbps. A real cloud reboot was
+observed around 00:47 UTC; repeated pinned SSH reads confirmed 2 CPUs and
+2014856 KiB RAM. At 01:10 UTC available RAM was 1265572 KiB and systemd reported
+zero failed units. The 5 Mbps rate was not stress-tested. New administrator connections can
+still time out; healthy public HTTPS and adequate RAM do not prove that every
+endpoint network path is stable.
+
+Musia's unchanged 180 MiB preflight passed with 1222 MiB available. The clean
+`91374e7` release above was accepted at **2026-10-12T01:02:20Z**, transaction
+`20261012T090126-e862a50033e0`: 73 public checks passed across 32 catalog items.
+Only Musia-learning was restarted; it uses about 40 MiB, with zero automatic
+restarts. Previous release `f6501fc89207...` remains available for rollback.
+Shared Caddy configuration/imports, firewall digest and preserved service
+identities were unchanged. No app-store review or public checkout changed.
+
+The Get the app link leads to `https://musia.lazying.art/support#apps`, where
+the Mac App Store and Google Play links were read back successfully. They are
+not direct store anchors in the root HTML. Public library and Aya responses
+were also independently checked after deployment: gzip byte counts match the
+table above and conditional requests return 304 with no body.
+
+## Cross-Project Recovery
+
+Owner reports are retained in the private OneTimeSync/Musia coordination folder.
+They qualify bounded service reads, not every feature or a new financial flow.
+
+| Owner/service | Verified scope | Repair or remaining work |
+| --- | --- | --- |
+| LazyTunnel | 11 domains trusted TLS; actual reboot restored the four ingress redirects and app reverse listeners | No ingress repair needed; some workstation/Mac relay paths remain intermittent or absent |
+| LazyEdit | Authenticated language catalog through full Studio chain; boot-enabled edge/facade; worker tunnel recovered | No repair needed |
+| OnlyIdeas/Bunko | Public/cached reader data, conditional responses and live workers | No repair needed |
+| LALACHAN/common-story/WeSticker | Catalog, decoded image assets and read-only app routes | No repair needed |
+| LazyArtCoin | Health, canonical read-only wallet balance and auth boundaries | No repair needed; no transaction performed |
+| EchoMind | Central status, provider discovery and support catalog on its separate host | Owner enabled the disabled central web boot unit without restarting its live process; future reboot of that separate host remains untested |
+| LazyOracle | 29 read-only HTTP checks and existing synthetic report reads | Fallback URL incorrectly targets shared Caddy; owner and LazyTunnel are coordinating a qualified private replacement |
+| LightMind | Musia directly verified enabled/running cloud units, recovered local tunnel, protected Tour health/capabilities 200 and anonymous 401 | No repair needed for these checks; physical-device/provider generation not tested |
+| SHI | Public HTML and its actual JavaScript asset | Static-delivery acceptance only |
+
+No peer was killed for capacity and no bulk restart, TLS bypass, account reset,
+paid generation or purchase was used as a health test. Native Apple sandbox
+qualification remains separate and incomplete; see the billing acceptance doc.

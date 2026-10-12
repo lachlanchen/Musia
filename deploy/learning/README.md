@@ -109,7 +109,24 @@ passwordless sudo, or administer through a restricted tunnel account.
 
 ## Deployment Checkpoint
 
-Latest update **2026-10-05 06:26:50 UTC**: bilingual catalog and archive selection
+Latest update **2026-10-12 01:02:20 UTC**: public conditional responses/gzip,
+Mac/Android download links at `/support#apps`, and optional pitch-practice privacy
+disclosure deployed from clean source `91374e7`. Release
+`e862a50033e0793360953c107525fbd98e0404222ead2560d081c64b26c4288e`, transaction
+`20261012T090126-e862a50033e0`; predecessor `f6501fc89207...` retained.
+All 73 public checks passed across 32 catalog items. After the owner's real cloud
+upgrade/reboot, pinned reads confirm 2 CPUs/2 GiB; preflight available RAM 1222 MiB
+passed the unchanged 180 MiB guard. Musia uses about 40 MiB with zero automatic
+restarts. Shared ingress/imports/firewall and preserved peers stayed unchanged.
+Reboot recovery of the preceding live service and shared ingress was observed;
+the new release passed an independent Musia restart, not a second full reboot.
+Intermittent new SSH and endpoint-carrier failures remain separate owner work.
+See [capacity/recovery findings](../../docs/edge-investigation-20261012.md).
+Private receipts are under the clean worktree's
+`store/.runtime/learning-deploy-91374e7/deploy/learning/.work/20261012T090126-e862a50033e0/`
+(relative to the primary repository). No new native binary was uploaded.
+
+Previous update **2026-10-05 06:26:50 UTC**: bilingual catalog and archive selection
 published from clean source commit `da41b32`. Release
 `4faa66d368a185bb71670355d44debb3c819fc6449eee63798b48b1cfff0c4a5`, transaction
 `20261005T142512-4faa66d368a1`; predecessor `99b459c47682...` retained.
