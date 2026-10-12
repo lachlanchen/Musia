@@ -31,6 +31,21 @@ Do not sum process RSS to infer reclaimable capacity or vacuum logs to force a d
 Detailed peer evidence lives in OneTimeSync/Musia, not Git. Avoid attributing
 these separate failures to one cause or claiming the cloud provider is defective.
 
+## OnlyIdeas Owner Follow-up
+
+The owner's 08:02-08:08 HKT read-only audit found no obsolete OnlyIdeas runtime.
+Its active API used about102-103MiB cgroup memory with zero restarts and no queued
+processing work; an idle queue is not permission to stop the API. Host available
+RAM was153-162MiB. Its existing authenticated conditional responses returned304
+without a body and must not be replaced with shared account-response caching.
+
+Candidate future work belongs to that owner: bounded long-polling for idle workers,
+streaming file responses and avoiding body reads for HEAD/unchanged validators.
+These are projections, not reclaimed RAM. A local deferred-parser experiment
+reduced startup RSS but lost the saving after parsing; it does not justify a
+restart, a lower deployment guard or a claim of dependable capacity recovery.
+No OnlyIdeas process, cap, code or deployment was changed by this investigation.
+
 ## Musia Changes
 
 Public JSON and text now negotiate gzip level1 and use weak ETags. Repeated
