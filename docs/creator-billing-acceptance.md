@@ -1,5 +1,32 @@
 # Creator Billing Acceptance
 
+## 12 October Sandbox Authorization
+
+The owner explicitly authorized **sandbox-only, no-charge Apple testing** for
+the existing Musia tester: purchase, restore, renewal and cancellation. Public
+paid checkout and existing reviews must remain unchanged. At the initial
+readback both providers' public and test checkout gates were false; Apple has
+one configured test owner, test environment and reconciliation enabled.
+
+Installed native Mac TestFlight candidate remains 0.2.0(9). This is not proof of
+purchase delivery. The shared Mini currently requires an actual peer GUI handoff
+before input; absence of a process is not a released device reservation.
+Do not open the temporary gate before the app/test-owner is ready. Close it on
+completion or interruption; restore/reconciliation must continue to work.
+
+The current Apple UI showed Prepare for Submission, prices and completed metadata
+without a concrete missing-field warning, while API state remains MISSING_METADATA.
+Neither label alone proves a sandbox block; observe the actual native product
+lookup and no-charge confirmation. Do not submit a review to repair a conjecture.
+
+Apple documents daily TestFlight renewals unless a separately configured Sandbox
+Apple Account controls acceleration. Do not claim a five-minute Apple renewal,
+sign the shared production account out, or borrow another app's transaction.
+[Apple's TestFlight testing guide](https://developer.apple.com/help/app-store-connect/test-a-beta-version/testing-subscriptions-and-in-app-purchases-in-testflight/).
+
+The historical acceptance below remains valid in its dated scope. Authorization
+and catalog inspection are not newly completed payment cases.
+
 ## Current Acceptance
 
 As of **2026-10-09, 08:21 UTC**, Play-installed Android **0.2.0 (6)** has

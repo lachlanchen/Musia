@@ -44,8 +44,9 @@ and reload checks without creating a job. See [workspace and Watch](creator-agen
   Build-8/6 evidence below remains the prior authentication/billing baseline,
   not an assertion that every case was repeated in the new builds.
 - Shared password sign-in is live with the registered `musia-server` callback
-  `https://musia.lazying.art/creator/auth/callback`. Apple, Google and GitHub are
-  centrally unavailable; registration does not enable those providers.
+  `https://musia.lazying.art/creator/auth/callback`. On 12 October Apple, Google
+  and GitHub are centrally qualified and advertised. Musia native social
+  round-trips remain separately unverified; no central key/registry reset is needed.
 - A real synthetic-user registration/login/consent/invitation/terms journey
   passed, followed by a `deepseek-v4-pro` draft, a 90-second ACE XL Turbo render,
   large-v3 cross-window ASR and an actual `gpt-audio-1.5` audio review. The result

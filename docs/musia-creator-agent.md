@@ -48,7 +48,11 @@ app price while implementing this feature.
 ## Live Acceptance
 
 - Shared password sign-in uses the registered `musia-server` client and exact
-  HTTPS callback. Apple, Google and GitHub remain centrally unavailable.
+  HTTPS callback. As of 12 October, Apple, Google and GitHub are advertised and
+  have real central provider qualification. Musia-specific native social
+  callback/account-reuse cases remain to be verified; sibling app receipts do
+  not substitute for them. See `docs/creator-billing-acceptance.md` for the
+  independent sandbox authorization and billing boundary.
 - A synthetic test user completed real registration, login, consent, invitation
   redemption and terms acceptance through the live services, not a database seed.
 - That account completed a `deepseek-v4-pro` draft, one 90-second ACE XL Turbo
@@ -141,11 +145,11 @@ app price while implementing this feature.
 
 The live pilot does not establish completion of the entire rollout.
 
-- Central discovery reports password=true and Apple/Google/GitHub=false. Only
-  currently advertised providers may appear. Existing sibling native OAuth
-  implementations do not prove those central providers are enabled.
+- Central social providers are now qualified/advertised (12 October), but each
+  Musia native return and immutable account-reuse path needs app-owned evidence.
+  Keep the registered callback and minimum profile scope; do not merge by email.
 - Google's Creator purchase/restore/renewal passed, not the entire billing
-  matrix. Apple purchases, Studio, upgrades, refunds/revocations and account-switch
+  matrix. Apple purchases, upgrades, refunds/revocations and account-switch
   cases still need app-specific acceptance. Public paid checkout stays off;
   temporary owner-only test checkout is not public availability. Stripe is not
   implemented in this boundary.
