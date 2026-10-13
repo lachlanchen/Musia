@@ -42,8 +42,8 @@ android {
         applicationId = "art.lazying.musia"
         minSdk = 26
         targetSdk = 36
-        versionCode = 7
-        versionName = "0.2.0"
+        versionCode = 8
+        versionName = "0.2.1"
     }
     signingConfigs {
         if (privateSigning != null) create("privateRelease") {

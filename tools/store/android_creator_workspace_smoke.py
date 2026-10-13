@@ -46,7 +46,20 @@ def main():
     find("What would you like to make?")
     find("Message Musia")
     assert find("Send message").get("enabled") == "false"
+    assert not any(n.get("text") == "Visibility" for n in tree().iter("node")), "Render options should begin collapsed"
     capture("agent-default")
+    tap("Message Musia")
+    adb("shell", "input", "text", "A%sgentle%ssong")
+    field = next(n for n in tree().iter("node") if n.get("class") == "android.widget.EditText")
+    assert field.get("text") == "A gentle song"
+    assert find("Send message").get("enabled") == "false", "Guest input must not bypass sign-in"
+    header = find("Musia")
+    _, top, _, bottom = map(int, re.findall(r"\d+", header.get("bounds")))
+    assert top >= 0 and bottom > top, "Keyboard must resize rather than pan the header offscreen"
+    capture("agent-keyboard")
+    adb("shell", "input", "keyevent", "KEYCODE_BACK")
+    tap("Create your song"); find("Visibility"); capture("render-options")
+    tap("Create your song")
     tap("Studio")
     root = tree()
     field = next(n for n in root.iter("node") if n.get("class") == "android.widget.EditText" and

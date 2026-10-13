@@ -7,6 +7,14 @@ a native worker is building.
 
 ## Actual State
 
+**2026-10-13 test update:** Android **0.2.1 (8)** is available internally;
+iOS/iPadOS **0.2.1 (10)** is VALID / IN_BETA_TESTING for the existing owner.
+It packages the rounded ribbon icon, beginner pitch/rhythm/chord workshop and
+simplified chat-first Create. Mac **0.2.1 (10)** is also VALID / IN_BETA_TESTING
+in the same existing internal owner group.
+Public releases and the current iOS review are unchanged. Read the
+[beta delivery and qualification record](testflight-0.2.1.md) before retrying.
+
 **2026-10-12:** Mac **0.1.2 (4)** passed review and was manually released with
 owner authorization. Apple accepted the release request and reports
 **READY_FOR_SALE**. The public US Mac listing is live at **USD 2.99**, with

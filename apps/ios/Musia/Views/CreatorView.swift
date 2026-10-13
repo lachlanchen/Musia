@@ -47,6 +47,8 @@ struct CreatorView: View {
     @State private var visibility = CreatorVisibility.private
     @State private var confirmRender = false
     @State private var confirmCancel: CreatorJob?
+    @State private var renderExpanded = false
+    @State private var jobsExpanded = false
 
     var body: some View {
         Form {
@@ -56,11 +58,6 @@ struct CreatorView: View {
                     Text("Studio").tag("Studio")
                 }.pickerStyle(.segmented).accessibilityIdentifier("creator.workspace")
                 CreatorAccountLink()
-                if let account = creator.account {
-                    LabeledContent("Remaining this period", value: "\(account.usage.remaining) of \(account.usage.limit)")
-                } else {
-                    Text("Sign in to create. Your library and lessons remain available without an account.")
-                }
             }
             CreatorNotice()
             if let pending = creator.pending {
@@ -84,13 +81,7 @@ struct CreatorView: View {
                         Text(item.content).textSelection(.enabled).frame(maxWidth: .infinity, alignment: .leading)
                     }.padding(.vertical, 6)
                 }
-                CreatorTextField(title: "Message Musia", text: $creator.agentInput, lines: 2...6)
-                Button("Send", systemImage: "arrow.up") {
-                    let input = creator.agentInput
-                    Task { await creator.askAgent(input) }
-                }
-                .disabled(creator.busy || creator.account == nil || creator.capabilities?.agent != true || creator.agentInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                if creator.capabilities?.agent != true {
+                if creator.account != nil && creator.capabilities?.agent != true {
                     Text("The assistant is currently unavailable. You can still edit your brief.").font(.caption).foregroundStyle(.secondary)
                 }
             }
@@ -122,7 +113,11 @@ struct CreatorView: View {
                 CreatorTextField(title: "Musical key", text: $creator.brief.key)
             }.disabled(creator.busy && !creator.agentBusy)
             }
-            Section("Render") {
+            Section {
+              DisclosureGroup("Create your song", isExpanded: $renderExpanded) {
+                if let account = creator.account {
+                    LabeledContent("Remaining this period", value: "\(account.usage.remaining) of \(account.usage.limit)")
+                }
                 Picker("Song visibility", selection: $visibility) {
                     Text("Private").tag(CreatorVisibility.private)
                     Text("Public · reviewed before sharing").tag(CreatorVisibility.public)
@@ -138,8 +133,10 @@ struct CreatorView: View {
                 if !creator.canRender {
                     Text(renderAvailability).font(.caption).foregroundStyle(.secondary)
                 }
+              }
             }
-            Section("Your jobs") {
+            Section {
+              DisclosureGroup("Your songs and jobs", isExpanded: $jobsExpanded) {
                 Button("Refresh job status", systemImage: "arrow.clockwise") { Task { await creator.refresh() } }
                     .disabled(creator.refreshing || creator.account == nil)
                 if creator.jobs.isEmpty { Text("No jobs loaded yet.").foregroundStyle(.secondary) }
@@ -157,14 +154,20 @@ struct CreatorView: View {
                         }
                     }.padding(.vertical, 4)
                 }
+              }
             }
         }
         .formStyle(.grouped)
         .navigationTitle("Create")
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            if mode == "Agent" { composer }
+        }
         .overlay(alignment: .top) { if creator.busy { ProgressView("Working…").padding(10).background(.regularMaterial, in: Capsule()) } }
         .task(id: creator.identity) { await creator.refreshJobs() }
         .onChange(of: scenePhase) { _, phase in if phase == .active { Task { await creator.refresh() } } }
-        .onChange(of: creator.identity) { _, _ in rights = false; mode = "Agent" }
+        .onChange(of: creator.identity) { _, _ in
+            rights = false; mode = "Agent"; renderExpanded = false; jobsExpanded = false
+        }
         .onChange(of: creator.brief) { _, _ in rights = false }
         .confirmationDialog("Render this song?", isPresented: $confirmRender, titleVisibility: .visible) {
             Button("Render song") { Task { if rights { await creator.render(visibility: visibility) } } }
@@ -177,6 +180,27 @@ struct CreatorView: View {
                 if let job = confirmCancel { Task { await creator.cancel(job) } }; confirmCancel = nil
             }
         }
+    }
+    private var composer: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            if creator.account == nil {
+                NavigationLink("Sign in to chat") { CreatorAccountView() }
+                    .font(.subheadline)
+            }
+            HStack(alignment: .bottom, spacing: 12) {
+                TextField("Message Musia", text: $creator.agentInput, axis: .vertical)
+                    .lineLimit(1...5).textFieldStyle(.roundedBorder)
+                    .accessibilityLabel("Message Musia")
+                Button {
+                    let input = creator.agentInput
+                    Task { await creator.askAgent(input) }
+                } label: {
+                    Image(systemName: "arrow.up").frame(width: 28, height: 32)
+                }
+                .buttonStyle(.borderedProminent).accessibilityLabel("Send")
+                .disabled(creator.busy || creator.account == nil || creator.capabilities?.agent != true || creator.agentInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            }
+        }.padding(16).frame(maxWidth: .infinity).background(.regularMaterial)
     }
     private var renderAvailability: String {
         if creator.account == nil { return "Sign in from Account & subscriptions to render." }

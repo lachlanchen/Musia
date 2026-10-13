@@ -67,8 +67,17 @@ def main():
     adb("shell", "input", "keyevent", "KEYCODE_BACK")
     tap("アヤちゃん 光の雨 · Aya Chan, Rain of Light")
     find("Stage view")
-    for _ in range(3):
+    # The screen appears before Media3 finishes preparing remote audio.
+    # Wait for its duration, then observe each completed seek instead of
+    # counting taps that the loading/seeking guards may intentionally ignore.
+    with urllib.request.urlopen("https://musia.lazying.art/api/v1/songs/aya-chan-hikari-ame", timeout=30) as response:
+        song = json.load(response)
+    asset = next(a for a in song["assets"] if a["id"] == song["defaultAssetId"])
+    duration = int(asset["duration"])
+    find(f"{duration // 60}:{duration % 60:02d}")
+    for expected in ("0:05", "0:10", "0:15"):
         tap("Forward 5 seconds")
+        find(expected)
     for label in ("English", "中文", "日本語"):
         find(label)
     capture("phone-lyrics")
@@ -79,9 +88,6 @@ def main():
     assert bounds(diagram)[3] <= bounds(slider)[1], "Diagram must not overlap transport"
     assert bounds(diagram)[3] - bounds(diagram)[1] > 200, "Diagram must be visible, not just its heading"
     # At a paused 15-second seek, the diagram must agree with the selected asset.
-    with urllib.request.urlopen("https://musia.lazying.art/api/v1/songs/aya-chan-hikari-ame", timeout=30) as response:
-        song = json.load(response)
-    asset = next(a for a in song["assets"] if a["id"] == song["defaultAssetId"])
     chord = next(c for c in asset["chords"] if c["start"] <= 15 < c["end"])
     assert diagram.get("content-desc").startswith(chord["name"] + ","), "Wrong current chord"
     capture("phone-guitar")

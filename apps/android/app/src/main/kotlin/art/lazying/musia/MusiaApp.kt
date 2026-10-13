@@ -104,7 +104,7 @@ private val destinations = listOf(
         },
         snackbarHost = { SnackbarHost(snackbar) }
     ) { padding ->
-        Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.TopCenter) {
+        Box(Modifier.fillMaxSize().padding(padding).consumeWindowInsets(padding), contentAlignment = Alignment.TopCenter) {
             val width = Modifier.widthIn(max = 880.dp).fillMaxWidth()
             when {
                 playerOpen -> PlayerScreen(vm, local.preferences, width)

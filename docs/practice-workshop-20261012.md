@@ -1,5 +1,10 @@
 # Beginner Practice Workshop
 
+October 13: this workshop is included in the **0.2.1 test update**, with a
+simpler chat-first Create interface and new native UI checks. See the
+[delivery record](../store/testflight-0.2.1.md) for exact platform availability.
+The October 12 local-only verification below is historical, not latest delivery.
+
 ## Intent
 
 Build from the owner's experience: several years of guitar chords without a

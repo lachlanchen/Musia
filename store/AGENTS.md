@@ -1,5 +1,11 @@
 # Store Defaults
 
+- October 13 is **test-only 0.2.1**, Apple build10 / Android code8. Read
+  `testflight-0.2.1.md` before any retry. Android8 is available internally and
+  both iOS10 and Mac10 are VALID/IN_BETA_TESTING in the existing owner group.
+  Do not repeat uploads/invitations. Preserve Google0.1.2(3), Mac0.1.2(4)
+  and pending iOS0.1.2(4). Rounded icon, workshop and chat UI do not authorize
+  paid checkout, ungated generation or formal review changes.
 - Mac **0.1.2 (4)** passed review and was released on October 12 with owner
   authorization. Apple reports **READY_FOR_SALE** after the single accepted
   manual release request. Public US Mac listing is verified live at USD 2.99.

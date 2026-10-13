@@ -2,6 +2,33 @@ import XCTest
 
 final class PracticeSmokeTests: XCTestCase {
     @MainActor
+    func testSimpleCreatorComposer() {
+        let app = XCUIApplication()
+        app.launch()
+        defer { app.terminate() }
+        let create = app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch
+        XCTAssertTrue(create.waitForExistence(timeout: 20)); create.tap()
+        let workspace = app.segmentedControls["creator.workspace"]
+        XCTAssertTrue(workspace.waitForExistence(timeout: 10))
+        XCTAssertTrue(workspace.buttons["Agent"].isSelected)
+        let input = app.textFields["Message Musia"]
+        XCTAssertTrue(input.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.frame.contains(input.frame))
+        XCTAssertFalse(app.buttons["creator.render"].exists)
+        let initial = XCTAttachment(screenshot: app.screenshot())
+        initial.name = "create-simple"; initial.lifetime = .keepAlways; add(initial)
+        input.tap()
+        input.typeText("A gentle song about coming home")
+        XCTAssertTrue(input.isHittable)
+        if app.keyboards.firstMatch.exists {
+            XCTAssertLessThanOrEqual(input.frame.maxY, app.keyboards.firstMatch.frame.minY + 1)
+        }
+        let keyboard = XCTAttachment(screenshot: app.screenshot())
+        keyboard.name = "create-keyboard"; keyboard.lifetime = .keepAlways; add(keyboard)
+        input.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 30))
+    }
+
+    @MainActor
     func testStageLayoutAndPracticeSwitch() {
         let app = XCUIApplication()
         app.launchArguments = ["-lyricLanguages", "en,zh,ja"]
