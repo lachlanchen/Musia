@@ -1,4 +1,29 @@
-# Musia Ribbon Icon
+# Musia App Icon
+
+## Current: Original Sound Bars
+
+On October 13, 2026 the owner chose to restore the original teal sound-bar
+icon for the next **test builds only**. `musia-sound-bars.png` is the exact
+original 1024px artwork from the parent of commit `0516cc6`, not a redraw.
+SHA-256: `165fa7aee650c4519891008f0885b300d96bd375201f3513d219532b2e09a7aa`.
+
+The exporter now uses this master for iOS, the companion Watch, macOS and
+Android. It preserves the original geometry and colors. iOS/Watch use the
+system mask; Mac gets a transparent rounded mask and 10% canvas padding;
+Android gets the matching teal adaptive background and rounded fallbacks.
+The separate Fun website logo and First Pulse artwork are unchanged.
+
+Run `node apps/shared/scripts/export-icons.mjs` then
+`node apps/shared/scripts/validate-icons.mjs` and
+`node --test apps/shared/scripts/icon-geometry.test.mjs`.
+All 19 exports are checked, including the companion Watch icon. Always inspect
+the compiled Mac ICNS and native icon lookup, not just source PNGs.
+
+The ribbon masters below are retained as design history. Do not silently
+restore the ribbon when preparing a future build. This artwork change does
+not authorize a production release or a store-listing change.
+
+## Previous: Ribbon M
 
 The coral/cyan ribbon forms an M and suggests a vibrating string. A dark neutral
 ground gives the colors contrast without a busy background or a generic music
@@ -10,7 +35,7 @@ note. Generated October 6, 2026; the user explicitly requested rounded corners.
 
 The image-generation originals are preserved locally. These selected masters are
 the reproducible source, not an instruction to regenerate artwork on each build.
-Only mechanical resizing, format conversion and platform padding are exported:
+The shared export commands now select the sound-bar master above:
 
 ```sh
 node apps/shared/scripts/export-icons.mjs

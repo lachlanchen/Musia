@@ -1,5 +1,12 @@
 # Store Defaults
 
+- October 13 follow-up restores the **original sound-bar icon**, at the owner's
+  explicit request, in **test-only 0.2.1**, Apple build11 / Android code9.
+  Both Apple builds are VALID/IN_BETA_TESTING; Android9 is available internally.
+  Existing owner membership is verified. Do not repeat uploads or invitations.
+  Read `testflight-0.2.1-original-icon.md` for exact delivery before any retry.
+  Preserve formal reviews/production. The ribbon is retained as design history,
+  not the current default. Do not restore it or promote a beta automatically.
 - October 13 is **test-only 0.2.1**, Apple build10 / Android code8. Read
   `testflight-0.2.1.md` before any retry. Android8 is available internally and
   both iOS10 and Mac10 are VALID/IN_BETA_TESTING in the existing owner group.

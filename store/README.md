@@ -1,5 +1,9 @@
 # Musia Native Store Release
 
+The owner's October 13 follow-up restores the original sound-bar icon in
+[0.2.1 build11 / code9 test builds](testflight-0.2.1-original-icon.md).
+This does not replace a production release or formal review submission.
+
 Identity: `art.lazying.musia`, iOS/macOS SwiftUI and Android Kotlin/Compose.
 Release tools live in `store/` and `tools/store/`; native sources live in
 `apps/ios/`, `apps/macos/` and `apps/android/`. Do not launch a store build while

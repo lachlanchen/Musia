@@ -39,7 +39,10 @@ func inspect(_ bitmap: NSBitmapImageRep) throws -> [String: Any] {
         left = min(left, x); right = max(right, x)
         top = min(top, y); bottom = max(bottom, y)
         let channels = [color.redComponent, color.greenComponent, color.blueComponent]
-        if channels.max()! > 0.4 && channels.max()! - channels.min()! > 0.2 { colorful += 1 }
+        let white = channels.min()! > 0.88
+        let coral = color.redComponent > 0.78 && color.greenComponent > 0.23
+            && color.greenComponent < 0.63 && color.blueComponent < 0.59
+        if white || coral { colorful += 1 }
     }}
     try require(right >= left && bottom >= top, "Empty icon")
     let width = right - left + 1, height = bottom - top + 1
@@ -58,7 +61,7 @@ func inspect(_ bitmap: NSBitmapImageRep) throws -> [String: Any] {
     for (x, y) in [(cx, top + dy), (cx, bottom - dy), (left + dx, cy), (right - dx, cy), (cx, cy)] {
         try require(alpha(x, y) > 0.94, "Missing tile center or edge")
     }
-    try require(colorful > size * size / 20, "Missing colored ribbon")
+    try require(colorful > size * size / 20, "Missing original sound bars")
     return ["size": size, "bounds": [left, top, right, bottom], "extent": extent,
             "coloredPixels": colorful, "rounded": true]
 }
