@@ -1,5 +1,15 @@
 # Song Context
 
+Publication language contract:
+- English output: English prose, exact title `パリへ、ひとつの勇気 · Brave in Paris`.
+- Japanese output: Japanese prose, exact title `パリへ、ひとつの勇気 · Brave in Paris`.
+- Chinese output: natural Chinese prose, exact title `小小勇气，走向巴黎 · Brave in Paris`.
+- The title is the release name only. Do not append a hook, character name,
+  genre or subtitle. Do not omit either half of the bilingual release name.
+- This context includes Chinese story notes; that does NOT make an English
+  metadata request Chinese. Translate the story into the requested language.
+- Do not invent an anime music video or live-action footage. This is a song.
+
 Song by Musia: パリへ、ひとつの勇気 · Brave in Paris.
 Chinese title: 小小勇气，走向巴黎 · Brave in Paris.
 Aya's Chinese name is 阿芽. In Japanese she is あや. The singing is Japanese;

@@ -202,3 +202,27 @@ listening decision, so Preview status remains unchanged.
 All generation/analysis jobs and temporary test browser/server processes for
 this release have finished. No dedicated GUI was left running. No native app
 build, video recording, or social/music-platform submission is included.
+
+## Approved Publication Follow-up
+
+Later on October 15, the owner approved the song and requested recording,
+four-platform video publication and Shipinhao Music. Chinese character name:
+**阿芽**, not 阿雅. Four translation rows now use 阿芽 with a1/ya2 pinyin;
+the approved Japanese vocal text, tokens and timing remain unchanged.
+
+The work is public/listed at https://fun.lazying.art/#aya-brave-in-paris.
+Release `f90da9d`, Pages run `38749739803`, passed live desktop/mobile checks.
+The player credit is empty for this work, while provenance remains truthful.
+The description tells the Paris story without technical production commentary.
+Owner listening approval is now recorded; this does not upgrade estimated
+chords or approximate translation timing into a musician-certified score.
+
+Recording and publication receipts:
+`handoff/lazyedit/aya-brave-in-paris/README.md`.
+
+The 2160x3840 fast portrait recording and reviewed top-right-logo master are
+synced to Nutstore. Shipinhao, Instagram, YouTube and Douyin video publication
+all completed. Shipinhao Music accepted the full song and 37 corrected Japanese
+lines; its management row shows 审核中, not yet review approval. Final receipts,
+public video links and the metadata-title rerun issue are in the handoff above.
+No recording/test browser runtime remains running for this release.
