@@ -1,0 +1,833 @@
+{
+  "mediaId": "aya-brave-in-paris",
+  "title": "パリへ、ひとつの勇気 · Brave in Paris",
+  "vocalSet": "ja-vocal",
+  "audioSha256": "d4c630b04c325fad57e151ed8b50dc1d86ff943b181093c90aad8be10ed7179c",
+  "duration": 188,
+  "releaseStage": "preview",
+  "reviewStatus": "Source cross-checked with selected-audio large-v3 full-mix/stem no-VAD windows and independent MOSS transcription. Human listening approval pending.",
+  "timingStatus": "Selected-audio ASR word anchors; within-word subdivision and translation highlighting are approximate.",
+  "notes": "All 36 source lines accounted for. Preserve the actual courage repetition and the extra final 聞かせてね. Sound-close landmark/name and homophone recognition errors are restored conservatively. Instrumental spans and nonlexical breaths are gaps, never lyric placeholders. No human-certified pronunciation or score.",
+  "jaReadingOverrides": {
+    "君": "きみ",
+    "朝": "あさ",
+    "写真": "しゃしん",
+    "言葉": "ことば",
+    "昨日": "きのう",
+    "石畳": "いしだたみ",
+    "庭": "にわ",
+    "風": "かぜ",
+    "勇気": "ゆうき",
+    "羽": "はね",
+    "冒険": "ぼうけん",
+    "笑顔": "えがお",
+    "帰る": "かえる",
+    "日": "ひ",
+    "急が": "いそが",
+    "凱旋門": "がいせんもん",
+    "下": "した",
+    "座": "ざ",
+    "灯り": "あかり",
+    "胸": "むね",
+    "一枚": "いちまい",
+    "内緒": "ないしょ",
+    "声": "こえ",
+    "旅": "たび"
+  },
+  "sources": {
+    "full": {
+      "path": "data/creative_projects/aya-brave-in-paris-20261015/review/101513/full-flat.json",
+      "sha256": "47bc02b5be7f8b533d7b0e5341229bea194f0e2e82c073510aaaf0fd2ff81bae"
+    },
+    "stem": {
+      "path": "data/creative_projects/aya-brave-in-paris-20261015/review/101513/stem-flat.json",
+      "sha256": "eb6f90bde92343b42eda0044b53ae70999946762bb5b3a1cf051d2ff54517477"
+    }
+  },
+  "lines": [
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 0
+        }
+      ],
+      "ja": "ルーヴルの朝に",
+      "en": "Morning at the Louvre",
+      "zh-Hans": "卢浮宫的清晨",
+      "referenceLine": 1,
+      "replacements": [
+        {
+          "words": [
+            0,
+            3
+          ],
+          "source": "ルーブル",
+          "text": "ルーヴル",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 1
+        }
+      ],
+      "ja": "君の写真が届く",
+      "en": "A photograph arrives from you",
+      "zh-Hans": "你寄来的照片到了",
+      "referenceLine": 2,
+      "zhPinyinOverrides": [
+        {
+          "index": 5,
+          "text": "片",
+          "pinyin": "pian4"
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 2
+        }
+      ],
+      "ja": "ガラスの向こうで",
+      "en": "Beyond the glass",
+      "zh-Hans": "在玻璃的那一边",
+      "referenceLine": 3,
+      "zhPinyinOverrides": [
+        {
+          "index": 2,
+          "text": "璃",
+          "pinyin": "li5"
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 3
+        }
+      ],
+      "ja": "まぶしく笑ってる",
+      "en": "Your smile is full of light",
+      "zh-Hans": "你笑得那么明亮",
+      "referenceLine": 4,
+      "zhPinyinOverrides": [
+        {
+          "index": 2,
+          "text": "得",
+          "pinyin": "de5"
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "眩しく",
+          "text": "まぶしく",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 5
+        }
+      ],
+      "ja": "知らない言葉も",
+      "en": "Even unfamiliar words",
+      "zh-Hans": "就连陌生的话语",
+      "referenceLine": 5
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 6
+        }
+      ],
+      "ja": "ひとつずつ覚えて",
+      "en": "You learn them one by one",
+      "zh-Hans": "你也一句一句学会",
+      "referenceLine": 6,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "一つ",
+          "text": "ひとつ",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 7
+        }
+      ],
+      "ja": "昨日の不安を",
+      "en": "Yesterday's worries",
+      "zh-Hans": "昨天的那些不安",
+      "referenceLine": 7
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 8
+        }
+      ],
+      "ja": "石畳で追い越した",
+      "en": "You leave behind on cobbled streets",
+      "zh-Hans": "被你甩在了石板路上",
+      "referenceLine": 8
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 9
+        }
+      ],
+      "ja": "ヴェルサイユの庭で",
+      "en": "In the gardens of Versailles",
+      "zh-Hans": "在凡尔赛的花园里",
+      "referenceLine": 9,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "ベ",
+          "text": "ヴェ",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 10
+        }
+      ],
+      "ja": "スカートが風をつかむ",
+      "en": "Your skirt catches the breeze",
+      "zh-Hans": "裙摆捉住了微风",
+      "referenceLine": 10,
+      "replacements": [
+        {
+          "words": [
+            3,
+            4
+          ],
+          "source": "は",
+          "text": "が",
+          "reason": "Preserve the sound-close source using full/stem recognition, Japanese context and the independent transcription; diction is not certified perfect."
+        },
+        {
+          "words": [
+            6,
+            8
+          ],
+          "source": "掴む",
+          "text": "つかむ",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 11,
+          "words": [
+            0,
+            9
+          ]
+        }
+      ],
+      "ja": "あやあやパリの空",
+      "en": "Aya, Aya, beneath the Paris sky",
+      "zh-Hans": "阿雅，阿雅，巴黎的天空下",
+      "referenceLine": 11,
+      "replacements": [
+        {
+          "words": [
+            4,
+            7
+          ],
+          "source": "終わり",
+          "text": "パリ",
+          "reason": "Preserve the sound-close source using full/stem recognition, Japanese context and the independent transcription; diction is not certified perfect."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 11,
+          "words": [
+            9,
+            18
+          ]
+        }
+      ],
+      "ja": "小さな勇気が羽になる",
+      "en": "A little courage turns to wings",
+      "zh-Hans": "小小的勇气长成了翅膀",
+      "referenceLine": 12,
+      "replacements": [
+        {
+          "words": [
+            3,
+            4
+          ],
+          "source": "雪",
+          "text": "勇気",
+          "reason": "Preserve the sound-close source using full/stem recognition, Japanese context and the independent transcription; diction is not certified perfect."
+        },
+        {
+          "words": [
+            5,
+            7
+          ],
+          "source": "羽根",
+          "text": "羽",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 12,
+          "words": [
+            0,
+            7
+          ]
+        }
+      ],
+      "ja": "会いたいなでも今は",
+      "en": "I miss you, but for now",
+      "zh-Hans": "好想见你，可是此刻",
+      "referenceLine": 13
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 12,
+          "words": [
+            7,
+            17
+          ]
+        }
+      ],
+      "ja": "君の冒険に手を振るよ",
+      "en": "I'll wave you on into adventure",
+      "zh-Hans": "我要挥手为你的冒险加油",
+      "referenceLine": 14
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 13,
+          "words": [
+            0,
+            7
+          ]
+        }
+      ],
+      "ja": "あやあやその笑顔",
+      "en": "Aya, Aya, that smile of yours",
+      "zh-Hans": "阿雅，阿雅，你的笑容",
+      "referenceLine": 15
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 13,
+          "words": [
+            7,
+            16
+          ]
+        }
+      ],
+      "ja": "遠い部屋まで春を呼ぶ",
+      "en": "Brings spring into this room far away",
+      "zh-Hans": "把春意带进这间遥远的屋子",
+      "referenceLine": 16
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 14,
+          "words": [
+            0,
+            9
+          ]
+        }
+      ],
+      "ja": "帰る日は急がないで",
+      "en": "Don't hurry home",
+      "zh-Hans": "别急着赶回来",
+      "referenceLine": 17,
+      "replacements": [
+        {
+          "words": [
+            4,
+            6
+          ],
+          "source": "言う",
+          "text": "急",
+          "reason": "Preserve the sound-close source using full/stem recognition, Japanese context and the independent transcription; diction is not certified perfect."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 25
+        }
+      ],
+      "ja": "まだ知らない君に会ってきて",
+      "en": "Go meet the self you've yet to know",
+      "zh-Hans": "去遇见你还不曾认识的自己",
+      "referenceLine": 18,
+      "zhPinyinOverrides": [
+        {
+          "index": 8,
+          "text": "识",
+          "pinyin": "shi5"
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 26
+        }
+      ],
+      "ja": "凱旋門の下",
+      "en": "Beneath the Arc de Triomphe",
+      "zh-Hans": "凯旋门下",
+      "referenceLine": 19,
+      "replacements": [
+        {
+          "words": [
+            0,
+            5
+          ],
+          "source": "海鮮物知った",
+          "text": "凱旋門の下",
+          "reason": "Preserve the sound-close source using full/stem recognition, Japanese context and the independent transcription; diction is not certified perfect."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 27
+        }
+      ],
+      "ja": "雲を見上げた君",
+      "en": "You lift your eyes toward the clouds",
+      "zh-Hans": "你抬头望着云朵",
+      "referenceLine": 20,
+      "zhPinyinOverrides": [
+        {
+          "index": 4,
+          "text": "着",
+          "pinyin": "zhe5"
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 28
+        }
+      ],
+      "ja": "オペラ座の灯りに",
+      "en": "In the opera house lights",
+      "zh-Hans": "歌剧院的灯光里",
+      "referenceLine": 21,
+      "replacements": [
+        {
+          "words": [
+            5,
+            8
+          ],
+          "source": "明かり",
+          "text": "灯り",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 29
+        }
+      ],
+      "ja": "胸のリズムが跳ねる",
+      "en": "Your heartbeat dances",
+      "zh-Hans": "心里的节拍轻快地跳动",
+      "referenceLine": 22,
+      "zhPinyinOverrides": [
+        {
+          "index": 7,
+          "text": "地",
+          "pinyin": "de5"
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 31,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "ja": "ひとりの夕ごはん",
+      "en": "Dinner for one",
+      "zh-Hans": "一个人的晚饭",
+      "referenceLine": 23,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "一人",
+          "text": "ひとり",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        },
+        {
+          "words": [
+            3,
+            6
+          ],
+          "source": "夕ご飯",
+          "text": "夕ごはん",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 31,
+          "words": [
+            6,
+            12
+          ]
+        }
+      ],
+      "ja": "写真をもう一枚",
+      "en": "I open one more photograph",
+      "zh-Hans": "再翻开一张你的照片",
+      "referenceLine": 24,
+      "zhPinyinOverrides": [
+        {
+          "index": 8,
+          "text": "片",
+          "pinyin": "pian4"
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 32,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "ja": "きれいだねのあと",
+      "en": "After typing, 'How beautiful'",
+      "zh-Hans": "写下“真好看”之后",
+      "referenceLine": 25,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "綺麗",
+          "text": "きれい",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        },
+        {
+          "words": [
+            5,
+            6
+          ],
+          "source": "後",
+          "text": "あと",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 32,
+          "words": [
+            6,
+            13
+          ]
+        }
+      ],
+      "ja": "会いたいはまだ内緒",
+      "en": "I keep 'I miss you' to myself",
+      "zh-Hans": "那句“想你了”暂时还是秘密",
+      "referenceLine": 26
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 25
+        }
+      ],
+      "ja": "あやあやパリの空",
+      "en": "Aya, Aya, beneath the Paris sky",
+      "zh-Hans": "阿雅，阿雅，巴黎的天空下",
+      "referenceLine": 27,
+      "replacements": [
+        {
+          "words": [
+            4,
+            5
+          ],
+          "source": "針",
+          "text": "パリ",
+          "reason": "Preserve the sound-close source using full/stem recognition, Japanese context and the independent transcription; diction is not certified perfect."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 26
+        }
+      ],
+      "ja": "小さな勇気が勇気が羽になる",
+      "en": "A little courage, courage turns to wings",
+      "zh-Hans": "小小的勇气，勇气长成了翅膀",
+      "referenceLine": 28,
+      "replacements": [
+        {
+          "words": [
+            5,
+            6
+          ],
+          "source": "な",
+          "text": "が",
+          "reason": "Preserve the audible courage repetition; normalize a weak connecting particle, not the whole repeated phrase."
+        },
+        {
+          "words": [
+            9,
+            11
+          ],
+          "source": "羽根",
+          "text": "羽",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 27
+        }
+      ],
+      "ja": "会いたいなでも今は",
+      "en": "I miss you, but for now",
+      "zh-Hans": "好想见你，可是此刻",
+      "referenceLine": 29
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 28
+        }
+      ],
+      "ja": "君の冒険に手を振るよ",
+      "en": "I'll wave you on into adventure",
+      "zh-Hans": "我要挥手为你的冒险加油",
+      "referenceLine": 30,
+      "replacements": [
+        {
+          "words": [
+            9,
+            11
+          ],
+          "source": "ようよ",
+          "text": "よ",
+          "reason": "Merge the prolonged final yo and its echo within the original ASR span; not an extra sentence."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 29
+        }
+      ],
+      "ja": "あやあやその笑顔",
+      "en": "Aya, Aya, that smile of yours",
+      "zh-Hans": "阿雅，阿雅，你的笑容",
+      "referenceLine": 31
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 30
+        }
+      ],
+      "ja": "遠い部屋まで春を呼ぶ",
+      "en": "Brings spring into this room far away",
+      "zh-Hans": "把春意带进这间遥远的屋子",
+      "referenceLine": 32
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 40
+        }
+      ],
+      "ja": "帰る日は急がないで",
+      "en": "Don't hurry home",
+      "zh-Hans": "别急着赶回来",
+      "referenceLine": 33,
+      "replacements": [
+        {
+          "words": [
+            4,
+            5
+          ],
+          "source": "夕",
+          "text": "急",
+          "reason": "Preserve the sound-close source using full/stem recognition, Japanese context and the independent transcription; diction is not certified perfect."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 32
+        }
+      ],
+      "ja": "まだ知らない君に会ってきて",
+      "en": "Go meet the self you've yet to know",
+      "zh-Hans": "去遇见你还不曾认识的自己",
+      "referenceLine": 34,
+      "zhPinyinOverrides": [
+        {
+          "index": 8,
+          "text": "识",
+          "pinyin": "shi5"
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 42
+        }
+      ],
+      "ja": "おみやげはその声で",
+      "en": "Your voice is the souvenir I want",
+      "zh-Hans": "最想要的礼物，是听见你的声音",
+      "referenceLine": 35,
+      "replacements": [
+        {
+          "words": [
+            0,
+            3
+          ],
+          "source": "お土産",
+          "text": "おみやげ",
+          "reason": "Same pronunciation, source orthography; do not replace natural Japanese with a recognizer homophone."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            7,
+            16
+          ]
+        }
+      ],
+      "ja": "旅の続きを聞かせてね",
+      "en": "Tell me where your journey goes next",
+      "zh-Hans": "把旅途后来的故事也讲给我听吧",
+      "referenceLine": 36
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 34
+        }
+      ],
+      "ja": "聞かせてね",
+      "en": "Tell me, won't you?",
+      "zh-Hans": "再讲给我听吧",
+      "referenceLine": null
+    }
+  ],
+  "independentEvidence": {
+    "path": "data/creative_projects/aya-brave-in-paris-20261015/review/101513/moss-vocal-ja.txt",
+    "sha256": "1f94d65fcdb0c8b37a185dc2cc6b49aa531a49cbe6455bf5f44a729e799116f2"
+  }
+}

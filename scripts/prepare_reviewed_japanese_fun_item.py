@@ -31,15 +31,25 @@ def copy_unchanged(source, target):
         shutil.copy2(source, target)
 
 
+def publication_fields(stage):
+    if stage not in ("preview", "published"):
+        raise ValueError("releaseStage must be preview or published")
+    preview = stage == "preview"
+    return {"visibility": "unlisted" if preview else "public", "stage": stage,
+            "listed": not preview}
+
+
 def prepare(config):
     media_id = config["mediaId"]
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", media_id):
         raise ValueError("Invalid media ID")
+    publication = publication_fields(config.get("releaseStage", "published"))
     project = ROOT / config["project"]
     wav = ROOT / config["audio"]
     review = read(ROOT / config["review"])
     if review["mediaId"] != media_id or review["title"] != config["title"]:
         raise ValueError("Release and reviewed lyrics describe different songs")
+    review["releaseStage"] = publication["stage"]
     sources = {}
     for name, entry in review["sources"].items():
         path = ROOT / entry["path"]
@@ -94,7 +104,7 @@ def prepare(config):
                 "en": ["translation", "rough-highlight"], "zh-Hans": ["translation", "pinyin", "rough-highlight"]}
     infos = [{**read(corrected / f"{code}.json")["language"], "features": features[code],
               "path": f"lyrics/{vocal}/{code}.json"} for code in tracks]
-    url = "https://fun.lazying.art/#" + media_id
+    url = "https://fun.lazying.art/" + ("?preview=1" if not publication["listed"] else "") + "#" + media_id
     provenance = {**config["provenance"], "createdBy": "Musia", "aiGenerated": True,
                   "audioSha256": sha256(master), "publicMp3Sha256": sha256(target),
                   "generationProject": config["project"], "analysisRun": config["analysis"],
@@ -104,7 +114,7 @@ def prepare(config):
         "title": config["title"], "artist": "Musia", "localizedTitles": config["localizedTitles"],
         "description": config["description"], "caption": config["caption"],
         "generationCredit": "AI-generated music", "duration": duration, "canonicalUrl": url,
-        "publication": {"visibility": "public", "stage": "published", "listed": True},
+        "publication": publication,
         "share": {"title": config["title"] + " | Musia", "description": config["description"],
                   "url": url, "image": cover, "siteName": "Fun Lazying Art"},
         "assets": {"primaryAudio": asset, "alternateAudio": [],
@@ -118,8 +128,11 @@ def prepare(config):
     catalog_path = ROOT / "website/data/catalog.json"
     catalog = read(catalog_path)
     item = {"id": media_id, "kind": "song", "title": config["title"], "artist": "Musia", "summary": config["description"],
-            "manifest": f"data/songs/{media_id}/manifest.json", "cover": cover, "visibility": "public",
-            "releaseStage": "published", "category": "music", "languages": list(tracks), "tags": config["tags"]}
+            "manifest": f"data/songs/{media_id}/manifest.json", "cover": cover, "visibility": publication["visibility"],
+            "releaseStage": publication["stage"], "category": "music" if publication["listed"] else "preview",
+            "languages": list(tracks), "tags": config["tags"]}
+    if not publication["listed"]:
+        item["previewLabel"] = "Listening Preview"
     catalog["items"] = [item] + [entry for entry in catalog["items"] if entry["id"] != media_id]
     write(catalog_path, catalog)
     write(selected / "manifest.json", {**provenance, "audio": str(master.relative_to(ROOT)), "mp3": str(mp3.relative_to(ROOT)),

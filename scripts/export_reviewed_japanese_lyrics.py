@@ -136,7 +136,7 @@ def export(review, sources, audio, output):
                    "language": LANGUAGES[code], "lines": lines,
                    "provenance": {"vocalSet": review["vocalSet"], "audioSha256": review["audioSha256"],
                                   "correction": review["reviewStatus"], "timing": review["timingStatus"],
-                                  "releaseStage": "published", "notes": review["notes"]}}
+                                  "releaseStage": review.get("releaseStage", "published"), "notes": review["notes"]}}
         (output / f"{code}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
     (output / "lyrics.reviewed.txt").write_text("\n".join(x["ja"] for x in review["lines"]) + "\n")
     lrc = [f"[ti:{review['title']}]", "[ar:Musia]"]

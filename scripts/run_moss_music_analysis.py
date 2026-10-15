@@ -54,6 +54,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--temperature", type=float, default=0.7)
     parser.add_argument("--top-p", type=float, default=0.8)
     parser.add_argument("--top-k", type=int, default=50)
+    parser.add_argument("--max-gpu-memory-gib", type=int, choices=range(8, 21),
+                        help="Optional GPU weight budget; offload remaining layers to CPU on a shared GPU.")
     return parser.parse_args()
 
 
@@ -88,11 +90,13 @@ def main() -> int:
         return 2
 
     prompt = args.prompt or TASK_PROMPTS[args.task]
+    placement = ({"device_map": "auto", "max_memory": {0: f"{args.max_gpu_memory_gib}GiB", "cpu": "16GiB"}}
+                 if args.max_gpu_memory_gib else {"device_map": "cuda:0"})
     model = MossMusicModel.from_pretrained(
         model_path,
         trust_remote_code=True,
         dtype="auto",
-        device_map="cuda:0",
+        **placement,
     )
     model.eval()
     processor = MossMusicProcessor.from_pretrained(
@@ -138,6 +142,7 @@ def main() -> int:
         "prompt": prompt,
         "sample": args.sample,
         "max_new_tokens": args.max_new_tokens,
+        "max_gpu_memory_gib": args.max_gpu_memory_gib,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "output": str(args.output.resolve()),
     }

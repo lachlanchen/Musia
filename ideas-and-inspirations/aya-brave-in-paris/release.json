@@ -1,0 +1,32 @@
+{
+  "mediaId": "aya-brave-in-paris",
+  "title": "パリへ、ひとつの勇気 · Brave in Paris",
+  "localizedTitles": {
+    "ja": "パリへ、ひとつの勇気",
+    "en": "Brave in Paris",
+    "zh-Hans": "小小勇气，走向巴黎"
+  },
+  "releaseStage": "preview",
+  "project": "data/creative_projects/aya-brave-in-paris-20261015",
+  "audio": "data/creative_projects/aya-brave-in-paris-20261015/sweep-roomier/batch-101513-101514/0b211c1c-11e8-26ea-0c2f-5b7eb5cc3dff.wav",
+  "review": "ideas-and-inspirations/aya-brave-in-paris/reviewed-lyrics.json",
+  "analysis": "data/runs/aya-paris-ja-101513",
+  "assetId": "aya-paris-ja-101513",
+  "publicFilename": "aya-brave-in-paris-ja-seed101513-20261015.mp3",
+  "description": "Morning at the Louvre, a breeze in the gardens of Versailles, clouds above the Arc de Triomphe, and the glow of the opera. Aya finds a little more courage with every step through Paris. Far away, someone misses her dearly, but waves her onward: don't hurry home; go meet the self you've yet to know.",
+  "caption": "会いたいな。でも、君の冒険に手を振るよ。",
+  "tags": ["music", "Japanese", "J-pop", "Aya Chan", "Paris", "travel", "courage", "joy", "longing", "chords"],
+  "provenance": {
+    "model": "acestep-v15-xl-turbo",
+    "selectedSeed": 101513,
+    "modelRevision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+    "checkpointRevision": "d4a0b288b83ebb7e25a8c0b32c573c22e134e8ee",
+    "quality": {
+      "audioHealth": "pass",
+      "humanListeningApproved": false,
+      "timing": "Selected-audio large-v3 word anchors with full/stem no-VAD and independent MOSS cross-check; within-word and translation highlighting approximate",
+      "musicalAnalysis": "Estimated from this selected audio, not a musician-verified score"
+    },
+    "coverSource": "Fresh built-in image generation: brave red-panda traveller at the monumental Louvre glass pyramid, coral dress, sky-blue scarf, camera and satchel, joyful Paris sunlight; no text or logo"
+  }
+}

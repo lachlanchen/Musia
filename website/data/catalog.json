@@ -9,6 +9,41 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "aya-brave-in-paris",
+      "kind": "song",
+      "title": "パリへ、ひとつの勇気 · Brave in Paris",
+      "artist": "Musia",
+      "summary": "Morning at the Louvre, a breeze in the gardens of Versailles, clouds above the Arc de Triomphe, and the glow of the opera. Aya finds a little more courage with every step through Paris. Far away, someone misses her dearly, but waves her onward: don't hurry home; go meet the self you've yet to know.",
+      "manifest": "data/songs/aya-brave-in-paris/manifest.json",
+      "cover": "assets/covers/aya-brave-in-paris-16x9.png",
+      "visibility": "unlisted",
+      "releaseStage": "preview",
+      "category": "preview",
+      "languages": [
+        "ja",
+        "en",
+        "zh-Hans"
+      ],
+      "tags": [
+        "music",
+        "Japanese",
+        "J-pop",
+        "Aya Chan",
+        "Paris",
+        "travel",
+        "courage",
+        "joy",
+        "longing",
+        "chords"
+      ],
+      "previewLabel": "Listening Preview",
+      "displayTitle": "パリへ、ひとつの勇気 · Brave in Paris",
+      "workId": "aya-brave-in-paris",
+      "edition": {
+        "status": "preview"
+      }
+    },
+    {
       "id": "aya-home-on-the-breeze",
       "kind": "song",
       "title": "ただいま、風のなか · Home on the Breeze",
