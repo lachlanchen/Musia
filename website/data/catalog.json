@@ -13,12 +13,12 @@
       "kind": "song",
       "title": "パリへ、ひとつの勇気 · Brave in Paris",
       "artist": "Musia",
-      "summary": "Morning at the Louvre, a breeze in the gardens of Versailles, clouds above the Arc de Triomphe, and the glow of the opera. Aya finds a little more courage with every step through Paris. Far away, someone misses her dearly, but waves her onward: don't hurry home; go meet the self you've yet to know.",
+      "summary": "阿芽从卢浮宫寄来一张照片，风吹过凡尔赛的花园，她又向陌生的街道迈出一步。凯旋门下的云、歌剧院亮起的灯，都成了她想带回来的故事。我在远方想她，也想告诉她：别急着回来，再多看看这个世界。",
       "manifest": "data/songs/aya-brave-in-paris/manifest.json",
       "cover": "assets/covers/aya-brave-in-paris-16x9.png",
-      "visibility": "unlisted",
-      "releaseStage": "preview",
-      "category": "preview",
+      "visibility": "public",
+      "releaseStage": "published",
+      "category": "music",
       "languages": [
         "ja",
         "en",
@@ -36,11 +36,10 @@
         "longing",
         "chords"
       ],
-      "previewLabel": "Listening Preview",
       "displayTitle": "パリへ、ひとつの勇気 · Brave in Paris",
       "workId": "aya-brave-in-paris",
       "edition": {
-        "status": "preview"
+        "status": "selected"
       }
     },
     {

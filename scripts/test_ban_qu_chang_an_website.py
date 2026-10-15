@@ -68,8 +68,11 @@ def main():
                     page.goto(base + "#" + media_id, wait_until="networkidle", timeout=90000)
                     page.wait_for_function("document.querySelector('#audio')?.readyState >= 2", timeout=90000)
                     page.wait_for_function("document.querySelector('#cover-art')?.naturalWidth > 0")
-                    assert page.locator("#media-credit").is_visible()
-                    assert manifest["generationCredit"] == page.locator("#media-credit").inner_text()
+                    if manifest.get("generationCredit"):
+                        assert page.locator("#media-credit").is_visible()
+                        assert manifest["generationCredit"] == page.locator("#media-credit").inner_text()
+                    else:
+                        assert page.locator("#media-credit").is_hidden()
                     assert page.locator("#audio").evaluate("(a, d) => !a.error && Math.abs(a.duration-d)<0.2", manifest["duration"])
                     assert page.locator("#audio").evaluate("a => a.currentSrc") == source
                     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")

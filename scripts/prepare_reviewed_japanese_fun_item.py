@@ -113,7 +113,7 @@ def prepare(config):
         "schema": "fun.lazying.media.manifest.v1", "version": 1, "id": media_id, "kind": "song",
         "title": config["title"], "artist": "Musia", "localizedTitles": config["localizedTitles"],
         "description": config["description"], "caption": config["caption"],
-        "generationCredit": "AI-generated music", "duration": duration, "canonicalUrl": url,
+        "generationCredit": config.get("generationCredit", "AI-generated music"), "duration": duration, "canonicalUrl": url,
         "publication": publication,
         "share": {"title": config["title"] + " | Musia", "description": config["description"],
                   "url": url, "image": cover, "siteName": "Fun Lazying Art"},

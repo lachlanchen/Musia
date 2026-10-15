@@ -125,8 +125,8 @@ def build():
     review = {
         "mediaId": "aya-brave-in-paris", "title": "パリへ、ひとつの勇気 · Brave in Paris",
         "vocalSet": "ja-vocal", "audioSha256": EXPECTED_AUDIO, "duration": 188,
-        "releaseStage": "preview",
-        "reviewStatus": "Source cross-checked with selected-audio large-v3 full-mix/stem no-VAD windows and independent MOSS transcription. Human listening approval pending.",
+        "releaseStage": "published",
+        "reviewStatus": "Source cross-checked with selected-audio large-v3 full-mix/stem no-VAD windows and independent MOSS transcription. Owner approved the song for publication on 2026-10-15; Chinese name corrected to 阿芽.",
         "timingStatus": "Selected-audio ASR word anchors; within-word subdivision and translation highlighting are approximate.",
         "notes": "All 36 source lines accounted for. Preserve the actual courage repetition and the extra final 聞かせてね. Sound-close landmark/name and homophone recognition errors are restored conservatively. Instrumental spans and nonlexical breaths are gaps, never lyric placeholders. No human-certified pronunciation or score.",
         "jaReadingOverrides": {"君": "きみ", "朝": "あさ", "写真": "しゃしん", "言葉": "ことば",

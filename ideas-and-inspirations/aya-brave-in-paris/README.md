@@ -40,5 +40,8 @@ translate the selected Japanese performance into English and Chinese, with
 Japanese furigana and Chinese pinyin. Chords/beats belong to the selected audio
 and remain analysis-grade. Create a fresh song-specific 16:9 Paris cover.
 
-Publish as an unlisted Preview until the owner listens. Do not substitute
-automated musicality scores for human approval.
+Initially published as an unlisted Preview. On October 15 the owner approved
+the song and requested video and Shipinhao Music publication. Aya's Chinese
+name is **阿芽**, not 阿雅. Keep descriptions about her journey and the person
+missing her, without production commentary. Preserve required platform
+disclosures separately from listener-facing prose.
