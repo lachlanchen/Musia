@@ -186,5 +186,19 @@ approval or phoneme-perfect forced alignment.
 Release uses a clean worktree based on current remote main so unrelated local
 creator/backend work, old lyric edits and README changes are not published.
 The catalog map explicitly records this Japanese-titled work as a Preview.
-Live website verification follows the Pages deployment; no native app build,
-video recording, or social/music-platform submission is included.
+Website commit: `8ceda98fc814dacb4fb90507c632e90d3586b0f3`. Pages run
+`38747085479` succeeded. Live desktop/mobile browser checks also passed at all
+four checkpoints. The deployed catalog, manifest, all three lyric tracks,
+study data, cover and Atlas entry returned HTTP 200 and matched the committed
+files byte-for-byte. Live screenshots were visually reviewed; the bilingual
+title fits, and the desktop lyric panel shows the correct three languages.
+
+Verification includes 21 reviewed-lyric/release tests, eight catalog-curation
+tests, a no-drift curation check, strict item audit, website protocol validation
+and a clean patch check. The public MP3 supports seeking and has the verified
+content hash above. Automated playback is not a substitute for the owner's
+listening decision, so Preview status remains unchanged.
+
+All generation/analysis jobs and temporary test browser/server processes for
+this release have finished. No dedicated GUI was left running. No native app
+build, video recording, or social/music-platform submission is included.
