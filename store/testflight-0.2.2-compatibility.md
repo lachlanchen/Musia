@@ -209,6 +209,29 @@ No shared-Mac job, service restart, archive, upload or review mutation was
 performed for this repair. A new finite placement is required for native QA;
 the KVM signing gate remains closed.
 
+### Mac Identity Round 3
+
+Frozen `3467430` passed the newly admitted build-for-testing and artifact
+verification on the Mini. The actual app, embedded core framework and test
+bundle now have distinct QA identifiers; package types, contained paths and
+the private sandbox/no-shared-groups checks passed before hosted launch.
+
+XCTest still did not execute any method. The owned-process log reported a
+refused test-manager channel and an unavailable test daemon; a one-second
+sample showed XCTest waiting for its IDE configuration. The sole owned test
+process group was stopped at04:02:46UTC after this startup failure, before the
+600-second cap. The wrapper returned76 and retained the guard. No retry ran.
+The bundle-identity fix is verified but does not resolve the startup problem.
+No mandatory method passed, and no live-test skip was observed in this round.
+
+At04:04:55UTC, SSH banner timeouts prevented the cleanup transfer/command and
+one bounded cleanup-only reconnect from executing. Cleanup is **pending**:
+the guard remains retained, the QA app may remain, and no host handback is
+claimed. Original ownership and exact recovery details are in the private
+coordination receipt. Do not admit another job from an older cleanup record.
+Evidence remains on the Mini; full local mirroring is pending connectivity.
+No signing, upload, production, review or shared-service mutation occurred.
+
 Headless evidence hashes:
 
 | Evidence | SHA-256 |
