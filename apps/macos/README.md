@@ -6,8 +6,11 @@ Ready for Sale; the public US listing is verified at USD 2.99.
 [Release record](../../store/macos-release-2026-10-12.md).
 Later TestFlight builds are separate from this approved production release.
 
-Native SwiftUI and AVFoundation app for **macOS 14 or later**, built for Intel
-and Apple silicon. No Catalyst, WebView, local server or bundled browser.
+The released native SwiftUI and AVFoundation app requires **macOS 14 or later**,
+built for Intel and Apple silicon. The **0.2.2 internal candidate** targets
+macOS12 with availability-guarded presentation fallbacks; runtime qualification
+is still pending. See the [compatibility record](../../store/testflight-0.2.2-compatibility.md).
+No Catalyst, WebView, local server or bundled browser.
 The Mac target shares MusiaCore, catalog, playback, lyrics, guitar diagrams,
 lessons and local history with iOS. Platform-specific code is limited to the
 window/sidebar/menu structure, audio-session handling and native artwork.
@@ -16,6 +19,10 @@ window/sidebar/menu structure, audio-session handling and native artwork.
 
 Use an existing Mac/Xcode installation. The generated project and icon catalog
 are checked in; normal builds need neither Ruby gems nor Python packages.
+On shared Macs, obtain an explicit bounded slot and predecessor handback first,
+then run the selected phase through `tools/store/apple_build_guard.py`. A quiet
+process list alone does not authorize a build. The compatibility record includes
+the guarded QA commands; the direct commands below are for a dedicated host.
 
 ```sh
 xcodebuild -project apps/macos/Musia.xcodeproj -scheme Musia \

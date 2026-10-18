@@ -56,6 +56,11 @@ Other phases: `headless` (core tests plus unsigned Mac build), `mac`, `iphone`,
 stopped, Musia-owned `MUSIA_SIMULATOR_UDID`. The wrapper releases only its matching
 directory/inode/token, and retains an uncertain guard for owner recovery.
 Never delete a peer guard or treat a quiet process list as a queue handback.
+Process inventory errors refuse launch rather than implying an idle host.
+Failed child launch releases the unused owned guard; signal-terminated children,
+interrupted connections and uncertain descendants retain it for explicit owner
+recovery. Disposable-path tests exercise these cases without touching a shared
+Mac or the real host guard. No command-line alternate lock path is supported.
 
 Native QA covers local history/export, audio clock/seek/loop, ruby wrapping,
 rotation, large text, creator draft retention and the miniature player's safe
@@ -66,7 +71,8 @@ must be reported separately; synthetic audio is not evidence of those passes.
 ## Current Evidence
 
 - Static manifests, resource identity, native references and 50 Swift syntax
-  parses passed. Store tooling: 238 unit tests passed.
+  parses passed. Store tooling: 246 unit tests passed, including12 disposable-path
+  guard tests. No shared host or simulator was used for these guard tests.
 - Final Intel app build with macOS12 target passed on Xcode26.3. `vtool` on the
   built app's Debug dylib reports minos12.0/SDK26.2. The source-based package
   suite passed69 tests with1 opt-in network skip and0 failures on the iMac.

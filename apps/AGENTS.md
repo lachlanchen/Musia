@@ -21,7 +21,10 @@
   native background/interruption behavior on a device before claiming it works.
 - The macOS target lives in `apps/macos`, sharing Swift core/services/views from
   iOS. Preserve iOS conditionals and run its generic simulator compile after
-  shared-source changes. macOS14+; universal Intel and Apple silicon release.
+  shared-source changes. The 0.2.2 internal candidate targets macOS12+; the
+  released app remains macOS14+. Keep universal Intel and Apple silicon releases.
+  Read store/testflight-0.2.2-compatibility.md for actual runtime qualification;
+  a lowered target or successful compile is not a Monterey runtime pass.
 - Use `apps/macos/README.md` for native Mac qualification and screenshot capture.
   The Debug-only review harness never ships. Keep archive signing and local
   test signing separate; do not weaken the production hardened runtime to fix
