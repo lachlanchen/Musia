@@ -111,6 +111,7 @@ struct MontereyTokenFlow<Token: View>: View {
     @ViewBuilder var token: (Int) -> Token
     @State private var width: CGFloat = 1
     @State private var sizes: [Int: CGSize] = [:]
+    @State private var naturalSizes: [Int: CGSize] = [:]
 
     private var frames: [CGRect] {
         var x: CGFloat = 0, y: CGFloat = 0, rowHeight: CGFloat = 0
@@ -129,11 +130,11 @@ struct MontereyTokenFlow<Token: View>: View {
         ZStack(alignment: .topLeading) {
             ForEach(0..<count, id: \.self) { index in
                 token(index)
-                    .fixedSize(horizontal: true, vertical: true)
+                    .frame(width: min(width, naturalSizes[index]?.width ?? width), alignment: .leading)
+                    .fixedSize(horizontal: false, vertical: true)
                     .background(GeometryReader { proxy in
                         Color.clear.preference(key: TokenSizes.self, value: [index: proxy.size])
                     })
-                    .frame(maxWidth: width, alignment: .leading)
                     .offset(x: positions[index].minX, y: positions[index].minY)
             }
         }
@@ -142,8 +143,18 @@ struct MontereyTokenFlow<Token: View>: View {
         .background(GeometryReader { proxy in
             Color.clear.preference(key: TokenWidth.self, value: proxy.size.width)
         })
+        .background(
+            ZStack {
+                ForEach(0..<count, id: \.self) { index in
+                    token(index).fixedSize().background(GeometryReader { proxy in
+                        Color.clear.preference(key: NaturalTokenSizes.self, value: [index: proxy.size])
+                    })
+                }
+            }.hidden().frame(width: 0, height: 0).clipped().accessibilityHidden(true)
+        )
         .onPreferenceChange(TokenWidth.self) { width = max(1, $0) }
         .onPreferenceChange(TokenSizes.self) { sizes = $0 }
+        .onPreferenceChange(NaturalTokenSizes.self) { naturalSizes = $0 }
     }
 }
 
@@ -156,6 +167,12 @@ private struct TokenSizes: PreferenceKey {
 private struct TokenWidth: PreferenceKey {
     static var defaultValue: CGFloat = 1
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) { value = nextValue() }
+}
+private struct NaturalTokenSizes: PreferenceKey {
+    static var defaultValue: [Int: CGSize] = [:]
+    static func reduce(value: inout [Int: CGSize], nextValue: () -> [Int: CGSize]) {
+        value.merge(nextValue(), uniquingKeysWith: { _, new in new })
+    }
 }
 
 #if os(macOS)
