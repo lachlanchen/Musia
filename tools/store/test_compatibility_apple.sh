@@ -2,7 +2,7 @@
 # Internal QA only. One owned simulator, no store/device/profile mutations.
 set -euo pipefail
 cd "${MUSIA_ROOT:?Set the isolated Musia source checkout}"
-phase="${1:?core, mac, iphone or ipad}"
+phase="${1:?headless, core, mac, iphone or ipad}"
 out="${2:?Fresh private evidence directory}"
 # Invoke through apple_build_guard.py after explicit queue admission.
 /usr/bin/python3 -c '
@@ -34,6 +34,14 @@ df -h /Users
 memory_pressure -Q
 test "$(df -k /Users | awk 'NR==2 {print $4}')" -gt 4194304
 case "$phase" in
+headless)
+    swift test --package-path apps/ios --jobs 2 > "$out/core.log" 2>&1
+    xcodebuild -project apps/macos/Musia.xcodeproj -scheme Musia \
+      -configuration Debug -destination 'platform=macOS' \
+      -derivedDataPath "$PWD/DerivedData" -jobs 1 OTHER_SWIFT_FLAGS=-j1 \
+      CODE_SIGNING_ALLOWED=NO build > "$out/mac-build.log" 2>&1
+    exit
+    ;;
 core)
     swift test --package-path apps/ios --jobs 2 > "$out/core.log" 2>&1
     exit
