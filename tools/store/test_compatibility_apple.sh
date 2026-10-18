@@ -2,7 +2,7 @@
 # Internal QA only. One owned simulator, no store/device/profile mutations.
 set -euo pipefail
 cd "${MUSIA_ROOT:?Set the isolated Musia source checkout}"
-phase="${1:?headless, core, mac, iphone or ipad}"
+phase="${1:?headless, core, mac, mobile, iphone or ipad}"
 out="${2:?Fresh private evidence directory}"
 # Invoke through apple_build_guard.py after explicit queue admission.
 /usr/bin/python3 -c '
@@ -34,6 +34,15 @@ df -h /Users
 memory_pressure -Q
 test "$(df -k /Users | awk 'NR==2 {print $4}')" -gt 4194304
 case "$phase" in
+mobile)
+    : "${MUSIA_IPHONE_UDID:?Existing stopped Musia iPhone}"
+    : "${MUSIA_IPAD_UDID:?Existing stopped Musia iPad}"
+    MUSIA_QA_DERIVED_DATA="$out/build" MUSIA_SIMULATOR_UDID="$MUSIA_IPHONE_UDID" \
+      bash "$0" iphone "$out/iphone"
+    MUSIA_QA_DERIVED_DATA="$out/build" MUSIA_SIMULATOR_UDID="$MUSIA_IPAD_UDID" \
+      bash "$0" ipad "$out/ipad"
+    exit
+    ;;
 headless)
     swift test --package-path apps/ios --jobs 2 > "$out/core.log" 2>&1
     xcodebuild -project apps/macos/Musia.xcodeproj -scheme Musia \
@@ -70,7 +79,7 @@ xcrun simctl bootstatus "$device" -b > "$out/boot.log" 2>&1
 status=0
 xcodebuild test -project apps/ios/Musia.xcodeproj -scheme Musia \
   -configuration Debug -destination "platform=iOS Simulator,id=$device" \
-  -derivedDataPath "$out/build" -resultBundlePath "$out/ui.xcresult" \
+  -derivedDataPath "${MUSIA_QA_DERIVED_DATA:-$out/build}" -resultBundlePath "$out/ui.xcresult" \
   -jobs 2 -parallel-testing-enabled NO -collect-test-diagnostics never \
   -test-timeouts-enabled YES -maximum-test-execution-time-allowance 180 \
   -only-testing:MusiaTests \
