@@ -64,23 +64,12 @@ mac)
       -configuration Debug -destination 'platform=macOS' -derivedDataPath "$out/build" \
       -jobs 2 -parallel-testing-enabled NO \
       OTHER_SWIFT_FLAGS=-j2 CODE_SIGN_IDENTITY=- \
-      PRODUCT_BUNDLE_IDENTIFIER=art.lazying.musia.compatibilityqa \
+      MUSIA_MAC_BUNDLE_PREFIX=art.lazying.musia.compatibilityqa \
       MUSIA_DEBUG_PROFILE= MUSIA_MAC_PROFILE= PROVISIONING_PROFILE_SPECIFIER= \
       ENABLE_HARDENED_RUNTIME=NO )
     bounded 900 xcodebuild build-for-testing "${mac_args[@]}" > "$out/mac-build.log" 2>&1
-    /usr/bin/python3 - "$out/build/Build/Products/Debug/Musia.app" <<'PY'
-import plistlib,subprocess,sys
-from pathlib import Path
-app=Path(sys.argv[1])
-info=plistlib.loads((app/'Contents/Info.plist').read_bytes())
-assert info['CFBundleIdentifier']=='art.lazying.musia.compatibilityqa'
-raw=subprocess.check_output(['codesign','-d','--entitlements',':-',str(app)],stderr=subprocess.DEVNULL)
-entitlements=plistlib.loads(raw)
-assert entitlements.get('com.apple.security.app-sandbox') is True
-assert not entitlements.get('keychain-access-groups')
-assert not entitlements.get('com.apple.security.application-groups')
-print('QA identity and private sandbox verified before launch')
-PY
+    /usr/bin/python3 tools/store/verify_mac_qa_bundles.py \
+      "$out/build/Build/Products/Debug/Musia.app" > "$out/mac-identity.json"
     bounded 600 xcodebuild test-without-building "${mac_args[@]}" \
       -resultBundlePath "$out/mac.xcresult" \
       -only-testing:MusiaMacTests/MacPlaybackTests \

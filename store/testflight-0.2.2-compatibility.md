@@ -39,7 +39,9 @@ Local static checks:
 
 ```bash
 conda run -n musia python apps/ios/scripts/validate.py
+conda run -n musia python apps/macos/scripts/validate.py
 conda run -n musia python -m unittest discover -s tools/store/tests
+ruby apps/macos/scripts/test-project-identities.rb
 ```
 
 After an explicit shared-Mac queue handback, select the installed toolchain per
@@ -69,8 +71,13 @@ mini-player navigation. This is not a replacement for the full regression suite.
 `MUSIA_QA_DERIVED_DATA` reuses an existing app-owned build cache. Mobile phases
 have finite boot, build/test and export deadlines. Timeouts stop only their
 launched process group and retain the outer guard for explicit cleanup checks.
-The hosted `mac` phase uses a separate sandboxed QA bundle identity, verifies
-its signed entitlements before launch, and runs only `MacPlaybackTests`. It
+The hosted `mac` phase overrides `MUSIA_MAC_BUNDLE_PREFIX`, not the global
+`PRODUCT_BUNDLE_IDENTIFIER`. App, embedded framework and test bundle must have
+distinct identities in the `art.lazying.musia.compatibilityqa` namespace.
+The pre-launch verifier checks all three built plists, package types and the
+app's signed sandbox/no-shared-groups entitlements, then records `mac-identity.json`.
+Missing or mismatched artifacts stop the run before hosted tests. It runs only
+`MacPlaybackTests` and
 does not install over production. A failed process inventory retains the guard.
 
 Native QA covers local history/export, audio clock/seek/loop, ruby wrapping,
@@ -175,6 +182,32 @@ inventory confirmed no guard or owned runtime. The incomplete result bundle
 lacks its Info.plist and is retained as diagnostic evidence, not a test summary.
 Mac qualification and internal signing/upload remain blocked. Earlier successful
 mobile tests and the earlier failed Mac geometry assertions are not overwritten.
+
+### Source-Only QA Identity Repair
+
+Review of the saved round2 build log found that the command-line
+`PRODUCT_BUNDLE_IDENTIFIER=art.lazying.musia.compatibilityqa` applied to all
+three targets. The app-intents metadata commands for Musia, MusiaCore and
+MusiaMacTests each show that identical identifier. The previous pre-launch
+check examined only the app and could not detect this configuration defect.
+
+The project now derives each target's identifier from `MUSIA_MAC_BUNDLE_PREFIX`
+with an empty, `.core` or `.mactests` suffix. Default production identifiers,
+provisioning settings, sandbox and hardened runtime remain unchanged. QA alone
+overrides the prefix. A read-only artifact verifier rejects the former global
+override, production identities, malformed/missing plists and shared-group
+entitlements before the test process can launch. Its codesign read has a
+20-second deadline. Source-only Ruby checks parse the real project and exercise
+the generator in a disposable fixture; they do not run Xcode.
+
+This repairs an observed identity collision, **not a proven cause of the
+XCTest startup timeout**. The earlier Mac round ran tests with the same override.
+The existing ruby assertions and application Swift sources are unchanged;
+the never-shown window fixture still requires a successful native execution.
+The local store suite now passes265 tests, including13 identity-verifier tests.
+No shared-Mac job, service restart, archive, upload or review mutation was
+performed for this repair. A new finite placement is required for native QA;
+the KVM signing gate remains closed.
 
 Headless evidence hashes:
 

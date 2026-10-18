@@ -22,7 +22,9 @@ assert plistlib.loads((resources / "Musia.entitlements").read_bytes()) == {
     "com.apple.security.device.audio-input": True,
 }
 project = (ROOT / "Musia.xcodeproj/project.pbxproj").read_text()
-assert "PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;" in project
+assert project.count("MUSIA_MAC_BUNDLE_PREFIX = art.lazying.musia;") == 2
+for suffix in ("", ".core", ".mactests"):
+    assert project.count(f'PRODUCT_BUNDLE_IDENTIFIER = "$(MUSIA_MAC_BUNDLE_PREFIX){suffix}";') == 2
 assert "MACOSX_DEPLOYMENT_TARGET = 12.0;" in project
 assert "MACOSX_DEPLOYMENT_TARGET = 14.0;" not in project
 assert "MUSIA_MAC_PROFILE" in project

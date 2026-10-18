@@ -16,6 +16,7 @@ project.build_configurations.each do |config|
   config.build_settings.merge!({
     'SWIFT_VERSION' => '5.0', 'MACOSX_DEPLOYMENT_TARGET' => '12.0',
     'MARKETING_VERSION' => '0.2.2', 'CURRENT_PROJECT_VERSION' => '12',
+    'MUSIA_MAC_BUNDLE_PREFIX' => 'art.lazying.musia',
     'DEVELOPMENT_TEAM' => 'Q8M2S2FY77', 'CODE_SIGN_STYLE' => 'Manual',
     'ENABLE_USER_SCRIPT_SANDBOXING' => 'YES', 'CLANG_ENABLE_MODULES' => 'YES',
     'SWIFT_OPTIMIZATION_LEVEL' => config.name == 'Debug' ? '-Onone' : '-O',
@@ -41,10 +42,11 @@ app.resources_build_phase.add_file_reference(resources.new_file('Assets.xcassets
 shared = project.main_group.new_group('Shared Resources', '../ios/Musia/Resources')
 app.resources_build_phase.add_file_reference(shared.new_file('PrivacyInfo.xcprivacy'))
 
-{app => 'art.lazying.musia', core => 'art.lazying.musia.core', tests => 'art.lazying.musia.mactests'}.each do |target, identifier|
+# QA overrides the prefix, never PRODUCT_BUNDLE_IDENTIFIER for every target.
+{app => '', core => '.core', tests => '.mactests'}.each do |target, suffix|
   target.build_configurations.each do |config|
     config.build_settings.merge!({
-      'PRODUCT_BUNDLE_IDENTIFIER' => identifier, 'PRODUCT_NAME' => '$(TARGET_NAME)',
+      'PRODUCT_BUNDLE_IDENTIFIER' => "$(MUSIA_MAC_BUNDLE_PREFIX)#{suffix}", 'PRODUCT_NAME' => '$(TARGET_NAME)',
       'SWIFT_VERSION' => '5.0', 'CODE_SIGN_STYLE' => 'Manual',
       'CODE_SIGN_IDENTITY' => config.name == 'Debug' ? '-' : 'Apple Distribution',
       'LD_RUNPATH_SEARCH_PATHS' => ['$(inherited)', '@executable_path/../Frameworks', '@loader_path/../Frameworks']
