@@ -22,8 +22,16 @@ rows=[d for ds in json.load(sys.stdin)["devices"].values() for d in ds if d["udi
 assert len(rows)==1 and rows[0]["state"]=="Shutdown"
 ' "$device" || exit 76
     fi
+    if [[ "$phase" == mac ]]; then
+        /usr/bin/python3 - "$out/build/Build/Products/Debug/Musia.app/Contents/MacOS/Musia" <<'PY' || exit 76
+import subprocess,sys
+result=subprocess.run(['pgrep','-f',sys.argv[1]],capture_output=True)
+assert result.returncode==1, 'QA app state uncertain; retain guard for owned cleanup'
+PY
+    fi
 }
 trap cleanup EXIT
+bounded() { /usr/bin/python3 tools/store/apple_qa_command.py "$@"; }
 if pgrep -x xcodebuild >/dev/null || pgrep -x swift-frontend >/dev/null; then
     printf '%s\n' 'Peer Apple build active; no Musia QA launched.'
     exit 75
@@ -37,9 +45,9 @@ case "$phase" in
 mobile)
     : "${MUSIA_IPHONE_UDID:?Existing stopped Musia iPhone}"
     : "${MUSIA_IPAD_UDID:?Existing stopped Musia iPad}"
-    MUSIA_QA_DERIVED_DATA="$out/build" MUSIA_SIMULATOR_UDID="$MUSIA_IPHONE_UDID" \
+    MUSIA_QA_DERIVED_DATA="${MUSIA_QA_DERIVED_DATA:-$out/build}" MUSIA_SIMULATOR_UDID="$MUSIA_IPHONE_UDID" \
       bash "$0" iphone "$out/iphone"
-    MUSIA_QA_DERIVED_DATA="$out/build" MUSIA_SIMULATOR_UDID="$MUSIA_IPAD_UDID" \
+    MUSIA_QA_DERIVED_DATA="${MUSIA_QA_DERIVED_DATA:-$out/build}" MUSIA_SIMULATOR_UDID="$MUSIA_IPAD_UDID" \
       bash "$0" ipad "$out/ipad"
     exit
     ;;
@@ -56,13 +64,32 @@ core)
     exit
     ;;
 mac)
-    xcodebuild test -project apps/macos/Musia.xcodeproj -scheme Musia \
+    mac_args=( -project apps/macos/Musia.xcodeproj -scheme Musia \
       -configuration Debug -destination 'platform=macOS' -derivedDataPath "$out/build" \
-      -resultBundlePath "$out/mac.xcresult" -jobs 2 -parallel-testing-enabled NO \
+      -jobs 2 -parallel-testing-enabled NO \
       OTHER_SWIFT_FLAGS=-j2 CODE_SIGN_IDENTITY=- \
       PRODUCT_BUNDLE_IDENTIFIER=art.lazying.musia.compatibilityqa \
       MUSIA_DEBUG_PROFILE= MUSIA_MAC_PROFILE= PROVISIONING_PROFILE_SPECIFIER= \
-      ENABLE_HARDENED_RUNTIME=NO > "$out/mac.log" 2>&1
+      ENABLE_HARDENED_RUNTIME=NO )
+    bounded 900 xcodebuild build-for-testing "${mac_args[@]}" > "$out/mac-build.log" 2>&1
+    /usr/bin/python3 - "$out/build/Build/Products/Debug/Musia.app" <<'PY'
+import plistlib,subprocess,sys
+from pathlib import Path
+app=Path(sys.argv[1])
+info=plistlib.loads((app/'Contents/Info.plist').read_bytes())
+assert info['CFBundleIdentifier']=='art.lazying.musia.compatibilityqa'
+raw=subprocess.check_output(['codesign','-d','--entitlements',':-',str(app)],stderr=subprocess.DEVNULL)
+entitlements=plistlib.loads(raw)
+assert entitlements.get('com.apple.security.app-sandbox') is True
+assert not entitlements.get('keychain-access-groups')
+assert not entitlements.get('com.apple.security.application-groups')
+print('QA identity and private sandbox verified before launch')
+PY
+    bounded 600 xcodebuild test-without-building "${mac_args[@]}" \
+      -resultBundlePath "$out/mac.xcresult" \
+      -only-testing:MusiaMacTests/MacPlaybackTests \
+      -test-timeouts-enabled YES -maximum-test-execution-time-allowance 120 \
+      > "$out/mac.log" 2>&1
     exit
     ;;
 iphone|ipad) ;;
@@ -76,7 +103,7 @@ assert len(rows)==1 and rows[0]["name"].startswith("Musia-") and rows[0]["state"
 ' "$candidate"
 device="$candidate"
 xcrun simctl boot "$device"
-xcrun simctl bootstatus "$device" -b > "$out/boot.log" 2>&1
+bounded 120 xcrun simctl bootstatus "$device" -b > "$out/boot.log" 2>&1
 tests=(
   -only-testing:MusiaUITests/PracticeSmokeTests/testComposerSurvivesRotationAndBackground
   -only-testing:MusiaUITests/PracticeSmokeTests/testStagePlaybackSurvivesRotationWithLargeText
@@ -91,7 +118,7 @@ if [[ "${MUSIA_QA_CAPTURE_ONLY:-0}" != 1 ]]; then
     )
 fi
 status=0
-xcodebuild test -project apps/ios/Musia.xcodeproj -scheme Musia \
+bounded 900 xcodebuild test -project apps/ios/Musia.xcodeproj -scheme Musia \
   -configuration Debug -destination "platform=iOS Simulator,id=$device" \
   -derivedDataPath "${MUSIA_QA_DERIVED_DATA:-$out/build}" -resultBundlePath "$out/ui.xcresult" \
   -jobs 2 -parallel-testing-enabled NO -collect-test-diagnostics never \
@@ -100,7 +127,7 @@ xcodebuild test -project apps/ios/Musia.xcodeproj -scheme Musia \
   CODE_SIGNING_ALLOWED=YES CODE_SIGN_IDENTITY=- ONLY_ACTIVE_ARCH=YES \
   OTHER_SWIFT_FLAGS=-j2 COMPILER_INDEX_STORE_ENABLE=NO > "$out/ui.log" 2>&1 || status=$?
 if [[ -d "$out/ui.xcresult" ]]; then
-    xcrun xcresulttool export attachments --path "$out/ui.xcresult" \
+    bounded 120 xcrun xcresulttool export attachments --path "$out/ui.xcresult" \
       --output-path "$out/attachments" > "$out/export.log" 2>&1
 fi
 exit "$status"
