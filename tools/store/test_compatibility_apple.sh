@@ -23,11 +23,7 @@ assert len(rows)==1 and rows[0]["state"]=="Shutdown"
 ' "$device" || exit 76
     fi
     if [[ "$phase" == mac ]]; then
-        /usr/bin/python3 - "$out/build/Build/Products/Debug/Musia.app/Contents/MacOS/Musia" <<'PY' || exit 76
-import subprocess,sys
-result=subprocess.run(['pgrep','-f',sys.argv[1]],capture_output=True)
-assert result.returncode==1, 'QA app state uncertain; retain guard for owned cleanup'
-PY
+        /usr/bin/python3 tools/store/apple_qa_command.py --check-app-exited || exit 76
     fi
 }
 trap cleanup EXIT

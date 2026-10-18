@@ -66,6 +66,12 @@ Mac or the real host guard. No command-line alternate lock path is supported.
 For a separately admitted screenshot-repair round, `MUSIA_QA_CAPTURE_ONLY=1`
 runs only composer rotation/background, large-text Stage playback and large-text
 mini-player navigation. This is not a replacement for the full regression suite.
+`MUSIA_QA_DERIVED_DATA` reuses an existing app-owned build cache. Mobile phases
+have finite boot, build/test and export deadlines. Timeouts stop only their
+launched process group and retain the outer guard for explicit cleanup checks.
+The hosted `mac` phase uses a separate sandboxed QA bundle identity, verifies
+its signed entitlements before launch, and runs only `MacPlaybackTests`. It
+does not install over production. A failed process inventory retains the guard.
 
 Native QA covers local history/export, audio clock/seek/loop, ruby wrapping,
 rotation, large text, creator draft retention and the miniature player's safe
@@ -76,7 +82,7 @@ must be reported separately; synthetic audio is not evidence of those passes.
 ## Current Evidence
 
 - Static manifests, resource identity, native references and 50 Swift syntax
-  parses passed. Store tooling: 246 unit tests passed, including12 disposable-path
+  parses passed. Store tooling: 252 unit tests passed, including12 disposable-path
   guard tests. No shared host or simulator was used for these guard tests.
 - Final Intel app build with macOS12 target passed on Xcode26.3. `vtool` on the
   built app's Debug dylib reports minos12.0/SDK26.2. The source-based package
@@ -98,12 +104,22 @@ must be reported separately; synthetic audio is not evidence of those passes.
 - Mobile round start01:21:09UTC; exact guard release log write01:26:32.880286UTC.
   Fresh01:28:18UTC readback confirmed no compiler/test/Musia child, no guard and
   both owned simulators Shutdown. The host has been handed back.
-- Screenshot review found landscape `XCUIApplication.screenshot()` captures
+- Initial screenshot review found landscape `XCUIApplication.screenshot()` captures
   cropped into stale portrait bounds on both devices. The existing full-screen
   Stage captures are correctly oriented. The local test-only repair uses
-  `XCUIScreen.main.screenshot()` and asserts orientation dimensions; a separately
-  admitted recapture is still required. Visual qualification is incomplete;
-  these images are not approved store screenshots.
+  `XCUIScreen.main.screenshot()` and asserts orientation dimensions. The admitted
+  follow-up ran exactly three selected tests per device, all six executions
+  passed. All14 resulting images were inspected: correct portrait/landscape
+  canvases, composer above keyboard, accessible transport and navigation.
+  Large-text content scrolls beyond the viewport; loading-state images are not
+  approved store assets or proof of live-catalog availability.
+- Follow-up start01:41:17UTC, exit0 and exact guard release after the final
+ 01:44:24UTC inventory; independent01:44:32UTC readback confirmed no guard,
+  compiler/test/app child or booted simulator. Host handed back to its next owner.
+- Conditional Mac hosted tests were skipped before launch: source validation
+  found an argv-pattern cleanup probe matching its own verifier. The local
+  repair uses exact executable-name inventory, with disposable regression
+  coverage for self-match and process-query errors. It has not run on a Mac.
 - Xcode emitted responsiveness warnings for synchronous audio-session calls,
   including test calls. Playback tests passed, but the warnings remain a
   follow-up; do not describe this as a warning-free run.
@@ -119,9 +135,12 @@ Headless evidence hashes:
 | Final Mac build log | `9fa656c251621e0b8268f0316578d27cb247277f46c022fe42b1679e2588c4c2` |
 | iPhone test log | `59cc373e19542c884b5916d2ca74018f2b541361ad81f7eb399f5f96ad798243` |
 | iPad test log | `e0538438b5c93aec16cadf278d1b912ad3b1c9bad84625ecd6575f0c0ae5e9a9` |
+| iPhone follow-up log | `5de6c9b229f43dda409cbbe8eee83f1c335f8e13b4da1c41de5d40379bb136c0` |
+| iPad follow-up log | `7f2d19e79127dd9fd9970ab26af26b6f8c34ccefe810bfb8fa64a2a701d04b19` |
 
-Mobile round source: `b6e9e62`, application implementation unchanged since
-`9119183`. The subsequent capture-helper repair has not yet run on a Mac.
+Initial mobile round source: `b6e9e62`; follow-up: `3ea6c8c`. Application
+implementation unchanged since `9119183`. These are simulator UI/runtime checks,
+not physical-device or Monterey runtime qualification.
 
 Exact artifacts and final tester states belong in the compatibility handoff and
 will be added here after validation. Do not promote this candidate to production.

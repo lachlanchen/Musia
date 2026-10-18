@@ -8,6 +8,13 @@ import sys
 from apple_build_guard import group_alive
 
 
+def qa_app_exited():
+    # Exact executable name avoids matching this verifier's argv/path string.
+    # Preflight forbids an already-running Musia app; never kill a matching PID.
+    result = subprocess.run(['pgrep', '-x', 'Musia'], capture_output=True)
+    return result.returncode == 1
+
+
 def run(command, timeout):
     process = subprocess.Popen(command, start_new_session=True)
     try:
@@ -33,6 +40,8 @@ def run(command, timeout):
 
 
 if __name__ == "__main__":
+    if sys.argv[1:] == ['--check-app-exited']:
+        raise SystemExit(0 if qa_app_exited() else 76)
     timeout = int(sys.argv[1])
     if not 1 <= timeout <= 1800 or len(sys.argv) < 3:
         raise SystemExit(64)
