@@ -5,19 +5,65 @@ import XCTest
 @testable import Musia
 @testable import MusiaCore
 
+private struct RubyLayoutSize: PreferenceKey {
+    static let defaultValue = CGSize.zero
+    static func reduce(value: inout CGSize, nextValue: () -> CGSize) { value = nextValue() }
+}
+
 final class MacPlaybackTests: XCTestCase {
     @MainActor
     func testMontereyRubyFallbackWrapsWithoutDroppingTokens() async throws {
         let words = ["wind", "over", "the", "mountains", "and", "sea"]
         func height(_ width: CGFloat) async throws -> CGFloat {
+            var measured: CGSize?
             let view = NSHostingView(rootView: MontereyTokenFlow(count: words.count) { index in
                 VStack { Text("reading").font(.caption); Text(words[index]).font(.title2) }
-            }.frame(width: width))
-            view.setFrameSize(NSSize(width: width, height: 500))
-            view.layoutSubtreeIfNeeded()
-            try await Task.sleep(nanoseconds: 200_000_000)
-            view.layoutSubtreeIfNeeded()
-            let size = view.fittingSize
+            }
+            .background(GeometryReader { proxy in
+                Color.clear.preference(key: RubyLayoutSize.self, value: proxy.size)
+            })
+            .onPreferenceChange(RubyLayoutSize.self) { measured = $0 }
+            .frame(width: width, alignment: .topLeading))
+
+            // Give preferences a window-backed layout lifecycle without showing UI.
+            // A plain container prevents hosting-view size hints resizing the window.
+            let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: width, height: 700),
+                                  styleMask: .borderless, backing: .buffered, defer: false)
+            window.isReleasedWhenClosed = false
+            let container = NSView(frame: NSRect(x: 0, y: 0, width: width, height: 700))
+            window.contentView = container
+            view.frame = container.bounds
+            view.autoresizingMask = [.width, .height]
+            container.addSubview(view)
+            defer {
+                view.removeFromSuperview()
+                window.contentView = nil
+                window.close()
+            }
+            XCTAssertFalse(window.isVisible)
+            XCTAssertFalse(window.isKeyWindow)
+            XCTAssertTrue(view.window === window)
+
+            var previous: CGSize?
+            var stablePasses = 0
+            var settled = false
+            for _ in 0..<20 {
+                view.layoutSubtreeIfNeeded()
+                try await Task.sleep(nanoseconds: 100_000_000)
+                if let current = measured, current == previous,
+                   abs(current.width - width) < 0.5, current.height > 20 {
+                    stablePasses += 1
+                } else { stablePasses = 0 }
+                previous = measured
+                if stablePasses >= 3 { settled = true; break }
+            }
+            let fitting = view.fittingSize
+            print("Musia ruby layout: assigned=\(width) rendered=\(String(describing: measured)) fitting=\(fitting) settled=\(settled)")
+            let size = try XCTUnwrap(settled ? measured : nil,
+                                    "Window-backed ruby layout did not settle at its assigned width")
+            XCTAssertFalse(window.isVisible)
+            XCTAssertFalse(window.isKeyWindow)
+            XCTAssertEqual(size.width, width, accuracy: 0.5)
             XCTAssertTrue(size.height.isFinite)
             XCTAssertGreaterThan(size.height, 20)
             XCTAssertLessThan(size.height, 600)

@@ -14,6 +14,7 @@ assert info["NSMicrophoneUsageDescription"] == (
     "Match a note measures a three-second sung or hummed note on your device. "
     "The take is deleted after measurement and is never uploaded.")
 assert "NSAppTransportSecurity" not in info
+assert info["LSMinimumSystemVersion"] == "$(MACOSX_DEPLOYMENT_TARGET)"
 assert plistlib.loads((resources / "Musia.entitlements").read_bytes()) == {
     "com.apple.security.app-sandbox": True,
     "com.apple.security.network.client": True,
@@ -22,7 +23,8 @@ assert plistlib.loads((resources / "Musia.entitlements").read_bytes()) == {
 }
 project = (ROOT / "Musia.xcodeproj/project.pbxproj").read_text()
 assert "PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;" in project
-assert "MACOSX_DEPLOYMENT_TARGET = 14.0;" in project
+assert "MACOSX_DEPLOYMENT_TARGET = 12.0;" in project
+assert "MACOSX_DEPLOYMENT_TARGET = 14.0;" not in project
 assert "MUSIA_MAC_PROFILE" in project
 assert "SUPPORTS_MACCATALYST" not in project
 for base in [ROOT / "Musia", ROOT / "Tests", ROOT.parent / "ios/Musia/Core",

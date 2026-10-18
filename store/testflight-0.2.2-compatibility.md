@@ -141,6 +141,24 @@ must be reported separately; synthetic audio is not evidence of those passes.
   and official Duo tests remain unverified. Signing/internal uploads require
   further qualification and explicit placement. No production/review change.
 
+### Source-Only Layout Diagnosis
+
+The next test fixture attaches the hosting view to a never-shown, test-owned
+window and observes rendered geometry until it settles, for at most two seconds
+per width. It retains the 20-to-600-point height bounds and narrow-greater-than-
+wide assertion, adds assigned-width and non-visible/non-key-window checks, and
+logs both rendered and intrinsic fitting sizes. Cleanup detaches the view and
+closes only that fixture window. Production layout code is unchanged.
+
+This tests a lifecycle hypothesis, not an established fix. Apple's
+[NSHostingView documentation](https://developer.apple.com/documentation/swiftui/nshostingview)
+describes layout-time size reporting; it does not establish why this fixture
+failed. No local SwiftUI typecheck or runtime is available on the Linux host.
+The new fixture has only a syntax parse until an explicitly admitted native run.
+The Mac static validator now checks this candidate's macOS12 deployment target
+and inherited minimum-OS plist setting, instead of the released app's macOS14
+target. This does not change the released binary or qualify Monterey runtime.
+
 Headless evidence hashes:
 
 | Evidence | SHA-256 |
