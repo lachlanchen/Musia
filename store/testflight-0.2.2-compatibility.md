@@ -51,7 +51,8 @@ python3 tools/store/apple_build_guard.py \
   -- bash tools/store/test_compatibility_apple.sh core /absolute/new/evidence/core
 ```
 
-Other phases: `mac`, `iphone`, `ipad`. Simulator phases require the existing,
+Other phases: `headless` (core tests plus unsigned Mac build), `mac`, `iphone`,
+`ipad`. Simulator phases require the existing,
 stopped, Musia-owned `MUSIA_SIMULATOR_UDID`. The wrapper releases only its matching
 directory/inode/token, and retains an uncertain guard for owner recovery.
 Never delete a peer guard or treat a quiet process list as a queue handback.
@@ -66,12 +67,26 @@ must be reported separately; synthetic audio is not evidence of those passes.
 
 - Static manifests, resource identity, native references and 50 Swift syntax
   parses passed. Store tooling: 238 unit tests passed.
-- Initial Intel build with macOS12 target passed on Xcode26.3; subsequent native
-  QA changes still require a fresh compile/test round.
+- Final Intel app build with macOS12 target passed on Xcode26.3. `vtool` on the
+  built app's Debug dylib reports minos12.0/SDK26.2. The source-based package
+  suite passed69 tests with1 opt-in network skip and0 failures on the iMac.
+  This is not a native UI/audio or Monterey runtime result.
 - A reachable macOS12.7.6 host was identified read-only; no Musia runtime test
   or desktop takeover has been performed there.
 - Candidate is not yet archived, uploaded, processed or assigned to testers.
   Existing iOS and Mac 0.2.1(11) builds were read back as VALID.
+- Read-only store version checks confirm iOS0.1.2 remains WAITING_FOR_REVIEW
+  and macOS0.1.2 remains READY_FOR_SALE. Neither was mutated.
+- The admitted iMac headless round released its exact protocol1 guard; no owned
+  compiler/test/runtime remained at handback. Further native QA and signing are
+  awaiting explicit shared-host placement, not merely an idle process snapshot.
+
+Headless evidence hashes:
+
+| Evidence | SHA-256 |
+| --- | --- |
+| Core test log | `cb75af13ab6b779b34666e0306a7254f4d8c5cef15648434978c71794cb21182` |
+| Final Mac build log | `9fa656c251621e0b8268f0316578d27cb247277f46c022fe42b1679e2588c4c2` |
 
 Exact artifacts and final tester states belong in the compatibility handoff and
 will be added here after validation. Do not promote this candidate to production.
