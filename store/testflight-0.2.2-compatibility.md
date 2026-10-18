@@ -119,13 +119,27 @@ must be reported separately; synthetic audio is not evidence of those passes.
 - Conditional Mac hosted tests were skipped before launch: source validation
   found an argv-pattern cleanup probe matching its own verifier. The local
   repair uses exact executable-name inventory, with disposable regression
-  coverage for self-match and process-query errors. It has not run on a Mac.
+  coverage for self-match and process-query errors. The later Mac-only round
+  below used that repair and verified cleanup.
 - Xcode emitted responsiveness warnings for synchronous audio-session calls,
   including test calls. Playback tests passed, but the warnings remain a
   follow-up; do not describe this as a warning-free run.
-- Hosted native Mac regressions, actual Monterey runtime and official Duo tests
-  remain unverified. Signing/internal uploads require further qualification and
-  explicit shared-host placement. No production or review state was changed.
+- The admitted Mac-only round used frozen `185d619` with unchanged app source.
+  Build-for-testing passed on Xcode27.0. The separate sandboxed QA identity and
+  absence of shared keychain/application groups were verified before launch;
+  its private container was confirmed in the runtime log.
+- Five Mac test methods ran: three passed (reference audio/metronome, history
+  reopen/export, local speed/seek/loop), one failed (ruby fallback layout, three
+  assertions), and the live/remote test was skipped. The layout fixture reported
+  height1164 for both800-point and180-point widths, violating its bounded-height
+  and wrapping checks. Diagnosis must distinguish the offscreen hosting fixture
+  from the fallback view itself; neither is cleared by a successful compile.
+- The round exited65 without a repair/retry. Exact guard released; independent
+  01:57:18UTC inventory confirmed no guard, compiler/test/app or booted simulator.
+  Host handed back. AppKit layout reentrancy and CoreMedia warnings were retained.
+- Mac runtime qualification is **failed**, not complete. Actual Monterey runtime
+  and official Duo tests remain unverified. Signing/internal uploads require
+  further qualification and explicit placement. No production/review change.
 
 Headless evidence hashes:
 
@@ -137,6 +151,8 @@ Headless evidence hashes:
 | iPad test log | `e0538438b5c93aec16cadf278d1b912ad3b1c9bad84625ecd6575f0c0ae5e9a9` |
 | iPhone follow-up log | `5de6c9b229f43dda409cbbe8eee83f1c335f8e13b4da1c41de5d40379bb136c0` |
 | iPad follow-up log | `7f2d19e79127dd9fd9970ab26af26b6f8c34ccefe810bfb8fa64a2a701d04b19` |
+| Mac-only build log | `e5ccfcd85669e71f286b40d753c016b904df0e57ae369fccb9ecff9ea2a155a4` |
+| Mac-only hosted test log | `33cb40a8efab4bba5a95307795c707a367eaf78e5cdc24f830bc00d067e4cafe` |
 
 Initial mobile round source: `b6e9e62`; follow-up: `3ea6c8c`. Application
 implementation unchanged since `9119183`. These are simulator UI/runtime checks,
