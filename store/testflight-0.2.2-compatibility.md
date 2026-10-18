@@ -154,10 +154,27 @@ This tests a lifecycle hypothesis, not an established fix. Apple's
 [NSHostingView documentation](https://developer.apple.com/documentation/swiftui/nshostingview)
 describes layout-time size reporting; it does not establish why this fixture
 failed. No local SwiftUI typecheck or runtime is available on the Linux host.
-The new fixture has only a syntax parse until an explicitly admitted native run.
+The subsequent native build below compiled the fixture, but did not execute it.
 The Mac static validator now checks this candidate's macOS12 deployment target
 and inherited minimum-OS plist setting, instead of the released app's macOS14
 target. This does not change the released binary or qualify Monterey runtime.
+
+### Mac Layout Round 2
+
+Frozen `0da4ecb` passed build-for-testing and the separate QA sandbox/identity
+checks. The hosted test phase reached its 600-second deadline without reporting
+any executed test case or rendered/fitting geometry. A one-second process sample
+found XCTest waiting for its configuration and IDE session, before test methods;
+a startup log also reported a refused test-manager channel. The underlying
+cause is not established. No shared service was restarted and no retry ran.
+
+Exit76 retained the guard for explicit cleanup verification. The original
+ownership metadata and directory identity matched; the wrapper, owned process
+groups and QA app had exited. Exact release was02:33:56UTC; independent02:34:17UTC
+inventory confirmed no guard or owned runtime. The incomplete result bundle
+lacks its Info.plist and is retained as diagnostic evidence, not a test summary.
+Mac qualification and internal signing/upload remain blocked. Earlier successful
+mobile tests and the earlier failed Mac geometry assertions are not overwritten.
 
 Headless evidence hashes:
 
@@ -171,6 +188,8 @@ Headless evidence hashes:
 | iPad follow-up log | `7f2d19e79127dd9fd9970ab26af26b6f8c34ccefe810bfb8fa64a2a701d04b19` |
 | Mac-only build log | `e5ccfcd85669e71f286b40d753c016b904df0e57ae369fccb9ecff9ea2a155a4` |
 | Mac-only hosted test log | `33cb40a8efab4bba5a95307795c707a367eaf78e5cdc24f830bc00d067e4cafe` |
+| Mac layout round2 build log | `a1351322620fd5bf7376d7d0a8655b14820892efaa3474443fd6c25a67e32e55` |
+| Mac layout round2 test-startup log | `c65f5e9f15b5f3d1d35d1f22171f4b4ca87eac292e8ad6bf77f13d44b875d293` |
 
 Initial mobile round source: `b6e9e62`; follow-up: `3ea6c8c`. Application
 implementation unchanged since `9119183`. These are simulator UI/runtime checks,
