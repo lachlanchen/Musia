@@ -57,10 +57,11 @@ core)
     ;;
 mac)
     xcodebuild test -project apps/macos/Musia.xcodeproj -scheme Musia \
-      -destination 'platform=macOS' -derivedDataPath "$out/build" \
+      -configuration Debug -destination 'platform=macOS' -derivedDataPath "$out/build" \
       -resultBundlePath "$out/mac.xcresult" -jobs 2 -parallel-testing-enabled NO \
       OTHER_SWIFT_FLAGS=-j2 CODE_SIGN_IDENTITY=- \
       PRODUCT_BUNDLE_IDENTIFIER=art.lazying.musia.compatibilityqa \
+      MUSIA_DEBUG_PROFILE= MUSIA_MAC_PROFILE= PROVISIONING_PROFILE_SPECIFIER= \
       ENABLE_HARDENED_RUNTIME=NO > "$out/mac.log" 2>&1
     exit
     ;;
@@ -76,19 +77,26 @@ assert len(rows)==1 and rows[0]["name"].startswith("Musia-") and rows[0]["state"
 device="$candidate"
 xcrun simctl boot "$device"
 xcrun simctl bootstatus "$device" -b > "$out/boot.log" 2>&1
+tests=(
+  -only-testing:MusiaUITests/PracticeSmokeTests/testComposerSurvivesRotationAndBackground
+  -only-testing:MusiaUITests/PracticeSmokeTests/testStagePlaybackSurvivesRotationWithLargeText
+  -only-testing:MusiaUITests/PracticeSmokeTests/testMiniPlayerNavigationWithLargeText
+)
+if [[ "${MUSIA_QA_CAPTURE_ONLY:-0}" != 1 ]]; then
+    tests+=(
+      -only-testing:MusiaTests
+      -only-testing:MusiaUITests/PracticeSmokeTests/testBeginnerPracticeAndSettings
+      -only-testing:MusiaUITests/PracticeSmokeTests/testSimpleCreatorComposer
+      -only-testing:MusiaUITests/PracticeSmokeTests/testStageLayoutAndPracticeSwitch
+    )
+fi
 status=0
 xcodebuild test -project apps/ios/Musia.xcodeproj -scheme Musia \
   -configuration Debug -destination "platform=iOS Simulator,id=$device" \
   -derivedDataPath "${MUSIA_QA_DERIVED_DATA:-$out/build}" -resultBundlePath "$out/ui.xcresult" \
   -jobs 2 -parallel-testing-enabled NO -collect-test-diagnostics never \
   -test-timeouts-enabled YES -maximum-test-execution-time-allowance 180 \
-  -only-testing:MusiaTests \
-  -only-testing:MusiaUITests/PracticeSmokeTests/testBeginnerPracticeAndSettings \
-  -only-testing:MusiaUITests/PracticeSmokeTests/testSimpleCreatorComposer \
-  -only-testing:MusiaUITests/PracticeSmokeTests/testStageLayoutAndPracticeSwitch \
-  -only-testing:MusiaUITests/PracticeSmokeTests/testComposerSurvivesRotationAndBackground \
-  -only-testing:MusiaUITests/PracticeSmokeTests/testStagePlaybackSurvivesRotationWithLargeText \
-  -only-testing:MusiaUITests/PracticeSmokeTests/testMiniPlayerNavigationWithLargeText \
+  "${tests[@]}" \
   CODE_SIGNING_ALLOWED=YES CODE_SIGN_IDENTITY=- ONLY_ACTIVE_ARCH=YES \
   OTHER_SWIFT_FLAGS=-j2 COMPILER_INDEX_STORE_ENABLE=NO > "$out/ui.log" 2>&1 || status=$?
 if [[ -d "$out/ui.xcresult" ]]; then

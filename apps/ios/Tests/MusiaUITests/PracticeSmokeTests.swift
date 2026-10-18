@@ -2,6 +2,19 @@ import XCTest
 
 final class PracticeSmokeTests: XCTestCase {
     @MainActor
+    private func captureScreen(_ name: String, orientation: UIDeviceOrientation? = nil) {
+        // App-window capture can crop a rotated scene into the old portrait bounds.
+        let screenshot = XCUIScreen.main.screenshot()
+        let size = screenshot.image.size
+        if orientation?.isLandscape == true { XCTAssertGreaterThan(size.width, size.height) }
+        if orientation?.isPortrait == true { XCTAssertGreaterThan(size.height, size.width) }
+        let attachment = XCTAttachment(screenshot: screenshot)
+        attachment.name = name
+        attachment.lifetime = .keepAlways
+        add(attachment)
+    }
+
+    @MainActor
     func testComposerSurvivesRotationAndBackground() {
         let app = XCUIApplication()
         app.launch()
@@ -16,8 +29,7 @@ final class PracticeSmokeTests: XCTestCase {
             XCTAssertTrue(input.waitForExistence(timeout: 5))
             XCTAssertEqual(input.value as? String, "Musia resize draft")
             XCTAssertTrue(input.isHittable)
-            let image = XCTAttachment(screenshot: app.screenshot())
-            image.name = "creator-resize-\(orientation.rawValue)"; image.lifetime = .keepAlways; add(image)
+            captureScreen("creator-resize-\(orientation.rawValue)", orientation: orientation)
         }
         XCUIDevice.shared.press(.home); app.activate()
         XCTAssertEqual(input.value as? String, "Musia resize draft")
@@ -47,8 +59,7 @@ final class PracticeSmokeTests: XCTestCase {
             XCTAssertTrue(play.isHittable)
             XCTAssertEqual(play.label, "Pause")
             XCTAssertTrue(app.frame.contains(play.frame))
-            let image = XCTAttachment(screenshot: app.screenshot())
-            image.name = "large-stage-\(orientation.rawValue)"; image.lifetime = .keepAlways; add(image)
+            captureScreen("large-stage-\(orientation.rawValue)", orientation: orientation)
         }
         play.tap()
     }
@@ -67,16 +78,14 @@ final class PracticeSmokeTests: XCTestCase {
         XCTAssertTrue(input.waitForExistence(timeout: 5))
         XCTAssertTrue(app.frame.contains(input.frame))
         XCTAssertFalse(app.buttons["creator.render"].exists)
-        let initial = XCTAttachment(screenshot: app.screenshot())
-        initial.name = "create-simple"; initial.lifetime = .keepAlways; add(initial)
+        captureScreen("create-simple")
         input.tap()
         input.typeText("A gentle song about coming home")
         XCTAssertTrue(input.isHittable)
         if app.keyboards.firstMatch.exists {
             XCTAssertLessThanOrEqual(input.frame.maxY, app.keyboards.firstMatch.frame.minY + 1)
         }
-        let keyboard = XCTAttachment(screenshot: app.screenshot())
-        keyboard.name = "create-keyboard"; keyboard.lifetime = .keepAlways; add(keyboard)
+        captureScreen("create-keyboard")
         input.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 30))
     }
 
@@ -249,10 +258,7 @@ final class PracticeSmokeTests: XCTestCase {
         if largeText { app.launchArguments = ["-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"] }
         app.launch()
         defer { app.terminate(); XCUIDevice.shared.orientation = .portrait }
-        let baseline = XCTAttachment(screenshot: app.screenshot())
-        baseline.name = "navigation-before-selection"
-        baseline.lifetime = .keepAlways
-        add(baseline)
+        captureScreen("navigation-before-selection")
         let exercise = app.buttons["library.localFirstPulse"]
         XCTAssertTrue(exercise.waitForExistence(timeout: 15))
         exercise.tap()
@@ -280,10 +286,7 @@ final class PracticeSmokeTests: XCTestCase {
             }
             // Let the tab transition settle before retaining visual evidence.
             Thread.sleep(forTimeInterval: 1)
-            let image = XCTAttachment(screenshot: app.screenshot())
-            image.name = "mini-player-\(orientation.rawValue)-large-text-\(largeText)"
-            image.lifetime = .keepAlways
-            add(image)
+            captureScreen("mini-player-\(orientation.rawValue)-large-text-\(largeText)", orientation: orientation)
             let tree = XCTAttachment(string: app.debugDescription)
             tree.name = "navigation-frames-\(orientation.rawValue)"
             tree.lifetime = .keepAlways
@@ -310,10 +313,7 @@ final class PracticeSmokeTests: XCTestCase {
         app.swipeUp()
         let shape = app.descendants(matching: .any)["guitar.Em"].firstMatch
         XCTAssertTrue(shape.waitForExistence(timeout: 5))
-        let diagram = XCTAttachment(screenshot: app.screenshot())
-        diagram.name = "first-pulse-em-fingering"
-        diagram.lifetime = .keepAlways
-        add(diagram)
+        captureScreen("first-pulse-em-fingering")
         app.swipeDown()
         transport.tap()
         expectation(for: NSPredicate(format: "label == 'Pause'"), evaluatedWith: transport)
@@ -324,10 +324,7 @@ final class PracticeSmokeTests: XCTestCase {
         let tapPad = app.buttons["practice.tap"]
         XCTAssertTrue(tapPad.waitForExistence(timeout: 5))
         XCTAssertFalse(tapPad.isEnabled)
-        let tap = XCTAttachment(screenshot: app.screenshot())
-        tap.name = "paused-tap-disabled"
-        tap.lifetime = .keepAlways
-        add(tap)
+        captureScreen("paused-tap-disabled")
         app.terminate()
     }
 }

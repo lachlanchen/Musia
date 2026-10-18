@@ -52,7 +52,9 @@ python3 tools/store/apple_build_guard.py \
 ```
 
 Other phases: `headless` (core tests plus unsigned Mac build), `mac`, `iphone`,
-`ipad`. Simulator phases require the existing,
+`ipad`, and `mobile` (iPhone then iPad under one enclosing guard, sharing the
+owned build cache and stopping after a failed phase). `mobile` requires
+`MUSIA_IPHONE_UDID` and `MUSIA_IPAD_UDID`; individual simulator phases require the existing,
 stopped, Musia-owned `MUSIA_SIMULATOR_UDID`. The wrapper releases only its matching
 directory/inode/token, and retains an uncertain guard for owner recovery.
 Never delete a peer guard or treat a quiet process list as a queue handback.
@@ -61,6 +63,9 @@ Failed child launch releases the unused owned guard; signal-terminated children,
 interrupted connections and uncertain descendants retain it for explicit owner
 recovery. Disposable-path tests exercise these cases without touching a shared
 Mac or the real host guard. No command-line alternate lock path is supported.
+For a separately admitted screenshot-repair round, `MUSIA_QA_CAPTURE_ONLY=1`
+runs only composer rotation/background, large-text Stage playback and large-text
+mini-player navigation. This is not a replacement for the full regression suite.
 
 Native QA covers local history/export, audio clock/seek/loop, ruby wrapping,
 rotation, large text, creator draft retention and the miniature player's safe
@@ -84,8 +89,27 @@ must be reported separately; synthetic audio is not evidence of those passes.
 - Read-only store version checks confirm iOS0.1.2 remains WAITING_FOR_REVIEW
   and macOS0.1.2 remains READY_FOR_SALE. Neither was mutated.
 - The admitted iMac headless round released its exact protocol1 guard; no owned
-  compiler/test/runtime remained at handback. Further native QA and signing are
-  awaiting explicit shared-host placement, not merely an idle process snapshot.
+  compiler/test/runtime remained at handback.
+- A separate admitted mobile round ran on Xcode27.0/iOS27.0, serially using the
+  existing iPhone18 Pro Max and iPad Pro13-inch simulators. Each passed66 tests,
+  skipped1 opt-in live test, and had0 failures (67 total per device). This covers
+  native WAV decode/audio clock and the selected six UI tests, not acoustic
+  quality, real microphone input or physical-device background playback.
+- Mobile round start01:21:09UTC; exact guard release log write01:26:32.880286UTC.
+  Fresh01:28:18UTC readback confirmed no compiler/test/Musia child, no guard and
+  both owned simulators Shutdown. The host has been handed back.
+- Screenshot review found landscape `XCUIApplication.screenshot()` captures
+  cropped into stale portrait bounds on both devices. The existing full-screen
+  Stage captures are correctly oriented. The local test-only repair uses
+  `XCUIScreen.main.screenshot()` and asserts orientation dimensions; a separately
+  admitted recapture is still required. Visual qualification is incomplete;
+  these images are not approved store screenshots.
+- Xcode emitted responsiveness warnings for synchronous audio-session calls,
+  including test calls. Playback tests passed, but the warnings remain a
+  follow-up; do not describe this as a warning-free run.
+- Hosted native Mac regressions, actual Monterey runtime and official Duo tests
+  remain unverified. Signing/internal uploads require further qualification and
+  explicit shared-host placement. No production or review state was changed.
 
 Headless evidence hashes:
 
@@ -93,6 +117,11 @@ Headless evidence hashes:
 | --- | --- |
 | Core test log | `cb75af13ab6b779b34666e0306a7254f4d8c5cef15648434978c71794cb21182` |
 | Final Mac build log | `9fa656c251621e0b8268f0316578d27cb247277f46c022fe42b1679e2588c4c2` |
+| iPhone test log | `59cc373e19542c884b5916d2ca74018f2b541361ad81f7eb399f5f96ad798243` |
+| iPad test log | `e0538438b5c93aec16cadf278d1b912ad3b1c9bad84625ecd6575f0c0ae5e9a9` |
+
+Mobile round source: `b6e9e62`, application implementation unchanged since
+`9119183`. The subsequent capture-helper repair has not yet run on a Mac.
 
 Exact artifacts and final tester states belong in the compatibility handoff and
 will be added here after validation. Do not promote this candidate to production.
