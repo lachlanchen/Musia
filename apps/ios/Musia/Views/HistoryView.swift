@@ -50,14 +50,14 @@ struct HistoryView: View {
     var body: some View {
         List {
             Section {
-                LabeledContent("Sessions", value: String(history.records.count))
-                LabeledContent("Practice time", value: Timeline.timestamp(history.records.reduce(0) { $0 + $1.seconds }))
+                MusiaValue("Sessions", value: String(history.records.count))
+                MusiaValue("Practice time", value: Timeline.timestamp(history.records.reduce(0) { $0 + $1.seconds }))
             } footer: {
                 Text("Stored on this device. No account or server progress. Up to 200 recent sessions.")
             }
             if let error = history.error { Text(error).foregroundStyle(Palette.coral) }
             if history.records.isEmpty {
-                ContentUnavailableView("No practice yet", systemImage: "clock.arrow.circlepath")
+                MusiaEmptyView("No practice yet", systemImage: "clock.arrow.circlepath")
             }
             ForEach(history.records) { record in
                 VStack(alignment: .leading, spacing: 6) {

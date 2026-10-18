@@ -37,7 +37,7 @@ struct LibraryView: View {
                     .accessibilityIdentifier("library.song.\(item.id)")
                 }
                 if !catalog.loadingLibrary && catalog.libraryError == nil && filtered.isEmpty {
-                    ContentUnavailableView(search.isEmpty ? "No songs yet" : "No matching songs",
+                    MusiaEmptyView(search.isEmpty ? "No songs yet" : "No matching songs",
                                            systemImage: "music.note.list")
                 }
             }

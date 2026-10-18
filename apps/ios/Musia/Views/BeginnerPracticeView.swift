@@ -84,8 +84,8 @@ struct BeginnerPracticeView: View {
         .navigationTitle(rhythm ? "Rhythm workshop" : "Do Re Mi")
         .onAppear { player.pause() }
         .onDisappear { sound.stop() }
-        .onChange(of: player.isPlaying) { _, playing in if playing { sound.stop() } }
-        .onChange(of: scenePhase) { _, phase in if phase != .active { sound.stop() } }
+        .onChange(of: player.isPlaying) { playing in if playing { sound.stop() } }
+        .onChange(of: scenePhase) { phase in if phase != .active { sound.stop() } }
 #if os(iOS)
         .onReceive(NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification)) { _ in sound.stop() }
         .onReceive(NotificationCenter.default.publisher(for: AVAudioSession.routeChangeNotification)) { note in
@@ -100,7 +100,7 @@ struct BeginnerPracticeView: View {
                 Text("Listen").tag(0)
                 Text("Recognize").tag(1)
                 Text("Sing").tag(2)
-            }.pickerStyle(.segmented).onChange(of: pitchMode) { _, _ in reset() }
+            }.pickerStyle(.segmented).onChange(of: pitchMode) { _ in reset() }
             if pitchMode == 2 {
                 PitchMatchView(sound: sound)
             } else {
@@ -109,10 +109,11 @@ struct BeginnerPracticeView: View {
                 Text("Do Re Mi").tag(3)
                 Text("Full octave").tag(8)
             }.pickerStyle(.segmented)
-                .onChange(of: count) { _, _ in reset() }
+                .onChange(of: count) { _ in reset() }
             if quiz {
-                ViewThatFits(in: .horizontal) {
+                MusiaFits {
                     HStack { quizReference; Spacer(); quizScore }
+                } compact: {
                     VStack(alignment: .leading, spacing: 12) { quizReference; quizScore }
                 }
             }
@@ -169,29 +170,30 @@ struct BeginnerPracticeView: View {
         VStack(alignment: .leading, spacing: 20) {
             Stepper(value: $bpm, in: 30...240, step: 1) {
                 Text("\(Int(bpm)) BPM").font(.largeTitle.bold()).monospacedDigit()
-            }.onChange(of: bpm) { _, _ in resetRhythm() }
+            }.onChange(of: bpm) { _ in resetRhythm() }
             Slider(value: $bpm, in: 30...240, step: 1).accessibilityLabel("Tempo in beats per minute")
             Button {
                 resetRhythm()
                 if let tempo = tapTempo.tap(at: ProcessInfo.processInfo.systemUptime) { bpm = Double(tempo) }
             } label: { Label("Tap tempo", systemImage: "hand.tap") }.buttonStyle(.bordered)
-            ViewThatFits(in: .horizontal) {
+            MusiaFits {
                 HStack { rhythmButtons }
+            } compact: {
                 VStack(alignment: .leading, spacing: 12) { rhythmButtons }
             }
             Picker("Beats per bar", selection: $beats) {
                 ForEach([2, 3, 4, 6], id: \.self) { Text("\($0)/4").tag($0) }
-            }.pickerStyle(.segmented).onChange(of: beats) { _, _ in resetRhythm() }
+            }.pickerStyle(.segmented).onChange(of: beats) { _ in resetRhythm() }
             Picker("Clicks per beat", selection: $subdivision) {
                 Text("Beat").tag(1); Text("Eighths").tag(2); Text("Triplets").tag(3)
-            }.pickerStyle(.segmented).onChange(of: subdivision) { _, _ in resetRhythm() }
+            }.pickerStyle(.segmented).onChange(of: subdivision) { _ in resetRhythm() }
             Picker("Progression", selection: $progression) {
                 ForEach(0..<PracticePlan.progressions.count, id: \.self) { Text(PracticePlan.progressions[$0]).tag($0) }
-            }.onChange(of: progression) { _, _ in resetRhythm() }
+            }.onChange(of: progression) { _ in resetRhythm() }
             if progression > 0 {
                 Picker("Pattern", selection: $pattern) {
                     ForEach(PracticePattern.allCases, id: \.self) { Text($0.rawValue).tag($0) }
-                }.pickerStyle(.segmented).onChange(of: pattern) { _, _ in resetRhythm() }
+                }.pickerStyle(.segmented).onChange(of: pattern) { _ in resetRhythm() }
             }
             TimelineView(.periodic(from: .now, by: 0.05)) { _ in
                 let beat = sound.playing ? plan.beat(at: sound.time) : -1

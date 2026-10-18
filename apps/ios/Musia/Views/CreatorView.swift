@@ -8,8 +8,7 @@ struct CreatorTextField: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(title).font(.subheadline.weight(.medium))
-            TextField(title, text: $text, axis: .vertical).lineLimit(lines)
-                .textFieldStyle(.roundedBorder).accessibilityLabel(title)
+            MusiaMultilineField(title: title, text: $text, lines: lines)
         }.padding(.vertical, 3)
     }
 }
@@ -65,7 +64,7 @@ struct CreatorView: View {
                     Text(pending.request.brief.title).font(.headline)
                     Text("The previous request may already be running. Reconnect checks the same request without creating a new render.")
                         .foregroundStyle(.secondary)
-                    Button("Reconnect render request", systemImage: "arrow.clockwise") {
+                    MusiaIconButton("Reconnect render request", systemImage: "arrow.clockwise") {
                         Task { await creator.reconnectRender() }
                     }.disabled(creator.busy)
                 }
@@ -90,7 +89,7 @@ struct CreatorView: View {
                     DisclosureGroup(creator.brief.title.isEmpty ? "Current draft" : creator.brief.title) {
                         Text(creator.brief.lyrics).textSelection(.enabled)
                         Text(creator.brief.caption).font(.caption).foregroundStyle(.secondary)
-                        Button("Open Studio", systemImage: "slider.horizontal.3") { mode = "Studio" }
+                        MusiaIconButton("Open Studio", systemImage: "slider.horizontal.3") { mode = "Studio" }
                     }
                 }
             }
@@ -116,7 +115,7 @@ struct CreatorView: View {
             Section {
               DisclosureGroup("Create your song", isExpanded: $renderExpanded) {
                 if let account = creator.account {
-                    LabeledContent("Remaining this period", value: "\(account.usage.remaining) of \(account.usage.limit)")
+                    MusiaValue("Remaining this period", value: "\(account.usage.remaining) of \(account.usage.limit)")
                 }
                 Picker("Song visibility", selection: $visibility) {
                     Text("Private").tag(CreatorVisibility.private)
@@ -126,7 +125,7 @@ struct CreatorView: View {
                     .fixedSize(horizontal: false, vertical: true)
                 Text("Rendering uses your server allowance. The assistant never starts a render for you. Public songs enter moderation.")
                     .font(.caption).foregroundStyle(.secondary)
-                Button("Review and render", systemImage: "waveform.badge.plus") { confirmRender = true }
+                MusiaIconButton("Review and render", systemImage: "waveform.badge.plus") { confirmRender = true }
                     .buttonStyle(.borderedProminent)
                     .disabled(!rights || !creator.brief.isRenderable || !creator.canRender || creator.busy)
                     .accessibilityIdentifier("creator.render")
@@ -137,7 +136,7 @@ struct CreatorView: View {
             }
             Section {
               DisclosureGroup("Your songs and jobs", isExpanded: $jobsExpanded) {
-                Button("Refresh job status", systemImage: "arrow.clockwise") { Task { await creator.refresh() } }
+                MusiaIconButton("Refresh job status", systemImage: "arrow.clockwise") { Task { await creator.refresh() } }
                     .disabled(creator.refreshing || creator.account == nil)
                 if creator.jobs.isEmpty { Text("No jobs loaded yet.").foregroundStyle(.secondary) }
                 ForEach(creator.jobs) { job in
@@ -157,18 +156,18 @@ struct CreatorView: View {
               }
             }
         }
-        .formStyle(.grouped)
+        .musiaGroupedForm()
         .navigationTitle("Create")
         .safeAreaInset(edge: .bottom, spacing: 0) {
             if mode == "Agent" { composer }
         }
         .overlay(alignment: .top) { if creator.busy { ProgressView("Working…").padding(10).background(.regularMaterial, in: Capsule()) } }
         .task(id: creator.identity) { await creator.refreshJobs() }
-        .onChange(of: scenePhase) { _, phase in if phase == .active { Task { await creator.refresh() } } }
-        .onChange(of: creator.identity) { _, _ in
+        .onChange(of: scenePhase) { phase in if phase == .active { Task { await creator.refresh() } } }
+        .onChange(of: creator.identity) { _ in
             rights = false; mode = "Agent"; renderExpanded = false; jobsExpanded = false
         }
-        .onChange(of: creator.brief) { _, _ in rights = false }
+        .onChange(of: creator.brief) { _ in rights = false }
         .confirmationDialog("Render this song?", isPresented: $confirmRender, titleVisibility: .visible) {
             Button("Render song") { Task { if rights { await creator.render(visibility: visibility) } } }
             Button("Keep editing", role: .cancel) {}
@@ -188,9 +187,7 @@ struct CreatorView: View {
                     .font(.subheadline)
             }
             HStack(alignment: .bottom, spacing: 12) {
-                TextField("Message Musia", text: $creator.agentInput, axis: .vertical)
-                    .lineLimit(1...5).textFieldStyle(.roundedBorder)
-                    .accessibilityLabel("Message Musia")
+                MusiaMultilineField(title: "Message Musia", text: $creator.agentInput)
                 Button {
                     let input = creator.agentInput
                     Task { await creator.askAgent(input) }

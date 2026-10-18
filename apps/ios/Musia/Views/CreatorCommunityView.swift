@@ -23,10 +23,10 @@ struct CreatorCommunityView: View {
             if loading { ProgressView("Loading songs…") }
             if let issue { ErrorNotice(message: issue) { Task { await load() } } }
             if mode != "public" && creator.account == nil {
-                ContentUnavailableView("Sign in to see your songs", systemImage: "person.crop.circle",
+                MusiaEmptyView("Sign in to see your songs", systemImage: "person.crop.circle",
                     description: Text("The public community is available without an account."))
             } else if songs.isEmpty && !loading && issue == nil {
-                ContentUnavailableView("No songs yet", systemImage: "music.note",
+                MusiaEmptyView("No songs yet", systemImage: "music.note",
                     description: Text(mode == "mine" ? "Your completed renders will appear here." : "Refresh to check for available songs."))
             }
             ForEach(songs) { song in
@@ -50,12 +50,12 @@ struct CreatorCommunityView: View {
         .navigationTitle("Community")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button("Refresh songs", systemImage: "arrow.clockwise") { Task { await load() } }.disabled(loading)
+                MusiaIconButton("Refresh songs", systemImage: "arrow.clockwise") { Task { await load() } }.disabled(loading)
             }
         }
         .refreshable { await load() }
         .task(id: mode) { await load() }
-        .onChange(of: creator.identity) { _, _ in
+        .onChange(of: creator.identity) { _ in
             songs = []; requestID = UUID()
             Task { await load() }
         }
@@ -108,15 +108,16 @@ struct CreatorSongView: View {
                     Label(song.author.name, systemImage: "person.circle")
                     Text("\(song.language.uppercased()) · \(Timeline.timestamp(song.duration))").foregroundStyle(.secondary)
                     Label(song.visibility == .private ? "Private song" : "Public song", systemImage: song.visibility == .private ? "lock" : "globe")
-                    if song.mine { LabeledContent("Moderation", value: song.moderation.capitalized) }
-                    Button("Open in player", systemImage: "play.circle.fill") { Task { await creator.play(song) } }
+                    if song.mine { MusiaValue("Moderation", value: song.moderation.capitalized) }
+                    MusiaIconButton("Open in player", systemImage: "play.circle.fill") { Task { await creator.play(song) } }
                         .buttonStyle(.borderedProminent).disabled(song.audioUrl == nil || creator.busy)
                     Text("Use the player below for playback and timed lyrics.").font(.caption).foregroundStyle(.secondary)
-                    if let share = shareURL(song) { ShareLink("Share song", item: share) }
+                    if let share = shareURL(song) { MusiaShareLink(url: share) }
                 }
                 Section("Community") {
-                    ViewThatFits(in: .horizontal) {
+                    MusiaFits {
                         HStack { reactions(song) }
+                    } compact: {
                         VStack(alignment: .leading, spacing: 12) { reactions(song) }
                     }
                     if creator.account == nil {
@@ -124,11 +125,11 @@ struct CreatorSongView: View {
                         CreatorAccountLink()
                     }
                     if song.mine {
-                        Button(song.visibility == .private ? "Share publicly…" : "Make private…", systemImage: song.visibility == .private ? "globe" : "lock") {
+                        MusiaIconButton(song.visibility == .private ? "Share publicly…" : "Make private…", systemImage: song.visibility == .private ? "globe" : "lock") {
                             confirmVisibility = true
                         }.disabled(creator.busy)
                     } else {
-                        Button("Report song", systemImage: "flag") { reportSheet = true }
+                        MusiaIconButton("Report song", systemImage: "flag") { reportSheet = true }
                             .disabled(creator.account == nil || creator.busy)
                         Button("Block this account", role: .destructive) { confirmBlock = true }
                             .disabled(creator.account == nil || creator.busy)
@@ -157,7 +158,7 @@ struct CreatorSongView: View {
                     }
                     if creator.account != nil {
                         CreatorTextField(title: "Write a respectful comment", text: $comment, lines: 2...5)
-                        Button("Post comment", systemImage: "paperplane") {
+                        MusiaIconButton("Post comment", systemImage: "paperplane") {
                             Task {
                                 let text = comment.trimmingCharacters(in: .whitespacesAndNewlines)
                                 if await mutate(songPath + "/comments", fields: ["text": text]) { comment = "" }
@@ -171,7 +172,7 @@ struct CreatorSongView: View {
         .navigationTitle("Song")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button("Refresh song", systemImage: "arrow.clockwise") { Task { await load() } }.disabled(loading)
+                MusiaIconButton("Refresh song", systemImage: "arrow.clockwise") { Task { await load() } }.disabled(loading)
             }
         }
         .task(id: creator.identity) {
@@ -197,15 +198,15 @@ struct CreatorSongView: View {
         } message: { Text("Public sharing enters moderation. Private songs are available only to their owner.") }
     }
     @ViewBuilder private func reactions(_ song: CreatorSong) -> some View {
-        Button("\(song.liked ? "Unlike" : "Like") · \(song.likes)", systemImage: song.liked ? "heart.fill" : "heart") {
+        MusiaIconButton("\(song.liked ? "Unlike" : "Like") · \(song.likes)", systemImage: song.liked ? "heart.fill" : "heart") {
             Task { await mutate(songPath + "/reactions/like", active: !song.liked) }
         }.disabled(creator.account == nil || creator.busy)
-        Button(song.saved ? "Unsave" : "Save", systemImage: song.saved ? "bookmark.fill" : "bookmark") {
+        MusiaIconButton(song.saved ? "Unsave" : "Save", systemImage: song.saved ? "bookmark.fill" : "bookmark") {
             Task { await mutate(songPath + "/reactions/save", active: !song.saved) }
         }.disabled(creator.account == nil || creator.busy)
     }
     private var reportForm: some View {
-        NavigationStack {
+        MusiaNavigation {
             Form {
                 Section("Reason for reporting") {
                     Picker("Reason", selection: $reportReason) {
@@ -222,7 +223,7 @@ struct CreatorSongView: View {
                     }.disabled(creator.busy || reportDetail.count > 2000)
                     if let notice = creator.notice { Text(notice).foregroundStyle(Palette.coral) }
                 }
-            }.formStyle(.grouped)
+            }.musiaGroupedForm()
                 .navigationTitle("Report song")
                 .toolbar { ToolbarItem(placement: .cancellationAction) { Button("Cancel") { reportSheet = false } } }
         }

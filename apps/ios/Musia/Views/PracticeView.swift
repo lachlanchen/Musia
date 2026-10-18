@@ -2,6 +2,7 @@ import MusiaCore
 import SwiftUI
 
 // Keep each annotation with its base text, wrapping at token boundaries.
+@available(macOS 13, *)
 private struct RubyFlowLayout: Layout {
     var spacing: CGFloat
     var rowSpacing: CGFloat
@@ -41,6 +42,7 @@ struct PracticeView: View {
     @State private var scrubbing = false
     @State private var scrubPosition = 0.0
     @State private var stage = true
+    @State private var initializedStage = false
     @AppStorage("lyricLanguages") private var lyricLanguages = LyricLanguages.defaults
 
     var body: some View {
@@ -56,11 +58,12 @@ struct PracticeView: View {
                     .pickerStyle(.segmented)
                     .accessibilityIdentifier("player.view")
                     if stage {
-                        ViewThatFits(in: .horizontal) {
+                        MusiaFits {
                             HStack(alignment: .top, spacing: 28) {
                                 stageHeader(song, asset: asset).frame(width: 300)
                                 lyrics(asset, showUpcoming: false).frame(minWidth: 340)
                             }.frame(minWidth: 720)
+                        } compact: {
                             VStack(alignment: .leading, spacing: 16) {
                                 stageHeader(song, asset: asset)
                                 lyrics(asset, showUpcoming: false)
@@ -147,8 +150,11 @@ struct PracticeView: View {
             }
         }
 #endif
-        .onChange(of: player.asset?.id) { _, _ in scrubbing = false }
-        .onChange(of: player.song?.id, initial: true) { _, _ in stage = !player.isLocalExercise }
+        .onChange(of: player.asset?.id) { _ in scrubbing = false }
+        .onAppear {
+            if !initializedStage { stage = !player.isLocalExercise; initializedStage = true }
+        }
+        .onChange(of: player.song?.id) { _ in stage = !player.isLocalExercise }
     }
 
     private func stageHeader(_ song: Song, asset: SongAsset) -> some View {
@@ -160,8 +166,9 @@ struct PracticeView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text(song.title).font(.title3.bold()).fixedSize(horizontal: false, vertical: true)
                 Text(song.artist).font(.subheadline).foregroundStyle(.secondary)
-                ViewThatFits(in: .horizontal) {
+                MusiaFits {
                     HStack(spacing: 16) { stageMetrics(asset, hasBeats: hasBeats, strength: strength) }
+                } compact: {
                     VStack(alignment: .leading, spacing: 8) { stageMetrics(asset, hasBeats: hasBeats, strength: strength) }
                 }
             }.frame(maxWidth: .infinity, alignment: .leading)
@@ -194,19 +201,38 @@ struct PracticeView: View {
                 scrubbing = editing
                 if !editing { player.seek(to: scrubPosition) }
             }).disabled(!player.ready).accessibilityLabel("Playback position")
-            HStack(spacing: 12) {
-                Text(Timeline.timestamp(scrubbing ? scrubPosition : player.position)).font(.caption.monospacedDigit())
-                Spacer(minLength: 0)
-                TransportButton(title: "Back 10 seconds", symbol: "gobackward.10") { player.seek(to: player.position - 10) }
-                TransportButton(title: player.isPlaying || player.waiting ? "Pause" : "Play",
-                                symbol: player.isPlaying || player.waiting ? "pause.fill" : "play.fill") { player.togglePlayback() }
-                    .accessibilityIdentifier("practice.transport.play")
-                TransportButton(title: "Forward 10 seconds", symbol: "goforward.10") { player.seek(to: player.position + 10) }
-                Spacer(minLength: 0)
-                Text(Timeline.timestamp(player.duration)).font(.caption.monospacedDigit())
+            MusiaFits {
+                HStack(spacing: 12) {
+                    stagePosition
+                    Spacer(minLength: 0)
+                    stageTransportButtons
+                    Spacer(minLength: 0)
+                    Text(Timeline.timestamp(player.duration)).font(.caption.monospacedDigit())
+                }
+            } compact: {
+                VStack(spacing: 6) {
+                    HStack {
+                        stagePosition; Spacer()
+                        Text(Timeline.timestamp(player.duration)).font(.caption.monospacedDigit())
+                    }
+                    HStack(spacing: 12) { stageTransportButtons }
+                }
             }.disabled(!player.ready)
             if player.waiting { ProgressView().accessibilityLabel("Buffering audio") }
         }.frame(maxWidth: 760)
+    }
+
+    private var stagePosition: some View {
+        Text(Timeline.timestamp(scrubbing ? scrubPosition : player.position))
+            .font(.caption.monospacedDigit()).accessibilityIdentifier("stage.position")
+    }
+
+    @ViewBuilder private var stageTransportButtons: some View {
+        TransportButton(title: "Back 10 seconds", symbol: "gobackward.10") { player.seek(to: player.position - 10) }
+        TransportButton(title: player.isPlaying || player.waiting ? "Pause" : "Play",
+                        symbol: player.isPlaying || player.waiting ? "pause.fill" : "play.fill") { player.togglePlayback() }
+            .accessibilityIdentifier("practice.transport.play")
+        TransportButton(title: "Forward 10 seconds", symbol: "goforward.10") { player.seek(to: player.position + 10) }
     }
 
     private func stageGuitar(_ asset: SongAsset) -> some View {
@@ -318,7 +344,7 @@ struct PracticeView: View {
 
     private var speedControl: some View {
             VStack(alignment: .leading, spacing: 4) {
-                LabeledContent("Speed", value: String(format: "%.2gx", player.rate))
+                MusiaValue("Speed", value: String(format: "%.2gx", player.rate))
                     .font(.headline).monospacedDigit()
                 Slider(value: Binding(get: { player.rate }, set: { player.setRate($0) }), in: 0.25...2, step: 0.05)
                     .accessibilityLabel("Pitch-preserving playback speed")
@@ -409,15 +435,16 @@ struct PracticeView: View {
         let font: Font = upcoming ? .body : (compact ? .title3.weight(.semibold) : .title2.weight(.semibold))
         Group {
             if hasRuby {
-                RubyFlowLayout(spacing: 4, rowSpacing: 8) {
-                    ForEach(Array(rendering.parts.enumerated()), id: \.offset) { _, part in
-                        VStack(spacing: 2) {
-                            Text(part.reading ?? " ").font(.caption).foregroundStyle(.secondary)
-                            Text(part.text).font(font)
-                                .foregroundStyle(!upcoming && part.isActive(at: player.position) ? Palette.teal : Palette.ink)
+                if #available(macOS 13, *) {
+                    RubyFlowLayout(spacing: 4, rowSpacing: 8) {
+                        ForEach(Array(rendering.parts.enumerated()), id: \.offset) { _, part in
+                            rubyToken(part, font: font, upcoming: upcoming)
                         }
-                        .fixedSize(horizontal: false, vertical: true)
                     }
+                } else {
+                    MontereyTokenFlow(count: rendering.parts.count) { index in
+                        rubyToken(rendering.parts[index], font: font, upcoming: upcoming)
+                    }.id(line.text)
                 }
             } else {
                 Text(highlighted(rendering, upcoming: upcoming)).font(font)
@@ -427,6 +454,14 @@ struct PracticeView: View {
         .opacity(upcoming ? 0.65 : 1)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel((upcoming ? "Next: " : "") + line.text)
+    }
+
+    private func rubyToken(_ part: LyricPart, font: Font, upcoming: Bool) -> some View {
+        VStack(spacing: 2) {
+            Text(part.reading ?? " ").font(.caption).foregroundStyle(.secondary)
+            Text(part.text).font(font)
+                .foregroundStyle(!upcoming && part.isActive(at: player.position) ? Palette.teal : Palette.ink)
+        }.fixedSize(horizontal: false, vertical: true)
     }
 
     private func highlighted(_ rendering: LyricRendering, upcoming: Bool) -> AttributedString {
@@ -486,7 +521,7 @@ struct PracticeView: View {
                     .font(.subheadline).foregroundStyle(.secondary)
                 if asset.confidence.melody != .unavailable,
                    let note = Timeline.current(in: asset.melody, at: player.position) {
-                    LabeledContent("Reference note", value: "\(note.note.text)  (\(note.numberNote.text))")
+                    MusiaValue("Reference note", value: "\(note.note.text)  (\(note.numberNote.text))")
                     ConfidenceLabel(name: "Melody", value: asset.confidence.melody)
                 }
             }
@@ -556,7 +591,7 @@ struct PracticeView: View {
                 ConfidenceLabel(name: "Beats", value: asset.beats.isEmpty ? .unavailable : asset.confidence.beats)
                 ConfidenceLabel(name: "Chords", value: asset.chords.isEmpty ? .unavailable : asset.confidence.chords)
                 ConfidenceLabel(name: "Melody", value: asset.melody.isEmpty ? .unavailable : asset.confidence.melody)
-                if let signature = asset.timeSignature { LabeledContent("Time signature", value: signature) }
+                if let signature = asset.timeSignature { MusiaValue("Time signature", value: signature) }
                 Text("Verified describes the reference data, not your performance. Analyzed and estimated events may be wrong. Missing events are not inferred.")
                     .font(.subheadline).foregroundStyle(.secondary)
             }

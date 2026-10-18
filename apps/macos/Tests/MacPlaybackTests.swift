@@ -1,9 +1,33 @@
 import AVFoundation
+import AppKit
+import SwiftUI
 import XCTest
 @testable import Musia
 @testable import MusiaCore
 
 final class MacPlaybackTests: XCTestCase {
+    @MainActor
+    func testMontereyRubyFallbackWrapsWithoutDroppingTokens() async throws {
+        let words = ["wind", "over", "the", "mountains", "and", "sea"]
+        func height(_ width: CGFloat) async throws -> CGFloat {
+            let view = NSHostingView(rootView: MontereyTokenFlow(count: words.count) { index in
+                VStack { Text("reading").font(.caption); Text(words[index]).font(.title2) }
+            }.frame(width: width))
+            view.setFrameSize(NSSize(width: width, height: 500))
+            view.layoutSubtreeIfNeeded()
+            try await Task.sleep(nanoseconds: 200_000_000)
+            view.layoutSubtreeIfNeeded()
+            let size = view.fittingSize
+            XCTAssertTrue(size.height.isFinite)
+            XCTAssertGreaterThan(size.height, 20)
+            XCTAssertLessThan(size.height, 600)
+            return size.height
+        }
+        let wide = try await height(800)
+        let narrow = try await height(180)
+        XCTAssertGreaterThan(narrow, wide)
+    }
+
     @MainActor
     func testBeginnerReferenceAudioAndMetronomeClock() async throws {
         let sound = PracticeSound()

@@ -24,21 +24,21 @@ struct CreatorAccountView: View {
             Section("Musia account") {
                 if let account = creator.account {
                     Label(account.name, systemImage: "person.crop.circle.fill").font(.headline)
-                    LabeledContent("Plan", value: account.usage.tier.capitalized)
-                    LabeledContent("Usage period", value: account.usage.period)
-                    LabeledContent("Renders used", value: "\(account.usage.used) of \(account.usage.limit)")
-                    LabeledContent("Renders remaining", value: String(account.usage.remaining))
+                    MusiaValue("Plan", value: account.usage.tier.capitalized)
+                    MusiaValue("Usage period", value: account.usage.period)
+                    MusiaValue("Renders used", value: "\(account.usage.used) of \(account.usage.limit)")
+                    MusiaValue("Renders remaining", value: String(account.usage.remaining))
                     Text("Usage is provided by the Musia server.").font(.caption).foregroundStyle(.secondary)
                 } else {
                     Text("An account is optional. Sign in to create, save songs, and join the community.")
-                    Button("Sign in with your browser", systemImage: "person.crop.circle.badge.checkmark") {
+                    MusiaIconButton("Sign in with your browser", systemImage: "person.crop.circle.badge.checkmark") {
                         Task { await creator.signIn() }
                     }.buttonStyle(.borderedProminent)
                         .disabled(creator.busy || creator.hasSession || creator.capabilities?.login != true)
                     if creator.hasSession { Text("Reconnecting your existing session. Refresh to try again.").font(.caption) }
                     else if creator.capabilities?.login != true { Text("Sign-in is unavailable. Refresh to check service status.").font(.caption) }
                 }
-                Button("Refresh account", systemImage: "arrow.clockwise") { Task { await creator.refresh() } }
+                MusiaIconButton("Refresh account", systemImage: "arrow.clockwise") { Task { await creator.refresh() } }
                     .disabled(creator.refreshing || creator.busy)
             }
             CreatorNotice()
@@ -74,12 +74,12 @@ struct CreatorAccountView: View {
             }
             Section("Subscriptions") {
                 if let entitlement = billing.billing?.entitlement {
-                    LabeledContent("Server entitlement", value: entitlement.tier.capitalized)
-                    LabeledContent("Status", value: entitlement.state.replacingOccurrences(of: "_", with: " ").capitalized)
+                    MusiaValue("Server entitlement", value: entitlement.tier.capitalized)
+                    MusiaValue("Status", value: entitlement.state.replacingOccurrences(of: "_", with: " ").capitalized)
                     if let expiry = entitlement.expiresAt {
-                        LabeledContent("Valid until", value: Date(timeIntervalSince1970: expiry).formatted(date: .abbreviated, time: .shortened))
+                        MusiaValue("Valid until", value: Date(timeIntervalSince1970: expiry).formatted(date: .abbreviated, time: .shortened))
                     }
-                    if let environment = entitlement.environment { LabeledContent("Store environment", value: environment.capitalized) }
+                    if let environment = entitlement.environment { MusiaValue("Store environment", value: environment.capitalized) }
                 }
                 Text("Free includes 2 renders per period. Creator includes 20; Studio includes 80. Your account shows the current server allowance.")
                     .font(.subheadline).foregroundStyle(.secondary)
@@ -104,7 +104,7 @@ struct CreatorAccountView: View {
                 }
                 if billing.busy { ProgressView("Checking purchases…") }
                 if let message = billing.message { Text(message).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true) }
-                Button("Restore / check purchases", systemImage: "arrow.clockwise") { Task { await billing.restore() } }
+                MusiaIconButton("Restore / check purchases", systemImage: "arrow.clockwise") { Task { await billing.restore() } }
                     .disabled(creator.account == nil || billing.busy)
                 Button("Find missing Apple purchases…") { confirmSync = true }
                     .disabled(creator.account == nil || billing.busy)
@@ -124,10 +124,10 @@ struct CreatorAccountView: View {
                 }
             }
         }
-        .formStyle(.grouped)
+        .musiaGroupedForm()
         .navigationTitle("Account & subscriptions")
-        .onChange(of: creator.identity) { _, _ in invitation = ""; acceptTerms = false }
-        .onChange(of: creator.capabilities?.termsVersion) { _, _ in acceptTerms = false }
+        .onChange(of: creator.identity) { _ in invitation = ""; acceptTerms = false }
+        .onChange(of: creator.capabilities?.termsVersion) { _ in acceptTerms = false }
         .confirmationDialog("Sign out of Musia?", isPresented: $confirmLogout, titleVisibility: .visible) {
             Button("Sign out", role: .destructive) { Task { await creator.logout() } }
         } message: { Text("Private playback and local account data will be cleared. Any unconfirmed render stays securely linked to its original account for recovery.") }

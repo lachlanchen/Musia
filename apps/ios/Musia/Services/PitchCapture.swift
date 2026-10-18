@@ -36,7 +36,7 @@ final class PitchCapture: ObservableObject {
                 busy = false; work = nil; return
             }
             do {
-                try await Task.sleep(for: .milliseconds(400))
+                try await Task.sleep(nanoseconds: 400_000_000)
 #if os(iOS)
                 try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .measurement, options: [.defaultToSpeaker])
                 try AVAudioSession.sharedInstance().setActive(true)
@@ -50,7 +50,7 @@ final class PitchCapture: ObservableObject {
                 ])
                 guard recorder?.record(forDuration: 3) == true else { throw CocoaError(.fileWriteUnknown) }
                 message = "Sing or hum one comfortable note..."
-                try await Task.sleep(for: .seconds(3))
+                try await Task.sleep(nanoseconds: 3_000_000_000)
                 recorder?.stop(); recorder = nil
                 let file = try AVAudioFile(forReading: url)
                 guard file.length > 0, file.length <= PitchPractice.sampleRate * 4,

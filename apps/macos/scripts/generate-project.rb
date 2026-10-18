@@ -14,17 +14,17 @@ Xcodeproj::Plist.write_to_path(info, info_path)
 project = Xcodeproj::Project.new(File.join(root, 'Musia.xcodeproj'))
 project.build_configurations.each do |config|
   config.build_settings.merge!({
-    'SWIFT_VERSION' => '5.0', 'MACOSX_DEPLOYMENT_TARGET' => '14.0',
-    'MARKETING_VERSION' => '0.2.0', 'CURRENT_PROJECT_VERSION' => '9',
+    'SWIFT_VERSION' => '5.0', 'MACOSX_DEPLOYMENT_TARGET' => '12.0',
+    'MARKETING_VERSION' => '0.2.2', 'CURRENT_PROJECT_VERSION' => '12',
     'DEVELOPMENT_TEAM' => 'Q8M2S2FY77', 'CODE_SIGN_STYLE' => 'Manual',
     'ENABLE_USER_SCRIPT_SANDBOXING' => 'YES', 'CLANG_ENABLE_MODULES' => 'YES',
     'SWIFT_OPTIMIZATION_LEVEL' => config.name == 'Debug' ? '-Onone' : '-O',
     'ENABLE_TESTABILITY' => config.name == 'Debug' ? 'YES' : 'NO'
   })
 end
-app = project.new_target(:application, 'Musia', :osx, '14.0')
-core = project.new_target(:framework, 'MusiaCore', :osx, '14.0')
-tests = project.new_target(:unit_test_bundle, 'MusiaMacTests', :osx, '14.0')
+app = project.new_target(:application, 'Musia', :osx, '12.0')
+core = project.new_target(:framework, 'MusiaCore', :osx, '12.0')
+tests = project.new_target(:unit_test_bundle, 'MusiaMacTests', :osx, '12.0')
 
 [[core, '../ios/Musia/Core'], [app, '../ios/Musia/Services'], [app, '../ios/Musia/Views'],
  [app, 'Musia'], [tests, '../ios/Tests/MusiaCoreTests'], [tests, 'Tests']].each do |target, relative|

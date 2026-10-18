@@ -38,9 +38,8 @@ struct MusiaMacApp: App {
         _player = StateObject(wrappedValue: PlaybackController(history: history))
     }
 
-    var body: some Scene {
-        Window("Musia", id: "main") {
-            MacRootView()
+    private var content: some View {
+        MacRootView()
                 .environmentObject(catalog)
                 .environmentObject(history)
                 .environmentObject(player)
@@ -52,6 +51,7 @@ struct MusiaMacApp: App {
                 .tint(Palette.teal)
                 .preferredColorScheme(.light)
                 .frame(minWidth: 1040, minHeight: 680)
+                .background(MacWindowConfiguration())
                 .onReceive(NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)) { _ in
                     player.checkpoint()
                 }
@@ -62,10 +62,12 @@ struct MusiaMacApp: App {
                     }
                 }
 #endif
-        }
-        .defaultSize(width: 1280, height: 800)
-        .windowResizability(.contentMinSize)
+    }
+
+    var body: some Scene {
+        WindowGroup("Musia") { content }
         .commands {
+            CommandGroup(replacing: .newItem) {}
             SidebarCommands()
             CommandMenu("Playback") {
                 Button(player.isPlaying ? "Pause" : "Play") { player.togglePlayback() }
@@ -99,6 +101,26 @@ struct MusiaMacApp: App {
     }
 }
 
+private struct MacWindowConfiguration: NSViewRepresentable {
+    func makeNSView(context: Context) -> WindowView { WindowView() }
+    func updateNSView(_ view: WindowView, context: Context) {}
+
+    final class WindowView: NSView {
+        private var configured = false
+        override func viewDidMoveToWindow() {
+            super.viewDidMoveToWindow()
+            guard !configured, let window else { return }
+            configured = true
+            window.identifier = NSUserInterfaceItemIdentifier("main")
+            window.contentMinSize = NSSize(width: 1040, height: 680)
+            if !window.setFrameUsingName("MusiaMainWindow") {
+                window.setContentSize(NSSize(width: 1280, height: 800))
+            }
+            window.setFrameAutosaveName("MusiaMainWindow")
+        }
+    }
+}
+
 struct MacRootView: View {
     @EnvironmentObject private var navigation: MacNavigation
     @EnvironmentObject private var player: PlaybackController
@@ -107,16 +129,31 @@ struct MacRootView: View {
     }
 
     var body: some View {
-        NavigationSplitView {
+        Group {
+            if #available(macOS 13, *) {
+                NavigationSplitView {
+                    sidebar.navigationSplitViewColumnWidth(min: 170, ideal: 190, max: 240)
+                } detail: { detail }
+            } else {
+                HSplitView {
+                    sidebar.frame(minWidth: 170, idealWidth: 190, maxWidth: 240)
+                    detail.frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+            }
+        }.font(.system(size: 15))
+    }
+
+    private var sidebar: some View {
             List(MacSection.allCases, selection: $navigation.section) { section in
                 Label(section.rawValue, systemImage: section.symbol)
                     .font(.body).padding(.vertical, 6).tag(section)
                     .accessibilityIdentifier("sidebar.\(section.rawValue.lowercased())")
             }
             .navigationTitle("Musia")
-            .navigationSplitViewColumnWidth(min: 170, ideal: 190, max: 240)
-        } detail: {
-            NavigationStack {
+    }
+
+    private var detail: some View {
+            MusiaNavigation {
                 Group {
                     switch navigation.section ?? .library {
                     case .library: LibraryView(showPractice: showPractice)
@@ -127,11 +164,9 @@ struct MacRootView: View {
                     case .practice:
                         if player.hasSelection { PracticeView() }
                         else {
-                            ContentUnavailableView {
-                                Label("Ready to play", systemImage: "guitars")
-                            } description: {
-                                Text("Choose a song or begin with First Pulse.")
-                            } actions: {
+                            VStack(spacing: 16) {
+                                MusiaEmptyView("Ready to play", systemImage: "guitars",
+                                               description: Text("Choose a song or begin with First Pulse."))
                                 Button("Start First Pulse") { player.open(id: FirstPulse.id, localExercise: true) }
                                     .buttonStyle(.borderedProminent)
                             }
@@ -144,7 +179,5 @@ struct MacRootView: View {
                     MiniPlayer(showPractice: showPractice)
                 }
             }
-        }
-        .font(.system(size: 15))
     }
 }

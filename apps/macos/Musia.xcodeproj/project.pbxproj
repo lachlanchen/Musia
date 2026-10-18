@@ -38,6 +38,7 @@
 		770BD339DB4EE6A912D9815A /* CatalogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C84AABBB5A112963F6B05FC /* CatalogStore.swift */; };
 		77DA7362E6C15606B4D4DCA1 /* MacReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1A376917DD83D889669AE /* MacReview.swift */; };
 		7908A84B90BE221141C16946 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71642E1AC0F6C43B512C137E /* Components.swift */; };
+		A12181018000000000000003 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12181018000000000000004 /* Compatibility.swift */; };
 		87F847D967C6C3AF6BEBF2BC /* PitchCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454B141A794C2E2121D27AA /* PitchCapture.swift */; };
 		88287562E807666D62BC42C0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 67487650E079CC9924BA0866 /* PrivacyInfo.xcprivacy */; };
 		8C0F467B735F83FE57DAC999 /* GuitarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766774039DA8E40C6494F58 /* GuitarShape.swift */; };
@@ -133,6 +134,7 @@
 		6818BD05D7ABCB49A07F3C74 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		6C84AABBB5A112963F6B05FC /* CatalogStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogStore.swift; sourceTree = "<group>"; };
 		71642E1AC0F6C43B512C137E /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		A12181018000000000000004 /* Compatibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Compatibility.swift; sourceTree = "<group>"; };
 		72CE9D8CD0CDA74111446643 /* PracticeWorkshopTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PracticeWorkshopTests.swift; sourceTree = "<group>"; };
 		73328EC43FEF7C418BAE8E4A /* MusiaMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiaMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		764D00B8AF0E95FB18A913E9 /* FirstPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FirstPulse.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			children = (
 				968F0D8DA73ADB7D8D70FEBF /* BeginnerPracticeView.swift */,
 				71642E1AC0F6C43B512C137E /* Components.swift */,
+				A12181018000000000000004 /* Compatibility.swift */,
 				F8A4ED6412B12D850BF533AA /* CreatorAccountView.swift */,
 				5D77D1F5B75F84B626930861 /* CreatorCommunityView.swift */,
 				D3F239986CF8F20F1FCFC665 /* CreatorView.swift */,
@@ -527,6 +530,7 @@
 				5535A9FD6AEC9F417DD25E71 /* WatchCompanionBridge.swift in Sources */,
 				FCA03FAB47EED1D1ADB7BE0A /* BeginnerPracticeView.swift in Sources */,
 				7908A84B90BE221141C16946 /* Components.swift in Sources */,
+				A12181018000000000000003 /* Compatibility.swift in Sources */,
 				1D0A704186D812120C175472 /* CreatorAccountView.swift in Sources */,
 				E997202AF799607C23628449 /* CreatorCommunityView.swift in Sources */,
 				A2D19BACFFA44DD64ECAAA2B /* CreatorView.swift in Sources */,
@@ -579,7 +583,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Musia/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "$(MUSIA_DEBUG_PROFILE)";
@@ -594,7 +598,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -602,7 +606,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -648,7 +652,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Q8M2S2FY77;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -663,8 +667,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.2.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.2.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,7 +713,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = Q8M2S2FY77;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -729,8 +733,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.2.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.2.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -749,7 +753,7 @@
 				CODE_SIGN_STYLE = Manual;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia.mactests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -764,7 +768,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -772,7 +776,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -796,7 +800,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Musia/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "$(MUSIA_MAC_PROFILE)";
@@ -813,7 +817,7 @@
 				CODE_SIGN_STYLE = Manual;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.lazying.musia.mactests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

@@ -2,6 +2,58 @@ import XCTest
 
 final class PracticeSmokeTests: XCTestCase {
     @MainActor
+    func testComposerSurvivesRotationAndBackground() {
+        let app = XCUIApplication()
+        app.launch()
+        defer { app.terminate(); XCUIDevice.shared.orientation = .portrait }
+        let create = app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch
+        XCTAssertTrue(create.waitForExistence(timeout: 20)); create.tap()
+        let input = app.textFields["Message Musia"]
+        XCTAssertTrue(input.waitForExistence(timeout: 10))
+        input.tap(); input.typeText("Musia resize draft")
+        for orientation in [UIDeviceOrientation.landscapeRight, .portrait] {
+            XCUIDevice.shared.orientation = orientation
+            XCTAssertTrue(input.waitForExistence(timeout: 5))
+            XCTAssertEqual(input.value as? String, "Musia resize draft")
+            XCTAssertTrue(input.isHittable)
+            let image = XCTAttachment(screenshot: app.screenshot())
+            image.name = "creator-resize-\(orientation.rawValue)"; image.lifetime = .keepAlways; add(image)
+        }
+        XCUIDevice.shared.press(.home); app.activate()
+        XCTAssertEqual(input.value as? String, "Musia resize draft")
+        input.tap()
+        input.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 18))
+    }
+
+    @MainActor
+    func testStagePlaybackSurvivesRotationWithLargeText() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        app.launch()
+        defer { app.terminate(); XCUIDevice.shared.orientation = .portrait }
+        let exercise = app.buttons["library.localFirstPulse"]
+        XCTAssertTrue(exercise.waitForExistence(timeout: 20)); exercise.tap()
+        let views = app.segmentedControls["player.view"]
+        XCTAssertTrue(views.waitForExistence(timeout: 10)); views.buttons["Stage"].tap()
+        let play = app.buttons["practice.transport.play"]
+        XCTAssertTrue(play.waitForExistence(timeout: 10)); play.tap()
+        let advanced = NSPredicate { _, _ in
+            let text = app.staticTexts["stage.position"].label
+            return text != "0:00" && text != "00:00" && !text.isEmpty
+        }
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: advanced, object: nil)], timeout: 8), .completed)
+        for orientation in [UIDeviceOrientation.landscapeRight, .portrait] {
+            XCUIDevice.shared.orientation = orientation
+            XCTAssertTrue(play.isHittable)
+            XCTAssertEqual(play.label, "Pause")
+            XCTAssertTrue(app.frame.contains(play.frame))
+            let image = XCTAttachment(screenshot: app.screenshot())
+            image.name = "large-stage-\(orientation.rawValue)"; image.lifetime = .keepAlways; add(image)
+        }
+        play.tap()
+    }
+
+    @MainActor
     func testSimpleCreatorComposer() {
         let app = XCUIApplication()
         app.launch()

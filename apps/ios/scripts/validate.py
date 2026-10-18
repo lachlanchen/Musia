@@ -13,7 +13,10 @@ with (resources / "Info.plist").open("rb") as source:
     info = plistlib.load(source)
 assert info["CFBundleDisplayName"] == "Musia"
 assert info["UIBackgroundModes"] == ["audio"]
-assert "NSMicrophoneUsageDescription" not in info
+assert info["NSMicrophoneUsageDescription"] == (
+    "Match a note measures a three-second sung or hummed note on your device. "
+    "The take is deleted after measurement and is never uploaded."
+)
 assert "NSAppTransportSecurity" not in info
 with (resources / "PrivacyInfo.xcprivacy").open("rb") as source:
     privacy = plistlib.load(source)
@@ -65,7 +68,10 @@ swift_files = sorted((ROOT / "Musia").rglob("*.swift")) + sorted((ROOT / "Tests"
 for path in swift_files:
     text = path.read_text()
     assert "WKWebView" not in text and "import WebKit" not in text
-    assert path.name in project_text, f"Not in checked-in project: {path}"
+    if path.parent.name in {"MusiaCatalogTests", "WatchProtocolTests"}:
+        assert f'path: "Tests/{path.parent.name}"' in (ROOT / "Package.swift").read_text()
+    else:
+        assert path.name in project_text, f"Not in checked-in project: {path}"
 print(f"PASS: manifests, resources, scheme, bundle identity, {len(swift_files)} Swift file references; no WebKit")
 
 try:

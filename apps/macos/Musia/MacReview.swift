@@ -9,7 +9,7 @@ enum MacReview {
     private static func wait(_ condition: () -> Bool) async throws {
         for _ in 0..<200 {
             if condition() { return }
-            try await Task.sleep(for: .milliseconds(100))
+            try await Task.sleep(nanoseconds: 100_000_000)
         }
         throw NSError(domain: "MusiaReview", code: 1, userInfo: [NSLocalizedDescriptionKey: "Timed out"])
     }
@@ -45,7 +45,7 @@ enum MacReview {
             try await wait { player.position > 6.4 }
             window.miniaturize(nil)
             let before = player.position
-            try await Task.sleep(for: .seconds(2))
+            try await Task.sleep(nanoseconds: 2_000_000_000)
             checks["minimized_playback"] = player.position > before + 1
             window.deminiaturize(nil)
             player.pause()
@@ -105,7 +105,7 @@ enum MacReview {
     }
 
     private static func capture(_ window: NSWindow, _ name: String, _ directory: URL) async throws {
-        try await Task.sleep(for: .seconds(2))
+        try await Task.sleep(nanoseconds: 2_000_000_000)
         guard let view = window.contentView?.superview, let bitmap = view.bitmapImageRepForCachingDisplay(in: view.bounds) else {
             throw NSError(domain: "MusiaReview", code: 5)
         }

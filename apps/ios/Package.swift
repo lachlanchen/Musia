@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "MusiaCore",
-    platforms: [.iOS(.v17), .macOS(.v13)],
+    platforms: [.iOS(.v17), .macOS(.v12)],
     products: [.library(name: "MusiaCore", targets: ["MusiaCore"])],
     targets: [
         .target(name: "MusiaCore", path: "Musia/Core"),

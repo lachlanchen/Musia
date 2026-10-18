@@ -18,8 +18,9 @@ struct PitchMatchView: View {
             }.disabled(capture.busy)
             Toggle("Lower octave", isOn: $lowerOctave).disabled(capture.busy)
             Text("Listen, let the tone stop, then hum or sing gently. Choose a comfortable octave; do not strain.")
-            ViewThatFits(in: .horizontal) {
+            MusiaFits {
                 HStack { controls }
+            } compact: {
                 VStack(alignment: .leading, spacing: 12) { controls }
             }
             if let message = capture.message { Text(message).foregroundStyle(.secondary) }
@@ -33,11 +34,11 @@ struct PitchMatchView: View {
             Text("On-device pitch estimate, not a singing-quality grade. One voice only; no backing music. A semitone is 100 cents. The three-second take is deleted after measurement and is never uploaded.")
                 .font(.footnote).foregroundStyle(.secondary)
         }
-        .onChange(of: note) { _, _ in capture.result = nil; capture.message = nil; sound.stop() }
-        .onChange(of: lowerOctave) { _, _ in capture.result = nil; capture.message = nil; sound.stop() }
-        .onChange(of: scenePhase) { _, phase in if phase != .active { capture.cancel() } }
-        .onChange(of: sound.playing) { _, playing in if playing { capture.cancel() } }
-        .onChange(of: player.isPlaying) { _, playing in if playing { capture.cancel() } }
+        .onChange(of: note) { _ in capture.result = nil; capture.message = nil; sound.stop() }
+        .onChange(of: lowerOctave) { _ in capture.result = nil; capture.message = nil; sound.stop() }
+        .onChange(of: scenePhase) { phase in if phase != .active { capture.cancel() } }
+        .onChange(of: sound.playing) { playing in if playing { capture.cancel() } }
+        .onChange(of: player.isPlaying) { playing in if playing { capture.cancel() } }
         .onDisappear { capture.cancel() }
 #if os(iOS)
         .onReceive(NotificationCenter.default.publisher(for: AVAudioSession.interruptionNotification)) { _ in capture.cancel() }
