@@ -53,6 +53,22 @@ class PacketTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 module.validate_packet(packet)
 
+    def test_declared_caddy_snippet_is_hashed_not_read_as_file(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / 'Caddyfile'
+            raw = b'(known_proxy) {\n reverse_proxy localhost:1234\n}\nexample.test {\n import known_proxy # reusable snippet\n}\n'
+            root.write_bytes(raw)
+            self.assertEqual(module.ingress_hashes(root), {str(root): module.sha(raw)})
+            self.assertEqual(root.read_bytes(), raw)
+
+    def test_unknown_or_dynamic_caddy_import_remains_fail_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / 'Caddyfile'
+            for target in ('unknown_snippet', '{$SITE}', '/etc/sites/*.caddy', '/etc/../tmp/file', 'known argument'):
+                root.write_text(f'(known) {{\n}}\nimport {target}\n')
+                with self.subTest(target=target), self.assertRaises(ValueError):
+                    module.ingress_hashes(root)
+
     def test_success_and_failed_acceptance_restore_only_owned_release(self):
         for fail in (False, True):
             with self.subTest(fail=fail), tempfile.TemporaryDirectory() as tmp:

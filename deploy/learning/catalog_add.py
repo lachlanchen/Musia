@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 import re
 import shutil
+import shlex
 import stat
 import subprocess
 import time
@@ -96,9 +97,10 @@ def wait_healthy():
     raise RuntimeError('Musia did not become healthy')
 
 
-def ingress_hashes():
-    paths = [Path('/etc/lazystudio/Caddyfile')]
+def ingress_hashes(root=Path('/etc/lazystudio/Caddyfile')):
+    paths = [root]
     result = {}
+    snippets, imports = set(), set()
     while paths:
         path = paths.pop()
         if str(path) in result:
@@ -107,12 +109,22 @@ def ingress_hashes():
             raise ValueError('Unexpected ingress file')
         data = path.read_bytes()
         result[str(path)] = sha(data)
-        for line in data.decode().splitlines():
+        text = data.decode()
+        snippets.update(re.findall(r'^\s*\(([a-zA-Z0-9_-]+)\)\s*\{', text, re.M))
+        for line in text.splitlines():
             if re.match(r'\s*import\s', line):
-                match = re.fullmatch(r'\s*import\s+(/etc/[a-zA-Z0-9_./-]+)\s*', line)
-                if not match or '..' in Path(match[1]).parts:
+                parts = shlex.split(line, comments=True)
+                if len(parts) != 2:
                     raise ValueError('Ingress import requires owner review')
-                paths.append(Path(match[1]))
+                target = parts[1]
+                if re.fullmatch(r'/etc/[a-zA-Z0-9_./-]+', target) and '..' not in Path(target).parts:
+                    paths.append(Path(target))
+                elif re.fullmatch(r'[a-zA-Z0-9_-]+', target):
+                    imports.add(target)
+                else:
+                    raise ValueError('Ingress import requires owner review')
+    if not imports <= snippets:
+        raise ValueError('Ingress imports an unrecognized snippet')
     return result
 
 
