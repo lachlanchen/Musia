@@ -66,4 +66,36 @@ receipt. Mock test success is not a live-deployment receipt.
 
 Existing native apps fetch the catalog; no new store binary is needed for this
 addition. App-side caches can require refreshing the library or reopening the
-app. Updating an existing song is deliberately outside this add-only command.
+app. Replacing an existing song's content remains outside this command.
+
+## Unlist One Song
+
+Unlisting preserves the recording and direct Fun link while removing the song
+from normal website browsing and the native public library. It does not remove
+social posts, music-platform submissions, or audio files.
+
+In the Fun catalog, set the entry to `visibility: unlisted`,
+`releaseStage: preview`, `category: preview`, and `edition.status: preview`.
+Set the manifest's `publication` to `visibility: unlisted`, `stage: preview`,
+`listed: false`, and its edition to preview. Move the ID from `selected` to
+`previews` in `references/catalog-curation.json`, then validate and deploy Pages.
+Do not use an Archive suffix for a healthy recording that is merely unlisted.
+
+For the native catalog, capture its exact current public song DTO in a private
+packet with only these fields:
+
+```json
+{
+  "operation": "unlist",
+  "mediaId": "SONG_ID",
+  "song": {"id": "SONG_ID", "...": "the complete current song DTO"}
+}
+```
+
+Run the same hash-fenced controller with that packet and the freshly verified
+current release. It rejects stale song data, replacement files, duplicate IDs,
+the built-in lesson, and unlisting the configured default. No new ingress route
+or ingress edit is needed. Acceptance requires every other song DTO to remain
+identical, the target to disappear from the public HTTPS library, and its app
+detail endpoint to return HTTP 404. The Fun direct URL remains playable.
+Previous releases and original song files remain available for recovery.

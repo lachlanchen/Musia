@@ -1,10 +1,11 @@
-"""Add one reviewed song to an immutable learning release; never edit ingress.
+"""Add or unlist one reviewed song in an immutable release; never edit ingress.
 
 Run through the existing private admin helper after uploading a prepared packet.
 Only the Musia learning service is restarted. Failed acceptance restores its
 previous unit/current link; uncertain concurrent changes retain the journal.
 """
 import argparse
+import copy
 import fcntl
 import hashlib
 import json
@@ -17,6 +18,7 @@ import stat
 import subprocess
 import time
 import urllib.request
+import urllib.error
 
 BASE = Path('/srv/musia-learning')
 STATE = Path('/var/lib/musia-learning')
@@ -34,8 +36,15 @@ def encode(value):
 
 def validate_packet(packet):
     media_id = packet['mediaId']
-    if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', media_id):
+    if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', media_id) or media_id == 'first-pulse':
         raise ValueError('Invalid song ID')
+    operation = packet.get('operation', 'add')
+    if operation == 'unlist':
+        if set(packet) != {'operation', 'mediaId', 'song'} or packet['song'].get('id') != media_id:
+            raise ValueError('Unlisting requires the exact current song DTO and no replacement files')
+        return media_id
+    if operation != 'add':
+        raise ValueError('Unknown catalog operation')
     prefix = f'website/data/songs/{media_id}/'
     files = packet['files']
     if not 3 <= len(files) <= 16 or packet['item']['id'] != media_id or packet['song']['id'] != media_id:
@@ -54,6 +63,34 @@ def validate_packet(packet):
     if not all(prefix + name in files for name in ('manifest.json', 'study.json')):
         raise ValueError('Incomplete song')
     return media_id
+
+
+def unlist_metadata(catalog, manifest, media_id):
+    catalog, manifest = copy.deepcopy(catalog), copy.deepcopy(manifest)
+    items = [item for item in catalog['items'] if item['id'] == media_id]
+    if len(items) != 1 or manifest['id'] != media_id or media_id == 'first-pulse':
+        raise ValueError('Unlisting identity mismatch')
+    if catalog.get('defaultMedia') == media_id:
+        raise ValueError('Select a different default before unlisting this song')
+    if items[0]['manifest'] != f'data/songs/{media_id}/manifest.json':
+        raise ValueError('Unexpected manifest path')
+    items[0].update(visibility='unlisted', releaseStage='preview', category='preview',
+                    previewLabel='Listening Preview', edition={'status': 'preview'})
+    manifest.setdefault('publication', {}).update(visibility='unlisted', stage='preview', listed=False)
+    manifest['edition'] = {'status': 'preview'}
+    return catalog, manifest
+
+
+def verify_public_unlisted(media_id, expected_ids):
+    if [item['id'] for item in public_api('/api/v1/library')['items']] != expected_ids:
+        raise ValueError('Public library differs after unlisting')
+    try:
+        public_api('/api/v1/songs/' + media_id)
+    except urllib.error.HTTPError as error:
+        if error.code != 404:
+            raise
+    else:
+        raise ValueError('Unlisted song is still publicly available in the app API')
 
 
 def command(args):
@@ -181,6 +218,7 @@ def main():
     assert sha(raw) == args.sha256
     packet = json.loads(raw)
     media_id = validate_packet(packet)
+    unlist = packet.get('operation') == 'unlist'
     with (STATE / 'deployment.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         marker = STATE / 'active-deployment'
@@ -196,9 +234,13 @@ def main():
         assert shutil.disk_usage(BASE).free > 512 * 1024 * 1024
         before = live_songs()
         assert before and before[0]['id'] == 'first-pulse', 'Unexpected built-in lesson ordering'
-        assert media_id not in [song['id'] for song in before], 'Add-only: existing songs require separate review'
+        if unlist:
+            assert [song for song in before if song['id'] == media_id] == [packet['song']], 'Current song changed since review'
+        else:
+            assert media_id not in [song['id'] for song in before], 'Add-only: existing songs require separate review'
         ingress = ingress_hashes()
-        verify_route_admission(media_id)
+        if not unlist:
+            verify_route_admission(media_id)
         caddy = command(['systemctl', 'show', 'lazystudio-caddy', '-p', 'MainPID', '-p', 'InvocationID'])
         transaction = 'catalog-' + args.sha256[:24]
         journal = STATE / 'deployments' / transaction
@@ -212,7 +254,7 @@ def main():
         new_unit = old_unit.replace(str(previous).encode(), str(release).encode())
         try:
             shutil.copytree(previous, release, symlinks=True)
-            for name, value in packet['files'].items():
+            for name, value in packet.get('files', {}).items():
                 target = release / 'app' / name
                 assert target.resolve().is_relative_to(release / 'app'), 'Catalog parent escaped release'
                 assert not target.exists()
@@ -220,20 +262,28 @@ def main():
                 atomic(target, encode(value), 0o644)
             catalog = release / 'app/website/data/catalog.json'
             value = json.loads(catalog.read_text())
-            assert media_id not in [i['id'] for i in value['items']]
-            value['items'].insert(0, packet['item'])
+            if unlist:
+                song_path = release / f'app/website/data/songs/{media_id}/manifest.json'
+                assert song_path.resolve().is_relative_to(release / 'app') and not song_path.is_symlink()
+                value, song_manifest = unlist_metadata(value, json.loads(song_path.read_text()), media_id)
+                atomic(song_path, encode(song_manifest), 0o644)
+            else:
+                assert media_id not in [i['id'] for i in value['items']]
+                value['items'].insert(0, packet['item'])
             atomic(catalog, encode(value), 0o644)
             # Prove all existing DTOs remain identical before any service change.
             probe = ('import json,sys; from pathlib import Path; sys.path.insert(0,sys.argv[1]); '
                      'from musia.learning import PublicLibrary; l=PublicLibrary(Path(sys.argv[1])); '
                      'print(json.dumps([l.song(i) for i in l.entries()]))')
             staged = json.loads(command([release / 'runtime/bin/python', '-B', '-c', probe, release / 'app']))
-            expected = [packet['song']] + [song for song in before if song['id'] != 'first-pulse']
+            expected = ([song for song in before if song['id'] not in ('first-pulse', media_id)] if unlist
+                        else [packet['song']] + [song for song in before if song['id'] != 'first-pulse'])
             assert staged == expected, 'Staged catalog differs from approved DTOs'
             manifest = json.loads((release / 'release.json').read_text())
             manifest['songIds'] = ['first-pulse'] + [song['id'] for song in staged]
-            manifest['catalogAddition'] = {'mediaId': media_id, 'packetSha256': args.sha256, 'previousRelease': str(previous)}
-            for name in list(manifest['files']) + ['app/' + p for p in packet['files']]:
+            manifest['catalogUnlisting' if unlist else 'catalogAddition'] = {
+                'mediaId': media_id, 'packetSha256': args.sha256, 'previousRelease': str(previous)}
+            for name in list(manifest['files']) + ['app/' + p for p in packet.get('files', {})]:
                 manifest['files'][name] = sha((release / name).read_bytes())
             atomic(release / 'release.json', encode(manifest), 0o644)
             assert UNIT.read_bytes() == old_unit and (BASE / 'current').resolve() == previous
@@ -244,11 +294,14 @@ def main():
             command(['systemctl', 'restart', SERVICE])
             wait_healthy()
             assert live_songs() == [before[0]] + expected
-            verify_public_song(packet['song'])
+            if unlist:
+                verify_public_unlisted(media_id, [song['id'] for song in [before[0]] + expected])
+            else:
+                verify_public_song(packet['song'])
             assert ingress_hashes() == ingress
             assert command(['systemctl', 'show', 'lazystudio-caddy', '-p', 'MainPID', '-p', 'InvocationID']) == caddy
             current_link(release)
-            result = {'published': True, 'mediaId': media_id, 'release': str(release),
+            result = {'published': not unlist, 'unlisted': unlist, 'mediaId': media_id, 'release': str(release),
                       'previousRelease': str(previous), 'packetSha256': args.sha256,
                       'songCount': len(expected) + 1, 'ingressUnchanged': True,
                       'publicDetailVerified': True,
