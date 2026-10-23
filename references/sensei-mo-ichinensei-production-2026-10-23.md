@@ -131,8 +131,10 @@ translated lyrics, ruby and moving word/chord highlights before deploying Fun.
 The native catalog uses the additive procedure in
 `docs/learning-catalog-addition.md`, preserving all existing song DTOs. Its
 new exact read-only detail route is admitted separately; authentication,
-creator handlers and sibling sites are unchanged. This task does not include recording, social posting,
-Shipinhao Music or any store submission.
+creator handlers and sibling sites are unchanged. The initial song deployment
+did not include recording, social posting, Shipinhao Music or store submission.
+The subsequent requested recording and publication are documented in the
+[LazyEdit publication record](../handoff/lazyedit/sensei-mo-ichinensei/README.md).
 
 Public song: https://fun.lazying.art/#sensei-mo-ichinensei
 
