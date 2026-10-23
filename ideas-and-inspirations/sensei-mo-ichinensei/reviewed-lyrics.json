@@ -1,0 +1,1159 @@
+{
+  "mediaId": "sensei-mo-ichinensei",
+  "title": "せんせいも一年生 · A Beginner, Even Now",
+  "vocalSet": "ja-vocal",
+  "audioSha256": "bc465e163692027af4162649bee867e42620cfe6cdcc233abe5ce7d635dab4c5",
+  "duration": 240,
+  "releaseStage": "published",
+  "reviewStatus": "Selected-audio large-v3 full-mix and vocal-stem no-VAD windows, focused CPU rechecks and independent final-chorus MOSS evidence. Human listening approval not claimed.",
+  "timingStatus": "Selected-audio ASR word anchors; within-word subdivision and translation highlighting are approximate.",
+  "notes": "Preserve source-close Japanese, but retain the actual final-chorus fragment and extra tear line. The final chorus repeats 明日もまだ未完成 rather than the planned 世界はまだ未完成. No instrumental or recognizer-credit rows. Unclear diction remains an editorial uncertainty, not a certified transcription.",
+  "jaReadingOverrides": {
+    "内定": "ないてい",
+    "三度": "さんど",
+    "四度目": "よんどめ",
+    "特任": "とくにん",
+    "助教": "じょきょう",
+    "四文字": "よんもじ",
+    "四": "よん",
+    "千葉": "ちば",
+    "付箋": "ふせん",
+    "一年生": "いちねんせい",
+    "明日": "あした",
+    "今日": "きょう",
+    "昨日": "きのう",
+    "風": "かぜ",
+    "声": "こえ",
+    "背筋": "せすじ",
+    "歩幅": "ほはば",
+    "椅子": "いす",
+    "未来": "みらい",
+    "夕焼け": "ゆうやけ",
+    "涙": "なみだ",
+    "表": "ひょう",
+    "深呼吸": "しんこきゅう",
+    "日": "ひ",
+    "私": "わたし",
+    "指": "ゆび",
+    "先": "さき"
+  },
+  "sources": {
+    "full": {
+      "path": "data/creative_projects/sensei-mo-ichinensei-20261023/review/102314/full-flat.json",
+      "sha256": "c911aa23ba8da4fa8fd937d6d9edd222ff1a89affcf5fda11f9abae7c2facca1"
+    },
+    "stem": {
+      "path": "data/creative_projects/sensei-mo-ichinensei-20261023/review/102314/stem-flat.json",
+      "sha256": "8151d3afabc0b92b11152f9755a80ce7010a75f0a1c60328f7222a6f33307918"
+    },
+    "focused": {
+      "path": "data/creative_projects/sensei-mo-ichinensei-20261023/review/102314/focused-flat.json",
+      "sha256": "94d3709998f1f15475f8e03c59de3b04407ced6b309198243fc704bddecf7866"
+    }
+  },
+  "lines": [
+    {
+      "anchors": [
+        {
+          "source": "focused",
+          "segment": 0
+        }
+      ],
+      "ja": "内定メールを三度見て",
+      "en": "I read the offer email three times",
+      "zh-Hans": "录用通知的邮件，我看了三遍",
+      "referenceLine": 1,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "泣いて",
+          "text": "内定",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        },
+        {
+          "words": [
+            5,
+            6
+          ],
+          "source": "3",
+          "text": "三",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "focused",
+          "segment": 1
+        }
+      ],
+      "ja": "四度目やっと声が出た",
+      "en": "On the fourth, I finally found my voice",
+      "zh-Hans": "第四遍，才终于叫出声来",
+      "referenceLine": 2,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "一",
+          "text": "四",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 5,
+          "words": [
+            2,
+            11
+          ]
+        }
+      ],
+      "ja": "「特任助教」の四文字を",
+      "en": "Those four characters: specially appointed assistant professor",
+      "zh-Hans": "特任助教，这四个字",
+      "referenceLine": 3,
+      "replacements": [
+        {
+          "words": [
+            5,
+            6
+          ],
+          "source": "下",
+          "text": "四",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 6
+        }
+      ],
+      "ja": "指でなぞってまた笑う",
+      "en": "I trace them with a finger and smile again",
+      "zh-Hans": "指尖轻轻描过，又笑了起来",
+      "referenceLine": 4,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 7
+        }
+      ],
+      "ja": "鏡の前で「先生です」",
+      "en": "In the mirror, I try saying, I'm your teacher",
+      "zh-Hans": "对着镜子，试着说：我是老师",
+      "referenceLine": 5,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 4,
+          "words": [
+            6,
+            15
+          ]
+        }
+      ],
+      "ja": "言ってみたけど照れちゃった",
+      "en": "But saying it out loud makes me shy",
+      "zh-Hans": "才说出口，自己却先害羞",
+      "referenceLine": 6,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 9
+        }
+      ],
+      "ja": "立派な挨拶考えたのに",
+      "en": "I had such a fine introduction planned",
+      "zh-Hans": "明明准备了体面的开场白",
+      "referenceLine": 7,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 10
+        }
+      ],
+      "ja": "おなかが先に返事した",
+      "en": "But my stomach answered first",
+      "zh-Hans": "肚子却抢先作了回答",
+      "referenceLine": 8,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "お腹",
+          "text": "おなか",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 11,
+          "words": [
+            0,
+            4
+          ]
+        },
+        {
+          "source": "full",
+          "segment": 12,
+          "words": [
+            4,
+            7
+          ]
+        }
+      ],
+      "ja": "遠回りした帰り道",
+      "en": "On all those winding journeys home",
+      "zh-Hans": "那些绕了远路的归途",
+      "referenceLine": 9,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 12,
+          "words": [
+            7,
+            16
+          ]
+        }
+      ],
+      "ja": "拾った小さな「なぜだろう」",
+      "en": "I picked up little questions along the way",
+      "zh-Hans": "捡起一个个小小的为什么",
+      "referenceLine": 10,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 13,
+          "words": [
+            0,
+            10
+          ]
+        }
+      ],
+      "ja": "ポケットいっぱい連れてゆこう",
+      "en": "I'll bring them all, my pockets full",
+      "zh-Hans": "装满口袋，一起带着走吧",
+      "referenceLine": 11,
+      "replacements": [
+        {
+          "words": [
+            8,
+            10
+          ],
+          "source": "行こう",
+          "text": "ゆこう",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 13,
+          "words": [
+            10,
+            18
+          ]
+        }
+      ],
+      "ja": "千葉の風が呼んでいる",
+      "en": "The breeze in Chiba is calling me",
+      "zh-Hans": "千叶的风，正在呼唤我",
+      "referenceLine": 12,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 14,
+          "words": [
+            0,
+            2
+          ]
+        }
+      ],
+      "ja": "せんせい、せんせい",
+      "en": "Teacher, teacher",
+      "zh-Hans": "老师呀，老师",
+      "referenceLine": 13,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "先生先生",
+          "text": "せんせいせんせい",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 14,
+          "words": [
+            2,
+            7
+          ]
+        }
+      ],
+      "ja": "わたしも一年生",
+      "en": "I'm a first-year beginner too",
+      "zh-Hans": "我也还是一年级",
+      "referenceLine": 14,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "私",
+          "text": "わたし",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 14,
+          "words": [
+            7,
+            16
+          ]
+        }
+      ],
+      "ja": "知らないことが増えるたび",
+      "en": "With every new thing I don't yet know",
+      "zh-Hans": "每多遇见一件不懂的事",
+      "referenceLine": 15,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 10,
+          "words": [
+            9,
+            16
+          ]
+        }
+      ],
+      "ja": "世界が広くなるんだね",
+      "en": "The world grows a little wider",
+      "zh-Hans": "世界就又开阔了一点",
+      "referenceLine": 16,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 12,
+          "words": [
+            2,
+            4
+          ]
+        }
+      ],
+      "ja": "せんせい、せんせい",
+      "en": "Teacher, teacher",
+      "zh-Hans": "老师呀，老师",
+      "referenceLine": 17,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "先生先生",
+          "text": "せんせいせんせい",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 12,
+          "words": [
+            4,
+            10
+          ]
+        }
+      ],
+      "ja": "明日もまだ未完成",
+      "en": "Tomorrow, I'll still be a work in progress",
+      "zh-Hans": "明天的我，也还没有完成",
+      "referenceLine": 18,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 18
+        }
+      ],
+      "ja": "答えをひとつ見つけたら",
+      "en": "When I find one answer",
+      "zh-Hans": "找到一个答案之后",
+      "referenceLine": 19,
+      "replacements": [
+        {
+          "words": [
+            3,
+            5
+          ],
+          "source": "一つ",
+          "text": "ひとつ",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 13,
+          "words": [
+            10,
+            21
+          ]
+        }
+      ],
+      "ja": "次の「どうして？」に会いにゆこう",
+      "en": "I'll go and meet the next why",
+      "zh-Hans": "再去遇见下一个为什么",
+      "referenceLine": 20,
+      "replacements": [
+        {
+          "words": [
+            2,
+            7
+          ],
+          "source": "帽子で似合",
+          "text": "どうしてに会",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        },
+        {
+          "words": [
+            9,
+            11
+          ],
+          "source": "行こう",
+          "text": "ゆこう",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 20
+        }
+      ],
+      "ja": "きれいに引いた予定表",
+      "en": "The schedule I ruled so neatly",
+      "zh-Hans": "画得整整齐齐的日程表",
+      "referenceLine": 21,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "綺麗",
+          "text": "きれい",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        },
+        {
+          "words": [
+            5,
+            8
+          ],
+          "source": "予定よ",
+          "text": "予定表",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 14,
+          "words": [
+            8,
+            19
+          ]
+        }
+      ],
+      "ja": "はみ出す付箋で花が咲く",
+      "en": "Blooms with sticky notes spilling over its edges",
+      "zh-Hans": "贴满溢出格子的便签，像开了花",
+      "referenceLine": 22,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 22
+        }
+      ],
+      "ja": "うまくいかない午後三時",
+      "en": "At three, when nothing goes to plan",
+      "zh-Hans": "下午三点，事情不太顺利",
+      "referenceLine": 23,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 23
+        }
+      ],
+      "ja": "お茶を入れたらひと休み",
+      "en": "I'll make some tea and take a break",
+      "zh-Hans": "泡一杯茶，先歇一歇",
+      "referenceLine": 24,
+      "replacements": [
+        {
+          "words": [
+            6,
+            9
+          ],
+          "source": "一休み",
+          "text": "ひと休み",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 24
+        }
+      ],
+      "ja": "「わかりません」と言えた日に",
+      "en": "The day I could say, I don't know",
+      "zh-Hans": "终于能够说出我不懂的那天",
+      "referenceLine": 25,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 26,
+          "words": [
+            6,
+            13
+          ]
+        }
+      ],
+      "ja": "となりの声が近くなる",
+      "en": "The voice beside me felt a little closer",
+      "zh-Hans": "身旁的声音，也变得更亲近",
+      "referenceLine": 26,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "隣",
+          "text": "となり",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 27
+        }
+      ],
+      "ja": "教えるつもりで来たけれど",
+      "en": "I came here meaning to teach",
+      "zh-Hans": "本来是怀着教人的心情来到这里",
+      "referenceLine": 27,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 28
+        }
+      ],
+      "ja": "今日も誰かに教わった",
+      "en": "But someone taught me something again today",
+      "zh-Hans": "今天却又向别人学到了东西",
+      "referenceLine": 28,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 29
+        }
+      ],
+      "ja": "ひとりで解けない問いなら",
+      "en": "If a question is too much to solve alone",
+      "zh-Hans": "若有一个人解不开的问题",
+      "referenceLine": 29,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "一人",
+          "text": "ひとり",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 30
+        }
+      ],
+      "ja": "となりに椅子を置けばいい",
+      "en": "Just put another chair beside your own",
+      "zh-Hans": "就在身旁，再放一把椅子",
+      "referenceLine": 30,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "隣",
+          "text": "となり",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 31
+        }
+      ],
+      "ja": "違う景色を持ち寄って",
+      "en": "We can bring the different worlds we've seen",
+      "zh-Hans": "带来各自见过的不同风景",
+      "referenceLine": 31,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 32
+        }
+      ],
+      "ja": "同じ夕焼け見ればいい",
+      "en": "And watch the same sunset together",
+      "zh-Hans": "再一起，看看同一片晚霞",
+      "referenceLine": 32,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 33
+        }
+      ],
+      "ja": "ずっと頑張ったわたしへ",
+      "en": "For the me who's been trying all this time",
+      "zh-Hans": "送给一直努力着的自己",
+      "referenceLine": 33,
+      "replacements": [
+        {
+          "words": [
+            5,
+            6
+          ],
+          "source": "私",
+          "text": "わたし",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 34
+        }
+      ],
+      "ja": "帰りにプリンを買ってゆこう",
+      "en": "I'll buy a pudding on the way home",
+      "zh-Hans": "回家路上，买一份布丁吧",
+      "referenceLine": 34,
+      "replacements": [
+        {
+          "words": [
+            9,
+            11
+          ],
+          "source": "行こう",
+          "text": "ゆこう",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 35
+        }
+      ],
+      "ja": "未来のことは気になるけど",
+      "en": "Of course I wonder what the future holds",
+      "zh-Hans": "虽然也会惦记未来的事",
+      "referenceLine": 35,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 36
+        }
+      ],
+      "ja": "今日の甘さを忘れずに",
+      "en": "But I won't forget the sweetness of today",
+      "zh-Hans": "却也别忘了，今天的甜",
+      "referenceLine": 36,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 37
+        }
+      ],
+      "ja": "せんせい、せんせい",
+      "en": "Teacher, teacher",
+      "zh-Hans": "老师呀，老师",
+      "referenceLine": 37,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "先生先生",
+          "text": "せんせいせんせい",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 38,
+          "words": [
+            2,
+            7
+          ]
+        }
+      ],
+      "ja": "わたしも一年生",
+      "en": "I'm a first-year beginner too",
+      "zh-Hans": "我也还是一年级",
+      "referenceLine": 38,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "私",
+          "text": "わたし",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 30
+        }
+      ],
+      "ja": "昨日の涙も連れてきた",
+      "en": "I brought yesterday's tears along with me",
+      "zh-Hans": "昨天的眼泪，我也一起带来了",
+      "referenceLine": 39,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 40
+        }
+      ],
+      "ja": "わたしの今日なんか",
+      "en": "This day of mine...",
+      "zh-Hans": "属于我的今天……",
+      "referenceLine": 40,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "私",
+          "text": "わたし",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 32
+        }
+      ],
+      "ja": "今日の涙も忘れたら",
+      "en": "If I let go of today's tears",
+      "zh-Hans": "若把今天的眼泪也放下",
+      "referenceLine": null,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            0,
+            2
+          ]
+        }
+      ],
+      "ja": "せんせい、せんせい",
+      "en": "Teacher, teacher",
+      "zh-Hans": "老师呀，老师",
+      "referenceLine": 37,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "先生先生",
+          "text": "せんせいせんせい",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 42,
+          "words": [
+            2,
+            7
+          ]
+        }
+      ],
+      "ja": "わたしも一年生",
+      "en": "I'm a first-year beginner too",
+      "zh-Hans": "我也还是一年级",
+      "referenceLine": 38,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "私",
+          "text": "わたし",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 43,
+          "words": [
+            0,
+            2
+          ]
+        }
+      ],
+      "ja": "せんせい、せんせい",
+      "en": "Teacher, teacher",
+      "zh-Hans": "老师呀，老师",
+      "referenceLine": 41,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "先生先生",
+          "text": "せんせいせんせい",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 43,
+          "words": [
+            2,
+            8
+          ]
+        }
+      ],
+      "ja": "明日もまだ未完成",
+      "en": "Tomorrow, I'll still be a work in progress",
+      "zh-Hans": "明天的我，也还没有完成",
+      "referenceLine": 18,
+      "replacements": []
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 44
+        }
+      ],
+      "ja": "背伸びのあとは深呼吸",
+      "en": "After reaching up, I'll take a deep breath",
+      "zh-Hans": "努力踮起脚尖后，记得深呼吸",
+      "referenceLine": 43,
+      "replacements": [
+        {
+          "words": [
+            4,
+            5
+          ],
+          "source": "後",
+          "text": "あと",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 45
+        }
+      ],
+      "ja": "わたしの歩幅で会いにゆこう",
+      "en": "I'll go and meet it at my own pace",
+      "zh-Hans": "用自己的步幅，走去相遇吧",
+      "referenceLine": 44,
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": "私",
+          "text": "わたし",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        },
+        {
+          "words": [
+            8,
+            10
+          ],
+          "source": "行こう",
+          "text": "ゆこう",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 47,
+          "words": [
+            0,
+            3
+          ]
+        }
+      ],
+      "ja": "「あや先生」",
+      "en": "Aya-sensei!",
+      "zh-Hans": "阿芽老师！",
+      "referenceLine": 45,
+      "replacements": [
+        {
+          "words": [
+            0,
+            2
+          ],
+          "source": "愛や",
+          "text": "あや",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 47,
+          "words": [
+            3,
+            15
+          ]
+        }
+      ],
+      "ja": "呼ばれてちょっと背筋が伸びる",
+      "en": "Hearing my name, I stand a little taller",
+      "zh-Hans": "被这样叫到，便不由得挺直了背",
+      "referenceLine": 46,
+      "replacements": [
+        {
+          "words": [
+            3,
+            6
+          ],
+          "source": "ちょうど",
+          "text": "ちょっと",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        },
+        {
+          "words": [
+            6,
+            8
+          ],
+          "source": "手筋",
+          "text": "背筋",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 38
+        }
+      ],
+      "ja": "「はい！」と笑えば風が吹く",
+      "en": "I smile and say, Yes! A breeze blows by",
+      "zh-Hans": "笑着应一声好，风便轻轻吹来",
+      "referenceLine": 47,
+      "replacements": [
+        {
+          "words": [
+            0,
+            3
+          ],
+          "source": "ハイッ",
+          "text": "はい",
+          "reason": "Same pronunciation; restore the intended native Japanese orthography."
+        }
+      ]
+    },
+    {
+      "anchors": [
+        {
+          "source": "full",
+          "segment": 49
+        }
+      ],
+      "ja": "明日もきっとはじめまして",
+      "en": "Tomorrow will bring another lovely first hello",
+      "zh-Hans": "明天，一定还会有新的初次见面",
+      "referenceLine": 48,
+      "replacements": [
+        {
+          "words": [
+            5,
+            8
+          ],
+          "source": "始まして",
+          "text": "はじめまして",
+          "reason": "Sound-close source/context correction cross-checked against independent passes, not a claim of perfect diction."
+        }
+      ]
+    }
+  ],
+  "independentEvidence": {
+    "path": "data/creative_projects/sensei-mo-ichinensei-20261023/review/102314/moss-final-chorus-ja.txt",
+    "sha256": "93bc1f289921233a735f1d8b4327bc362a7d1c9bce4e7e8fd33c7b34b333b58f",
+    "scope": [
+      140,
+      195
+    ],
+    "cropSha256": "af85923ade57a825e63fc82d9aaec17d99e1fc535c801ad3ab727d7594e23594"
+  }
+}

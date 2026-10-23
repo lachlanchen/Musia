@@ -1,0 +1,114 @@
+import copy
+import importlib.util
+import json
+from pathlib import Path
+import tempfile
+import unittest
+from unittest.mock import patch
+
+spec = importlib.util.spec_from_file_location('catalog_add', Path(__file__).resolve().parents[1] / 'deploy/learning/catalog_add.py')
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+
+
+class PacketTests(unittest.TestCase):
+    def packet(self):
+        prefix = 'website/data/songs/example/'
+        return {'mediaId': 'example', 'item': {'id': 'example', 'manifest': 'data/songs/example/manifest.json'},
+                'song': {'id': 'example'}, 'files': {prefix + path: {} for path in
+                ('manifest.json', 'study.json', 'lyrics/ja-vocal/ja.json')}}
+
+    def test_valid(self):
+        self.assertEqual(module.validate_packet(self.packet()), 'example')
+
+    def test_escapes_and_non_catalog_files_rejected(self):
+        for path in ('/etc/passwd', '../manifest.json', 'website/data/songs/example/../../catalog.json',
+                     'website/data/songs/example/worker.py', 'website/data/songs/another/manifest.json'):
+            packet = self.packet()
+            packet['files'][path] = {}
+            with self.subTest(path=path), self.assertRaises(ValueError):
+                module.validate_packet(packet)
+
+    def test_identity_and_required_artifacts(self):
+        for section in ('item', 'song'):
+            packet = self.packet()
+            packet[section]['id'] = 'other'
+            with self.assertRaises(ValueError):
+                module.validate_packet(packet)
+        packet = self.packet()
+        del packet['files']['website/data/songs/example/study.json']
+        with self.assertRaises(ValueError):
+            module.validate_packet(packet)
+
+    def test_packet_is_not_mutated(self):
+        packet = self.packet()
+        before = copy.deepcopy(packet)
+        module.validate_packet(packet)
+        self.assertEqual(before, packet)
+
+    def test_invalid_id(self):
+        for value in ('../example', 'Example', 'example/test', ''):
+            packet = self.packet()
+            packet['mediaId'] = value
+            with self.assertRaises(ValueError):
+                module.validate_packet(packet)
+
+    def test_success_and_failed_acceptance_restore_only_owned_release(self):
+        for fail in (False, True):
+            with self.subTest(fail=fail), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                base, state = root / 'base', root / 'state'
+                old = base / 'releases/old'
+                (old / 'app/website/data').mkdir(parents=True)
+                (state / 'deployments').mkdir(parents=True)
+                (old / 'app/website/data/catalog.json').write_text('{"items": []}')
+                (old / 'release.json').write_text('{"files": {"app/website/data/catalog.json": "old"}}')
+                (base / 'current').symlink_to(old)
+                unit = root / 'unit'
+                initial_unit = f'WorkingDirectory={old}/app\nExecStart={old}/runtime/bin/python\n'.encode()
+                unit.write_bytes(initial_unit)
+                packet = self.packet()
+                packet_path = root / 'packet.json'
+                packet_path.write_bytes(module.encode(packet))
+                digest = module.sha(packet_path.read_bytes())
+                before = [{'id': 'first-pulse'}]
+                after = before + [packet['song']]
+                calls = []
+
+                def command(args):
+                    calls.append(list(map(str, args)))
+                    if 'is-active' in args:
+                        return 'active\n'
+                    if 'show' in args:
+                        return 'MainPID=100\n'
+                    if '-c' in args:
+                        return json.dumps([packet['song']])
+                    return ''
+
+                states = [before, [{'id': 'wrong'}], before] if fail else [before, after]
+                with patch.object(module, 'BASE', base), patch.object(module, 'STATE', state), \
+                     patch.object(module, 'UNIT', unit), patch.object(module.os, 'geteuid', return_value=0), \
+                     patch.object(module, 'command', side_effect=command), \
+                     patch.object(module, 'live_songs', side_effect=states), \
+                     patch.object(module, 'wait_healthy'), \
+                     patch.object(module, 'ingress_hashes', return_value={'config': 'unchanged'}), \
+                     patch('sys.argv', ['catalog_add', str(packet_path), '--sha256', digest, '--expected-release', str(old)]):
+                    if fail:
+                        with self.assertRaises(AssertionError):
+                            module.main()
+                    else:
+                        module.main()
+                self.assertFalse((state / 'active-deployment').exists())
+                self.assertEqual(json.loads((old / 'app/website/data/catalog.json').read_text()), {'items': []})
+                self.assertFalse(any('caddy' in arg for call in calls for arg in call if arg != 'lazystudio-caddy'))
+                restart_calls = [call for call in calls if 'restart' in call]
+                self.assertEqual(restart_calls, [['systemctl', 'restart', module.SERVICE]] * (2 if fail else 1))
+                if fail:
+                    self.assertEqual(unit.read_bytes(), initial_unit)
+                    self.assertEqual((base / 'current').resolve(), old)
+                else:
+                    self.assertNotEqual((base / 'current').resolve(), old)
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,0 +1,34 @@
+{
+  "mediaId": "sensei-mo-ichinensei",
+  "title": "せんせいも一年生 · A Beginner, Even Now",
+  "localizedTitles": {
+    "ja": "せんせいも一年生",
+    "en": "A Beginner, Even Now",
+    "zh-Hans": "老师也是一年级"
+  },
+  "releaseStage": "published",
+  "generationCredit": "",
+  "project": "data/creative_projects/sensei-mo-ichinensei-20261023",
+  "audio": "data/creative_projects/sensei-mo-ichinensei-20261023/sweep-pronunciation/batch-102313-102314/d2581e1f-452e-5eca-e6c3-59d7fe7d4b5a.wav",
+  "review": "ideas-and-inspirations/sensei-mo-ichinensei/reviewed-lyrics.json",
+  "analysis": "data/runs/sensei-ja-102314",
+  "assetId": "sensei-ja-102314",
+  "publicFilename": "sensei-mo-ichinensei-ja-102314-20261023.mp3",
+  "description": "阿芽把录用邮件读了一遍又一遍，对着镜子练习说自己是老师，肚子却抢先答了话。千叶的风吹来，她带着口袋里的小问题走进新的一天。成为老师，也可以继续做一年级的新生：遇到解不开的问题，就在身旁多放一把椅子；努力过后，回家买一份布丁。",
+  "caption": "知らないことが増えるたび、世界が広くなるんだね。",
+  "tags": ["music", "Japanese", "J-pop", "Aya Chan", "Chiba", "new beginnings", "curiosity", "joy", "chords"],
+  "provenance": {
+    "model": "acestep-v15-xl-turbo",
+    "selectedSeed": 102314,
+    "modelRevision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+    "checkpointRevision": "d4a0b288b83ebb7e25a8c0b32c573c22e134e8ee",
+    "decoder": "official",
+    "quality": {
+      "audioHealth": "pass",
+      "humanListeningApproved": false,
+      "timing": "Selected-audio large-v3 word anchors; within-word and translation highlighting approximate",
+      "musicalAnalysis": "Estimated from this selected audio, not a musician-verified score"
+    },
+    "coverSource": "Fresh image generation: Aya, a red-panda teacher in a coral cardigan, notebook and sticky notes, monumental sunlit timber-and-glass university library, blue sky and a gentle breeze; no text or logo"
+  }
+}

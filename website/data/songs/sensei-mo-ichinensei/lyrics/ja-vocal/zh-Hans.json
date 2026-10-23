@@ -1,0 +1,4095 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "sensei-mo-ichinensei",
+  "language": {
+    "code": "zh-Hans",
+    "label": "Mandarin Chinese",
+    "nativeLabel": "中文",
+    "script": "Hans",
+    "pronunciation": "pinyin"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 20.72,
+      "end": 24.04,
+      "text": "录用通知的邮件，我看了三遍",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "录",
+          "pinyin": "lu4",
+          "start": 20.72,
+          "end": 20.975,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "用",
+          "pinyin": "yong4",
+          "start": 20.975,
+          "end": 21.231,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "通",
+          "pinyin": "tong1",
+          "start": 21.231,
+          "end": 21.486,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "知",
+          "pinyin": "zhi1",
+          "start": 21.486,
+          "end": 21.742,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 21.742,
+          "end": 21.997,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "邮",
+          "pinyin": "you2",
+          "start": 21.997,
+          "end": 22.252,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "件",
+          "pinyin": "jian4",
+          "start": 22.252,
+          "end": 22.508,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 22.508,
+          "end": 22.763,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 22.763,
+          "end": 23.018,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "看",
+          "pinyin": "kan4",
+          "start": 23.018,
+          "end": 23.274,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 23.274,
+          "end": 23.529,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "三",
+          "pinyin": "san1",
+          "start": 23.529,
+          "end": 23.785,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "遍",
+          "pinyin": "bian4",
+          "start": 23.785,
+          "end": 24.04,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 24.04,
+      "end": 28.4,
+      "text": "第四遍，才终于叫出声来",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "第",
+          "pinyin": "di4",
+          "start": 24.04,
+          "end": 24.436,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "四",
+          "pinyin": "si4",
+          "start": 24.436,
+          "end": 24.833,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "遍",
+          "pinyin": "bian4",
+          "start": 24.833,
+          "end": 25.229,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 25.229,
+          "end": 25.625,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "才",
+          "pinyin": "cai2",
+          "start": 25.625,
+          "end": 26.022,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "终",
+          "pinyin": "zhong1",
+          "start": 26.022,
+          "end": 26.418,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "于",
+          "pinyin": "yu2",
+          "start": 26.418,
+          "end": 26.815,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "叫",
+          "pinyin": "jiao4",
+          "start": 26.815,
+          "end": 27.211,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "出",
+          "pinyin": "chu1",
+          "start": 27.211,
+          "end": 27.607,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "声",
+          "pinyin": "sheng1",
+          "start": 27.607,
+          "end": 28.004,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 28.004,
+          "end": 28.4,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 28.62,
+      "end": 32.58,
+      "text": "特任助教，这四个字",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "特",
+          "pinyin": "te4",
+          "start": 28.62,
+          "end": 29.06,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "任",
+          "pinyin": "ren4",
+          "start": 29.06,
+          "end": 29.5,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "助",
+          "pinyin": "zhu4",
+          "start": 29.5,
+          "end": 29.94,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "教",
+          "pinyin": "jiao4",
+          "start": 29.94,
+          "end": 30.38,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 30.38,
+          "end": 30.82,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "这",
+          "pinyin": "zhe4",
+          "start": 30.82,
+          "end": 31.26,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "四",
+          "pinyin": "si4",
+          "start": 31.26,
+          "end": 31.7,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "个",
+          "pinyin": "ge4",
+          "start": 31.7,
+          "end": 32.14,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "字",
+          "pinyin": "zi4",
+          "start": 32.14,
+          "end": 32.58,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 33.42,
+      "end": 37.0,
+      "text": "指尖轻轻描过，又笑了起来",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "指",
+          "pinyin": "zhi3",
+          "start": 33.42,
+          "end": 33.718,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "尖",
+          "pinyin": "jian1",
+          "start": 33.718,
+          "end": 34.017,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "轻",
+          "pinyin": "qing1",
+          "start": 34.017,
+          "end": 34.315,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "轻",
+          "pinyin": "qing1",
+          "start": 34.315,
+          "end": 34.613,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "描",
+          "pinyin": "miao2",
+          "start": 34.613,
+          "end": 34.912,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "过",
+          "pinyin": "guo4",
+          "start": 34.912,
+          "end": 35.21,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 35.21,
+          "end": 35.508,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "又",
+          "pinyin": "you4",
+          "start": 35.508,
+          "end": 35.807,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "笑",
+          "pinyin": "xiao4",
+          "start": 35.807,
+          "end": 36.105,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 36.105,
+          "end": 36.403,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "起",
+          "pinyin": "qi3",
+          "start": 36.403,
+          "end": 36.702,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 36.702,
+          "end": 37.0,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 38.02,
+      "end": 41.32,
+      "text": "对着镜子，试着说：我是老师",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "对",
+          "pinyin": "dui4",
+          "start": 38.02,
+          "end": 38.274,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "着",
+          "pinyin": "zhe5",
+          "start": 38.274,
+          "end": 38.528,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "镜",
+          "pinyin": "jing4",
+          "start": 38.528,
+          "end": 38.782,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "子",
+          "pinyin": "zi5",
+          "start": 38.782,
+          "end": 39.035,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 39.035,
+          "end": 39.289,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "试",
+          "pinyin": "shi4",
+          "start": 39.289,
+          "end": 39.543,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "着",
+          "pinyin": "zhe5",
+          "start": 39.543,
+          "end": 39.797,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "说",
+          "pinyin": "shuo1",
+          "start": 39.797,
+          "end": 40.051,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "：",
+          "start": 40.051,
+          "end": 40.305,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 40.305,
+          "end": 40.558,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "是",
+          "pinyin": "shi4",
+          "start": 40.558,
+          "end": 40.812,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 40.812,
+          "end": 41.066,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 41.066,
+          "end": 41.32,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 41.8,
+      "end": 45.44,
+      "text": "才说出口，自己却先害羞",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "才",
+          "pinyin": "cai2",
+          "start": 41.8,
+          "end": 42.131,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "说",
+          "pinyin": "shuo1",
+          "start": 42.131,
+          "end": 42.462,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "出",
+          "pinyin": "chu1",
+          "start": 42.462,
+          "end": 42.793,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "口",
+          "pinyin": "kou3",
+          "start": 42.793,
+          "end": 43.124,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 43.124,
+          "end": 43.455,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "自",
+          "pinyin": "zi4",
+          "start": 43.455,
+          "end": 43.785,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "己",
+          "pinyin": "ji3",
+          "start": 43.785,
+          "end": 44.116,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "却",
+          "pinyin": "que4",
+          "start": 44.116,
+          "end": 44.447,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "先",
+          "pinyin": "xian1",
+          "start": 44.447,
+          "end": 44.778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "害",
+          "pinyin": "hai4",
+          "start": 44.778,
+          "end": 45.109,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "羞",
+          "pinyin": "xiu1",
+          "start": 45.109,
+          "end": 45.44,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 46.28,
+      "end": 50.28,
+      "text": "明明准备了体面的开场白",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "明",
+          "pinyin": "ming2",
+          "start": 46.28,
+          "end": 46.644,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "明",
+          "pinyin": "ming2",
+          "start": 46.644,
+          "end": 47.007,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "准",
+          "pinyin": "zhun3",
+          "start": 47.007,
+          "end": 47.371,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "备",
+          "pinyin": "bei4",
+          "start": 47.371,
+          "end": 47.735,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 47.735,
+          "end": 48.098,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "体",
+          "pinyin": "ti3",
+          "start": 48.098,
+          "end": 48.462,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "面",
+          "pinyin": "mian4",
+          "start": 48.462,
+          "end": 48.825,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 48.825,
+          "end": 49.189,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "开",
+          "pinyin": "kai1",
+          "start": 49.189,
+          "end": 49.553,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "场",
+          "pinyin": "chang3",
+          "start": 49.553,
+          "end": 49.916,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "白",
+          "pinyin": "bai2",
+          "start": 49.916,
+          "end": 50.28,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 50.28,
+      "end": 54.08,
+      "text": "肚子却抢先作了回答",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "肚",
+          "pinyin": "du3",
+          "start": 50.28,
+          "end": 50.702,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "子",
+          "pinyin": "zi5",
+          "start": 50.702,
+          "end": 51.124,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "却",
+          "pinyin": "que4",
+          "start": 51.124,
+          "end": 51.547,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "抢",
+          "pinyin": "qiang3",
+          "start": 51.547,
+          "end": 51.969,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "先",
+          "pinyin": "xian1",
+          "start": 51.969,
+          "end": 52.391,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "作",
+          "pinyin": "zuo4",
+          "start": 52.391,
+          "end": 52.813,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 52.813,
+          "end": 53.236,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "回",
+          "pinyin": "hui2",
+          "start": 53.236,
+          "end": 53.658,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "答",
+          "pinyin": "da2",
+          "start": 53.658,
+          "end": 54.08,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 54.08,
+      "end": 58.3,
+      "text": "那些绕了远路的归途",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "那",
+          "pinyin": "na4",
+          "start": 54.08,
+          "end": 54.549,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "些",
+          "pinyin": "xie1",
+          "start": 54.549,
+          "end": 55.018,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "绕",
+          "pinyin": "rao4",
+          "start": 55.018,
+          "end": 55.487,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 55.487,
+          "end": 55.956,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "远",
+          "pinyin": "yuan3",
+          "start": 55.956,
+          "end": 56.424,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "路",
+          "pinyin": "lu4",
+          "start": 56.424,
+          "end": 56.893,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 56.893,
+          "end": 57.362,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "归",
+          "pinyin": "gui1",
+          "start": 57.362,
+          "end": 57.831,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "途",
+          "pinyin": "tu2",
+          "start": 57.831,
+          "end": 58.3,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 58.72,
+      "end": 62.6,
+      "text": "捡起一个个小小的为什么",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "捡",
+          "pinyin": "jian3",
+          "start": 58.72,
+          "end": 59.073,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "起",
+          "pinyin": "qi3",
+          "start": 59.073,
+          "end": 59.425,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi2",
+          "start": 59.425,
+          "end": 59.778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "个",
+          "pinyin": "ge4",
+          "start": 59.778,
+          "end": 60.131,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "个",
+          "pinyin": "ge4",
+          "start": 60.131,
+          "end": 60.484,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "小",
+          "pinyin": "xiao3",
+          "start": 60.484,
+          "end": 60.836,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "小",
+          "pinyin": "xiao3",
+          "start": 60.836,
+          "end": 61.189,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 61.189,
+          "end": 61.542,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "为",
+          "pinyin": "wei4",
+          "start": 61.542,
+          "end": 61.895,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "什",
+          "pinyin": "shen2",
+          "start": 61.895,
+          "end": 62.247,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "么",
+          "pinyin": "me5",
+          "start": 62.247,
+          "end": 62.6,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 63.12,
+      "end": 66.96,
+      "text": "装满口袋，一起带着走吧",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "装",
+          "pinyin": "zhuang1",
+          "start": 63.12,
+          "end": 63.469,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "满",
+          "pinyin": "man3",
+          "start": 63.469,
+          "end": 63.818,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "口",
+          "pinyin": "kou3",
+          "start": 63.818,
+          "end": 64.167,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "袋",
+          "pinyin": "dai4",
+          "start": 64.167,
+          "end": 64.516,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 64.516,
+          "end": 64.865,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 64.865,
+          "end": 65.215,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "起",
+          "pinyin": "qi3",
+          "start": 65.215,
+          "end": 65.564,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "带",
+          "pinyin": "dai4",
+          "start": 65.564,
+          "end": 65.913,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "着",
+          "pinyin": "zhe5",
+          "start": 65.913,
+          "end": 66.262,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "走",
+          "pinyin": "zou3",
+          "start": 66.262,
+          "end": 66.611,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "吧",
+          "pinyin": "ba5",
+          "start": 66.611,
+          "end": 66.96,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 67.32,
+      "end": 71.08,
+      "text": "千叶的风，正在呼唤我",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "千",
+          "pinyin": "qian1",
+          "start": 67.32,
+          "end": 67.696,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "叶",
+          "pinyin": "ye4",
+          "start": 67.696,
+          "end": 68.072,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 68.072,
+          "end": 68.448,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "风",
+          "pinyin": "feng1",
+          "start": 68.448,
+          "end": 68.824,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 68.824,
+          "end": 69.2,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "正",
+          "pinyin": "zheng4",
+          "start": 69.2,
+          "end": 69.576,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4",
+          "start": 69.576,
+          "end": 69.952,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "呼",
+          "pinyin": "hu1",
+          "start": 69.952,
+          "end": 70.328,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "唤",
+          "pinyin": "huan4",
+          "start": 70.328,
+          "end": 70.704,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 70.704,
+          "end": 71.08,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 72.5,
+      "end": 73.78,
+      "text": "老师呀，老师",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 72.5,
+          "end": 72.713,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 72.713,
+          "end": 72.927,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "呀",
+          "pinyin": "ya5",
+          "start": 72.927,
+          "end": 73.14,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 73.14,
+          "end": 73.353,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 73.353,
+          "end": 73.567,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 73.567,
+          "end": 73.78,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 74.54,
+      "end": 76.54,
+      "text": "我也还是一年级",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 74.54,
+          "end": 74.826,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 74.826,
+          "end": 75.111,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "还",
+          "pinyin": "hai2",
+          "start": 75.111,
+          "end": 75.397,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "是",
+          "pinyin": "shi4",
+          "start": 75.397,
+          "end": 75.683,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 75.683,
+          "end": 75.969,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "年",
+          "pinyin": "nian2",
+          "start": 75.969,
+          "end": 76.254,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "级",
+          "pinyin": "ji2",
+          "start": 76.254,
+          "end": 76.54,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 76.82,
+      "end": 80.64,
+      "text": "每多遇见一件不懂的事",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "每",
+          "pinyin": "mei3",
+          "start": 76.82,
+          "end": 77.202,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "多",
+          "pinyin": "duo1",
+          "start": 77.202,
+          "end": 77.584,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "遇",
+          "pinyin": "yu4",
+          "start": 77.584,
+          "end": 77.966,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "见",
+          "pinyin": "jian4",
+          "start": 77.966,
+          "end": 78.348,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 78.348,
+          "end": 78.73,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "件",
+          "pinyin": "jian4",
+          "start": 78.73,
+          "end": 79.112,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 79.112,
+          "end": 79.494,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "懂",
+          "pinyin": "dong3",
+          "start": 79.494,
+          "end": 79.876,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 79.876,
+          "end": 80.258,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "事",
+          "pinyin": "shi4",
+          "start": 80.258,
+          "end": 80.64,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 80.9,
+      "end": 84.82,
+      "text": "世界就又开阔了一点",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "世",
+          "pinyin": "shi4",
+          "start": 80.9,
+          "end": 81.336,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "界",
+          "pinyin": "jie4",
+          "start": 81.336,
+          "end": 81.771,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "就",
+          "pinyin": "jiu4",
+          "start": 81.771,
+          "end": 82.207,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "又",
+          "pinyin": "you4",
+          "start": 82.207,
+          "end": 82.642,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "开",
+          "pinyin": "kai1",
+          "start": 82.642,
+          "end": 83.078,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "阔",
+          "pinyin": "kuo4",
+          "start": 83.078,
+          "end": 83.513,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 83.513,
+          "end": 83.949,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 83.949,
+          "end": 84.384,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "点",
+          "pinyin": "dian3",
+          "start": 84.384,
+          "end": 84.82,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 85.14,
+      "end": 86.98,
+      "text": "老师呀，老师",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 85.14,
+          "end": 85.447,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 85.447,
+          "end": 85.753,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "呀",
+          "pinyin": "ya5",
+          "start": 85.753,
+          "end": 86.06,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 86.06,
+          "end": 86.367,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 86.367,
+          "end": 86.673,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 86.673,
+          "end": 86.98,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 87.26,
+      "end": 88.98,
+      "text": "明天的我，也还没有完成",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "明",
+          "pinyin": "ming2",
+          "start": 87.26,
+          "end": 87.416,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 87.416,
+          "end": 87.573,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 87.573,
+          "end": 87.729,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 87.729,
+          "end": 87.885,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 87.885,
+          "end": 88.042,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 88.042,
+          "end": 88.198,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "还",
+          "pinyin": "hai2",
+          "start": 88.198,
+          "end": 88.355,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "没",
+          "pinyin": "mei2",
+          "start": 88.355,
+          "end": 88.511,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "有",
+          "pinyin": "you3",
+          "start": 88.511,
+          "end": 88.667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "完",
+          "pinyin": "wan2",
+          "start": 88.667,
+          "end": 88.824,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "成",
+          "pinyin": "cheng2",
+          "start": 88.824,
+          "end": 88.98,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 89.5,
+      "end": 91.96,
+      "text": "找到一个答案之后",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "找",
+          "pinyin": "zhao3",
+          "start": 89.5,
+          "end": 89.808,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "到",
+          "pinyin": "dao4",
+          "start": 89.808,
+          "end": 90.115,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi2",
+          "start": 90.115,
+          "end": 90.422,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "个",
+          "pinyin": "ge4",
+          "start": 90.422,
+          "end": 90.73,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "答",
+          "pinyin": "da2",
+          "start": 90.73,
+          "end": 91.037,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "案",
+          "pinyin": "an4",
+          "start": 91.037,
+          "end": 91.345,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "之",
+          "pinyin": "zhi1",
+          "start": 91.345,
+          "end": 91.652,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "后",
+          "pinyin": "hou4",
+          "start": 91.652,
+          "end": 91.96,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 92.08,
+      "end": 94.52,
+      "text": "再去遇见下一个为什么",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "再",
+          "pinyin": "zai4",
+          "start": 92.08,
+          "end": 92.324,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "去",
+          "pinyin": "qu4",
+          "start": 92.324,
+          "end": 92.568,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "遇",
+          "pinyin": "yu4",
+          "start": 92.568,
+          "end": 92.812,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "见",
+          "pinyin": "jian4",
+          "start": 92.812,
+          "end": 93.056,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "下",
+          "pinyin": "xia4",
+          "start": 93.056,
+          "end": 93.3,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi2",
+          "start": 93.3,
+          "end": 93.544,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "个",
+          "pinyin": "ge4",
+          "start": 93.544,
+          "end": 93.788,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "为",
+          "pinyin": "wei4",
+          "start": 93.788,
+          "end": 94.032,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "什",
+          "pinyin": "shen2",
+          "start": 94.032,
+          "end": 94.276,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "么",
+          "pinyin": "me5",
+          "start": 94.276,
+          "end": 94.52,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 102.46,
+      "end": 104.56,
+      "text": "画得整整齐齐的日程表",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "画",
+          "pinyin": "hua4",
+          "start": 102.46,
+          "end": 102.67,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "得",
+          "pinyin": "de2",
+          "start": 102.67,
+          "end": 102.88,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "整",
+          "pinyin": "zheng3",
+          "start": 102.88,
+          "end": 103.09,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "整",
+          "pinyin": "zheng3",
+          "start": 103.09,
+          "end": 103.3,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "齐",
+          "pinyin": "qi2",
+          "start": 103.3,
+          "end": 103.51,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "齐",
+          "pinyin": "qi2",
+          "start": 103.51,
+          "end": 103.72,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 103.72,
+          "end": 103.93,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "日",
+          "pinyin": "ri4",
+          "start": 103.93,
+          "end": 104.14,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "程",
+          "pinyin": "cheng2",
+          "start": 104.14,
+          "end": 104.35,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "表",
+          "pinyin": "biao3",
+          "start": 104.35,
+          "end": 104.56,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 104.56,
+      "end": 106.68,
+      "text": "贴满溢出格子的便签，像开了花",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "贴",
+          "pinyin": "tie1",
+          "start": 104.56,
+          "end": 104.711,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "满",
+          "pinyin": "man3",
+          "start": 104.711,
+          "end": 104.863,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "溢",
+          "pinyin": "yi4",
+          "start": 104.863,
+          "end": 105.014,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "出",
+          "pinyin": "chu1",
+          "start": 105.014,
+          "end": 105.166,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "格",
+          "pinyin": "ge2",
+          "start": 105.166,
+          "end": 105.317,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "子",
+          "pinyin": "zi5",
+          "start": 105.317,
+          "end": 105.469,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 105.469,
+          "end": 105.62,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "便",
+          "pinyin": "bian4",
+          "start": 105.62,
+          "end": 105.771,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "签",
+          "pinyin": "qian1",
+          "start": 105.771,
+          "end": 105.923,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 105.923,
+          "end": 106.074,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "像",
+          "pinyin": "xiang4",
+          "start": 106.074,
+          "end": 106.226,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "开",
+          "pinyin": "kai1",
+          "start": 106.226,
+          "end": 106.377,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 106.377,
+          "end": 106.529,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "花",
+          "pinyin": "hua1",
+          "start": 106.529,
+          "end": 106.68,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 106.7,
+      "end": 108.86,
+      "text": "下午三点，事情不太顺利",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "下",
+          "pinyin": "xia4",
+          "start": 106.7,
+          "end": 106.896,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "午",
+          "pinyin": "wu3",
+          "start": 106.896,
+          "end": 107.093,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "三",
+          "pinyin": "san1",
+          "start": 107.093,
+          "end": 107.289,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "点",
+          "pinyin": "dian3",
+          "start": 107.289,
+          "end": 107.485,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 107.485,
+          "end": 107.682,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "事",
+          "pinyin": "shi4",
+          "start": 107.682,
+          "end": 107.878,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "情",
+          "pinyin": "qing2",
+          "start": 107.878,
+          "end": 108.075,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 108.075,
+          "end": 108.271,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "太",
+          "pinyin": "tai4",
+          "start": 108.271,
+          "end": 108.467,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "顺",
+          "pinyin": "shun4",
+          "start": 108.467,
+          "end": 108.664,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "利",
+          "pinyin": "li4",
+          "start": 108.664,
+          "end": 108.86,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 108.86,
+      "end": 111.02,
+      "text": "泡一杯茶，先歇一歇",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "泡",
+          "pinyin": "pao4",
+          "start": 108.86,
+          "end": 109.1,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 109.1,
+          "end": 109.34,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "杯",
+          "pinyin": "bei1",
+          "start": 109.34,
+          "end": 109.58,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "茶",
+          "pinyin": "cha2",
+          "start": 109.58,
+          "end": 109.82,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 109.82,
+          "end": 110.06,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "先",
+          "pinyin": "xian1",
+          "start": 110.06,
+          "end": 110.3,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "歇",
+          "pinyin": "xie1",
+          "start": 110.3,
+          "end": 110.54,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 110.54,
+          "end": 110.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "歇",
+          "pinyin": "xie1",
+          "start": 110.78,
+          "end": 111.02,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 111.02,
+      "end": 113.1,
+      "text": "终于能够说出我不懂的那天",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "终",
+          "pinyin": "zhong1",
+          "start": 111.02,
+          "end": 111.193,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "于",
+          "pinyin": "yu2",
+          "start": 111.193,
+          "end": 111.367,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "能",
+          "pinyin": "neng2",
+          "start": 111.367,
+          "end": 111.54,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "够",
+          "pinyin": "gou4",
+          "start": 111.54,
+          "end": 111.713,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "说",
+          "pinyin": "shuo1",
+          "start": 111.713,
+          "end": 111.887,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "出",
+          "pinyin": "chu1",
+          "start": 111.887,
+          "end": 112.06,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 112.06,
+          "end": 112.233,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 112.233,
+          "end": 112.407,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "懂",
+          "pinyin": "dong3",
+          "start": 112.407,
+          "end": 112.58,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 112.58,
+          "end": 112.753,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "那",
+          "pinyin": "na4",
+          "start": 112.753,
+          "end": 112.927,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 112.927,
+          "end": 113.1,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 113.1,
+      "end": 114.98,
+      "text": "身旁的声音，也变得更亲近",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "身",
+          "pinyin": "shen1",
+          "start": 113.1,
+          "end": 113.257,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "旁",
+          "pinyin": "pang2",
+          "start": 113.257,
+          "end": 113.413,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 113.413,
+          "end": 113.57,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "声",
+          "pinyin": "sheng1",
+          "start": 113.57,
+          "end": 113.727,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "音",
+          "pinyin": "yin1",
+          "start": 113.727,
+          "end": 113.883,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 113.883,
+          "end": 114.04,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 114.04,
+          "end": 114.197,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "变",
+          "pinyin": "bian4",
+          "start": 114.197,
+          "end": 114.353,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "得",
+          "pinyin": "de2",
+          "start": 114.353,
+          "end": 114.51,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "更",
+          "pinyin": "geng4",
+          "start": 114.51,
+          "end": 114.667,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "亲",
+          "pinyin": "qin1",
+          "start": 114.667,
+          "end": 114.823,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "近",
+          "pinyin": "jin4",
+          "start": 114.823,
+          "end": 114.98,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 114.98,
+      "end": 117.4,
+      "text": "本来是怀着教人的心情来到这里",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "本",
+          "pinyin": "ben3",
+          "start": 114.98,
+          "end": 115.153,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 115.153,
+          "end": 115.326,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "是",
+          "pinyin": "shi4",
+          "start": 115.326,
+          "end": 115.499,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "怀",
+          "pinyin": "huai2",
+          "start": 115.499,
+          "end": 115.671,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "着",
+          "pinyin": "zhe5",
+          "start": 115.671,
+          "end": 115.844,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "教",
+          "pinyin": "jiao4",
+          "start": 115.844,
+          "end": 116.017,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "pinyin": "ren2",
+          "start": 116.017,
+          "end": 116.19,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 116.19,
+          "end": 116.363,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "心",
+          "pinyin": "xin1",
+          "start": 116.363,
+          "end": 116.536,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "情",
+          "pinyin": "qing2",
+          "start": 116.536,
+          "end": 116.709,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 116.709,
+          "end": 116.881,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "到",
+          "pinyin": "dao4",
+          "start": 116.881,
+          "end": 117.054,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "这",
+          "pinyin": "zhe4",
+          "start": 117.054,
+          "end": 117.227,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "里",
+          "pinyin": "li3",
+          "start": 117.227,
+          "end": 117.4,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 117.4,
+      "end": 119.28,
+      "text": "今天却又向别人学到了东西",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "今",
+          "pinyin": "jin1",
+          "start": 117.4,
+          "end": 117.557,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 117.557,
+          "end": 117.713,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "却",
+          "pinyin": "que4",
+          "start": 117.713,
+          "end": 117.87,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "又",
+          "pinyin": "you4",
+          "start": 117.87,
+          "end": 118.027,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "向",
+          "pinyin": "xiang4",
+          "start": 118.027,
+          "end": 118.183,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "别",
+          "pinyin": "bie2",
+          "start": 118.183,
+          "end": 118.34,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "pinyin": "ren2",
+          "start": 118.34,
+          "end": 118.497,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "学",
+          "pinyin": "xue2",
+          "start": 118.497,
+          "end": 118.653,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "到",
+          "pinyin": "dao4",
+          "start": 118.653,
+          "end": 118.81,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 118.81,
+          "end": 118.967,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "东",
+          "pinyin": "dong1",
+          "start": 118.967,
+          "end": 119.123,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "西",
+          "pinyin": "xi1",
+          "start": 119.123,
+          "end": 119.28,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 119.28,
+      "end": 121.42,
+      "text": "若有一个人解不开的问题",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "若",
+          "pinyin": "ruo4",
+          "start": 119.28,
+          "end": 119.475,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "有",
+          "pinyin": "you3",
+          "start": 119.475,
+          "end": 119.669,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi2",
+          "start": 119.669,
+          "end": 119.864,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "个",
+          "pinyin": "ge4",
+          "start": 119.864,
+          "end": 120.058,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "pinyin": "ren2",
+          "start": 120.058,
+          "end": 120.253,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "解",
+          "pinyin": "jie3",
+          "start": 120.253,
+          "end": 120.447,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 120.447,
+          "end": 120.642,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "开",
+          "pinyin": "kai1",
+          "start": 120.642,
+          "end": 120.836,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 120.836,
+          "end": 121.031,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "问",
+          "pinyin": "wen4",
+          "start": 121.031,
+          "end": 121.225,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "题",
+          "pinyin": "ti2",
+          "start": 121.225,
+          "end": 121.42,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l30",
+      "start": 121.42,
+      "end": 123.08,
+      "text": "就在身旁，再放一把椅子",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "就",
+          "pinyin": "jiu4",
+          "start": 121.42,
+          "end": 121.571,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "在",
+          "pinyin": "zai4",
+          "start": 121.571,
+          "end": 121.722,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "身",
+          "pinyin": "shen1",
+          "start": 121.722,
+          "end": 121.873,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "旁",
+          "pinyin": "pang2",
+          "start": 121.873,
+          "end": 122.024,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 122.024,
+          "end": 122.175,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "再",
+          "pinyin": "zai4",
+          "start": 122.175,
+          "end": 122.325,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "放",
+          "pinyin": "fang4",
+          "start": 122.325,
+          "end": 122.476,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 122.476,
+          "end": 122.627,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "把",
+          "pinyin": "ba3",
+          "start": 122.627,
+          "end": 122.778,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "椅",
+          "pinyin": "yi3",
+          "start": 122.778,
+          "end": 122.929,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "子",
+          "pinyin": "zi5",
+          "start": 122.929,
+          "end": 123.08,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l31",
+      "start": 123.08,
+      "end": 124.88,
+      "text": "带来各自见过的不同风景",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "带",
+          "pinyin": "dai4",
+          "start": 123.08,
+          "end": 123.244,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 123.244,
+          "end": 123.407,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "各",
+          "pinyin": "ge4",
+          "start": 123.407,
+          "end": 123.571,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "自",
+          "pinyin": "zi4",
+          "start": 123.571,
+          "end": 123.735,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "见",
+          "pinyin": "jian4",
+          "start": 123.735,
+          "end": 123.898,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "过",
+          "pinyin": "guo4",
+          "start": 123.898,
+          "end": 124.062,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 124.062,
+          "end": 124.225,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 124.225,
+          "end": 124.389,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "同",
+          "pinyin": "tong2",
+          "start": 124.389,
+          "end": 124.553,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "风",
+          "pinyin": "feng1",
+          "start": 124.553,
+          "end": 124.716,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "景",
+          "pinyin": "jing3",
+          "start": 124.716,
+          "end": 124.88,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l32",
+      "start": 124.88,
+      "end": 126.82,
+      "text": "再一起，看看同一片晚霞",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "再",
+          "pinyin": "zai4",
+          "start": 124.88,
+          "end": 125.056,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 125.056,
+          "end": 125.233,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "起",
+          "pinyin": "qi3",
+          "start": 125.233,
+          "end": 125.409,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 125.409,
+          "end": 125.585,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "看",
+          "pinyin": "kan4",
+          "start": 125.585,
+          "end": 125.762,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "看",
+          "pinyin": "kan4",
+          "start": 125.762,
+          "end": 125.938,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "同",
+          "pinyin": "tong2",
+          "start": 125.938,
+          "end": 126.115,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 126.115,
+          "end": 126.291,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "片",
+          "pinyin": "pian4",
+          "start": 126.291,
+          "end": 126.467,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "晚",
+          "pinyin": "wan3",
+          "start": 126.467,
+          "end": 126.644,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "霞",
+          "pinyin": "xia2",
+          "start": 126.644,
+          "end": 126.82,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l33",
+      "start": 126.82,
+      "end": 129.16,
+      "text": "送给一直努力着的自己",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "送",
+          "pinyin": "song4",
+          "start": 126.82,
+          "end": 127.054,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "给",
+          "pinyin": "gei3",
+          "start": 127.054,
+          "end": 127.288,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 127.288,
+          "end": 127.522,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "直",
+          "pinyin": "zhi2",
+          "start": 127.522,
+          "end": 127.756,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "努",
+          "pinyin": "nu3",
+          "start": 127.756,
+          "end": 127.99,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "力",
+          "pinyin": "li4",
+          "start": 127.99,
+          "end": 128.224,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "着",
+          "pinyin": "zhe5",
+          "start": 128.224,
+          "end": 128.458,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 128.458,
+          "end": 128.692,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "自",
+          "pinyin": "zi4",
+          "start": 128.692,
+          "end": 128.926,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "己",
+          "pinyin": "ji3",
+          "start": 128.926,
+          "end": 129.16,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l34",
+      "start": 129.16,
+      "end": 131.32,
+      "text": "回家路上，买一份布丁吧",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "回",
+          "pinyin": "hui2",
+          "start": 129.16,
+          "end": 129.356,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "家",
+          "pinyin": "jia1",
+          "start": 129.356,
+          "end": 129.553,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "路",
+          "pinyin": "lu4",
+          "start": 129.553,
+          "end": 129.749,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "上",
+          "pinyin": "shang4",
+          "start": 129.749,
+          "end": 129.945,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 129.945,
+          "end": 130.142,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "买",
+          "pinyin": "mai3",
+          "start": 130.142,
+          "end": 130.338,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 130.338,
+          "end": 130.535,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "份",
+          "pinyin": "fen4",
+          "start": 130.535,
+          "end": 130.731,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "布",
+          "pinyin": "bu4",
+          "start": 130.731,
+          "end": 130.927,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "丁",
+          "pinyin": "ding1",
+          "start": 130.927,
+          "end": 131.124,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "吧",
+          "pinyin": "ba5",
+          "start": 131.124,
+          "end": 131.32,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l35",
+      "start": 131.32,
+      "end": 134.3,
+      "text": "虽然也会惦记未来的事",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "虽",
+          "pinyin": "sui1",
+          "start": 131.32,
+          "end": 131.618,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "然",
+          "pinyin": "ran2",
+          "start": 131.618,
+          "end": 131.916,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 131.916,
+          "end": 132.214,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "会",
+          "pinyin": "hui4",
+          "start": 132.214,
+          "end": 132.512,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "惦",
+          "pinyin": "dian4",
+          "start": 132.512,
+          "end": 132.81,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "记",
+          "pinyin": "ji4",
+          "start": 132.81,
+          "end": 133.108,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "未",
+          "pinyin": "wei4",
+          "start": 133.108,
+          "end": 133.406,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 133.406,
+          "end": 133.704,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 133.704,
+          "end": 134.002,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "事",
+          "pinyin": "shi4",
+          "start": 134.002,
+          "end": 134.3,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l36",
+      "start": 135.34,
+      "end": 138.66,
+      "text": "却也别忘了，今天的甜",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "却",
+          "pinyin": "que4",
+          "start": 135.34,
+          "end": 135.672,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 135.672,
+          "end": 136.004,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "别",
+          "pinyin": "bie2",
+          "start": 136.004,
+          "end": 136.336,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "忘",
+          "pinyin": "wang4",
+          "start": 136.336,
+          "end": 136.668,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 136.668,
+          "end": 137.0,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 137.0,
+          "end": 137.332,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "今",
+          "pinyin": "jin1",
+          "start": 137.332,
+          "end": 137.664,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 137.664,
+          "end": 137.996,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 137.996,
+          "end": 138.328,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "甜",
+          "pinyin": "tian2",
+          "start": 138.328,
+          "end": 138.66,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l37",
+      "start": 138.66,
+      "end": 141.18,
+      "text": "老师呀，老师",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 138.66,
+          "end": 139.08,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 139.08,
+          "end": 139.5,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "呀",
+          "pinyin": "ya5",
+          "start": 139.5,
+          "end": 139.92,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 139.92,
+          "end": 140.34,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 140.34,
+          "end": 140.76,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 140.76,
+          "end": 141.18,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l38",
+      "start": 141.48,
+      "end": 143.22,
+      "text": "我也还是一年级",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 141.48,
+          "end": 141.729,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 141.729,
+          "end": 141.977,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "还",
+          "pinyin": "hai2",
+          "start": 141.977,
+          "end": 142.226,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "是",
+          "pinyin": "shi4",
+          "start": 142.226,
+          "end": 142.474,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 142.474,
+          "end": 142.723,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "年",
+          "pinyin": "nian2",
+          "start": 142.723,
+          "end": 142.971,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "级",
+          "pinyin": "ji2",
+          "start": 142.971,
+          "end": 143.22,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l39",
+      "start": 143.72,
+      "end": 147.48,
+      "text": "昨天的眼泪，我也一起带来了",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "昨",
+          "pinyin": "zuo2",
+          "start": 143.72,
+          "end": 144.009,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 144.009,
+          "end": 144.298,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 144.298,
+          "end": 144.588,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "眼",
+          "pinyin": "yan3",
+          "start": 144.588,
+          "end": 144.877,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "泪",
+          "pinyin": "lei4",
+          "start": 144.877,
+          "end": 145.166,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 145.166,
+          "end": 145.455,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 145.455,
+          "end": 145.745,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 145.745,
+          "end": 146.034,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 146.034,
+          "end": 146.323,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "起",
+          "pinyin": "qi3",
+          "start": 146.323,
+          "end": 146.612,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "带",
+          "pinyin": "dai4",
+          "start": 146.612,
+          "end": 146.902,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 146.902,
+          "end": 147.191,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 147.191,
+          "end": 147.48,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l40",
+      "start": 148.06,
+      "end": 151.24,
+      "text": "属于我的今天……",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "属",
+          "pinyin": "shu3",
+          "start": 148.06,
+          "end": 148.458,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "于",
+          "pinyin": "yu2",
+          "start": 148.458,
+          "end": 148.855,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 148.855,
+          "end": 149.252,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 149.252,
+          "end": 149.65,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "今",
+          "pinyin": "jin1",
+          "start": 149.65,
+          "end": 150.048,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 150.048,
+          "end": 150.445,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "…",
+          "start": 150.445,
+          "end": 150.843,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "…",
+          "start": 150.843,
+          "end": 151.24,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l41",
+      "start": 171.84,
+      "end": 176.3,
+      "text": "若把今天的眼泪也放下",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "若",
+          "pinyin": "ruo4",
+          "start": 171.84,
+          "end": 172.286,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "把",
+          "pinyin": "ba3",
+          "start": 172.286,
+          "end": 172.732,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "今",
+          "pinyin": "jin1",
+          "start": 172.732,
+          "end": 173.178,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 173.178,
+          "end": 173.624,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 173.624,
+          "end": 174.07,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "眼",
+          "pinyin": "yan3",
+          "start": 174.07,
+          "end": 174.516,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "泪",
+          "pinyin": "lei4",
+          "start": 174.516,
+          "end": 174.962,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 174.962,
+          "end": 175.408,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "放",
+          "pinyin": "fang4",
+          "start": 175.408,
+          "end": 175.854,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "下",
+          "pinyin": "xia4",
+          "start": 175.854,
+          "end": 176.3,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l42",
+      "start": 176.3,
+      "end": 177.66,
+      "text": "老师呀，老师",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 176.3,
+          "end": 176.527,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 176.527,
+          "end": 176.753,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "呀",
+          "pinyin": "ya5",
+          "start": 176.753,
+          "end": 176.98,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 176.98,
+          "end": 177.207,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 177.207,
+          "end": 177.433,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 177.433,
+          "end": 177.66,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l43",
+      "start": 177.78,
+      "end": 179.8,
+      "text": "我也还是一年级",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 177.78,
+          "end": 178.069,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 178.069,
+          "end": 178.357,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "还",
+          "pinyin": "hai2",
+          "start": 178.357,
+          "end": 178.646,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "是",
+          "pinyin": "shi4",
+          "start": 178.646,
+          "end": 178.934,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi4",
+          "start": 178.934,
+          "end": 179.223,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "年",
+          "pinyin": "nian2",
+          "start": 179.223,
+          "end": 179.511,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "级",
+          "pinyin": "ji2",
+          "start": 179.511,
+          "end": 179.8,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l44",
+      "start": 179.8,
+      "end": 181.44,
+      "text": "老师呀，老师",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 179.8,
+          "end": 180.073,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 180.073,
+          "end": 180.347,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "呀",
+          "pinyin": "ya5",
+          "start": 180.347,
+          "end": 180.62,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 180.62,
+          "end": 180.893,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 180.893,
+          "end": 181.167,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 181.167,
+          "end": 181.44,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l45",
+      "start": 182.1,
+      "end": 183.94,
+      "text": "明天的我，也还没有完成",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "明",
+          "pinyin": "ming2",
+          "start": 182.1,
+          "end": 182.267,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 182.267,
+          "end": 182.435,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 182.435,
+          "end": 182.602,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "我",
+          "pinyin": "wo3",
+          "start": 182.602,
+          "end": 182.769,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 182.769,
+          "end": 182.936,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "也",
+          "pinyin": "ye3",
+          "start": 182.936,
+          "end": 183.104,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "还",
+          "pinyin": "hai2",
+          "start": 183.104,
+          "end": 183.271,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "没",
+          "pinyin": "mei2",
+          "start": 183.271,
+          "end": 183.438,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "有",
+          "pinyin": "you3",
+          "start": 183.438,
+          "end": 183.605,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "完",
+          "pinyin": "wan2",
+          "start": 183.605,
+          "end": 183.773,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "成",
+          "pinyin": "cheng2",
+          "start": 183.773,
+          "end": 183.94,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l46",
+      "start": 183.94,
+      "end": 188.0,
+      "text": "努力踮起脚尖后，记得深呼吸",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "努",
+          "pinyin": "nu3",
+          "start": 183.94,
+          "end": 184.252,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "力",
+          "pinyin": "li4",
+          "start": 184.252,
+          "end": 184.565,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "踮",
+          "pinyin": "dian3",
+          "start": 184.565,
+          "end": 184.877,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "起",
+          "pinyin": "qi3",
+          "start": 184.877,
+          "end": 185.189,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "脚",
+          "pinyin": "jiao3",
+          "start": 185.189,
+          "end": 185.502,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "尖",
+          "pinyin": "jian1",
+          "start": 185.502,
+          "end": 185.814,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "后",
+          "pinyin": "hou4",
+          "start": 185.814,
+          "end": 186.126,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 186.126,
+          "end": 186.438,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "记",
+          "pinyin": "ji4",
+          "start": 186.438,
+          "end": 186.751,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "得",
+          "pinyin": "de5",
+          "start": 186.751,
+          "end": 187.063,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "深",
+          "pinyin": "shen1",
+          "start": 187.063,
+          "end": 187.375,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "呼",
+          "pinyin": "hu1",
+          "start": 187.375,
+          "end": 187.688,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "吸",
+          "pinyin": "xi1",
+          "start": 187.688,
+          "end": 188.0,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l47",
+      "start": 188.0,
+      "end": 193.46,
+      "text": "用自己的步幅，走去相遇吧",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "用",
+          "pinyin": "yong4",
+          "start": 188.0,
+          "end": 188.455,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "自",
+          "pinyin": "zi4",
+          "start": 188.455,
+          "end": 188.91,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "己",
+          "pinyin": "ji3",
+          "start": 188.91,
+          "end": 189.365,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 189.365,
+          "end": 189.82,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "步",
+          "pinyin": "bu4",
+          "start": 189.82,
+          "end": 190.275,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "幅",
+          "pinyin": "fu2",
+          "start": 190.275,
+          "end": 190.73,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 190.73,
+          "end": 191.185,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "走",
+          "pinyin": "zou3",
+          "start": 191.185,
+          "end": 191.64,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "去",
+          "pinyin": "qu4",
+          "start": 191.64,
+          "end": 192.095,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "相",
+          "pinyin": "xiang1",
+          "start": 192.095,
+          "end": 192.55,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "遇",
+          "pinyin": "yu4",
+          "start": 192.55,
+          "end": 193.005,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "吧",
+          "pinyin": "ba5",
+          "start": 193.005,
+          "end": 193.46,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l48",
+      "start": 204.66,
+      "end": 206.1,
+      "text": "阿芽老师！",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "阿",
+          "pinyin": "a1",
+          "start": 204.66,
+          "end": 204.948,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "芽",
+          "pinyin": "ya2",
+          "start": 204.948,
+          "end": 205.236,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "老",
+          "pinyin": "lao3",
+          "start": 205.236,
+          "end": 205.524,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "师",
+          "pinyin": "shi1",
+          "start": 205.524,
+          "end": 205.812,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "！",
+          "start": 205.812,
+          "end": 206.1,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l49",
+      "start": 206.52,
+      "end": 208.88,
+      "text": "被这样叫到，便不由得挺直了背",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "被",
+          "pinyin": "bei4",
+          "start": 206.52,
+          "end": 206.689,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "这",
+          "pinyin": "zhe4",
+          "start": 206.689,
+          "end": 206.857,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "样",
+          "pinyin": "yang4",
+          "start": 206.857,
+          "end": 207.026,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "叫",
+          "pinyin": "jiao4",
+          "start": 207.026,
+          "end": 207.194,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "到",
+          "pinyin": "dao4",
+          "start": 207.194,
+          "end": 207.363,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 207.363,
+          "end": 207.531,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "便",
+          "pinyin": "bian4",
+          "start": 207.531,
+          "end": 207.7,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "不",
+          "pinyin": "bu4",
+          "start": 207.7,
+          "end": 207.869,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "由",
+          "pinyin": "you2",
+          "start": 207.869,
+          "end": 208.037,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "得",
+          "pinyin": "de5",
+          "start": 208.037,
+          "end": 208.206,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "挺",
+          "pinyin": "ting3",
+          "start": 208.206,
+          "end": 208.374,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "直",
+          "pinyin": "zhi2",
+          "start": 208.374,
+          "end": 208.543,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "了",
+          "pinyin": "le5",
+          "start": 208.543,
+          "end": 208.711,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "背",
+          "pinyin": "bei4",
+          "start": 208.711,
+          "end": 208.88,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l50",
+      "start": 209.44,
+      "end": 212.0,
+      "text": "笑着应一声好，风便轻轻吹来",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "笑",
+          "pinyin": "xiao4",
+          "start": 209.44,
+          "end": 209.637,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "着",
+          "pinyin": "zhe5",
+          "start": 209.637,
+          "end": 209.834,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "应",
+          "pinyin": "ying1",
+          "start": 209.834,
+          "end": 210.031,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi1",
+          "start": 210.031,
+          "end": 210.228,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "声",
+          "pinyin": "sheng1",
+          "start": 210.228,
+          "end": 210.425,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "好",
+          "pinyin": "hao3",
+          "start": 210.425,
+          "end": 210.622,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 210.622,
+          "end": 210.818,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "风",
+          "pinyin": "feng1",
+          "start": 210.818,
+          "end": 211.015,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "便",
+          "pinyin": "bian4",
+          "start": 211.015,
+          "end": 211.212,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "轻",
+          "pinyin": "qing1",
+          "start": 211.212,
+          "end": 211.409,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "轻",
+          "pinyin": "qing1",
+          "start": 211.409,
+          "end": 211.606,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "吹",
+          "pinyin": "chui1",
+          "start": 211.606,
+          "end": 211.803,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "来",
+          "pinyin": "lai2",
+          "start": 211.803,
+          "end": 212.0,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l51",
+      "start": 213.18,
+      "end": 218.34,
+      "text": "明天，一定还会有新的初次见面",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "明",
+          "pinyin": "ming2",
+          "start": 213.18,
+          "end": 213.549,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "天",
+          "pinyin": "tian1",
+          "start": 213.549,
+          "end": 213.917,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "，",
+          "start": 213.917,
+          "end": 214.286,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一",
+          "pinyin": "yi2",
+          "start": 214.286,
+          "end": 214.654,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "定",
+          "pinyin": "ding4",
+          "start": 214.654,
+          "end": 215.023,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "还",
+          "pinyin": "hai2",
+          "start": 215.023,
+          "end": 215.391,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "会",
+          "pinyin": "hui4",
+          "start": 215.391,
+          "end": 215.76,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "有",
+          "pinyin": "you3",
+          "start": 215.76,
+          "end": 216.129,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "新",
+          "pinyin": "xin1",
+          "start": 216.129,
+          "end": 216.497,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "的",
+          "pinyin": "de5",
+          "start": 216.497,
+          "end": 216.866,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "初",
+          "pinyin": "chu1",
+          "start": 216.866,
+          "end": 217.234,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "次",
+          "pinyin": "ci4",
+          "start": 217.234,
+          "end": 217.603,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "见",
+          "pinyin": "jian4",
+          "start": 217.603,
+          "end": 217.971,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "面",
+          "pinyin": "mian4",
+          "start": 217.971,
+          "end": 218.34,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "ja-vocal",
+    "audioSha256": "bc465e163692027af4162649bee867e42620cfe6cdcc233abe5ce7d635dab4c5",
+    "correction": "Selected-audio large-v3 full-mix and vocal-stem no-VAD windows, focused CPU rechecks and independent final-chorus MOSS evidence. Human listening approval not claimed.",
+    "timing": "Selected-audio ASR word anchors; within-word subdivision and translation highlighting are approximate.",
+    "releaseStage": "published",
+    "notes": "Preserve source-close Japanese, but retain the actual final-chorus fragment and extra tear line. The final chorus repeats 明日もまだ未完成 rather than the planned 世界はまだ未完成. No instrumental or recognizer-credit rows. Unclear diction remains an editorial uncertainty, not a certified transcription."
+  }
+}

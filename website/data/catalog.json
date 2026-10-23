@@ -9,6 +9,23 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "sensei-mo-ichinensei",
+      "kind": "song",
+      "title": "せんせいも一年生 · A Beginner, Even Now",
+      "artist": "Musia",
+      "summary": "阿芽把录用邮件读了一遍又一遍，对着镜子练习说自己是老师，肚子却抢先答了话。千叶的风吹来，她带着口袋里的小问题走进新的一天。成为老师，也可以继续做一年级的新生：遇到解不开的问题，就在身旁多放一把椅子；努力过后，回家买一份布丁。",
+      "manifest": "data/songs/sensei-mo-ichinensei/manifest.json",
+      "cover": "assets/covers/sensei-mo-ichinensei-16x9.png",
+      "visibility": "public",
+      "releaseStage": "published",
+      "category": "music",
+      "languages": ["ja", "en", "zh-Hans"],
+      "tags": ["music", "Japanese", "J-pop", "Aya Chan", "Chiba", "new beginnings", "curiosity", "joy", "chords"],
+      "displayTitle": "せんせいも一年生 · A Beginner, Even Now",
+      "workId": "sensei-mo-ichinensei",
+      "edition": {"status": "selected"}
+    },
+    {
       "id": "aya-brave-in-paris",
       "kind": "song",
       "title": "パリへ、ひとつの勇気 · Brave in Paris",
