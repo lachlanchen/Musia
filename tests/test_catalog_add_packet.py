@@ -69,8 +69,27 @@ class PacketTests(unittest.TestCase):
                 with self.subTest(target=target), self.assertRaises(ValueError):
                     module.ingress_hashes(root)
 
+    def test_missing_or_ambiguous_route_rejected(self):
+        matcher = {'method': ['GET', 'HEAD'], 'path': ['/api/v1/songs/first-pulse', '/api/v1/songs/example']}
+        module.require_route({'routes': [matcher]}, 'example')
+        for config in ({}, {'routes': [matcher, matcher]},
+                       {'routes': [{**matcher, 'method': ['GET', 'POST']}]},
+                       {'routes': [{**matcher, 'path': ['/api/v1/songs/first-pulse']}]}):
+            with self.subTest(config=config), self.assertRaises(ValueError):
+                module.require_route(config, 'example')
+
+    def test_public_song_must_match_and_be_listed_once(self):
+        for song, items in (({'id': 'wrong'}, [{'id': 'example'}]),
+                            ({'id': 'example'}, []),
+                            ({'id': 'example'}, [{'id': 'example'}] * 2)):
+            with patch.object(module, 'public_api', side_effect=[song, {'items': items}]), self.assertRaises(ValueError):
+                module.verify_public_song({'id': 'example'})
+        with patch.object(module, 'public_api', side_effect=[{'id': 'example'}, {'items': [{'id': 'example'}]}]):
+            module.verify_public_song({'id': 'example'})
+
     def test_success_and_failed_acceptance_restore_only_owned_release(self):
-        for fail in (False, True):
+        for failure in (None, 'local', 'public', 'ingress'):
+            fail = failure is not None
             with self.subTest(fail=fail), tempfile.TemporaryDirectory() as tmp:
                 root = Path(tmp)
                 base, state = root / 'base', root / 'state'
@@ -101,16 +120,18 @@ class PacketTests(unittest.TestCase):
                         return json.dumps([packet['song']])
                     return ''
 
-                states = [before, [{'id': 'wrong'}], before] if fail else [before, after]
+                states = [before, [{'id': 'wrong'}], before] if failure == 'local' else [before, after, before]
                 with patch.object(module, 'BASE', base), patch.object(module, 'STATE', state), \
                      patch.object(module, 'UNIT', unit), patch.object(module.os, 'geteuid', return_value=0), \
                      patch.object(module, 'command', side_effect=command), \
                      patch.object(module, 'live_songs', side_effect=states), \
                      patch.object(module, 'wait_healthy'), \
+                     patch.object(module, 'verify_route_admission', side_effect=ValueError('missing route') if failure == 'ingress' else None), \
+                     patch.object(module, 'verify_public_song', side_effect=ValueError('public detail 404') if failure == 'public' else None), \
                      patch.object(module, 'ingress_hashes', return_value={'config': 'unchanged'}), \
                      patch('sys.argv', ['catalog_add', str(packet_path), '--sha256', digest, '--expected-release', str(old)]):
                     if fail:
-                        with self.assertRaises(AssertionError):
+                        with self.assertRaises((AssertionError, ValueError)):
                             module.main()
                     else:
                         module.main()
@@ -118,7 +139,7 @@ class PacketTests(unittest.TestCase):
                 self.assertEqual(json.loads((old / 'app/website/data/catalog.json').read_text()), {'items': []})
                 self.assertFalse(any('caddy' in arg for call in calls for arg in call if arg != 'lazystudio-caddy'))
                 restart_calls = [call for call in calls if 'restart' in call]
-                self.assertEqual(restart_calls, [['systemctl', 'restart', module.SERVICE]] * (2 if fail else 1))
+                self.assertEqual(restart_calls, [['systemctl', 'restart', module.SERVICE]] * (0 if failure == 'ingress' else 2 if fail else 1))
                 if fail:
                     self.assertEqual(unit.read_bytes(), initial_unit)
                     self.assertEqual((base / 'current').resolve(), old)

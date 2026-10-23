@@ -129,11 +129,39 @@ Audio belongs in MusiaSongs; models, generated WAVs, stems and raw analysis
 stay outside Musia Git. Publish audio first, then verify browser playback,
 translated lyrics, ruby and moving word/chord highlights before deploying Fun.
 The native catalog uses the additive procedure in
-`docs/learning-catalog-addition.md`, preserving all existing song DTOs and
-shared ingress. This task does not include recording, social posting,
+`docs/learning-catalog-addition.md`, preserving all existing song DTOs. Its
+new exact read-only detail route is admitted separately; authentication,
+creator handlers and sibling sites are unchanged. This task does not include recording, social posting,
 Shipinhao Music or any store submission.
 
 Public song: https://fun.lazying.art/#sensei-mo-ichinensei
+
+## Release Verification
+
+Published on October 23, 2026. MusiaSongs audio commit:
+`36fd885ff4f66cf7a58b5563d1d99eab489e2de6`; Fun item commit:
+`6068cd18ec9ded5e7e65f010de45450aa4d4bc8a`. The Fun Pages deployment
+completed successfully (run `39930624963`). The public MP3 checksum matches
+the selected export:
+`ec86bbc57f06ad6b3031dcb5d9fb6f6ec283bfb8d9485e529c0a12d8937de789`.
+
+Live desktop and mobile browser checks loaded the public audio, advanced
+playback, checked four lyric positions through the ending, and verified moving
+word/chord highlights, Japanese ruby and no horizontal overflow or script
+errors. Screenshots and checks remain under the project's `review/website/`.
+
+The native catalog's public detail response equals the reviewed packet and its
+33-item library contains the new song exactly once. All 32 prior native DTOs
+remain structurally identical. No store binary is required for the catalog
+addition. Native-device playback was not separately rerun for this release.
+
+An initial loopback-only deployment acceptance missed the public ingress's
+literal route allowlist. A scoped addition of this song's exact GET/HEAD detail
+path resolved the public 404. The reusable controller now refuses an unadmitted
+route before activation and requires verified public HTTPS detail and library
+responses before marking publication successful. Tests cover missing routes,
+ambiguous matchers, altered methods, failed public acceptance and rollback.
+No wildcard route, sibling configuration, login or billing setting was changed.
 
 ## Shared Workstation
 

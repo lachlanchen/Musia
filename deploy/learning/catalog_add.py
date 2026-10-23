@@ -82,6 +82,44 @@ def api(path):
         return json.load(response)
 
 
+def public_api(path):
+    with urllib.request.urlopen('https://musia.lazying.art' + path, timeout=20) as response:
+        return json.load(response)
+
+
+def require_route(config, media_id):
+    """A catalog item needs an admitted detail route, not just a library row."""
+    matches = []
+
+    def visit(value):
+        if isinstance(value, dict):
+            paths = value.get('path')
+            if isinstance(paths, list) and '/api/v1/songs/first-pulse' in paths:
+                matches.append(value)
+            for child in value.values():
+                visit(child)
+        elif isinstance(value, list):
+            for child in value:
+                visit(child)
+
+    visit(config)
+    if (len(matches) != 1 or sorted(matches[0].get('method', [])) != ['GET', 'HEAD']
+            or '/api/v1/songs/' + media_id not in matches[0]['path']):
+        raise ValueError('New song detail route must be admitted by the ingress owner before activation')
+
+
+def verify_route_admission(media_id):
+    with urllib.request.urlopen('http://127.0.0.1:12019/config/', timeout=10) as response:
+        require_route(json.load(response), media_id)
+
+
+def verify_public_song(song):
+    if public_api('/api/v1/songs/' + song['id']) != song:
+        raise ValueError('Public song differs from reviewed packet')
+    if [i['id'] for i in public_api('/api/v1/library')['items']].count(song['id']) != 1:
+        raise ValueError('Public library must contain the new song exactly once')
+
+
 def live_songs():
     return [api('/api/v1/songs/' + i['id']) for i in api('/api/v1/library')['items']]
 
@@ -160,6 +198,7 @@ def main():
         assert before and before[0]['id'] == 'first-pulse', 'Unexpected built-in lesson ordering'
         assert media_id not in [song['id'] for song in before], 'Add-only: existing songs require separate review'
         ingress = ingress_hashes()
+        verify_route_admission(media_id)
         caddy = command(['systemctl', 'show', 'lazystudio-caddy', '-p', 'MainPID', '-p', 'InvocationID'])
         transaction = 'catalog-' + args.sha256[:24]
         journal = STATE / 'deployments' / transaction
@@ -205,12 +244,14 @@ def main():
             command(['systemctl', 'restart', SERVICE])
             wait_healthy()
             assert live_songs() == [before[0]] + expected
+            verify_public_song(packet['song'])
             assert ingress_hashes() == ingress
             assert command(['systemctl', 'show', 'lazystudio-caddy', '-p', 'MainPID', '-p', 'InvocationID']) == caddy
             current_link(release)
             result = {'published': True, 'mediaId': media_id, 'release': str(release),
                       'previousRelease': str(previous), 'packetSha256': args.sha256,
                       'songCount': len(expected) + 1, 'ingressUnchanged': True,
+                      'publicDetailVerified': True,
                       'service': command(['systemctl', 'show', SERVICE, '-p', 'MainPID', '-p', 'ActiveState'])}
             atomic(journal / 'accepted.json', encode(result))
             assert marker.read_text() == transaction
