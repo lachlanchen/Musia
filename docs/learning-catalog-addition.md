@@ -99,3 +99,15 @@ or ingress edit is needed. Acceptance requires every other song DTO to remain
 identical, the target to disappear from the public HTTPS library, and its app
 detail endpoint to return HTTP 404. The Fun direct URL remains playable.
 Previous releases and original song files remain available for recovery.
+
+If the edge's public port 443 is forwarded to its existing TLS listener on
+18443 but cannot be reached from the host itself, first verify that exact live
+listener and certificate. `--https-verification-port 18443` keeps HTTPS and
+hostname/certificate validation, but its receipt deliberately sets
+`publicDetailVerified: false`. A separate external port-443 library/detail
+probe is mandatory before declaring deployment complete. Do not change shared
+ingress or firewall rules to work around a host-local verification failure.
+
+A rolled-back attempt retains its immutable candidate and journal. Use
+`--attempt 2` for a reviewed retry after fixing the identified cause; never
+delete an earlier attempt's evidence or bypass an unresolved deployment marker.

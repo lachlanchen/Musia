@@ -13,6 +13,13 @@ spec.loader.exec_module(module)
 
 
 class PacketTests(unittest.TestCase):
+    def test_tls_port_override_keeps_https_hostname_validation_and_exact_endpoint(self):
+        with patch.object(module, 'HTTPS_VERIFICATION_PORT', 18443), \
+             patch.object(module.urllib.request, 'urlopen') as request, \
+             patch.object(module.json, 'load', return_value={'status': 'ok'}):
+            self.assertEqual(module.public_api('/healthz'), {'status': 'ok'})
+            request.assert_called_once_with('https://musia.lazying.art:18443/healthz', timeout=20)
+
     def packet(self):
         prefix = 'website/data/songs/example/'
         return {'mediaId': 'example', 'item': {'id': 'example', 'manifest': 'data/songs/example/manifest.json'},

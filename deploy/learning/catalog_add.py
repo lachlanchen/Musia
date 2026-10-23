@@ -24,6 +24,7 @@ BASE = Path('/srv/musia-learning')
 STATE = Path('/var/lib/musia-learning')
 UNIT = Path('/etc/systemd/system/musia-learning.service')
 SERVICE = 'musia-learning.service'
+HTTPS_VERIFICATION_PORT = 443
 
 
 def sha(data):
@@ -120,7 +121,10 @@ def api(path):
 
 
 def public_api(path):
-    with urllib.request.urlopen('https://musia.lazying.art' + path, timeout=20) as response:
+    authority = 'musia.lazying.art'
+    if HTTPS_VERIFICATION_PORT != 443:
+        authority += ':' + str(HTTPS_VERIFICATION_PORT)
+    with urllib.request.urlopen('https://' + authority + path, timeout=20) as response:
         return json.load(response)
 
 
@@ -204,12 +208,18 @@ def ingress_hashes(root=Path('/etc/lazystudio/Caddyfile')):
 
 
 def main():
+    global HTTPS_VERIFICATION_PORT
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('packet', type=Path)
     parser.add_argument('--sha256', required=True)
     parser.add_argument('--expected-release', required=True)
+    parser.add_argument('--attempt', type=int, default=1, help='Fresh bounded retry; preserve earlier evidence')
+    parser.add_argument('--https-verification-port', type=int, choices=(443, 18443), default=443,
+                        help='18443 is the existing TLS listener; requires a separate external 443 receipt')
     args = parser.parse_args()
     assert os.geteuid() == 0
+    assert 1 <= args.attempt <= 99
+    HTTPS_VERIFICATION_PORT = args.https_verification_port
     fd = os.open(args.packet, os.O_RDONLY | os.O_NOFOLLOW)
     with os.fdopen(fd, 'rb') as handle:
         info = os.fstat(handle.fileno())
@@ -243,6 +253,8 @@ def main():
             verify_route_admission(media_id)
         caddy = command(['systemctl', 'show', 'lazystudio-caddy', '-p', 'MainPID', '-p', 'InvocationID'])
         transaction = 'catalog-' + args.sha256[:24]
+        if args.attempt != 1:
+            transaction += '-attempt' + str(args.attempt)
         journal = STATE / 'deployments' / transaction
         assert not journal.exists()
         journal.mkdir(mode=0o700)
@@ -304,7 +316,8 @@ def main():
             result = {'published': not unlist, 'unlisted': unlist, 'mediaId': media_id, 'release': str(release),
                       'previousRelease': str(previous), 'packetSha256': args.sha256,
                       'songCount': len(expected) + 1, 'ingressUnchanged': True,
-                      'publicDetailVerified': True,
+                      'publicDetailVerified': HTTPS_VERIFICATION_PORT == 443,
+                      'tlsDetailVerified': True, 'httpsVerificationPort': HTTPS_VERIFICATION_PORT,
                       'service': command(['systemctl', 'show', SERVICE, '-p', 'MainPID', '-p', 'ActiveState'])}
             atomic(journal / 'accepted.json', encode(result))
             assert marker.read_text() == transaction
