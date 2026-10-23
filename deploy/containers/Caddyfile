@@ -1,0 +1,9 @@
+{
+    admin off
+    auto_https off
+    persist_config off
+}
+
+:8796 {
+    reverse_proxy app:8796
+}

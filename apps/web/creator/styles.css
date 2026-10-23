@@ -513,8 +513,17 @@ textarea {
 #draft-title { display: block; margin-bottom: 12px; overflow-wrap: anywhere; }
 .generation { max-width: 640px; }
 .agent-message p, .user-message p { overflow-wrap: anywhere; }
+.chat-tools { flex-shrink: 0; padding: 12px 16px; border-bottom: 1px solid var(--line, #dce2e5); }
+.chat-tools[hidden] { display: none; }
+.chat-focus { display: flex; flex-wrap: wrap; gap: 6px; }
+.chat-focus button { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; }
+.chat-focus button[aria-pressed="true"] { background: #ffe9e5; color: #942d28; border-color: #e48078; }
+.chat-focus svg { width: 18px; height: 18px; }
+.chat-reference { display: grid; grid-template-columns: minmax(0, 1fr) 112px; gap: 12px; margin-top: 12px; }
+.chat-reference label { min-width: 0; font-size: 14px; }
+.chat-reference select, .chat-reference input { min-width: 0; width: 100%; font-size: 16px; margin-top: 4px; }
 #messages {
-  min-height: 0;
+  min-height: 180px;
   max-height: none;
 }
 @media (min-width: 1400px) {
@@ -540,8 +549,8 @@ textarea {
   }
   .conversation {
     position: static;
-    height: max(330px, calc(100dvh - 310px));
-    min-height: 330px;
+    height: max(600px, calc(100dvh - 310px));
+    min-height: 600px;
     padding: 24px 0;
   }
   .brief-section {
@@ -642,9 +651,12 @@ textarea {
   }
   .conversation {
     padding-top: 20px;
-    height: max(330px, calc(100dvh - 330px));
-    min-height: 330px;
+    height: max(620px, calc(100dvh - 220px));
+    min-height: 620px;
   }
+  .chat-tools { padding: 10px 0; }
+  .chat-focus { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .chat-focus button { padding: 8px 4px; font-size: 14px; gap: 4px; }
   .form-row {
     grid-template-columns: 1fr 1fr;
     gap: 10px;

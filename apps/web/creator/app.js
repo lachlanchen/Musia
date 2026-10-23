@@ -16,6 +16,7 @@ const briefFields = ["title", "idea", "lyrics", "caption", "language", "duration
 const emptyBrief = brief();
 let messages = [], agentRequest = null, renderReview = null;
 let workspaceReady = false;
+let chatFocus = "create", contextEpoch = -1;
 form.inert = true;
 $("message").disabled = true;
 function workspaceKey(prefix) {
@@ -30,6 +31,15 @@ function boundedHistory(value) {
 }
 function agentPayload(message, currentBrief) {
   const payload = { message, brief: currentBrief, history: boundedHistory(messages) };
+  if (capabilities?.agentContextVersion >= 1) {
+    payload.focus = chatFocus;
+    const selected = $("chat-song").selectedOptions[0];
+    if (selected?.value) {
+      const position = Number($("chat-position").value);
+      if (!Number.isFinite(position) || position < 0 || position > 21600) throw new Error("Choose a valid start time.");
+      payload.reference = { source: selected.dataset.source, id: selected.value, position };
+    }
+  }
   while (new TextEncoder().encode(JSON.stringify(payload)).length > 45000) {
     if (!payload.history.length) throw new Error("This message and draft are too long to send. Shorten them and try again.");
     payload.history.shift();
@@ -43,8 +53,12 @@ function renderMessages() {
   $("messages").replaceChildren();
   if (!messages.length) addMessage("What would you like to make?", "Musia");
   for (const m of messages) addMessage(m.content, m.role === "user" ? "You" : "Musia");
+  requestAnimationFrame(() => { $("messages").scrollTop = $("messages").scrollHeight; });
 }
 function loadWorkspace() {
+  chatFocus = "create"; contextEpoch = -1;
+  $("chat-song").replaceChildren(new Option("No song selected", ""));
+  $("chat-position").value = "0";
   const saved = read(workspaceKey(CHAT));
   messages = boundedHistory(saved?.messages);
   $("message").value = typeof saved?.input === "string" ? saved.input.slice(0, 4000) : "";
@@ -110,6 +124,10 @@ const errors = {
   invitation_invalid: "This invitation is invalid or has expired.",
   agent_response_unavailable:
     "The agent could not finish. Your draft is preserved.",
+  agent_busy: "Musia is finishing another request. Your message is preserved; try again shortly.",
+  song_reference_unavailable: "That song or vocal is unavailable. Select another song.",
+  song_context_too_large: "Shorten the message or draft before adding a song.",
+  song_position_out_of_range: "The start time is beyond the end of this song.",
   job_already_started: "This render has already started.",
   song_not_found: "This song is private or unavailable.",
   same_origin_request_required: "Reload this page before trying again.",
@@ -188,6 +206,12 @@ function authRequired() {
   return true;
 }
 function refreshControls() {
+  $("chat-tools").hidden = !(capabilities?.agentContextVersion >= 1);
+  for (const button of document.querySelectorAll("[data-focus]")) {
+    button.setAttribute("aria-pressed", String(button.dataset.focus === chatFocus));
+    button.disabled = busy;
+  }
+  $("chat-song").disabled = busy; $("chat-position").disabled = busy;
   const pending = read(PENDING);
   $("send").disabled = !workspaceReady || busy || !capabilities?.agent || !$("message").value.trim() || !validBrief(brief(), true);
   $("generate").disabled = !workspaceReady || busy || !capabilities?.generation || (!pending && !validBrief(brief()));
@@ -220,6 +244,34 @@ async function refreshAccount() {
   $("message").disabled = false;
   refreshControls();
   if ($("account-dialog").open) openAccount();
+  await loadChatSongs();
+}
+
+async function loadChatSongs() {
+  if (!(capabilities?.agentContextVersion >= 1) || contextEpoch === accountEpoch) return;
+  const epoch = accountEpoch;
+  contextEpoch = epoch;
+  try {
+    const response = await fetch("/api/v1/library", { signal: AbortSignal.timeout(25000) });
+    if (!response.ok) throw new Error("Song list unavailable. Refresh to retry.");
+    const catalog = await response.json();
+    const owned = account ? await api("/api/songs?mode=mine") : { songs: [] };
+    if (epoch !== accountEpoch) return;
+    const options = [new Option("No song selected", "")];
+    for (const [source, label, rows] of [["catalog", "Library", catalog.items], ["created", "My songs", owned.songs]]) {
+      const group = document.createElement("optgroup"); group.label = label;
+      for (const row of (rows || []).slice(0, 256)) {
+        const option = new Option(row.title, row.id); option.dataset.source = source; group.append(option);
+      }
+      options.push(group);
+    }
+    $("chat-song").replaceChildren(...options);
+  } catch (error) {
+    if (epoch === accountEpoch) { contextEpoch = -1; notice("Song choices could not load. Chat and your draft are still available."); }
+  }
+}
+for (const button of document.querySelectorAll("[data-focus]")) {
+  button.onclick = () => { if (!busy) { chatFocus = button.dataset.focus; refreshControls(); } };
 }
 async function login() {
   const result = await api("/auth/start", {});
@@ -387,12 +439,18 @@ $("chat-form").onsubmit = (e) => {
       if (epoch !== accountEpoch) return;
       if (!validBrief(data.brief, true) || typeof data.message !== "string" || !data.message.trim()) throw new Error(errors.agent_response_unavailable);
       const current = brief();
-      fill(Object.fromEntries(briefFields.map((key) => [key, request.edited.has(key) ? current[key] : data.brief[key]])));
+      if (!payload.focus || payload.focus === "create") {
+        fill(Object.fromEntries(briefFields.map((key) => [key, request.edited.has(key) ? current[key] : data.brief[key]])));
+      }
       messages = boundedHistory([...messages, { role: "assistant", content: data.message }]);
       persistConversation(); renderMessages();
       notice(request.edited.size ? "Your Studio edits were kept." : "");
     } catch (error) {
-      if (epoch === accountEpoch) throw error;
+      if (epoch === accountEpoch) {
+        if (!$("message").value) $("message").value = message;
+        persistConversation();
+        throw error;
+      }
     } finally {
       if (epoch === accountEpoch) { busy = false; agentRequest = null; refreshControls(); }
     }

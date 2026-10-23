@@ -57,6 +57,17 @@
           </div>
           <div class="creator-grid">
             <section id="agent-panel" class="conversation" role="tabpanel" aria-labelledby="agent-tab">
+              <div id="chat-tools" class="chat-tools" hidden>
+                <div class="chat-focus" role="group" aria-label="Chat focus">
+                  <button type="button" data-focus="create" aria-pressed="true"><i data-lucide="sparkles"></i>Create</button>
+                  <button type="button" data-focus="analyze" aria-pressed="false"><i data-lucide="audio-lines"></i>Analyze</button>
+                  <button type="button" data-focus="learn" aria-pressed="false"><i data-lucide="music-2"></i>Learn</button>
+                </div>
+                <div class="chat-reference">
+                  <label for="chat-song">Song<select id="chat-song"><option value="">No song selected</option></select></label>
+                  <label for="chat-position">From (seconds)<input id="chat-position" type="number" value="0" min="0" max="21600" step="1"></label>
+                </div>
+              </div>
               <div id="messages" aria-live="polite">
                 <div class="agent-message">
                   <span class="speaker">Musia</span>

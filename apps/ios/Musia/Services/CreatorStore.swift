@@ -31,6 +31,16 @@ final class CreatorStore: ObservableObject {
     @Published private(set) var conversation: [CreatorChatMessage] = []
     @Published private(set) var agentBusy = false
     @Published var agentInput = ""
+    @Published var agentFocus = "create"
+    @Published var referenceKey = ""
+    @Published var referencePosition = 0.0
+    @Published private(set) var referenceCatalog: [LibraryItem] = []
+    var supportsSongContext: Bool { (capabilities?.agentContextVersion ?? 0) >= 1 }
+    var songReference: CreatorSongReference? {
+        let parts = referenceKey.split(separator: ":", maxSplits: 1).map(String.init)
+        guard parts.count == 2 else { return nil }
+        return CreatorSongReference(source: parts[0], id: parts[1], position: referencePosition)
+    }
     private struct Workspace: Codable { let brief: CreatorBrief; let messages: [CreatorChatMessage] }
     private var workspaces: [String: Workspace] = [:]
     private var workspaceReady = false
@@ -101,6 +111,13 @@ final class CreatorStore: ObservableObject {
             guard epoch == generation else { return }
             capabilities = loaded
         } catch { if epoch == generation { capabilities = nil; notice = error.localizedDescription } }
+        if epoch == generation && supportsSongContext && referenceCatalog.isEmpty {
+            do {
+                let choices = try await APIClient().library()
+                guard epoch == generation else { return }
+                referenceCatalog = choices
+            } catch { if epoch == generation { notice = "Song references are unavailable. You can still chat or edit your draft." } }
+        }
         guard let credential, epoch == generation else { return }
         do {
             let me: CreatorMe = try await api.request("/api/me", token: credential.token)
@@ -161,12 +178,19 @@ final class CreatorStore: ObservableObject {
         await perform {
             let captured = try self.snapshot()
             let original = self.brief
-            let body = try CreatorAgentRequest(message: message, brief: original, history: self.conversation).boundedBody()
+            let focus = self.supportsSongContext ? self.agentFocus : "create"
+            let body = try CreatorAgentRequest(message: message, brief: original, history: self.conversation,
+                focus: self.supportsSongContext ? focus : nil,
+                reference: self.supportsSongContext ? self.songReference : nil).boundedBody()
             self.conversation = CreatorChatMessage.bounded(self.conversation + [CreatorChatMessage(role: "user", content: message)])
             self.agentInput = ""; self.agentBusy = true
             self.editedText.removeAll(); self.editedTempo = false; self.editedDuration = false
             self.saveWorkspace()
-            defer { if captured.identity == self.identity { self.agentBusy = false } }
+            var answered = false
+            defer { if captured.identity == self.identity {
+                self.agentBusy = false
+                if !answered && self.agentInput.isEmpty { self.agentInput = message }
+            } }
             let reply: CreatorAgentReply = try await self.api.request("/api/agent", method: "POST", token: captured.token,
                 body: body)
             try self.requireCurrent(captured)
@@ -179,7 +203,8 @@ final class CreatorStore: ObservableObject {
             if self.editedDuration { merged.duration = self.brief.duration }
             self.agentBusy = false
             self.conversation = CreatorChatMessage.bounded(self.conversation + [CreatorChatMessage(role: "assistant", content: reply.message)])
-            self.brief = merged; self.agentMessage = reply.message
+            if focus == "create" { self.brief = merged }
+            self.agentMessage = reply.message; answered = true
             self.saveWorkspace()
         }
     }
@@ -293,6 +318,7 @@ final class CreatorStore: ObservableObject {
         generation = UUID(); mediaGeneration = UUID()
         credential = nil; hasSession = false; account = nil; jobs = []; pending = nil
         agentBusy = false; conversation = []; agentInput = ""
+        agentFocus = "create"; referenceKey = ""; referencePosition = 0
         brief = CreatorBrief(); agentMessage = nil; busy = false; refreshing = false
         player?.clearCreatorSelection()
         cachedAudio = nil

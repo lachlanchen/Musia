@@ -6,6 +6,7 @@ import java.security.MessageDigest
 import java.security.SecureRandom
 import java.util.Base64
 import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.jsonObject
 
 object CreatorRules {
     fun boundedHistory(messages: List<AgentMessage>): List<AgentMessage> {
@@ -15,10 +16,17 @@ object CreatorRules {
         return result
     }
 
-    fun agentBody(message: String, brief: SongBrief, messages: List<AgentMessage>): String? {
+    fun agentBody(message: String, brief: SongBrief, messages: List<AgentMessage>,
+        focus: String? = null, reference: SongReference? = null): String? {
+        if (focus != null && focus !in setOf("create", "analyze", "learn") || reference?.valid() == false) return null
         val history = boundedHistory(messages).toMutableList()
         while (true) {
-            val body = MusiaJson.encodeToString(AgentRequest(message, brief, history))
+            val encoded = kotlinx.serialization.json.Json.parseToJsonElement(
+                MusiaJson.encodeToString(AgentRequest(message, brief, history, focus, reference))).jsonObject
+            // Older servers reject new fields, even when null. Capability-gate them.
+            val body = kotlinx.serialization.json.JsonObject(encoded.filterKeys {
+                (it != "focus" || focus != null) && (it != "reference" || reference != null)
+            }).toString()
             if (body.toByteArray(Charsets.UTF_8).size <= 45000) return body
             if (history.isEmpty()) return null
             history.removeAt(0)

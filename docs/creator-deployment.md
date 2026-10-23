@@ -1,5 +1,24 @@
 # Scoped Creator Deployment
 
+## 2026-10-24 Update
+
+The creator app/relay and maintenance/reconciliation execution source is now
+`169cf195ee75644ca90a8c9038334bc60da43fea7700b2e2b36a7ad3995b5eed`.
+The scoped cutover passed public capabilities and exact client-byte checks.
+`agentContextVersion=1` is live; invitation requirements and disabled public
+checkout are unchanged. Caddy, edge guard, SSH tunnel and learning/catalog
+deployment were not changed. The reviewed catalog snapshot keeps the recently
+unlisted song out of chat references.
+
+The old `creator-pilot-20261009` queue ended at its 10,000-poll limit with zero
+dispatches. Explicit idle renewal carried its ten unused dispatches into
+`creator-pilot-20261024-carryover`, without replenishing credits or enabling
+automatic input/output approval. The existing generation service is running.
+Its successor window is finite as well; there is no unattended budget renewal.
+
+See [Create, Analyze, Learn](creator-create-analyze-learn.md) for capabilities,
+tests and native delivery gaps. The records below are the earlier release baseline.
+
 2026-10-09. The invitation-gated creator pilot is live at
 <https://musia.lazying.art/creator/>. It is **not a public paid service**.
 

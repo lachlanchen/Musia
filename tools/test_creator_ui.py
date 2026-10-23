@@ -49,6 +49,7 @@ async def main():
             # Simulate identity/agent only at Playwright network boundary, never the server.
             requests = []
             agent_requests = []
+            fail_agent = False
             track = {"id":"a"*32,"title":"Playback fixture","author":{"id":"fixture-owner","name":"UI fixture"},
                      "language":"en","mine":True,"visibility":"public","moderation":"approved",
                      "liked":False,"saved":False,"likes":0,"lyrics":"A gentle morning",
@@ -63,7 +64,7 @@ async def main():
                 path = handle.request.url.split("/creator",1)[1]
                 if path == "/api/capabilities":
                     value = {"login":True,"providers":{"password":True},"generation":True,"agent":True,
-                             "invitationRequired":True,"plans":[],"salesEnabled":False}
+                             "invitationRequired":True,"plans":[],"salesEnabled":False,"agentContextVersion":1}
                 elif path == "/api/me":
                     value = {"account":{"id":"fixture-owner","name":"UI fixture","termsAccepted":True,"invited":True,
                                         "usage":{"remaining":2,"limit":2,"period":"fixture","tier":"free"}}}
@@ -76,6 +77,8 @@ async def main():
                 elif path == "/api/agent":
                     agent_requests.append(handle.request.post_data_json)
                     await asyncio.sleep(0.3)
+                    if fail_agent:
+                        return await handle.fulfill(status=503,json={"detail":"agent_response_unavailable"})
                     value={"message":"A soft chorus with room to breathe.","brief":{"title":"A gentle morning","lyrics":"[Verse]\nA gentle morning\n[Chorus]\nStay with me",
                            "caption":"Warm piano, clear vocal, hopeful chorus","idea":"Warmth","language":"en","duration":90,"bpm":100,"key":"C major"}}
                 elif path.startswith("/api/songs?mode="):
@@ -116,6 +119,32 @@ async def main():
             await page.locator("#agent-panel").wait_for()
             assert await page.locator(".user-message").count() == 2
             assert await page.locator('[name="title"]').input_value() == "Edited while thinking"
+            # Learning is read-only, even if a defective provider attempts to overwrite the draft.
+            await page.locator('[data-focus="learn"]').click()
+            await page.locator('#chat-song option[value="first-pulse"]').wait_for(state="attached")
+            await page.locator('#chat-song').select_option('first-pulse')
+            await page.locator('#chat-position').fill('4')
+            before = await page.locator('[name="lyrics"]').input_value()
+            await page.locator('#message').fill('Help me practice this beat slowly')
+            await page.locator('#send').click()
+            await page.wait_for_function("() => document.querySelector('#chat-status').textContent === 'Private draft'")
+            assert agent_requests[-1]['focus'] == 'learn'
+            assert agent_requests[-1]['reference'] == {'source':'catalog','id':'first-pulse','position':4}
+            assert await page.locator('[name="title"]').input_value() == 'Edited while thinking'
+            assert await page.locator('[name="lyrics"]').input_value() == before
+            assert requests == []
+            for width, height in ((1440,1000),(390,844),(320,740)):
+                await page.set_viewport_size({'width':width,'height':height})
+                assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'Signed-in overflow at {width}'
+                assert await page.locator('#messages').evaluate('(node) => node.clientHeight >= 180'), f'Conversation collapsed at {width}'
+                await page.screenshot(path=str(args.evidence/f'creator-learn-{width}.png'),full_page=True)
+            fail_agent = True
+            await page.locator('#message').fill('Can you explain it once more?')
+            await page.locator('#send').click()
+            await page.wait_for_function("() => document.querySelector('#message').value === 'Can you explain it once more?'")
+            assert await page.locator('[name="lyrics"]').input_value() == before
+            fail_agent = False
+            await page.set_viewport_size({'width':1440,'height':1000})
             await page.locator("#generate").click()
             assert requests == [], "Opening confirmation must not render"
             await page.locator("#rights").check()
@@ -140,6 +169,7 @@ async def main():
             assert not errors, errors
             print(json.dumps({"passed":True,"viewports":[1440,768,390,320],"draftReload":True,
                               "agentDefault":True,"conversationReload":True,"sharedDraft":True,"concurrentManualEditsPreserved":True,
+                              "songGroundedLearning":True,"learningPreservesDraft":True,"failedMessageRestored":True,
                               "explicitConfirmation":True,"privateDefault":True,"socialPreservesPlayback":True,"pageErrors":errors,
                               "fixtureOnly":"No login, AI generation or purchase was performed"}))
         finally:

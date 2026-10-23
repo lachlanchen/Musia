@@ -35,6 +35,8 @@ def main():
     parser.add_argument("--edge-ip",required=True)
     parser.add_argument("--edge-port",type=int,default=2222)
     parser.add_argument("--known-hosts",type=Path,required=True)
+    parser.add_argument("--catalog-root", type=Path, default=ROOT,
+                        help="Reviewed catalog checkout for server-owned song evidence (JSON only)")
     args=parser.parse_args()
     os.umask(0o077)
     files={}
@@ -43,6 +45,17 @@ def main():
             if path.is_file() and not path.is_symlink() and "__pycache__" not in path.parts:
                 files[str(path.relative_to(ROOT))]=path.read_bytes()
     files["tools/creator.py"] = (ROOT/"tools/creator.py").read_bytes()
+    catalog = args.catalog_root.resolve() / "website/data"
+    if not (catalog / "catalog.json").is_file():
+        raise ValueError("Missing reviewed catalog")
+    for path in catalog.rglob("*.json"):
+        if path.is_symlink() or not path.resolve().is_relative_to(catalog):
+            raise ValueError("Catalog symlink is not a release asset")
+        content = path.read_bytes()
+        json.loads(content)
+        if len(content) > 4_000_000:
+            raise ValueError("Oversized catalog file")
+        files["website/data/" + path.relative_to(catalog).as_posix()] = content
     pin=json.loads((ROOT/"deploy/creator/lazyedge-pin.json").read_text())
     for name,expected in pin["files"].items():
         content=(args.lazyedge/name).read_bytes()
@@ -111,6 +124,7 @@ def main():
     queue=f"[Unit]\nDescription=Musia bounded generation queue\nAfter=network-online.target\nConditionPathExists={queue_config}\n\n[Service]\nType=simple\nWorkingDirectory={ROOT}\nEnvironment=PYTHONNOUSERSITE=1\nEnvironment=PYTHONDONTWRITEBYTECODE=1\nEnvironment=MUSIA_CREATOR_DATA={STATE}\nEnvironment=CUDA_VISIBLE_DEVICES=0\nExecStart={HOME}/miniconda3/envs/musia/bin/python {ROOT}/tools/creator.py supervise --config {queue_config}\nRestart=no\nKillMode=control-group\nTimeoutStopSec=120\nUMask=0077\nNoNewPrivileges=yes\nTasksMax=512\nMemoryMax=64G\n\n[Install]\nWantedBy=default.target\n"
     private(units/"musia-creator-generation.service",queue.encode(),replace=True)
     archive=ROOT/"store/.runtime"/f"creator-{revision}.tar.gz"
+    archive.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
     if not archive.exists():
         with tarfile.open(archive,"w:gz") as bundle:
             for name in sorted(files):

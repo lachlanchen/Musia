@@ -37,6 +37,10 @@ private final class CreatorTestProtocol: URLProtocol {
 }
 
 final class CreatorAPITests: XCTestCase {
+    func testAgentTimeoutCoversProducerDeadlineWithoutSlowingOtherRequests() {
+        XCTAssertEqual(CreatorAPI.requestTimeout(for: "/api/agent"), 105)
+        XCTAssertEqual(CreatorAPI.requestTimeout(for: "/api/jobs"), 45)
+    }
     private var session: URLSession!
     private var api: CreatorAPI!
     override func setUp() {

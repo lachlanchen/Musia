@@ -19,6 +19,8 @@ object CreatorApi {
     private val client = OkHttpClient.Builder().connectTimeout(12, TimeUnit.SECONDS)
         .readTimeout(60, TimeUnit.SECONDS).callTimeout(75, TimeUnit.SECONDS)
         .followRedirects(false).followSslRedirects(false).retryOnConnectionFailure(false).build()
+    private val agentClient = client.newBuilder().readTimeout(105, TimeUnit.SECONDS)
+        .callTimeout(110, TimeUnit.SECONDS).build()
     fun path(vararg segments: String): String = MusiaApi.ORIGIN.toHttpUrl().newBuilder()
         .addPathSegment("creator").apply { segments.forEach(::addPathSegment) }.build().encodedPath.removePrefix("/creator")
     fun originUrl(value: String): String {
@@ -34,7 +36,7 @@ object CreatorApi {
         session?.let { builder.header("Authorization", "Bearer ${it.token}") }
         key?.let { builder.header("Idempotency-Key", it) }
         if (method != "GET") builder.method(method, body.toRequestBody("application/json".toMediaType()))
-        client.newCall(builder.build()).execute().use { response ->
+        (if (path == "/api/agent") agentClient else client).newCall(builder.build()).execute().use { response ->
             currentCoroutineContext().ensureActive()
             val source = response.body?.source() ?: throw IOException("Empty response")
             source.request(2_000_001)

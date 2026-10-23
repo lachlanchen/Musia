@@ -13,6 +13,9 @@ private final class CreatorRedirectPolicy: NSObject, URLSessionTaskDelegate, @un
 public final class CreatorAPI: @unchecked Sendable {
     public static let origin = URL(string: "https://musia.lazying.art")!
     private let session: URLSession
+    public static func requestTimeout(for path: String) -> TimeInterval {
+        path == "/api/agent" ? 105 : 45
+    }
     public init(session: URLSession? = nil) {
         let configuration = URLSessionConfiguration.ephemeral
         configuration.httpCookieStorage = nil
@@ -42,7 +45,8 @@ public final class CreatorAPI: @unchecked Sendable {
         guard path.hasPrefix("/api/") || path.hasPrefix("/auth/"),
               let url = URL(string: "/creator" + path, relativeTo: Self.origin)?.absoluteURL,
               url.host == Self.origin.host else { throw CreatorError.unsafeURL }
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 45)
+        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData,
+                                 timeoutInterval: Self.requestTimeout(for: path))
         request.httpMethod = method
         request.httpBody = method == "GET" ? nil : body
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

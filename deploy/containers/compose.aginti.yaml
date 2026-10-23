@@ -1,0 +1,48 @@
+# Optional: docker compose -f compose.yaml -f compose.aginti.yaml up -d --build
+services:
+  app:
+    environment:
+      MUSIA_CREATOR_TEXT_BACKEND: aginti
+      MUSIA_CREATOR_AGINTI_URL: http://agent:8081
+      MUSIA_CREATOR_AGINTI_TOKEN_FILE: /run/secrets/agent_token
+    secrets: !override [agent_token]
+    depends_on:
+      agent:
+        condition: service_healthy
+  agent:
+    image: musia-agent:${MUSIA_IMAGE_TAG:-local}
+    build:
+      context: ../..
+      dockerfile: deploy/containers/Dockerfile
+      target: agent
+    user: "10001:10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    init: true
+    restart: unless-stopped
+    pids_limit: 32
+    mem_limit: 384m
+    memswap_limit: 384m
+    cpus: 1.0
+    environment:
+      MUSIA_AGENT_MODEL: ${MUSIA_CREATOR_TEXT_MODEL:-deepseek-v4-pro}
+      MUSIA_AGENT_KEY_FILE: /run/secrets/text_key
+      MUSIA_AGENT_TOKEN_FILE: /run/secrets/agent_token
+      MUSIA_AGENT_PROXY: http://egress:8888
+    secrets: [text_key, agent_token]
+    networks: [backend]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m,uid=10001,gid=10001,mode=700"]
+    depends_on: [egress]
+    stop_grace_period: 80s
+    logging:
+      driver: local
+      options: {max-size: 5m, max-file: "2"}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:8081/healthz').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+secrets:
+  agent_token:
+    file: ${MUSIA_AGENT_TOKEN_FILE:?Set MUSIA_AGENT_TOKEN_FILE to a distinct private RPC token}

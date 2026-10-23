@@ -18,3 +18,7 @@
   when touching auth. Do not upgrade the GPU env just to install the account SDK.
 - Store credentials/media/receipts outside Git. Coordination notes default to
   `/home/lachlan/Nutstore Files/OneTimeSync/Musia/`.
+- Prefer direct DeepSeek text calls for draft/chat work. AgInTi is an optional
+  bounded JSON specialist, not permission to expose shell/browser tools or use
+  a developer's Codex session. See `docs/creator-containers.md` for container
+  qualification, secret files and the single-writer migration boundary.

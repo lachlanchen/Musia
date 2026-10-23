@@ -75,6 +75,35 @@ private fun Context.activity(): Activity? = when (this) {
         }
         item { CreatorNotice(vm) }
         if (!studio) {
+            if ((vm.capabilities?.agentContextVersion ?: 0) >= 1) item {
+                var choicesOpen by remember { mutableStateOf(false) }
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        listOf("create" to "Create", "analyze" to "Analyze", "learn" to "Learn").forEach { (id, title) ->
+                            FilterChip(vm.agentFocus == id, { vm.agentFocus = id }, label = { Text(title) }, enabled = !vm.busy)
+                        }
+                    }
+                    val choices = listOf("" to "No song selected") +
+                        vm.referenceCatalog.map { "catalog:${it.id}" to it.title } +
+                        vm.jobs.filter { it.state == "ready" }.map { "created:${it.id}" to it.brief.title }
+                    Box {
+                        OutlinedButton(onClick = { choicesOpen = true }, enabled = !vm.busy, modifier = Modifier.fillMaxWidth()) {
+                            Icon(Icons.Default.MusicNote, null); Spacer(Modifier.width(8.dp))
+                            Text(choices.firstOrNull { it.first == vm.referenceKey }?.second ?: "Choose song", Modifier.weight(1f))
+                            Icon(Icons.Default.ArrowDropDown, null)
+                        }
+                        DropdownMenu(choicesOpen, { choicesOpen = false }, modifier = Modifier.heightIn(max = 320.dp)) {
+                            choices.forEach { (key, title) -> DropdownMenuItem(text = { Text(title) }, onClick = {
+                                vm.referenceKey = key; choicesOpen = false
+                            }) }
+                        }
+                    }
+                    if (vm.referenceKey.isNotEmpty()) OutlinedTextField(vm.referencePosition,
+                        { vm.referencePosition = it.take(8) }, label = { Text("From (seconds)") },
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal), enabled = !vm.busy,
+                        modifier = Modifier.fillMaxWidth(), singleLine = true)
+                }
+            }
             if (vm.agentMessages.isEmpty()) item { Text("What would you like to make?", style = MaterialTheme.typography.titleLarge) }
             items(vm.agentMessages) { entry ->
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {

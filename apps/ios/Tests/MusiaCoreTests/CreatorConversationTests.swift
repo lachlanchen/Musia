@@ -31,4 +31,20 @@ final class CreatorConversationTests: XCTestCase {
         var brief = CreatorBrief(); brief.key = "not a key"
         XCTAssertThrowsError(try CreatorAgentRequest(message: "Hello", brief: brief).boundedBody())
     }
+
+    func testSongContextIsOptionalAndValidated() throws {
+        let old = try CreatorAgentRequest(message: "Hello", brief: CreatorBrief()).boundedBody()
+        let oldJSON = try XCTUnwrap(try JSONSerialization.jsonObject(with: old) as? [String: Any])
+        XCTAssertNil(oldJSON["focus"]); XCTAssertNil(oldJSON["reference"])
+        let ref = CreatorSongReference(source: "catalog", id: "first-pulse", position: 4)
+        let data = try CreatorAgentRequest(message: "Help me practice", brief: CreatorBrief(), focus: "learn", reference: ref).boundedBody()
+        let json = try XCTUnwrap(try JSONSerialization.jsonObject(with: data) as? [String: Any])
+        XCTAssertEqual(json["focus"] as? String, "learn")
+        XCTAssertEqual((json["reference"] as? [String: Any])?["id"] as? String, "first-pulse")
+        XCTAssertThrowsError(try CreatorAgentRequest(message: "Hello", brief: CreatorBrief(), focus: "shell").boundedBody())
+        for invalid in [CreatorSongReference(source: "catalog", id: "../secret"),
+                        CreatorSongReference(source: "catalog", id: "first-pulse", position: .nan)] {
+            XCTAssertThrowsError(try CreatorAgentRequest(message: "Hello", brief: CreatorBrief(), focus: "learn", reference: invalid).boundedBody())
+        }
+    }
 }

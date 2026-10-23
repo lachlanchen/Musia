@@ -1,0 +1,25 @@
+# Optional, qualified app-owned login only. This is not a production cutover.
+# Build the reviewed private SDK wheel outside Git first.
+services:
+  app:
+    image: musia-app-auth:${MUSIA_IMAGE_TAG:-local}
+    build:
+      target: authenticated
+      additional_contexts:
+        authsdk: ${MUSIA_AUTH_SDK_WHEELS:?Private directory containing the reviewed SDK wheel}
+    environment:
+      MUSIA_CREATOR_AUTH_DIR: /auth
+      MUSIA_CREATOR_DATA: ${MUSIA_CONTAINER_STATE_PATH:-/state}
+    volumes: !override
+      - type: bind
+        source: ${MUSIA_MIGRATED_STATE:?Private COPIED state; never two writers}
+        target: ${MUSIA_CONTAINER_STATE_PATH:-/state}
+        bind: {create_host_path: false}
+      - type: bind
+        source: ${MUSIA_MIGRATED_AUTH:?Private COPIED app-owned auth directory}
+        target: /auth
+        bind: {create_host_path: false}
+    # The existing identity SDK intentionally ignores proxy environment variables.
+    # Only this trusted account API gets ordinary egress. The agent remains on
+    # the internal network and cannot access identity/storage credentials.
+    networks: [backend, internet]

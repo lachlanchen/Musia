@@ -7,7 +7,8 @@ import kotlinx.serialization.json.JsonObject
 @Serializable data class CreatorCapabilities(
     val login: Boolean = false, val generation: Boolean = false, val agent: Boolean = false,
     val providers: JsonObject = JsonObject(emptyMap()), val plans: List<CreatorPlan> = emptyList(),
-    val termsVersion: String = "", val invitationRequired: Boolean = true, val salesEnabled: Boolean = false
+    val termsVersion: String = "", val invitationRequired: Boolean = true, val salesEnabled: Boolean = false,
+    val agentContextVersion: Int = 0
 )
 @Serializable data class CreatorPlan(val id: String, val name: String, val renders: Int = 0)
 @Serializable data class CreatorUsage(val tier: String = "free", val period: String = "", val limit: Int = 0,
@@ -25,7 +26,14 @@ import kotlinx.serialization.json.JsonObject
         Regex("^[A-G](?:#|b)? (?:major|minor)$").matches(key)
 }
 @Serializable data class AgentMessage(val role: String, val content: String)
-@Serializable data class AgentRequest(val message: String, val brief: SongBrief, val history: List<AgentMessage> = emptyList())
+@Serializable data class SongReference(val source: String, val id: String,
+    @SerialName("asset_id") val assetId: String? = null, val position: Double = 0.0) {
+    fun valid(): Boolean = source in setOf("catalog", "created") && position.isFinite() && position in 0.0..21600.0 &&
+        Regex("^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$").matches(id) &&
+        (assetId == null || Regex("^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$").matches(assetId))
+}
+@Serializable data class AgentRequest(val message: String, val brief: SongBrief, val history: List<AgentMessage> = emptyList(),
+    val focus: String? = null, val reference: SongReference? = null)
 @Serializable data class AgentReply(val message: String, val brief: SongBrief)
 @Serializable data class RenderRequest(val brief: SongBrief, @SerialName("rights_confirmed") val rightsConfirmed: Boolean = true,
     val visibility: String = "private")

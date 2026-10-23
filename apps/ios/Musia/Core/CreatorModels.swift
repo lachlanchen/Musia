@@ -7,6 +7,7 @@ public struct CreatorCapabilities: Decodable, Sendable {
     public let termsVersion: String
     public let invitationRequired: Bool
     public let salesEnabled: Bool
+    public let agentContextVersion: Int?
 }
 
 public struct CreatorUsage: Codable, Sendable {
@@ -68,16 +69,37 @@ public struct CreatorAgentReply: Decodable {
     public let message: String
     public let brief: CreatorBrief
 }
+public struct CreatorSongReference: Codable, Equatable, Sendable {
+    public let source: String
+    public let id: String
+    public var asset_id: String? = nil
+    public var position: Double = 0
+    public init(source: String, id: String, assetID: String? = nil, position: Double = 0) {
+        self.source = source; self.id = id; self.asset_id = assetID; self.position = position
+    }
+    public var isValid: Bool {
+        let pattern = #"\A[A-Za-z0-9][A-Za-z0-9_-]{0,127}\z"#
+        return ["catalog", "created"].contains(source) && position.isFinite && (0...21600).contains(position)
+            && id.range(of: pattern, options: .regularExpression) != nil
+            && (asset_id == nil || asset_id!.range(of: pattern, options: .regularExpression) != nil)
+    }
+}
 public struct CreatorAgentRequest: Encodable {
     public let message: String
     public let brief: CreatorBrief
     public var history: [CreatorChatMessage]
-    public init(message: String, brief: CreatorBrief, history: [CreatorChatMessage] = []) {
+    public var focus: String? = nil
+    public var reference: CreatorSongReference? = nil
+    public init(message: String, brief: CreatorBrief, history: [CreatorChatMessage] = [],
+                focus: String? = nil, reference: CreatorSongReference? = nil) {
         self.message = message; self.brief = brief; self.history = CreatorChatMessage.bounded(history)
+        self.focus = focus; self.reference = reference
     }
     public func boundedBody() throws -> Data {
         guard !message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
-              message.unicodeScalars.count <= 4000, brief.isValidDraft else {
+              message.unicodeScalars.count <= 4000, brief.isValidDraft,
+              focus == nil || ["create", "analyze", "learn"].contains(focus!),
+              reference?.isValid != false else {
             throw CreatorError.unavailable("The message or draft is invalid. Check the Studio fields.")
         }
         var request = self

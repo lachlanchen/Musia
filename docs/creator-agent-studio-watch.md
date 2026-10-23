@@ -1,5 +1,9 @@
 # Agent, Studio and Watch
 
+The [Create, Analyze, Learn update](creator-create-analyze-learn.md) adds
+song-grounded conversation and preserves the shared Studio draft during learning.
+Its verification record distinguishes live web/backend from pending native builds.
+
 Owner-deferred qualification work is tracked in
 [Creator follow-up](creator-followup.md). It must not be silently marked done.
 

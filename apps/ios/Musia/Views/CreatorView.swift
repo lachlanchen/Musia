@@ -71,6 +71,27 @@ struct CreatorView: View {
                 }
             }
             if mode == "Agent" {
+            if creator.supportsSongContext {
+                Section {
+                    Picker("Chat focus", selection: $creator.agentFocus) {
+                        Text("Create").tag("create")
+                        Text("Analyze").tag("analyze")
+                        Text("Learn").tag("learn")
+                    }.pickerStyle(.segmented).accessibilityIdentifier("creator.focus")
+                    Picker("Song", selection: $creator.referenceKey) {
+                        Text("No song selected").tag("")
+                        ForEach(creator.referenceCatalog) { item in
+                            Text(item.title).tag("catalog:" + item.id)
+                        }
+                        ForEach(creator.jobs.filter { $0.status == "ready" }) { job in
+                            Text(job.title ?? "My song").tag("created:" + job.id)
+                        }
+                    }
+                    if !creator.referenceKey.isEmpty {
+                        Stepper("From: \(Int(creator.referencePosition)) seconds", value: $creator.referencePosition, in: 0...21600, step: 5)
+                    }
+                }.disabled(creator.busy)
+            }
             Section("Agent") {
                 if creator.conversation.isEmpty {
                     Text("What would you like to make?").font(.title3.weight(.semibold))

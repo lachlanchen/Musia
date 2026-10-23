@@ -1,0 +1,103 @@
+name: musia
+
+x-limits: &limits
+  user: "10001:10001"
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  init: true
+  restart: unless-stopped
+  pids_limit: 64
+  logging:
+    driver: local
+    options: {max-size: 5m, max-file: "2"}
+
+services:
+  web:
+    <<: *limits
+    image: musia-web:${MUSIA_IMAGE_TAG:-local}
+    build:
+      context: ../..
+      dockerfile: deploy/containers/Dockerfile
+      target: web
+    ports: ["127.0.0.1:${MUSIA_CONTAINER_PORT:-18796}:8796"]
+    command: [caddy, run, --config, /etc/caddy/Caddyfile, --adapter, caddyfile]
+    environment: {XDG_CONFIG_HOME: /tmp/config, XDG_DATA_HOME: /tmp/data}
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m,uid=10001,gid=10001,mode=700"]
+    networks: [backend, internet]
+    mem_limit: 64m
+    memswap_limit: 64m
+    cpus: 0.25
+    depends_on:
+      app:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:8796/healthz]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+  app:
+    <<: *limits
+    image: musia-app:${MUSIA_IMAGE_TAG:-local}
+    build:
+      context: ../..
+      dockerfile: deploy/containers/Dockerfile
+      target: app
+    environment:
+      MUSIA_CREATOR_ORIGIN: ${MUSIA_CREATOR_ORIGIN:-http://127.0.0.1:18796}
+      MUSIA_CREATOR_DATA: /state
+      MUSIA_CREATOR_TEXT_BACKEND: direct
+      MUSIA_CREATOR_TEXT_BASE_URL: https://api.deepseek.com
+      MUSIA_CREATOR_TEXT_MODEL: ${MUSIA_CREATOR_TEXT_MODEL:-deepseek-v4-pro}
+      MUSIA_CREATOR_TEXT_API_KEY_FILE: /run/secrets/text_key
+      MUSIA_CREATOR_TEXT_PROXY: http://egress:8888
+      MUSIA_CREATOR_TEXT_TIMEOUT: "75"
+      MUSIA_CREATOR_TEXT_CONCURRENCY: "2"
+      MUSIA_CREATOR_DEEPSEEK_THINKING: ${MUSIA_CREATOR_DEEPSEEK_THINKING:-disabled}
+      # Enabling login/generation/billing requires an app-owned qualification overlay.
+      MUSIA_CREATOR_GENERATION: "0"
+      MUSIA_CREATOR_OPEN_SIGNUP: "0"
+    secrets: [text_key]
+    volumes: [state:/state]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=32m,uid=10001,gid=10001,mode=700"]
+    networks: [backend]
+    mem_limit: 384m
+    memswap_limit: 384m
+    cpus: 1.0
+    stop_grace_period: 100s
+    depends_on:
+      egress:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import http.client,os,urllib.parse; c=http.client.HTTPConnection('127.0.0.1',8796,timeout=3); c.request('GET','/healthz',headers={'Host':urllib.parse.urlsplit(os.environ['MUSIA_CREATOR_ORIGIN']).netloc}); assert c.getresponse().status==200"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+  egress:
+    <<: *limits
+    image: musia-egress:${MUSIA_IMAGE_TAG:-local}
+    build:
+      context: ../..
+      dockerfile: deploy/containers/Dockerfile
+      target: egress
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=8m,uid=10001,gid=10001,mode=700"]
+    networks: [backend, internet]
+    mem_limit: 32m
+    memswap_limit: 32m
+    cpus: 0.25
+    healthcheck:
+      test: [CMD, bash, -c, "exec 3<>/dev/tcp/127.0.0.1/8888"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+networks:
+  backend:
+    internal: true
+  internet: {}
+volumes:
+  state: {}
+secrets:
+  text_key:
+    file: ${MUSIA_TEXT_KEY_FILE:?Set MUSIA_TEXT_KEY_FILE to a private API key file}

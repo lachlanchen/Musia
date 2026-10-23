@@ -44,10 +44,19 @@ class ChatMessage(RequestModel):
     content: str = Field(min_length=1, max_length=4000)
 
 
+class SongReference(RequestModel):
+    source: Literal["catalog", "created"]
+    id: str = Field(pattern=r"^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$")
+    asset_id: str | None = Field(default=None, pattern=r"^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$")
+    position: float = Field(default=0, ge=0, le=21600, allow_inf_nan=False)
+
+
 class Chat(RequestModel):
     message: str = Field(min_length=1, max_length=4000)
     brief: Draft | None = None
     history: list[ChatMessage] = Field(default_factory=list, max_length=12)
+    focus: Literal["create", "analyze", "learn"] = "create"
+    reference: SongReference | None = None
 
     @field_validator("history")
     @classmethod
@@ -55,6 +64,11 @@ class Chat(RequestModel):
         if sum(len(item.content) for item in value) > 16000:
             raise ValueError("Conversation context is too long")
         return value
+
+
+class ProducerRequest(Chat):
+    # Internal-only projection. The public Chat model rejects this field.
+    evidence: str | None = Field(default=None, max_length=8000)
 
 
 class AgentReply(RequestModel):

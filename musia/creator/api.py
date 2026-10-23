@@ -18,6 +18,7 @@ from .contracts import Chat, Comment, CreatorError, Generate, Invite, PLANS, Rea
 from .store import Store, digest
 from .native_auth import NativeFlow, NativeStart, NativeExchange
 from .billing import Billing, Verification
+from .context import prepare as prepare_agent_request
 
 
 @dataclass(frozen=True)
@@ -150,6 +151,7 @@ def create_app(settings=None, *, store=None, auth=None, producer=None, billing=N
         connected = any(value is True for value in providers.values())
         return {"version": 1, "providers": providers, "login": connected,
                 "generation": cfg.generation_enabled and connected, "agent": producer.available and connected,
+                "agentContextVersion": 1,
                 "invitationRequired": cfg.invitation_required, "salesEnabled": billing.sales_available, "termsVersion": TERMS_VERSION,
                 "plans": [{"id": k, **v, "priceStatus": "store_qualification_required"} for k, v in PLANS.items()]}
 
@@ -258,11 +260,18 @@ def create_app(settings=None, *, store=None, auth=None, producer=None, billing=N
         account = owner(request)
         if not producer.available:
             raise CreatorError("agent_not_connected", 503)
+        prepared = prepare_agent_request(body, store, account)
         turn = store.start_turn(account, body.model_dump_json(), invitation_required=cfg.invitation_required)
         try:
-            answer = producer.refine(body)
+            answer = producer.refine(prepared)
+            if body.focus != "create":
+                from .contracts import Draft
+                answer.brief = (body.brief or Draft()).model_copy(deep=True)
             store.finish_turn(account, turn, answer.model_dump_json())
             return answer.model_dump()
+        except CreatorError:
+            store.finish_turn(account, turn, None)
+            raise
         except Exception:
             store.finish_turn(account, turn, None)
             raise CreatorError("agent_response_unavailable", 503) from None
