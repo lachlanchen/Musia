@@ -3,6 +3,12 @@
 Japanese: **せんせいも一年生**. Chinese: **老师也是一年级**.
 Artist: Musia. Japanese female vocal with English and Mandarin translations.
 
+Current catalog status (October 23, 2026): unlisted. The recording is excluded
+from normal Fun browsing/autoplay and the native Musia public library. Its
+direct Fun link and media files remain available. Existing social posts and
+music-platform submissions are unchanged; the publication receipts below are
+historical, not authorization to relist it.
+
 ## Song
 
 Aya receives an offer for a specially appointed assistant-professor role in
