@@ -62,9 +62,41 @@
     {
       "id": "luoshenfu",
       "titles": {
-        "zh-Hans": "洛神赋",
-        "en": "Ode to the Goddess of the Luo",
-        "ja": "洛神賦"
+        "zh-Hans": "洛神赋·回雪",
+        "en": "Snow on the Wind",
+        "ja": "洛神賦・舞い戻る雪"
+      },
+      "recordings": {
+        "luoshenfu-pronunciation-v2": {
+          "titles": {
+            "zh-Hans": "洛神赋·回雪",
+            "en": "Snow on the Wind",
+            "ja": "洛神賦・舞い戻る雪"
+          },
+          "cover": {
+            "id": "cover",
+            "role": "cover",
+            "src": "assets/covers/luoshenfu-hui-xue-16x9.png",
+            "mime": "image/png",
+            "width": 1672,
+            "height": 941
+          }
+        },
+        "luoshenfu-original-zh": {
+          "titles": {
+            "zh-Hans": "洛神赋·惊鸿",
+            "en": "A Glimpse of Grace",
+            "ja": "洛神賦・優美な面影"
+          },
+          "cover": {
+            "id": "cover",
+            "role": "cover",
+            "src": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+            "mime": "image/png",
+            "width": 1600,
+            "height": 900
+          }
+        }
       },
       "selected": "luoshenfu-original-excerpt-preview",
       "archives": [],

@@ -3,11 +3,11 @@
   "version": 1,
   "id": "luoshenfu-original-excerpt-preview",
   "kind": "song",
-  "title": "洛神赋 · Ode to the Goddess of the Luo",
+  "title": "洛神赋·回雪 · Snow on the Wind",
   "localizedTitles": {
-    "zh-Hans": "洛神赋",
-    "en": "Ode to the Goddess of the Luo",
-    "ja": "洛神賦"
+    "zh-Hans": "洛神赋·回雪",
+    "en": "Snow on the Wind",
+    "ja": "洛神賦・舞い戻る雪"
   },
   "artist": "Musia",
   "description": "Cao Zhi's original Luoshenfu lines carried by two luminous, cinematic Mandarin performances.",
@@ -15,38 +15,38 @@
   "duration": 136.0,
   "canonicalUrl": "https://fun.lazying.art/#luoshenfu-original-excerpt-preview",
   "share": {
-    "title": "洛神赋 · Ode to the Goddess of the Luo - Musia",
+    "title": "洛神赋·回雪 · Snow on the Wind - Musia",
     "description": "An original cinematic Mandarin setting of selected lines from Cao Zhi's Luoshenfu.",
     "url": "https://fun.lazying.art/#luoshenfu-original-excerpt-preview",
-    "image": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+    "image": "assets/covers/luoshenfu-hui-xue-16x9.png",
     "siteName": "Fun Lazying Art"
   },
   "assets": {
     "cover": {
       "id": "cover",
-      "label": "洛神赋 · Ode to the Goddess of the Luo cover",
       "role": "cover",
-      "src": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+      "src": "assets/covers/luoshenfu-hui-xue-16x9.png",
       "mime": "image/png",
-      "width": 1600,
-      "height": 900
+      "width": 1672,
+      "height": 941,
+      "label": "洛神赋·回雪 · Snow on the Wind cover"
     },
     "poster": {
       "id": "poster",
-      "label": "16:9 Poster",
       "role": "poster",
-      "src": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+      "src": "assets/covers/luoshenfu-hui-xue-16x9.png",
       "mime": "image/png",
-      "width": 1600,
-      "height": 900
+      "width": 1672,
+      "height": 941,
+      "label": "洛神赋·回雪 · Snow on the Wind cover"
     },
     "primaryAudio": {
       "id": "luoshenfu-pronunciation-v2",
-      "label": "中文",
-      "selectorLabel": "中文",
+      "label": "洛神赋·回雪 · 中文",
+      "selectorLabel": "洛神赋·回雪 · 中文",
       "role": "vocal",
       "languageCode": "zh-Hans",
-      "languageLabel": "中文",
+      "languageLabel": "洛神赋·回雪 · 中文",
       "lyricSetId": "pronunciation-v2",
       "src": "https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3",
       "mime": "audio/mpeg",
@@ -841,16 +841,31 @@
         ],
         "chordSource": "Musia analysis-grade chord inference from this exact render",
         "beatSource": "Musia beat analysis from this exact render"
+      },
+      "displayTitle": "洛神赋·回雪 · Snow on the Wind",
+      "localizedTitles": {
+        "zh-Hans": "洛神赋·回雪",
+        "en": "Snow on the Wind",
+        "ja": "洛神賦・舞い戻る雪"
+      },
+      "cover": {
+        "id": "cover",
+        "role": "cover",
+        "src": "assets/covers/luoshenfu-hui-xue-16x9.png",
+        "mime": "image/png",
+        "width": 1672,
+        "height": 941,
+        "label": "洛神赋·回雪 · Snow on the Wind cover"
       }
     },
     "alternateAudio": [
       {
         "id": "luoshenfu-original-zh",
-        "label": "中文 · Archive 01",
-        "selectorLabel": "中文 · Archive 01",
+        "label": "洛神赋·惊鸿 · 中文 · Archive 01",
+        "selectorLabel": "洛神赋·惊鸿 · 中文 · Archive 01",
         "role": "vocal",
         "languageCode": "zh-Hans",
-        "languageLabel": "中文 · Archive 01",
+        "languageLabel": "洛神赋·惊鸿 · 中文 · Archive 01",
         "lyricSetId": "zh-vocal",
         "src": "https://lazyingart.github.io/MusiaSongs/audio/luoshenfu-original-excerpt-zh-Hans-ace-xl-turbo-seed729403-20260729.mp3",
         "mime": "audio/mpeg",
@@ -2089,7 +2104,22 @@
           "beatSource": "Musia beat analysis from this exact render"
         },
         "hidden": true,
-        "hiddenLabel": "Archive 01"
+        "hiddenLabel": "Archive 01",
+        "displayTitle": "洛神赋·惊鸿 · A Glimpse of Grace",
+        "localizedTitles": {
+          "zh-Hans": "洛神赋·惊鸿",
+          "en": "A Glimpse of Grace",
+          "ja": "洛神賦・優美な面影"
+        },
+        "cover": {
+          "id": "cover",
+          "role": "cover",
+          "src": "assets/covers/luoshenfu-original-excerpt-preview-16x9.png",
+          "mime": "image/png",
+          "width": 1600,
+          "height": 900,
+          "label": "洛神赋·惊鸿 · A Glimpse of Grace cover"
+        }
       }
     ]
   },
@@ -3256,7 +3286,7 @@
       "luoshenfu-original-excerpt-pronunciation-v2-zh-Hans-ace-xl-turbo-seed729403-20260730.mp3"
     ]
   },
-  "displayTitle": "洛神赋 · Ode to the Goddess of the Luo",
+  "displayTitle": "洛神赋·回雪 · Snow on the Wind",
   "workId": "luoshenfu",
   "edition": {
     "status": "selected"

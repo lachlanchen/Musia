@@ -70,6 +70,37 @@ class CatalogCurationTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "promotion"):
             apply_entry(self.item, self.manifest, self.group, "selected")
 
+    def test_named_recordings_keep_audio_lyrics_and_archive_state(self):
+        self.group["recordings"] = {
+            "zh": {"titles": {"zh-Hans": "回雪", "en": "Snow on the Wind"},
+                   "cover": {"src": "assets/covers/snow.png"}},
+            "old-zh": {"titles": {"zh-Hans": "惊鸿", "en": "A Glimpse of Grace"},
+                       "cover": {"src": "assets/covers/grace.png"}},
+        }
+        before = copy.deepcopy(musical_identity(self.manifest))
+        apply_entry(self.item, self.manifest, self.group, "selected")
+        old = self.manifest["assets"]["alternateAudio"][1]
+        self.assertTrue(old["hidden"])
+        self.assertEqual(old["displayTitle"], "惊鸿 · A Glimpse of Grace")
+        self.assertEqual(old["label"], "惊鸿 · 中文 · Archive 01")
+        self.assertEqual(old["cover"]["src"], "assets/covers/grace.png")
+        self.assertEqual(self.manifest["assets"]["cover"]["src"], "assets/covers/snow.png")
+        self.assertEqual(self.item["cover"], self.manifest["share"]["image"])
+        self.assertEqual(before, musical_identity(self.manifest))
+        expected = copy.deepcopy((self.item, self.manifest))
+        apply_entry(self.item, self.manifest, self.group, "selected")
+        self.assertEqual(expected, (self.item, self.manifest))
+
+    def test_unknown_recording_rejected(self):
+        self.group["recordings"] = {"wrong-id": {"titles": {"en": "Wrong"}}}
+        with self.assertRaisesRegex(ValueError, "Unknown recording"):
+            apply_entry(self.item, self.manifest, self.group, "selected")
+
+    def test_recording_title_must_be_bilingual(self):
+        self.group["recordings"] = {"zh": {"titles": {"en": "Only English"}}}
+        with self.assertRaisesRegex(ValueError, "Missing recording title"):
+            apply_entry(self.item, self.manifest, self.group, "selected")
+
     def test_reviewed_whole_catalog(self):
         updates = plan(ROOT)
         catalog = updates[ROOT / "website/data/catalog.json"]

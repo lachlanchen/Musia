@@ -60,6 +60,9 @@ def apply_entry(item, manifest, group, status, number=0):
     if status == "archive":
         manifest.setdefault("publication", {}).update(visibility="hidden", stage="legacy", listed=False)
     # Preserve different vocal languages. Hide only competing takes in one language.
+    recordings = group.get("recordings", {})
+    if set(recordings) - {asset["id"] for asset in audio_assets(manifest)}:
+        raise ValueError(f"Unknown recording in curation for {item['id']}")
     seen = set()
     archives = 0
     for asset in audio_assets(manifest):
@@ -73,6 +76,23 @@ def apply_entry(item, manifest, group, status, number=0):
         elif status == "preview":
             continue
         seen.add(code)
+        recording = recordings.get(asset["id"])
+        if recording:
+            titles = recording["titles"]
+            if not all(isinstance(titles.get(key), str) and titles[key].strip()
+                       for key in (title_language, "en")):
+                raise ValueError(f"Missing recording title: {asset['id']}")
+            asset["displayTitle"] = f"{titles[title_language]} · {titles['en']}"
+            asset["localizedTitles"] = copy.deepcopy(titles)
+            label = f"{titles[title_language]} · {label}"
+            if recording.get("cover"):
+                asset["cover"] = copy.deepcopy(recording["cover"])
+                asset["cover"]["label"] = asset["displayTitle"] + " cover"
+            if asset is manifest.get("assets", {}).get("primaryAudio") and asset.get("cover"):
+                manifest["assets"]["cover"] = copy.deepcopy(asset["cover"])
+                manifest["assets"]["poster"] = {**copy.deepcopy(asset["cover"]), "id": "poster", "role": "poster"}
+                manifest["share"]["image"] = asset["cover"]["src"]
+                item["cover"] = asset["cover"]["src"]
         for key in ("label", "selectorLabel", "languageLabel"):
             asset[key] = label
     if musical_identity(manifest) != before:

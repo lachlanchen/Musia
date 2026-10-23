@@ -27,6 +27,31 @@ not deleted. The Archive number is an identifier, not a quality score.
 - MVs are companion media, not duplicate song recordings. They retain a clean
   `MV` label. Preview candidates remain unlisted; renaming does not promote them.
 
+## Named Recordings
+
+The October 23 title/cover update names the two Luoshen Fu recordings from the
+sung text: **洛神赋·回雪 · Snow on the Wind** for the selected recording and
+**洛神赋·惊鸿 · A Glimpse of Grace** for the archived original. Neither public
+name uses a version number or production-method suffix. Existing IDs, source
+URLs, visibility and each recording's own corrected lyrics stay unchanged.
+
+Optional `recordings` entries in the curation map are keyed by exact audio asset
+ID. They provide bilingual `titles` and an optional cover asset. Curation writes
+`displayTitle`, `localizedTitles`, cover and selector labels onto the matching
+asset. The selected cover also updates the catalog, poster and share image.
+The player, Atlas title and lock-screen metadata follow the active recording;
+ordinary multilingual vocals without these overrides keep their stable title.
+
+The original Luoshen Fu cover is retained for 惊鸿. 回雪 uses a newly generated
+16:9 cover, `assets/covers/luoshenfu-hui-xue-16x9.png`. No lyric, chord, beat or
+audio regeneration is part of this change. See
+[the update record](catalog-poetic-editions-2026-10-23.md).
+
+Shipinhao Music is a separate publication record. The owner reports one allowed
+edit per song: prepare the final title, new cover and all necessary corrections
+together before one save. A website change does not consume that edit or prove
+the Shipinhao listing changed. Preserve original publication receipts.
+
 The normal library/search/playback queue hides archives. Existing `?hidden`,
 `?hided` and `?showall` links and the library's Legacy control remain supported.
 

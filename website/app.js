@@ -918,6 +918,7 @@ function publicAssetRole(asset) {
 }
 
 function displayTitleForAsset(asset = activePlayableAsset()) {
+  if (asset?.displayTitle) return asset.displayTitle;
   if (state.manifest?.displayTitle) return state.manifest.displayTitle;
   const titles = state.manifest?.localizedTitles || {};
   const code = asset?.languageCode || activeTimingTrack()?.language?.code || "";
@@ -929,6 +930,13 @@ function updateMediaTitle() {
   $("media-title").textContent = title;
   $("media-artist").textContent = state.manifest?.artist ? `by ${state.manifest.artist}` : "";
   document.title = `${title} - Fun Lazying Art`;
+  const asset = activePlayableAsset();
+  const cover = coverUrl(state.manifest || {}, asset);
+  coverArt.src = cover ? resolveSitePath(cover) : "";
+  coverArt.alt = asset?.cover?.label || `${title} cover`;
+  coverThumb.src = coverArt.src;
+  coverThumb.alt = coverArt.alt;
+  updateShareMetadata(state.manifest, asset);
 }
 
 function firstVocalStart() {
@@ -1340,7 +1348,8 @@ function setSearchOpen(open) {
   }
 }
 
-function coverUrl(manifest) {
+function coverUrl(manifest, asset = null) {
+  if (asset?.cover?.src) return asset.cover.src;
   return manifest.assets?.cover?.src || manifest.assets?.poster?.src || manifest.share?.image || youtubeThumbnailUrl(manifest.assets?.youtube) || "";
 }
 
@@ -1349,12 +1358,12 @@ function setMeta(selector, value, attr = "content") {
   if (node && value) node.setAttribute(attr, value);
 }
 
-function updateShareMetadata(manifest) {
-  const title = manifest.share?.title || manifest.title;
+function updateShareMetadata(manifest, asset = null) {
+  const title = asset?.displayTitle ? `${asset.displayTitle} - Musia` : manifest.share?.title || manifest.title;
   const description = manifest.share?.description || manifest.description || manifest.subtitle || "";
-  const image = manifest.share?.image || coverUrl(manifest);
+  const image = asset?.cover?.src || manifest.share?.image || coverUrl(manifest);
   const url = manifest.share?.url || manifest.canonicalUrl || "https://fun.lazying.art";
-  document.title = `${manifest.title} - Fun Lazying Art`;
+  document.title = `${asset?.displayTitle || manifest.displayTitle || manifest.title} - Fun Lazying Art`;
   setMeta('meta[name="description"]', description);
   setMeta('meta[property="og:title"]', title);
   setMeta('meta[property="og:description"]', description);
@@ -1367,7 +1376,7 @@ function updateShareMetadata(manifest) {
 }
 
 function mediaSessionArtwork() {
-  const cover = coverUrl(state.manifest || {});
+  const cover = coverUrl(state.manifest || {}, activePlayableAsset());
   const resolvedCover = cover ? new URL(cover, window.location.href).href : "";
   const logo192 = new URL("assets/brand/fun-lazying-art-logo-192.png", window.location.href).href;
   const logo1024 = new URL("assets/brand/fun-lazying-art-logo.png", window.location.href).href;

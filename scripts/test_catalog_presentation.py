@@ -56,6 +56,23 @@ def main():
                 page.goto(origin + "/?showall#luoshenfu-original-excerpt-preview", wait_until="domcontentloaded")
                 page.wait_for_function("state.manifest?.id === 'luoshenfu-original-excerpt-preview'")
                 assert page.evaluate("playableAssets(state.manifest).filter(a=>a.type==='audio').length") == 2
+                for width, height in [(1440, 1000), (390, 844)]:
+                    page.set_viewport_size({"width": width, "height": height})
+                    for asset, title, cover, lyric_set in [
+                        ("luoshenfu-original-zh", "洛神赋·惊鸿 · A Glimpse of Grace",
+                         "luoshenfu-original-excerpt-preview-16x9.png", "zh-vocal"),
+                        ("luoshenfu-pronunciation-v2", "洛神赋·回雪 · Snow on the Wind",
+                         "luoshenfu-hui-xue-16x9.png", "pronunciation-v2"),
+                    ]:
+                        page.select_option("#vocal-language-select", asset)
+                        page.wait_for_function("expected => document.querySelector('#media-title').textContent === expected", arg=title)
+                        page.wait_for_function("document.querySelector('#cover-art').complete && document.querySelector('#cover-art').naturalWidth > 0")
+                        assert page.locator("#cover-art").get_attribute("src").endswith(cover)
+                        assert page.evaluate("state.activeLyricSetId") == lyric_set
+                        assert page.locator('meta[property="og:title"]').get_attribute("content") == title + " - Musia"
+                        assert page.evaluate("navigator.mediaSession.metadata.title") == title
+                        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
+                        page.screenshot(path=str(output / f"{asset}-{width}.png"))
                 page.goto(origin + "/#aya-chan-hikari-ame", wait_until="domcontentloaded")
                 page.wait_for_function("state.activeAssetId === 'aya-hikari-ame-ja' && document.querySelector('#media-title').textContent === state.manifest.displayTitle")
                 before = page.locator("#media-title").inner_text()
@@ -64,7 +81,7 @@ def main():
                 assert page.locator("#media-title").inner_text() == before
                 assert page.evaluate("playableAssets(state.manifest).filter(a=>a.type==='audio').length") == 3
                 assert not errors, errors
-                print("PASS: desktop/mobile titles, archive list, same-language take hiding, multilingual title stability")
+                print("PASS: desktop/mobile titles/covers, named archived recordings, lyric-set identity, lock-screen metadata, multilingual title stability")
             finally:
                 browser.close()
     finally:
