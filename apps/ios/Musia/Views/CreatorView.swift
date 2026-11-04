@@ -49,16 +49,149 @@ struct CreatorView: View {
     @State private var confirmCancel: CreatorJob?
     @State private var renderExpanded = false
     @State private var jobsExpanded = false
+    @State private var contextOpen = false
 
     var body: some View {
-        Form {
-            Section {
-                Picker("Workspace", selection: $mode) {
-                    Text("Agent").tag("Agent")
-                    Text("Studio").tag("Studio")
-                }.pickerStyle(.segmented).accessibilityIdentifier("creator.workspace")
-                CreatorAccountLink()
+        Group {
+            if mode == "Agent" { chatWorkspace }
+            else { editor }
+        }
+        .navigationTitle(mode == "Agent" ? "Musia" : "Song details")
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                Button { mode = mode == "Agent" ? "Studio" : "Agent" } label: {
+                    Label(mode == "Agent" ? "Song details" : "Chat", systemImage: mode == "Agent" ? "slider.horizontal.3" : "bubble.left.and.bubble.right")
+                }.accessibilityIdentifier("creator.workspace")
             }
+            ToolbarItem(placement: .automatic) { CreatorAccountLink() }
+        }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            if mode == "Agent" { composer }
+        }
+        .task(id: creator.identity) {
+            await creator.refreshJobs()
+            while !Task.isCancelled {
+                do { try await Task.sleep(nanoseconds: 15_000_000_000) } catch { return }
+                if scenePhase == .active && creator.account != nil { await creator.refreshJobs() }
+            }
+        }
+        .onChange(of: scenePhase) { _, phase in if phase == .active { Task { await creator.refresh() } } }
+        .onChange(of: creator.identity) { _, _ in
+            rights = false; mode = "Agent"; renderExpanded = false; jobsExpanded = false
+        }
+        .onChange(of: creator.brief) { _, _ in rights = false }
+        .sheet(isPresented: $contextOpen) {
+            NavigationStack {
+                Form { contextControls }
+                    .navigationTitle("Song reference")
+                    .toolbar { Button("Done") { contextOpen = false } }
+            }
+        }
+        .sheet(isPresented: $confirmRender) {
+            NavigationStack {
+                Form {
+                    Section(creator.brief.title) {
+                        Text("\(creator.brief.duration) seconds · 1 render")
+                        Picker("Visibility", selection: $visibility) {
+                            Text("Only me").tag(CreatorVisibility.private)
+                            Text("Public after review").tag(CreatorVisibility.public)
+                        }
+                        Toggle("I have permission to use these lyrics, music and any voice likeness.", isOn: $rights)
+                        Button("Generate song", systemImage: "waveform.badge.plus") {
+                            confirmRender = false
+                            Task { if rights { await creator.render(visibility: visibility) } }
+                        }.buttonStyle(.borderedProminent)
+                            .disabled(!rights || !creator.canRender || creator.busy || !creator.brief.isRenderable)
+                        if !creator.canRender { Text(renderAvailability).font(.footnote) }
+                    }
+                }.navigationTitle("Create this song")
+                    .toolbar { Button("Cancel") { confirmRender = false } }
+            }
+        }
+        .confirmationDialog("Cancel this queued render?", isPresented: Binding(get: { confirmCancel != nil }, set: { if !$0 { confirmCancel = nil } }), titleVisibility: .visible) {
+            Button("Cancel render", role: .destructive) {
+                if let job = confirmCancel { Task { await creator.cancel(job) } }; confirmCancel = nil
+            }
+        }
+    }
+
+    private var chatWorkspace: some View {
+        ScrollViewReader { scroll in
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 26) {
+                    if creator.conversation.isEmpty {
+                        VStack(alignment: .leading, spacing: 14) {
+                            Image(systemName: "waveform").font(.system(size: 32)).foregroundStyle(Palette.coral)
+                            Text("What shall we make?").font(.title2.weight(.semibold))
+                        }.padding(.top, 36).padding(.bottom, 20)
+                    }
+                    ForEach(Array(creator.conversation.enumerated()), id: \.offset) { _, item in
+                        let user = item.role == "user"
+                        HStack(alignment: .top, spacing: 14) {
+                            if user { Spacer(minLength: 32) }
+                            Text(item.content).font(.system(size: 18)).lineSpacing(5)
+                                .textSelection(.enabled).fixedSize(horizontal: false, vertical: true)
+                                .padding(user ? 14 : 0)
+                                .background(user ? Palette.coral.opacity(0.10) : Color.clear, in: RoundedRectangle(cornerRadius: 8))
+                            if !user { Spacer(minLength: 12) }
+                        }.accessibilityLabel("\(user ? "You" : "Musia"): \(item.content)")
+                    }
+                    if creator.agentBusy {
+                        HStack(spacing: 10) { ProgressView(); Text("Musia is working…").foregroundStyle(.secondary) }
+                            .accessibilityIdentifier("creator.working")
+                    }
+                    if let notice = creator.notice {
+                        Label(notice, systemImage: "info.circle").font(.footnote).foregroundStyle(.secondary)
+                    }
+                    if creator.brief.isRenderable && !creator.agentBusy {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(creator.brief.title).font(.headline)
+                            HStack {
+                                Button("Generate song", systemImage: "waveform.badge.plus") { rights = false; confirmRender = true }
+                                    .buttonStyle(.borderedProminent).disabled(creator.busy)
+                                    .accessibilityIdentifier("creator.render")
+                                Button("Edit", systemImage: "pencil") { mode = "Studio" }
+                            }
+                        }.padding(.vertical, 8)
+                    }
+                    if let pending = creator.pending {
+                        Button("Reconnect: \(pending.request.brief.title)", systemImage: "arrow.clockwise") {
+                            Task { await creator.reconnectRender() }
+                        }.disabled(creator.busy)
+                    }
+                    ForEach(creator.jobs) { job in
+                        VStack(alignment: .leading, spacing: 6) {
+                            Label(job.title ?? "Song", systemImage: job.status == "ready" ? "music.note" : "clock")
+                            Text(job.status.replacingOccurrences(of: "_", with: " ").capitalized).font(.footnote).foregroundStyle(.secondary)
+                            if let songID = job.songId { NavigationLink("Listen") { CreatorSongView(songID: songID) } }
+                        }
+                    }
+                    Color.clear.frame(height: 1).id("chat-end")
+                }.frame(maxWidth: 760).padding(20).frame(maxWidth: .infinity)
+            }
+            .onChange(of: creator.conversation.count) { _, _ in withAnimation { scroll.scrollTo("chat-end", anchor: .bottom) } }
+            .onChange(of: creator.agentBusy) { _, _ in withAnimation { scroll.scrollTo("chat-end", anchor: .bottom) } }
+        }
+    }
+
+    private var contextControls: some View {
+        Section {
+            Picker("Focus", selection: $creator.agentFocus) {
+                Text("Create").tag("create"); Text("Analyze").tag("analyze"); Text("Learn").tag("learn")
+            }.pickerStyle(.segmented)
+            Picker("Song", selection: $creator.referenceKey) {
+                Text("No song selected").tag("")
+                ForEach(creator.referenceCatalog) { Text($0.title).tag("catalog:" + $0.id) }
+                ForEach(creator.jobs.filter { $0.status == "ready" }) { Text($0.title ?? "My song").tag("created:" + $0.id) }
+            }
+            if !creator.referenceKey.isEmpty {
+                Stepper("From: \(Int(creator.referencePosition)) seconds", value: $creator.referencePosition, in: 0...21600, step: 5)
+            }
+        }.disabled(creator.busy)
+    }
+
+    private var editor: some View {
+        Form {
             CreatorNotice()
             if let pending = creator.pending {
                 Section("Render awaiting confirmation") {
@@ -70,52 +203,6 @@ struct CreatorView: View {
                     }.disabled(creator.busy)
                 }
             }
-            if mode == "Agent" {
-            if creator.supportsSongContext {
-                Section {
-                    Picker("Chat focus", selection: $creator.agentFocus) {
-                        Text("Create").tag("create")
-                        Text("Analyze").tag("analyze")
-                        Text("Learn").tag("learn")
-                    }.pickerStyle(.segmented).accessibilityIdentifier("creator.focus")
-                    Picker("Song", selection: $creator.referenceKey) {
-                        Text("No song selected").tag("")
-                        ForEach(creator.referenceCatalog) { item in
-                            Text(item.title).tag("catalog:" + item.id)
-                        }
-                        ForEach(creator.jobs.filter { $0.status == "ready" }) { job in
-                            Text(job.title ?? "My song").tag("created:" + job.id)
-                        }
-                    }
-                    if !creator.referenceKey.isEmpty {
-                        Stepper("From: \(Int(creator.referencePosition)) seconds", value: $creator.referencePosition, in: 0...21600, step: 5)
-                    }
-                }.disabled(creator.busy)
-            }
-            Section("Agent") {
-                if creator.conversation.isEmpty {
-                    Text("What would you like to make?").font(.title3.weight(.semibold))
-                }
-                ForEach(Array(creator.conversation.enumerated()), id: \.offset) { _, item in
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text(item.role == "user" ? "You" : "Musia").font(.caption.weight(.semibold)).foregroundStyle(item.role == "user" ? Palette.ink : Palette.teal)
-                        Text(item.content).textSelection(.enabled).frame(maxWidth: .infinity, alignment: .leading)
-                    }.padding(.vertical, 6)
-                }
-                if creator.account != nil && creator.capabilities?.agent != true {
-                    Text("The assistant is currently unavailable. You can still edit your brief.").font(.caption).foregroundStyle(.secondary)
-                }
-            }
-            if !creator.brief.title.isEmpty || !creator.brief.lyrics.isEmpty {
-                Section {
-                    DisclosureGroup(creator.brief.title.isEmpty ? "Current draft" : creator.brief.title) {
-                        Text(creator.brief.lyrics).textSelection(.enabled)
-                        Text(creator.brief.caption).font(.caption).foregroundStyle(.secondary)
-                        Button("Open Studio", systemImage: "slider.horizontal.3") { mode = "Studio" }
-                    }
-                }
-            }
-            } else {
             Section("Song brief") {
                 CreatorTextField(title: "Title", text: $creator.brief.title)
                 CreatorTextField(title: "Idea", text: $creator.brief.idea, lines: 2...5)
@@ -133,23 +220,14 @@ struct CreatorView: View {
                 Stepper("Tempo: \(creator.brief.bpm) BPM", value: $creator.brief.bpm, in: 40...200)
                 CreatorTextField(title: "Musical key", text: $creator.brief.key)
             }.disabled(creator.busy && !creator.agentBusy)
-            }
             Section {
               DisclosureGroup("Create your song", isExpanded: $renderExpanded) {
                 if let account = creator.account {
                     LabeledContent("Remaining this period", value: "\(account.usage.remaining) of \(account.usage.limit)")
                 }
-                Picker("Song visibility", selection: $visibility) {
-                    Text("Private").tag(CreatorVisibility.private)
-                    Text("Public · reviewed before sharing").tag(CreatorVisibility.public)
-                }
-                Toggle("I own or have permission to use the lyrics, music, and any voice likeness in this brief.", isOn: $rights)
-                    .fixedSize(horizontal: false, vertical: true)
-                Text("Rendering uses your server allowance. The assistant never starts a render for you. Public songs enter moderation.")
-                    .font(.caption).foregroundStyle(.secondary)
-                Button("Review and render", systemImage: "waveform.badge.plus") { confirmRender = true }
+                Button("Generate song", systemImage: "waveform.badge.plus") { rights = false; confirmRender = true }
                     .buttonStyle(.borderedProminent)
-                    .disabled(!rights || !creator.brief.isRenderable || !creator.canRender || creator.busy)
+                    .disabled(!creator.brief.isRenderable || creator.busy)
                     .accessibilityIdentifier("creator.render")
                 if !creator.canRender {
                     Text(renderAvailability).font(.caption).foregroundStyle(.secondary)
@@ -179,28 +257,6 @@ struct CreatorView: View {
             }
         }
         .formStyle(.grouped)
-        .navigationTitle("Create")
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            if mode == "Agent" { composer }
-        }
-        .overlay(alignment: .top) { if creator.busy { ProgressView("Working…").padding(10).background(.regularMaterial, in: Capsule()) } }
-        .task(id: creator.identity) { await creator.refreshJobs() }
-        .onChange(of: scenePhase) { _, phase in if phase == .active { Task { await creator.refresh() } } }
-        .onChange(of: creator.identity) { _, _ in
-            rights = false; mode = "Agent"; renderExpanded = false; jobsExpanded = false
-        }
-        .onChange(of: creator.brief) { _, _ in rights = false }
-        .confirmationDialog("Render this song?", isPresented: $confirmRender, titleVisibility: .visible) {
-            Button("Render song") { Task { if rights { await creator.render(visibility: visibility) } } }
-            Button("Keep editing", role: .cancel) {}
-        } message: {
-            Text("\(creator.brief.title) · \(creator.brief.duration) seconds · \(visibility.rawValue). This sends the brief to Musia and uses your render allowance.")
-        }
-        .confirmationDialog("Cancel this queued render?", isPresented: Binding(get: { confirmCancel != nil }, set: { if !$0 { confirmCancel = nil } }), titleVisibility: .visible) {
-            Button("Cancel render", role: .destructive) {
-                if let job = confirmCancel { Task { await creator.cancel(job) } }; confirmCancel = nil
-            }
-        }
     }
     private var composer: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -209,19 +265,23 @@ struct CreatorView: View {
                     .font(.subheadline)
             }
             HStack(alignment: .bottom, spacing: 12) {
+                if creator.supportsSongContext {
+                    Button { contextOpen = true } label: { Image(systemName: "plus").frame(width: 32, height: 40) }
+                        .accessibilityLabel("Song reference and focus")
+                }
                 TextField("Message Musia", text: $creator.agentInput, axis: .vertical)
-                    .lineLimit(1...5).textFieldStyle(.roundedBorder)
+                    .lineLimit(1...6).textFieldStyle(.plain).font(.system(size: 18)).padding(.vertical, 10)
                     .accessibilityLabel("Message Musia")
                 Button {
                     let input = creator.agentInput
                     Task { await creator.askAgent(input) }
                 } label: {
-                    Image(systemName: "arrow.up").frame(width: 28, height: 32)
+                    Image(systemName: "arrow.up").font(.headline).frame(width: 28, height: 32)
                 }
                 .buttonStyle(.borderedProminent).accessibilityLabel("Send")
                 .disabled(creator.busy || creator.account == nil || creator.capabilities?.agent != true || creator.agentInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-            }
-        }.padding(16).frame(maxWidth: .infinity).background(.regularMaterial)
+            }.padding(10).background(Palette.coral.opacity(0.06), in: RoundedRectangle(cornerRadius: 8))
+        }.padding(.horizontal, 16).padding(.vertical, 10).frame(maxWidth: 800).frame(maxWidth: .infinity).background(.regularMaterial)
     }
     private var renderAvailability: String {
         if creator.account == nil { return "Sign in from Account & subscriptions to render." }

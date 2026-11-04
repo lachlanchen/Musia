@@ -1,6 +1,8 @@
 """Native/auth/billing contracts using isolated storage and explicit provider doubles."""
 
 from dataclasses import replace
+import fcntl
+import os
 from pathlib import Path
 import secrets
 import tempfile
@@ -26,6 +28,30 @@ class NativeTests(unittest.TestCase):
 
     def tearDown(self):
         self.temp.cleanup()
+
+    def test_generation_requires_live_owned_queue_when_configured(self):
+        class Auth:
+            def providers(self): return {"password": True}
+        cfg = Settings(origin="https://musia.example.test", directory=self.store.directory,
+                       generation_enabled=True, require_generation_queue=True)
+        path = self.store.directory / "supervisor-daemon.lock"
+        with TestClient(create_app(cfg, store=self.store, auth=Auth()), base_url=cfg.origin) as client:
+            def available(): return client.get("/creator/api/capabilities").json()["generation"]
+            self.assertFalse(available())
+            fd = os.open(path, os.O_CREAT | os.O_RDWR, 0o600)
+            try:
+                self.assertFalse(available())
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                self.assertTrue(available())
+                os.chmod(path, 0o644)
+                self.assertFalse(available())
+                os.chmod(path, 0o600)
+                fcntl.flock(fd, fcntl.LOCK_UN)
+                self.assertFalse(available())
+            finally: os.close(fd)
+            inode = path.stat().st_ino
+            self.assertFalse(available())
+            self.assertEqual(path.stat().st_ino, inode)
 
     def ready(self):
         attempt = self.flow.start(self.start,"fixture")
@@ -106,6 +132,47 @@ class NativeTests(unittest.TestCase):
             self.assertIn('/creator/native-return.js',response.text)
             self.assertEqual(client.get('/creator/native-return.js').status_code,200)
             self.assertIn("no-store",response.headers['cache-control'])
+            self.assertNotIn('intent://', response.text)
+            self.assertIn('data-expires-in="600"', response.text)
+
+    def test_android_return_has_package_pinned_user_gesture_fallback(self):
+        from html.parser import HTMLParser
+        from urllib.parse import urlsplit, parse_qs
+        store = self.store
+        class Auth:
+            def providers(self): return {"password": True}
+            def complete(self, url, binding, received):
+                self.token = store.signed_in("issuer", "android-return", "Listener", "link")
+                return self.token
+        class Links(HTMLParser):
+            def __init__(self): super().__init__(); self.links = {}
+            def handle_starttag(self, tag, attrs):
+                data = dict(attrs)
+                if tag == 'a': self.links[data['id']] = data
+        auth = Auth()
+        attempt = self.flow.start(NativeStart(challenge=challenge(self.verifier), platform="android"), "fixture")
+        self.flow.browser(attempt, "binding")
+        self.clock[0] += 17
+        cfg = Settings(origin="https://musia.example.test", directory=store.directory)
+        with TestClient(create_app(cfg, store=store, auth=auth), base_url=cfg.origin) as client:
+            client.cookies.set("__Secure-musia_creator_binding", "binding")
+            response = client.get("/creator/auth/callback?code=fixture", follow_redirects=False)
+            self.assertEqual(response.status_code, 200)
+            self.assertNotIn(auth.token, response.text)
+            links = Links(); links.feed(response.text)
+            custom = links.links['native-return']
+            intent = links.links['android-return']['href']
+            self.assertEqual(custom['data-expires-in'], '583')
+            self.assertTrue(intent.endswith('#Intent;scheme=art.lazying.musia;package=art.lazying.musia;end'))
+            self.assertNotIn('browser_fallback_url', intent)
+            query = parse_qs(urlsplit(custom['href']).query)
+            self.assertEqual(set(query), {'attempt', 'code'})
+            self.assertEqual(query['attempt'], [attempt])
+            self.assertEqual(urlsplit(intent).query, urlsplit(custom['href']).query)
+            request = NativeExchange(attempt=attempt, code=query['code'][0], verifier=self.verifier, platform='android')
+            token = self.flow.exchange(request)
+            self.assertIn('token', token)
+            with self.assertRaises(CreatorError): self.flow.exchange(request)
 
 
 class BillingTests(unittest.TestCase):

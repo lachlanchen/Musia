@@ -22,6 +22,7 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
     var capabilities by mutableStateOf<CreatorCapabilities?>(null); private set
     var account by mutableStateOf<CreatorAccount?>(null); private set
     var accountEpoch by mutableStateOf(0L); private set
+    var loginCompletion by mutableStateOf(0L); private set
     var busy by mutableStateOf(false); private set
     var message by mutableStateOf<String?>(vault.warning); private set
     var brief by mutableStateOf(SongBrief()); private set
@@ -157,6 +158,7 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
                 agentMessages = CreatorRules.boundedHistory(vault.state.value.conversations[value.id].orEmpty())
                 pending = vault.state.value.renders[value.id]
                 message = "Signed in. Public listening and practice remain available to everyone."
+                loginCompletion++
                 refreshAccount(); refreshJobs(); refreshSongs(mode)
             } catch (e: Exception) { if (epoch == accountEpoch) error(e) }
             finally { exchanging = false; busy = false }
@@ -284,14 +286,18 @@ class CreatorViewModel(application: Application) : AndroidViewModel(application)
             throw e
         }
     }
+    private var jobsRefreshing = false
     fun refreshJobs() {
+        if (jobsRefreshing) return
         val captured = session ?: return
         val epoch = accountEpoch
+        jobsRefreshing = true
         viewModelScope.launch {
             try {
                 val result = CreatorApi.get<CreatorJobs>("/api/jobs", captured)
                 requireCurrent(epoch, captured); jobs = result.jobs
             } catch (e: Exception) { if (current(epoch, captured)) error(e) }
+            finally { jobsRefreshing = false }
         }
     }
     fun cancel(job: CreatorJob) = action { captured, epoch ->

@@ -12,6 +12,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -26,7 +28,14 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.delay
 
 private fun Context.activity(): Activity? = when (this) {
     is Activity -> this
@@ -60,22 +69,36 @@ private fun Context.activity(): Activity? = when (this) {
     var rights by remember(vm.accountEpoch) { mutableStateOf(false) }
     var renderExpanded by rememberSaveable(vm.accountEpoch) { mutableStateOf(false) }
     var jobsExpanded by rememberSaveable(vm.accountEpoch) { mutableStateOf(false) }
-    LaunchedEffect(vm.accountEpoch) { vm.refreshJobs() }
+    var contextOpen by rememberSaveable { mutableStateOf(false) }
+    val chatScroll = rememberLazyListState()
+    LaunchedEffect(vm.agentMessages.size, vm.agentBusy) {
+        if (!studio && chatScroll.layoutInfo.totalItemsCount > 0)
+            chatScroll.animateScrollToItem(chatScroll.layoutInfo.totalItemsCount - 1)
+    }
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
+    LaunchedEffect(vm.accountEpoch, lifecycle) {
+        lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+            while (true) {
+                if (vm.account != null) vm.refreshJobs()
+                delay(15_000)
+            }
+        }
+    }
     Column(modifier.imePadding()) {
-    LazyColumn(Modifier.weight(1f).fillMaxWidth(), contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+    LazyColumn(Modifier.weight(1f).fillMaxWidth(), state = chatScroll, contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(22.dp)) {
         item {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Text("Create", style = MaterialTheme.typography.titleLarge)
-                OutlinedButton(onClick = openAccount) { Icon(Icons.Default.AccountCircle, null); Spacer(Modifier.width(8.dp)); Text("Account") }
-            }
-            TabRow(selectedTabIndex = if (studio) 1 else 0) {
-                Tab(selected = !studio, onClick = { studio = false }, text = { Text("Agent") }, icon = { Icon(Icons.Default.ChatBubbleOutline, null) })
-                Tab(selected = studio, onClick = { studio = true }, text = { Text("Studio") }, icon = { Icon(Icons.Default.Tune, null) })
+                Text(if (studio) "Song details" else "Musia", style = MaterialTheme.typography.titleLarge,
+                    modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis)
+                IconButton(onClick = { studio = !studio }) {
+                    Icon(if (studio) Icons.Default.ChatBubbleOutline else Icons.Default.Tune, if (studio) "Chat" else "Song details")
+                }
+                IconButton(onClick = openAccount) { Icon(Icons.Default.AccountCircle, "Account") }
             }
         }
         item { CreatorNotice(vm) }
         if (!studio) {
-            if ((vm.capabilities?.agentContextVersion ?: 0) >= 1) item {
+            if (contextOpen && (vm.capabilities?.agentContextVersion ?: 0) >= 1) item {
                 var choicesOpen by remember { mutableStateOf(false) }
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -104,12 +127,37 @@ private fun Context.activity(): Activity? = when (this) {
                         modifier = Modifier.fillMaxWidth(), singleLine = true)
                 }
             }
-            if (vm.agentMessages.isEmpty()) item { Text("What would you like to make?", style = MaterialTheme.typography.titleLarge) }
+            if (vm.agentMessages.isEmpty()) item {
+                Column(Modifier.padding(top = 32.dp, bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Icon(Icons.Default.GraphicEq, null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(32.dp))
+                    Text("What shall we make?", style = MaterialTheme.typography.headlineSmall)
+                }
+            }
             items(vm.agentMessages) { entry ->
-                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text(if (entry.role == "user") "You" else "Musia", style = MaterialTheme.typography.labelLarge,
-                        color = MaterialTheme.colorScheme.primary)
-                    Text(entry.content)
+                val user = entry.role == "user"
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = if (user) Arrangement.End else Arrangement.Start) {
+                    Surface(color = if (user) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f) else Color.Transparent,
+                        shape = RoundedCornerShape(8.dp), modifier = Modifier.widthIn(max = 680.dp)) {
+                        Text(entry.content, fontSize = 18.sp, lineHeight = 28.sp,
+                            modifier = Modifier.padding(if (user) 14.dp else 0.dp))
+                    }
+                }
+            }
+            if (vm.agentBusy) item {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp)
+                    Text("Musia is working…", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
+            if (vm.brief.valid() && !vm.agentBusy) item {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(vm.brief.title, style = MaterialTheme.typography.titleMedium)
+                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        Button(onClick = { rights = false; confirm = true }, enabled = !vm.busy) {
+                            Icon(Icons.Default.MusicNote, null); Spacer(Modifier.width(8.dp)); Text("Generate song")
+                        }
+                        TextButton(onClick = { studio = true }) { Icon(Icons.Default.Edit, null); Text("Edit") }
+                    }
                 }
             }
         }
@@ -132,13 +180,13 @@ private fun Context.activity(): Activity? = when (this) {
                 BriefField("Key, for example C major or A minor", brief.key, 12, locked) { vm.edit(vm.brief.copy(key = it)) }
             }
         }
-        item {
+        if (studio) item {
             TextButton(onClick = { renderExpanded = !renderExpanded }) {
                 Icon(if (renderExpanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore, null)
                 Text("Create your song")
             }
         }
-        if (renderExpanded) item {
+        if (studio && renderExpanded) item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (vm.capabilities == null) Text("Creator availability has not been confirmed. Refresh to connect.")
                 if (vm.capabilities?.agent == false) Text("The song assistant is not connected.")
@@ -147,7 +195,7 @@ private fun Context.activity(): Activity? = when (this) {
                 OutlinedButton(onClick = { vm.refresh(); vm.refreshJobs() }) { Icon(Icons.Default.Refresh, null); Spacer(Modifier.width(8.dp)); Text("Refresh availability & jobs") }
             }
         }
-        if (renderExpanded) item {
+        if (studio && renderExpanded) item {
             val brief = vm.brief
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 if (!studio && brief.title.isNotBlank()) Text(brief.title, style = MaterialTheme.typography.titleMedium)
@@ -175,7 +223,7 @@ private fun Context.activity(): Activity? = when (this) {
                 }
             }
         } }
-        item { TextButton(onClick = { jobsExpanded = !jobsExpanded }) {
+        if (vm.jobs.isNotEmpty() || studio) item { TextButton(onClick = { jobsExpanded = !jobsExpanded }) {
             Icon(if (jobsExpanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore, null)
             Text("Your songs and jobs")
         } }
@@ -196,12 +244,17 @@ private fun Context.activity(): Activity? = when (this) {
         }
     }
     if (!studio) {
-        Surface(tonalElevation = 2.dp) {
+        Surface {
             Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (vm.account == null) TextButton(onClick = openAccount) { Text("Sign in to chat") }
                 if (!vm.brief.valid(true)) Text("Check the duration, tempo and key in Studio before sending.")
                 Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedTextField(vm.agentInput, vm::editAgentInput, Modifier.weight(1f), label = { Text("Message Musia") }, maxLines = 5)
+                    if ((vm.capabilities?.agentContextVersion ?: 0) >= 1) IconButton(onClick = { contextOpen = !contextOpen }) {
+                        Icon(Icons.Default.Add, "Song reference and focus")
+                    }
+                    TextField(vm.agentInput, vm::editAgentInput, Modifier.weight(1f), placeholder = { Text("Message Musia") }, maxLines = 6,
+                        textStyle = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp), shape = RoundedCornerShape(8.dp),
+                        colors = TextFieldDefaults.colors(focusedIndicatorColor = Color.Transparent, unfocusedIndicatorColor = Color.Transparent))
                     FilledIconButton(onClick = vm::askAgent,
                         enabled = vm.canCreate && vm.capabilities?.agent == true && vm.agentInput.isNotBlank() && vm.brief.valid(true),
                         modifier = Modifier.size(48.dp).semantics { contentDescription = "Send message" }) { Icon(Icons.Default.ArrowUpward, null) }
@@ -257,7 +310,7 @@ private fun Context.activity(): Activity? = when (this) {
         }
         if (account == null) item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("Sign in securely in your browser to create, save and comment.")
+                Text("Use your LazyingArt / EchoMind account at chat.lazying.art. Musia does not have a separate password.")
                 if (vm.capabilities?.login != true) Text("Sign-in is not currently available from the service.")
                 Button(onClick = { vm.startLogin(context) }, enabled = !vm.busy && vm.capabilities?.login == true && vm.vault.warning == null && secrets.session == null) {
                     Icon(Icons.Default.AccountCircle, null); Spacer(Modifier.width(8.dp)); Text("Sign in with browser")

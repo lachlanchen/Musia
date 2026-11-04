@@ -26,6 +26,7 @@ struct MusiaApp: App {
                 .environmentObject(creator)
                 .environmentObject(billing)
                 .task { await creator.start(player: player) }
+                .onOpenURL { creator.authentication.acceptCallback($0) }
                 .task { watch.start(player: player) }
                 .task(id: creator.identity) { billing.start(creator: creator); await billing.accountChanged() }
                 .tint(Palette.teal)

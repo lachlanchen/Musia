@@ -1,10 +1,12 @@
 """Separate creator boundary; never mounts Studio or accepts worker commands."""
 
 from dataclasses import dataclass
+import fcntl
 from html import escape
 import os
 from pathlib import Path
 import secrets
+import stat
 from urllib.parse import urlencode, urlsplit
 
 from fastapi import FastAPI, Request
@@ -28,6 +30,7 @@ class Settings:
     generation_enabled: bool = False
     invitation_required: bool = True
     auth_directory: Path | None = None
+    require_generation_queue: bool = False
 
     def __post_init__(self):
         _base_url(self.origin)
@@ -39,6 +42,7 @@ class Settings:
         return cls(origin=os.environ.get("MUSIA_CREATOR_ORIGIN", "http://127.0.0.1:8796"),
                    directory=Path(os.environ.get("MUSIA_CREATOR_DATA", str(Path.home()/".local/share/musia/creator"))),
                    generation_enabled=os.environ.get("MUSIA_CREATOR_GENERATION") == "1",
+                   require_generation_queue=True,
                    invitation_required=os.environ.get("MUSIA_CREATOR_OPEN_SIGNUP") != "1",
                    auth_directory=Path(os.environ["MUSIA_CREATOR_AUTH_DIR"]) if os.environ.get("MUSIA_CREATOR_AUTH_DIR") else None)
 
@@ -145,12 +149,34 @@ def create_app(settings=None, *, store=None, auth=None, producer=None, billing=N
     def set_cookie(response, name, token, max_age):
         response.set_cookie(name, token, max_age=max_age, secure=secure, httponly=True, samesite="lax", path="/creator")
 
+    def generation_available():
+        if not cfg.generation_enabled:
+            return False
+        if not cfg.require_generation_queue:
+            return True
+        # Observe the supervisor's existing singleton lock; never create/unlink it.
+        try:
+            fd = os.open(cfg.directory / "supervisor-daemon.lock", os.O_RDONLY | os.O_NOFOLLOW | os.O_CLOEXEC)
+            try:
+                info = os.fstat(fd)
+                if not stat.S_ISREG(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077 or info.st_nlink != 1:
+                    return False
+                try:
+                    fcntl.flock(fd, fcntl.LOCK_SH | fcntl.LOCK_NB)
+                except BlockingIOError:
+                    return True
+                return False
+            finally:
+                os.close(fd)
+        except OSError:
+            return False
+
     @app.get("/api/capabilities")
     def capabilities():
         providers = auth.providers() if auth else {}
         connected = any(value is True for value in providers.values())
         return {"version": 1, "providers": providers, "login": connected,
-                "generation": cfg.generation_enabled and connected, "agent": producer.available and connected,
+                "generation": generation_available() and connected, "agent": producer.available and connected,
                 "agentContextVersion": 1,
                 "invitationRequired": cfg.invitation_required, "salesEnabled": billing.sales_available, "termsVersion": TERMS_VERSION,
                 "plans": [{"id": k, **v, "priceStatus": "store_qualification_required"} for k, v in PLANS.items()]}
@@ -196,17 +222,30 @@ def create_app(settings=None, *, store=None, auth=None, producer=None, billing=N
         if not binding:
             raise CreatorError("sign_in_expired", 401)
         token = auth.complete(cfg.origin + "/creator/auth/callback?" + request.url.query, binding, store)
-        completion = native.finish(binding, token)
+        completion = native.finish(binding, token, return_details=True)
         if completion:
             # End the issuer's form redirect chain on HTTPS. Redirecting directly
             # to a custom scheme inherits its form-action CSP and is blocked.
-            destination = escape("art.lazying.musia://auth?" + urlencode(completion), quote=True)
+            query = urlencode({key: completion[key] for key in ("attempt", "code")})
+            destination = escape("art.lazying.musia://auth?" + query, quote=True)
+            android = ''
+            if completion['platform'] == 'android':
+                intent = escape('intent://auth?' + query + '#Intent;scheme=art.lazying.musia;'
+                                'package=art.lazying.musia;end', quote=True)
+                android = ('<a id="android-return" class="return-secondary" href="' + intent
+                           + '">Open with Android / 用 Android 打开</a>')
             response = HTMLResponse('<!doctype html><html lang="en"><head><meta charset="utf-8">'
                 '<meta name="viewport" content="width=device-width,initial-scale=1">'
                 '<title>Return to Musia</title><link rel="stylesheet" href="/creator/styles.css">'
                 '<script defer src="/creator/native-return.js"></script></head><body>'
-                '<main class="auth-return"><h1>Musia</h1><p>Sign-in complete.</p>'
-                f'<a id="native-return" href="{destination}">Return to Musia</a></main></body></html>')
+                '<main class="auth-return"><img src="/assets/brand.png" width="56" height="56" alt="">'
+                '<h1>Return to Musia</h1><p>Account verified. Finish signing in in the app.</p>'
+                '<p lang="zh-Hans">账号验证成功，请返回 Musia 完成登录。</p>'
+                f'<a id="native-return" class="primary" data-expires-in="{completion["expires_in"]}" '
+                f'href="{destination}">Open Musia / 返回 Musia</a>{android}'
+                '<p id="return-help" role="status">If the app stays closed, tap Open Musia and allow your browser to open it.</p>'
+                '<p lang="zh-Hans">若没有自动返回，请点上方按钮，并允许浏览器打开 App。</p>'
+                '</main></body></html>')
         else:
             response = RedirectResponse("/creator/", status_code=303)
         response.delete_cookie(binding_cookie, path="/creator", secure=secure, httponly=True, samesite="lax")
@@ -279,7 +318,7 @@ def create_app(settings=None, *, store=None, auth=None, producer=None, billing=N
     @app.post("/api/jobs")
     def generate(body: Generate, request: Request):
         account = owner(request)
-        if not cfg.generation_enabled:
+        if not generation_available():
             raise CreatorError("generation_not_connected", 503)
         return store.submit(account, request.headers.get("idempotency-key", ""), body, invitation_required=cfg.invitation_required)
 

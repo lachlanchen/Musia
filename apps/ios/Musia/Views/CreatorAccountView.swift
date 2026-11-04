@@ -11,6 +11,7 @@ struct CreatorLegalLinks: View {
 }
 
 struct CreatorAccountView: View {
+    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var creator: CreatorStore
     @EnvironmentObject private var billing: CreatorBillingStore
     @State private var invitation = ""
@@ -18,6 +19,7 @@ struct CreatorAccountView: View {
     @State private var confirmDelete = false
     @State private var confirmLogout = false
     @State private var confirmSync = false
+    @State private var signingInHere = false
 
     var body: some View {
         Form {
@@ -31,10 +33,13 @@ struct CreatorAccountView: View {
                     Text("Usage is provided by the Musia server.").font(.caption).foregroundStyle(.secondary)
                 } else {
                     Text("An account is optional. Sign in to create, save songs, and join the community.")
-                    Button("Sign in with your browser", systemImage: "person.crop.circle.badge.checkmark") {
+                    Button("Continue with LazyingArt", systemImage: "person.crop.circle.badge.checkmark") {
+                        signingInHere = true
                         Task { await creator.signIn() }
                     }.buttonStyle(.borderedProminent)
                         .disabled(creator.busy || creator.hasSession || creator.capabilities?.login != true)
+                    Text("Use your LazyingArt / EchoMind account at chat.lazying.art. Musia does not have a separate password.")
+                        .font(.footnote).foregroundStyle(.secondary)
                     if creator.hasSession { Text("Reconnecting your existing session. Refresh to try again.").font(.caption) }
                     else if creator.capabilities?.login != true { Text("Sign-in is unavailable. Refresh to check service status.").font(.caption) }
                 }
@@ -126,6 +131,9 @@ struct CreatorAccountView: View {
         }
         .formStyle(.grouped)
         .navigationTitle("Account & subscriptions")
+        .onChange(of: creator.account?.id) { _, account in
+            if signingInHere && account != nil { signingInHere = false; dismiss() }
+        }
         .onChange(of: creator.identity) { _, _ in invitation = ""; acceptTerms = false }
         .onChange(of: creator.capabilities?.termsVersion) { _, _ in acceptTerms = false }
         .confirmationDialog("Sign out of Musia?", isPresented: $confirmLogout, titleVisibility: .visible) {

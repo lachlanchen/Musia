@@ -157,8 +157,12 @@ final class CreatorStore: ObservableObject {
         catch { if epoch == generation { notice = error.localizedDescription } }
     }
 
+    private var jobsRefreshing = false
     func refreshJobs() async {
+        guard !jobsRefreshing else { return }
         guard let captured = try? snapshot() else { return }
+        jobsRefreshing = true
+        defer { jobsRefreshing = false }
         do {
             let result: CreatorJobs = try await api.request("/api/jobs", token: captured.token)
             try requireCurrent(captured); jobs = result.jobs

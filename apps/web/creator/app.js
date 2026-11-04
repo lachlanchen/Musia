@@ -16,7 +16,7 @@ const briefFields = ["title", "idea", "lyrics", "caption", "language", "duration
 const emptyBrief = brief();
 let messages = [], agentRequest = null, renderReview = null;
 let workspaceReady = false;
-let chatFocus = "create", contextEpoch = -1;
+let chatFocus = "create", contextEpoch = -1, contextOpen = false;
 form.inert = true;
 $("message").disabled = true;
 function workspaceKey(prefix) {
@@ -51,12 +51,17 @@ function persistConversation() {
 }
 function renderMessages() {
   $("messages").replaceChildren();
-  if (!messages.length) addMessage("What would you like to make?", "Musia");
+  if (!messages.length) {
+    const greeting = element("div", undefined, "chat-empty");
+    const mark = element("i"); mark.dataset.lucide = "audio-lines";
+    greeting.append(mark, element("h2", "What shall we make?"));
+    $("messages").append(greeting); icons();
+  }
   for (const m of messages) addMessage(m.content, m.role === "user" ? "You" : "Musia");
   requestAnimationFrame(() => { $("messages").scrollTop = $("messages").scrollHeight; });
 }
 function loadWorkspace() {
-  chatFocus = "create"; contextEpoch = -1;
+  chatFocus = "create"; contextEpoch = -1; contextOpen = false;
   $("chat-song").replaceChildren(new Option("No song selected", ""));
   $("chat-position").value = "0";
   const saved = read(workspaceKey(CHAT));
@@ -67,6 +72,7 @@ function loadWorkspace() {
   setMode("agent");
 }
 function setMode(mode, focus = false) {
+  document.body.dataset.mode = mode;
   for (const button of document.querySelectorAll("[data-mode]")) {
     const selected = button.dataset.mode === mode;
     button.setAttribute("aria-selected", String(selected));
@@ -75,6 +81,9 @@ function setMode(mode, focus = false) {
   }
   $("agent-panel").hidden = mode !== "agent";
   $("studio-panel").hidden = mode !== "studio";
+  $("generation-panel").hidden = mode !== "studio";
+  if (mode === "agent") $("agent-panel").insertBefore($("jobs-panel"), $("chat-form"));
+  else $("create-view").append($("jobs-panel"));
 }
 function read(key) {
   try {
@@ -206,7 +215,13 @@ function authRequired() {
   return true;
 }
 function refreshControls() {
-  $("chat-tools").hidden = !(capabilities?.agentContextVersion >= 1);
+  $("chat-tools").hidden = !(contextOpen && capabilities?.agentContextVersion >= 1);
+  $("context-button").hidden = !(capabilities?.agentContextVersion >= 1);
+  $("context-button").setAttribute("aria-expanded", String(contextOpen));
+  $("draft-action").hidden = !validBrief(brief()) || !!agentRequest;
+  $("chat-draft-title").textContent = brief().title;
+  $("chat-generate").disabled = busy || !capabilities?.generation;
+  $("working").hidden = !agentRequest;
   for (const button of document.querySelectorAll("[data-focus]")) {
     button.setAttribute("aria-pressed", String(button.dataset.focus === chatFocus));
     button.disabled = busy;
@@ -236,7 +251,10 @@ function refreshControls() {
 async function refreshAccount() {
   const data = await api("/api/me");
   const changed = account?.id !== data.account?.id;
-  if (changed) { accountEpoch++; busy = false; agentRequest = null; renderReview = null; $("render-dialog").close(); }
+  if (changed) {
+    accountEpoch++; busy = false; agentRequest = null; renderReview = null;
+    $("render-dialog").close(); $("jobs").replaceChildren(); $("jobs-panel").hidden = true;
+  }
   account = data.account;
   if (changed) loadWorkspace();
   workspaceReady = true;
@@ -284,7 +302,7 @@ function openAccount() {
     root.append(
       element(
         "p",
-        "Use your LazyingArt account. Your existing music stays available without signing in.",
+        "Use your LazyingArt / EchoMind account at chat.lazying.art. Musia does not have a separate password.",
       ),
     );
     const b = button("Continue with LazyingArt", "log-in", login, "primary");
@@ -358,6 +376,7 @@ function openAccount() {
         song = null;
         loadWorkspace();
         $("jobs").replaceChildren();
+        $("jobs-panel").hidden = true;
         $("songs").replaceChildren();
         $("song-detail").replaceChildren();
         $("account-dialog").close();
@@ -457,6 +476,14 @@ $("chat-form").onsubmit = (e) => {
   });
 };
 $("message").addEventListener("input", () => { persistConversation(); refreshControls(); });
+$("message").addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && !event.shiftKey && !event.isComposing &&
+      matchMedia("(pointer:fine)").matches && !$("send").disabled) {
+    event.preventDefault(); $("chat-form").requestSubmit();
+  }
+});
+$("context-button").onclick = () => { contextOpen = !contextOpen; refreshControls(); };
+$("chat-generate").onclick = () => $("generate").click();
 form.addEventListener("input", (event) => {
   if (briefFields.includes(event.target.name)) agentRequest?.edited.add(event.target.name);
   save(workspaceKey(DRAFT), brief());
@@ -511,6 +538,7 @@ async function submitRender() {
       localStorage.removeItem(PENDING);
       notice("Render queued for safety review.");
       await refreshJobs();
+      $("jobs-panel").open = true;
       await refreshAccount();
     } catch (error) {
       if (epoch !== accountEpoch) return;
@@ -523,7 +551,10 @@ async function submitRender() {
 }
 async function refreshJobs() {
   if (!account) return;
+  const epoch = accountEpoch;
   const data = await api("/api/jobs");
+  if (epoch !== accountEpoch) return;
+  $("jobs-panel").hidden = !data.jobs.length;
   const root = $("jobs");
   root.replaceChildren();
   if (!data.jobs.length) root.append(element("p", "No renders yet.", "muted"));
@@ -577,6 +608,7 @@ function closeSong() {
 
 async function showTab(next) {
   tab = next;
+  document.body.dataset.view = next;
   libraryRequest++;
   closeSong();
   document.querySelectorAll("[data-tab]").forEach((b) => {
@@ -848,6 +880,17 @@ async function start() {
   icons();
 }
 guard(start);
+// Only poll while this page is visible; one request chain at a time.
+async function pollJobs() {
+  try {
+    if (account && !document.hidden) {
+      capabilities = await api("/api/capabilities");
+      await refreshJobs(); refreshControls();
+    }
+  } catch { /* Preserve the last status during a transient network failure. */ }
+  finally { setTimeout(pollJobs, 15000); }
+}
+setTimeout(pollJobs, 15000);
 for (const button of document.querySelectorAll("[data-mode]")) {
   button.onclick = () => setMode(button.dataset.mode);
   button.onkeydown = (event) => {

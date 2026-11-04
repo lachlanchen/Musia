@@ -54,7 +54,7 @@ class NativeFlow:
                               (digest(binding), attempt, self.store.now())).rowcount:
                 raise CreatorError("sign_in_expired", 401)
 
-    def finish(self, binding, token):
+    def finish(self, binding, token, *, return_details=False):
         expired = False
         with self.store.db() as db:
             row = db.execute("SELECT * FROM native_flows WHERE binding=?", (digest(binding),)).fetchone()
@@ -67,7 +67,10 @@ class NativeFlow:
                 code = secrets.token_urlsafe(32)
                 db.execute("UPDATE native_flows SET state='complete',code=?,session_hash=? WHERE id=?",
                            (digest(code), digest(token), row["id"]))
-                return {"attempt": row["id"], "code": code}
+                result = {"attempt": row["id"], "code": code}
+                if return_details:
+                    result.update(platform=row["platform"], expires_in=row["expires"] - self.store.now())
+                return result
         if expired:
             raise CreatorError("sign_in_expired", 401)
 

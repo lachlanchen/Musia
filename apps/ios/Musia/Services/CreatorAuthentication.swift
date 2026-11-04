@@ -75,6 +75,7 @@ final class CreatorAuthentication {
     private var session: ASWebAuthenticationSession?
     private var context: CreatorAuthContext?
     private var continuation: CheckedContinuation<URL, Error>?
+    private var deadline: Task<Void, Never>?
     private var operation = UUID()
 
     func signIn(api: CreatorAPI) async throws -> NativeAuthToken {
@@ -96,12 +97,21 @@ final class CreatorAuthentication {
         defer {
             if operation == self.operation {
                 try? CreatorKeychain.remove("auth-attempt")
+                deadline?.cancel(); deadline = nil
                 session = nil; context = nil
             }
         }
         let callback = try await withTaskCancellationHandler {
             try await withCheckedThrowingContinuation { continuation in
                 self.continuation = continuation
+                self.deadline = Task { [weak self] in
+                    do { try await Task.sleep(nanoseconds: UInt64(start.expiresIn * 1_000_000_000)) }
+                    catch { return }
+                    guard let self, operation == self.operation else { return }
+                    let waiting = self.continuation; self.continuation = nil
+                    self.session?.cancel()
+                    waiting?.resume(throwing: CreatorError.unavailable("Sign-in expired. Return to Musia and try again."))
+                }
                 let auth = ASWebAuthenticationSession(url: start.url, callbackURLScheme: "art.lazying.musia") { [weak self] url, error in
                     Task { @MainActor in
                         guard let self, operation == self.operation else { return }
@@ -128,8 +138,22 @@ final class CreatorAuthentication {
         guard operation == self.operation, !token.token.isEmpty, token.expiresIn > 0 else { throw CreatorError.invalidCallback }
         return token
     }
+    /// Some browsers deliver a user-tapped return through the app's URL handler.
+    /// Accept only the still-active, locally bound attempt; never generic success.
+    @discardableResult
+    func acceptCallback(_ url: URL) -> Bool {
+        guard continuation != nil,
+              let saved = try? CreatorKeychain.read(NativeAuthAttempt.self, key: "auth-attempt"),
+              (try? saved.code(from: url)) != nil else { return false }
+        let waiting = continuation; continuation = nil
+        deadline?.cancel(); deadline = nil
+        session?.cancel()
+        waiting?.resume(returning: url)
+        return true
+    }
     func cancel() {
         operation = UUID()
+        deadline?.cancel(); deadline = nil
         let waiting = continuation; continuation = nil
         session?.cancel(); session = nil; context = nil
         try? CreatorKeychain.remove("auth-attempt")

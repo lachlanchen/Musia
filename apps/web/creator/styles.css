@@ -8,15 +8,15 @@
     "Segoe UI",
     sans-serif;
   color: #202a2b;
-  background: #f7faf9;
+  background: #fff;
   font-size: 17px;
   line-height: 1.5;
   font-synthesis: none;
   letter-spacing: 0;
-  --teal: #087f78;
-  --coral: #d84f48;
-  --line: #dce6e2;
-  --muted: #566967;
+  --teal: #176c89;
+  --coral: #c83950;
+  --line: #e2e7eb;
+  --muted: #5e6875;
 }
 * {
   box-sizing: border-box;
@@ -320,15 +320,17 @@ input[type="checkbox"] {
   font-weight: 400;
 }
 .primary {
-  background: var(--teal);
+  background: var(--coral);
   color: white;
-  border-color: var(--teal);
+  border-color: var(--coral);
   font-weight: 600;
 }
 .primary:hover {
-  background: #056b64;
+  background: #a82a40;
   color: white;
 }
+
+
 .icon {
   width: 44px;
   flex-shrink: 0;
@@ -671,4 +673,83 @@ textarea {
   .song-row {
     gap: 12px;
   }
+}
+
+/* Chat owns the available viewport; only its message history scrolls. */
+body[data-view="create"][data-mode="agent"] { height: 100dvh; overflow: hidden; }
+body[data-view="create"][data-mode="agent"] .workspace { height: calc(100dvh - 64px); }
+.header { height: 64px; padding: 0 22px; }
+.brand { font-size: 24px; }
+.brand img { width: 36px; height: 36px; }
+.header-divider, .header > span, #plans-button span { display: none; }
+.sidebar { min-height: 0; background: #f5f9fc; }
+.sidebar [aria-current="page"] { background: #e1eff8 !important; color: #215b78 !important; }
+body[data-view="create"][data-mode="agent"] main {
+  display: flex; flex-direction: column; min-height: 0; padding: 18px 28px 0;
+}
+body[data-mode="agent"] #create-view {
+  flex: 1; display: flex; flex-direction: column; min-height: 0; width: 100%; max-width: 900px;
+}
+body[data-mode="agent"] .section-heading { margin-bottom: 8px; }
+body[data-mode="agent"] .section-heading h1 { font-size: 21px; }
+body[data-mode="agent"] .status { border: 0; font-size: 12px; }
+.creator-modes { margin-bottom: 4px; gap: 16px; }
+.creator-modes button { padding: 8px 2px; min-height: 40px; font-size: 14px; }
+.creator-modes [aria-selected="true"] { color: var(--coral); border-bottom-color: var(--coral); }
+body[data-mode="agent"] .creator-grid { flex: 1; min-height: 0; border: 0; }
+body[data-mode="agent"] .conversation { height: 100%; min-height: 0; padding: 0; }
+body[data-mode="agent"] #messages { min-height: 80px; padding: 24px 6px 12px; overscroll-behavior: contain; }
+.agent-message, .user-message { border: 0; padding: 0; margin: 0 0 26px; font-size: 18px; line-height: 1.75; }
+.agent-message { padding-right: 16px; }
+.user-message { margin-left: auto; width: fit-content; max-width: 88%; background: #fff0f1; border-radius: 8px; padding: 10px 16px; }
+.speaker { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.chat-empty { padding: 44px 0; }
+.chat-empty .lucide { width: 34px; height: 34px; color: var(--coral); margin-bottom: 16px; }
+.chat-empty h2 { font-size: 27px; font-weight: 600; }
+.composer { flex-shrink: 0; margin: 8px 0 12px; padding: 10px 12px; border: 1px solid #d4dee6; border-radius: 8px; background: #f7fafc; box-shadow: 0 3px 14px #20476308; }
+.composer:focus-within { border-color: #91b5ce; }
+.composer > label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.composer textarea { border: 0; background: transparent; margin: 0; padding: 6px 4px; font-size: 18px; line-height: 1.5; min-height: 54px; max-height: 180px; resize: none; }
+.composer textarea:focus-visible { outline: none; }
+.composer > div { margin-top: 2px; }
+.composer #chat-status { margin-right: auto; font-size: 12px; }
+#context-button { border: 0; background: transparent; }
+#send { border-radius: 50%; width: 42px; min-height: 42px; }
+#working { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); padding: 8px 4px; }
+.working-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); animation: working-pulse 1.5s ease-in-out infinite; }
+@keyframes working-pulse { 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .working-dot { animation: none; } }
+#draft-action { display: flex; align-items: center; gap: 12px; padding: 8px 4px; border-top: 1px solid var(--line); }
+#chat-draft-title { flex: 1; min-width: 0; font-size: 15px; overflow-wrap: anywhere; }
+#chat-generate { font-size: 14px; flex-shrink: 0; }
+.chat-tools { max-height: 38dvh; overflow: auto; padding: 12px 4px; }
+.chat-reference label { margin-bottom: 4px; }
+.jobs-section { padding: 0; flex-shrink: 0; max-height: 30dvh; overflow: auto; }
+.jobs-section summary { padding: 8px 0 12px; color: var(--muted); }
+.jobs-section .section-heading { padding-top: 10px; }
+#notice { max-height: 22dvh; overflow: auto; flex-shrink: 0; margin-bottom: 8px; font-size: 14px; }
+.auth-return { width: min(480px, 100%); margin: 12dvh auto; padding: 28px; }
+.auth-return h1 { margin-top: 20px; }
+.auth-return a { justify-content: center; padding: 12px 18px; border-radius: 8px; text-decoration: none; width: 100%; margin-top: 12px; }
+.auth-return .primary { color: white; }
+.return-secondary { border: 1px solid var(--line); }
+.auth-return p { color: var(--muted); }
+.auth-return a[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+@media (max-width: 600px) {
+  .header { height: 60px; padding: 0 14px; }
+  body[data-view="create"][data-mode="agent"] .workspace { height: calc(100dvh - 60px); display: flex; flex-direction: column; }
+  .sidebar { padding: 4px 8px; flex-shrink: 0; }
+  .sidebar nav { gap: 1px; }
+  .sidebar nav button, .sidebar nav a { padding: 8px; font-size: 13px; }
+  .sidebar nav .lucide { width: 16px; }
+  .allowance { display: none; }
+  body[data-view="create"][data-mode="agent"] main { flex: 1; padding: 8px 14px 0; }
+  body[data-mode="agent"] .section-heading { display: none; }
+  .creator-modes { justify-content: space-between; }
+  .composer { margin-bottom: max(8px, env(safe-area-inset-bottom)); }
+  .composer textarea { font-size: 17px; }
+  .chat-empty { padding: 30px 0; }
+  .chat-empty h2 { font-size: 24px; }
+  #chat-generate { padding: 8px; }
+  #draft-action { gap: 8px; }
 }

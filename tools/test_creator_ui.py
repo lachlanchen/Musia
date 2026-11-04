@@ -29,10 +29,14 @@ async def main():
             for width, height in ((1440,1000),(768,1024),(390,844),(320,740)):
                 await page.set_viewport_size({"width":width,"height":height})
                 await page.goto(args.origin+"/creator/")
-                await page.get_by_text("Creator preview · service not connected",exact=True).wait_for()
+                await page.get_by_text("Creator preview · service not connected",exact=True).wait_for(state="attached")
                 assert await page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Overflow at {width}"
                 assert await page.locator("#generate").is_disabled()
                 assert await page.locator("#agent-panel").is_visible()
+                assert await page.locator("#chat-tools").is_hidden()
+                assert await page.locator("#send svg").count() == 1, "Composer icon asset must render"
+                composer = await page.locator("#chat-form").bounding_box()
+                assert composer and composer['y'] + composer['height'] <= height + 1, f'Composer below viewport at {width}'
                 await page.locator("#studio-tab").click()
                 await page.locator('[name="title"]').fill("A gentle morning")
                 await page.reload()
@@ -48,6 +52,7 @@ async def main():
                 await page.get_by_text("No community songs have been published yet.").wait_for()
             # Simulate identity/agent only at Playwright network boundary, never the server.
             requests = []
+            jobs = []
             agent_requests = []
             fail_agent = False
             track = {"id":"a"*32,"title":"Playback fixture","author":{"id":"fixture-owner","name":"UI fixture"},
@@ -72,8 +77,9 @@ async def main():
                     if handle.request.method == "POST":
                         requests.append(handle.request.post_data_json)
                         value={"id":"fixture-job","state":"queued"}
+                        jobs.append({**value,"brief":handle.request.post_data_json["brief"]})
                     else:
-                        value={"jobs":[]}
+                        value={"jobs":jobs}
                 elif path == "/api/agent":
                     agent_requests.append(handle.request.post_data_json)
                     await asyncio.sleep(0.3)
@@ -120,6 +126,7 @@ async def main():
             assert await page.locator(".user-message").count() == 2
             assert await page.locator('[name="title"]').input_value() == "Edited while thinking"
             # Learning is read-only, even if a defective provider attempts to overwrite the draft.
+            await page.locator('#context-button').click()
             await page.locator('[data-focus="learn"]').click()
             await page.locator('#chat-song option[value="first-pulse"]').wait_for(state="attached")
             await page.locator('#chat-song').select_option('first-pulse')
@@ -133,10 +140,13 @@ async def main():
             assert await page.locator('[name="title"]').input_value() == 'Edited while thinking'
             assert await page.locator('[name="lyrics"]').input_value() == before
             assert requests == []
+            await page.locator('#context-button').click()
             for width, height in ((1440,1000),(390,844),(320,740)):
                 await page.set_viewport_size({'width':width,'height':height})
                 assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'Signed-in overflow at {width}'
                 assert await page.locator('#messages').evaluate('(node) => node.clientHeight >= 180'), f'Conversation collapsed at {width}'
+                composer = await page.locator('#chat-form').bounding_box()
+                assert composer['y'] + composer['height'] <= height + 1, f'Composer below viewport at {width}'
                 await page.screenshot(path=str(args.evidence/f'creator-learn-{width}.png'),full_page=True)
             fail_agent = True
             await page.locator('#message').fill('Can you explain it once more?')
@@ -145,13 +155,20 @@ async def main():
             assert await page.locator('[name="lyrics"]').input_value() == before
             fail_agent = False
             await page.set_viewport_size({'width':1440,'height':1000})
-            await page.locator("#generate").click()
+            await page.locator("#chat-generate").click()
             assert requests == [], "Opening confirmation must not render"
             await page.locator("#rights").check()
             await page.locator("#confirm-render").click()
             await page.get_by_text("Render queued for safety review.",exact=True).wait_for()
             assert len(requests) == 1 and requests[0]["visibility"] == "private"
+            await page.get_by_text("Queued · input safety review",exact=True).wait_for()
             await page.screenshot(path=str(args.evidence/"creator-fixture-signed-in.png"),full_page=True)
+            await page.set_viewport_size({'width':390,'height':844})
+            composer = await page.locator('#chat-form').bounding_box()
+            assert composer['y'] + composer['height'] <= 845
+            assert composer['y'] + composer['height'] >= 820, "Jobs must not push composer above the screen bottom"
+            assert await page.locator('#messages').evaluate('(node) => node.clientHeight >= 120')
+            await page.screenshot(path=str(args.evidence/"creator-job-390.png"),full_page=True)
             await page.locator('[data-tab="public"]').click()
             await page.get_by_role("button",name="Play",exact=True).click()
             await page.locator("#song-detail audio").wait_for()

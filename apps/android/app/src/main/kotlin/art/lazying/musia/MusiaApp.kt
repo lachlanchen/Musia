@@ -63,6 +63,9 @@ private val destinations = listOf(
     val lifecycle = LocalLifecycleOwner.current
     val snackbar = remember { SnackbarHostState() }
     LaunchedEffect(creator.accountEpoch) { vm.creatorAccountChanged(creator.account?.id) }
+    LaunchedEffect(creator.loginCompletion) {
+        if (creator.loginCompletion > 0 && creator.account != null) accountOpen = false
+    }
     LaunchedEffect(lifecycle) {
         lifecycle.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
             while (true) { vm.refreshPlayback(); delay(50) }

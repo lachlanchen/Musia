@@ -48,6 +48,7 @@ struct MusiaMacApp: App {
                 .environmentObject(creator)
                 .environmentObject(billing)
                 .task { await creator.start(player: player) }
+                .onOpenURL { creator.authentication.acceptCallback($0) }
                 .task(id: creator.identity) { billing.start(creator: creator); await billing.accountChanged() }
                 .tint(Palette.teal)
                 .preferredColorScheme(.light)

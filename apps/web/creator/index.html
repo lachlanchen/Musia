@@ -10,7 +10,7 @@
     <script src="/vendor/lucide.js" defer></script>
     <script type="module" src="/creator/app.js"></script>
   </head>
-  <body>
+  <body data-view="create" data-mode="agent">
     <header class="header">
       <a class="brand" href="/"
         ><img src="/assets/brand.png" alt="" /><strong>Musia</strong></a
@@ -47,13 +47,13 @@
         <section id="create-view">
           <div class="section-heading">
             <div>
-              <h1>Create</h1>
+              <h1>Musia</h1>
             </div>
             <span class="status" id="connection">Checking connection</span>
           </div>
           <div class="creator-modes" role="tablist" aria-label="Creation mode">
-            <button id="agent-tab" role="tab" aria-selected="true" aria-controls="agent-panel" data-mode="agent"><i data-lucide="messages-square"></i>Agent</button>
-            <button id="studio-tab" role="tab" aria-selected="false" aria-controls="studio-panel" tabindex="-1" data-mode="studio"><i data-lucide="sliders-horizontal"></i>Studio</button>
+            <button id="agent-tab" role="tab" aria-selected="true" aria-controls="agent-panel" data-mode="agent"><i data-lucide="messages-square"></i>Chat</button>
+            <button id="studio-tab" role="tab" aria-selected="false" aria-controls="studio-panel" tabindex="-1" data-mode="studio"><i data-lucide="sliders-horizontal"></i>Song details</button>
           </div>
           <div class="creator-grid">
             <section id="agent-panel" class="conversation" role="tabpanel" aria-labelledby="agent-tab">
@@ -74,18 +74,23 @@
                   <p>What would you like to make?</p>
                 </div>
               </div>
+              <div id="working" role="status" hidden><span class="working-dot"></span>Musia is working…</div>
+              <div id="draft-action" hidden>
+                <strong id="chat-draft-title"></strong>
+                <button id="chat-generate" class="primary" type="button"><i data-lucide="audio-lines"></i>Generate song</button>
+              </div>
               <form id="chat-form" class="composer">
                 <label for="message">Message Musia</label
                 ><textarea
                   id="message"
-                  rows="3"
+                  rows="2"
                   maxlength="4000"
                   required
-                  placeholder="A warm Japanese song about missing someone far away…"
+                  placeholder="Message Musia…"
                 ></textarea>
                 <div>
-                  <span id="chat-status">Private draft</span
-                  ><button
+                  <button id="context-button" type="button" class="icon" aria-label="Song reference and focus" title="Song reference and focus" aria-expanded="false" aria-controls="chat-tools"><i data-lucide="plus"></i></button>
+                  <span id="chat-status">Private draft</span><button
                     id="send"
                     class="primary icon"
                     type="submit"
@@ -186,7 +191,7 @@
               </form>
             </section>
           </div>
-                <div class="generation">
+                <div class="generation" id="generation-panel" hidden>
                   <strong id="draft-title"></strong>
                   <label
                     >Visibility<select id="visibility">
@@ -201,7 +206,8 @@
                     Failed renders do not use your allowance.
                   </p>
                 </div>
-          <section class="jobs-section">
+          <details class="jobs-section" id="jobs-panel" hidden>
+            <summary>Your songs</summary>
             <div class="section-heading">
               <h2>Your renders</h2>
               <button
@@ -214,7 +220,7 @@
               </button>
             </div>
             <div id="jobs"><p class="muted">No renders yet.</p></div>
-          </section>
+          </details>
         </section>
         <section id="library-view" hidden>
           <div class="section-heading">
