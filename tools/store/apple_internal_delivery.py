@@ -18,7 +18,7 @@ def deliver(manifest_path, confirm=False):
     s.require(upload['manifest'] == manifest and upload.get('fileId') and upload.get('buildUploadId'), 'Upload identity missing')
     api = s.Apple()
     s.require(api.app()['id'] == APP, 'Wrong Musia app')
-    reservation = api.request('GET', '/v1/buildUploads/' + upload['buildUploadId'])['data']
+    reservation = api.request('GET', '/v1/buildUploads/' + upload['buildUploadId'] + '?include=build')['data']
     attrs = reservation['attributes']
     s.require(attrs['cfBundleVersion'] == manifest['build'] and attrs['cfBundleShortVersionString'] == manifest['version']
               and attrs['platform'] == manifest['platform'], 'Reservation identity mismatch')

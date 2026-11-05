@@ -1,5 +1,13 @@
 # Store Defaults
 
+- November 5 login/chat update is **internal-only 0.2.2**, iOS/Watch build12
+  and Android code10. Both are available to the existing internal owner group;
+  Apple is VALID/IN_BETA_TESTING. Read `testflight-0.2.2.md` before any retry.
+  No new Mac binary was delivered. Keep formal/public versions, original icon,
+  prices and account/billing boundaries unchanged. Native return/autofill,
+  physical-device audio and full-song generation are not newly verified by the
+  selected simulator UI tests. Never repeat the completed upload or invitation.
+
 - October 13 follow-up restores the **original sound-bar icon**, at the owner's
   explicit request, in **test-only 0.2.1**, Apple build11 / Android code9.
   Both Apple builds are VALID/IN_BETA_TESTING; Android9 is available internally.
