@@ -25,12 +25,20 @@ test "$identifier" = 'Q8M2S2FY77.art.lazying.musia'
 unset profile_xml
 for directory in "$HOME/Library/MobileDevice/Provisioning Profiles" "$HOME/Library/Developer/Xcode/UserData/Provisioning Profiles"; do
     mkdir -p "$directory"
-    cp "$profile" "$directory/$uuid.provisionprofile"
+    target="$directory/$uuid.provisionprofile"
+    if [[ -e "$target" || -L "$target" ]]; then
+        test -f "$target" && test ! -L "$target"
+        cmp -s "$profile" "$target"
+    else
+        cp -n "$profile" "$target"
+        test -f "$target" && test ! -L "$target"
+        cmp -s "$profile" "$target"
+    fi
 done
 cd "$root"
 xcodebuild -project apps/macos/Musia.xcodeproj -scheme Musia -configuration Release \
     -destination 'generic/platform=macOS' -archivePath "$out/Musia.xcarchive" \
-    -derivedDataPath "$out/DerivedData" -jobs "${MUSIA_BUILD_JOBS:-2}" archive \
+    -derivedDataPath "$out/DerivedData" -jobs "${MUSIA_BUILD_JOBS:-1}" archive \
     ARCHS='arm64 x86_64' ONLY_ACTIVE_ARCH=NO COMPILER_INDEX_STORE_ENABLE=NO \
     MUSIA_MAC_PROFILE="$name" "OTHER_CODE_SIGN_FLAGS=--keychain $keychain" > "$out/archive.log" 2>&1
 app="$out/Musia.xcarchive/Products/Applications/Musia.app"

@@ -24,5 +24,5 @@ fi
 export MUSIA_MAC_RELEASE
 MUSIA_MAC_RELEASE=$($python -c 'import json; r=json.load(open("store/release.json")); print(r["version"]+"-"+r["ios_build"])')
 export MUSIA_MAC_PROFILE_PATH="${MUSIA_MAC_PROFILE_PATH:-$root/store/.runtime/macos-20261004/Musia_Mac_App_Store.provisionprofile}"
-export MUSIA_BUILD_JOBS=2
+export MUSIA_BUILD_JOBS=1
 exec bash tools/store/build_macos.sh

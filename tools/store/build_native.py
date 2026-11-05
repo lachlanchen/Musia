@@ -234,6 +234,7 @@ def build(platform, execute=False):
                 directory.mkdir(parents=True, exist_ok=True)
                 for profile_path, profile in profiles.values():
                     target = directory / (profile["UUID"] + ".mobileprovision")
+                    require(not target.is_symlink(), "Provisioning target is a symlink; no write")
                     require(not target.exists() or digest(target) == digest(profile_path), "Existing profile differs; no overwrite")
                     if not target.exists():
                         shutil.copyfile(profile_path, target)
@@ -244,7 +245,7 @@ def build(platform, execute=False):
             if WATCH_BUNDLE in profiles:
                 signing.append("MUSIA_WATCH_PROFILE=" + profiles[WATCH_BUNDLE][1]["Name"])
             run(["/usr/bin/xcodebuild", "-project", ROOT / "apps/ios/Musia.xcodeproj", "-scheme", "Musia",
-                 "-configuration", "Release", "-destination", "generic/platform=iOS", "-jobs", "2",
+                 "-configuration", "Release", "-destination", "generic/platform=iOS", "-jobs", "1",
                  "-derivedDataPath", output / "DerivedData", "-archivePath", archive,
                  "DEVELOPMENT_TEAM=" + TEAM, "CODE_SIGN_STYLE=Manual", "CODE_SIGN_IDENTITY=" + cfg["apple_certificate_sha1"],
                  *signing, "MARKETING_VERSION=" + r["version"],

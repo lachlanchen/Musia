@@ -30,7 +30,10 @@ def metadata(path):
             "mode": oct(stat.S_IMODE(info.st_mode)), "device": info.st_dev, "inode": info.st_ino}
 
 
-def collect(config_path, commands):
+def collect(config_path, commands, result=None):
+    # Keep safe partial diagnostics when a gate refuses the rest of the read.
+    if result is None:
+        result = {}
     def call(argv, limit=8, env=None):
         result = commands.run(argv, limit, env=env)
         if result["exit"] != 0:
@@ -46,10 +49,10 @@ def collect(config_path, commands):
     if cfg.get("bundle_id") != "art.lazying.musia" or cfg.get("apple_team") != "Q8M2S2FY77":
         raise RuntimeError("Wrong app configuration")
     guard = Path("/tmp/lazyingart-apple-build.lock")
-    result = {"at": dt.datetime.now(dt.timezone.utc).isoformat(), "read_only": True,
+    result.update({"at": dt.datetime.now(dt.timezone.utc).isoformat(), "read_only": True,
               "host": platform.node(), "architecture": platform.machine(), "uid": os.getuid(),
               "guard": metadata(guard), "config": info,
-              "disk_free_bytes": shutil.disk_usage(Path.home()).free}
+              "disk_free_bytes": shutil.disk_usage(Path.home()).free})
     result["hardware"] = call(["ioreg", "-rd1", "-c", "IOPlatformExpertDevice"])
     result["memory"] = call(["memory_pressure", "-Q"])
     result["swap"] = call(["sysctl", "vm.swapusage"])
@@ -123,7 +126,7 @@ if __name__ == "__main__":
     signal.setitimer(signal.ITIMER_REAL, 45)
     result = {}
     try:
-        result = collect(args.config, commands)
+        collect(args.config, commands, result)
         result["read_children"] = commands.records
         qualify(result)
         print(json.dumps(result, indent=2), flush=True)
