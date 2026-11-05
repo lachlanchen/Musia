@@ -30,7 +30,9 @@ def main():
     parser.add_argument("--version", required=True)
     parser.add_argument("--build", required=True)
     parser.add_argument("--execute-upload", action="store_true")
+    parser.add_argument("--inspect-only", action="store_true", help="Local installer checks only; no provider request")
     args = parser.parse_args()
+    require(not (args.inspect_only and args.execute_upload), "Inspection cannot also upload")
     require(sys.platform == "darwin", "Run on the authorized Mac")
     package = args.package.resolve(strict=True)
     require(package.suffix == ".pkg" and digest(package) == args.sha256, "Installer checksum mismatch")
@@ -75,6 +77,9 @@ def main():
                    "build": args.build, "package_sha256": args.sha256, "signer_sha1": signer,
                    "architectures": ["arm64", "x86_64"], "entitlements": entitlements}
         write_private(folder / "inspection.json", receipt)
+        if args.inspect_only:
+            print("Signed universal installer passed local inspection; no provider request", flush=True)
+            return
         key = Path(cfg["asc_key_path"])
         env = dict(os.environ, API_PRIVATE_KEYS_DIR=str(key.parent))
         common = ["--type", "macos", "--file", package, "--apiKey", cfg["asc_key_id"],

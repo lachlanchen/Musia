@@ -45,6 +45,33 @@ admission. Native QA, signing, upload, processing and existing-group availabilit
 must each have separate evidence. Preserve existing signing material, peer jobs,
 review candidates and tester membership.
 
+### Apple Build Tools
+
+`apple_native_entry.py` transports one frozen source archive to the existing
+host. `apple_native_lane.py` acquires the shared directory guard, runs a bounded
+one-worker operation, retains native results and restores signing/device state.
+It does not select a host, schedule another round, upload or submit review.
+`apple_native_handback.py` independently checks the completed operation before
+the next owner or the upload phase proceeds. Uncertain cleanup retains ownership;
+an old successful receipt cannot authorize another operation.
+
+The iOS round runs Darwin core tests and two creator/player UI cases on a new
+Musia simulator, then signs the phone/Watch archive. The Mac round runs core tests,
+compiles the native app and inspects its signed universal installer. These are
+different coverage scopes. Visual review, real-device login/autofill and physical
+Watch testing must be reported separately, not inferred from compilation.
+
+`apple_build_upload.py` accepts a hash-bound internal QA manifest after cleanup.
+It uses Apple's build-upload API from Linux, journals every request and never
+automatically repeats an uncertain upload. `apple_internal_delivery.py` checks
+processing and attaches only the exact VALID build to the existing internal
+tester group. It preserves formal build bindings and existing membership.
+
+All runtime receipts, signing paths, admissions and artifacts stay outside Git.
+Local unit tests cover archive traversal refusal, guard ownership, profile
+preservation, upload range/destination checks and refusal to repeat an uncertain
+provider mutation. Passing those tests does not establish native or store success.
+
 Saved passwords are browser-managed. Musia uses the shared issuer account, not a
 separate app password. Stable field IDs/autocomplete hints can clarify forms but
 cannot guarantee which saved account the browser suggests; do not reset or merge
