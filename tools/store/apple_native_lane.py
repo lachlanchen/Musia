@@ -26,6 +26,8 @@ from apple_host_busy import parse_processes, own_chain, classify_processes
 from apple_internal_preflight import collect, qualify, metadata
 from apple_read_child import ReadCommands, clock, defer_cancellation, global_environment
 from apple_native_reconcile import inventory, reconcile
+from apple_system_job_provenance import reconcile_system_jobs
+from apple_core_evidence import reuse_core
 
 GUARD = Path('/tmp/lazyingart-apple-build.lock')
 RESERVE = 120
@@ -157,7 +159,8 @@ def run(admission, source_archive):
             and admission['jobs'] == 1 and admission['cleanupSeconds'] == RESERVE, 'Wrong bounds')
     require(hashlib.sha256(source_archive).hexdigest() == admission['archiveSha256'], 'Source archive mismatch')
     whole = clock() + admission['wholeSeconds']
-    commands = ReadCommands(whole, reserve=RESERVE, maximum=64_000_000)
+    commands = ReadCommands(whole, reserve=RESERVE, maximum=64_000_000,
+                            inspection_timeout=15, observation_interval=1)
     guard, result = Guard(), dict(started=utc(), state='incomplete', admission=admission['id'],
                                  source=admission['source'], platform=admission['platform'])
     home = Path.home()
@@ -269,7 +272,11 @@ def run(admission, source_archive):
             profile = plistlib.loads(call('profile-' + key, ['security', 'cms', '-D', '-i', path], 15).encode())
             for folder in ('Library/MobileDevice/Provisioning Profiles', 'Library/Developer/Xcode/UserData/Provisioning Profiles'):
                 allowed_profiles[str(home / folder / (profile['UUID'] + suffix))] = sha(path)
-        call('core-tests', ['swift', 'test', '--package-path', source / 'apps/ios', '--scratch-path', out / 'core', '--jobs', '1'], 600, env)
+        if admission.get('coreEvidence'):
+            result['reusedCoreEvidence'] = reuse_core(admission['coreEvidence'], source, out.parent)
+            once(out / 'reused-core.json', result['reusedCoreEvidence'])
+        else:
+            call('core-tests', ['swift', 'test', '--package-path', source / 'apps/ios', '--scratch-path', out / 'core', '--jobs', '1'], 600, env)
         result['corePassed'] = True
         if admission['platform'] == 'ios':
             runtime, device_type = admission['simulatorRuntime'], admission['simulatorDeviceType']
@@ -370,7 +377,7 @@ def run(admission, source_archive):
                     busy()
                     require(all(r['complete'] and r['children_absent'] for r in commands.records), 'Final child cleanup incomplete')
                     require(process_baseline is not None, 'Native process baseline missing; retain guard')
-                    result['processReconciliation'] = reconcile(process_baseline, inventory(whole), commands.records, os.getpid())
+                    result['processReconciliation'] = reconcile_system_jobs(process_baseline, commands, commands.records, os.getpid())
                     require(result['processReconciliation']['passed'], 'Unexplained native processes; retain guard without signals')
                     guard.release()
                     result['guardReleased'] = True

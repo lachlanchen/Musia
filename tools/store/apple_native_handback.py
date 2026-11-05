@@ -10,6 +10,7 @@ from apple_native_lane import GUARD, profile_snapshot, require, sha, utc
 from apple_host_busy import parse_processes, own_chain, classify_processes
 from apple_read_child import ReadCommands, clock, global_environment
 from apple_native_reconcile import inventory, reconcile
+from apple_system_job_provenance import reconcile_system_jobs
 
 
 def inspect(root):
@@ -19,7 +20,7 @@ def inspect(root):
     admission = json.loads((root / 'admission.json').read_text())
     result = json.loads((root / 'result.json').read_text())
     require(result.get('guardReleased') and result.get('preservationVerified') and not result.get('cleanupError'), 'Owner cleanup incomplete')
-    commands = ReadCommands(clock() + 90, reserve=15)
+    commands = ReadCommands(clock() + 90, reserve=15, inspection_timeout=15, observation_interval=1)
     def stop(*_):
         signal.setitimer(signal.ITIMER_REAL, 0)
         raise TimeoutError('Independent read deadline/interruption')
@@ -62,8 +63,9 @@ def inspect(root):
         require(lock == ('unlocked\n' if original['keychainUnlocked'] else 'locked\n'), 'Keychain lock changed')
         pins = json.loads((root / 'source-pins.json').read_text())
         require(all(not (root / 'source' / name).is_symlink() and sha(root / 'source' / name) == digest for name, digest in pins.items()), 'Source pins changed')
-        proof['processReconciliation'] = reconcile(result['processBaseline'], inventory(commands.deadline),
-                                                    result['children'], os.getpid())
+        commands.records[:0] = result['children']
+        proof['processReconciliation'] = reconcile_system_jobs(result['processBaseline'], commands,
+                                                               commands.records, os.getpid())
         require(proof['processReconciliation']['passed'], 'New unexplained processes; no handback claim')
         require(not os.path.lexists(GUARD), 'Guard appeared during final read')
         proof.update(guardAbsent=True, preservationVerified=True, sourcePinsVerified=True, state='passed')

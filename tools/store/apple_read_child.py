@@ -15,13 +15,16 @@ def clock():
     return time.clock_gettime(time.CLOCK_MONOTONIC)
 
 
-def table(deadline):
+def table(deadline, timeout=2):
     remaining = deadline - clock()
     if remaining <= 0:
         raise TimeoutError("Read cleanup deadline")
     column = "ucomm=" if sys.platform == "darwin" else "comm="
-    value = subprocess.check_output(["ps", "-axo", "pid=,ppid=,pgid=,lstart=," + column],
-                                    text=True, timeout=min(2, remaining))
+    try:
+        value = subprocess.check_output(["ps", "-axo", "pid=,ppid=,pgid=,lstart=," + column],
+                                        text=True, timeout=min(timeout, remaining))
+    except subprocess.TimeoutExpired as exc:
+        raise TimeoutError("Process inspection deadline") from exc
     return parse_processes(value)
 
 
@@ -51,13 +54,19 @@ def defer_cancellation(deliver=True):
 
 
 class ReadCommands:
-    def __init__(self, deadline, reserve=15, maximum=2_000_000):
+    def __init__(self, deadline, reserve=15, maximum=2_000_000,
+                 inspection_timeout=2, observation_interval=0):
         self.deadline, self.reserve, self.maximum = deadline, reserve, maximum
+        self.inspection_timeout, self.observation_interval = inspection_timeout, observation_interval
         self.records = []
+
+    def process_table(self):
+        return table(min(self.deadline, getattr(self, '_phase_deadline', self.deadline)),
+                     self.inspection_timeout)
 
     def observe(self, record, child):
         child.poll()
-        rows = table(self.deadline)
+        rows = self.process_table()
         known = record["identities"]
         parents = {int(k) for k, v in known.items() if int(k) in rows and same(v, rows[int(k)])}
         parents.add(child.pid)
@@ -83,7 +92,7 @@ class ReadCommands:
                 return
             # Descendants first; allow their parent to reap them before its signal.
             for row in sorted(live, key=lambda x: x["pid"] == child.pid):
-                fresh = table(self.deadline).get(row["pid"])
+                fresh = self.process_table().get(row["pid"])
                 if fresh and same(row, fresh):
                     try: os.kill(row["pid"], sig)
                     except ProcessLookupError: pass
@@ -106,6 +115,8 @@ class ReadCommands:
         buffers = {"stdout": bytearray(), "stderr": bytearray()}
         selector = None
         sent = 0
+        self._phase_deadline = end
+        next_observation = 0
         try:
             # Cancellation must not escape between fork/exec and owning Popen.
             with defer_cancellation():
@@ -124,8 +135,9 @@ class ReadCommands:
                 # A second ps can appear in the first snapshot as a transient
                 # pre-exec Python child on Darwin. Do not observe the observer
                 # concurrently. The same bounded exact cleanup still runs below.
-                if Path(argv[0]).name != "ps":
+                if Path(argv[0]).name != "ps" and clock() >= next_observation:
                     self.observe(record, child)
+                    next_observation = clock() + self.observation_interval
                 remaining = end - clock()
                 if remaining <= 0: raise TimeoutError("Read command timed out")
                 for key, _ in selector.select(min(.1, remaining)):
@@ -148,6 +160,7 @@ class ReadCommands:
             # Repeated TERM/INT/HUP must not interrupt exact reaping. All loops
             # retain the original monotonic deadline; no extra grace is added.
             with defer_cancellation(deliver=False):
+                self._phase_deadline = self.deadline
                 if child is not None:
                     try:
                         self.clear(record, child)

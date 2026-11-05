@@ -15,7 +15,8 @@ from apple_read_child import ReadCommands, clock
 from apple_read_entry import HOST, HOST_UUID, digest, write_once
 
 MODULES = ('apple_host_busy.py', 'apple_read_child.py', 'apple_internal_preflight.py',
-           'apple_native_reconcile.py', 'apple_native_lane.py')
+           'apple_native_reconcile.py', 'apple_system_job_provenance.py',
+           'apple_core_evidence.py', 'apple_native_lane.py')
 
 
 def validate(admission, source, archive, folder, now, owner):
