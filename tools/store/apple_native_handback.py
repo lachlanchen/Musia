@@ -9,6 +9,7 @@ import sys
 from apple_native_lane import GUARD, profile_snapshot, require, sha, utc
 from apple_host_busy import parse_processes, own_chain, classify_processes
 from apple_read_child import ReadCommands, clock, global_environment
+from apple_native_reconcile import inventory, reconcile
 
 
 def inspect(root):
@@ -61,6 +62,9 @@ def inspect(root):
         require(lock == ('unlocked\n' if original['keychainUnlocked'] else 'locked\n'), 'Keychain lock changed')
         pins = json.loads((root / 'source-pins.json').read_text())
         require(all(not (root / 'source' / name).is_symlink() and sha(root / 'source' / name) == digest for name, digest in pins.items()), 'Source pins changed')
+        proof['processReconciliation'] = reconcile(result['processBaseline'], inventory(commands.deadline),
+                                                    result['children'], os.getpid())
+        require(proof['processReconciliation']['passed'], 'New unexplained processes; no handback claim')
         require(not os.path.lexists(GUARD), 'Guard appeared during final read')
         proof.update(guardAbsent=True, preservationVerified=True, sourcePinsVerified=True, state='passed')
     finally:

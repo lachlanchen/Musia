@@ -25,6 +25,7 @@ import uuid
 from apple_host_busy import parse_processes, own_chain, classify_processes
 from apple_internal_preflight import collect, qualify, metadata
 from apple_read_child import ReadCommands, clock, defer_cancellation, global_environment
+from apple_native_reconcile import inventory, reconcile
 
 GUARD = Path('/tmp/lazyingart-apple-build.lock')
 RESERVE = 120
@@ -170,6 +171,7 @@ def run(admission, source_archive):
     source = out / 'source'
     config_path = home / 'Projects/Musia/store/.runtime/config.json'
     cfg, source_pins = None, None
+    process_baseline = None
 
     def stop(*_):
         signal.setitimer(signal.ITIMER_REAL, 0)
@@ -217,6 +219,8 @@ def run(admission, source_archive):
     try:
         initial = {}; collect(config_path, commands, initial); qualify(initial)
         guard.acquire(admission)
+        process_baseline = inventory(whole)
+        result['processBaseline'] = process_baseline
         busy()
         memory = call('memory-inside', ['memory_pressure', '-Q'], 10)
         swap = call('swap-inside', ['sysctl', 'vm.swapusage'], 8)
@@ -365,6 +369,9 @@ def run(admission, source_archive):
                                     and sha(source / name) == digest for name, digest in source_pins.items()), 'Staged source changed')
                     busy()
                     require(all(r['complete'] and r['children_absent'] for r in commands.records), 'Final child cleanup incomplete')
+                    require(process_baseline is not None, 'Native process baseline missing; retain guard')
+                    result['processReconciliation'] = reconcile(process_baseline, inventory(whole), commands.records, os.getpid())
+                    require(result['processReconciliation']['passed'], 'Unexplained native processes; retain guard without signals')
                     guard.release()
                     result['guardReleased'] = True
                     result['preservationVerified'] = True
