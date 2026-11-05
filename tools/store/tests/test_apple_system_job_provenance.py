@@ -3,12 +3,37 @@ import sys
 import unittest
 from unittest.mock import patch
 from types import SimpleNamespace
+import os
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from apple_system_job_provenance import qualify, reconcile_system_jobs
 
 
 class SystemJobTests(unittest.TestCase):
+    def test_user_agent_instance_requires_protected_definition_and_exact_instance(self):
+        row = dict(pid=123, ppid=1, pgid=123, started='exact', comm='not-used')
+        base = 'com.apple.example'
+        label = base + '.00000000-0000-0000-0000-000000000001'
+        domain = 'user/' + str(os.getuid())
+        program = '/System/Library/Frameworks/Example.framework/example'
+        executable = '/System/Library/Frameworks/Example.framework/Versions/A/example'
+        detail = (domain + '/' + label + ' = {\n\tpid = 123\n'
+                  '\tpath = /System/Library/LaunchAgents/com.apple.example.plist\n'
+                  '\tdomain = ' + domain + '\n\ttype = LaunchAgent\n\tprogram = ' + program + '\n}\n')
+        definition = dict(Label=base, Program=program, MultipleInstances=True)
+        metadata = [dict(uid=0, mode=0o644, regular=True, symlink=False)] * 2
+        args = (row, label, detail, definition, executable, metadata, domain, executable)
+        self.assertEqual(qualify(*args)['domain'], domain)
+        bad = [(*args[:3], {**definition, 'MultipleInstances':False}, *args[4:]),
+               (row, base + '.not-a-uuid', *args[2:]),
+               (*args[:6], 'user/999999', executable),
+               (*args[:5], [dict(uid=501,mode=0o644,regular=True,symlink=False)], *args[6:]),
+               (*args[:2], detail.replace('LaunchAgents', 'LaunchDaemons'), *args[3:]),
+               (*args[:7], '/tmp/another-executable')]
+        for value in bad:
+            with self.subTest(value=value), self.assertRaises(RuntimeError):
+                qualify(*value)
+
     def test_reconciliation_accepts_only_same_proven_identity(self):
         init = dict(pid=1, ppid=0, pgid=1, started='init', comm='launchd')
         root = dict(pid=2, ppid=1, pgid=2, started='runner', comm='Python')

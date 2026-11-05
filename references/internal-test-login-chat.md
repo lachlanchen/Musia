@@ -61,6 +61,20 @@ compiles the native app and inspects its signed universal installer. These are
 different coverage scopes. Visual review, real-device login/autofill and physical
 Watch testing must be reported separately, not inferred from compilation.
 
+Verify Stage/Practice switching before scroll gestures. Downward overscroll at
+the top of the native player sheet dismisses it; a missing picker afterward is
+not proof that the picker failed to render. Preserve the failed accessibility
+tree and captures, then repair the test without removing orientation, geometry
+or hit-testing assertions. An audio-device error on a virtual Mac remains an
+audio qualification gap even when its layout checks pass.
+
+Cleanup reconciles exact process identities, not names. Independent Apple system
+jobs require a live launchd PID mapping, protected job definition, matching kernel
+executable and a fresh identity read. User agents additionally require the current
+user domain; multi-instance jobs require the definition's MultipleInstances flag
+and an exact UUID instance suffix. Unknown jobs retain the guard without signals.
+Do not stop system indexing or a peer service merely to make a build gate pass.
+
 `apple_build_upload.py` accepts a hash-bound internal QA manifest after cleanup.
 It uses Apple's build-upload API from Linux, journals every request and never
 automatically repeats an uncertain upload. `apple_internal_delivery.py` checks

@@ -13,7 +13,12 @@ with (resources / "Info.plist").open("rb") as source:
     info = plistlib.load(source)
 assert info["CFBundleDisplayName"] == "Musia"
 assert info["UIBackgroundModes"] == ["audio"]
-assert "NSMicrophoneUsageDescription" not in info
+assert info["NSMicrophoneUsageDescription"] == (
+    "Match a note measures a three-second sung or hummed note on your device. "
+    "The take is deleted after measurement and is never uploaded."
+)
+assert "NSCameraUsageDescription" not in info
+assert "NSSpeechRecognitionUsageDescription" not in info
 assert "NSAppTransportSecurity" not in info
 with (resources / "PrivacyInfo.xcprivacy").open("rb") as source:
     privacy = plistlib.load(source)
@@ -62,10 +67,15 @@ assert "MUSIA_APP_PROFILE" in project_text
 scheme = ET.parse(ROOT / "Musia.xcodeproj/xcshareddata/xcschemes/Musia.xcscheme")
 assert scheme.find(".//TestableReference/BuildableReference").attrib["BlueprintName"] == "MusiaTests"
 swift_files = sorted((ROOT / "Musia").rglob("*.swift")) + sorted((ROOT / "Tests").rglob("*.swift"))
+package_text = (ROOT / "Package.swift").read_text()
+package_only_tests = {"MusiaCatalogTests", "WatchProtocolTests"}
 for path in swift_files:
     text = path.read_text()
     assert "WKWebView" not in text and "import WebKit" not in text
-    assert path.name in project_text, f"Not in checked-in project: {path}"
+    if path.parent.name in package_only_tests:
+        assert f'path: "Tests/{path.parent.name}"' in package_text, path
+    else:
+        assert path.name in project_text, f"Not in checked-in project: {path}"
 print(f"PASS: manifests, resources, scheme, bundle identity, {len(swift_files)} Swift file references; no WebKit")
 
 try:

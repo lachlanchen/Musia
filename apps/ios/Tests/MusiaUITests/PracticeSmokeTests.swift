@@ -39,6 +39,10 @@ final class PracticeSmokeTests: XCTestCase {
         let views = app.segmentedControls["player.view"]
         XCTAssertTrue(views.waitForExistence(timeout: 10))
         views.buttons["Stage"].tap()
+        // Downward overscroll dismisses this sheet, so verify switching before scrolling.
+        views.buttons["Practice"].tap()
+        XCTAssertTrue(app.segmentedControls["practice.mode"].waitForExistence(timeout: 5))
+        views.buttons["Stage"].tap()
         let play = app.buttons["practice.transport.play"]
         for orientation in [UIDeviceOrientation.portrait, .landscapeRight] {
             XCUIDevice.shared.orientation = orientation
@@ -50,10 +54,7 @@ final class PracticeSmokeTests: XCTestCase {
             XCTAssertTrue(play.isHittable)
             let image = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
             image.name = "stage-\(orientation.rawValue)"; image.lifetime = .keepAlways; add(image)
-            app.swipeDown(velocity: .slow)
         }
-        views.buttons["Practice"].tap()
-        XCTAssertTrue(app.segmentedControls["practice.mode"].waitForExistence(timeout: 5))
     }
 
     @MainActor

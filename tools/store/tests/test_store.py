@@ -390,7 +390,7 @@ class StoreTests(unittest.TestCase):
             current = {}
             tab.call.side_effect = lambda method, **kwargs: current.update(url=kwargs["url"])
             tab.view.side_effect = lambda: {"url": current["url"], "text":
-                s.BUNDLE + " Internal testing Available to internal testers 1 (0.1.0)"}
+                s.BUNDLE + "\nInternal testing\nAvailable to internal testers\n1 (0.1.0)\n"}
             def evaluate(expression):
                 if "selected, links" in expression:
                     return {"selected": selected, "links": [cfg["play_opt_in_url"]]}
