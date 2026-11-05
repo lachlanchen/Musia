@@ -81,6 +81,21 @@ automatically repeats an uncertain upload. `apple_internal_delivery.py` checks
 processing and attaches only the exact VALID build to the existing internal
 tester group. It preserves formal build bindings and existing membership.
 
+A successful native build whose cleanup initially refused can use a separate
+`cleanup_recovery` receipt in the upload manifest. Keep the original result
+unchanged. The release proof and a later independent readback must bind the same
+admission, source, original result hash and artifact hash. Both must establish
+process absence and preservation; the independent proof also binds the exact
+recovery hash. This does not turn a failed build into a pass or authorize a new
+build. The uploader rejects altered receipts, incomplete cleanup and out-of-order
+verification.
+
+Xcode export can leave a detached network-log reader. Its name, parent process
+or Apple signature alone does not establish ownership. The exact export's own
+ContentDelivery log must tie a launch command and birth time to the retained
+process before any narrowly authorized cleanup. Keep diagnosis, any signal and
+independent verification explicit; never use a global `killall log` workaround.
+
 All runtime receipts, signing paths, admissions and artifacts stay outside Git.
 Local unit tests cover archive traversal refusal, guard ownership, profile
 preservation, upload range/destination checks and refusal to repeat an uncertain

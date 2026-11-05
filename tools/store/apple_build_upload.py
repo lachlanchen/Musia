@@ -80,6 +80,49 @@ class BuildAPI(s.Apple):
         return result['data']
 
 
+def qualify_cleanup(manifest, native, handback):
+    s.require(native['state'] == 'native_passed_pending_visual_review_and_provider_upload'
+              and not native.get('error'), 'Native qualification incomplete')
+    s.require(handback.get('admission') == native['admission'] and handback.get('guardAbsent')
+              and handback.get('ownedChildrenAbsent') and handback.get('preservationVerified'),
+              'Actual independent handback missing')
+    if 'cleanup_recovery' not in manifest:
+        s.require(native.get('guardReleased') and native.get('preservationVerified')
+                  and not native.get('cleanupError'), 'Native cleanup incomplete')
+        return
+
+    # A later cleanup receipt supplements the immutable native result; it cannot
+    # turn a failed build into a pass or qualify a different artifact.
+    s.require(native.get('guardReleased') is False and native.get('cleanupError') ==
+              'RuntimeError: Unexplained native processes; retain guard without signals',
+              'Unsupported cleanup recovery')
+    reference = manifest['cleanup_recovery']
+    s.require(s.digest(s.private_file(reference['path'])) == reference['sha256'], 'Changed cleanup recovery')
+    recovery = s.read_json(reference['path'])
+    for proof in (recovery, handback):
+        s.require(proof.get('passed') is True and proof.get('guardReleased') is True
+                  and proof.get('guardAbsent') is True and proof.get('preservationVerified') is True
+                  and proof.get('ownedChildrenAbsent') is True and not proof.get('error'),
+                  'Cleanup proof incomplete')
+        s.require(proof.get('admission') == native['admission'] and proof.get('source') == manifest['source']
+                  and proof.get('nativeResultSha256') == manifest['native_result']['sha256']
+                  and proof.get('artifactSha256') == manifest['artifact']['sha256'], 'Cleanup proof binding mismatch')
+        reconciliation = proof.get('processReconciliation', {})
+        s.require(reconciliation.get('passed') is True and reconciliation.get('recordedChildrenComplete') is True
+                  and reconciliation.get('liveOwned') == [] and reconciliation.get('unexplainedProcesses') == [],
+                  'Cleanup process reconciliation incomplete')
+    s.require(recovery.get('readOnly') is False and handback.get('readOnly') is True
+              and handback.get('recoverySha256') == reference['sha256'], 'Independent recovery verification missing')
+    try:
+        native_end, recovered, independently_started = [dt.datetime.fromisoformat(v.replace('Z', '+00:00'))
+            for v in (native['ended'], recovery['ended'], handback['started'])]
+        ordered = all(t.tzinfo is not None for t in (native_end, recovered, independently_started)) and \
+            native_end <= recovered <= independently_started
+    except (KeyError, TypeError, ValueError):
+        ordered = False
+    s.require(ordered, 'Cleanup recovery chronology invalid')
+
+
 def qualify(manifest_path):
     manifest = s.read_json(s.private_file(manifest_path))
     s.require(manifest['app_id'] == APP and manifest['bundle_id'] == s.BUNDLE
@@ -88,15 +131,11 @@ def qualify(manifest_path):
     for name in ('artifact', 'native_result', 'independent_handback', 'inspection', 'qa'):
         s.require(s.digest(s.private_file(manifest[name]['path'])) == manifest[name]['sha256'], 'Changed ' + name)
     native = s.read_json(manifest['native_result']['path'])
-    s.require(native['state'] == 'native_passed_pending_visual_review_and_provider_upload'
-              and native.get('guardReleased') and native.get('preservationVerified')
-              and not native.get('error') and not native.get('cleanupError'), 'Native qualification or cleanup incomplete')
     s.require(native.get('source') == manifest['source']
               and native.get('artifact', {}).get('sha256') == manifest['artifact']['sha256']
               and native.get('artifact', {}).get('inspectionSha256') == manifest['inspection']['sha256'], 'Native artifact binding changed')
     handback = s.read_json(manifest['independent_handback']['path'])
-    s.require(handback.get('admission') == native['admission'] and handback.get('guardAbsent')
-              and handback.get('ownedChildrenAbsent') and handback.get('preservationVerified'), 'Actual independent handback missing')
+    qualify_cleanup(manifest, native, handback)
     qa = s.read_json(manifest['qa']['path'])
     s.require(qa.get('source') == manifest['source'] and qa.get('artifact_sha256') == manifest['artifact']['sha256']
               and qa.get('scope') == 'internal-owner-test' and qa.get('visual_reviewed') is True
