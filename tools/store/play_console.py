@@ -37,7 +37,7 @@ class OwnedTab:
         return result.get("result", {}).get("value")
 
     def view(self):
-        return self.evaluate("({url:location.href,text:document.body?.innerText ?? ''})")
+        return self.evaluate("({url:location.href,title:document.title,text:document.body?.innerText ?? ''})")
 
     def close(self):
         self.ws.close()
@@ -71,7 +71,8 @@ def internal_view(view, track):
     # The Console now shows the listing title instead of the package label.
     # Keep the exact configured app/track URL and a Musia identity signal.
     text = view.get("text", "")
-    identity = BUNDLE in text or "Musia: Learn Music & Guitar" in text.splitlines()
+    identity = (BUNDLE in text or "Musia: Learn Music & Guitar" in text.splitlines()
+                or view.get("title") == "Release track | Musia: Learn Music & Guitar")
     return view.get("url") == track and identity and "Internal testing" in text
 
 

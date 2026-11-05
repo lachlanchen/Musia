@@ -18,6 +18,14 @@ from play_console import OwnedTab
 
 
 class StoreTests(unittest.TestCase):
+    def test_collapsed_play_navigation_keeps_exact_track_identity(self):
+        url = "https://play.google.com/console/musia/tracks/internal?tab=releases"
+        view = dict(url=url, title="Release track | Musia: Learn Music & Guitar", text="Internal testing")
+        self.assertTrue(play_console.internal_view(view, url))
+        self.assertFalse(play_console.internal_view(dict(view, url=url + "other"), url))
+        self.assertFalse(play_console.internal_view(dict(view, title="Release track | Another app"), url))
+        self.assertFalse(play_console.internal_view(dict(view, text="Production"), url))
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
