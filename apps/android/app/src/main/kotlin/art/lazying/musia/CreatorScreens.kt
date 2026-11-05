@@ -85,9 +85,7 @@ private fun Context.activity(): Activity? = when (this) {
         }
     }
     Column(modifier.imePadding()) {
-    LazyColumn(Modifier.weight(1f).fillMaxWidth(), state = chatScroll, contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(22.dp)) {
-        item {
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+            Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Text(if (studio) "Song details" else "Musia", style = MaterialTheme.typography.titleLarge,
                     modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis)
                 IconButton(onClick = { studio = !studio }) {
@@ -95,7 +93,7 @@ private fun Context.activity(): Activity? = when (this) {
                 }
                 IconButton(onClick = openAccount) { Icon(Icons.Default.AccountCircle, "Account") }
             }
-        }
+    LazyColumn(Modifier.weight(1f).fillMaxWidth(), state = chatScroll, contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(22.dp)) {
         item { CreatorNotice(vm) }
         if (!studio) {
             if (contextOpen && (vm.capabilities?.agentContextVersion ?: 0) >= 1) item {

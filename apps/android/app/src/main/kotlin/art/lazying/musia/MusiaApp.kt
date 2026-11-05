@@ -80,9 +80,11 @@ private val destinations = listOf(
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
+          if (destination != "Create" || playerOpen || accountOpen || training != null || historyOpen) {
             TopAppBar(title = { Text(if (playerOpen) "Now playing" else training ?: if (accountOpen) "Account" else if (historyOpen) "History" else "Musia", style = MaterialTheme.typography.headlineMedium) },
                 navigationIcon = { if (playerOpen || historyOpen || accountOpen || training != null) IconAction("Back", Icons.AutoMirrored.Filled.ArrowBack) { back() } },
                 actions = { if (!playerOpen && training == null && destination in listOf("Songs", "Practice")) IconAction("Refresh", Icons.Default.Refresh) { vm.reloadLibrary(); if (destination == "Practice") vm.reloadLessons() } })
+          }
         },
         bottomBar = {
             Column {
