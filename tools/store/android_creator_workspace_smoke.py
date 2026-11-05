@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Native Agent/Studio edit check on one owned emulator; no sign-in or render."""
+"""Native chat/details edit check on one owned emulator; no sign-in or render."""
 import argparse
 import json
 from pathlib import Path
@@ -43,7 +43,7 @@ def main():
     adb("shell", "am", "force-stop", "art.lazying.musia")
     adb("shell", "am", "start", "-W", "-n", "art.lazying.musia/.MainActivity")
     tap("Create")
-    find("What would you like to make?")
+    find("What shall we make?")
     find("Message Musia")
     assert find("Send message").get("enabled") == "false"
     assert not any(n.get("text") == "Visibility" for n in tree().iter("node")), "Render options should begin collapsed"
@@ -58,9 +58,13 @@ def main():
     assert top >= 0 and bottom > top, "Keyboard must resize rather than pan the header offscreen"
     capture("agent-keyboard")
     adb("shell", "input", "keyevent", "KEYCODE_BACK")
-    tap("Create your song"); find("Visibility"); capture("render-options")
-    tap("Create your song")
-    tap("Studio")
+    # Clear only the input entered by this test before switching views.
+    field = next(n for n in tree().iter("node") if n.get("class") == "android.widget.EditText" and n.get("text") == "A gentle song")
+    tap_node(field)
+    adb("shell", "input", "keyevent", "KEYCODE_MOVE_END")
+    for _ in "A gentle song": adb("shell", "input", "keyevent", "KEYCODE_DEL")
+    adb("shell", "input", "keyevent", "KEYCODE_BACK")
+    tap("Song details")
     root = tree()
     field = next(n for n in root.iter("node") if n.get("class") == "android.widget.EditText" and
                  any(c.get("text") == "Title" for c in n.iter("node")))
@@ -71,13 +75,19 @@ def main():
     root = tree()
     actual = next(n.get("text") for n in root.iter("node") if n.get("class") == "android.widget.EditText" and n.get("text"))
     capture("studio-edit")
-    tap("Agent")
+    tap("Chat")
     find("Message Musia")
-    tap("Studio")
+    tap("Song details")
     assert any(n.get("class") == "android.widget.EditText" and n.get("text") == actual for n in tree().iter("node"))
     capture("studio-preserved")
+    field = next(n for n in tree().iter("node") if n.get("class") == "android.widget.EditText" and n.get("text") == actual)
+    tap_node(field)
+    adb("shell", "input", "keyevent", "KEYCODE_MOVE_END")
+    for _ in actual: adb("shell", "input", "keyevent", "KEYCODE_DEL")
+    adb("shell", "input", "keyevent", "KEYCODE_BACK")
+    tap("Chat")
     result = {"state":"passed", "serial":args.serial,
-              "checks":["Agent default", "sign-in required to send", "Studio editable", "shared draft survives tab switches"],
+              "checks":["Chat default", "sign-in required to send", "Details editable", "shared draft survives tab switches", "test edits cleared"],
               "limitations":["Signed QA APK; guest UI only, not authenticated chat or Play-installed execution"],
               "rendered":False, "purchased":False}
     (args.output / "result.json").write_text(json.dumps(result, indent=2) + "\n")

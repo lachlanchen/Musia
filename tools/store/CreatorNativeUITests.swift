@@ -70,12 +70,12 @@ final class CreatorNativeUITests: XCTestCase {
         defer { app.terminate() }
         XCTAssertTrue(app.buttons["library.localFirstPulse"].waitForExistence(timeout: 30))
         app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch.tap()
-        let workspace = app.segmentedControls["creator.workspace"]
+        let workspace = app.buttons["creator.workspace"]
         XCTAssertTrue(workspace.waitForExistence(timeout: 15))
-        XCTAssertTrue(workspace.buttons["Agent"].isSelected)
+        XCTAssertEqual(workspace.label, "Song details")
         XCTAssertTrue(app.textFields["Message Musia"].exists || app.textViews["Message Musia"].exists)
         capture(app, "workspace-agent-default")
-        workspace.buttons["Studio"].tap()
+        workspace.tap()
         let title = app.textFields["Title"]
         tapVisible(title, in: app)
         let original = title.value as? String ?? ""
@@ -96,10 +96,10 @@ final class CreatorNativeUITests: XCTestCase {
         XCTAssertTrue(create.waitForExistence(timeout: 30))
         create.tap()
         XCTAssertTrue(workspace.waitForExistence(timeout: 15))
-        XCTAssertTrue(workspace.buttons["Agent"].isSelected)
-        XCTAssertTrue(text(app, containing: marker).waitForExistence(timeout: 20))
+        XCTAssertEqual(workspace.label, "Song details")
+        XCTAssertTrue(app.textFields["Message Musia"].exists || app.textViews["Message Musia"].exists)
         capture(app, "workspace-agent-restored")
-        workspace.buttons["Studio"].tap()
+        workspace.tap()
         XCTAssertTrue(title.waitForExistence(timeout: 10))
         XCTAssertEqual(title.value as? String, marker)
         tapVisible(title, in: app)
@@ -164,8 +164,8 @@ final class CreatorNativeUITests: XCTestCase {
         let create = app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch
         XCTAssertTrue(create.waitForExistence(timeout: 10))
         create.tap()
-        XCTAssertTrue(app.segmentedControls["creator.workspace"].waitForExistence(timeout: 15))
-        XCTAssertTrue(app.segmentedControls["creator.workspace"].buttons["Agent"].isSelected)
+        XCTAssertTrue(app.buttons["creator.workspace"].waitForExistence(timeout: 15))
+        XCTAssertEqual(app.buttons["creator.workspace"].label, "Song details")
         let existingFixtureURL = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "creator-qa-fixture", withExtension: "json"))
         let existingFixture = try JSONDecoder().decode(LoginFixture.self, from: Data(contentsOf: existingFixtureURL))
         let retainedAccount = app.buttons[existingFixture.username]

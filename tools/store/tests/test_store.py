@@ -1,6 +1,8 @@
 import argparse
 import json
+import os
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -34,6 +36,13 @@ class StoreTests(unittest.TestCase):
         for p in reversed(self.patches):
             p.stop()
         self.temp.cleanup()
+
+    def test_worktree_runtime_override_does_not_relocate_source(self):
+        tool_dir = Path(__file__).resolve().parents[1]
+        code = "import storelib; print(storelib.RUNTIME); print(storelib.ROOT)"
+        env = dict(os.environ, PYTHONPATH=str(tool_dir), MUSIA_STORE_RUNTIME=str(self.runtime))
+        result = subprocess.check_output([sys.executable, "-c", code], env=env, text=True).splitlines()
+        self.assertEqual(result, [str(self.runtime), str(tool_dir.parents[1])])
 
     def test_private_files_reject_public_mode_and_symlink(self):
         f = self.runtime / "private.json"

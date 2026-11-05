@@ -19,7 +19,8 @@ import urllib.parse
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[2]
-RUNTIME = ROOT / "store/.runtime"
+# Worktrees share protected keys and mutation journals without copying secrets.
+RUNTIME = Path(os.environ.get("MUSIA_STORE_RUNTIME", ROOT / "store/.runtime")).expanduser()
 BUNDLE = "art.lazying.musia"
 TEAM = "Q8M2S2FY77"
 DEVELOPER = "6157557679644496686"
