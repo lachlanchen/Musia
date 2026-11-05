@@ -121,7 +121,11 @@ class ReadCommands:
                 os.set_blocking(child.stdin.fileno(), False)
                 selector.register(child.stdin, selectors.EVENT_WRITE, "stdin")
             while selector.get_map() or child.poll() is None:
-                self.observe(record, child)
+                # A second ps can appear in the first snapshot as a transient
+                # pre-exec Python child on Darwin. Do not observe the observer
+                # concurrently. The same bounded exact cleanup still runs below.
+                if Path(argv[0]).name != "ps":
+                    self.observe(record, child)
                 remaining = end - clock()
                 if remaining <= 0: raise TimeoutError("Read command timed out")
                 for key, _ in selector.select(min(.1, remaining)):
