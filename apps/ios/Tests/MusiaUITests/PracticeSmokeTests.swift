@@ -8,9 +8,9 @@ final class PracticeSmokeTests: XCTestCase {
         defer { app.terminate() }
         let create = app.buttons.matching(NSPredicate(format: "label == 'Create'")).firstMatch
         XCTAssertTrue(create.waitForExistence(timeout: 20)); create.tap()
-        let workspace = app.segmentedControls["creator.workspace"]
+        let workspace = app.buttons["creator.workspace"]
         XCTAssertTrue(workspace.waitForExistence(timeout: 10))
-        XCTAssertTrue(workspace.buttons["Agent"].isSelected)
+        XCTAssertEqual(workspace.label, "Song details")
         let input = app.textFields["Message Musia"]
         XCTAssertTrue(input.waitForExistence(timeout: 5))
         XCTAssertTrue(app.frame.contains(input.frame))
