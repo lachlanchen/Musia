@@ -161,7 +161,8 @@ def test_access(build):
             if "Available to internal testers" in view["text"]:
                 break
             time.sleep(1)
-        version = re.escape(str(build["build_number"])) + r"\s*\(" + re.escape(build["version"]) + r"\)"
+        code, name = re.escape(str(build["build_number"])), re.escape(build["version"])
+        version = rf"(?m)^(?:{code}\s*\({name}\)|{name}\s*\({code}\))$"
         require(internal_view(view, internal)
                 and "Available to internal testers" in view["text"] and re.search(version, view["text"]),
                 "Exact Musia internal release not proven available")

@@ -150,6 +150,17 @@ class FakePlay:
 
 
 class PlayInternalTests(unittest.TestCase):
+    def test_committed_edit_400_is_closed_only_for_exact_provider_reason(self):
+        record = {"bundle_id": p.PACKAGE, "track": p.TRACK, "steps": {
+            "create_edit": {"action": "create", "state": "accepted", "response": {"id": "edit-1"}}}}
+        session = Mock()
+        session.request.return_value = Response({"error": {"status": "FAILED_PRECONDITION",
+            "message": "This edit has already been successfully committed, please create a new Edit."}}, 400)
+        api = p.PlayInternalAPI(session, Path("unused"), record, None, readback=True)
+        self.assertIsNone(api.request("get", edit="edit-1"))
+        session.request.return_value = Response({"error": {"status": "FAILED_PRECONDITION", "message": "Other error"}}, 400)
+        with self.assertRaises(s.GuardError): api.request("get", edit="edit-1")
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)

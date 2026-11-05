@@ -42,7 +42,8 @@ PACKAGE = "art.lazying.musia"
 TRACK = "internal"
 BASE = "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/" + PACKAGE
 UPLOAD_BASE = "https://androidpublisher.googleapis.com/upload/androidpublisher/v3/applications/" + PACKAGE
-COMMIT_QUERY = "?changesNotSentForReview=true&changesInReviewBehavior=ERROR_IF_IN_REVIEW"
+# Musia internal releases are sent automatically; Google rejects the hold flag.
+COMMIT_QUERY = "?changesInReviewBehavior=ERROR_IF_IN_REVIEW"
 COORDINATION_FLAGS = ("ui_quiescent", "no_other_edits", "no_pending_changes",
                       "no_changes_in_review", "commit_invalidates_edits_ack")
 
@@ -189,6 +190,11 @@ class PlayInternalAPI:
                                             allow_redirects=False)
             if action == "get" and response.status_code == 404:
                 return None
+            if action == "get" and response.status_code == 400 and len(response.content) < 65536:
+                error = response.json().get("error", {})
+                if error.get("status") == "FAILED_PRECONDITION" and error.get("message") == (
+                        "This edit has already been successfully committed, please create a new Edit."):
+                    return None
             s.require(200 <= response.status_code < 300, "Provider did not accept the request")
             s.require(len(response.content) <= 8 * 1024 * 1024, "Provider response too large")
             value = response.json() if response.content else {}
@@ -202,6 +208,12 @@ class PlayInternalAPI:
                 exact_internal(value, self.record)
         except Exception:
             if entry is not None:
+                if "response" in locals() and 400 <= response.status_code < 500 and len(response.content) < 65536:
+                    entry["http_status"] = response.status_code
+                    try:
+                        entry["provider_error"] = response.json().get("error", {})
+                    except ValueError:
+                        pass
                 entry["state"] = "unknown"
                 self.record["state"] = "unknown"
                 self.persist()
