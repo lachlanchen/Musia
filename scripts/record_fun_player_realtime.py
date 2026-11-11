@@ -276,6 +276,17 @@ def main() -> None:
                       && Number.isFinite((document.getElementById('audio') || document.getElementById('video')).duration)""",
                     timeout=30000,
                 )
+                # Warm fonts, image decoding and the first lyric/chord layouts
+                # before recording; cold 4K Chrome frames can otherwise stall.
+                page.evaluate("""async () => {
+                  await document.fonts.ready;
+                  await Promise.all(Array.from(document.images, image =>
+                    image.decode().catch(() => {})));
+                }""")
+                if args.capture_clock:
+                    page.evaluate("start => window.funPlayerStartCaptureClock(start, 1)", args.start)
+                    page.wait_for_timeout(5000)
+                    page.evaluate("() => window.funPlayerStopCaptureClock()")
                 page.evaluate(
                     """async (start) => {
                       const media = document.getElementById('audio') || document.getElementById('video');
