@@ -38,6 +38,8 @@ def main(argv=None):
     parser.add_argument("--key", default="D minor")
     parser.add_argument("--language", choices=("zh", "ja", "en", "unknown"), default="zh",
                         help="Sung language; use unknown for mixed-language lyrics")
+    parser.add_argument("--batch-size", type=int, choices=(1, 2), default=2,
+                        help="Use 1 on a shared GPU to avoid backend batch reduction")
     parser.add_argument("--dry-run", action="store_true",
                         help="Prepare and validate request/config files without loading a model")
     args = parser.parse_args(argv)
@@ -51,13 +53,14 @@ def main(argv=None):
         parser.error("Empty lyric or caption")
     identity = {"lyrics": lyrics, "caption": caption, "duration": args.duration, "bpm": args.bpm,
                 "key": args.key, "seeds": args.seeds, "vocal_language": args.language,
-                "model": "acestep-v15-xl-turbo", "steps": 8,
+                "model": "acestep-v15-xl-turbo", "steps": 8, "batch_size": args.batch_size,
                 "aceCommit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ACE, text=True).strip()}
     request = out / "request.json"
     if request.exists():
         previous = json.loads(request.read_text())
         # Earlier sweeps always used zh, even though the request omitted it.
         previous.setdefault("vocal_language", "zh")
+        previous.setdefault("batch_size", 2)
         if previous != identity:
             raise ValueError("Preserve this sweep; different inputs require a new output directory")
     save_json(request, identity)
@@ -65,8 +68,8 @@ def main(argv=None):
     env = {**os.environ, "CUDA_VISIBLE_DEVICES": os.environ.get("CUDA_VISIBLE_DEVICES", "0"),
            "PYTHONNOUSERSITE": "1", "PYTHONUNBUFFERED": "1", "TOKENIZERS_PARALLELISM": "false"}
     results = []
-    for offset in range(0, len(args.seeds), 2):
-        seeds = args.seeds[offset:offset + 2]
+    for offset in range(0, len(args.seeds), args.batch_size):
+        seeds = args.seeds[offset:offset + args.batch_size]
         batch = out / ("batch-" + "-".join(map(str, seeds)))
         batch.mkdir(exist_ok=True)
         completed = batch / "completed.json"

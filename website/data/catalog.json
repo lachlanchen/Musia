@@ -9,6 +9,38 @@
   "defaultMedia": "gong-bai-tou-snow-we-share",
   "items": [
     {
+      "id": "im-a-spy",
+      "kind": "song",
+      "title": "我是间谍 · I'm a Spy",
+      "artist": "Musia",
+      "summary": "He can keep a secret, but not the way he feels when you walk by. A playful love song about trying to stay cool, giving yourself away, and taking someone's hand beneath a sky full of stars.",
+      "manifest": "data/songs/im-a-spy/manifest.json",
+      "cover": "assets/covers/im-a-spy-16x9.png",
+      "visibility": "public",
+      "releaseStage": "published",
+      "category": "music",
+      "languages": [
+        "ja",
+        "en",
+        "zh-Hans"
+      ],
+      "tags": [
+        "music",
+        "English",
+        "indie pop",
+        "dream pop",
+        "love",
+        "playful",
+        "stars",
+        "chords"
+      ],
+      "displayTitle": "我是间谍 · I'm a Spy",
+      "workId": "im-a-spy",
+      "edition": {
+        "status": "selected"
+      }
+    },
+    {
       "id": "sensei-mo-ichinensei",
       "kind": "song",
       "title": "せんせいも一年生 · A Beginner, Even Now",

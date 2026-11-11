@@ -1,0 +1,2003 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "im-a-spy",
+  "language": {
+    "code": "ja",
+    "label": "Japanese",
+    "nativeLabel": "日本語",
+    "script": "Jpan",
+    "pronunciation": "furigana"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 18.62,
+      "end": 20.94,
+      "text": "僕はスパイ、僕はスパイ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 18.62,
+          "end": 19.084,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 19.084,
+          "end": 19.548,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 19.548,
+          "end": 20.012,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 20.012,
+          "end": 20.476,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 20.476,
+          "end": 20.94,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 21.86,
+      "end": 23.68,
+      "text": "理由は聞かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "理由",
+          "reading": "りゆう",
+          "start": 21.86,
+          "end": 22.315,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 22.315,
+          "end": 22.77,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "聞か",
+          "reading": "きか",
+          "start": 22.77,
+          "end": 23.225,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 23.225,
+          "end": 23.68,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 23.68,
+      "end": 25.9,
+      "text": "僕の瞳には君がいる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 23.68,
+          "end": 24.05,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 24.05,
+          "end": 24.42,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "瞳",
+          "reading": "ひとみ",
+          "start": 24.42,
+          "end": 24.79,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "には",
+          "start": 24.79,
+          "end": 25.16,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 25.16,
+          "end": 25.53,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "がいる",
+          "start": 25.53,
+          "end": 25.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 27.72,
+      "end": 30.48,
+      "text": "わからない、わからない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "わからない",
+          "start": 27.72,
+          "end": 28.64,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 28.64,
+          "end": 29.56,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "わからない",
+          "start": 29.56,
+          "end": 30.48,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 30.48,
+      "end": 32.92,
+      "text": "どうすれば君を手放せるのか",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "どうすれば",
+          "start": 30.48,
+          "end": 30.968,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 30.968,
+          "end": 31.456,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 31.456,
+          "end": 31.944,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "手放せ",
+          "reading": "てばなせ",
+          "start": 31.944,
+          "end": 32.432,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "るのか",
+          "start": 32.432,
+          "end": 32.92,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 32.92,
+      "end": 34.2,
+      "text": "嘘はつかないよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "嘘",
+          "reading": "うそ",
+          "start": 32.92,
+          "end": 33.56,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "はつかないよ",
+          "start": 33.56,
+          "end": 34.2,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 34.3,
+      "end": 36.52,
+      "text": "簡単にさよならなんて言わない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "簡単",
+          "reading": "かんたん",
+          "start": 34.3,
+          "end": 34.855,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "にさよならなんて",
+          "start": 34.855,
+          "end": 35.41,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "言わ",
+          "reading": "いわ",
+          "start": 35.41,
+          "end": 35.965,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ない",
+          "start": 35.965,
+          "end": 36.52,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 37.3,
+      "end": 39.82,
+      "text": "僕はスパイ、僕はスパイ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 37.3,
+          "end": 37.804,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 37.804,
+          "end": 38.308,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 38.308,
+          "end": 38.812,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 38.812,
+          "end": 39.316,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 39.316,
+          "end": 39.82,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 40.02,
+      "end": 42.22,
+      "text": "理由は聞かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "理由",
+          "reading": "りゆう",
+          "start": 40.02,
+          "end": 40.57,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 40.57,
+          "end": 41.12,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "聞か",
+          "reading": "きか",
+          "start": 41.12,
+          "end": 41.67,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 41.67,
+          "end": 42.22,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 42.22,
+      "end": 44.64,
+      "text": "君は僕のかけがえのない人",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 42.22,
+          "end": 42.704,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 42.704,
+          "end": 43.188,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 43.188,
+          "end": 43.672,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "のかけがえのない",
+          "start": 43.672,
+          "end": 44.156,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "reading": "ひと",
+          "start": 44.156,
+          "end": 44.64,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.84,
+      "end": 46.9,
+      "text": "簡単にさよならなんて言わない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "簡単",
+          "reading": "かんたん",
+          "start": 44.84,
+          "end": 45.355,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "にさよならなんて",
+          "start": 45.355,
+          "end": 45.87,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "言わ",
+          "reading": "いわ",
+          "start": 45.87,
+          "end": 46.385,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ない",
+          "start": 46.385,
+          "end": 46.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 46.9,
+      "end": 49.1,
+      "text": "僕はスパイ、僕はスパイ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 46.9,
+          "end": 47.34,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 47.34,
+          "end": 47.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 47.78,
+          "end": 48.22,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 48.22,
+          "end": 48.66,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 48.66,
+          "end": 49.1,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 49.36,
+      "end": 51.48,
+      "text": "理由は聞かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "理由",
+          "reading": "りゆう",
+          "start": 49.36,
+          "end": 49.89,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 49.89,
+          "end": 50.42,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "聞か",
+          "reading": "きか",
+          "start": 50.42,
+          "end": 50.95,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 50.95,
+          "end": 51.48,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 51.48,
+      "end": 53.9,
+      "text": "君は僕のかけがえのない人",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 51.48,
+          "end": 51.964,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 51.964,
+          "end": 52.448,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 52.448,
+          "end": 52.932,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "のかけがえのない",
+          "start": 52.932,
+          "end": 53.416,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "reading": "ひと",
+          "start": 53.416,
+          "end": 53.9,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 54.1,
+      "end": 56.12,
+      "text": "ねえ、愛しい人、泣かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ねえ",
+          "start": 54.1,
+          "end": 54.389,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 54.389,
+          "end": 54.677,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "愛しい",
+          "reading": "いとしい",
+          "start": 54.677,
+          "end": 54.966,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "reading": "ひと",
+          "start": 54.966,
+          "end": 55.254,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 55.254,
+          "end": 55.543,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "泣か",
+          "reading": "なか",
+          "start": 55.543,
+          "end": 55.831,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 55.831,
+          "end": 56.12,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 56.12,
+      "end": 58.52,
+      "text": "嘘はつかない、つかないよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "嘘",
+          "reading": "うそ",
+          "start": 56.12,
+          "end": 56.72,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "はつかない",
+          "start": 56.72,
+          "end": 57.32,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 57.32,
+          "end": 57.92,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "つかないよ",
+          "start": 57.92,
+          "end": 58.52,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 58.52,
+      "end": 60.72,
+      "text": "たとえ星たちがぶつかっても",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "たとえ",
+          "start": 58.52,
+          "end": 59.253,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "星",
+          "reading": "ほし",
+          "start": 59.253,
+          "end": 59.987,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "たちがぶつかっても",
+          "start": 59.987,
+          "end": 60.72,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 62.86,
+      "end": 65.56,
+      "text": "決してさよならは言わない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "決して",
+          "reading": "けっして",
+          "start": 62.86,
+          "end": 63.535,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "さよならは",
+          "start": 63.535,
+          "end": 64.21,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "言わ",
+          "reading": "いわ",
+          "start": 64.21,
+          "end": 64.885,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ない",
+          "start": 64.885,
+          "end": 65.56,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 67.39,
+      "end": 70.89,
+      "text": "ねえ、愛しい人、泣かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ねえ",
+          "start": 67.39,
+          "end": 67.89,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 67.89,
+          "end": 68.39,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "愛しい",
+          "reading": "いとしい",
+          "start": 68.39,
+          "end": 68.89,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "reading": "ひと",
+          "start": 68.89,
+          "end": 69.39,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 69.39,
+          "end": 69.89,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "泣か",
+          "reading": "なか",
+          "start": 69.89,
+          "end": 70.39,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 70.39,
+          "end": 70.89,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 79.0,
+      "end": 81.36,
+      "text": "僕はばかだ、恋するばかだ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 79.0,
+          "end": 79.472,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ばかだ",
+          "start": 79.472,
+          "end": 79.944,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 79.944,
+          "end": 80.416,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "恋する",
+          "reading": "こいする",
+          "start": 80.416,
+          "end": 80.888,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ばかだ",
+          "start": 80.888,
+          "end": 81.36,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 83.24,
+      "end": 84.96,
+      "text": "決まりなんて全部破って",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "決ま",
+          "reading": "きま",
+          "start": 83.24,
+          "end": 83.584,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "りなんて",
+          "start": 83.584,
+          "end": 83.928,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "全部",
+          "reading": "ぜんぶ",
+          "start": 83.928,
+          "end": 84.272,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "破っ",
+          "reading": "やぶっ",
+          "start": 84.272,
+          "end": 84.616,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "て",
+          "start": 84.616,
+          "end": 84.96,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 85.08,
+      "end": 87.44,
+      "text": "平気なふりをしてみても",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "平気",
+          "reading": "へいき",
+          "start": 85.08,
+          "end": 86.26,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "なふりをしてみても",
+          "start": 86.26,
+          "end": 87.44,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 87.44,
+      "end": 90.84,
+      "text": "君にどんどん惹かれてゆく",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 87.44,
+          "end": 88.29,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "にどんどん",
+          "start": 88.29,
+          "end": 89.14,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "惹か",
+          "reading": "ひか",
+          "start": 89.14,
+          "end": 89.99,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "れてゆく",
+          "start": 89.99,
+          "end": 90.84,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 92.58,
+      "end": 95.58,
+      "text": "隠せるよ、隠せるよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "隠せ",
+          "reading": "かくせ",
+          "start": 92.58,
+          "end": 93.18,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "るよ",
+          "start": 93.18,
+          "end": 93.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 93.78,
+          "end": 94.38,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "隠せ",
+          "reading": "かくせ",
+          "start": 94.38,
+          "end": 94.98,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "るよ",
+          "start": 94.98,
+          "end": 95.58,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 95.58,
+      "end": 97.84,
+      "text": "胸の奥の秘密は何もかも",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "胸",
+          "reading": "むね",
+          "start": 95.58,
+          "end": 95.862,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 95.862,
+          "end": 96.145,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "奥",
+          "reading": "おく",
+          "start": 96.145,
+          "end": 96.427,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 96.427,
+          "end": 96.71,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "秘密",
+          "reading": "ひみつ",
+          "start": 96.71,
+          "end": 96.993,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 96.993,
+          "end": 97.275,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "何も",
+          "reading": "なにも",
+          "start": 97.275,
+          "end": 97.558,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "かも",
+          "start": 97.558,
+          "end": 97.84,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 97.84,
+      "end": 100.36,
+      "text": "でも君がそばを通るたび",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "でも",
+          "start": 97.84,
+          "end": 98.344,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 98.344,
+          "end": 98.848,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "がそばを",
+          "start": 98.848,
+          "end": 99.352,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "通る",
+          "reading": "とおる",
+          "start": 99.352,
+          "end": 99.856,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "たび",
+          "start": 99.856,
+          "end": 100.36,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 100.36,
+      "end": 102.54,
+      "text": "秘密がみんな目を覚ます",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "秘密",
+          "reading": "ひみつ",
+          "start": 100.36,
+          "end": 100.723,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "がみんな",
+          "start": 100.723,
+          "end": 101.087,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "目",
+          "reading": "め",
+          "start": 101.087,
+          "end": 101.45,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 101.45,
+          "end": 101.813,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "覚ま",
+          "reading": "さま",
+          "start": 101.813,
+          "end": 102.177,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "す",
+          "start": 102.177,
+          "end": 102.54,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 102.54,
+      "end": 105.76,
+      "text": "僕が飛んだら、君も飛ぶ？",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 102.54,
+          "end": 102.898,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "が",
+          "start": 102.898,
+          "end": 103.256,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "飛ん",
+          "reading": "とん",
+          "start": 103.256,
+          "end": 103.613,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "だら",
+          "start": 103.613,
+          "end": 103.971,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 103.971,
+          "end": 104.329,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 104.329,
+          "end": 104.687,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "も",
+          "start": 104.687,
+          "end": 105.044,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "飛ぶ",
+          "reading": "とぶ",
+          "start": 105.044,
+          "end": 105.402,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "？",
+          "start": 105.402,
+          "end": 105.76,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 107.09,
+      "end": 111.02,
+      "text": "僕が隠れたら、見つけてくれる？",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 107.09,
+          "end": 107.581,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "が",
+          "start": 107.581,
+          "end": 108.073,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "隠れ",
+          "reading": "かくれ",
+          "start": 108.073,
+          "end": 108.564,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "たら",
+          "start": 108.564,
+          "end": 109.055,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 109.055,
+          "end": 109.546,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "見つ",
+          "reading": "みつ",
+          "start": 109.546,
+          "end": 110.037,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "けてくれる",
+          "start": 110.037,
+          "end": 110.529,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "？",
+          "start": 110.529,
+          "end": 111.02,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l30",
+      "start": 111.81,
+      "end": 114.85,
+      "text": "今夜、道に迷ったら",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "今夜",
+          "reading": "こんや",
+          "start": 111.81,
+          "end": 112.317,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 112.317,
+          "end": 112.823,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "道",
+          "reading": "みち",
+          "start": 112.823,
+          "end": 113.33,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "に",
+          "start": 113.33,
+          "end": 113.837,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "迷っ",
+          "reading": "まよっ",
+          "start": 113.837,
+          "end": 114.343,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "たら",
+          "start": 114.343,
+          "end": 114.85,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l31",
+      "start": 115.98,
+      "end": 119.92,
+      "text": "僕を導く光になってくれる？",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 115.98,
+          "end": 116.637,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 116.637,
+          "end": 117.293,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "導く",
+          "reading": "みちびく",
+          "start": 117.293,
+          "end": 117.95,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "光",
+          "reading": "ひかり",
+          "start": 117.95,
+          "end": 118.607,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "になってくれる",
+          "start": 118.607,
+          "end": 119.263,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "？",
+          "start": 119.263,
+          "end": 119.92,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l32",
+      "start": 121.5,
+      "end": 124.54,
+      "text": "僕はクールな男さ、泣かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 121.5,
+          "end": 121.88,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "クール",
+          "start": 121.88,
+          "end": 122.26,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "な",
+          "start": 122.26,
+          "end": 122.64,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "男",
+          "reading": "おとこ",
+          "start": 122.64,
+          "end": 123.02,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "さ",
+          "start": 123.02,
+          "end": 123.4,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 123.4,
+          "end": 123.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "泣か",
+          "reading": "なか",
+          "start": 123.78,
+          "end": 124.16,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 124.16,
+          "end": 124.54,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l33",
+      "start": 124.54,
+      "end": 129.26,
+      "text": "手をつないだら、一緒に飛べる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "手",
+          "reading": "て",
+          "start": 124.54,
+          "end": 125.327,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "をつないだら",
+          "start": 125.327,
+          "end": 126.113,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 126.113,
+          "end": 126.9,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "一緒に",
+          "reading": "いっしょに",
+          "start": 126.9,
+          "end": 127.687,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "飛べ",
+          "reading": "とべ",
+          "start": 127.687,
+          "end": 128.473,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "る",
+          "start": 128.473,
+          "end": 129.26,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l34",
+      "start": 130.26,
+      "end": 133.0,
+      "text": "僕はスパイ、僕はスパイ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 130.26,
+          "end": 130.808,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 130.808,
+          "end": 131.356,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 131.356,
+          "end": 131.904,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 131.904,
+          "end": 132.452,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 132.452,
+          "end": 133.0,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l35",
+      "start": 134.1,
+      "end": 136.32,
+      "text": "理由は聞かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "理由",
+          "reading": "りゆう",
+          "start": 134.1,
+          "end": 134.655,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 134.655,
+          "end": 135.21,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "聞か",
+          "reading": "きか",
+          "start": 135.21,
+          "end": 135.765,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 135.765,
+          "end": 136.32,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l36",
+      "start": 136.32,
+      "end": 139.06,
+      "text": "僕の瞳にはいつも君がいる",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 136.32,
+          "end": 136.777,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "の",
+          "start": 136.777,
+          "end": 137.233,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "瞳",
+          "reading": "ひとみ",
+          "start": 137.233,
+          "end": 137.69,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "にはいつも",
+          "start": 137.69,
+          "end": 138.147,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 138.147,
+          "end": 138.603,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "がいる",
+          "start": 138.603,
+          "end": 139.06,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l37",
+      "start": 139.12,
+      "end": 141.22,
+      "text": "空にきらめくダイヤのように",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "空",
+          "reading": "そら",
+          "start": 139.12,
+          "end": 139.645,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "にきらめく",
+          "start": 139.645,
+          "end": 140.17,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ダイヤ",
+          "start": 140.17,
+          "end": 140.695,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "のように",
+          "start": 140.695,
+          "end": 141.22,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l38",
+      "start": 141.42,
+      "end": 143.66,
+      "text": "嘘はつかない、つかないよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "嘘",
+          "reading": "うそ",
+          "start": 141.42,
+          "end": 141.98,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "はつかない",
+          "start": 141.98,
+          "end": 142.54,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 142.54,
+          "end": 143.1,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "つかないよ",
+          "start": 143.1,
+          "end": 143.66,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l39",
+      "start": 143.72,
+      "end": 145.6,
+      "text": "君を置いていかないよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 143.72,
+          "end": 144.19,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 144.19,
+          "end": 144.66,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "置い",
+          "reading": "おい",
+          "start": 144.66,
+          "end": 145.13,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ていかないよ",
+          "start": 145.13,
+          "end": 145.6,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l40",
+      "start": 146.16,
+      "end": 148.26,
+      "text": "決してさよならは言わない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "決して",
+          "reading": "けっして",
+          "start": 146.16,
+          "end": 146.685,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "さよならは",
+          "start": 146.685,
+          "end": 147.21,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "言わ",
+          "reading": "いわ",
+          "start": 147.21,
+          "end": 147.735,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ない",
+          "start": 147.735,
+          "end": 148.26,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l41",
+      "start": 148.92,
+      "end": 151.92,
+      "text": "嘘はつかない、つかないよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "嘘",
+          "reading": "うそ",
+          "start": 148.92,
+          "end": 149.67,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "はつかない",
+          "start": 149.67,
+          "end": 150.42,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 150.42,
+          "end": 151.17,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "つかないよ",
+          "start": 151.17,
+          "end": 151.92,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l42",
+      "start": 151.92,
+      "end": 155.08,
+      "text": "君を置いていかないよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 151.92,
+          "end": 152.71,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "を",
+          "start": 152.71,
+          "end": 153.5,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "置い",
+          "reading": "おい",
+          "start": 153.5,
+          "end": 154.29,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ていかないよ",
+          "start": 154.29,
+          "end": 155.08,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l43",
+      "start": 155.4,
+      "end": 157.68,
+      "text": "決してさよならは言わない",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "決して",
+          "reading": "けっして",
+          "start": 155.4,
+          "end": 155.97,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "さよならは",
+          "start": 155.97,
+          "end": 156.54,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "言わ",
+          "reading": "いわ",
+          "start": 156.54,
+          "end": 157.11,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ない",
+          "start": 157.11,
+          "end": 157.68,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l44",
+      "start": 157.74,
+      "end": 160.0,
+      "text": "ねえ、愛しい人、泣かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "ねえ",
+          "start": 157.74,
+          "end": 158.063,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 158.063,
+          "end": 158.386,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "愛しい",
+          "reading": "いとしい",
+          "start": 158.386,
+          "end": 158.709,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "reading": "ひと",
+          "start": 158.709,
+          "end": 159.031,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 159.031,
+          "end": 159.354,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "泣か",
+          "reading": "なか",
+          "start": 159.354,
+          "end": 159.677,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 159.677,
+          "end": 160.0,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l45",
+      "start": 168.0,
+      "end": 169.24,
+      "text": "僕はスパイ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 168.0,
+          "end": 168.62,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 168.62,
+          "end": 169.24,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l46",
+      "start": 169.32,
+      "end": 171.62,
+      "text": "僕はスパイ、僕はスパイ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 169.32,
+          "end": 169.78,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 169.78,
+          "end": 170.24,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "、",
+          "start": 170.24,
+          "end": 170.7,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕は",
+          "reading": "ぼくは",
+          "start": 170.7,
+          "end": 171.16,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "スパイ",
+          "start": 171.16,
+          "end": 171.62,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l47",
+      "start": 171.62,
+      "end": 173.82,
+      "text": "理由は聞かないで",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "理由",
+          "reading": "りゆう",
+          "start": 171.62,
+          "end": 172.17,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 172.17,
+          "end": 172.72,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "聞か",
+          "reading": "きか",
+          "start": 172.72,
+          "end": 173.27,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないで",
+          "start": 173.27,
+          "end": 173.82,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l48",
+      "start": 173.82,
+      "end": 176.6,
+      "text": "君は僕のかけがえのない人",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "君",
+          "reading": "きみ",
+          "start": 173.82,
+          "end": 174.376,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "は",
+          "start": 174.376,
+          "end": 174.932,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "僕",
+          "reading": "ぼく",
+          "start": 174.932,
+          "end": 175.488,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "のかけがえのない",
+          "start": 175.488,
+          "end": 176.044,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "人",
+          "reading": "ひと",
+          "start": 176.044,
+          "end": 176.6,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    },
+    {
+      "id": "l49",
+      "start": 178.38,
+      "end": 180.94,
+      "text": "さよならなんて言わないよ",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "さよならなんて",
+          "start": 178.38,
+          "end": 179.233,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "言わ",
+          "reading": "いわ",
+          "start": 179.233,
+          "end": 180.087,
+          "alignment": "translation-line-relative-approximation"
+        },
+        {
+          "text": "ないよ",
+          "start": 180.087,
+          "end": 180.94,
+          "alignment": "translation-line-relative-approximation"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "audioSha256": "9179b878e74999ff6468fc784783c0b916363569f8664c605ff66346a173c62a",
+    "correction": "Selected-audio large-v3 full/stem no-VAD review against intended lyrics; independent MOSS cross-check",
+    "timing": "ASR word anchors, approximate boundaries; translations use line-relative highlighting",
+    "releaseStage": "published",
+    "notes": [
+      "Source-close wording is preserved; changed repeats are reflected in the actual sung structure.",
+      "Independent MOSS and two focused outro windows confirm three spy repetitions, including the extra 168-second hook missed by stem-only ASR.",
+      "The first sky comparison is omitted in this take; do not insert unsung text.",
+      "ASR-only closing credits and zero-duration duplicate outro are excluded.",
+      "Musical quality screening is not a human listening approval."
+    ]
+  }
+}

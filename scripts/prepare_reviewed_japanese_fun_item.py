@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package a reviewed Japanese song from a release JSON; never push or generate."""
+"""Package a reviewed Japanese/English song from JSON; never push or generate."""
 
 import argparse
 import json
@@ -39,7 +39,7 @@ def publication_fields(stage):
             "listed": not preview}
 
 
-def prepare(config):
+def prepare(config, media_repo=None):
     media_id = config["mediaId"]
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", media_id):
         raise ValueError("Invalid media ID")
@@ -47,6 +47,8 @@ def prepare(config):
     project = ROOT / config["project"]
     wav = ROOT / config["audio"]
     review = read(ROOT / config["review"])
+    language = review.get("vocalLanguage", "ja")
+    label = {"ja": "日本語", "en": "English"}[language]
     if review["mediaId"] != media_id or review["title"] != config["title"]:
         raise ValueError("Release and reviewed lyrics describe different songs")
     review["releaseStage"] = publication["stage"]
@@ -59,9 +61,9 @@ def prepare(config):
     selected = project / "selected"
     corrected = selected / "lyrics"
     tracks = export(review, sources, wav, corrected)
-    master = selected / f"{media_id}-ja.wav"
+    master = selected / f"{media_id}-{language}.wav"
     copy_unchanged(wav, master)
-    mp3 = selected / f"{media_id}-ja.mp3"
+    mp3 = selected / f"{media_id}-{language}.mp3"
     if not mp3.exists():
         subprocess.run(["ffmpeg", "-v", "error", "-n", "-i", str(master), "-map_metadata", "-1",
                         "-c:a", "libmp3lame", "-b:a", "320k", "-metadata", "artist=Musia",
@@ -69,7 +71,7 @@ def prepare(config):
     filename = config["publicFilename"]
     if Path(filename).name != filename or not filename.endswith(".mp3"):
         raise ValueError("publicFilename must be an MP3 basename")
-    songs = ROOT.parent / "MusiaSongs"
+    songs = Path(media_repo) if media_repo else ROOT.parent / "MusiaSongs"
     target = songs / "audio" / filename
     copy_unchanged(mp3, target)
     subprocess.run(["node", "scripts/build-audio-json.js"], cwd=songs, check=True)
@@ -97,11 +99,13 @@ def prepare(config):
         "chordSource": "Selected audio analysis; not a musician-verified score",
         "beatSource": "Selected audio beat tracker; 4/4 is an unverified production target",
     }
-    asset = {"id": config["assetId"], "label": "日本語", "selectorLabel": "日本語",
-             "role": "vocal", "languageCode": "ja", "languageLabel": "日本語", "lyricSetId": vocal,
+    asset = {"id": config["assetId"], "label": label, "selectorLabel": label,
+             "role": "vocal", "languageCode": language, "languageLabel": label, "lyricSetId": vocal,
              "src": "https://lazyingart.github.io/MusiaSongs/audio/" + filename, "mime": "audio/mpeg", "musical": musical}
     features = {"ja": ["active-vocal", "furigana", "word-highlight"],
                 "en": ["translation", "rough-highlight"], "zh-Hans": ["translation", "pinyin", "rough-highlight"]}
+    if language == "en":
+        features.update(en=["active-vocal", "word-highlight"], ja=["translation", "furigana", "rough-highlight"])
     infos = [{**read(corrected / f"{code}.json")["language"], "features": features[code],
               "path": f"lyrics/{vocal}/{code}.json"} for code in tracks]
     url = "https://fun.lazying.art/" + ("?preview=1" if not publication["listed"] else "") + "#" + media_id
@@ -120,8 +124,8 @@ def prepare(config):
         "assets": {"primaryAudio": asset, "alternateAudio": [],
                    **{role: {"id": role, "label": config["title"], "role": role, "src": cover,
                              "mime": "image/png", "width": width, "height": height} for role in ("cover", "poster")}},
-        "musical": musical, "textTracks": [], "lyricSets": [{"id": vocal, "label": "日本語", "languageCode": "ja", "tracks": infos}],
-        "timeline": {"unit": "seconds", "lines": [{k: line[k] for k in ("id", "start", "end", "text")} for line in tracks["ja"]]},
+        "musical": musical, "textTracks": [], "lyricSets": [{"id": vocal, "label": label, "languageCode": language, "tracks": infos}],
+        "timeline": {"unit": "seconds", "lines": [{k: line[k] for k in ("id", "start", "end", "text")} for line in tracks[language]]},
         "provenance": provenance,
     }
     write(song_dir / "manifest.json", manifest)
@@ -136,11 +140,13 @@ def prepare(config):
     catalog["items"] = [item] + [entry for entry in catalog["items"] if entry["id"] != media_id]
     write(catalog_path, catalog)
     write(selected / "manifest.json", {**provenance, "audio": str(master.relative_to(ROOT)), "mp3": str(mp3.relative_to(ROOT)),
-                                       "lyrics": str(corrected.relative_to(ROOT)), "duration": duration, "reviewedLineCount": len(tracks["ja"])})
+                                       "lyrics": str(corrected.relative_to(ROOT)), "duration": duration, "reviewedLineCount": len(tracks[language])})
     print(url)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("release", type=Path)
-    prepare(read(parser.parse_args().release))
+    parser.add_argument("--media-repo", type=Path, help="Existing MusiaSongs checkout, for isolated release worktrees")
+    args = parser.parse_args()
+    prepare(read(args.release), args.media_repo)

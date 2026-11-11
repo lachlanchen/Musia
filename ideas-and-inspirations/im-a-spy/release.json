@@ -1,0 +1,30 @@
+{
+  "mediaId": "im-a-spy",
+  "title": "我是间谍 · I'm a Spy",
+  "localizedTitles": {"en": "I'm a Spy", "zh-Hans": "我是间谍", "ja": "僕はスパイ"},
+  "releaseStage": "published",
+  "generationCredit": "",
+  "project": "data/creative_projects/im-a-spy-20261111",
+  "audio": "data/creative_projects/im-a-spy-20261111/sweep-serial/batch-111101/9abdfbd3-6eba-1720-8bb5-f377a86cb4da.wav",
+  "review": "ideas-and-inspirations/im-a-spy/reviewed-lyrics.json",
+  "analysis": "data/runs/im-a-spy-en-111101",
+  "assetId": "im-a-spy-en",
+  "publicFilename": "im-a-spy-en-20261111.mp3",
+  "description": "He can keep a secret, but not the way he feels when you walk by. A playful love song about trying to stay cool, giving yourself away, and taking someone's hand beneath a sky full of stars.",
+  "caption": "I'm a cool guy, don't you cry. Take my hand and we can fly.",
+  "tags": ["music", "English", "indie pop", "dream pop", "love", "playful", "stars", "chords"],
+  "provenance": {
+    "model": "acestep-v15-xl-turbo",
+    "modelRevision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+    "checkpointRevision": "d4a0b288b83ebb7e25a8c0b32c573c22e134e8ee",
+    "decoder": "official",
+    "selectedSeed": 111101,
+    "quality": {
+      "audioHealth": "pass",
+      "humanListeningApproved": false,
+      "timing": "Selected full-mix and isolated-vocal large-v3 word anchors; translation highlights are approximate",
+      "musicalAnalysis": "Estimated from this recording, not a verified score"
+    },
+    "coverSource": "Fresh image generation for this song: affectionate couple in a monumental starlit glass observatory, coral and sky-blue accents, a small apple; no text, logo or reused artwork."
+  }
+}

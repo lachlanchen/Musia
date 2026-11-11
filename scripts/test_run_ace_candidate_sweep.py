@@ -3,7 +3,10 @@ import contextlib
 import io
 import json
 import tempfile
-import tomllib
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -51,6 +54,15 @@ class CandidateSweepTests(unittest.TestCase):
         self.run_sweep(["--dry-run"])
         data = tomllib.loads((self.out / "batch-101-102/ace.toml").read_text())
         self.assertEqual(data["vocal_language"], "zh")
+
+    def test_single_sample_batches(self):
+        self.run_sweep(["--batch-size", "1", "--dry-run"])
+        configs = sorted(self.out.glob("batch-*/ace.toml"))
+        self.assertEqual(len(configs), 3)
+        for path in configs:
+            self.assertEqual(tomllib.loads(path.read_text())["batch_size"], 1)
+        with self.assertRaisesRegex(ValueError, "different inputs"):
+            self.run_sweep(["--batch-size", "2", "--dry-run"])
 
     def test_cannot_resume_with_a_different_language(self):
         self.run_sweep(["--language", "ja", "--dry-run"])

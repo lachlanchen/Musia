@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Export reviewed Japanese lyrics with source-bound ASR spans and translations.
+"""Export reviewed Japanese or English lyrics with source-bound ASR spans.
 
 This does not correct lyrics automatically. A review selects exact ASR words;
 every replacement must name its source text and explain the editorial decision.
+Japanese remains the default; English uses vocalLanguage: en in the review.
 """
 
 from __future__ import annotations
@@ -23,7 +24,7 @@ LANGUAGES = {
 }
 
 
-def reviewed_words(row, sources):
+def reviewed_words(row, sources, language="ja"):
     words = []
     for ref in row["anchors"]:
         segment = sources[ref["source"]]["segments"][ref["segment"]]
@@ -49,13 +50,13 @@ def reviewed_words(row, sources):
         last_end = last
     for change in reversed(replacements):
         first, last = change["words"]
-        words[first:last] = [{"word": visible(change["text"]), "start": words[first]["start"],
+        words[first:last] = [{"word": change["text"].strip() if language == "en" else visible(change["text"]), "start": words[first]["start"],
                               "end": words[last - 1]["end"], "reviewReason": change["reason"]}]
     # A zero-length ASR subtoken is valid only inside an explicit reviewed merge.
     if any(word["end"] <= word["start"] for word in words):
         raise ValueError("Zero-length ASR tokens need an explicit positive-span reviewed merge")
-    if "".join(visible(w["word"]) for w in words) != visible(row["ja"]):
-        raise ValueError(f"Corrected Japanese does not match reviewed anchors: {row['ja']}")
+    if "".join(visible(w["word"]) for w in words) != visible(row[language]):
+        raise ValueError(f"Corrected {language} does not match reviewed anchors: {row[language]}")
     return words
 
 
@@ -101,29 +102,41 @@ def chinese_tokens(text, overrides):
 
 
 def export(review, sources, audio, output):
+    language = review.get("vocalLanguage", "ja")
+    if language not in ("ja", "en"):
+        raise ValueError("Reviewed vocal language must be ja or en")
     if sha256(audio) != review["audioSha256"]:
         raise ValueError("Selected audio changed after lyric review")
     for name, source in sources.items():
-        if source.get("status") != "ok" or source.get("language") != "ja":
-            raise ValueError(f"Invalid Japanese ASR evidence: {name}")
+        if source.get("status") != "ok" or source.get("language") != language:
+            raise ValueError(f"Invalid {language} ASR evidence: {name}")
     import pykakasi
 
     kakasi = pykakasi.kakasi()
     tracks = {code: [] for code in LANGUAGES}
     previous = -1.0
     for index, row in enumerate(review["lines"], 1):
-        words = reviewed_words(row, sources)
+        words = reviewed_words(row, sources, language)
         start, end = words[0]["start"], words[-1]["end"]
         if start < previous - 0.025 or end > review["duration"] + 0.05:
             raise ValueError(f"Invalid line {index}: {start}-{end}, previous end {previous}")
         previous = end
         for code in LANGUAGES:
             text = row[code]
-            if code == "ja":
+            if code == language == "ja":
                 tokens = japanese_tokens(words, kakasi, review.get("jaReadingOverrides", {}))
+            elif code == language == "en":
+                tokens = [{"text": word["word"].strip(), "start": round(word["start"], 3),
+                           "end": round(word["end"], 3), "alignment": "reviewed-asr-word-span"}
+                          for word in words]
             else:
-                tokens = ([{"text": word} for word in text.split()] if code == "en"
-                          else chinese_tokens(text, row.get("zhPinyinOverrides", [])))
+                if code == "ja":
+                    tokens = [{"text": part["orig"], **({"reading": review.get("jaReadingOverrides", {}).get(part["orig"], part["hira"])}
+                              if re.search(r"[\u3400-\u9fff]", part["orig"]) else {})}
+                              for part in kakasi.convert(text)]
+                else:
+                    tokens = ([{"text": word} for word in text.split()] if code == "en"
+                              else chinese_tokens(text, row.get("zhPinyinOverrides", [])))
                 for i, token in enumerate(tokens):
                     token.update(start=round(start + (end - start) * i / len(tokens), 3),
                                  end=round(start + (end - start) * (i + 1) / len(tokens), 3),
@@ -138,9 +151,9 @@ def export(review, sources, audio, output):
                                   "correction": review["reviewStatus"], "timing": review["timingStatus"],
                                   "releaseStage": review.get("releaseStage", "published"), "notes": review["notes"]}}
         (output / f"{code}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
-    (output / "lyrics.reviewed.txt").write_text("\n".join(x["ja"] for x in review["lines"]) + "\n")
+    (output / "lyrics.reviewed.txt").write_text("\n".join(x[language] for x in review["lines"]) + "\n")
     lrc = [f"[ti:{review['title']}]", "[ar:Musia]"]
-    for row in tracks["ja"]:
+    for row in tracks[language]:
         minutes, seconds = divmod(row["start"], 60)
         lrc.append(f"[{int(minutes):02d}:{seconds:05.2f}]{row['text']}")
     (output / "lyrics.reviewed.lrc").write_text("\n".join(lrc) + "\n")

@@ -1,0 +1,1447 @@
+{
+  "mediaId": "im-a-spy",
+  "title": "我是间谍 · I'm a Spy",
+  "artist": "Musia",
+  "vocalSet": "en-vocal",
+  "vocalLanguage": "en",
+  "duration": 184,
+  "jaReadingOverrides": {
+    "君": "きみ",
+    "人": "ひと",
+    "通る": "とおる"
+  },
+  "audioSha256": "9179b878e74999ff6468fc784783c0b916363569f8664c605ff66346a173c62a",
+  "sources": {
+    "stem": {
+      "path": "data/creative_projects/im-a-spy-20261111/review/111101/evidence-stem.json",
+      "sha256": "3920b6f9ad91dee8f0e27b44c83efb3f69477bf11985643ebe2d620d3b27b024"
+    },
+    "mix": {
+      "path": "data/creative_projects/im-a-spy-20261111/review/111101/evidence-mix.json",
+      "sha256": "3ce99037d5ce36b8017f815f5a3a8518d664d52a894251df24bf4832f0e051e4"
+    },
+    "pipeline": {
+      "path": "data/creative_projects/im-a-spy-20261111/review/111101/evidence-pipeline.json",
+      "sha256": "5d1a0687816f1706e3a4d87935b476a6c513706162c482a51bc226a22914345f"
+    }
+  },
+  "independentEvidence": [
+    {
+      "path": "data/creative_projects/im-a-spy-20261111/review/111101/moss-lyrics.txt",
+      "sha256": "e085ebcf7ee81bedb8a95cb65ae3546419ff063bfb9789e0fa8b3c710f67bdb9"
+    },
+    {
+      "path": "data/creative_projects/im-a-spy-20261111/review/111101/outro-focus.json",
+      "sha256": "c5aa52f8b2065fa2f92caf930802c7b0a99e640e90a11b9238cf8bda33b1135b"
+    }
+  ],
+  "reviewStatus": "Selected-audio large-v3 full/stem no-VAD review against intended lyrics; independent MOSS cross-check",
+  "timingStatus": "ASR word anchors, approximate boundaries; translations use line-relative highlighting",
+  "notes": [
+    "Source-close wording is preserved; changed repeats are reflected in the actual sung structure.",
+    "Independent MOSS and two focused outro windows confirm three spy repetitions, including the extra 168-second hook missed by stem-only ASR.",
+    "The first sky comparison is omitted in this take; do not insert unsung text.",
+    "ASR-only closing credits and zero-duration duplicate outro are excluded.",
+    "Musical quality screening is not a human listening approval."
+  ],
+  "lines": [
+    {
+      "en": "I'm a spy, I'm a spy",
+      "zh-Hans": "我是个间谍，我是个间谍",
+      "ja": "僕はスパイ、僕はスパイ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 0
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        18.62,
+        20.94
+      ]
+    },
+    {
+      "en": "Don't you ask me why",
+      "zh-Hans": "别问我为什么",
+      "ja": "理由は聞かないで",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 1,
+          "words": [
+            0,
+            5
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        21.86,
+        23.68
+      ]
+    },
+    {
+      "en": "You are in my eyes",
+      "zh-Hans": "我的眼里都是你",
+      "ja": "僕の瞳には君がいる",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 1,
+          "words": [
+            5,
+            10
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " you",
+          "text": "You",
+          "reason": "Sentence-initial capitalization only"
+        }
+      ],
+      "reviewedSpan": [
+        23.68,
+        25.9
+      ]
+    },
+    {
+      "en": "I don't know, I don't know",
+      "zh-Hans": "我不知道，我不知道",
+      "ja": "わからない、わからない",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 2
+        },
+        {
+          "source": "stem",
+          "segment": 3,
+          "words": [
+            3,
+            6
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        27.72,
+        30.48
+      ]
+    },
+    {
+      "en": "How to let you go",
+      "zh-Hans": "该怎样放开你",
+      "ja": "どうすれば君を手放せるのか",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 3,
+          "words": [
+            6,
+            11
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " how",
+          "text": "How",
+          "reason": "Sentence-initial capitalization only"
+        }
+      ],
+      "reviewedSpan": [
+        30.48,
+        32.92
+      ]
+    },
+    {
+      "en": "I won't tell a lie",
+      "zh-Hans": "我不会说谎",
+      "ja": "嘘はつかないよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 4,
+          "words": [
+            0,
+            5
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        32.92,
+        34.2
+      ]
+    },
+    {
+      "en": "And I won't just say bye-bye",
+      "zh-Hans": "也不会轻易说再见",
+      "ja": "簡単にさよならなんて言わない",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 4,
+          "words": [
+            5,
+            12
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " and",
+          "text": "And",
+          "reason": "Sentence-initial capitalization only"
+        },
+        {
+          "words": [
+            5,
+            7
+          ],
+          "source": " bye-bye",
+          "text": "bye-bye",
+          "reason": "Display the two recognized bye syllables as one hyphenated word, retaining their full span"
+        }
+      ],
+      "reviewedSpan": [
+        34.3,
+        36.52
+      ]
+    },
+    {
+      "en": "I'm a spy, I'm a spy",
+      "zh-Hans": "我是个间谍，我是个间谍",
+      "ja": "僕はスパイ、僕はスパイ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 5,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        37.3,
+        39.82
+      ]
+    },
+    {
+      "en": "Don't you ask me why",
+      "zh-Hans": "别问我为什么",
+      "ja": "理由は聞かないで",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 5,
+          "words": [
+            6,
+            11
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " don't",
+          "text": "Don't",
+          "reason": "Sentence-initial capitalization only"
+        }
+      ],
+      "reviewedSpan": [
+        40.02,
+        42.22
+      ]
+    },
+    {
+      "en": "You're the apple of my eye",
+      "zh-Hans": "你是我最珍爱的人",
+      "ja": "君は僕のかけがえのない人",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 6,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        42.22,
+        44.64
+      ]
+    },
+    {
+      "en": "And I won't just say bye-bye",
+      "zh-Hans": "也不会轻易说再见",
+      "ja": "簡単にさよならなんて言わない",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 6,
+          "words": [
+            6,
+            13
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " and",
+          "text": "And",
+          "reason": "Sentence-initial capitalization only"
+        },
+        {
+          "words": [
+            5,
+            7
+          ],
+          "source": " bye-bye",
+          "text": "bye-bye",
+          "reason": "Display the two recognized bye syllables as one hyphenated word, retaining their full span"
+        }
+      ],
+      "reviewedSpan": [
+        44.84,
+        46.9
+      ]
+    },
+    {
+      "en": "I'm a spy, I'm a spy",
+      "zh-Hans": "我是个间谍，我是个间谍",
+      "ja": "僕はスパイ、僕はスパイ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 7,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        46.9,
+        49.1
+      ]
+    },
+    {
+      "en": "Don't you ask me why",
+      "zh-Hans": "别问我为什么",
+      "ja": "理由は聞かないで",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 7,
+          "words": [
+            6,
+            11
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " don't",
+          "text": "Don't",
+          "reason": "Sentence-initial capitalization only"
+        }
+      ],
+      "reviewedSpan": [
+        49.36,
+        51.48
+      ]
+    },
+    {
+      "en": "You're the apple of my eye",
+      "zh-Hans": "你是我最珍爱的人",
+      "ja": "君は僕のかけがえのない人",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 8,
+          "words": [
+            0,
+            6
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        51.48,
+        53.9
+      ]
+    },
+    {
+      "en": "Please, baby, don't you cry",
+      "zh-Hans": "亲爱的，请别哭泣",
+      "ja": "ねえ、愛しい人、泣かないで",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 8,
+          "words": [
+            6,
+            11
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " please",
+          "text": "Please",
+          "reason": "Sentence-initial capitalization only"
+        }
+      ],
+      "reviewedSpan": [
+        54.1,
+        56.12
+      ]
+    },
+    {
+      "en": "I won't lie, I won't lie",
+      "zh-Hans": "我不会说谎，不会说谎",
+      "ja": "嘘はつかない、つかないよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 9,
+          "words": [
+            0,
+            3
+          ]
+        },
+        {
+          "source": "stem",
+          "segment": 10,
+          "words": [
+            3,
+            6
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        56.12,
+        58.52
+      ]
+    },
+    {
+      "en": "Even if the stars collide",
+      "zh-Hans": "即使群星相撞",
+      "ja": "たとえ星たちがぶつかっても",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 11
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        58.52,
+        60.72
+      ]
+    },
+    {
+      "en": "I won't ever say bye-bye",
+      "zh-Hans": "我永远不会说再见",
+      "ja": "決してさよならは言わない",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 12
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            4,
+            6
+          ],
+          "source": " bye-bye",
+          "text": "bye-bye",
+          "reason": "Display the two recognized bye syllables as one hyphenated word, retaining their full span"
+        }
+      ],
+      "reviewedSpan": [
+        62.86,
+        65.56
+      ]
+    },
+    {
+      "en": "Please, baby, don't you cry",
+      "zh-Hans": "亲爱的，请别哭泣",
+      "ja": "ねえ、愛しい人、泣かないで",
+      "anchors": [
+        {
+          "source": "pipeline",
+          "segment": 16
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        67.39,
+        70.89
+      ]
+    },
+    {
+      "en": "I'm a fool, I'm a fool",
+      "zh-Hans": "我是个傻瓜，是个傻瓜",
+      "ja": "僕はばかだ、恋するばかだ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 14
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        79.0,
+        81.36
+      ]
+    },
+    {
+      "en": "Breaking every rule",
+      "zh-Hans": "打破所有的规矩",
+      "ja": "決まりなんて全部破って",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 15
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        83.24,
+        84.96
+      ]
+    },
+    {
+      "en": "Trying to play it cool",
+      "zh-Hans": "还想装作毫不在乎",
+      "ja": "平気なふりをしてみても",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 16,
+          "words": [
+            3,
+            8
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            0,
+            1
+          ],
+          "source": " trying",
+          "text": "Trying",
+          "reason": "Sentence-initial capitalization only"
+        }
+      ],
+      "reviewedSpan": [
+        85.08,
+        87.44
+      ]
+    },
+    {
+      "en": "But I'm falling into you",
+      "zh-Hans": "却已深深为你着迷",
+      "ja": "君にどんどん惹かれてゆく",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 17
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        87.44,
+        90.84
+      ]
+    },
+    {
+      "en": "I can hide, I can hide",
+      "zh-Hans": "我可以藏起，可以藏起",
+      "ja": "隠せるよ、隠せるよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 18
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        92.58,
+        95.58
+      ]
+    },
+    {
+      "en": "Every secret deep inside",
+      "zh-Hans": "心底所有的秘密",
+      "ja": "胸の奥の秘密は何もかも",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 19
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        95.58,
+        97.84
+      ]
+    },
+    {
+      "en": "But whenever you walk by",
+      "zh-Hans": "可每当你从身旁走过",
+      "ja": "でも君がそばを通るたび",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 20
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        97.84,
+        100.36
+      ]
+    },
+    {
+      "en": "All my secrets come alive",
+      "zh-Hans": "所有秘密都跃上心头",
+      "ja": "秘密がみんな目を覚ます",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 21
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        100.36,
+        102.54
+      ]
+    },
+    {
+      "en": "If I fly, would you fly?",
+      "zh-Hans": "如果我飞翔，你愿一起飞吗",
+      "ja": "僕が飛んだら、君も飛ぶ？",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 22
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        102.54,
+        105.76
+      ]
+    },
+    {
+      "en": "If I hide, would you find me?",
+      "zh-Hans": "如果我藏起，你会找到我吗",
+      "ja": "僕が隠れたら、見つけてくれる？",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 23
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        107.09,
+        111.02
+      ]
+    },
+    {
+      "en": "If I lose my way tonight",
+      "zh-Hans": "如果今夜我迷失了方向",
+      "ja": "今夜、道に迷ったら",
+      "anchors": [
+        {
+          "source": "pipeline",
+          "segment": 27
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        111.81,
+        114.85
+      ]
+    },
+    {
+      "en": "Would you be my guiding light?",
+      "zh-Hans": "你愿成为指引我的光吗",
+      "ja": "僕を導く光になってくれる？",
+      "anchors": [
+        {
+          "source": "mix",
+          "segment": 26
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        115.98,
+        119.92
+      ]
+    },
+    {
+      "en": "I'm a cool guy, don't you cry",
+      "zh-Hans": "我可是个酷男孩，别哭啦",
+      "ja": "僕はクールな男さ、泣かないで",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 27
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        121.5,
+        124.54
+      ]
+    },
+    {
+      "en": "Take my hand and we can fly",
+      "zh-Hans": "牵起我的手，我们就能飞翔",
+      "ja": "手をつないだら、一緒に飛べる",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 28
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        124.54,
+        129.26
+      ]
+    },
+    {
+      "en": "I'm a spy, I'm a spy",
+      "zh-Hans": "我是个间谍，我是个间谍",
+      "ja": "僕はスパイ、僕はスパイ",
+      "anchors": [
+        {
+          "source": "mix",
+          "segment": 29,
+          "words": [
+            0,
+            1
+          ]
+        },
+        {
+          "source": "stem",
+          "segment": 29,
+          "words": [
+            1,
+            6
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        130.26,
+        133.0
+      ]
+    },
+    {
+      "en": "Don't you ask me why",
+      "zh-Hans": "别问我为什么",
+      "ja": "理由は聞かないで",
+      "anchors": [
+        {
+          "source": "mix",
+          "segment": 30
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        134.1,
+        136.32
+      ]
+    },
+    {
+      "en": "You are always in my eyes",
+      "zh-Hans": "我的眼里始终都有你",
+      "ja": "僕の瞳にはいつも君がいる",
+      "anchors": [
+        {
+          "source": "mix",
+          "segment": 31
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        136.32,
+        139.06
+      ]
+    },
+    {
+      "en": "Like a diamond in the sky",
+      "zh-Hans": "像天空中的一颗钻石",
+      "ja": "空にきらめくダイヤのように",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 32
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        139.12,
+        141.22
+      ]
+    },
+    {
+      "en": "I won't lie, I won't lie",
+      "zh-Hans": "我不会说谎，不会说谎",
+      "ja": "嘘はつかない、つかないよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            4,
+            10
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        141.42,
+        143.66
+      ]
+    },
+    {
+      "en": "I won't leave you behind",
+      "zh-Hans": "我不会丢下你",
+      "ja": "君を置いていかないよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            10,
+            15
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        143.72,
+        145.6
+      ]
+    },
+    {
+      "en": "I won't ever say bye-bye",
+      "zh-Hans": "我永远不会说再见",
+      "ja": "決してさよならは言わない",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            15,
+            21
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            4,
+            6
+          ],
+          "source": " bye bye.",
+          "text": "bye-bye",
+          "reason": "Display the two recognized bye syllables as one hyphenated word, retaining their full span"
+        }
+      ],
+      "reviewedSpan": [
+        146.16,
+        148.26
+      ]
+    },
+    {
+      "en": "I won't lie, I won't lie",
+      "zh-Hans": "我不会说谎，不会说谎",
+      "ja": "嘘はつかない、つかないよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            21,
+            27
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        148.92,
+        151.92
+      ]
+    },
+    {
+      "en": "I won't leave you behind",
+      "zh-Hans": "我不会丢下你",
+      "ja": "君を置いていかないよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            27,
+            32
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        151.92,
+        155.08
+      ]
+    },
+    {
+      "en": "I won't ever say bye-bye",
+      "zh-Hans": "我永远不会说再见",
+      "ja": "決してさよならは言わない",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            32,
+            38
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            4,
+            6
+          ],
+          "source": " bye bye.",
+          "text": "bye-bye",
+          "reason": "Display the two recognized bye syllables as one hyphenated word, retaining their full span"
+        }
+      ],
+      "reviewedSpan": [
+        155.4,
+        157.68
+      ]
+    },
+    {
+      "en": "Please, baby, don't you cry",
+      "zh-Hans": "亲爱的，请别哭泣",
+      "ja": "ねえ、愛しい人、泣かないで",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 33,
+          "words": [
+            38,
+            43
+          ]
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            2,
+            4
+          ],
+          "source": "don't you",
+          "text": "don't you",
+          "reason": "Merge zero-duration 'you' into its positive enclosing ASR phrase; no invented word timing"
+        }
+      ],
+      "reviewedSpan": [
+        157.74,
+        160.0
+      ]
+    },
+    {
+      "en": "I'm a spy",
+      "zh-Hans": "我是个间谍",
+      "ja": "僕はスパイ",
+      "anchors": [
+        {
+          "source": "mix",
+          "segment": 40,
+          "words": [
+            0,
+            3
+          ]
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        168.0,
+        169.24
+      ]
+    },
+    {
+      "en": "I'm a spy, I'm a spy",
+      "zh-Hans": "我是个间谍，我是个间谍",
+      "ja": "僕はスパイ、僕はスパイ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 34
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        169.32,
+        171.62
+      ]
+    },
+    {
+      "en": "Don't you ask me why",
+      "zh-Hans": "别问我为什么",
+      "ja": "理由は聞かないで",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 35
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        171.62,
+        173.82
+      ]
+    },
+    {
+      "en": "You're the apple of my eye",
+      "zh-Hans": "你是我最珍爱的人",
+      "ja": "君は僕のかけがえのない人",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 36
+        }
+      ],
+      "replacements": [],
+      "reviewedSpan": [
+        173.82,
+        176.6
+      ]
+    },
+    {
+      "en": "And I won't say bye-bye",
+      "zh-Hans": "我不会说再见",
+      "ja": "さよならなんて言わないよ",
+      "anchors": [
+        {
+          "source": "stem",
+          "segment": 37
+        }
+      ],
+      "replacements": [
+        {
+          "words": [
+            4,
+            6
+          ],
+          "source": " bye-bye",
+          "text": "bye-bye",
+          "reason": "Display the two recognized bye syllables as one hyphenated word, retaining their full span"
+        }
+      ],
+      "reviewedSpan": [
+        178.38,
+        180.94
+      ]
+    }
+  ],
+  "plannedCoverage": [
+    {
+      "input": "I'm a spy, I'm a spy",
+      "status": "represented",
+      "publicLines": [
+        1,
+        8,
+        12,
+        34,
+        46
+      ]
+    },
+    {
+      "input": "Don't you ask me why",
+      "status": "represented",
+      "publicLines": [
+        2,
+        9,
+        13,
+        35,
+        47
+      ]
+    },
+    {
+      "input": "You are in my eyes",
+      "status": "represented",
+      "publicLines": [
+        3
+      ]
+    },
+    {
+      "input": "Like the stars up in the sky",
+      "status": "not-recovered-in-selected-performance",
+      "publicLines": []
+    },
+    {
+      "input": "I don't know, I don't know",
+      "status": "represented",
+      "publicLines": [
+        4
+      ]
+    },
+    {
+      "input": "How to let you go",
+      "status": "represented",
+      "publicLines": [
+        5
+      ]
+    },
+    {
+      "input": "I won't tell a lie",
+      "status": "represented",
+      "publicLines": [
+        6
+      ]
+    },
+    {
+      "input": "And I won't just say bye-bye",
+      "status": "represented",
+      "publicLines": [
+        7,
+        11
+      ]
+    },
+    {
+      "input": "I'm a spy, I'm a spy",
+      "status": "represented",
+      "publicLines": [
+        1,
+        8,
+        12,
+        34,
+        46
+      ]
+    },
+    {
+      "input": "Don't you ask me why",
+      "status": "represented",
+      "publicLines": [
+        2,
+        9,
+        13,
+        35,
+        47
+      ]
+    },
+    {
+      "input": "You're the apple of my eye",
+      "status": "represented",
+      "publicLines": [
+        10,
+        14,
+        48
+      ]
+    },
+    {
+      "input": "Please, baby, don't you cry",
+      "status": "represented",
+      "publicLines": [
+        15,
+        19,
+        44
+      ]
+    },
+    {
+      "input": "I won't lie, I won't lie",
+      "status": "represented",
+      "publicLines": [
+        16,
+        38,
+        41
+      ]
+    },
+    {
+      "input": "Even if the stars collide",
+      "status": "represented",
+      "publicLines": [
+        17
+      ]
+    },
+    {
+      "input": "I won't ever say bye-bye",
+      "status": "represented",
+      "publicLines": [
+        18,
+        40,
+        43
+      ]
+    },
+    {
+      "input": "Please, baby, don't you cry",
+      "status": "represented",
+      "publicLines": [
+        15,
+        19,
+        44
+      ]
+    },
+    {
+      "input": "I'm a fool, I'm a fool",
+      "status": "represented",
+      "publicLines": [
+        20
+      ]
+    },
+    {
+      "input": "Breaking every rule",
+      "status": "represented",
+      "publicLines": [
+        21
+      ]
+    },
+    {
+      "input": "Trying to play it cool",
+      "status": "represented",
+      "publicLines": [
+        22
+      ]
+    },
+    {
+      "input": "But I'm falling into you",
+      "status": "represented",
+      "publicLines": [
+        23
+      ]
+    },
+    {
+      "input": "I can hide, I can hide",
+      "status": "represented",
+      "publicLines": [
+        24
+      ]
+    },
+    {
+      "input": "Every secret deep inside",
+      "status": "represented",
+      "publicLines": [
+        25
+      ]
+    },
+    {
+      "input": "But whenever you walk by",
+      "status": "represented",
+      "publicLines": [
+        26
+      ]
+    },
+    {
+      "input": "All my secrets come alive",
+      "status": "represented",
+      "publicLines": [
+        27
+      ]
+    },
+    {
+      "input": "If I fly, would you fly?",
+      "status": "represented",
+      "publicLines": [
+        28
+      ]
+    },
+    {
+      "input": "If I hide, would you find me?",
+      "status": "represented",
+      "publicLines": [
+        29
+      ]
+    },
+    {
+      "input": "If I lose my way tonight",
+      "status": "represented",
+      "publicLines": [
+        30
+      ]
+    },
+    {
+      "input": "Would you be my guiding light?",
+      "status": "represented",
+      "publicLines": [
+        31
+      ]
+    },
+    {
+      "input": "I'm a cool guy, don't you cry",
+      "status": "represented",
+      "publicLines": [
+        32
+      ]
+    },
+    {
+      "input": "Take my hand and we can fly",
+      "status": "represented",
+      "publicLines": [
+        33
+      ]
+    },
+    {
+      "input": "I'm a spy, I'm a spy",
+      "status": "represented",
+      "publicLines": [
+        1,
+        8,
+        12,
+        34,
+        46
+      ]
+    },
+    {
+      "input": "Don't you ask me why",
+      "status": "represented",
+      "publicLines": [
+        2,
+        9,
+        13,
+        35,
+        47
+      ]
+    },
+    {
+      "input": "You are always in my eyes",
+      "status": "represented",
+      "publicLines": [
+        36
+      ]
+    },
+    {
+      "input": "Like a diamond in the sky",
+      "status": "represented",
+      "publicLines": [
+        37
+      ]
+    },
+    {
+      "input": "I won't lie, I won't lie",
+      "status": "represented",
+      "publicLines": [
+        16,
+        38,
+        41
+      ]
+    },
+    {
+      "input": "I won't leave you behind",
+      "status": "represented",
+      "publicLines": [
+        39,
+        42
+      ]
+    },
+    {
+      "input": "I won't ever say bye-bye",
+      "status": "represented",
+      "publicLines": [
+        18,
+        40,
+        43
+      ]
+    },
+    {
+      "input": "Please, baby, don't you cry",
+      "status": "represented",
+      "publicLines": [
+        15,
+        19,
+        44
+      ]
+    },
+    {
+      "input": "I'm a spy, I'm a spy",
+      "status": "represented",
+      "publicLines": [
+        1,
+        8,
+        12,
+        34,
+        46
+      ]
+    },
+    {
+      "input": "Don't you ask me why",
+      "status": "represented",
+      "publicLines": [
+        2,
+        9,
+        13,
+        35,
+        47
+      ]
+    },
+    {
+      "input": "You're the apple of my eye",
+      "status": "represented",
+      "publicLines": [
+        10,
+        14,
+        48
+      ]
+    },
+    {
+      "input": "And I won't say bye-bye",
+      "status": "represented",
+      "publicLines": [
+        49
+      ]
+    }
+  ]
+}

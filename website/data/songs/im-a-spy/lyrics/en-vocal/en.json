@@ -1,0 +1,2064 @@
+{
+  "schema": "fun.lazying.media.text-track.v1",
+  "version": 1,
+  "mediaId": "im-a-spy",
+  "language": {
+    "code": "en",
+    "label": "English",
+    "nativeLabel": "English",
+    "script": "Latn"
+  },
+  "lines": [
+    {
+      "id": "l01",
+      "start": 18.62,
+      "end": 20.94,
+      "text": "I'm a spy, I'm a spy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 18.62,
+          "end": 19.3,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 19.3,
+          "end": 19.46,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 19.46,
+          "end": 19.8,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I'm",
+          "start": 20.04,
+          "end": 20.52,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 20.52,
+          "end": 20.66,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy",
+          "start": 20.66,
+          "end": 20.94,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l02",
+      "start": 21.86,
+      "end": 23.68,
+      "text": "Don't you ask me why",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Don't",
+          "start": 21.86,
+          "end": 22.54,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 22.54,
+          "end": 22.7,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ask",
+          "start": 22.7,
+          "end": 23.1,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "me",
+          "start": 23.1,
+          "end": 23.34,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "why",
+          "start": 23.34,
+          "end": 23.68,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l03",
+      "start": 23.68,
+      "end": 25.9,
+      "text": "You are in my eyes",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 23.68,
+          "end": 24.14,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "are",
+          "start": 24.14,
+          "end": 24.36,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "in",
+          "start": 24.36,
+          "end": 24.78,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 24.78,
+          "end": 25.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "eyes",
+          "start": 25.18,
+          "end": 25.9,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l04",
+      "start": 27.72,
+      "end": 30.48,
+      "text": "I don't know, I don't know",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 27.72,
+          "end": 28.56,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "don't",
+          "start": 28.56,
+          "end": 28.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "know",
+          "start": 28.98,
+          "end": 29.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 29.34,
+          "end": 29.92,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "don't",
+          "start": 29.92,
+          "end": 30.22,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "know",
+          "start": 30.22,
+          "end": 30.48,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l05",
+      "start": 30.48,
+      "end": 32.92,
+      "text": "How to let you go",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "How",
+          "start": 30.48,
+          "end": 31.68,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "to",
+          "start": 31.68,
+          "end": 31.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "let",
+          "start": 31.98,
+          "end": 32.32,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 32.32,
+          "end": 32.62,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "go",
+          "start": 32.62,
+          "end": 32.92,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l06",
+      "start": 32.92,
+      "end": 34.2,
+      "text": "I won't tell a lie",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 32.92,
+          "end": 33.48,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 33.48,
+          "end": 33.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "tell",
+          "start": 33.64,
+          "end": 33.78,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 33.78,
+          "end": 33.92,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lie,",
+          "start": 33.92,
+          "end": 34.2,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l07",
+      "start": 34.3,
+      "end": 36.52,
+      "text": "And I won't just say bye-bye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "And",
+          "start": 34.3,
+          "end": 34.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 34.64,
+          "end": 34.9,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 34.9,
+          "end": 35.36,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "just",
+          "start": 35.36,
+          "end": 35.52,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "say",
+          "start": 35.52,
+          "end": 35.8,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "bye-bye",
+          "start": 35.8,
+          "end": 36.52,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l08",
+      "start": 37.3,
+      "end": 39.82,
+      "text": "I'm a spy, I'm a spy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 37.3,
+          "end": 37.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 37.98,
+          "end": 38.14,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 38.14,
+          "end": 38.58,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I'm",
+          "start": 38.94,
+          "end": 39.36,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 39.36,
+          "end": 39.52,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 39.52,
+          "end": 39.82,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l09",
+      "start": 40.02,
+      "end": 42.22,
+      "text": "Don't you ask me why",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Don't",
+          "start": 40.02,
+          "end": 40.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 40.64,
+          "end": 40.68,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ask",
+          "start": 40.68,
+          "end": 41.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "me",
+          "start": 41.18,
+          "end": 41.6,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "why",
+          "start": 41.6,
+          "end": 42.22,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l10",
+      "start": 42.22,
+      "end": 44.64,
+      "text": "You're the apple of my eye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You're",
+          "start": 42.22,
+          "end": 42.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "the",
+          "start": 42.82,
+          "end": 42.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "apple",
+          "start": 42.98,
+          "end": 43.54,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "of",
+          "start": 43.54,
+          "end": 43.9,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 43.9,
+          "end": 44.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "eye,",
+          "start": 44.18,
+          "end": 44.64,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l11",
+      "start": 44.84,
+      "end": 46.9,
+      "text": "And I won't just say bye-bye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "And",
+          "start": 44.84,
+          "end": 45.04,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 45.04,
+          "end": 45.38,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 45.38,
+          "end": 45.78,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "just",
+          "start": 45.78,
+          "end": 45.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "say",
+          "start": 45.98,
+          "end": 46.22,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "bye-bye",
+          "start": 46.22,
+          "end": 46.9,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "start": 46.9,
+      "end": 49.1,
+      "text": "I'm a spy, I'm a spy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 46.9,
+          "end": 47.24,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 47.24,
+          "end": 47.42,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 47.42,
+          "end": 47.92,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I'm",
+          "start": 48.22,
+          "end": 48.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 48.64,
+          "end": 48.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 48.82,
+          "end": 49.1,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l13",
+      "start": 49.36,
+      "end": 51.48,
+      "text": "Don't you ask me why",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Don't",
+          "start": 49.36,
+          "end": 49.92,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 49.92,
+          "end": 49.96,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ask",
+          "start": 49.96,
+          "end": 50.48,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "me",
+          "start": 50.48,
+          "end": 50.88,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "why",
+          "start": 50.88,
+          "end": 51.48,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l14",
+      "start": 51.48,
+      "end": 53.9,
+      "text": "You're the apple of my eye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You're",
+          "start": 51.48,
+          "end": 52.1,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "the",
+          "start": 52.1,
+          "end": 52.28,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "apple",
+          "start": 52.28,
+          "end": 52.86,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "of",
+          "start": 52.86,
+          "end": 53.16,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 53.16,
+          "end": 53.5,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "eye,",
+          "start": 53.5,
+          "end": 53.9,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l15",
+      "start": 54.1,
+      "end": 56.12,
+      "text": "Please, baby, don't you cry",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Please",
+          "start": 54.1,
+          "end": 54.44,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "baby",
+          "start": 54.44,
+          "end": 54.96,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "don't",
+          "start": 54.96,
+          "end": 55.58,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 55.58,
+          "end": 55.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "cry",
+          "start": 55.64,
+          "end": 56.12,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l16",
+      "start": 56.12,
+      "end": 58.52,
+      "text": "I won't lie, I won't lie",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 56.12,
+          "end": 56.42,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 56.42,
+          "end": 57.22,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lie,",
+          "start": 57.22,
+          "end": 57.34,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 57.44,
+          "end": 57.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 57.82,
+          "end": 58.2,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lie",
+          "start": 58.2,
+          "end": 58.52,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l17",
+      "start": 58.52,
+      "end": 60.72,
+      "text": "Even if the stars collide",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Even",
+          "start": 58.52,
+          "end": 59.08,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "if",
+          "start": 59.08,
+          "end": 59.6,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "the",
+          "start": 59.6,
+          "end": 59.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "stars",
+          "start": 59.82,
+          "end": 60.2,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "collide",
+          "start": 60.2,
+          "end": 60.72,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l18",
+      "start": 62.86,
+      "end": 65.56,
+      "text": "I won't ever say bye-bye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 62.86,
+          "end": 63.62,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 63.62,
+          "end": 64.04,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ever",
+          "start": 64.04,
+          "end": 64.34,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "say",
+          "start": 64.34,
+          "end": 64.74,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "bye-bye",
+          "start": 64.74,
+          "end": 65.56,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l19",
+      "start": 67.39,
+      "end": 70.89,
+      "text": "Please, baby, don't you cry",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Please,",
+          "start": 67.39,
+          "end": 68.21,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "baby,",
+          "start": 68.39,
+          "end": 69.07,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "don't",
+          "start": 69.11,
+          "end": 69.87,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 69.87,
+          "end": 69.93,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "cry",
+          "start": 69.93,
+          "end": 70.89,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l20",
+      "start": 79.0,
+      "end": 81.36,
+      "text": "I'm a fool, I'm a fool",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 79.0,
+          "end": 79.76,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 79.76,
+          "end": 79.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "fool,",
+          "start": 79.82,
+          "end": 80.2,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I'm",
+          "start": 80.36,
+          "end": 80.84,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 80.84,
+          "end": 81.04,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "fool",
+          "start": 81.04,
+          "end": 81.36,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l21",
+      "start": 83.24,
+      "end": 84.96,
+      "text": "Breaking every rule",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Breaking",
+          "start": 83.24,
+          "end": 84.12,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "every",
+          "start": 84.12,
+          "end": 84.56,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "rule",
+          "start": 84.56,
+          "end": 84.96,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l22",
+      "start": 85.08,
+      "end": 87.44,
+      "text": "Trying to play it cool",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Trying",
+          "start": 85.08,
+          "end": 85.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "to",
+          "start": 85.98,
+          "end": 86.54,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "play",
+          "start": 86.54,
+          "end": 86.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "it",
+          "start": 86.82,
+          "end": 87.04,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "cool",
+          "start": 87.04,
+          "end": 87.44,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l23",
+      "start": 87.44,
+      "end": 90.84,
+      "text": "But I'm falling into you",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "But",
+          "start": 87.44,
+          "end": 89.14,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I'm",
+          "start": 89.14,
+          "end": 89.44,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "falling",
+          "start": 89.44,
+          "end": 89.92,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "into",
+          "start": 89.92,
+          "end": 90.48,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 90.48,
+          "end": 90.84,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l24",
+      "start": 92.58,
+      "end": 95.58,
+      "text": "I can hide, I can hide",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 92.58,
+          "end": 93.44,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "can",
+          "start": 93.44,
+          "end": 93.78,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "hide,",
+          "start": 93.78,
+          "end": 94.3,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 94.46,
+          "end": 94.94,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "can",
+          "start": 94.94,
+          "end": 95.14,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "hide",
+          "start": 95.14,
+          "end": 95.58,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l25",
+      "start": 95.58,
+      "end": 97.84,
+      "text": "Every secret deep inside",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Every",
+          "start": 95.58,
+          "end": 96.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "secret",
+          "start": 96.18,
+          "end": 96.74,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "deep",
+          "start": 96.74,
+          "end": 97.28,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "inside",
+          "start": 97.28,
+          "end": 97.84,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l26",
+      "start": 97.84,
+      "end": 100.36,
+      "text": "But whenever you walk by",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "But",
+          "start": 97.84,
+          "end": 98.44,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "whenever",
+          "start": 98.44,
+          "end": 99.0,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 99.0,
+          "end": 99.62,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "walk",
+          "start": 99.62,
+          "end": 100.02,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "by",
+          "start": 100.02,
+          "end": 100.36,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l27",
+      "start": 100.36,
+      "end": 102.54,
+      "text": "All my secrets come alive",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "All",
+          "start": 100.36,
+          "end": 100.76,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 100.76,
+          "end": 101.06,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "secrets",
+          "start": 101.06,
+          "end": 101.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "come",
+          "start": 101.64,
+          "end": 101.96,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "alive",
+          "start": 101.96,
+          "end": 102.54,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l28",
+      "start": 102.54,
+      "end": 105.76,
+      "text": "If I fly, would you fly?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "If",
+          "start": 102.54,
+          "end": 102.96,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 102.96,
+          "end": 103.16,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "fly,",
+          "start": 103.16,
+          "end": 103.54,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "would",
+          "start": 104.1,
+          "end": 104.88,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 104.88,
+          "end": 105.26,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "fly?",
+          "start": 105.26,
+          "end": 105.76,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l29",
+      "start": 107.09,
+      "end": 111.02,
+      "text": "If I hide, would you find me?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "If",
+          "start": 107.09,
+          "end": 107.52,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 107.52,
+          "end": 107.88,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "hide,",
+          "start": 107.88,
+          "end": 108.6,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "would",
+          "start": 109.0,
+          "end": 109.6,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 109.6,
+          "end": 109.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "find",
+          "start": 109.98,
+          "end": 110.58,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "me?",
+          "start": 110.58,
+          "end": 111.02,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l30",
+      "start": 111.81,
+      "end": 114.85,
+      "text": "If I lose my way tonight",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "If",
+          "start": 111.81,
+          "end": 112.31,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 112.31,
+          "end": 112.47,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lose",
+          "start": 112.47,
+          "end": 112.97,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 112.97,
+          "end": 113.65,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "way",
+          "start": 113.65,
+          "end": 114.25,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "tonight",
+          "start": 114.25,
+          "end": 114.85,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l31",
+      "start": 115.98,
+      "end": 119.92,
+      "text": "Would you be my guiding light?",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Would",
+          "start": 115.98,
+          "end": 116.86,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 116.86,
+          "end": 117.16,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "be",
+          "start": 117.16,
+          "end": 117.46,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 117.46,
+          "end": 118.14,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "guiding",
+          "start": 118.14,
+          "end": 119.16,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "light?",
+          "start": 119.16,
+          "end": 119.92,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l32",
+      "start": 121.5,
+      "end": 124.54,
+      "text": "I'm a cool guy, don't you cry",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 121.5,
+          "end": 122.0,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 122.0,
+          "end": 122.06,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "cool",
+          "start": 122.06,
+          "end": 122.46,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "guy,",
+          "start": 122.46,
+          "end": 123.06,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "don't",
+          "start": 123.28,
+          "end": 123.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 123.82,
+          "end": 123.88,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "cry",
+          "start": 123.88,
+          "end": 124.54,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l33",
+      "start": 124.54,
+      "end": 129.26,
+      "text": "Take my hand and we can fly",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Take",
+          "start": 124.54,
+          "end": 125.3,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 125.3,
+          "end": 125.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "hand",
+          "start": 125.64,
+          "end": 126.3,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "and",
+          "start": 126.3,
+          "end": 126.8,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "we",
+          "start": 126.8,
+          "end": 128.26,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "can",
+          "start": 128.26,
+          "end": 128.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "fly",
+          "start": 128.64,
+          "end": 129.26,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l34",
+      "start": 130.26,
+      "end": 133.0,
+      "text": "I'm a spy, I'm a spy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 130.26,
+          "end": 131.14,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 131.14,
+          "end": 131.22,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 131.22,
+          "end": 131.76,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I'm",
+          "start": 132.04,
+          "end": 132.6,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 132.6,
+          "end": 132.74,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy",
+          "start": 132.74,
+          "end": 133.0,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l35",
+      "start": 134.1,
+      "end": 136.32,
+      "text": "Don't you ask me why",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Don't",
+          "start": 134.1,
+          "end": 134.98,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 134.98,
+          "end": 135.02,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ask",
+          "start": 135.02,
+          "end": 135.46,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "me",
+          "start": 135.46,
+          "end": 135.72,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "why",
+          "start": 135.72,
+          "end": 136.32,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l36",
+      "start": 136.32,
+      "end": 139.06,
+      "text": "You are always in my eyes",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You",
+          "start": 136.32,
+          "end": 137.1,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "are",
+          "start": 137.1,
+          "end": 137.48,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "always",
+          "start": 137.48,
+          "end": 138.0,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "in",
+          "start": 138.0,
+          "end": 138.36,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 138.36,
+          "end": 138.58,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "eyes",
+          "start": 138.58,
+          "end": 139.06,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l37",
+      "start": 139.12,
+      "end": 141.22,
+      "text": "Like a diamond in the sky",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Like",
+          "start": 139.12,
+          "end": 139.56,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 139.56,
+          "end": 139.68,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "diamond",
+          "start": 139.68,
+          "end": 140.24,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "in",
+          "start": 140.24,
+          "end": 140.58,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "the",
+          "start": 140.58,
+          "end": 140.72,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "sky",
+          "start": 140.72,
+          "end": 141.22,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l38",
+      "start": 141.42,
+      "end": 143.66,
+      "text": "I won't lie, I won't lie",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 141.42,
+          "end": 141.8,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 141.8,
+          "end": 142.2,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lie.",
+          "start": 142.2,
+          "end": 142.48,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 142.6,
+          "end": 142.96,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 142.96,
+          "end": 143.3,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lie.",
+          "start": 143.3,
+          "end": 143.66,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l39",
+      "start": 143.72,
+      "end": 145.6,
+      "text": "I won't leave you behind",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 143.72,
+          "end": 144.1,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 144.1,
+          "end": 144.42,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "leave",
+          "start": 144.42,
+          "end": 144.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 144.82,
+          "end": 145.1,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "behind.",
+          "start": 145.1,
+          "end": 145.6,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l40",
+      "start": 146.16,
+      "end": 148.26,
+      "text": "I won't ever say bye-bye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 146.16,
+          "end": 146.5,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 146.5,
+          "end": 146.94,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ever",
+          "start": 146.94,
+          "end": 147.2,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "say",
+          "start": 147.2,
+          "end": 147.66,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "bye-bye",
+          "start": 147.66,
+          "end": 148.26,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l41",
+      "start": 148.92,
+      "end": 151.92,
+      "text": "I won't lie, I won't lie",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 148.92,
+          "end": 149.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 149.64,
+          "end": 150.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lie.",
+          "start": 150.18,
+          "end": 150.66,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 150.84,
+          "end": 151.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 151.18,
+          "end": 151.56,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "lie.",
+          "start": 151.56,
+          "end": 151.92,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l42",
+      "start": 151.92,
+      "end": 155.08,
+      "text": "I won't leave you behind",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 151.92,
+          "end": 152.18,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 152.18,
+          "end": 153.9,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "leave",
+          "start": 153.9,
+          "end": 154.12,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 154.12,
+          "end": 154.46,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "behind.",
+          "start": 154.46,
+          "end": 155.08,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l43",
+      "start": 155.4,
+      "end": 157.68,
+      "text": "I won't ever say bye-bye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I",
+          "start": 155.4,
+          "end": 155.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 155.82,
+          "end": 156.26,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ever",
+          "start": 156.26,
+          "end": 156.6,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "say",
+          "start": 156.6,
+          "end": 157.0,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "bye-bye",
+          "start": 157.0,
+          "end": 157.68,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l44",
+      "start": 157.74,
+      "end": 160.0,
+      "text": "Please, baby, don't you cry",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Please,",
+          "start": 157.74,
+          "end": 158.4,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "baby,",
+          "start": 158.4,
+          "end": 158.9,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "don't you",
+          "start": 158.94,
+          "end": 159.42,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "cry.",
+          "start": 159.42,
+          "end": 160.0,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l45",
+      "start": 168.0,
+      "end": 169.24,
+      "text": "I'm a spy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 168.0,
+          "end": 168.64,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 168.64,
+          "end": 168.7,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 168.7,
+          "end": 169.24,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l46",
+      "start": 169.32,
+      "end": 171.62,
+      "text": "I'm a spy, I'm a spy",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "I'm",
+          "start": 169.32,
+          "end": 170.08,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 170.08,
+          "end": 170.16,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy,",
+          "start": 170.16,
+          "end": 170.48,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I'm",
+          "start": 170.78,
+          "end": 171.16,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "a",
+          "start": 171.16,
+          "end": 171.26,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "spy",
+          "start": 171.26,
+          "end": 171.62,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l47",
+      "start": 171.62,
+      "end": 173.82,
+      "text": "Don't you ask me why",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "Don't",
+          "start": 171.62,
+          "end": 172.52,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "you",
+          "start": 172.52,
+          "end": 172.58,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "ask",
+          "start": 172.58,
+          "end": 173.0,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "me",
+          "start": 173.0,
+          "end": 173.22,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "why",
+          "start": 173.22,
+          "end": 173.82,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l48",
+      "start": 173.82,
+      "end": 176.6,
+      "text": "You're the apple of my eye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "You're",
+          "start": 173.82,
+          "end": 174.76,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "the",
+          "start": 174.76,
+          "end": 174.9,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "apple",
+          "start": 174.9,
+          "end": 175.44,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "of",
+          "start": 175.44,
+          "end": 175.82,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "my",
+          "start": 175.82,
+          "end": 176.1,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "eye",
+          "start": 176.1,
+          "end": 176.6,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    },
+    {
+      "id": "l49",
+      "start": 178.38,
+      "end": 180.94,
+      "text": "And I won't say bye-bye",
+      "role": "lyric",
+      "tokens": [
+        {
+          "text": "And",
+          "start": 178.38,
+          "end": 179.14,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "I",
+          "start": 179.14,
+          "end": 179.28,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "won't",
+          "start": 179.28,
+          "end": 179.66,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "say",
+          "start": 179.66,
+          "end": 179.92,
+          "alignment": "reviewed-asr-word-span"
+        },
+        {
+          "text": "bye-bye",
+          "start": 179.92,
+          "end": 180.94,
+          "alignment": "reviewed-asr-word-span"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vocalSet": "en-vocal",
+    "audioSha256": "9179b878e74999ff6468fc784783c0b916363569f8664c605ff66346a173c62a",
+    "correction": "Selected-audio large-v3 full/stem no-VAD review against intended lyrics; independent MOSS cross-check",
+    "timing": "ASR word anchors, approximate boundaries; translations use line-relative highlighting",
+    "releaseStage": "published",
+    "notes": [
+      "Source-close wording is preserved; changed repeats are reflected in the actual sung structure.",
+      "Independent MOSS and two focused outro windows confirm three spy repetitions, including the extra 168-second hook missed by stem-only ASR.",
+      "The first sky comparison is omitted in this take; do not insert unsung text.",
+      "ASR-only closing credits and zero-duration duplicate outro are excluded.",
+      "Musical quality screening is not a human listening approval."
+    ]
+  }
+}

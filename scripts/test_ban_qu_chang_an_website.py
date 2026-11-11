@@ -9,6 +9,7 @@ including its HTTP range/seek behavior. This is not a musical-accuracy test.
 import argparse
 import functools
 import json
+import re
 import threading
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -24,12 +25,32 @@ class QuietHandler(SimpleHTTPRequestHandler):
         pass
 
 
+def local_audio_response(route, content):
+    headers = {"Accept-Ranges": "bytes", "Access-Control-Allow-Origin": "*"}
+    byte_range = route.request.headers.get("range")
+    match = re.fullmatch(r"bytes=(\d+)-(\d*)", byte_range or "")
+    if match:
+        start = int(match[1])
+        end = min(int(match[2]) if match[2] else len(content) - 1, len(content) - 1)
+        if start > end:
+            route.fulfill(status=416, headers={**headers, "Content-Range": f"bytes */{len(content)}"})
+            return
+        headers["Content-Range"] = f"bytes {start}-{end}/{len(content)}"
+        route.fulfill(status=206, body=content[start:end + 1], content_type="audio/mpeg", headers=headers)
+    else:
+        route.fulfill(status=200, body=content, content_type="audio/mpeg", headers=headers)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--live", action="store_true")
     parser.add_argument("--media-id", default=MEDIA_ID)
     parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("--audio-file", type=Path, help="Local MP3 for a pre-publication browser check; never allowed with --live")
     args = parser.parse_args()
+    if args.audio_file and (args.live or not args.audio_file.is_file()):
+        parser.error("--audio-file requires an existing file and a local test")
+    local_audio = args.audio_file.read_bytes() if args.audio_file else None
     media_id = args.media_id
     out = args.output_dir or ROOT / "data/creative_projects/aya-chan-ban-qu-chang-an-minimax-20260913/review/website"
     out.mkdir(parents=True, exist_ok=True)
@@ -62,6 +83,8 @@ def main():
                 for label, width, height in [("desktop", 1440, 1000), ("mobile", 390, 844)]:
                     context = browser.new_context(viewport={"width": width, "height": height},
                                                   device_scale_factor=1, is_mobile=label == "mobile")
+                    if args.audio_file:
+                        context.route(source, lambda route: local_audio_response(route, local_audio))
                     page = context.new_page()
                     errors = []
                     page.on("pageerror", lambda error: errors.append(str(error)))
