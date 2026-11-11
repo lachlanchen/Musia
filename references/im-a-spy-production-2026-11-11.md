@@ -116,3 +116,25 @@ directory. The website's canonical lyric is
 `website/data/songs/im-a-spy/lyrics/en-vocal/en.json`. Only the selected MP3 is
 published to MusiaSongs; alternate takes and analysis stems remain local.
 This request does not include video recording or social/music-platform posting.
+
+## Deployment Verification
+
+- Media commit: `2d529f5215ce15e54543ab3c04e26e47ede994d0` in MusiaSongs.
+- Website and reusable tooling commit: `ae302a13c531ff08d7262546dbefdc4570468715`.
+- Both Pages deployments completed successfully: MusiaSongs run `43022171218`
+  and Musia run `43022172950`.
+- The public MP3 returns HTTP 200; byte-range seeking returns HTTP 206.
+  Its 7,362,339 bytes match the selected local MP3 exactly. SHA-256:
+  `77ff438fbc13308ce10408cdf44401a1da230caa020daf71e132346a28a9461a`.
+- All three deployed lyric JSON files match the reviewed local files byte for
+  byte, each with 49 lines.
+- Live Chrome checks passed at 1440 x 1000 and 390 x 844: audio clock advance,
+  four lyric/word-highlight seeks through the outro, centered active chords,
+  ruby rendering, cover loading, no horizontal overflow and no page errors.
+  Screenshots were visually inspected. Evidence is saved under
+  `data/creative_projects/im-a-spy-20261111/review/website/`.
+- The canonical checkout passes its 28 focused export/sweep regression tests
+  and the strict media-item audit after the reusable changes are mirrored.
+
+Browser playback checks establish delivery and synchronization behavior, not
+human approval of singing, translation nuance or musical harmony.
