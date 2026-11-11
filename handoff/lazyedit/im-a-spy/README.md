@@ -59,9 +59,49 @@ The packaged MP4 hash matches this inspected logo master exactly.
 - Music destination: Shipinhao Music only, queued after the video job.
 - Pure-music package: `im-a-spy-en-music-20261111.zip`.
 
-Submission requests are accepted. Platform results must be verified before
-calling publication complete. Do not repost confirmed targets; inspect existing
-jobs and management receipts before retrying an uncertain outcome.
+## Verified Results
+
+November 11, 2026, Hong Kong time:
+
+| Destination | Result | Evidence |
+| --- | --- | --- |
+| Shipinhao video | Published, 21:24:31 | Publisher matched the song on the management page after submission. |
+| Instagram, `@lazyingart` | Published, 21:28:27 | [Reel](https://www.instagram.com/lazyingart/reel/DfmlXOduZVB/), saved caption verified. |
+| YouTube | Published, 21:31:26 | [Video](https://youtube.com/shorts/pYK7pm6k9wc), public upload receipt reconciled. |
+| Shipinhao Music | Submitted; **审核中**, 21:33:44 | Exact song/album row in music management; not yet an approval or public-release claim. |
+| Douyin | **Not published** | Native media upload failed before a publish click. |
+
+The music form contained the exact 49 reviewed lines, full source MP3, square
+cover, Musia credits, external playback URL and provenance ZIP. LazyEdit music
+record 48 is `submitted`, not `published`. The verified remote music staging
+package was automatically cleaned; the canonical local package and originals
+remain available.
+
+The first combined video job is marked failed because Douyin failed, not because
+the other three publications failed. Do not rerun all targets. A Douyin-only
+fresh-browser attempt (`job-1794403210923-8`) and one scoped transport recovery
+(`job-1794404378319-10`) also failed before publication. No further retry is
+queued.
+
+Sanitized network observation found media POSTs to
+`tos-nc2-slb1.douyin.com` and `tos-nc2-slb2.douyin.com` canceled after roughly
+60-70 seconds. Native progress stayed near 1% on the direct route. A temporary,
+exact-host, loopback-only SSH transport reached roughly 12%, but did not complete.
+Login and preparation requests worked; the final cause of the transfer failure
+is not established. This is not evidence of a lyric, codec, account or file-size
+defect.
+
+The recovery kept TLS end-to-end and used the unchanged 4K package. The queue was
+idle before each browser change. Afterwards, the original Douyin profile/launch
+flags were restored, both observers exited, and the owned relay and SSH process
+were stopped. Ports 28440-28442 were verified closed; no shared service or other
+platform browser was restarted for this recovery.
+
+Receipts: `recorded_videos/im-a-spy/publication-final-receipts.json`,
+`shipinhao-music-receipt.json`, `video-and-music-progress.log`,
+`douyin-retry-network.jsonl` and `douyin-relay-network.jsonl`.
+Diagnose the upload path before a future Douyin-only retry; preserve the successful
+posts and do not replace the approved recording merely to retry publication.
 
 ## Reproduction and Evidence
 
