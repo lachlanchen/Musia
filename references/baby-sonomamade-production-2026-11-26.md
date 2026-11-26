@@ -28,8 +28,9 @@ confidence is not presented as another standard someone has to meet.
   `data/creative_projects/baby-sonomamade-20261126/candidates/request.json`.
 
 These are intentions, not measured musical properties or a promise that the
-renderer will follow every line. No audio has yet been generated or selected.
-The dry run succeeded and prepared all six candidate configurations.
+renderer will follow every line. All six candidates rendered. Seed 112601 was
+selected for its chorus coverage, quiet ending and competitive musicality
+screening; the learned ranking is not a human listening approval.
 
 ## Resource Gate
 
@@ -39,10 +40,8 @@ Musia's sweep preflight blocks when swap exceeds 75%. Inspection found no
 obsolete Musia generation job or dedicated GUI to clean up. Existing learning,
 creator and tunnel services were preserved; no peer process was stopped.
 
-A bounded-run exception or waiting for the resource limit to clear was asked
-of the owner. Until resolved, the generation guard remains unchanged. Preparing
-lyrics, configuration and the remotely generated cover does not count as an
-audio generation, listening pass or website release.
+After a fresh check, jobs ran serially on GPU 0 under a project lock, bounded
+memory and CPU, and no additional swap allocation. No other process was stopped.
 
 ## Cover
 
@@ -54,20 +53,26 @@ the song's warmth. No text, logos, body comparison or reused artwork.
 Saved master:
 `data/creative_projects/baby-sonomamade-20261126/cover-16x9.png`.
 Staged website asset: `website/assets/covers/baby-sonomamade-16x9.png`.
-This unused asset is not a catalog publication.
 
-## Remaining Release Gates
+## Selected Performance
 
-1. Generate candidates after resource admission, one at a time.
-2. Reject silent, clipped, cut-off or garbled outputs using signal-health checks.
-3. Shortlist on musical screening, then separate finalist vocals and cross-check
-   large-model ASR with an independent route and the source lyric.
-4. Audit all 36 source lines, gaps, repeats and the soft ending. Keep the source
-   for sound-close ASR errors; reflect real omissions and changes.
-5. Build Japanese/English/Chinese lyric sets with actual timings and readings,
-   analysis-grade beats/chords, Atlas data and a complete website item.
-6. Use an unlisted listening preview until the selected audio is approved.
-   Do not publish draft lyrics as an audited transcript or claim human audition.
+- 184.0 s, stereo 48 kHz; -13.4 LUFS integrated, -1.0 dB true peak,
+  no clipped samples. Selected master and 320 kbps MP3: project `selected/`.
+- Six signal checks, APEX screens and large-v3 mixed-audio transcriptions.
+  Speech VAD missed most of the singing. No-VAD windows recovered it.
+- The selected Demucs vocal was transcribed continuously and in overlapping
+  windows, plus a separate MOSS-Music Instruct pass. MOSS supported the
+  changed shirt lyric (混ぜてみよう), the early repeat and the closing refrain;
+  its later timestamps drift and were not used. Unclear syllables remain
+  editorial judgments rather than claims of exact phonetic recognition.
+- The 39 display lines use vocal-stem word spans. They retain the repeated
+  好きな色で出かけよう and shortened refrains. Neither instrumental bookend
+  is displayed as sung text. Translations follow the performance.
+- Reproduce the selected lyric decisions with `build_review.py` alongside the
+  source lyrics. Package with `scripts/prepare_reviewed_japanese_fun_item.py`
+  and that folder's `release.json`. Study data uses a beat estimate of
+  107.666 BPM; the chord track is an estimate, not an authoritative score.
+- [Website listening preview](https://fun.lazying.art/?preview=1#baby-sonomamade).
 
 No recording, social post, or Shipinhao Music submission is included in this
 generation request. Do not retry the previous song's publication task here.
