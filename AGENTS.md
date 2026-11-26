@@ -1,5 +1,10 @@
 # Musia Agent Notes
 
+For Musia song videos, publish Instagram via the direct Meta API for
+`@lazyingart`, separately from other destinations. Follow
+[`references/musia-instagram-meta-api.md`](references/musia-instagram-meta-api.md).
+Do not substitute a browser or Postiz when the API is not authorized.
+
 Musia is a local-first AI song-localization prototype.
 
 Primary local workflow:
