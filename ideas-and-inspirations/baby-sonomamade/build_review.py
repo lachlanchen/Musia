@@ -95,7 +95,7 @@ wav = next((ROOT / P / "candidates/batch-112601").glob("*.wav"))
 save(HERE / "reviewed-lyrics.json", {
     "mediaId": "baby-sonomamade", "title": "ベイビー、そのままで · Baby, Just as You Are",
     "vocalSet": "ja", "vocalLanguage": "ja", "audioSha256": digest(wav),
-    "duration": 184, "releaseStage": "preview", "reviewStatus": "Corrected using Whisper large-v3 mix and isolated-vocal ASR, with a separate MOSS-Music transcription.",
+    "duration": 184, "releaseStage": "published", "reviewStatus": "Corrected using Whisper large-v3 mix and isolated-vocal ASR, with a separate MOSS-Music transcription.",
     "timingStatus": "large-v3 vocal word spans; subdivisions approximate",
     "notes": "Retains the repeated pre-chorus lines and the restarted final-chorus phrase. Shortened phrases follow the vocal. Some soft syllables are uncertain; translations follow the selected performance.",
     "sources": {"stem": {"path": str(evidence), "sha256": digest(ROOT / evidence)}},

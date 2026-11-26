@@ -72,7 +72,7 @@ Staged website asset: `website/assets/covers/baby-sonomamade-16x9.png`.
   source lyrics. Package with `scripts/prepare_reviewed_japanese_fun_item.py`
   and that folder's `release.json`. Study data uses a beat estimate of
   107.666 BPM; the chord track is an estimate, not an authoritative score.
-- [Website listening preview](https://fun.lazying.art/?preview=1#baby-sonomamade).
+- [Public website player](https://fun.lazying.art/#baby-sonomamade). Promoted from listening preview at the owner's request; the selected audio and lyric timing are unchanged.
 
 No recording, social post, or Shipinhao Music submission is included in this
 generation request. Do not retry the previous song's publication task here.

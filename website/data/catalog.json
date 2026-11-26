@@ -16,9 +16,9 @@
       "summary": "鏡の前で迷っていた君が、好きなシャツに袖を通す。いつも写真のすみにいた君へ。今日は真ん中の席を空けてあるよ。",
       "manifest": "data/songs/baby-sonomamade/manifest.json",
       "cover": "assets/covers/baby-sonomamade-16x9.png",
-      "visibility": "unlisted",
-      "releaseStage": "preview",
-      "category": "preview",
+      "visibility": "public",
+      "releaseStage": "published",
+      "category": "music",
       "languages": [
         "ja",
         "en",
@@ -32,11 +32,10 @@
         "body confidence",
         "chords"
       ],
-      "previewLabel": "Listening Preview",
       "displayTitle": "ベイビー、そのままで · Baby, Just as You Are",
       "workId": "baby-sonomamade",
       "edition": {
-        "status": "preview"
+        "status": "selected"
       }
     },
     {
